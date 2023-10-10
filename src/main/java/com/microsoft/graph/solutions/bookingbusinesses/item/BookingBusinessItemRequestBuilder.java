@@ -109,7 +109,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -130,8 +130,8 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties and relationships of a bookingBusiness object.
-     * @return a CompletableFuture of bookingBusiness
+     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,9 +139,9 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingBusiness
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -153,9 +153,9 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BookingBusiness::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of bookingBusiness
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,10 +163,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingBusiness
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BookingBusiness::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a bookingBusiness object.
+     * Delete a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +206,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -214,7 +214,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +244,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a bookingBusiness object.
+     * Update the properties of a bookingBusiness object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -283,7 +283,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a bookingBusiness object.
+     * Get the properties and relationships of a bookingBusiness object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

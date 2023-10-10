@@ -81,7 +81,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicates which terms have been pinned or reused directly under the set.
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> get() {
@@ -90,7 +90,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicates which terms have been pinned or reused directly under the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property relations in sites
      * @param body The request body
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> patch(@jakarta.annotation.Nonnull final Relation body) {
@@ -113,7 +113,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property relations in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> patch(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

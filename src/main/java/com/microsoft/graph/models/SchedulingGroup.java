@@ -21,7 +21,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      */
     private java.util.List<String> userIds;
     /**
-     * Instantiates a new schedulingGroup and sets the default values.
+     * Instantiates a new SchedulingGroup and sets the default values.
      */
     public SchedulingGroup() {
         super();
@@ -30,7 +30,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a schedulingGroup
+     * @return a SchedulingGroup
      */
     @jakarta.annotation.Nonnull
     public static SchedulingGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the schedulingGroup. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -67,7 +67,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserIds() {

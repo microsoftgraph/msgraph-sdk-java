@@ -37,7 +37,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials/{federatedIdentityCredential%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return delete(null);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
-     * @return a CompletableFuture of federatedIdentityCredential
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of FederatedIdentityCredential
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the properties of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

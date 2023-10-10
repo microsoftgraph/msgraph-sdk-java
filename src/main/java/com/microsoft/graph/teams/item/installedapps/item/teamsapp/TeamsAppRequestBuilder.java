@@ -38,7 +38,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The app that is installed.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get() {
@@ -47,7 +47,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
     /**
      * The app that is installed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsAppRequestBuilder
+     * @return a TeamsAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

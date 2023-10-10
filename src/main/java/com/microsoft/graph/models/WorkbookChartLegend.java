@@ -25,7 +25,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     private Boolean visible;
     /**
-     * Instantiates a new workbookChartLegend and sets the default values.
+     * Instantiates a new WorkbookChartLegend and sets the default values.
      */
     public WorkbookChartLegend() {
         super();
@@ -33,7 +33,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartLegend
+     * @return a WorkbookChartLegend
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartLegend createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-     * @return a workbookChartLegendFormat
+     * @return a WorkbookChartLegendFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegendFormat getFormat() {
@@ -63,7 +63,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     }
     /**
      * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOverlay() {
@@ -71,7 +71,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     }
     /**
      * Gets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPosition() {
@@ -79,7 +79,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     }
     /**
      * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {

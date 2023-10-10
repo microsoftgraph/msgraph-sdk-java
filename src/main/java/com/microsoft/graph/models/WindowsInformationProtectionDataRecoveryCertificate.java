@@ -20,7 +20,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     /**
      * Data recovery Certificate
      */
-    private byte[] certificate;
+    private Base64url certificate;
     /**
      * Data recovery Certificate description
      */
@@ -38,7 +38,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     private String subjectName;
     /**
-     * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDataRecoveryCertificate and sets the default values.
      */
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionDataRecoveryCertificate
+     * @return a WindowsInformationProtectionDataRecoveryCertificate
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDataRecoveryCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
         return new WindowsInformationProtectionDataRecoveryCertificate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,15 +63,15 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the certificate property value. Data recovery Certificate
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCertificate() {
+    public Base64url getCertificate() {
         return this.certificate;
     }
     /**
      * Gets the description property value. Data recovery Certificate description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -92,7 +92,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -101,7 +101,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -109,7 +109,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     }
     /**
      * Gets the subjectName property value. Data recovery Certificate subject name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
@@ -121,7 +121,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("certificate", this.getCertificate());
+        writer.writeObjectValue("certificate", this.getCertificate());
         writer.writeStringValue("description", this.getDescription());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -129,8 +129,8 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -139,7 +139,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      * Sets the certificate property value. Data recovery Certificate
      * @param value Value to set for the certificate property.
      */
-    public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCertificate(@jakarta.annotation.Nullable final Base64url value) {
         this.certificate = value;
     }
     /**

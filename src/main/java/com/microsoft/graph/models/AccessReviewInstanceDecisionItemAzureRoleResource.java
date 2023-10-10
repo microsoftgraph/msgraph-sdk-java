@@ -13,7 +13,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     private AccessReviewInstanceDecisionItemResource scope;
     /**
-     * Instantiates a new accessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
      */
     public AccessReviewInstanceDecisionItemAzureRoleResource() {
         super();
@@ -22,7 +22,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewInstanceDecisionItemAzureRoleResource
+     * @return a AccessReviewInstanceDecisionItemAzureRoleResource
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemAzureRoleResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     }
     /**
      * Gets the scope property value. Details of the scope this role is associated with.
-     * @return a accessReviewInstanceDecisionItemResource
+     * @return a AccessReviewInstanceDecisionItemResource
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource getScope() {

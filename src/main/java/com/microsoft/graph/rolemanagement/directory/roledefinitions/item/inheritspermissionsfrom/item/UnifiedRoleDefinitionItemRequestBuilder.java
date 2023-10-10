@@ -57,7 +57,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> get() {
@@ -66,7 +66,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property inheritsPermissionsFrom in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> patch(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body) {
@@ -89,7 +89,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property inheritsPermissionsFrom in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> patch(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

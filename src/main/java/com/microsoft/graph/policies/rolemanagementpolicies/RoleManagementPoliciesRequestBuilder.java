@@ -59,8 +59,8 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/roleManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get role management policies and their details.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyCollectionResponse
+     * Get role management policies and their details. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get role management policies and their details.
+     * Get role management policies and their details. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleManagementPolicies for policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body) {
@@ -94,7 +94,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleManagementPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get role management policies and their details.
+     * Get role management policies and their details. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get role management policies and their details.
+     * Get role management policies and their details. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleManagementPoliciesRequestBuilder
+     * @return a RoleManagementPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleManagementPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return new RoleManagementPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get role management policies and their details.
+     * Get role management policies and their details. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

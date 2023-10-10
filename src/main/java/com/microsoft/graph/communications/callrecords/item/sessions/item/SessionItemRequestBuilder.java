@@ -65,7 +65,7 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
-     * @return a CompletableFuture of session
+     * @return a CompletableFuture of Session
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Session> get() {
@@ -74,7 +74,7 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of session
+     * @return a CompletableFuture of Session
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Session> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sessions in communications
      * @param body The request body
-     * @return a CompletableFuture of session
+     * @return a CompletableFuture of Session
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Session> patch(@jakarta.annotation.Nonnull final Session body) {
@@ -97,7 +97,7 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sessions in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of session
+     * @return a CompletableFuture of Session
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Session> patch(@jakarta.annotation.Nonnull final Session body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

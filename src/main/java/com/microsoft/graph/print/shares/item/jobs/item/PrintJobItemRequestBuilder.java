@@ -105,7 +105,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJob> get() {
@@ -114,7 +114,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJob> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property jobs in print
      * @param body The request body
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJob> patch(@jakarta.annotation.Nonnull final PrintJob body) {
@@ -137,7 +137,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property jobs in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJob> patch(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

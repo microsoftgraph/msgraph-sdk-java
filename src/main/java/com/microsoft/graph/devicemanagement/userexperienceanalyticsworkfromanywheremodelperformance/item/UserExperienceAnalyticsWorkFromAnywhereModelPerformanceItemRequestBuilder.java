@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestB
     }
     /**
      * The user experience analytics work from anywhere model performance
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestB
     /**
      * The user experience analytics work from anywhere model performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestB
     /**
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereModelPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceItemRequestB
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereModelPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

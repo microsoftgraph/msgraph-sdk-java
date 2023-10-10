@@ -62,7 +62,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new agreementAcceptance and sets the default values.
+     * Instantiates a new AgreementAcceptance and sets the default values.
      */
     public AgreementAcceptance() {
         super();
@@ -70,7 +70,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreementAcceptance
+     * @return a AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public static AgreementAcceptance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,7 +79,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the agreementFileId property value. The identifier of the agreement file accepted by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAgreementFileId() {
@@ -87,7 +87,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the agreementId property value. The identifier of the agreement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAgreementId() {
@@ -95,7 +95,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -103,7 +103,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -111,7 +111,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOSType property value. The operating system used to accept the agreement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOSType() {
@@ -119,7 +119,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOSVersion() {
@@ -165,7 +165,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
-     * @return a agreementAcceptanceState
+     * @return a AgreementAcceptanceState
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptanceState getState() {
@@ -173,7 +173,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. Display name of the user when the acceptance was recorded.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -181,7 +181,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the userEmail property value. Email of the user when the acceptance was recorded.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -189,7 +189,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -197,7 +197,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

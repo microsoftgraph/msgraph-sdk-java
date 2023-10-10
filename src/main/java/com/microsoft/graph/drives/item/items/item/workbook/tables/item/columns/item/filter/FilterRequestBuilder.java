@@ -153,7 +153,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the filter applied to the column. Read-only.
-     * @return a CompletableFuture of workbookFilter
+     * @return a CompletableFuture of WorkbookFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFilter> get() {
@@ -162,7 +162,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the filter applied to the column. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFilter
+     * @return a CompletableFuture of WorkbookFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFilter> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property filter in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookFilter
+     * @return a CompletableFuture of WorkbookFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFilter> patch(@jakarta.annotation.Nonnull final WorkbookFilter body) {
@@ -185,7 +185,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property filter in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFilter
+     * @return a CompletableFuture of WorkbookFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFilter> patch(@jakarta.annotation.Nonnull final WorkbookFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -287,7 +287,7 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filterRequestBuilder
+     * @return a FilterRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

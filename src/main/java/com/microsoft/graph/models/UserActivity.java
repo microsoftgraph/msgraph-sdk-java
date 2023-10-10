@@ -66,7 +66,7 @@ public class UserActivity extends Entity implements Parsable {
      */
     private VisualInfo visualElements;
     /**
-     * Instantiates a new userActivity and sets the default values.
+     * Instantiates a new UserActivity and sets the default values.
      */
     public UserActivity() {
         super();
@@ -74,7 +74,7 @@ public class UserActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userActivity
+     * @return a UserActivity
      */
     @jakarta.annotation.Nonnull
     public static UserActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the activationUrl property value. Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivationUrl() {
@@ -91,7 +91,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivitySourceHost() {
@@ -99,7 +99,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppActivityId() {
@@ -107,7 +107,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -123,7 +123,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
@@ -147,7 +147,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFallbackUrl() {
@@ -178,7 +178,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     * @return a activityHistoryItem
+     * @return a java.util.List<ActivityHistoryItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityHistoryItem> getHistoryItems() {
@@ -194,7 +194,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getStatus() {
@@ -202,7 +202,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserTimezone() {
@@ -210,7 +210,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the visualElements property value. The visualElements property
-     * @return a visualInfo
+     * @return a VisualInfo
      */
     @jakarta.annotation.Nullable
     public VisualInfo getVisualElements() {

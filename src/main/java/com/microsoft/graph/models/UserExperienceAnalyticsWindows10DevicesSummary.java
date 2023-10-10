@@ -25,7 +25,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
      */
     private Integer unsupportedOSversionDeviceCount;
     /**
-     * Instantiates a new userExperienceAnalyticsWindows10DevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWindows10DevicesSummary and sets the default values.
      */
     public UserExperienceAnalyticsWindows10DevicesSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -33,7 +33,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsWindows10DevicesSummary
+     * @return a UserExperienceAnalyticsWindows10DevicesSummary
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsWindows10DevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
         return new UserExperienceAnalyticsWindows10DevicesSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
     }
     /**
      * Gets the unsupportedOSversionDeviceCount property value. The count of Windows 10 devices that have unsupported OS versions. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnsupportedOSversionDeviceCount() {
@@ -86,8 +86,8 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements Additiona
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

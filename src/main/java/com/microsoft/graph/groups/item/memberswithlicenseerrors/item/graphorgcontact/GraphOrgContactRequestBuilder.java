@@ -38,7 +38,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.orgContact
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> get() {
@@ -47,7 +47,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.orgContact
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphOrgContactRequestBuilder
+     * @return a GraphOrgContactRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphOrgContactRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the managedAppStatusRaw objects.
-     * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatusraw-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the managedAppStatusRaw objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatusraw-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedAppStatuses for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> post(@jakarta.annotation.Nonnull final ManagedAppStatus body) {
@@ -94,7 +94,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedAppStatuses for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> post(@jakarta.annotation.Nonnull final ManagedAppStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedAppStatusesRequestBuilder
+     * @return a ManagedAppStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedAppStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

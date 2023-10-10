@@ -60,7 +60,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of open extensions defined for the task list. Nullable.
-     * @return a CompletableFuture of extensionCollectionResponse
+     * @return a CompletableFuture of ExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of open extensions defined for the task list. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extensionCollectionResponse
+     * @return a CompletableFuture of ExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to extensions for users
      * @param body The request body
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> post(@jakarta.annotation.Nonnull final Extension body) {
@@ -92,7 +92,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to extensions for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> post(@jakarta.annotation.Nonnull final Extension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a extensionsRequestBuilder
+     * @return a ExtensionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

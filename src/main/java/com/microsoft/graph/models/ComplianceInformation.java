@@ -26,7 +26,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new complianceInformation and sets the default values.
+     * Instantiates a new ComplianceInformation and sets the default values.
      */
     public ComplianceInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceInformation
+     * @return a ComplianceInformation
      */
     @jakarta.annotation.Nonnull
     public static ComplianceInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         return new ComplianceInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the certificationControls property value. Collection of the certification controls associated with the certification.
-     * @return a certificationControl
+     * @return a java.util.List<CertificationControl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificationControl> getCertificationControls() {
@@ -59,7 +59,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationName() {
@@ -79,7 +79,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

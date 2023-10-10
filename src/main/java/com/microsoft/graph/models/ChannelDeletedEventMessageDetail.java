@@ -21,7 +21,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new channelDeletedEventMessageDetail and sets the default values.
+     * Instantiates a new ChannelDeletedEventMessageDetail and sets the default values.
      */
     public ChannelDeletedEventMessageDetail() {
         super();
@@ -30,7 +30,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a channelDeletedEventMessageDetail
+     * @return a ChannelDeletedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static ChannelDeletedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the channelDisplayName property value. Display name of the channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChannelDisplayName() {
@@ -47,7 +47,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the channelId property value. Unique identifier of the channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
@@ -67,7 +67,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

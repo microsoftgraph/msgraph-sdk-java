@@ -77,7 +77,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryObjects/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a directory object, for example, a group, user, application, or service principal.
+     * Delete a directory object, for example, a group, user, application, or service principal. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a directory object, for example, a group, user, application, or service principal.
+     * Delete a directory object, for example, a group, user, application, or service principal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -98,8 +98,8 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a directoryObject object.
-     * @return a CompletableFuture of directoryObject
+     * Retrieve the properties and relationships of a directoryObject object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,9 +107,9 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a directoryObject object.
+     * Retrieve the properties and relationships of a directoryObject object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in directoryObjects
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> patch(@jakarta.annotation.Nonnull final DirectoryObject body) {
@@ -133,7 +133,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in directoryObjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> patch(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a directory object, for example, a group, user, application, or service principal.
+     * Delete a directory object, for example, a group, user, application, or service principal. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a directory object, for example, a group, user, application, or service principal.
+     * Delete a directory object, for example, a group, user, application, or service principal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a directoryObject object.
+     * Retrieve the properties and relationships of a directoryObject object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -180,7 +180,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a directoryObject object.
+     * Retrieve the properties and relationships of a directoryObject object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -249,7 +249,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a directoryObject object.
+     * Retrieve the properties and relationships of a directoryObject object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

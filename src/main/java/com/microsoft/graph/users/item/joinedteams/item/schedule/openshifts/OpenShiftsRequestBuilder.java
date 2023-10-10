@@ -59,8 +59,8 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShifts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List openShift objects in a team.
-     * @return a CompletableFuture of openShiftCollectionResponse
+     * List openShift objects in a team. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OpenShiftCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of openShiftCollectionResponse
+     * @return a CompletableFuture of OpenShiftCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OpenShiftCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of openShift
+     * @return a CompletableFuture of OpenShift
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of openShift
+     * @return a CompletableFuture of OpenShift
      * @see <a href="https://learn.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OpenShift::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create an instance of an openShift object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a openShiftsRequestBuilder
+     * @return a OpenShiftsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OpenShiftsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return new OpenShiftsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List openShift objects in a team.
+     * List openShift objects in a team. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

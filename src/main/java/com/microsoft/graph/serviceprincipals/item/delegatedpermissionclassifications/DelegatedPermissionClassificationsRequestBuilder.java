@@ -59,8 +59,8 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
-     * @return a CompletableFuture of delegatedPermissionClassificationCollectionResponse
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DelegatedPermissionClassificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassificationCollectionResponse
+     * @return a CompletableFuture of DelegatedPermissionClassificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return this.requestAdapter.sendAsync(requestInfo, DelegatedPermissionClassificationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return post(body, null);
     }
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return this.requestAdapter.sendAsync(requestInfo, DelegatedPermissionClassification::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a delegatedPermissionClassificationsRequestBuilder
+     * @return a DelegatedPermissionClassificationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DelegatedPermissionClassificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return new DelegatedPermissionClassificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

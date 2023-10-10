@@ -38,7 +38,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
-     * @return a CompletableFuture of retentionEventType
+     * @return a CompletableFuture of RetentionEventType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> get() {
@@ -47,7 +47,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the event that will start the retention period for labels that use this event type when an event is created.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionEventType
+     * @return a CompletableFuture of RetentionEventType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class RetentionEventTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a retentionEventTypeRequestBuilder
+     * @return a RetentionEventTypeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RetentionEventTypeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

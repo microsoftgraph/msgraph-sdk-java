@@ -59,7 +59,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read properties and relationships of the termsAndConditionsAssignment object.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
      * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

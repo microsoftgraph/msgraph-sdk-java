@@ -73,7 +73,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns collection of names that are associated with the worksheet. Read-only.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> get() {
@@ -82,7 +82,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns collection of names that are associated with the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property names in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> patch(@jakarta.annotation.Nonnull final WorkbookNamedItem body) {
@@ -105,7 +105,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property names in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> patch(@jakarta.annotation.Nonnull final WorkbookNamedItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

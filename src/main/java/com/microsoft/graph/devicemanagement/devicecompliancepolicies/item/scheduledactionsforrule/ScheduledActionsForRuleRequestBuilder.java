@@ -60,7 +60,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceComplianceScheduledActionForRule object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scheduledActionsForRuleRequestBuilder
+     * @return a ScheduledActionsForRuleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScheduledActionsForRuleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

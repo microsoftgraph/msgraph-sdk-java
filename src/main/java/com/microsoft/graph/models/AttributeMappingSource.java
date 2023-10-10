@@ -26,7 +26,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      */
     private java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
     /**
@@ -34,7 +34,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     private AttributeMappingSourceType type;
     /**
-     * Instantiates a new attributeMappingSource and sets the default values.
+     * Instantiates a new AttributeMappingSource and sets the default values.
      */
     public AttributeMappingSource() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeMappingSource
+     * @return a AttributeMappingSource
      */
     @jakarta.annotation.Nonnull
     public static AttributeMappingSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         return new AttributeMappingSource();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the expression property value. Equivalent expression representation of this attributeMappingSource object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExpression() {
@@ -81,7 +81,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -89,15 +89,15 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
-     * @return a stringKeyAttributeMappingSourceValuePair
+     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
+     * @return a java.util.List<StringKeyAttributeMappingSourceValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyAttributeMappingSourceValuePair> getParameters() {
@@ -105,7 +105,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeMappingSourceType
+     * @return a AttributeMappingSourceType
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSourceType getType() {
@@ -125,8 +125,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -153,7 +153,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {

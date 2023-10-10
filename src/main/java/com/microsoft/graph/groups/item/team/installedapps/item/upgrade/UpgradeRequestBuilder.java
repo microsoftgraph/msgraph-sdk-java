@@ -35,7 +35,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/installedApps/{teamsAppInstallation%2Did}/upgrade", rawUrl);
     }
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Upgrade an app installation within a chat.
+     * Upgrade an app installation within a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a upgradeRequestBuilder
+     * @return a UpgradeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpgradeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

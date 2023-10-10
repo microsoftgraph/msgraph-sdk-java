@@ -201,7 +201,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get joinedTeams from users
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get() {
@@ -210,7 +210,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property joinedTeams in users
      * @param body The request body
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> patch(@jakarta.annotation.Nonnull final Team body) {
@@ -233,7 +233,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property joinedTeams in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> patch(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

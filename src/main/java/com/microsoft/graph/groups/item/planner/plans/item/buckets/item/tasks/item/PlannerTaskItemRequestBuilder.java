@@ -89,7 +89,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. The collection of tasks in the bucket.
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> get() {
@@ -98,7 +98,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. The collection of tasks in the bucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tasks in groups
      * @param body The request body
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> patch(@jakarta.annotation.Nonnull final PlannerTask body) {
@@ -121,7 +121,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tasks in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> patch(@jakarta.annotation.Nonnull final PlannerTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

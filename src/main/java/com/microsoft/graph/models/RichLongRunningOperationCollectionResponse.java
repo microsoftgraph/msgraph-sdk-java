@@ -13,7 +13,7 @@ public class RichLongRunningOperationCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<RichLongRunningOperation> value;
     /**
-     * Instantiates a new richLongRunningOperationCollectionResponse and sets the default values.
+     * Instantiates a new RichLongRunningOperationCollectionResponse and sets the default values.
      */
     public RichLongRunningOperationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class RichLongRunningOperationCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a richLongRunningOperationCollectionResponse
+     * @return a RichLongRunningOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RichLongRunningOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class RichLongRunningOperationCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a richLongRunningOperation
+     * @return a java.util.List<RichLongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getValue() {

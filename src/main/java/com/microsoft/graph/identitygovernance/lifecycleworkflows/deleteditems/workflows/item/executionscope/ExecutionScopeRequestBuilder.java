@@ -59,7 +59,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
-     * @return a CompletableFuture of userProcessingResultCollectionResponse
+     * @return a CompletableFuture of UserProcessingResultCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userProcessingResultCollectionResponse
+     * @return a CompletableFuture of UserProcessingResultCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a executionScopeRequestBuilder
+     * @return a ExecutionScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExecutionScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

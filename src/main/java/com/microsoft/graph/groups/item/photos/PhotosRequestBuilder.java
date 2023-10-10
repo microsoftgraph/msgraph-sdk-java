@@ -58,8 +58,8 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
-     * @return a CompletableFuture of profilePhotoCollectionResponse
+     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ProfilePhotoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhotoCollectionResponse
+     * @return a CompletableFuture of ProfilePhotoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProfilePhotoCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a photosRequestBuilder
+     * @return a PhotosRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PhotosRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return new PhotosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

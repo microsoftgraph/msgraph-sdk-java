@@ -17,7 +17,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      */
     private OffsetDateTime value;
     /**
-     * Instantiates a new omaSettingDateTime and sets the default values.
+     * Instantiates a new OmaSettingDateTime and sets the default values.
      */
     public OmaSettingDateTime() {
         super();
@@ -26,7 +26,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSettingDateTime
+     * @return a OmaSettingDateTime
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingDateTime createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

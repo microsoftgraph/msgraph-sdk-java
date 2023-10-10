@@ -117,7 +117,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -138,8 +138,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
-     * @return a CompletableFuture of contentType
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,9 +147,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -161,9 +161,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,10 +171,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Remove a content type][contentType] from a [list][] or a [site][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -214,7 +214,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -222,7 +222,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -243,7 +243,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -252,7 +252,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update a content type][contentType]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -291,7 +291,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * Retrieve the metadata for a content type][contentType] in a [site][] or a [list][]. This API is available in the following [national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,7 +37,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/sites/{browserSite%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a browserSite from a browserSiteList.
+     * Delete a browserSite from a browserSiteList. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a browserSite from a browserSiteList.
+     * Delete a browserSite from a browserSiteList. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a browserSite that resides on a browserSiteList.
-     * @return a CompletableFuture of browserSite
+     * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a browserSite that resides on a browserSiteList.
+     * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BrowserSite::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a browserSite object.
+     * Update the properties of a browserSite object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a browserSite object.
+     * Update the properties of a browserSite object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BrowserSite::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a browserSite from a browserSiteList.
+     * Delete a browserSite from a browserSiteList. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a browserSite from a browserSiteList.
+     * Delete a browserSite from a browserSiteList. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a browserSite that resides on a browserSiteList.
+     * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a browserSite that resides on a browserSiteList.
+     * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a browserSite object.
+     * Update the properties of a browserSite object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a browserSite object.
+     * Update the properties of a browserSite object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a browserSite that resides on a browserSiteList.
+     * Get a browserSite that resides on a browserSiteList. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

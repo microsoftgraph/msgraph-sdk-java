@@ -13,7 +13,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      */
     private String value;
     /**
-     * Instantiates a new accessPackageAnswerString and sets the default values.
+     * Instantiates a new AccessPackageAnswerString and sets the default values.
      */
     public AccessPackageAnswerString() {
         super();
@@ -22,7 +22,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAnswerString
+     * @return a AccessPackageAnswerString
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAnswerString createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     }
     /**
      * Gets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

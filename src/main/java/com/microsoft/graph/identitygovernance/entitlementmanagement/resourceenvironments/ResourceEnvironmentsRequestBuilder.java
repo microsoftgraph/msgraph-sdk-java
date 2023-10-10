@@ -59,8 +59,8 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceEnvironments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
-     * @return a CompletableFuture of accessPackageResourceEnvironmentCollectionResponse
+     * Retrieve a list of accessPackageResourceEnvironment objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessPackageResourceEnvironmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-resourceenvironments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * Retrieve a list of accessPackageResourceEnvironment objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceEnvironmentCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceEnvironmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-resourceenvironments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resourceEnvironments for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> post(@jakarta.annotation.Nonnull final AccessPackageResourceEnvironment body) {
@@ -94,7 +94,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resourceEnvironments for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> post(@jakarta.annotation.Nonnull final AccessPackageResourceEnvironment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceEnvironment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * Retrieve a list of accessPackageResourceEnvironment objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * Retrieve a list of accessPackageResourceEnvironment objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceEnvironmentsRequestBuilder
+     * @return a ResourceEnvironmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceEnvironmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ResourceEnvironmentsRequestBuilder extends BaseRequestBuilder {
         return new ResourceEnvironmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * Retrieve a list of accessPackageResourceEnvironment objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -46,7 +46,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get external
-     * @return a CompletableFuture of external
+     * @return a CompletableFuture of External
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> get() {
@@ -55,7 +55,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of external
+     * @return a CompletableFuture of External
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +68,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Update external
      * @param body The request body
-     * @return a CompletableFuture of external
+     * @return a CompletableFuture of External
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> patch(@jakarta.annotation.Nonnull final External body) {
@@ -78,7 +78,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
      * Update external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of external
+     * @return a CompletableFuture of External
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> patch(@jakarta.annotation.Nonnull final External body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a externalRequestBuilder
+     * @return a ExternalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExternalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -4,6 +4,7 @@ import com.microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequest
 import com.microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
+import com.microsoft.graph.identitygovernance.privilegedaccess.PrivilegedAccessRequestBuilder;
 import com.microsoft.graph.identitygovernance.termsofuse.TermsOfUseRequestBuilder;
 import com.microsoft.graph.models.IdentityGovernance;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -54,6 +55,13 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
         return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the privilegedAccess property of the microsoft.graph.identityGovernance entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PrivilegedAccessRequestBuilder privilegedAccess() {
+        return new PrivilegedAccessRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +86,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityGovernance
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get() {
@@ -87,7 +95,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,7 +108,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body) {
@@ -110,7 +118,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +193,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a identityGovernanceRequestBuilder
+     * @return a IdentityGovernanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IdentityGovernanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

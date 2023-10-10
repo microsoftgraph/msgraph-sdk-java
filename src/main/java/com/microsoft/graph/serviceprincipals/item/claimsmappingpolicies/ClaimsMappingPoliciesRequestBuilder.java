@@ -66,8 +66,8 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/claimsMappingPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
-     * @return a CompletableFuture of claimsMappingPolicyCollectionResponse
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of claimsMappingPolicyCollectionResponse
+     * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ClaimsMappingPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a claimsMappingPoliciesRequestBuilder
+     * @return a ClaimsMappingPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +128,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

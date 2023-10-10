@@ -14,7 +14,8 @@ public enum Label implements ValuedEnum {
     LastModifiedDateTime("lastModifiedDateTime"),
     FileName("fileName"),
     FileExtension("fileExtension"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    IconUrl("iconUrl");
     public final String value;
     Label(final String value) {
         this.value = value;
@@ -35,6 +36,7 @@ public enum Label implements ValuedEnum {
             case "fileName": return FileName;
             case "fileExtension": return FileExtension;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "iconUrl": return IconUrl;
             default: return null;
         }
     }

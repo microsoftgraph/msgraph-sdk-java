@@ -105,7 +105,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get onenote from users
-     * @return a CompletableFuture of onenote
+     * @return a CompletableFuture of Onenote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Onenote> get() {
@@ -114,7 +114,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
     /**
      * Get onenote from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenote
+     * @return a CompletableFuture of Onenote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Onenote> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property onenote in users
      * @param body The request body
-     * @return a CompletableFuture of onenote
+     * @return a CompletableFuture of Onenote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Onenote> patch(@jakarta.annotation.Nonnull final Onenote body) {
@@ -137,7 +137,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property onenote in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenote
+     * @return a CompletableFuture of Onenote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Onenote> patch(@jakarta.annotation.Nonnull final Onenote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a onenoteRequestBuilder
+     * @return a OnenoteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

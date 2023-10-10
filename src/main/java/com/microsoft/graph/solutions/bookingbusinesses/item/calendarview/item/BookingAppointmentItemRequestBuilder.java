@@ -65,7 +65,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> get() {
@@ -74,7 +74,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property calendarView in solutions
      * @param body The request body
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> patch(@jakarta.annotation.Nonnull final BookingAppointment body) {
@@ -97,7 +97,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calendarView in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> patch(@jakarta.annotation.Nonnull final BookingAppointment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

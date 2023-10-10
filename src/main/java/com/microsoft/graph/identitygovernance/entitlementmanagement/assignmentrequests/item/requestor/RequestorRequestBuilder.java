@@ -38,7 +38,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubject> get() {
@@ -47,7 +47,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a requestorRequestBuilder
+     * @return a RequestorRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestorRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

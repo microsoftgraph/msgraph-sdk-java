@@ -13,7 +13,7 @@ public class OnPremisesDirectorySynchronizationCollectionResponse extends BaseCo
      */
     private java.util.List<OnPremisesDirectorySynchronization> value;
     /**
-     * Instantiates a new onPremisesDirectorySynchronizationCollectionResponse and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronizationCollectionResponse and sets the default values.
      */
     public OnPremisesDirectorySynchronizationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OnPremisesDirectorySynchronizationCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesDirectorySynchronizationCollectionResponse
+     * @return a OnPremisesDirectorySynchronizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronizationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OnPremisesDirectorySynchronizationCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a onPremisesDirectorySynchronization
+     * @return a java.util.List<OnPremisesDirectorySynchronization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getValue() {

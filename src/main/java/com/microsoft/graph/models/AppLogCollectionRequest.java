@@ -29,7 +29,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     private AppLogUploadState status;
     /**
-     * Instantiates a new appLogCollectionRequest and sets the default values.
+     * Instantiates a new AppLogCollectionRequest and sets the default values.
      */
     public AppLogCollectionRequest() {
         super();
@@ -37,7 +37,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appLogCollectionRequest
+     * @return a AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public static AppLogCollectionRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the customLogFolders property value. List of log folders.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCustomLogFolders() {
@@ -62,7 +62,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the errorMessage property value. Indicates error message if any during the upload process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
@@ -83,7 +83,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. AppLogUploadStatus
-     * @return a appLogUploadState
+     * @return a AppLogUploadState
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {

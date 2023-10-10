@@ -64,17 +64,17 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Pre-configured synchronization settings for a particular application.
-     * @return a CompletableFuture of synchronizationTemplate
+     * Preconfigured synchronization settings for a particular application.
+     * @return a CompletableFuture of SynchronizationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> get() {
         return get(null);
     }
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -85,9 +85,9 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, SynchronizationTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,10 +95,10 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronization template associated with a given application. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -215,7 +215,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

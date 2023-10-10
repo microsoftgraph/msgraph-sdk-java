@@ -45,7 +45,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete conversation.
+     * This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete conversation.
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The group's conversations.
-     * @return a CompletableFuture of conversation
+     * This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Conversation
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The group's conversations.
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversation
+     * @return a CompletableFuture of Conversation
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Conversation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete conversation.
+     * This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete conversation.
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -116,7 +116,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's conversations.
+     * This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's conversations.
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The group's conversations.
+     * This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

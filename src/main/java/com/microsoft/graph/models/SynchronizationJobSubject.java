@@ -30,7 +30,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      */
     private String odataType;
     /**
-     * Instantiates a new synchronizationJobSubject and sets the default values.
+     * Instantiates a new SynchronizationJobSubject and sets the default values.
      */
     public SynchronizationJobSubject() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationJobSubject
+     * @return a SynchronizationJobSubject
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationJobSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         return new SynchronizationJobSubject();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the links property value. Principals that you would like to provision.
-     * @return a synchronizationLinkedObjects
+     * @return a SynchronizationLinkedObjects
      */
     @jakarta.annotation.Nullable
     public SynchronizationLinkedObjects getLinks() {
@@ -76,7 +76,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the objectId property value. The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
@@ -84,7 +84,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObjectTypeName() {
@@ -92,7 +92,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

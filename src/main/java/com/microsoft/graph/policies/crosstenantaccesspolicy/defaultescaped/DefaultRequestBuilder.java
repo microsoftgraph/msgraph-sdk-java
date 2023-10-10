@@ -64,8 +64,8 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
-     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
+     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
+     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationDefault
+     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationDefault
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the default configuration of a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +203,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultRequestBuilder
+     * @return a DefaultRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +217,7 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false). This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

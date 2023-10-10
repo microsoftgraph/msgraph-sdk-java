@@ -35,7 +35,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/events/{event%2Did}/instances/{event%2Did1}/dismissReminder", rawUrl);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Dismiss a reminder that has been triggered for an event in a user calendar.
+     * Dismiss a reminder that has been triggered for an event in a user calendar. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dismissReminderRequestBuilder
+     * @return a DismissReminderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

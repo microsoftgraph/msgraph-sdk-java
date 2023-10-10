@@ -17,7 +17,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     private Boolean protectedEscaped;
     /**
-     * Instantiates a new workbookWorksheetProtection and sets the default values.
+     * Instantiates a new WorkbookWorksheetProtection and sets the default values.
      */
     public WorkbookWorksheetProtection() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookWorksheetProtection
+     * @return a WorkbookWorksheetProtection
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheetProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * Gets the options property value. Sheet protection options. Read-only.
-     * @return a workbookWorksheetProtectionOptions
+     * @return a WorkbookWorksheetProtectionOptions
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetProtectionOptions getOptions() {
@@ -53,7 +53,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getProtected() {

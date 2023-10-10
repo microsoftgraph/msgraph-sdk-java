@@ -39,7 +39,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      */
     private String sharingType;
     /**
-     * Instantiates a new sharingDetail and sets the default values.
+     * Instantiates a new SharingDetail and sets the default values.
      */
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharingDetail
+     * @return a SharingDetail
      */
     @jakarta.annotation.Nonnull
     public static SharingDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         return new SharingDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharedBy property value. The user who shared the document.
-     * @return a insightIdentity
+     * @return a InsightIdentity
      */
     @jakarta.annotation.Nullable
     public InsightIdentity getSharedBy() {
@@ -103,7 +103,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharingReference property value. The sharingReference property
-     * @return a resourceReference
+     * @return a ResourceReference
      */
     @jakarta.annotation.Nullable
     public ResourceReference getSharingReference() {
@@ -111,7 +111,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharingSubject property value. The subject with which the document was shared.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSharingSubject() {
@@ -119,7 +119,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSharingType() {
@@ -139,8 +139,8 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

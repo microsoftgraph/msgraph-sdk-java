@@ -81,7 +81,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Returns the plannerPlans owned by the group.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get() {
@@ -90,7 +90,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Returns the plannerPlans owned by the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property plans in groups
      * @param body The request body
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> patch(@jakarta.annotation.Nonnull final PlannerPlan body) {
@@ -113,7 +113,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property plans in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> patch(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

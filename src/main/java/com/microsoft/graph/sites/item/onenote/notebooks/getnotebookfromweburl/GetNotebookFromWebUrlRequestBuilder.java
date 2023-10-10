@@ -36,7 +36,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/notebooks/getNotebookFromWebUrl", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of CopyNotebookModel
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-getnotebookfromweburl?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CopyNotebookModel
@@ -62,7 +62,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CopyNotebookModel::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getNotebookFromWebUrlRequestBuilder
+     * @return a GetNotebookFromWebUrlRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetNotebookFromWebUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

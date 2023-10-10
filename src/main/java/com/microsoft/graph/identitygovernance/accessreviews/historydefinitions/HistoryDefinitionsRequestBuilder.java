@@ -59,8 +59,8 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/historyDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
-     * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
+     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @return a CompletableFuture of AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @return a CompletableFuture of AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewHistoryDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a historyDefinitionsRequestBuilder
+     * @return a HistoryDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HistoryDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new HistoryDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

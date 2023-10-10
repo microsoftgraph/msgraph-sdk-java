@@ -121,7 +121,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get() {
@@ -130,7 +130,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,7 +143,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property list in drives
      * @param body The request body
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body) {
@@ -153,7 +153,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property list in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -255,7 +255,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a listRequestBuilder
+     * @return a ListRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

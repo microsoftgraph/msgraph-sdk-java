@@ -145,7 +145,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of tables that are part of the worksheet. Read-only.
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> get() {
@@ -154,7 +154,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of tables that are part of the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tables in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@jakarta.annotation.Nonnull final WorkbookTable body) {
@@ -177,7 +177,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@jakarta.annotation.Nonnull final WorkbookTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

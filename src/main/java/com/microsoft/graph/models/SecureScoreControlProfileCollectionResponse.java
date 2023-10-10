@@ -13,7 +13,7 @@ public class SecureScoreControlProfileCollectionResponse extends BaseCollectionP
      */
     private java.util.List<SecureScoreControlProfile> value;
     /**
-     * Instantiates a new secureScoreControlProfileCollectionResponse and sets the default values.
+     * Instantiates a new SecureScoreControlProfileCollectionResponse and sets the default values.
      */
     public SecureScoreControlProfileCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class SecureScoreControlProfileCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScoreControlProfileCollectionResponse
+     * @return a SecureScoreControlProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SecureScoreControlProfileCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a secureScoreControlProfile
+     * @return a java.util.List<SecureScoreControlProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlProfile> getValue() {

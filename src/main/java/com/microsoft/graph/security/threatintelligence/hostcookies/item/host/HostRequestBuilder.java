@@ -38,7 +38,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicates that a cookie of this name and domain was found related to this host.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get() {
@@ -47,7 +47,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicates that a cookie of this name and domain was found related to this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostRequestBuilder
+     * @return a HostRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

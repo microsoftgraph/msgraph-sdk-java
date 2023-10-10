@@ -22,7 +22,7 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     private IdentitySet participant;
     /**
-     * Instantiates a new callParticipantInfo and sets the default values.
+     * Instantiates a new CallParticipantInfo and sets the default values.
      */
     public CallParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callParticipantInfo
+     * @return a CallParticipantInfo
      */
     @jakarta.annotation.Nonnull
     public static CallParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
         return new CallParticipantInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -66,7 +66,7 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the participant property value. Identity of the call participant.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getParticipant() {
@@ -83,8 +83,8 @@ public class CallParticipantInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

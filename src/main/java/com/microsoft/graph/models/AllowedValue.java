@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedValue extends Entity implements Parsable {
     /**
-     * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+     * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
      */
     private Boolean isActive;
     /**
-     * Instantiates a new allowedValue and sets the default values.
+     * Instantiates a new AllowedValue and sets the default values.
      */
     public AllowedValue() {
         super();
@@ -21,7 +21,7 @@ public class AllowedValue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allowedValue
+     * @return a AllowedValue
      */
     @jakarta.annotation.Nonnull
     public static AllowedValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,8 +39,8 @@ public class AllowedValue extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
-     * @return a boolean
+     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -56,7 +56,7 @@ public class AllowedValue extends Entity implements Parsable {
         writer.writeBooleanValue("isActive", this.getIsActive());
     }
     /**
-     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {

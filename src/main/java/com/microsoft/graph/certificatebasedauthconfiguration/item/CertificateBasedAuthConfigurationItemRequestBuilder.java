@@ -57,7 +57,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     }
     /**
      * Get entity from certificateBasedAuthConfiguration by key
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> get() {
@@ -66,7 +66,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Get entity from certificateBasedAuthConfiguration by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Update entity in certificateBasedAuthConfiguration
      * @param body The request body
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> patch(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
@@ -89,7 +89,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
      * Update entity in certificateBasedAuthConfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> patch(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

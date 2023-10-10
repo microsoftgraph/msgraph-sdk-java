@@ -37,8 +37,8 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}/chat{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
-     * @return a CompletableFuture of chat
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Chat
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,9 +46,9 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chat
+     * @return a CompletableFuture of Chat
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +91,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a chatRequestBuilder
+     * @return a ChatRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChatRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -99,7 +99,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return new ChatRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * Retrieve the chat of the specified user and Teams app. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

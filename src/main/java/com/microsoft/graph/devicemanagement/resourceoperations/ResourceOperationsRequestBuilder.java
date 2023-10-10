@@ -60,7 +60,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the resourceOperation objects.
-     * @return a CompletableFuture of resourceOperationCollectionResponse
+     * @return a CompletableFuture of ResourceOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the resourceOperation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperationCollectionResponse
+     * @return a CompletableFuture of ResourceOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new resourceOperation object.
      * @param body The request body
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
      * Create a new resourceOperation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceOperationsRequestBuilder
+     * @return a ResourceOperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceOperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

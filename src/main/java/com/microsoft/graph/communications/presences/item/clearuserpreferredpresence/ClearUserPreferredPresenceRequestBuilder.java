@@ -35,7 +35,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/communications/presences/{presence%2Did}/clearUserPreferredPresence", rawUrl);
     }
     /**
-     * Clear the preferred availability and activity status for a user.
+     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         return post(null);
     }
     /**
-     * Clear the preferred availability and activity status for a user.
+     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Clear the preferred availability and activity status for a user.
+     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(null);
     }
     /**
-     * Clear the preferred availability and activity status for a user.
+     * Clear the preferred availability and activity status for a user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a clearUserPreferredPresenceRequestBuilder
+     * @return a ClearUserPreferredPresenceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

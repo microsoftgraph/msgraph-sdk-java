@@ -88,7 +88,7 @@ public class GetOneDriveActivityFileCountsWithPeriodRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOneDriveActivityFileCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveActivityFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveActivityFileCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -1,6 +1,7 @@
 package com.microsoft.graph.education.me.user;
 
 import com.microsoft.graph.education.me.user.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.education.me.user.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new UserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -45,8 +53,8 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/user{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
-     * @return a CompletableFuture of user
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -54,9 +62,9 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +76,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +84,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +107,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userRequestBuilder
+     * @return a UserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -107,7 +115,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new UserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the simple directory user that corresponds to this educationUser.
+     * Retrieve the simple directory user that corresponds to this educationUser. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

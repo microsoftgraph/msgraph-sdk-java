@@ -32,7 +32,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      */
     private String userName;
     /**
-     * Instantiates a new userInstallStateSummary and sets the default values.
+     * Instantiates a new UserInstallStateSummary and sets the default values.
      */
     public UserInstallStateSummary() {
         super();
@@ -40,7 +40,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userInstallStateSummary
+     * @return a UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public static UserInstallStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStates property value. The install state of the eBook.
-     * @return a deviceInstallState
+     * @return a java.util.List<DeviceInstallState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
@@ -57,7 +57,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedDeviceCount property value. Failed Device Count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -79,7 +79,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedDeviceCount property value. Installed Device Count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
@@ -87,7 +87,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notInstalledDeviceCount property value. Not installed device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
@@ -95,7 +95,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. User name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

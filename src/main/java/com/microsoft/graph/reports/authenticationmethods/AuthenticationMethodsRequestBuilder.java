@@ -83,7 +83,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Container for navigation properties for Azure AD authentication methods resources.
-     * @return a CompletableFuture of authenticationMethodsRoot
+     * @return a CompletableFuture of AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsRoot> get() {
@@ -92,7 +92,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Container for navigation properties for Azure AD authentication methods resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsRoot
+     * @return a CompletableFuture of AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodsRoot
+     * @return a CompletableFuture of AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsRoot> patch(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body) {
@@ -115,7 +115,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authenticationMethods in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsRoot
+     * @return a CompletableFuture of AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsRoot> patch(@jakarta.annotation.Nonnull final AuthenticationMethodsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -218,7 +218,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the usersRegisteredByFeature method.
      * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
      * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
-     * @return a usersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+     * @return a UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
@@ -230,7 +230,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the usersRegisteredByMethod method.
      * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
      * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
-     * @return a usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+     * @return a UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
@@ -241,7 +241,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationMethodsRequestBuilder
+     * @return a AuthenticationMethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

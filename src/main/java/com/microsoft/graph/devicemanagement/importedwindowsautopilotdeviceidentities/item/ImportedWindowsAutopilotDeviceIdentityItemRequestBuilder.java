@@ -59,7 +59,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     }
     /**
      * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     /**
      * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
@@ -93,7 +93,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

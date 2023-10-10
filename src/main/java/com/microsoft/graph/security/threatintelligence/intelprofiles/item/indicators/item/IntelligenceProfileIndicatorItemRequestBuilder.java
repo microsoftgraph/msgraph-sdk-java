@@ -38,7 +38,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     }
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a CompletableFuture of IntelligenceProfileIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get() {
@@ -47,7 +47,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a CompletableFuture of IntelligenceProfileIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

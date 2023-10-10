@@ -35,7 +35,7 @@ public class UnfollowRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/unfollow", rawUrl);
     }
     /**
-     * Unfollow a driveItem.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-unfollow?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class UnfollowRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Unfollow a driveItem.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-unfollow?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class UnfollowRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Unfollow a driveItem.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UnfollowRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unfollow a driveItem.
+     * Unfollow a driveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class UnfollowRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unfollowRequestBuilder
+     * @return a UnfollowRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnfollowRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

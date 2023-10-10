@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartPointFormat extends Entity implements Parsable {
     /**
-     * Represents the fill format of a chart, which includes background formating information. Read-only.
+     * Represents the fill format of a chart, which includes background formatting information. Read-only.
      */
     private WorkbookChartFill fill;
     /**
-     * Instantiates a new workbookChartPointFormat and sets the default values.
+     * Instantiates a new WorkbookChartPointFormat and sets the default values.
      */
     public WorkbookChartPointFormat() {
         super();
@@ -21,7 +21,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartPointFormat
+     * @return a WorkbookChartPointFormat
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartPointFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,8 +39,8 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.
-     * @return a workbookChartFill
+     * Gets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
+     * @return a WorkbookChartFill
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
@@ -56,7 +56,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
         writer.writeObjectValue("fill", this.getFill());
     }
     /**
-     * Sets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.
+     * Sets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
      * @param value Value to set for the fill property.
      */
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {

@@ -66,8 +66,8 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool.
-     * @return a CompletableFuture of educationClassCollectionResponse
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationClassCollectionResponse
+     * @return a CompletableFuture of EducationClassCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationClassCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a classesRequestBuilder
+     * @return a ClassesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClassesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +128,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return new ClassesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the educationClass resources owned by an educationSchool.
+     * Get the educationClass resources owned by an educationSchool. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

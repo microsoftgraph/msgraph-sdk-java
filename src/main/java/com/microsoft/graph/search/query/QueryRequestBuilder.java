@@ -35,33 +35,33 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/query", rawUrl);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of queryResponse
+     * @return a CompletableFuture of QueryPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<QueryResponse> post(@jakarta.annotation.Nonnull final QueryPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<QueryPostResponse> post(@jakarta.annotation.Nonnull final QueryPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of queryResponse
+     * @return a CompletableFuture of QueryPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<QueryResponse> post(@jakarta.annotation.Nonnull final QueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<QueryPostResponse> post(@jakarta.annotation.Nonnull final QueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, QueryResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, QueryPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Runs the query specified in the request body. Search results are provided in the response.
+     * Runs the query specified in the request body. Search results are provided in the response. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -95,7 +95,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a queryRequestBuilder
+     * @return a QueryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public QueryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

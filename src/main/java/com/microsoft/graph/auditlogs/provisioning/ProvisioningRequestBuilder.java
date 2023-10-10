@@ -59,8 +59,8 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/auditLogs/provisioning{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
-     * @return a CompletableFuture of provisioningObjectSummaryCollectionResponse
+     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummaryCollectionResponse
+     * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to provisioning for auditLogs
      * @param body The request body
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> post(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body) {
@@ -94,7 +94,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to provisioning for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> post(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProvisioningObjectSummary::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a provisioningRequestBuilder
+     * @return a ProvisioningRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProvisioningRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return new ProvisioningRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system.  This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

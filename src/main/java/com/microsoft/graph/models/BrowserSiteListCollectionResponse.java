@@ -13,7 +13,7 @@ public class BrowserSiteListCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<BrowserSiteList> value;
     /**
-     * Instantiates a new browserSiteListCollectionResponse and sets the default values.
+     * Instantiates a new BrowserSiteListCollectionResponse and sets the default values.
      */
     public BrowserSiteListCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class BrowserSiteListCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSiteListCollectionResponse
+     * @return a BrowserSiteListCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BrowserSiteListCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BrowserSiteListCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a browserSiteList
+     * @return a java.util.List<BrowserSiteList>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteList> getValue() {

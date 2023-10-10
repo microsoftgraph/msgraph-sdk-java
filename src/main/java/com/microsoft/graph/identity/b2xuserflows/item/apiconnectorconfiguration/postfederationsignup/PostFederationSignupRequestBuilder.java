@@ -73,7 +73,7 @@ public class PostFederationSignupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get postFederationSignup from identity
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get() {
@@ -82,7 +82,7 @@ public class PostFederationSignupRequestBuilder extends BaseRequestBuilder {
     /**
      * Get postFederationSignup from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PostFederationSignupRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property postFederationSignup in identity
      * @param body The request body
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@jakarta.annotation.Nonnull final IdentityApiConnector body) {
@@ -105,7 +105,7 @@ public class PostFederationSignupRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property postFederationSignup in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@jakarta.annotation.Nonnull final IdentityApiConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class PostFederationSignupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a postFederationSignupRequestBuilder
+     * @return a PostFederationSignupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PostFederationSignupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

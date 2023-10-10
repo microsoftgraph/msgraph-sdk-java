@@ -30,7 +30,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      */
     private Boolean shouldCaptureMinorVersion;
     /**
-     * Instantiates a new documentSetVersion and sets the default values.
+     * Instantiates a new DocumentSetVersion and sets the default values.
      */
     public DocumentSetVersion() {
         super();
@@ -39,7 +39,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentSetVersion
+     * @return a DocumentSetVersion
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the comment property value. Comment about the captured version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -56,7 +56,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the createdBy property value. User who captured the version.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -86,7 +86,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the items property value. Items within the document set that are captured as part of this version.
-     * @return a documentSetVersionItem
+     * @return a java.util.List<DocumentSetVersionItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersionItem> getItems() {
@@ -94,7 +94,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
     }
     /**
      * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldCaptureMinorVersion() {

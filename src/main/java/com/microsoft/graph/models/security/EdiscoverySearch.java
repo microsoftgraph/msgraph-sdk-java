@@ -34,7 +34,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      */
     private java.util.List<EdiscoveryNoncustodialDataSource> noncustodialSources;
     /**
-     * Instantiates a new ediscoverySearch and sets the default values.
+     * Instantiates a new EdiscoverySearch and sets the default values.
      */
     public EdiscoverySearch() {
         super();
@@ -43,7 +43,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoverySearch
+     * @return a EdiscoverySearch
      */
     @jakarta.annotation.Nonnull
     public static EdiscoverySearch createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the additionalSources property value. Adds an additional source to the eDiscovery search.
-     * @return a dataSource
+     * @return a java.util.List<DataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getAdditionalSources() {
@@ -60,7 +60,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the addToReviewSetOperation property value. Adds the results of the eDiscovery search to the specified reviewSet.
-     * @return a ediscoveryAddToReviewSetOperation
+     * @return a EdiscoveryAddToReviewSetOperation
      */
     @jakarta.annotation.Nullable
     public EdiscoveryAddToReviewSetOperation getAddToReviewSetOperation() {
@@ -68,7 +68,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the custodianSources property value. Custodian sources that are included in the eDiscovery search.
-     * @return a dataSource
+     * @return a java.util.List<DataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getCustodianSources() {
@@ -76,7 +76,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @return a dataSourceScopes
+     * @return a EnumSet<DataSourceScopes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DataSourceScopes> getDataSourceScopes() {
@@ -99,7 +99,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the eDiscovery search.
-     * @return a ediscoveryEstimateOperation
+     * @return a EdiscoveryEstimateOperation
      */
     @jakarta.annotation.Nullable
     public EdiscoveryEstimateOperation getLastEstimateStatisticsOperation() {
@@ -107,7 +107,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     }
     /**
      * Gets the noncustodialSources property value. noncustodialDataSource sources that are included in the eDiscovery search
-     * @return a ediscoveryNoncustodialDataSource
+     * @return a java.util.List<EdiscoveryNoncustodialDataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryNoncustodialDataSource> getNoncustodialSources() {

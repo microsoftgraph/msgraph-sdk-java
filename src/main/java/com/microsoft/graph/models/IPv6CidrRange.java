@@ -13,7 +13,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      */
     private String cidrAddress;
     /**
-     * Instantiates a new iPv6CidrRange and sets the default values.
+     * Instantiates a new IPv6CidrRange and sets the default values.
      */
     public IPv6CidrRange() {
         super();
@@ -22,7 +22,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iPv6CidrRange
+     * @return a IPv6CidrRange
      */
     @jakarta.annotation.Nonnull
     public static IPv6CidrRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     }
     /**
      * Gets the cidrAddress property value. IPv6 address in CIDR notation. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCidrAddress() {

@@ -56,8 +56,8 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
-     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PlannerProgressTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
+     * @return a CompletableFuture of PlannerProgressTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property progressTaskBoardFormat in groups
      * @param body The request body
-     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
+     * @return a CompletableFuture of PlannerProgressTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property progressTaskBoardFormat in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerProgressTaskBoardTaskFormat
+     * @return a CompletableFuture of PlannerProgressTaskBoardTaskFormat
      * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +195,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a progressTaskBoardFormatRequestBuilder
+     * @return a ProgressTaskBoardFormatRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgressTaskBoardFormatRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

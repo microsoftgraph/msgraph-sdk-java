@@ -45,7 +45,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/permissions/{permission%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a permission object on a site.
+     * Delete a permission object on a site. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/site-delete-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a permission object on a site.
+     * Delete a permission object on a site. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/site-delete-permission?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a permission object on a site.
-     * @return a CompletableFuture of permission
+     * Retrieve the properties and relationships of a permission object on a site. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a permission object on a site.
+     * Retrieve the properties and relationships of a permission object on a site. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,9 +89,9 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Permission::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update an application permission object on a site. 
+     * Update an application permission object on a site.  This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,10 +99,10 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an application permission object on a site. 
+     * Update an application permission object on a site.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Permission::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a permission object on a site.
+     * Delete a permission object on a site. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a permission object on a site.
+     * Delete a permission object on a site. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +142,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a permission object on a site.
+     * Retrieve the properties and relationships of a permission object on a site. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a permission object on a site.
+     * Retrieve the properties and relationships of a permission object on a site. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an application permission object on a site. 
+     * Update an application permission object on a site.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an application permission object on a site. 
+     * Update an application permission object on a site.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -219,7 +219,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a permission object on a site.
+     * Retrieve the properties and relationships of a permission object on a site. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

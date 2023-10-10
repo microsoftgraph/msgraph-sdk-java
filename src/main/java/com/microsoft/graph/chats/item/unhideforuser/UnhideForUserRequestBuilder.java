@@ -35,7 +35,7 @@ public class UnhideForUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/unhideForUser", rawUrl);
     }
     /**
-     * Unhide a chat for a user.
+     * Unhide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chat-unhideforuser?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class UnhideForUserRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Unhide a chat for a user.
+     * Unhide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-unhideforuser?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class UnhideForUserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Unhide a chat for a user.
+     * Unhide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class UnhideForUserRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Unhide a chat for a user.
+     * Unhide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class UnhideForUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unhideForUserRequestBuilder
+     * @return a UnhideForUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnhideForUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

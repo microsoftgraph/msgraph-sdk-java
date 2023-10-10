@@ -44,7 +44,7 @@ public class Set extends Entity implements Parsable {
      */
     private java.util.List<Term> terms;
     /**
-     * Instantiates a new set and sets the default values.
+     * Instantiates a new Set and sets the default values.
      */
     public Set() {
         super();
@@ -52,7 +52,7 @@ public class Set extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a set
+     * @return a Set
      */
     @jakarta.annotation.Nonnull
     public static Set createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the children property value. Children terms of set in term [store].
-     * @return a term
+     * @return a java.util.List<Term>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getChildren() {
@@ -77,7 +77,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description that gives details on the term usage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -102,7 +102,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the localizedNames property value. Name of the set for each languageTag.
-     * @return a localizedName
+     * @return a java.util.List<LocalizedName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedName> getLocalizedNames() {
@@ -110,7 +110,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the parentGroup property value. The parentGroup property
-     * @return a group
+     * @return a Group
      */
     @jakarta.annotation.Nullable
     public Group getParentGroup() {
@@ -118,7 +118,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. Custom properties for the set.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getProperties() {
@@ -126,7 +126,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the relations property value. Indicates which terms have been pinned or reused directly under the set.
-     * @return a relation
+     * @return a java.util.List<Relation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
@@ -134,7 +134,7 @@ public class Set extends Entity implements Parsable {
     }
     /**
      * Gets the terms property value. All the terms under the set.
-     * @return a term
+     * @return a java.util.List<Term>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getTerms() {

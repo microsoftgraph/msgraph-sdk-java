@@ -34,7 +34,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     private String name;
     /**
-     * Instantiates a new participantEndpoint and sets the default values.
+     * Instantiates a new ParticipantEndpoint and sets the default values.
      */
     public ParticipantEndpoint() {
         super();
@@ -43,7 +43,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a participantEndpoint
+     * @return a ParticipantEndpoint
      */
     @jakarta.annotation.Nonnull
     public static ParticipantEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCpuCoresCount() {
@@ -60,7 +60,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the cpuName property value. CPU name used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCpuName() {
@@ -68,7 +68,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCpuProcessorSpeedInMhz() {
@@ -76,7 +76,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
-     * @return a userFeedback
+     * @return a UserFeedback
      */
     @jakarta.annotation.Nullable
     public UserFeedback getFeedback() {
@@ -99,7 +99,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the identity property value. Identity associated with the endpoint.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -107,7 +107,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     }
     /**
      * Gets the name property value. Name of the device used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {

@@ -59,8 +59,8 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timesOff{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * @return a CompletableFuture of TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TimeOffCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TimeOff::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOff instance in a schedule.
+     * Create a new timeOff instance in a schedule. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a timesOffRequestBuilder
+     * @return a TimesOffRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TimesOffRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
         return new TimesOffRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of timeOff instances in a schedule.
+     * Get the list of timeOff instances in a schedule. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

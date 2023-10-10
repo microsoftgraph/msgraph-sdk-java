@@ -29,7 +29,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      */
     private Boolean overrideDefaultRule;
     /**
-     * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
+     * Instantiates a new OnPremisesConditionalAccessSettings and sets the default values.
      */
     public OnPremisesConditionalAccessSettings() {
         super();
@@ -37,7 +37,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesConditionalAccessSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     }
     /**
      * Gets the enabled property value. Indicates if on premises conditional access is enabled for this organization
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -54,7 +54,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     }
     /**
      * Gets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getExcludedGroups() {
@@ -75,7 +75,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     }
     /**
      * Gets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getIncludedGroups() {
@@ -83,7 +83,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     }
     /**
      * Gets the overrideDefaultRule property value. Override the default access rule when allowing a device to ensure access is granted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOverrideDefaultRule() {

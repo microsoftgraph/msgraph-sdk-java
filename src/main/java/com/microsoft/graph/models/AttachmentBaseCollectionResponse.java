@@ -13,7 +13,7 @@ public class AttachmentBaseCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<AttachmentBase> value;
     /**
-     * Instantiates a new attachmentBaseCollectionResponse and sets the default values.
+     * Instantiates a new AttachmentBaseCollectionResponse and sets the default values.
      */
     public AttachmentBaseCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AttachmentBaseCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentBaseCollectionResponse
+     * @return a AttachmentBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AttachmentBaseCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AttachmentBaseCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a attachmentBase
+     * @return a java.util.List<AttachmentBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttachmentBase> getValue() {

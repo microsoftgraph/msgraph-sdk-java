@@ -46,7 +46,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     private String suggestionReason;
     /**
-     * Instantiates a new meetingTimeSuggestion and sets the default values.
+     * Instantiates a new MeetingTimeSuggestion and sets the default values.
      */
     public MeetingTimeSuggestion() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingTimeSuggestion
+     * @return a MeetingTimeSuggestion
      */
     @jakarta.annotation.Nonnull
     public static MeetingTimeSuggestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         return new MeetingTimeSuggestion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attendeeAvailability property value. An array that shows the availability status of each attendee for this meeting suggestion.
-     * @return a attendeeAvailability
+     * @return a java.util.List<AttendeeAvailability>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendeeAvailability> getAttendeeAvailability() {
@@ -79,7 +79,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getConfidence() {
@@ -104,7 +104,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locations property value. An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
-     * @return a location
+     * @return a java.util.List<Location>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Location> getLocations() {
@@ -112,7 +112,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the meetingTimeSlot property value. A time period suggested for the meeting.
-     * @return a timeSlot
+     * @return a TimeSlot
      */
     @jakarta.annotation.Nullable
     public TimeSlot getMeetingTimeSlot() {
@@ -120,7 +120,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -128,7 +128,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOrder() {
@@ -136,7 +136,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a freeBusyStatus
+     * @return a FreeBusyStatus
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getOrganizerAvailability() {
@@ -144,7 +144,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the suggestionReason property value. Reason for suggesting the meeting time.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSuggestionReason() {
@@ -167,8 +167,8 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

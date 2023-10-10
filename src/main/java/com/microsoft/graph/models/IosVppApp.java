@@ -53,7 +53,7 @@ public class IosVppApp extends MobileApp implements Parsable {
      */
     private String vppTokenOrganizationName;
     /**
-     * Instantiates a new iosVppApp and sets the default values.
+     * Instantiates a new IosVppApp and sets the default values.
      */
     public IosVppApp() {
         super();
@@ -62,7 +62,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppApp
+     * @return a IosVppApp
      */
     @jakarta.annotation.Nonnull
     public static IosVppApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. The applicable iOS Device Type.
-     * @return a iosDeviceType
+     * @return a IosDeviceType
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
@@ -79,7 +79,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appStoreUrl property value. The store URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
@@ -87,7 +87,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the bundleId property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -114,7 +114,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the licensingType property value. The supported License Type.
-     * @return a vppLicensingType
+     * @return a VppLicensingType
      */
     @jakarta.annotation.Nullable
     public VppLicensingType getLicensingType() {
@@ -130,7 +130,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the totalLicenseCount property value. The total number of VPP licenses.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
@@ -138,7 +138,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
@@ -146,7 +146,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     * @return a vppTokenAccountType
+     * @return a VppTokenAccountType
      */
     @jakarta.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {
@@ -154,7 +154,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the vppTokenAppleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVppTokenAppleId() {
@@ -162,7 +162,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the vppTokenOrganizationName property value. The organization associated with the Apple Volume Purchase Program Token
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVppTokenOrganizationName() {

@@ -65,7 +65,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     }
     /**
      * List of log collection requests
-     * @return a CompletableFuture of deviceLogCollectionResponse
+     * @return a CompletableFuture of DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> get() {
@@ -74,7 +74,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     /**
      * List of log collection requests
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLogCollectionResponse
+     * @return a CompletableFuture of DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property logCollectionRequests in users
      * @param body The request body
-     * @return a CompletableFuture of deviceLogCollectionResponse
+     * @return a CompletableFuture of DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> patch(@jakarta.annotation.Nonnull final DeviceLogCollectionResponse body) {
@@ -97,7 +97,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
      * Update the navigation property logCollectionRequests in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLogCollectionResponse
+     * @return a CompletableFuture of DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLogCollectionResponse> patch(@jakarta.annotation.Nonnull final DeviceLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

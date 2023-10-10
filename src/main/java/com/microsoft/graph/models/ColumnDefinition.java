@@ -137,7 +137,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     private ColumnValidation validation;
     /**
-     * Instantiates a new columnDefinition and sets the default values.
+     * Instantiates a new ColumnDefinition and sets the default values.
      */
     public ColumnDefinition() {
         super();
@@ -145,7 +145,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a columnDefinition
+     * @return a ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public static ColumnDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -154,7 +154,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the boolean property value. This column stores boolean values.
-     * @return a booleanColumn
+     * @return a BooleanColumn
      */
     @jakarta.annotation.Nullable
     public BooleanColumn getBoolean() {
@@ -162,7 +162,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the calculated property value. This column's data is calculated based on other columns.
-     * @return a calculatedColumn
+     * @return a CalculatedColumn
      */
     @jakarta.annotation.Nullable
     public CalculatedColumn getCalculated() {
@@ -170,7 +170,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the choice property value. This column stores data from a list of choices.
-     * @return a choiceColumn
+     * @return a ChoiceColumn
      */
     @jakarta.annotation.Nullable
     public ChoiceColumn getChoice() {
@@ -178,7 +178,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColumnGroup() {
@@ -186,7 +186,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the contentApprovalStatus property value. This column stores content approval status.
-     * @return a contentApprovalStatusColumn
+     * @return a ContentApprovalStatusColumn
      */
     @jakarta.annotation.Nullable
     public ContentApprovalStatusColumn getContentApprovalStatus() {
@@ -194,7 +194,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the currency property value. This column stores currency values.
-     * @return a currencyColumn
+     * @return a CurrencyColumn
      */
     @jakarta.annotation.Nullable
     public CurrencyColumn getCurrency() {
@@ -202,7 +202,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the dateTime property value. This column stores DateTime values.
-     * @return a dateTimeColumn
+     * @return a DateTimeColumn
      */
     @jakarta.annotation.Nullable
     public DateTimeColumn getDateTime() {
@@ -210,7 +210,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the defaultValue property value. The default value for this column.
-     * @return a defaultColumnValue
+     * @return a DefaultColumnValue
      */
     @jakarta.annotation.Nullable
     public DefaultColumnValue getDefaultValue() {
@@ -218,7 +218,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The user-facing description of the column.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -226,7 +226,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The user-facing name of the column.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -234,7 +234,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceUniqueValues() {
@@ -283,7 +283,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the geolocation property value. This column stores a geolocation.
-     * @return a geolocationColumn
+     * @return a GeolocationColumn
      */
     @jakarta.annotation.Nullable
     public GeolocationColumn getGeolocation() {
@@ -291,7 +291,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the hidden property value. Specifies whether the column is displayed in the user interface.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -299,7 +299,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
-     * @return a hyperlinkOrPictureColumn
+     * @return a HyperlinkOrPictureColumn
      */
     @jakarta.annotation.Nullable
     public HyperlinkOrPictureColumn getHyperlinkOrPicture() {
@@ -307,7 +307,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIndexed() {
@@ -315,7 +315,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isDeletable property value. Indicates whether this column can be deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeletable() {
@@ -323,7 +323,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReorderable() {
@@ -331,7 +331,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isSealed property value. Specifies whether the column can be changed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSealed() {
@@ -339,7 +339,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the lookup property value. This column's data is looked up from another source in the site.
-     * @return a lookupColumn
+     * @return a LookupColumn
      */
     @jakarta.annotation.Nullable
     public LookupColumn getLookup() {
@@ -347,7 +347,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -355,7 +355,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the number property value. This column stores number values.
-     * @return a numberColumn
+     * @return a NumberColumn
      */
     @jakarta.annotation.Nullable
     public NumberColumn getNumber() {
@@ -363,7 +363,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the personOrGroup property value. This column stores Person or Group values.
-     * @return a personOrGroupColumn
+     * @return a PersonOrGroupColumn
      */
     @jakarta.annotation.Nullable
     public PersonOrGroupColumn getPersonOrGroup() {
@@ -371,7 +371,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPropagateChanges() {
@@ -379,7 +379,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the readOnly property value. Specifies whether the column values can be modified.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getReadOnly() {
@@ -387,7 +387,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the required property value. Specifies whether the column value isn't optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -395,7 +395,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the sourceColumn property value. The source column for the content type column.
-     * @return a columnDefinition
+     * @return a ColumnDefinition
      */
     @jakarta.annotation.Nullable
     public ColumnDefinition getSourceColumn() {
@@ -403,7 +403,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
-     * @return a contentTypeInfo
+     * @return a ContentTypeInfo
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getSourceContentType() {
@@ -411,7 +411,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the term property value. This column stores taxonomy terms.
-     * @return a termColumn
+     * @return a TermColumn
      */
     @jakarta.annotation.Nullable
     public TermColumn getTerm() {
@@ -419,7 +419,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. This column stores text values.
-     * @return a textColumn
+     * @return a TextColumn
      */
     @jakarta.annotation.Nullable
     public TextColumn getText() {
@@ -427,7 +427,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the thumbnail property value. This column stores thumbnail values.
-     * @return a thumbnailColumn
+     * @return a ThumbnailColumn
      */
     @jakarta.annotation.Nullable
     public ThumbnailColumn getThumbnail() {
@@ -435,7 +435,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. For site columns, the type of column. Read-only.
-     * @return a columnTypes
+     * @return a ColumnTypes
      */
     @jakarta.annotation.Nullable
     public ColumnTypes getType() {
@@ -443,7 +443,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the validation property value. This column stores validation formula and message for the column.
-     * @return a columnValidation
+     * @return a ColumnValidation
      */
     @jakarta.annotation.Nullable
     public ColumnValidation getValidation() {

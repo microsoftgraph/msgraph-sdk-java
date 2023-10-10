@@ -19,7 +19,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      */
     private TeleconferenceDeviceQuality quality;
     /**
-     * Instantiates a new logTeleconferenceDeviceQualityPostRequestBody and sets the default values.
+     * Instantiates a new LogTeleconferenceDeviceQualityPostRequestBody and sets the default values.
      */
     public LogTeleconferenceDeviceQualityPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a logTeleconferenceDeviceQualityPostRequestBody
+     * @return a LogTeleconferenceDeviceQualityPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static LogTeleconferenceDeviceQualityPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
         return new LogTeleconferenceDeviceQualityPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a teleconferenceDeviceQuality
+     * @return a TeleconferenceDeviceQuality
      */
     @jakarta.annotation.Nullable
     public TeleconferenceDeviceQuality getQuality() {
@@ -70,8 +70,8 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

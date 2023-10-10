@@ -60,7 +60,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a CompletableFuture of authenticationMethodConfigurationCollectionResponse
+     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodConfigurationCollectionResponse
+     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     /**
      * Create new navigation property to authenticationMethodConfigurations for authenticationMethodsPolicy
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
@@ -92,7 +92,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
      * Create new navigation property to authenticationMethodConfigurations for authenticationMethodsPolicy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationMethodConfigurationsRequestBuilder
+     * @return a AuthenticationMethodConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

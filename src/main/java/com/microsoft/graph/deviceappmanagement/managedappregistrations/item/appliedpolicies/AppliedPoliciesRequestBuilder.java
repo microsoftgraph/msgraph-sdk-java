@@ -60,7 +60,7 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     * @return a CompletableFuture of managedAppPolicyCollectionResponse
+     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyCollectionResponse
+     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to appliedPolicies for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
@@ -92,7 +92,7 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to appliedPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appliedPoliciesRequestBuilder
+     * @return a AppliedPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppliedPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -35,7 +35,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/sort/apply", rawUrl);
     }
     /**
-     * Perform a sort operation.
+     * Perform a sort operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-apply?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Perform a sort operation.
+     * Perform a sort operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-apply?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Perform a sort operation.
+     * Perform a sort operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Perform a sort operation.
+     * Perform a sort operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a applyRequestBuilder
+     * @return a ApplyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

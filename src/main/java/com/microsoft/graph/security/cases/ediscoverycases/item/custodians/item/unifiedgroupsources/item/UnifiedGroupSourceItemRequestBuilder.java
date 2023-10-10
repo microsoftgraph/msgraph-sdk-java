@@ -65,7 +65,7 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data source entity for groups associated with the custodian.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> get() {
@@ -74,7 +74,7 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property unifiedGroupSources in security
      * @param body The request body
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body) {
@@ -97,7 +97,7 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property unifiedGroupSources in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -59,8 +59,8 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItemCollectionResponse
+     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItemCollectionResponse
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to history for identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> post(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
@@ -94,7 +94,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to history for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> post(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a historyRequestBuilder
+     * @return a HistoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new HistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Get the risk history of a riskyServicePrincipal object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

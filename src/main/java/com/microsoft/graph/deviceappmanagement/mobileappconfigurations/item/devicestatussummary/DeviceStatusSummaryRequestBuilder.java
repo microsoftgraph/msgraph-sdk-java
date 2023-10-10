@@ -57,7 +57,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatusSummaryRequestBuilder
+     * @return a DeviceStatusSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatusSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

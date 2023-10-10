@@ -118,7 +118,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     private java.util.List<VerifiedDomain> verifiedDomains;
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
      */
     public Organization() {
         super();
@@ -127,7 +127,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a organization
+     * @return a Organization
      */
     @jakarta.annotation.Nonnull
     public static Organization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -136,7 +136,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The collection of service plans associated with the tenant. Not nullable.
-     * @return a assignedPlan
+     * @return a java.util.List<AssignedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -144,7 +144,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the branding property value. Branding for the organization. Nullable.
-     * @return a organizationalBranding
+     * @return a OrganizationalBranding
      */
     @jakarta.annotation.Nullable
     public OrganizationalBranding getBranding() {
@@ -152,7 +152,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
@@ -160,7 +160,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-     * @return a certificateBasedAuthConfiguration
+     * @return a java.util.List<CertificateBasedAuthConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateBasedAuthConfiguration> getCertificateBasedAuthConfiguration() {
@@ -168,7 +168,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the city property value. City name of the address for the organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -176,7 +176,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the country property value. Country/region name of the address for the organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountry() {
@@ -184,7 +184,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryLetterCode() {
@@ -200,7 +200,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultUsageLocation() {
@@ -208,7 +208,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -216,7 +216,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -260,7 +260,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the marketingNotificationEmails property value. Not nullable.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMarketingNotificationEmails() {
@@ -268,7 +268,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority.
-     * @return a mdmAuthority
+     * @return a MdmAuthority
      */
     @jakarta.annotation.Nullable
     public MdmAuthority getMobileDeviceManagementAuthority() {
@@ -284,7 +284,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
@@ -292,7 +292,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
-     * @return a partnerTenantType
+     * @return a PartnerTenantType
      */
     @jakarta.annotation.Nullable
     public PartnerTenantType getPartnerTenantType() {
@@ -300,7 +300,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the postalCode property value. Postal code of the address for the organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
@@ -308,7 +308,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
@@ -316,7 +316,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the privacyProfile property value. The privacy profile of an organization.
-     * @return a privacyProfile
+     * @return a PrivacyProfile
      */
     @jakarta.annotation.Nullable
     public PrivacyProfile getPrivacyProfile() {
@@ -324,7 +324,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. Not nullable.
-     * @return a provisionedPlan
+     * @return a java.util.List<ProvisionedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
@@ -332,7 +332,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the securityComplianceNotificationMails property value. Not nullable.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationMails() {
@@ -340,7 +340,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the securityComplianceNotificationPhones property value. Not nullable.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationPhones() {
@@ -348,7 +348,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the state property value. State name of the address for the organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -356,7 +356,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the street property value. Street name of the address for organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreet() {
@@ -364,7 +364,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the technicalNotificationMails property value. Not nullable.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTechnicalNotificationMails() {
@@ -372,7 +372,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantType() {
@@ -380,7 +380,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
-     * @return a verifiedDomain
+     * @return a java.util.List<VerifiedDomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VerifiedDomain> getVerifiedDomains() {

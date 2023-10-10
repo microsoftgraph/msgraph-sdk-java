@@ -59,7 +59,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Read properties and relationships of the deviceComplianceActionItem object.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     /**
      * Read properties and relationships of the deviceComplianceActionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     /**
      * Update the properties of a deviceComplianceActionItem object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
      * Update the properties of a deviceComplianceActionItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

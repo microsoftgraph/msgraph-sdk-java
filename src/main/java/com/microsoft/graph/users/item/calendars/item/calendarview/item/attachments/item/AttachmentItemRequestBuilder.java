@@ -37,7 +37,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}/attachments/{attachment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an attachment from a user calendar event, mail message, or group post.
+     * Delete an attachment from a user calendar event, mail message, or group post. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/attachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an attachment from a user calendar event, mail message, or group post.
+     * Delete an attachment from a user calendar event, mail message, or group post. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/attachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get() {
@@ -68,7 +68,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Attachment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an attachment from a user calendar event, mail message, or group post.
+     * Delete an attachment from a user calendar event, mail message, or group post. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an attachment from a user calendar event, mail message, or group post.
+     * Delete an attachment from a user calendar event, mail message, or group post. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

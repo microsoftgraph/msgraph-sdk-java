@@ -33,7 +33,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     private Byte r;
     /**
-     * Instantiates a new rgbColor and sets the default values.
+     * Instantiates a new RgbColor and sets the default values.
      */
     public RgbColor() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rgbColor
+     * @return a RgbColor
      */
     @jakarta.annotation.Nonnull
     public static RgbColor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         return new RgbColor();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the b property value. Blue value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getB() {
@@ -79,7 +79,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the g property value. Green value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getG() {
@@ -87,7 +87,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the r property value. Red value
-     * @return a byte
+     * @return a Byte
      */
     @jakarta.annotation.Nullable
     public Byte getR() {
@@ -114,8 +114,8 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

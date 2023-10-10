@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     }
     /**
      * The user experience analytics work from anywhere model performance
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * The user experience analytics work from anywhere model performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

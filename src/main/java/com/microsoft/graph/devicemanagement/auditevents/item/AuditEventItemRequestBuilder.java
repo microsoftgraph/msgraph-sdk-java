@@ -59,7 +59,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the auditEvent object.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the auditEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a auditEvent object.
      * @param body The request body
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

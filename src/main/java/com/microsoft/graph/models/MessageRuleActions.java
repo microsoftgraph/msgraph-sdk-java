@@ -62,7 +62,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      */
     private Boolean stopProcessingRules;
     /**
-     * Instantiates a new messageRuleActions and sets the default values.
+     * Instantiates a new MessageRuleActions and sets the default values.
      */
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
@@ -70,7 +70,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageRuleActions
+     * @return a MessageRuleActions
      */
     @jakarta.annotation.Nonnull
     public static MessageRuleActions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
         return new MessageRuleActions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the assignCategories property value. A list of categories to be assigned to a message.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignCategories() {
@@ -95,7 +95,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the copyToFolder property value. The ID of a folder that a message is to be copied to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCopyToFolder() {
@@ -103,7 +103,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDelete() {
@@ -132,7 +132,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardAsAttachmentTo() {
@@ -140,7 +140,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardTo() {
@@ -148,7 +148,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the markAsRead property value. Indicates whether a message should be marked as read.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMarkAsRead() {
@@ -156,7 +156,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     * @return a importance
+     * @return a Importance
      */
     @jakarta.annotation.Nullable
     public Importance getMarkImportance() {
@@ -164,7 +164,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the moveToFolder property value. The ID of the folder that a message will be moved to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMoveToFolder() {
@@ -172,7 +172,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -180,7 +180,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPermanentDelete() {
@@ -188,7 +188,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the redirectTo property value. The email addresses to which a message should be redirected.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getRedirectTo() {
@@ -196,7 +196,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStopProcessingRules() {
@@ -223,8 +223,8 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

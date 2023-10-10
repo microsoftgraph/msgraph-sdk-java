@@ -249,7 +249,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The managed devices associated with the user.
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get() {
@@ -258,7 +258,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed devices associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -271,7 +271,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedDevices in users
      * @param body The request body
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@jakarta.annotation.Nonnull final ManagedDevice body) {
@@ -281,7 +281,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedDevices in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

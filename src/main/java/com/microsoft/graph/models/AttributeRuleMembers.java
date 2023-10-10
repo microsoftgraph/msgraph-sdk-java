@@ -17,7 +17,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      */
     private String membershipRule;
     /**
-     * Instantiates a new attributeRuleMembers and sets the default values.
+     * Instantiates a new AttributeRuleMembers and sets the default values.
      */
     public AttributeRuleMembers() {
         super();
@@ -26,7 +26,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeRuleMembers
+     * @return a AttributeRuleMembers
      */
     @jakarta.annotation.Nonnull
     public static AttributeRuleMembers createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     }
     /**
      * Gets the description property value. A description of the membership rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     }
     /**
      * Gets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMembershipRule() {

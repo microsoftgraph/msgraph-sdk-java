@@ -56,8 +56,8 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
-     * @return a CompletableFuture of approvalStage
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalStage
+     * @return a CompletableFuture of ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of approvalStage
+     * @return a CompletableFuture of ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalStage
+     * @return a CompletableFuture of ApprovalStage
      * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +209,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

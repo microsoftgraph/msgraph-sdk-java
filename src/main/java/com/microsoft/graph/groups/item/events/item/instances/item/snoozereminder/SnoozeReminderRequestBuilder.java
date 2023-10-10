@@ -35,7 +35,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events/{event%2Did}/instances/{event%2Did1}/snoozeReminder", rawUrl);
     }
     /**
-     * Postpone a reminder for an event in a user calendar until a new time.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Postpone a reminder for an event in a user calendar until a new time.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Postpone a reminder for an event in a user calendar until a new time.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Postpone a reminder for an event in a user calendar until a new time.
+     * Postpone a reminder for an event in a user calendar until a new time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a snoozeReminderRequestBuilder
+     * @return a SnoozeReminderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SnoozeReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

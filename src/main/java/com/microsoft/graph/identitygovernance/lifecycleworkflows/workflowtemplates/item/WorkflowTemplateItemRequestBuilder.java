@@ -45,8 +45,8 @@ public class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflowTemplates/{workflowTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a workflowTemplate object.
-     * @return a CompletableFuture of workflowTemplate
+     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkflowTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -54,9 +54,9 @@ public class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a workflowTemplate object.
+     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflowTemplate
+     * @return a CompletableFuture of WorkflowTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkflowTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a workflowTemplate object.
+     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a workflowTemplate object.
+     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class WorkflowTemplateItemRequestBuilder extends BaseRequestBuilder {
         return new WorkflowTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a workflowTemplate object.
+     * Read the properties and relationships of a workflowTemplate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

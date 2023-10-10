@@ -46,7 +46,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get appCatalogs
-     * @return a CompletableFuture of appCatalogs
+     * @return a CompletableFuture of AppCatalogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCatalogs> get() {
@@ -55,7 +55,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get appCatalogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCatalogs
+     * @return a CompletableFuture of AppCatalogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCatalogs> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +68,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update appCatalogs
      * @param body The request body
-     * @return a CompletableFuture of appCatalogs
+     * @return a CompletableFuture of AppCatalogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCatalogs> patch(@jakarta.annotation.Nonnull final AppCatalogs body) {
@@ -78,7 +78,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
      * Update appCatalogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCatalogs
+     * @return a CompletableFuture of AppCatalogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCatalogs> patch(@jakarta.annotation.Nonnull final AppCatalogs body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appCatalogsRequestBuilder
+     * @return a AppCatalogsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppCatalogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

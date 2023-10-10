@@ -26,7 +26,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     private OffsetDateTime startDateTime;
     /**
-     * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
+     * Instantiates a new UnifiedRoleEligibilityScheduleInstance and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
@@ -34,7 +34,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleEligibilityScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -72,7 +72,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     }
     /**
      * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleEligibilityScheduleId() {

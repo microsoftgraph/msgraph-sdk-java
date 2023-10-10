@@ -59,7 +59,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read properties and relationships of the localizedNotificationMessage object.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     /**
      * Read properties and relationships of the localizedNotificationMessage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     /**
      * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
      * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

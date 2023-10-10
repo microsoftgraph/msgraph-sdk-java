@@ -67,8 +67,8 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/childFolders/{contactFolder%2Did1}/contacts{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
-     * @return a CompletableFuture of contactCollectionResponse
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactCollectionResponse
+     * @return a CompletableFuture of ContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContactCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Contact::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactsRequestBuilder
+     * @return a ContactsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +187,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return new ContactsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

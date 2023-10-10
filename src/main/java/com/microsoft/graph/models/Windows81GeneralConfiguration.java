@@ -144,7 +144,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     private String workFoldersUrl;
     /**
-     * Instantiates a new windows81GeneralConfiguration and sets the default values.
+     * Instantiates a new Windows81GeneralConfiguration and sets the default values.
      */
     public Windows81GeneralConfiguration() {
         super();
@@ -153,7 +153,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81GeneralConfiguration
+     * @return a Windows81GeneralConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows81GeneralConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -162,7 +162,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountsBlockAddingNonMicrosoftAccountEmail() {
@@ -170,7 +170,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
@@ -178,7 +178,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutofill() {
@@ -186,7 +186,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutomaticDetectionOfIntranetSites() {
@@ -194,7 +194,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockEnterpriseModeAccess() {
@@ -202,7 +202,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockJavaScript() {
@@ -210,7 +210,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPlugins() {
@@ -218,7 +218,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockPopups property value. Indicates whether or not to block popups.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPopups() {
@@ -226,7 +226,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSendingDoNotTrackHeader() {
@@ -234,7 +234,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSingleWordEntryOnIntranetSites() {
@@ -242,7 +242,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBrowserEnterpriseModeSiteListLocation() {
@@ -250,7 +250,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
-     * @return a internetSiteSecurityLevel
+     * @return a InternetSiteSecurityLevel
      */
     @jakarta.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
@@ -258,7 +258,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
-     * @return a siteSecurityLevel
+     * @return a SiteSecurityLevel
      */
     @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
@@ -266,7 +266,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserLoggingReportLocation property value. The logging report location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBrowserLoggingReportLocation() {
@@ -274,7 +274,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFirewall() {
@@ -282,7 +282,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFraudWarning() {
@@ -290,7 +290,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireHighSecurityForRestrictedSites() {
@@ -298,7 +298,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBrowserRequireSmartScreen() {
@@ -306,7 +306,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
-     * @return a siteSecurityLevel
+     * @return a SiteSecurityLevel
      */
     @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
@@ -314,7 +314,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
@@ -322,7 +322,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticsBlockDataSubmission() {
@@ -372,7 +372,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockPicturePasswordAndPin() {
@@ -380,7 +380,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordExpirationDays property value. Password expiration in days.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -388,7 +388,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -396,7 +396,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -404,7 +404,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -412,7 +412,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -420,7 +420,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -428,7 +428,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -436,7 +436,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
@@ -444,7 +444,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUpdatesRequireAutomaticUpdates() {
@@ -452,7 +452,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
-     * @return a windowsUserAccountControlSettings
+     * @return a WindowsUserAccountControlSettings
      */
     @jakarta.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {
@@ -460,7 +460,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the workFoldersUrl property value. The work folders url.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWorkFoldersUrl() {

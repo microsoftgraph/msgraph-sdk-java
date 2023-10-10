@@ -38,7 +38,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
-     * @return a CompletableFuture of userProcessingResult
+     * @return a CompletableFuture of UserProcessingResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResult> get() {
@@ -47,7 +47,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userProcessingResult
+     * @return a CompletableFuture of UserProcessingResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResult> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

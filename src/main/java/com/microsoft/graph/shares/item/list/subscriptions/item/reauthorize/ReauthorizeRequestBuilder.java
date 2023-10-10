@@ -35,7 +35,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/subscriptions/{subscription%2Did}/reauthorize", rawUrl);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-reauthorize?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-reauthorize?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reauthorize a subscription when you receive a reauthorizationRequired challenge.
+     * Reauthorize a subscription when you receive a reauthorizationRequired challenge. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ReauthorizeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reauthorizeRequestBuilder
+     * @return a ReauthorizeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReauthorizeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

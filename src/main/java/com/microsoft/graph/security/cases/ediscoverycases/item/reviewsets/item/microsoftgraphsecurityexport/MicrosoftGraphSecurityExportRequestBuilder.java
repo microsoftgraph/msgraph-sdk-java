@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/microsoft.graph.security.export", rawUrl);
     }
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-export?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         return post(body, null);
     }
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-export?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSet. For details, see Export documents from a review set in eDiscovery (Premium). This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityExportRequestBuilder
+     * @return a MicrosoftGraphSecurityExportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityExportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -30,7 +30,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
      */
     private X509CertificateRuleType x509CertificateRuleType;
     /**
-     * Instantiates a new x509CertificateRule and sets the default values.
+     * Instantiates a new X509CertificateRule and sets the default values.
      */
     public X509CertificateRule() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateRule
+     * @return a X509CertificateRule
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
         return new X509CertificateRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identifier property value. The identifier of the X.509 certificate. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
@@ -76,7 +76,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return a x509CertificateAuthenticationMode
+     * @return a X509CertificateAuthenticationMode
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
@@ -92,7 +92,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
-     * @return a x509CertificateRuleType
+     * @return a X509CertificateRuleType
      */
     @jakarta.annotation.Nullable
     public X509CertificateRuleType getX509CertificateRuleType() {
@@ -111,8 +111,8 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

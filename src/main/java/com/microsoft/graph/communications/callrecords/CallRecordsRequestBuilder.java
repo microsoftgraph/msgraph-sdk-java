@@ -62,17 +62,17 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
-     * @return a CompletableFuture of callRecordCollectionResponse
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CallRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callRecordCollectionResponse
+     * @return a CompletableFuture of CallRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getDirectRoutingCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -98,7 +98,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPstnCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -109,7 +109,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to callRecords for communications
      * @param body The request body
-     * @return a CompletableFuture of callRecord
+     * @return a CompletableFuture of CallRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecord> post(@jakarta.annotation.Nonnull final CallRecord body) {
@@ -119,7 +119,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to callRecords for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callRecord
+     * @return a CompletableFuture of CallRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecord> post(@jakarta.annotation.Nonnull final CallRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +131,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CallRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +194,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a callRecordsRequestBuilder
+     * @return a CallRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CallRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -202,7 +202,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return new CallRecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

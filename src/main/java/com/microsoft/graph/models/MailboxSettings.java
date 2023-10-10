@@ -54,7 +54,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      */
     private WorkingHours workingHours;
     /**
-     * Instantiates a new mailboxSettings and sets the default values.
+     * Instantiates a new MailboxSettings and sets the default values.
      */
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -62,7 +62,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mailboxSettings
+     * @return a MailboxSettings
      */
     @jakarta.annotation.Nonnull
     public static MailboxSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return new MailboxSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the archiveFolder property value. Folder ID of an archive folder for the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getArchiveFolder() {
@@ -87,7 +87,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the automaticRepliesSetting property value. Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
-     * @return a automaticRepliesSetting
+     * @return a AutomaticRepliesSetting
      */
     @jakarta.annotation.Nullable
     public AutomaticRepliesSetting getAutomaticRepliesSetting() {
@@ -95,7 +95,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dateFormat property value. The date format for the user's mailbox.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDateFormat() {
@@ -103,7 +103,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     * @return a delegateMeetingMessageDeliveryOptions
+     * @return a DelegateMeetingMessageDeliveryOptions
      */
     @jakarta.annotation.Nullable
     public DelegateMeetingMessageDeliveryOptions getDelegateMeetingMessageDeliveryOptions() {
@@ -130,7 +130,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the language property value. The locale information for the user, including the preferred language and country/region.
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getLanguage() {
@@ -138,7 +138,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -146,7 +146,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeFormat property value. The time format for the user's mailbox.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeFormat() {
@@ -154,7 +154,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeZone property value. The default time zone for the user's mailbox.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
@@ -162,7 +162,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
-     * @return a userPurpose
+     * @return a UserPurpose
      */
     @jakarta.annotation.Nullable
     public UserPurpose getUserPurpose() {
@@ -170,7 +170,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works.
-     * @return a workingHours
+     * @return a WorkingHours
      */
     @jakarta.annotation.Nullable
     public WorkingHours getWorkingHours() {
@@ -195,8 +195,8 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

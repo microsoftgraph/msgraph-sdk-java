@@ -67,7 +67,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The calendar view for the calendar. Read-only. Nullable.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * The calendar view for the calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a calendarViewRequestBuilder
+     * @return a CalendarViewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

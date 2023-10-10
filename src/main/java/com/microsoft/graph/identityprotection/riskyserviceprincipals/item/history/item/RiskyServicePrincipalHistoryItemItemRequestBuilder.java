@@ -57,7 +57,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
     }
     /**
      * Represents the risk history of Azure AD service principals.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> get() {
@@ -66,7 +66,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
     /**
      * Represents the risk history of Azure AD service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property history in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
@@ -89,7 +89,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
      * Update the navigation property history in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipalHistoryItem
+     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

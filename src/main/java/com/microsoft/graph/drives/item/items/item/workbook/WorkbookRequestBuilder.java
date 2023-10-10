@@ -139,7 +139,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
-     * @return a CompletableFuture of workbook
+     * @return a CompletableFuture of Workbook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workbook> get() {
@@ -148,7 +148,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     /**
      * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbook
+     * @return a CompletableFuture of Workbook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workbook> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property workbook in drives
      * @param body The request body
-     * @return a CompletableFuture of workbook
+     * @return a CompletableFuture of Workbook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workbook> patch(@jakarta.annotation.Nonnull final Workbook body) {
@@ -171,7 +171,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property workbook in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbook
+     * @return a CompletableFuture of Workbook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workbook> patch(@jakarta.annotation.Nonnull final Workbook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +185,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sessionInfoResource method.
      * @param key Usage: key='{key}'
-     * @return a sessionInfoResourceWithKeyRequestBuilder
+     * @return a SessionInfoResourceWithKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SessionInfoResourceWithKeyRequestBuilder sessionInfoResourceWithKey(@jakarta.annotation.Nonnull final String key) {
@@ -195,7 +195,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the tableRowOperationResult method.
      * @param key Usage: key='{key}'
-     * @return a tableRowOperationResultWithKeyRequestBuilder
+     * @return a TableRowOperationResultWithKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TableRowOperationResultWithKeyRequestBuilder tableRowOperationResultWithKey(@jakarta.annotation.Nonnull final String key) {
@@ -293,7 +293,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a workbookRequestBuilder
+     * @return a WorkbookRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WorkbookRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

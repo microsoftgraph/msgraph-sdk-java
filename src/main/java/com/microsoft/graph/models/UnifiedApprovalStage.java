@@ -42,7 +42,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<SubjectSet> primaryApprovers;
     /**
-     * Instantiates a new unifiedApprovalStage and sets the default values.
+     * Instantiates a new UnifiedApprovalStage and sets the default values.
      */
     public UnifiedApprovalStage() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedApprovalStage
+     * @return a UnifiedApprovalStage
      */
     @jakarta.annotation.Nonnull
     public static UnifiedApprovalStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
         return new UnifiedApprovalStage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the approvalStageTimeOutInDays property value. The number of days that a request can be pending a response before it is automatically denied.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getApprovalStageTimeOutInDays() {
@@ -75,7 +75,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don't respond.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getEscalationApprovers() {
@@ -83,7 +83,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the escalationTimeInMinutes property value. The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEscalationTimeInMinutes() {
@@ -107,7 +107,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isApproverJustificationRequired property value. Indicates whether the approver must provide justification for their reponse.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
@@ -115,7 +115,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEscalationEnabled property value. Indicates whether escalation if enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
@@ -123,7 +123,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the primaryApprovers property value. The primary approvers of this stage.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryApprovers() {
@@ -153,8 +153,8 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

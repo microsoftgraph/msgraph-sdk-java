@@ -73,7 +73,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     private Boolean windowsEnabled;
     /**
-     * Instantiates a new mobileThreatDefenseConnector and sets the default values.
+     * Instantiates a new MobileThreatDefenseConnector and sets the default values.
      */
     public MobileThreatDefenseConnector() {
         super();
@@ -81,7 +81,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileThreatDefenseConnector
+     * @return a MobileThreatDefenseConnector
      */
     @jakarta.annotation.Nonnull
     public static MobileThreatDefenseConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the allowPartnerToCollectIOSApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPartnerToCollectIOSApplicationMetadata() {
@@ -98,7 +98,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPartnerToCollectIOSPersonalApplicationMetadata() {
@@ -106,7 +106,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidDeviceBlockedOnMissingPartnerData() {
@@ -114,7 +114,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the androidEnabled property value. For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidEnabled() {
@@ -122,7 +122,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the androidMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidMobileApplicationManagementEnabled() {
@@ -154,7 +154,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIosDeviceBlockedOnMissingPartnerData() {
@@ -162,7 +162,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the iosEnabled property value. For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIosEnabled() {
@@ -170,7 +170,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the iosMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIosMobileApplicationManagementEnabled() {
@@ -186,7 +186,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMicrosoftDefenderForEndpointAttachEnabled() {
@@ -194,7 +194,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a mobileThreatPartnerTenantState
+     * @return a MobileThreatPartnerTenantState
      */
     @jakarta.annotation.Nullable
     public MobileThreatPartnerTenantState getPartnerState() {
@@ -202,7 +202,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the partnerUnresponsivenessThresholdInDays property value. Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPartnerUnresponsivenessThresholdInDays() {
@@ -210,7 +210,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPartnerUnsupportedOsVersionBlocked() {
@@ -218,7 +218,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the windowsDeviceBlockedOnMissingPartnerData property value. When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsDeviceBlockedOnMissingPartnerData() {
@@ -226,7 +226,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the windowsEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsEnabled() {

@@ -42,7 +42,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      */
     private java.util.List<AccessPackageResource> resources;
     /**
-     * Instantiates a new accessPackageResourceEnvironment and sets the default values.
+     * Instantiates a new AccessPackageResourceEnvironment and sets the default values.
      */
     public AccessPackageResourceEnvironment() {
         super();
@@ -50,7 +50,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceEnvironment
+     * @return a AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceEnvironment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the description property value. The description of this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -75,7 +75,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the displayName property value. The display name of this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -100,7 +100,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultEnvironment() {
@@ -116,7 +116,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the originId property value. The unique identifier of this environment in the origin system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -124,7 +124,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -132,7 +132,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the resources property value. Read-only. Required.
-     * @return a accessPackageResource
+     * @return a java.util.List<AccessPackageResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getResources() {

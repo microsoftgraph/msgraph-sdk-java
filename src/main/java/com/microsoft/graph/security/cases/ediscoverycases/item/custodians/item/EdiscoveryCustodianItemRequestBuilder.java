@@ -128,8 +128,8 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
-     * @return a CompletableFuture of ediscoveryCustodian
+     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -137,9 +137,9 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCustodian
+     * @return a CompletableFuture of EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property custodians in security
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryCustodian
+     * @return a CompletableFuture of EdiscoveryCustodian
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> patch(@jakarta.annotation.Nonnull final EdiscoveryCustodian body) {
@@ -163,7 +163,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property custodians in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCustodian
+     * @return a CompletableFuture of EdiscoveryCustodian
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> patch(@jakarta.annotation.Nonnull final EdiscoveryCustodian body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -202,7 +202,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -210,7 +210,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -279,7 +279,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Read the properties and relationships of an ediscoveryCustodian object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

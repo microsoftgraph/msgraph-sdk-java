@@ -13,7 +13,7 @@ public class InternetExplorerMode extends Entity implements Parsable {
      */
     private java.util.List<BrowserSiteList> siteLists;
     /**
-     * Instantiates a new internetExplorerMode and sets the default values.
+     * Instantiates a new InternetExplorerMode and sets the default values.
      */
     public InternetExplorerMode() {
         super();
@@ -21,7 +21,7 @@ public class InternetExplorerMode extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a internetExplorerMode
+     * @return a InternetExplorerMode
      */
     @jakarta.annotation.Nonnull
     public static InternetExplorerMode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class InternetExplorerMode extends Entity implements Parsable {
     }
     /**
      * Gets the siteLists property value. A collection of site lists to support Internet Explorer mode.
-     * @return a browserSiteList
+     * @return a java.util.List<BrowserSiteList>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteList> getSiteLists() {

@@ -65,7 +65,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get approvers from privacy
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -77,7 +77,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
     /**
      * Get approvers from privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -128,7 +128,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a approversRequestBuilder
+     * @return a ApproversRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */

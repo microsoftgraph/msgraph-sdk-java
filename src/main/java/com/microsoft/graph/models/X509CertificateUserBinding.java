@@ -30,7 +30,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      */
     private String x509CertificateField;
     /**
-     * Instantiates a new x509CertificateUserBinding and sets the default values.
+     * Instantiates a new X509CertificateUserBinding and sets the default values.
      */
     public X509CertificateUserBinding() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateUserBinding
+     * @return a X509CertificateUserBinding
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateUserBinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
         return new X509CertificateUserBinding();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,7 +76,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -84,7 +84,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserProperty() {
@@ -92,7 +92,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getX509CertificateField() {
@@ -111,8 +111,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

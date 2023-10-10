@@ -13,7 +13,7 @@ public class CalendarPermissionCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<CalendarPermission> value;
     /**
-     * Instantiates a new calendarPermissionCollectionResponse and sets the default values.
+     * Instantiates a new CalendarPermissionCollectionResponse and sets the default values.
      */
     public CalendarPermissionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CalendarPermissionCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calendarPermissionCollectionResponse
+     * @return a CalendarPermissionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CalendarPermissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CalendarPermissionCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a calendarPermission
+     * @return a java.util.List<CalendarPermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarPermission> getValue() {

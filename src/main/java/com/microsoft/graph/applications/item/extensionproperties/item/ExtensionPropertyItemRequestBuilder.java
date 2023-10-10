@@ -37,7 +37,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/extensionProperties/{extensionProperty%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
-     * @return a CompletableFuture of extensionProperty
+     * Read a directory extension definition represented by an extensionProperty object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ExtensionProperty
      * @see <a href="https://learn.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extensionProperty
+     * @return a CompletableFuture of ExtensionProperty
      * @see <a href="https://learn.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property extensionProperties in applications
      * @param body The request body
-     * @return a CompletableFuture of extensionProperty
+     * @return a CompletableFuture of ExtensionProperty
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> patch(@jakarta.annotation.Nonnull final ExtensionProperty body) {
@@ -93,7 +93,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property extensionProperties in applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extensionProperty
+     * @return a CompletableFuture of ExtensionProperty
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> patch(@jakarta.annotation.Nonnull final ExtensionProperty body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ExtensionProperty::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD). This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read a directory extension definition represented by an extensionProperty object.
+     * Read a directory extension definition represented by an extensionProperty object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

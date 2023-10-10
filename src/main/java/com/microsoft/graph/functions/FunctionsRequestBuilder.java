@@ -60,7 +60,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from functions
-     * @return a CompletableFuture of attributeMappingFunctionSchemaCollectionResponse
+     * @return a CompletableFuture of AttributeMappingFunctionSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchemaCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from functions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeMappingFunctionSchemaCollectionResponse
+     * @return a CompletableFuture of AttributeMappingFunctionSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchemaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to functions
      * @param body The request body
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body) {
@@ -92,7 +92,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to functions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a functionsRequestBuilder
+     * @return a FunctionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FunctionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

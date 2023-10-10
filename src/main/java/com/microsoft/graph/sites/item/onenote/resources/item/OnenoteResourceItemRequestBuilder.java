@@ -64,17 +64,17 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     * @return a CompletableFuture of onenoteResource
+     * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> get() {
         return get(null);
     }
     /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteResource
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resources in sites
      * @param body The request body
-     * @return a CompletableFuture of onenoteResource
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> patch(@jakarta.annotation.Nonnull final OnenoteResource body) {
@@ -97,7 +97,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resources in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteResource
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> patch(@jakarta.annotation.Nonnull final OnenoteResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class OnenoteResourceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

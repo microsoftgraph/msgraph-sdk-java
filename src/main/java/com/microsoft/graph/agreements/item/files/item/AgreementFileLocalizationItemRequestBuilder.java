@@ -65,7 +65,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> get() {
@@ -74,7 +74,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property files in agreements
      * @param body The request body
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> patch(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
@@ -97,7 +97,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property files in agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> patch(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

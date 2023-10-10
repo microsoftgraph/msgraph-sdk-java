@@ -37,7 +37,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications/{delegatedPermissionClassification%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return delete(null);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     }
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> get() {
@@ -68,7 +68,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patch(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body) {
@@ -91,7 +91,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patch(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return this.requestAdapter.sendAsync(requestInfo, DelegatedPermissionClassification::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

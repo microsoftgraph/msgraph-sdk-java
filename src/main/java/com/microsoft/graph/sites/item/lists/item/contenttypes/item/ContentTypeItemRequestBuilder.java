@@ -137,7 +137,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of content types present in this list.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
@@ -146,7 +146,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of content types present in this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property contentTypes in sites
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body) {
@@ -169,7 +169,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property contentTypes in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

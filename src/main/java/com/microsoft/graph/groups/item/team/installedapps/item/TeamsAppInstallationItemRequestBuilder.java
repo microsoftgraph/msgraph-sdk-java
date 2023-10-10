@@ -61,7 +61,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/installedApps/{teamsAppInstallation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/team-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/team-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
@@ -82,8 +82,8 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the app installed in the specified team.
-     * @return a CompletableFuture of teamsAppInstallation
+     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/team-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,9 +91,9 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/team-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property installedApps in groups
      * @param body The request body
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> patch(@jakarta.annotation.Nonnull final TeamsAppInstallation body) {
@@ -117,7 +117,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property installedApps in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> patch(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -129,7 +129,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Uninstalls an app from the specified team.
+     * Uninstalls an app from the specified team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -164,7 +164,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -233,7 +233,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the app installed in the specified team.
+     * Retrieve the app installed in the specified team. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

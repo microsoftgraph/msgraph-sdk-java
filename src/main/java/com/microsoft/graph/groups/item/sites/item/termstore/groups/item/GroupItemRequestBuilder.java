@@ -45,7 +45,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a group object in a term [store].
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a group object in a term [store].
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a term store group object.
-     * @return a CompletableFuture of group
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a term store group object.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property groups in groups
      * @param body The request body
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body) {
@@ -101,7 +101,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property groups in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a group object in a term [store].
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a group object in a term [store].
+     * Delete a group object in a term store]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a term store group object.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a term store group object.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a term store group object.
+     * Read the properties and relationships of a term store group object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -68,7 +68,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of child folders in the mailFolder.
-     * @return a CompletableFuture of mailFolderCollectionResponse
+     * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolderCollectionResponse
+     * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MailFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Create a new mailSearchFolder in the specified user's mailbox. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a childFoldersRequestBuilder
+     * @return a ChildFoldersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChildFoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

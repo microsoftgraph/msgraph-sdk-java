@@ -30,7 +30,7 @@ public class HostTracker extends Artifact implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new hostTracker and sets the default values.
+     * Instantiates a new HostTracker and sets the default values.
      */
     public HostTracker() {
         super();
@@ -39,7 +39,7 @@ public class HostTracker extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostTracker
+     * @return a HostTracker
      */
     @jakarta.annotation.Nonnull
     public static HostTracker createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class HostTracker extends Artifact implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -78,7 +78,7 @@ public class HostTracker extends Artifact implements Parsable {
     }
     /**
      * Gets the kind property value. The kind of hostTracker that was detected. For example, GoogleAnalyticsID or JarmHash.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKind() {
@@ -94,7 +94,7 @@ public class HostTracker extends Artifact implements Parsable {
     }
     /**
      * Gets the value property value. The identification value for the hostTracker.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

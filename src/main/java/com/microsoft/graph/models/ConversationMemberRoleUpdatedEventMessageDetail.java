@@ -21,7 +21,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new conversationMemberRoleUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new ConversationMemberRoleUpdatedEventMessageDetail and sets the default values.
      */
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
@@ -30,7 +30,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conversationMemberRoleUpdatedEventMessageDetail
+     * @return a ConversationMemberRoleUpdatedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static ConversationMemberRoleUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the conversationMemberRoles property value. Roles for the coversation member user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getConversationMemberRoles() {
@@ -47,7 +47,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the conversationMemberUser property value. Identity of the conversation member user.
-     * @return a teamworkUserIdentity
+     * @return a TeamworkUserIdentity
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentity getConversationMemberUser() {
@@ -67,7 +67,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

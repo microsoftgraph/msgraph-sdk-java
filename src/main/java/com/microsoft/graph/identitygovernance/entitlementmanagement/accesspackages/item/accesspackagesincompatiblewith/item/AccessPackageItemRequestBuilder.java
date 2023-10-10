@@ -38,7 +38,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The access packages that are incompatible with this package. Read-only.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -47,7 +47,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The access packages that are incompatible with this package. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

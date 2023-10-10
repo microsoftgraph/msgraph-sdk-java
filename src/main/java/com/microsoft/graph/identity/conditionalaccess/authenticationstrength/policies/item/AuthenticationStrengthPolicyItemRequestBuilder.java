@@ -81,7 +81,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> get() {
@@ -90,7 +90,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property policies in identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> patch(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
@@ -113,7 +113,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> patch(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

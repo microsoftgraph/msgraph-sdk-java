@@ -57,7 +57,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     private Integer version;
     /**
-     * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfiguration and sets the default values.
      */
     public ManagedDeviceMobileAppConfiguration() {
         super();
@@ -65,7 +65,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfiguration
+     * @return a ManagedDeviceMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. The list of group assignemenets for app configration.
-     * @return a managedDeviceMobileAppConfigurationAssignment
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getAssignments() {
@@ -97,7 +97,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -105,7 +105,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     * @return a managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
@@ -113,7 +113,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the deviceStatusSummary property value. App configuration device status summary.
-     * @return a managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary getDeviceStatusSummary() {
@@ -121,7 +121,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -157,7 +157,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the targetedMobileApps property value. the associated app.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedMobileApps() {
@@ -165,7 +165,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
-     * @return a managedDeviceMobileAppConfigurationUserStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
@@ -173,7 +173,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the userStatusSummary property value. App configuration user status summary.
-     * @return a managedDeviceMobileAppConfigurationUserSummary
+     * @return a ManagedDeviceMobileAppConfigurationUserSummary
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary getUserStatusSummary() {
@@ -181,7 +181,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

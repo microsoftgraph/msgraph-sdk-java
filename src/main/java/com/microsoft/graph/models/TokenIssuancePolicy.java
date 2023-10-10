@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TokenIssuancePolicy extends StsPolicy implements Parsable {
     /**
-     * Instantiates a new tokenIssuancePolicy and sets the default values.
+     * Instantiates a new TokenIssuancePolicy and sets the default values.
      */
     public TokenIssuancePolicy() {
         super();
@@ -18,7 +18,7 @@ public class TokenIssuancePolicy extends StsPolicy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tokenIssuancePolicy
+     * @return a TokenIssuancePolicy
      */
     @jakarta.annotation.Nonnull
     public static TokenIssuancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

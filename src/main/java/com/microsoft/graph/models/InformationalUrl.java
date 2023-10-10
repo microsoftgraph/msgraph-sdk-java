@@ -38,7 +38,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     private String termsOfServiceUrl;
     /**
-     * Instantiates a new informationalUrl and sets the default values.
+     * Instantiates a new InformationalUrl and sets the default values.
      */
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationalUrl
+     * @return a InformationalUrl
      */
     @jakarta.annotation.Nonnull
     public static InformationalUrl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
         return new InformationalUrl();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogoUrl() {
@@ -86,7 +86,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMarketingUrl() {
@@ -94,7 +94,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrivacyStatementUrl() {
@@ -110,7 +110,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportUrl() {
@@ -118,7 +118,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTermsOfServiceUrl() {
@@ -139,8 +139,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -35,7 +35,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/unpublish", rawUrl);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType][] from a content type hub site. This API is available in the following [national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType][] from a content type hub site. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType][] from a content type hub site. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType][] from a content type hub site. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unpublishRequestBuilder
+     * @return a UnpublishRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnpublishRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

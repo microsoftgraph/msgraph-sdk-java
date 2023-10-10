@@ -38,7 +38,7 @@ public class BaseRequestBuilderEscaped extends BaseRequestBuilder {
     }
     /**
      * Parent contentType from which this content type is derived.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
@@ -47,7 +47,7 @@ public class BaseRequestBuilderEscaped extends BaseRequestBuilder {
     /**
      * Parent contentType from which this content type is derived.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class BaseRequestBuilderEscaped extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a baseRequestBuilderEscaped
+     * @return a BaseRequestBuilderEscaped
      */
     @jakarta.annotation.Nonnull
     public BaseRequestBuilderEscaped withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

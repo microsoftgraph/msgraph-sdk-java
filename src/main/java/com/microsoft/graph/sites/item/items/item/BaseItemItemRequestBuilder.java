@@ -38,7 +38,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
-     * @return a CompletableFuture of baseItem
+     * @return a CompletableFuture of BaseItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItem> get() {
@@ -47,7 +47,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of baseItem
+     * @return a CompletableFuture of BaseItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

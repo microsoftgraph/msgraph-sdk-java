@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
     }
     /**
      * User experience analytics metric history
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
     /**
      * User experience analytics metric history
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
     /**
      * Update the navigation property userExperienceAnalyticsMetricHistory in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
      * Update the navigation property userExperienceAnalyticsMetricHistory in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

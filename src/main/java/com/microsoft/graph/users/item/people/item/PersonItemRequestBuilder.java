@@ -38,7 +38,7 @@ public class PersonItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * People that are relevant to the user. Read-only. Nullable.
-     * @return a CompletableFuture of person
+     * @return a CompletableFuture of Person
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Person> get() {
@@ -47,7 +47,7 @@ public class PersonItemRequestBuilder extends BaseRequestBuilder {
     /**
      * People that are relevant to the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of person
+     * @return a CompletableFuture of Person
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Person> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

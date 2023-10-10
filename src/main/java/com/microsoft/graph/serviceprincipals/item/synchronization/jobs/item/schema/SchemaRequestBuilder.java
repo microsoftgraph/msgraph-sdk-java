@@ -88,8 +88,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template.
-     * @return a CompletableFuture of synchronizationSchema
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -164,7 +164,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -172,7 +172,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +227,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schemaRequestBuilder
+     * @return a SchemaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -241,7 +241,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the schema for a given synchronization job or template. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

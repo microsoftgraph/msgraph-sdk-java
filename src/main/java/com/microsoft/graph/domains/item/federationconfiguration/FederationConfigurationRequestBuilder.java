@@ -59,17 +59,17 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
-     * @return a CompletableFuture of internalDomainFederationCollectionResponse
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederationCollectionResponse
+     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,9 +80,9 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InternalDomainFederationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,10 +90,10 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InternalDomainFederation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,7 +135,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -144,7 +144,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new internalDomainFederation object.
+     * Create a new internalDomainFederation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -169,7 +169,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a federationConfigurationRequestBuilder
+     * @return a FederationConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FederationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return new FederationConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

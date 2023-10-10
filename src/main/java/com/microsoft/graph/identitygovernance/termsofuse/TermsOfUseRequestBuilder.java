@@ -73,7 +73,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get termsOfUse from identityGovernance
-     * @return a CompletableFuture of termsOfUseContainer
+     * @return a CompletableFuture of TermsOfUseContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsOfUseContainer> get() {
@@ -82,7 +82,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     /**
      * Get termsOfUse from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsOfUseContainer
+     * @return a CompletableFuture of TermsOfUseContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsOfUseContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property termsOfUse in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of termsOfUseContainer
+     * @return a CompletableFuture of TermsOfUseContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsOfUseContainer> patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body) {
@@ -105,7 +105,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property termsOfUse in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsOfUseContainer
+     * @return a CompletableFuture of TermsOfUseContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsOfUseContainer> patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a termsOfUseRequestBuilder
+     * @return a TermsOfUseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TermsOfUseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

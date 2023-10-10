@@ -59,7 +59,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
-     * @return a CompletableFuture of baseItemCollectionResponse
+     * @return a CompletableFuture of BaseItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of baseItemCollectionResponse
+     * @return a CompletableFuture of BaseItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemsRequestBuilder
+     * @return a ItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

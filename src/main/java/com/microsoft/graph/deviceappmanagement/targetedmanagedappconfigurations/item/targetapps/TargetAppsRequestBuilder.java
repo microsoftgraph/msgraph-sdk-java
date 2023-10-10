@@ -92,7 +92,7 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a targetAppsRequestBuilder
+     * @return a TargetAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TargetAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -26,7 +26,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
      */
     private String resourceAppId;
     /**
-     * Instantiates a new requiredResourceAccess and sets the default values.
+     * Instantiates a new RequiredResourceAccess and sets the default values.
      */
     public RequiredResourceAccess() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a requiredResourceAccess
+     * @return a RequiredResourceAccess
      */
     @jakarta.annotation.Nonnull
     public static RequiredResourceAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
         return new RequiredResourceAccess();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
-     * @return a resourceAccess
+     * @return a java.util.List<ResourceAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceAccess> getResourceAccess() {
@@ -79,7 +79,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceAppId property value. The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceAppId() {
@@ -97,8 +97,8 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

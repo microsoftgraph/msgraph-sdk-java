@@ -30,7 +30,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceComplianceUserStatus and sets the default values.
+     * Instantiates a new DeviceComplianceUserStatus and sets the default values.
      */
     public DeviceComplianceUserStatus() {
         super();
@@ -38,7 +38,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceUserStatus
+     * @return a DeviceComplianceUserStatus
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceUserStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the devicesCount property value. Devices count for that user.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDevicesCount() {
@@ -77,7 +77,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
@@ -85,7 +85,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. User name of the DevicePolicyStatus.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -93,7 +93,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

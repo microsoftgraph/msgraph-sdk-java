@@ -60,7 +60,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of printTasks that were triggered by this print job.
-     * @return a CompletableFuture of printTaskCollectionResponse
+     * @return a CompletableFuture of PrintTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of printTasks that were triggered by this print job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskCollectionResponse
+     * @return a CompletableFuture of PrintTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tasks for print
      * @param body The request body
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> post(@jakarta.annotation.Nonnull final PrintTask body) {
@@ -92,7 +92,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tasks for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> post(@jakarta.annotation.Nonnull final PrintTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tasksRequestBuilder
+     * @return a TasksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

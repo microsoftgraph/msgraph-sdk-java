@@ -65,7 +65,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents line formatting. Read-only.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get() {
@@ -74,7 +74,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents line formatting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property line in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body) {
@@ -97,7 +97,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property line in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lineRequestBuilder
+     * @return a LineRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LineRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

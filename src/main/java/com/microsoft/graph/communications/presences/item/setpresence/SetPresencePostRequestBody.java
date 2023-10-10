@@ -31,7 +31,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     private String sessionId;
     /**
-     * Instantiates a new setPresencePostRequestBody and sets the default values.
+     * Instantiates a new SetPresencePostRequestBody and sets the default values.
      */
     public SetPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a setPresencePostRequestBody
+     * @return a SetPresencePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SetPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,14 +48,14 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the availability property value. The availability property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
@@ -93,7 +93,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -119,8 +119,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
         this.activity = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestB
     }
     /**
      * User experience analytics baselines
-     * @return a CompletableFuture of userExperienceAnalyticsBaselineCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBaselineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaselineCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestB
     /**
      * User experience analytics baselines
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBaselineCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBaselineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaselineCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to userExperienceAnalyticsBaselines for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBaseline
+     * @return a CompletableFuture of UserExperienceAnalyticsBaseline
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestB
      * Create new navigation property to userExperienceAnalyticsBaselines for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBaseline
+     * @return a CompletableFuture of UserExperienceAnalyticsBaseline
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsBaselinesRequestBuilder
+     * @return a UserExperienceAnalyticsBaselinesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBaselinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

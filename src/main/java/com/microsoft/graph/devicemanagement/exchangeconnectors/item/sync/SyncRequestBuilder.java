@@ -92,7 +92,7 @@ public class SyncRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a syncRequestBuilder
+     * @return a SyncRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SyncRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

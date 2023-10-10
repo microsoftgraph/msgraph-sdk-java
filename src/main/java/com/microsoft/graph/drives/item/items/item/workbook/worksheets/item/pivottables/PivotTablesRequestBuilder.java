@@ -67,8 +67,8 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of workbookpivottable objects.
-     * @return a CompletableFuture of workbookPivotTableCollectionResponse
+     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of workbookpivottable objects.
+     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookPivotTableCollectionResponse
+     * @return a CompletableFuture of WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to pivotTables for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> post(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
@@ -102,7 +102,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to pivotTables for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> post(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookPivotTable::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of workbookpivottable objects.
+     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of workbookpivottable objects.
+     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pivotTablesRequestBuilder
+     * @return a PivotTablesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PivotTablesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
         return new PivotTablesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of workbookpivottable objects.
+     * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

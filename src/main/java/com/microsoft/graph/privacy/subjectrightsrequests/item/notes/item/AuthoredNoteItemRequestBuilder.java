@@ -62,8 +62,8 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * List of notes associcated with the request.
-     * @return a CompletableFuture of authoredNote
+     * List of notes associated with the request.
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -73,9 +73,9 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -91,7 +91,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property notes in privacy
      * @param body The request body
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -104,7 +104,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notes in privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -152,7 +152,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -163,7 +163,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -244,7 +244,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

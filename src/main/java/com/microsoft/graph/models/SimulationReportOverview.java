@@ -34,7 +34,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     private TrainingEventsContent trainingEventsContent;
     /**
-     * Instantiates a new simulationReportOverview and sets the default values.
+     * Instantiates a new SimulationReportOverview and sets the default values.
      */
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a simulationReportOverview
+     * @return a SimulationReportOverview
      */
     @jakarta.annotation.Nonnull
     public static SimulationReportOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
         return new SimulationReportOverview();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,7 +81,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
-     * @return a recommendedAction
+     * @return a java.util.List<RecommendedAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecommendedAction> getRecommendedActions() {
@@ -89,7 +89,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getResolvedTargetsCount() {
@@ -97,7 +97,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
-     * @return a simulationEventsContent
+     * @return a SimulationEventsContent
      */
     @jakarta.annotation.Nullable
     public SimulationEventsContent getSimulationEventsContent() {
@@ -105,7 +105,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
-     * @return a trainingEventsContent
+     * @return a TrainingEventsContent
      */
     @jakarta.annotation.Nullable
     public TrainingEventsContent getTrainingEventsContent() {
@@ -125,8 +125,8 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -26,7 +26,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * Instantiates a new delegatedAdminAccessContainer and sets the default values.
+     * Instantiates a new DelegatedAdminAccessContainer and sets the default values.
      */
     public DelegatedAdminAccessContainer() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminAccessContainer
+     * @return a DelegatedAdminAccessContainer
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminAccessContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessContainerId() {
@@ -51,14 +51,14 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the accessContainerType property value. The accessContainerType property
-     * @return a delegatedAdminAccessContainerType
+     * @return a DelegatedAdminAccessContainerType
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainerType getAccessContainerType() {
         return this.accessContainerType;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
         this.accessContainerType = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

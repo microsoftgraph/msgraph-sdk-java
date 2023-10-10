@@ -59,7 +59,7 @@ public class DeviceComplianceSettingStateItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read properties and relationships of the deviceComplianceSettingState object.
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DeviceComplianceSettingStateItemRequestBuilder extends BaseRequestB
     /**
      * Read properties and relationships of the deviceComplianceSettingState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DeviceComplianceSettingStateItemRequestBuilder extends BaseRequestB
     /**
      * Update the properties of a deviceComplianceSettingState object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DeviceComplianceSettingStateItemRequestBuilder extends BaseRequestB
      * Update the properties of a deviceComplianceSettingState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -65,7 +65,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A container for Internet Explorer mode resources.
-     * @return a CompletableFuture of internetExplorerMode
+     * @return a CompletableFuture of InternetExplorerMode
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternetExplorerMode> get() {
@@ -74,7 +74,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
     /**
      * A container for Internet Explorer mode resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internetExplorerMode
+     * @return a CompletableFuture of InternetExplorerMode
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternetExplorerMode> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property internetExplorerMode in admin
      * @param body The request body
-     * @return a CompletableFuture of internetExplorerMode
+     * @return a CompletableFuture of InternetExplorerMode
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternetExplorerMode> patch(@jakarta.annotation.Nonnull final InternetExplorerMode body) {
@@ -97,7 +97,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property internetExplorerMode in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internetExplorerMode
+     * @return a CompletableFuture of InternetExplorerMode
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternetExplorerMode> patch(@jakarta.annotation.Nonnull final InternetExplorerMode body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class InternetExplorerModeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a internetExplorerModeRequestBuilder
+     * @return a InternetExplorerModeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InternetExplorerModeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

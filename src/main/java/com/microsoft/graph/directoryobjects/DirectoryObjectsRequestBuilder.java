@@ -92,7 +92,7 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from directoryObjects
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -101,7 +101,7 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from directoryObjects
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to directoryObjects
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> post(@jakarta.annotation.Nonnull final DirectoryObject body) {
@@ -124,7 +124,7 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to directoryObjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> post(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class DirectoryObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoryObjectsRequestBuilder
+     * @return a DirectoryObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -46,7 +46,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new riskyUser and sets the default values.
+     * Instantiates a new RiskyUser and sets the default values.
      */
     public RiskyUser() {
         super();
@@ -54,7 +54,7 @@ public class RiskyUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyUser
+     * @return a RiskyUser
      */
     @jakarta.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +88,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The activity related to user risk level change
-     * @return a riskyUserHistoryItem
+     * @return a java.util.List<RiskyUserHistoryItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUserHistoryItem> getHistory() {
@@ -96,7 +96,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -104,7 +104,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
@@ -112,7 +112,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a riskDetail
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -128,7 +128,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -136,7 +136,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a riskState
+     * @return a RiskState
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -144,7 +144,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. Risky user display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -152,7 +152,7 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. Risky user principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

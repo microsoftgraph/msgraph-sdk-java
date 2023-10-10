@@ -57,7 +57,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
     }
     /**
      * The list of troubleshooting events for the tenant.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
     /**
      * The list of troubleshooting events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
     /**
      * Update the navigation property troubleshootingEvents in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> patch(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body) {
@@ -89,7 +89,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder extends Base
      * Update the navigation property troubleshootingEvents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> patch(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

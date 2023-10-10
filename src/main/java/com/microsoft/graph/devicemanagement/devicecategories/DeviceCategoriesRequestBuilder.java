@@ -60,7 +60,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceCategory objects.
-     * @return a CompletableFuture of deviceCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceCategory object.
      * @param body The request body
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCategoriesRequestBuilder
+     * @return a DeviceCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

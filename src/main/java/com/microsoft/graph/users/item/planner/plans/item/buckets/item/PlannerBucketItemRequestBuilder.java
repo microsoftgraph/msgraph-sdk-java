@@ -65,7 +65,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Collection of buckets in the plan.
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> get() {
@@ -74,7 +74,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property buckets in users
      * @param body The request body
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> patch(@jakarta.annotation.Nonnull final PlannerBucket body) {
@@ -97,7 +97,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property buckets in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> patch(@jakarta.annotation.Nonnull final PlannerBucket body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

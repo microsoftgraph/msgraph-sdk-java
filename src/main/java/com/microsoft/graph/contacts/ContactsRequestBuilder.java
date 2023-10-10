@@ -91,8 +91,8 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of organizational contacts for this organization.
-     * @return a CompletableFuture of orgContactCollectionResponse
+     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OrgContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,9 +100,9 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of orgContactCollectionResponse
+     * @return a CompletableFuture of OrgContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to contacts
      * @param body The request body
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> post(@jakarta.annotation.Nonnull final OrgContact body) {
@@ -126,7 +126,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to contacts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> post(@jakarta.annotation.Nonnull final OrgContact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OrgContact::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactsRequestBuilder
+     * @return a ContactsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return new ContactsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of organizational contacts for this organization.
+     * Get the list of organizational contacts for this organization. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

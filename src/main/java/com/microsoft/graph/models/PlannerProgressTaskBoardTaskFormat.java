@@ -13,7 +13,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      */
     private String orderHint;
     /**
-     * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
+     * Instantiates a new PlannerProgressTaskBoardTaskFormat and sets the default values.
      */
     public PlannerProgressTaskBoardTaskFormat() {
         super();
@@ -21,7 +21,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerProgressTaskBoardTaskFormat
+     * @return a PlannerProgressTaskBoardTaskFormat
      */
     @jakarta.annotation.Nonnull
     public static PlannerProgressTaskBoardTaskFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     }
     /**
      * Gets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {

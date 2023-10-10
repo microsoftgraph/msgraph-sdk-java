@@ -37,8 +37,8 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/templates/{conditionalAccessTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object.
-     * @return a CompletableFuture of conditionalAccessTemplate
+     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ConditionalAccessTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,9 +46,9 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object.
+     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessTemplate
+     * @return a CompletableFuture of ConditionalAccessTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object.
+     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object.
+     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return new ConditionalAccessTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a conditionalAccessTemplate object.
+     * Read the properties and relationships of a conditionalAccessTemplate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,7 +45,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      */
     private KubernetesServiceAccountEvidence serviceAccount;
     /**
-     * Instantiates a new kubernetesPodEvidence and sets the default values.
+     * Instantiates a new KubernetesPodEvidence and sets the default values.
      */
     public KubernetesPodEvidence() {
         super();
@@ -54,7 +54,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesPodEvidence
+     * @return a KubernetesPodEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesPodEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the containers property value. The list of pod containers which are not init or ephemeral containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getContainers() {
@@ -71,7 +71,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the controller property value. The pod controller.
-     * @return a kubernetesControllerEvidence
+     * @return a KubernetesControllerEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesControllerEvidence getController() {
@@ -79,7 +79,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ephemeralContainers property value. The list of pod ephemeral containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getEphemeralContainers() {
@@ -105,7 +105,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the initContainers property value. The list of pod init containers.
-     * @return a containerEvidence
+     * @return a java.util.List<ContainerEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getInitContainers() {
@@ -113,7 +113,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the labels property value. The pod labels.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
@@ -121,7 +121,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the name property value. The pod name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -129,7 +129,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the namespace property value. The pod namespace.
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
@@ -137,7 +137,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the podIp property value. The pod IP.
-     * @return a ipEvidence
+     * @return a IpEvidence
      */
     @jakarta.annotation.Nullable
     public IpEvidence getPodIp() {
@@ -145,7 +145,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the serviceAccount property value. The pod service account.
-     * @return a kubernetesServiceAccountEvidence
+     * @return a KubernetesServiceAccountEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesServiceAccountEvidence getServiceAccount() {

@@ -664,11 +664,11 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     /**
      * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      */
-    private byte[] startMenuLayoutEdgeAssetsXml;
+    private Base64url startMenuLayoutEdgeAssetsXml;
     /**
      * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
      */
-    private byte[] startMenuLayoutXml;
+    private Base64url startMenuLayoutXml;
     /**
      * Type of display modes for the start menu.
      */
@@ -818,7 +818,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      */
     private Boolean wirelessDisplayRequirePinForPairing;
     /**
-     * Instantiates a new windows10GeneralConfiguration and sets the default values.
+     * Instantiates a new Windows10GeneralConfiguration and sets the default values.
      */
     public Windows10GeneralConfiguration() {
         super();
@@ -827,7 +827,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10GeneralConfiguration
+     * @return a Windows10GeneralConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10GeneralConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -836,7 +836,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountsBlockAddingNonMicrosoftAccountEmail() {
@@ -844,7 +844,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the antiTheftModeBlocked property value. Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAntiTheftModeBlocked() {
@@ -852,7 +852,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsAllowTrustedAppsSideloading property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getAppsAllowTrustedAppsSideloading() {
@@ -860,7 +860,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsBlockWindowsStoreOriginatedApps property value. Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockWindowsStoreOriginatedApps() {
@@ -868,7 +868,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothAllowedServices property value. Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBluetoothAllowedServices() {
@@ -876,7 +876,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothBlockAdvertising property value. Whether or not to Block the user from using bluetooth advertising.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockAdvertising() {
@@ -884,7 +884,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothBlockDiscoverableMode property value. Whether or not to Block the user from using bluetooth discoverable mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockDiscoverableMode() {
@@ -892,7 +892,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothBlocked property value. Whether or not to Block the user from using bluetooth.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
@@ -900,7 +900,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the bluetoothBlockPrePairing property value. Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockPrePairing() {
@@ -908,7 +908,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cameraBlocked property value. Whether or not to Block the user from accessing the camera of the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
@@ -916,7 +916,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockDataWhenRoaming property value. Whether or not to Block the user from using data over cellular while roaming.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataWhenRoaming() {
@@ -924,7 +924,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockVpn property value. Whether or not to Block the user from using VPN over cellular.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockVpn() {
@@ -932,7 +932,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cellularBlockVpnWhenRoaming property value. Whether or not to Block the user from using VPN when roaming over cellular.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockVpnWhenRoaming() {
@@ -940,7 +940,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the certificatesBlockManualRootCertificateInstallation property value. Whether or not to Block the user from doing manual root certificate installation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCertificatesBlockManualRootCertificateInstallation() {
@@ -948,7 +948,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the connectedDevicesServiceBlocked property value. Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectedDevicesServiceBlocked() {
@@ -956,7 +956,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the copyPasteBlocked property value. Whether or not to Block the user from using copy paste.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCopyPasteBlocked() {
@@ -964,7 +964,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the cortanaBlocked property value. Whether or not to Block the user from using Cortana.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCortanaBlocked() {
@@ -972,7 +972,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderBlockEndUserAccess property value. Whether or not to block end user access to Defender.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderBlockEndUserAccess() {
@@ -980,7 +980,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
-     * @return a defenderCloudBlockLevelType
+     * @return a DefenderCloudBlockLevelType
      */
     @jakarta.annotation.Nullable
     public DefenderCloudBlockLevelType getDefenderCloudBlockLevel() {
@@ -988,7 +988,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderDaysBeforeDeletingQuarantinedMalware property value. Number of days before deleting quarantined malware. Valid values 0 to 90
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderDaysBeforeDeletingQuarantinedMalware() {
@@ -996,7 +996,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
-     * @return a defenderDetectedMalwareActions
+     * @return a DefenderDetectedMalwareActions
      */
     @jakarta.annotation.Nullable
     public DefenderDetectedMalwareActions getDefenderDetectedMalwareActions() {
@@ -1004,7 +1004,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderFileExtensionsToExclude property value. File extensions to exclude from scans and real time protection.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderFileExtensionsToExclude() {
@@ -1012,7 +1012,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderFilesAndFoldersToExclude property value. Files and folder to exclude from scans and real time protection.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderFilesAndFoldersToExclude() {
@@ -1020,7 +1020,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
-     * @return a defenderMonitorFileActivity
+     * @return a DefenderMonitorFileActivity
      */
     @jakarta.annotation.Nullable
     public DefenderMonitorFileActivity getDefenderMonitorFileActivity() {
@@ -1028,7 +1028,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderProcessesToExclude property value. Processes to exclude from scans and real time protection.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderProcessesToExclude() {
@@ -1036,7 +1036,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
-     * @return a defenderPromptForSampleSubmission
+     * @return a DefenderPromptForSampleSubmission
      */
     @jakarta.annotation.Nullable
     public DefenderPromptForSampleSubmission getDefenderPromptForSampleSubmission() {
@@ -1044,7 +1044,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderRequireBehaviorMonitoring property value. Indicates whether or not to require behavior monitoring.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderRequireBehaviorMonitoring() {
@@ -1052,7 +1052,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderRequireCloudProtection property value. Indicates whether or not to require cloud protection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderRequireCloudProtection() {
@@ -1060,7 +1060,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderRequireNetworkInspectionSystem property value. Indicates whether or not to require network inspection system.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderRequireNetworkInspectionSystem() {
@@ -1068,7 +1068,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderRequireRealTimeMonitoring property value. Indicates whether or not to require real time monitoring.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderRequireRealTimeMonitoring() {
@@ -1076,7 +1076,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanArchiveFiles property value. Indicates whether or not to scan archive files.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanArchiveFiles() {
@@ -1084,7 +1084,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanDownloads property value. Indicates whether or not to scan downloads.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanDownloads() {
@@ -1092,7 +1092,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanIncomingMail property value. Indicates whether or not to scan incoming mail messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanIncomingMail() {
@@ -1100,7 +1100,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanMappedNetworkDrivesDuringFullScan property value. Indicates whether or not to scan mapped network drives during full scan.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanMappedNetworkDrivesDuringFullScan() {
@@ -1108,7 +1108,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanMaxCpu property value. Max CPU usage percentage during scan. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderScanMaxCpu() {
@@ -1116,7 +1116,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanNetworkFiles property value. Indicates whether or not to scan files opened from a network folder.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanNetworkFiles() {
@@ -1124,7 +1124,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanRemovableDrivesDuringFullScan property value. Indicates whether or not to scan removable drives during full scan.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanRemovableDrivesDuringFullScan() {
@@ -1132,7 +1132,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanScriptsLoadedInInternetExplorer property value. Indicates whether or not to scan scripts loaded in Internet Explorer browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderScanScriptsLoadedInInternetExplorer() {
@@ -1140,7 +1140,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanType property value. Possible values for system scan type.
-     * @return a defenderScanType
+     * @return a DefenderScanType
      */
     @jakarta.annotation.Nullable
     public DefenderScanType getDefenderScanType() {
@@ -1164,7 +1164,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderSignatureUpdateIntervalInHours property value. The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderSignatureUpdateIntervalInHours() {
@@ -1172,7 +1172,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
-     * @return a weeklySchedule
+     * @return a WeeklySchedule
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getDefenderSystemScanSchedule() {
@@ -1180,7 +1180,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the developerUnlockSetting property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getDeveloperUnlockSetting() {
@@ -1188,7 +1188,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the deviceManagementBlockFactoryResetOnMobile property value. Indicates whether or not to Block the user from resetting their phone.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceManagementBlockFactoryResetOnMobile() {
@@ -1196,7 +1196,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the deviceManagementBlockManualUnenroll property value. Indicates whether or not to Block the user from doing manual un-enrollment from device management.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceManagementBlockManualUnenroll() {
@@ -1204,7 +1204,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
-     * @return a diagnosticDataSubmissionMode
+     * @return a DiagnosticDataSubmissionMode
      */
     @jakarta.annotation.Nullable
     public DiagnosticDataSubmissionMode getDiagnosticsDataSubmissionMode() {
@@ -1212,7 +1212,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeAllowStartPagesModification property value. Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeAllowStartPagesModification() {
@@ -1220,7 +1220,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockAccessToAboutFlags property value. Indicates whether or not to prevent access to about flags on Edge browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockAccessToAboutFlags() {
@@ -1228,7 +1228,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockAddressBarDropdown property value. Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockAddressBarDropdown() {
@@ -1236,7 +1236,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockAutofill property value. Indicates whether or not to block auto fill.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockAutofill() {
@@ -1244,7 +1244,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockCompatibilityList property value. Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockCompatibilityList() {
@@ -1252,7 +1252,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockDeveloperTools property value. Indicates whether or not to block developer tools in the Edge browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockDeveloperTools() {
@@ -1260,7 +1260,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlocked property value. Indicates whether or not to Block the user from using the Edge browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlocked() {
@@ -1268,7 +1268,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockExtensions property value. Indicates whether or not to block extensions in the Edge browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockExtensions() {
@@ -1276,7 +1276,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockInPrivateBrowsing property value. Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockInPrivateBrowsing() {
@@ -1284,7 +1284,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockJavaScript() {
@@ -1292,7 +1292,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockLiveTileDataCollection property value. Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockLiveTileDataCollection() {
@@ -1300,7 +1300,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockPasswordManager property value. Indicates whether or not to Block password manager.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockPasswordManager() {
@@ -1308,7 +1308,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockPopups property value. Indicates whether or not to block popups.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockPopups() {
@@ -1316,7 +1316,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockSearchSuggestions property value. Indicates whether or not to block the user from using the search suggestions in the address bar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockSearchSuggestions() {
@@ -1324,7 +1324,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockSendingDoNotTrackHeader() {
@@ -1332,7 +1332,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeBlockSendingIntranetTrafficToInternetExplorer property value. Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeBlockSendingIntranetTrafficToInternetExplorer() {
@@ -1340,7 +1340,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeClearBrowsingDataOnExit property value. Clear browsing data on exiting Microsoft Edge.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeClearBrowsingDataOnExit() {
@@ -1348,7 +1348,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
-     * @return a edgeCookiePolicy
+     * @return a EdgeCookiePolicy
      */
     @jakarta.annotation.Nullable
     public EdgeCookiePolicy getEdgeCookiePolicy() {
@@ -1356,7 +1356,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeDisableFirstRunPage property value. Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeDisableFirstRunPage() {
@@ -1364,7 +1364,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeEnterpriseModeSiteListLocation property value. Indicates the enterprise mode site list location. Could be a local file, local network or http location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEdgeEnterpriseModeSiteListLocation() {
@@ -1372,7 +1372,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeFirstRunUrl property value. The first run URL for when Edge browser is opened for the first time.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEdgeFirstRunUrl() {
@@ -1380,7 +1380,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeHomepageUrls property value. The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEdgeHomepageUrls() {
@@ -1388,7 +1388,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeRequireSmartScreen property value. Indicates whether or not to Require the user to use the smart screen filter.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeRequireSmartScreen() {
@@ -1396,7 +1396,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeSearchEngine property value. Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
-     * @return a edgeSearchEngineBase
+     * @return a EdgeSearchEngineBase
      */
     @jakarta.annotation.Nullable
     public EdgeSearchEngineBase getEdgeSearchEngine() {
@@ -1404,7 +1404,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeSendIntranetTrafficToInternetExplorer property value. Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeSendIntranetTrafficToInternetExplorer() {
@@ -1412,7 +1412,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeSyncFavoritesWithInternetExplorer property value. Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeSyncFavoritesWithInternetExplorer() {
@@ -1420,7 +1420,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintDiscoveryEndPoint property value. Endpoint for discovering cloud printers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseCloudPrintDiscoveryEndPoint() {
@@ -1428,7 +1428,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintDiscoveryMaxLimit property value. Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnterpriseCloudPrintDiscoveryMaxLimit() {
@@ -1436,7 +1436,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier property value. OAuth resource URI for printer discovery service as configured in Azure portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier() {
@@ -1444,7 +1444,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintOAuthAuthority property value. Authentication endpoint for acquiring OAuth tokens.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseCloudPrintOAuthAuthority() {
@@ -1452,7 +1452,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintOAuthClientIdentifier property value. GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseCloudPrintOAuthClientIdentifier() {
@@ -1460,7 +1460,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the enterpriseCloudPrintResourceIdentifier property value. OAuth resource URI for print service as configured in the Azure portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnterpriseCloudPrintResourceIdentifier() {
@@ -1468,7 +1468,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the experienceBlockDeviceDiscovery property value. Indicates whether or not to enable device discovery UX.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExperienceBlockDeviceDiscovery() {
@@ -1476,7 +1476,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the experienceBlockErrorDialogWhenNoSIM property value. Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExperienceBlockErrorDialogWhenNoSIM() {
@@ -1484,7 +1484,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the experienceBlockTaskSwitcher property value. Indicates whether or not to enable task switching on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExperienceBlockTaskSwitcher() {
@@ -1659,8 +1659,8 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("startMenuHideSleep", (n) -> { this.setStartMenuHideSleep(n.getBooleanValue()); });
         deserializerMap.put("startMenuHideSwitchAccount", (n) -> { this.setStartMenuHideSwitchAccount(n.getBooleanValue()); });
         deserializerMap.put("startMenuHideUserTile", (n) -> { this.setStartMenuHideUserTile(n.getBooleanValue()); });
-        deserializerMap.put("startMenuLayoutEdgeAssetsXml", (n) -> { this.setStartMenuLayoutEdgeAssetsXml(n.getByteArrayValue()); });
-        deserializerMap.put("startMenuLayoutXml", (n) -> { this.setStartMenuLayoutXml(n.getByteArrayValue()); });
+        deserializerMap.put("startMenuLayoutEdgeAssetsXml", (n) -> { this.setStartMenuLayoutEdgeAssetsXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
+        deserializerMap.put("startMenuLayoutXml", (n) -> { this.setStartMenuLayoutXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("startMenuMode", (n) -> { this.setStartMenuMode(n.getEnumValue(WindowsStartMenuModeType.class)); });
         deserializerMap.put("startMenuPinnedFolderDocuments", (n) -> { this.setStartMenuPinnedFolderDocuments(n.getEnumValue(VisibilitySetting.class)); });
         deserializerMap.put("startMenuPinnedFolderDownloads", (n) -> { this.setStartMenuPinnedFolderDownloads(n.getEnumValue(VisibilitySetting.class)); });
@@ -1702,7 +1702,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the gameDvrBlocked property value. Indicates whether or not to block DVR and broadcasting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGameDvrBlocked() {
@@ -1710,7 +1710,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the internetSharingBlocked property value. Indicates whether or not to Block the user from using internet sharing.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInternetSharingBlocked() {
@@ -1718,7 +1718,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the locationServicesBlocked property value. Indicates whether or not to Block the user from location services.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocationServicesBlocked() {
@@ -1726,7 +1726,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenAllowTimeoutConfiguration property value. Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenAllowTimeoutConfiguration() {
@@ -1734,7 +1734,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockActionCenterNotifications property value. Indicates whether or not to block action center notifications over lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockActionCenterNotifications() {
@@ -1742,7 +1742,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockCortana property value. Indicates whether or not the user can interact with Cortana using speech while the system is locked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockCortana() {
@@ -1750,7 +1750,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenBlockToastNotifications property value. Indicates whether to allow toast notifications above the device lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockToastNotifications() {
@@ -1758,7 +1758,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the lockScreenTimeoutInSeconds property value. Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLockScreenTimeoutInSeconds() {
@@ -1766,7 +1766,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the logonBlockFastUserSwitching property value. Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLogonBlockFastUserSwitching() {
@@ -1774,7 +1774,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the microsoftAccountBlocked property value. Indicates whether or not to Block a Microsoft account.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMicrosoftAccountBlocked() {
@@ -1782,7 +1782,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the microsoftAccountBlockSettingsSync property value. Indicates whether or not to Block Microsoft account settings sync.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMicrosoftAccountBlockSettingsSync() {
@@ -1790,7 +1790,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNetworkProxyApplySettingsDeviceWide() {
@@ -1798,7 +1798,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the networkProxyAutomaticConfigurationUrl property value. Address to the proxy auto-config (PAC) script you want to use.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkProxyAutomaticConfigurationUrl() {
@@ -1806,7 +1806,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the networkProxyDisableAutoDetect property value. Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNetworkProxyDisableAutoDetect() {
@@ -1814,7 +1814,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the networkProxyServer property value. Specifies manual proxy server settings.
-     * @return a windows10NetworkProxyServer
+     * @return a Windows10NetworkProxyServer
      */
     @jakarta.annotation.Nullable
     public Windows10NetworkProxyServer getNetworkProxyServer() {
@@ -1822,7 +1822,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the nfcBlocked property value. Indicates whether or not to Block the user from using near field communication.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNfcBlocked() {
@@ -1830,7 +1830,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the oneDriveDisableFileSync property value. Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOneDriveDisableFileSync() {
@@ -1838,7 +1838,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordBlockSimple property value. Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -1846,7 +1846,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordExpirationDays property value. The password expiration in days. Valid values 0 to 730
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -1854,7 +1854,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -1862,7 +1862,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -1870,7 +1870,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -1878,7 +1878,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent reuse of. Valid values 0 to 50
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -1886,7 +1886,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequired property value. Indicates whether or not to require the user to have a password.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -1894,7 +1894,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -1902,7 +1902,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequireWhenResumeFromIdleState property value. Indicates whether or not to require a password upon resuming from an idle state.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequireWhenResumeFromIdleState() {
@@ -1910,7 +1910,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset. Valid values 0 to 999
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -1918,7 +1918,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the personalizationDesktopImageUrl property value. A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalizationDesktopImageUrl() {
@@ -1926,7 +1926,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the personalizationLockScreenImageUrl property value. A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalizationLockScreenImageUrl() {
@@ -1934,7 +1934,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the privacyAdvertisingId property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getPrivacyAdvertisingId() {
@@ -1942,7 +1942,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the privacyAutoAcceptPairingAndConsentPrompts property value. Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrivacyAutoAcceptPairingAndConsentPrompts() {
@@ -1950,7 +1950,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the privacyBlockInputPersonalization property value. Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrivacyBlockInputPersonalization() {
@@ -1958,7 +1958,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the resetProtectionModeBlocked property value. Indicates whether or not to Block the user from reset protection mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getResetProtectionModeBlocked() {
@@ -1966,7 +1966,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
-     * @return a safeSearchFilterType
+     * @return a SafeSearchFilterType
      */
     @jakarta.annotation.Nullable
     public SafeSearchFilterType getSafeSearchFilter() {
@@ -1974,7 +1974,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to Block the user from taking Screenshots.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -1982,7 +1982,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchBlockDiacritics property value. Specifies if search can use diacritics.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchBlockDiacritics() {
@@ -1990,7 +1990,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchDisableAutoLanguageDetection property value. Specifies whether to use automatic language detection when indexing content and properties.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchDisableAutoLanguageDetection() {
@@ -1998,7 +1998,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchDisableIndexerBackoff property value. Indicates whether or not to disable the search indexer backoff feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchDisableIndexerBackoff() {
@@ -2006,7 +2006,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchDisableIndexingEncryptedItems property value. Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchDisableIndexingEncryptedItems() {
@@ -2014,7 +2014,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchDisableIndexingRemovableDrive property value. Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchDisableIndexingRemovableDrive() {
@@ -2022,7 +2022,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchEnableAutomaticIndexSizeManangement property value. Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchEnableAutomaticIndexSizeManangement() {
@@ -2030,7 +2030,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSearchEnableRemoteQueries() {
@@ -2038,7 +2038,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockAccountsPage property value. Indicates whether or not to block access to Accounts in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockAccountsPage() {
@@ -2046,7 +2046,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockAddProvisioningPackage property value. Indicates whether or not to block the user from installing provisioning packages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockAddProvisioningPackage() {
@@ -2054,7 +2054,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockAppsPage property value. Indicates whether or not to block access to Apps in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockAppsPage() {
@@ -2062,7 +2062,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockChangeLanguage property value. Indicates whether or not to block the user from changing the language settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockChangeLanguage() {
@@ -2070,7 +2070,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockChangePowerSleep property value. Indicates whether or not to block the user from changing power and sleep settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockChangePowerSleep() {
@@ -2078,7 +2078,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockChangeRegion property value. Indicates whether or not to block the user from changing the region settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockChangeRegion() {
@@ -2086,7 +2086,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockChangeSystemTime property value. Indicates whether or not to block the user from changing date and time settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockChangeSystemTime() {
@@ -2094,7 +2094,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockDevicesPage property value. Indicates whether or not to block access to Devices in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockDevicesPage() {
@@ -2102,7 +2102,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockEaseOfAccessPage property value. Indicates whether or not to block access to Ease of Access in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockEaseOfAccessPage() {
@@ -2110,7 +2110,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockEditDeviceName property value. Indicates whether or not to block the user from editing the device name.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockEditDeviceName() {
@@ -2118,7 +2118,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockGamingPage property value. Indicates whether or not to block access to Gaming in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockGamingPage() {
@@ -2126,7 +2126,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network & Internet in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockNetworkInternetPage() {
@@ -2134,7 +2134,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockPersonalizationPage property value. Indicates whether or not to block access to Personalization in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockPersonalizationPage() {
@@ -2142,7 +2142,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockPrivacyPage property value. Indicates whether or not to block access to Privacy in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockPrivacyPage() {
@@ -2150,7 +2150,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockRemoveProvisioningPackage property value. Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockRemoveProvisioningPackage() {
@@ -2158,7 +2158,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockSettingsApp property value. Indicates whether or not to block access to Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSettingsApp() {
@@ -2166,7 +2166,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockSystemPage property value. Indicates whether or not to block access to System in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockSystemPage() {
@@ -2174,7 +2174,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time & Language in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockTimeLanguagePage() {
@@ -2182,7 +2182,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update & Security in Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSettingsBlockUpdateSecurityPage() {
@@ -2190,7 +2190,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the sharedUserAppDataAllowed property value. Indicates whether or not to block multiple users of the same app to share data.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSharedUserAppDataAllowed() {
@@ -2198,7 +2198,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the smartScreenBlockPromptOverride property value. Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmartScreenBlockPromptOverride() {
@@ -2206,7 +2206,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the smartScreenBlockPromptOverrideForFiles property value. Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmartScreenBlockPromptOverrideForFiles() {
@@ -2214,7 +2214,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the smartScreenEnableAppInstallControl property value. This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmartScreenEnableAppInstallControl() {
@@ -2222,7 +2222,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startBlockUnpinningAppsFromTaskbar property value. Indicates whether or not to block the user from unpinning apps from taskbar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartBlockUnpinningAppsFromTaskbar() {
@@ -2230,7 +2230,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuAppListVisibility property value. Type of start menu app list visibility.
-     * @return a windowsStartMenuAppListVisibilityType
+     * @return a EnumSet<WindowsStartMenuAppListVisibilityType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsStartMenuAppListVisibilityType> getStartMenuAppListVisibility() {
@@ -2238,7 +2238,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideChangeAccountSettings property value. Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideChangeAccountSettings() {
@@ -2246,7 +2246,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideFrequentlyUsedApps property value. Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideFrequentlyUsedApps() {
@@ -2254,7 +2254,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideHibernate property value. Enabling this policy hides hibernate from appearing in the power button in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideHibernate() {
@@ -2262,7 +2262,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideLock property value. Enabling this policy hides lock from appearing in the user tile in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideLock() {
@@ -2270,7 +2270,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHidePowerButton property value. Enabling this policy hides the power button from appearing in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHidePowerButton() {
@@ -2278,7 +2278,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideRecentJumpLists property value. Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideRecentJumpLists() {
@@ -2286,7 +2286,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideRecentlyAddedApps property value. Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideRecentlyAddedApps() {
@@ -2294,7 +2294,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideRestartOptions property value. Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideRestartOptions() {
@@ -2302,7 +2302,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideShutDown property value. Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideShutDown() {
@@ -2310,7 +2310,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideSignOut property value. Enabling this policy hides sign out from appearing in the user tile in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideSignOut() {
@@ -2318,7 +2318,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideSleep property value. Enabling this policy hides sleep from appearing in the power button in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideSleep() {
@@ -2326,7 +2326,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideSwitchAccount property value. Enabling this policy hides switch account from appearing in the user tile in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideSwitchAccount() {
@@ -2334,7 +2334,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuHideUserTile property value. Enabling this policy hides the user tile from appearing in the start menu.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStartMenuHideUserTile() {
@@ -2342,23 +2342,23 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuLayoutEdgeAssetsXml property value. This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getStartMenuLayoutEdgeAssetsXml() {
+    public Base64url getStartMenuLayoutEdgeAssetsXml() {
         return this.startMenuLayoutEdgeAssetsXml;
     }
     /**
      * Gets the startMenuLayoutXml property value. Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getStartMenuLayoutXml() {
+    public Base64url getStartMenuLayoutXml() {
         return this.startMenuLayoutXml;
     }
     /**
      * Gets the startMenuMode property value. Type of display modes for the start menu.
-     * @return a windowsStartMenuModeType
+     * @return a WindowsStartMenuModeType
      */
     @jakarta.annotation.Nullable
     public WindowsStartMenuModeType getStartMenuMode() {
@@ -2366,7 +2366,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderDocuments property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderDocuments() {
@@ -2374,7 +2374,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderDownloads property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderDownloads() {
@@ -2382,7 +2382,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderFileExplorer() {
@@ -2390,7 +2390,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderHomeGroup() {
@@ -2398,7 +2398,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderMusic property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderMusic() {
@@ -2406,7 +2406,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderNetwork property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderNetwork() {
@@ -2414,7 +2414,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderPersonalFolder() {
@@ -2422,7 +2422,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderPictures property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderPictures() {
@@ -2430,7 +2430,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderSettings property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderSettings() {
@@ -2438,7 +2438,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderVideos property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @jakarta.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderVideos() {
@@ -2446,7 +2446,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the storageBlockRemovableStorage property value. Indicates whether or not to Block the user from using removable storage.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockRemovableStorage() {
@@ -2454,7 +2454,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the storageRequireMobileDeviceEncryption property value. Indicating whether or not to require encryption on a mobile device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireMobileDeviceEncryption() {
@@ -2462,7 +2462,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the storageRestrictAppDataToSystemVolume property value. Indicates whether application data is restricted to the system drive.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRestrictAppDataToSystemVolume() {
@@ -2470,7 +2470,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the storageRestrictAppInstallToSystemVolume property value. Indicates whether the installation of applications is restricted to the system drive.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRestrictAppInstallToSystemVolume() {
@@ -2478,7 +2478,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the tenantLockdownRequireNetworkDuringOutOfBoxExperience property value. Whether the device is required to connect to the network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTenantLockdownRequireNetworkDuringOutOfBoxExperience() {
@@ -2486,7 +2486,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the usbBlocked property value. Indicates whether or not to Block the user from USB connection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUsbBlocked() {
@@ -2494,7 +2494,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the voiceRecordingBlocked property value. Indicates whether or not to Block the user from voice recording.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVoiceRecordingBlocked() {
@@ -2502,7 +2502,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWebRtcBlockLocalhostIpAddress() {
@@ -2510,7 +2510,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wiFiBlockAutomaticConnectHotspots property value. Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiBlockAutomaticConnectHotspots() {
@@ -2518,7 +2518,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wiFiBlocked property value. Indicates whether or not to Block the user from using Wi-Fi.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiBlocked() {
@@ -2526,7 +2526,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wiFiBlockManualConfiguration property value. Indicates whether or not to Block the user from using Wi-Fi manual configuration.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiBlockManualConfiguration() {
@@ -2534,7 +2534,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wiFiScanInterval property value. Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWiFiScanInterval() {
@@ -2542,7 +2542,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockConsumerSpecificFeatures property value. Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockConsumerSpecificFeatures() {
@@ -2550,7 +2550,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlocked property value. Allows IT admins to turn off all Windows Spotlight features
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlocked() {
@@ -2558,7 +2558,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockOnActionCenter property value. Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockOnActionCenter() {
@@ -2566,7 +2566,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockTailoredExperiences() {
@@ -2574,7 +2574,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockThirdPartyNotifications property value. Block third party content delivered via Windows Spotlight
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockThirdPartyNotifications() {
@@ -2582,7 +2582,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockWelcomeExperience property value. Block Windows Spotlight Windows welcome experience
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockWelcomeExperience() {
@@ -2590,7 +2590,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightBlockWindowsTips property value. Allows IT admins to turn off the popup of Windows Tips.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsSpotlightBlockWindowsTips() {
@@ -2598,7 +2598,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     * @return a windowsSpotlightEnablementSettings
+     * @return a WindowsSpotlightEnablementSettings
      */
     @jakarta.annotation.Nullable
     public WindowsSpotlightEnablementSettings getWindowsSpotlightConfigureOnLockScreen() {
@@ -2606,7 +2606,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsStoreBlockAutoUpdate property value. Indicates whether or not to block automatic update of apps from Windows Store.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsStoreBlockAutoUpdate() {
@@ -2614,7 +2614,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsStoreBlocked property value. Indicates whether or not to Block the user from using the Windows store.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsStoreBlocked() {
@@ -2622,7 +2622,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsStoreEnablePrivateStoreOnly property value. Indicates whether or not to enable Private Store Only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsStoreEnablePrivateStoreOnly() {
@@ -2630,7 +2630,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wirelessDisplayBlockProjectionToThisDevice property value. Indicates whether or not to allow other devices from discovering this PC for projection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWirelessDisplayBlockProjectionToThisDevice() {
@@ -2638,7 +2638,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wirelessDisplayBlockUserInputFromReceiver property value. Indicates whether or not to allow user input from wireless display receiver.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWirelessDisplayBlockUserInputFromReceiver() {
@@ -2646,7 +2646,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the wirelessDisplayRequirePinForPairing property value. Indicates whether or not to require a PIN for new devices to initiate pairing.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWirelessDisplayRequirePinForPairing() {
@@ -2821,8 +2821,8 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         writer.writeBooleanValue("startMenuHideSleep", this.getStartMenuHideSleep());
         writer.writeBooleanValue("startMenuHideSwitchAccount", this.getStartMenuHideSwitchAccount());
         writer.writeBooleanValue("startMenuHideUserTile", this.getStartMenuHideUserTile());
-        writer.writeByteArrayValue("startMenuLayoutEdgeAssetsXml", this.getStartMenuLayoutEdgeAssetsXml());
-        writer.writeByteArrayValue("startMenuLayoutXml", this.getStartMenuLayoutXml());
+        writer.writeObjectValue("startMenuLayoutEdgeAssetsXml", this.getStartMenuLayoutEdgeAssetsXml());
+        writer.writeObjectValue("startMenuLayoutXml", this.getStartMenuLayoutXml());
         writer.writeEnumValue("startMenuMode", this.getStartMenuMode());
         writer.writeEnumValue("startMenuPinnedFolderDocuments", this.getStartMenuPinnedFolderDocuments());
         writer.writeEnumValue("startMenuPinnedFolderDownloads", this.getStartMenuPinnedFolderDownloads());
@@ -3999,14 +3999,14 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * Sets the startMenuLayoutEdgeAssetsXml property value. This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      * @param value Value to set for the startMenuLayoutEdgeAssetsXml property.
      */
-    public void setStartMenuLayoutEdgeAssetsXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setStartMenuLayoutEdgeAssetsXml(@jakarta.annotation.Nullable final Base64url value) {
         this.startMenuLayoutEdgeAssetsXml = value;
     }
     /**
      * Sets the startMenuLayoutXml property value. Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
      * @param value Value to set for the startMenuLayoutXml property.
      */
-    public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final Base64url value) {
         this.startMenuLayoutXml = value;
     }
     /**

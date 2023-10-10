@@ -37,7 +37,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a conversationMember from a chat.
+     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Remove a conversationMember from a chat.
+     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,19 +58,19 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
-     * @return a CompletableFuture of conversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve a conversationMember from a chat. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ConversationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get() {
         return get(null);
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ConversationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in users
      * @param body The request body
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body) {
@@ -93,7 +93,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Remove a conversationMember from a chat.
+     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a conversationMember from a chat.
+     * Remove a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

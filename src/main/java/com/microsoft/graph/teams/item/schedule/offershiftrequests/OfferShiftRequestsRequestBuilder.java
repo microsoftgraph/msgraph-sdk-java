@@ -59,8 +59,8 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/offerShiftRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
-     * @return a CompletableFuture of offerShiftRequestCollectionResponse
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of offerShiftRequestCollectionResponse
+     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create an instance of an offerShiftRequest.
+     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of offerShiftRequest
+     * @return a CompletableFuture of OfferShiftRequest
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an instance of an offerShiftRequest.
+     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of offerShiftRequest
+     * @return a CompletableFuture of OfferShiftRequest
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OfferShiftRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of an offerShiftRequest.
+     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of an offerShiftRequest.
+     * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a offerShiftRequestsRequestBuilder
+     * @return a OfferShiftRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OfferShiftRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
         return new OfferShiftRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
+     * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

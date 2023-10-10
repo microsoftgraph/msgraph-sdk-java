@@ -3,8 +3,22 @@ package com.microsoft.graph.deviceappmanagement.mobileapps.item;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidlobapp.GraphAndroidLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidstoreapp.GraphAndroidStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.GraphIosLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphiosstoreapp.GraphIosStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphiosvppapp.GraphIosVppAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacosdmgapp.GraphMacOSDmgAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp.GraphMacOSLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedandroidlobapp.GraphManagedAndroidLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedioslobapp.GraphManagedIOSLobAppRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedmobilelobapp.GraphManagedMobileLobAppRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmobilelobapp.GraphMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.GraphMicrosoftStoreForBusinessAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.GraphWin32LobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsappx.GraphWindowsAppXRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsmobilemsi.GraphWindowsMobileMSIRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.GraphWindowsUniversalAppXRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowswebapp.GraphWindowsWebAppRequestBuilder;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -47,6 +61,69 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Casts the previous resource to androidLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidLobAppRequestBuilder graphAndroidLobApp() {
+        return new GraphAndroidLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to androidStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidStoreAppRequestBuilder graphAndroidStoreApp() {
+        return new GraphAndroidStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosLobAppRequestBuilder graphIosLobApp() {
+        return new GraphIosLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosStoreAppRequestBuilder graphIosStoreApp() {
+        return new GraphIosStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosVppApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosVppAppRequestBuilder graphIosVppApp() {
+        return new GraphIosVppAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to macOSDmgApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMacOSDmgAppRequestBuilder graphMacOSDmgApp() {
+        return new GraphMacOSDmgAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to macOSLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMacOSLobAppRequestBuilder graphMacOSLobApp() {
+        return new GraphMacOSLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to managedAndroidLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphManagedAndroidLobAppRequestBuilder graphManagedAndroidLobApp() {
+        return new GraphManagedAndroidLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to managedIOSLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphManagedIOSLobAppRequestBuilder graphManagedIOSLobApp() {
+        return new GraphManagedIOSLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Casts the previous resource to managedMobileLobApp.
      */
     @jakarta.annotation.Nonnull
@@ -54,11 +131,46 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return new GraphManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Casts the previous resource to mobileLobApp.
+     * Casts the previous resource to microsoftStoreForBusinessApp.
      */
     @jakarta.annotation.Nonnull
-    public GraphMobileLobAppRequestBuilder graphMobileLobApp() {
-        return new GraphMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    public GraphMicrosoftStoreForBusinessAppRequestBuilder graphMicrosoftStoreForBusinessApp() {
+        return new GraphMicrosoftStoreForBusinessAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to win32LobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWin32LobAppRequestBuilder graphWin32LobApp() {
+        return new GraphWin32LobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsAppX.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsAppXRequestBuilder graphWindowsAppX() {
+        return new GraphWindowsAppXRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsMobileMSI.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsMobileMSIRequestBuilder graphWindowsMobileMSI() {
+        return new GraphWindowsMobileMSIRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsUniversalAppX.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsUniversalAppXRequestBuilder graphWindowsUniversalAppX() {
+        return new GraphWindowsUniversalAppXRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsWebApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsWebAppRequestBuilder graphWindowsWebApp() {
+        return new GraphWindowsWebAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new MobileAppItemRequestBuilder and sets the default values.
@@ -77,17 +189,17 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a iosiPadOSWebClip.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a macOSOfficeSuiteApp.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Deletes a iosiPadOSWebClip.
+     * Deletes a macOSOfficeSuiteApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,19 +210,19 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
-     * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
+     * @return a CompletableFuture of MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,21 +233,21 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsAppX object.
      * @param body The request body
-     * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsappx-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsAppX object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsappx-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -147,7 +259,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a iosiPadOSWebClip.
+     * Deletes a macOSOfficeSuiteApp.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +267,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosiPadOSWebClip.
+     * Deletes a macOSOfficeSuiteApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -174,7 +286,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +294,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +315,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsAppX object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -212,7 +324,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a win32LobApp object.
+     * Update the properties of a windowsAppX object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -251,7 +363,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windowsMicrosoftEdgeApp object.
+     * Read properties and relationships of the macOSOfficeSuiteApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

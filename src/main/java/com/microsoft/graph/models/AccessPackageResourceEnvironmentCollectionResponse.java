@@ -13,7 +13,7 @@ public class AccessPackageResourceEnvironmentCollectionResponse extends BaseColl
      */
     private java.util.List<AccessPackageResourceEnvironment> value;
     /**
-     * Instantiates a new accessPackageResourceEnvironmentCollectionResponse and sets the default values.
+     * Instantiates a new AccessPackageResourceEnvironmentCollectionResponse and sets the default values.
      */
     public AccessPackageResourceEnvironmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AccessPackageResourceEnvironmentCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceEnvironmentCollectionResponse
+     * @return a AccessPackageResourceEnvironmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceEnvironmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AccessPackageResourceEnvironmentCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageResourceEnvironment
+     * @return a java.util.List<AccessPackageResourceEnvironment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceEnvironment> getValue() {

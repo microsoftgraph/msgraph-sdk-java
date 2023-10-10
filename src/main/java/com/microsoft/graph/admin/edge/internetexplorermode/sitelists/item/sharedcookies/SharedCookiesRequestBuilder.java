@@ -59,8 +59,8 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/sharedCookies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
-     * @return a CompletableFuture of browserSharedCookieCollectionResponse
+     * Get a list of the browserSharedCookie objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of BrowserSharedCookieCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSharedCookieCollectionResponse
+     * @return a CompletableFuture of BrowserSharedCookieCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BrowserSharedCookieCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of browserSharedCookie
+     * @return a CompletableFuture of BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSharedCookie
+     * @return a CompletableFuture of BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BrowserSharedCookie::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new browserSharedCookie object in a browserSiteList.
+     * Create a new browserSharedCookie object in a browserSiteList. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharedCookiesRequestBuilder
+     * @return a SharedCookiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharedCookiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return new SharedCookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the browserSharedCookie objects and their properties.
+     * Get a list of the browserSharedCookie objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

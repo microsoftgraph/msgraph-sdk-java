@@ -57,7 +57,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The activity related to user risk level change
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> get() {
@@ -66,7 +66,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The activity related to user risk level change
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property history in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body) {
@@ -89,7 +89,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property history in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

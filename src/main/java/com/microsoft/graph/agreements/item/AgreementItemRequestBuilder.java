@@ -81,7 +81,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from agreements by key
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get() {
@@ -90,7 +90,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from agreements by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in agreements
      * @param body The request body
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@jakarta.annotation.Nonnull final Agreement body) {
@@ -113,7 +113,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@jakarta.annotation.Nonnull final Agreement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

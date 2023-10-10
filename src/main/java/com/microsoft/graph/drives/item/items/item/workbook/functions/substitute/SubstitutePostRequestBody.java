@@ -31,7 +31,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
      */
     private Json text;
     /**
-     * Instantiates a new substitutePostRequestBody and sets the default values.
+     * Instantiates a new SubstitutePostRequestBody and sets the default values.
      */
     public SubstitutePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a substitutePostRequestBody
+     * @return a SubstitutePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SubstitutePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
         return new SubstitutePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -112,8 +112,8 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

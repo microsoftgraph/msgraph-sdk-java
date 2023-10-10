@@ -14,11 +14,11 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      */
     private Map<String, Object> additionalData;
     /**
-     * Determines whether the user's Authenticator app will show them the client app they are signing into.
+     * Determines whether the user's Authenticator app shows them the client app they're signing into.
      */
     private AuthenticationMethodFeatureConfiguration displayAppInformationRequiredState;
     /**
-     * Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     * Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
      */
     private AuthenticationMethodFeatureConfiguration displayLocationInformationRequiredState;
     /**
@@ -26,7 +26,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      */
     private String odataType;
     /**
-     * Instantiates a new microsoftAuthenticatorFeatureSettings and sets the default values.
+     * Instantiates a new MicrosoftAuthenticatorFeatureSettings and sets the default values.
      */
     public MicrosoftAuthenticatorFeatureSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAuthenticatorFeatureSettings
+     * @return a MicrosoftAuthenticatorFeatureSettings
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAuthenticatorFeatureSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         return new MicrosoftAuthenticatorFeatureSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -50,16 +50,16 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         return this.additionalData;
     }
     /**
-     * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
-     * @return a authenticationMethodFeatureConfiguration
+     * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
+     * @return a AuthenticationMethodFeatureConfiguration
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getDisplayAppInformationRequiredState() {
         return this.displayAppInformationRequiredState;
     }
     /**
-     * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
-     * @return a authenticationMethodFeatureConfiguration
+     * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
+     * @return a AuthenticationMethodFeatureConfiguration
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getDisplayLocationInformationRequiredState() {
@@ -79,7 +79,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,21 +97,21 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
+     * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
      * @param value Value to set for the displayAppInformationRequiredState property.
      */
     public void setDisplayAppInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.displayAppInformationRequiredState = value;
     }
     /**
-     * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
      * @param value Value to set for the displayLocationInformationRequiredState property.
      */
     public void setDisplayLocationInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {

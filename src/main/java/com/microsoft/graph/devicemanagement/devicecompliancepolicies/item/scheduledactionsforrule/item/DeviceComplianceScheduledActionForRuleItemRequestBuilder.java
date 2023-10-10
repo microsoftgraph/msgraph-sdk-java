@@ -67,7 +67,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     }
     /**
      * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     /**
      * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     /**
      * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
      * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

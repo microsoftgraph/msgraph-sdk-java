@@ -13,7 +13,7 @@ public class AccessPackageQuestionCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<AccessPackageQuestion> value;
     /**
-     * Instantiates a new accessPackageQuestionCollectionResponse and sets the default values.
+     * Instantiates a new AccessPackageQuestionCollectionResponse and sets the default values.
      */
     public AccessPackageQuestionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AccessPackageQuestionCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageQuestionCollectionResponse
+     * @return a AccessPackageQuestionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageQuestionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AccessPackageQuestionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getValue() {

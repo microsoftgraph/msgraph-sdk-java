@@ -34,7 +34,7 @@ public class Conversation extends Entity implements Parsable {
      */
     private java.util.List<String> uniqueSenders;
     /**
-     * Instantiates a new conversation and sets the default values.
+     * Instantiates a new Conversation and sets the default values.
      */
     public Conversation() {
         super();
@@ -42,7 +42,7 @@ public class Conversation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conversation
+     * @return a Conversation
      */
     @jakarta.annotation.Nonnull
     public static Conversation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -82,7 +82,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreview() {
@@ -90,7 +90,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
-     * @return a conversationThread
+     * @return a java.util.List<ConversationThread>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationThread> getThreads() {
@@ -98,7 +98,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTopic() {
@@ -106,7 +106,7 @@ public class Conversation extends Entity implements Parsable {
     }
     /**
      * Gets the uniqueSenders property value. All the users that sent a message to this Conversation.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {

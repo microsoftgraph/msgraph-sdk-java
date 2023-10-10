@@ -73,7 +73,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
-     * @return a CompletableFuture of workbookChartTitleFormat
+     * @return a CompletableFuture of WorkbookChartTitleFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitleFormat> get() {
@@ -82,7 +82,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartTitleFormat
+     * @return a CompletableFuture of WorkbookChartTitleFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitleFormat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property format in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartTitleFormat
+     * @return a CompletableFuture of WorkbookChartTitleFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitleFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartTitleFormat body) {
@@ -105,7 +105,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property format in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartTitleFormat
+     * @return a CompletableFuture of WorkbookChartTitleFormat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartTitleFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartTitleFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a formatRequestBuilder
+     * @return a FormatRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FormatRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

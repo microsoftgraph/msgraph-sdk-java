@@ -59,8 +59,8 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant.
-     * @return a CompletableFuture of simulationCollectionResponse
+     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationCollectionResponse
+     * @return a CompletableFuture of SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to simulations for security
      * @param body The request body
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> post(@jakarta.annotation.Nonnull final Simulation body) {
@@ -94,7 +94,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to simulations for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> post(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a simulationsRequestBuilder
+     * @return a SimulationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SimulationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of attack simulation campaigns for a tenant.
+     * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -18,7 +18,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private Integer enabled;
     /**
-     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * The number of units that are locked out because the customer canceled their subscription of the service SKU.
      */
     private Integer lockedOut;
     /**
@@ -26,15 +26,15 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      */
     private Integer suspended;
     /**
-     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      */
     private Integer warning;
     /**
-     * Instantiates a new licenseUnitsDetail and sets the default values.
+     * Instantiates a new LicenseUnitsDetail and sets the default values.
      */
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a licenseUnitsDetail
+     * @return a LicenseUnitsDetail
      */
     @jakarta.annotation.Nonnull
     public static LicenseUnitsDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return new LicenseUnitsDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnabled() {
@@ -80,8 +80,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
-     * @return a integer
+     * Gets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLockedOut() {
@@ -89,23 +89,23 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
-     * @return a integer
+     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuspended() {
         return this.suspended;
     }
     /**
-     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
-     * @return a integer
+     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWarning() {
@@ -125,8 +125,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -139,7 +139,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.enabled = value;
     }
     /**
-     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * Sets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      */
     public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
@@ -153,14 +153,14 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @param value Value to set for the suspended property.
      */
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
         this.suspended = value;
     }
     /**
-     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @param value Value to set for the warning property.
      */
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {

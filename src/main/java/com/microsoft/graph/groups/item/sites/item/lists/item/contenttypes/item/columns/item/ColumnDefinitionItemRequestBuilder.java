@@ -45,7 +45,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/columns/{columnDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is available in the following [national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
-     * @return a CompletableFuture of columnDefinition
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is available in the following [national cloud deployments.
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,9 +89,9 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,10 +99,10 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/columndefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
+     * Remove a column][columndefinition] from a [site][], a [list][], or a [content type][contentType]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +142,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a [site][], a [list][], or a [content type][contentType] [column][columnDefinition].
+     * Update a site][], a [list][], or a [content type][contentType] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -219,7 +219,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
+     * Retrieve the metadata for a site][], a [list][], or a [contentType][] [column][columnDefinition]. This API is available in the following [national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

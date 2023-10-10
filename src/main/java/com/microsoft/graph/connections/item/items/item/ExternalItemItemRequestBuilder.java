@@ -53,7 +53,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,8 +74,8 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
-     * @return a CompletableFuture of externalItem
+     * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ExternalItem
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,9 +83,9 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalItem
+     * @return a CompletableFuture of ExternalItem
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property items in connections
      * @param body The request body
-     * @return a CompletableFuture of externalItem
+     * @return a CompletableFuture of ExternalItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> put(@jakarta.annotation.Nonnull final ExternalItem body) {
@@ -109,7 +109,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property items in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalItem
+     * @return a CompletableFuture of ExternalItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> put(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -121,7 +121,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ExternalItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an externalItem object.
+     * Delete an externalItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -156,7 +156,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -225,7 +225,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

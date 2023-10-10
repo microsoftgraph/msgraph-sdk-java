@@ -23,7 +23,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> roles;
     /**
-     * Instantiates a new grantPostRequestBody and sets the default values.
+     * Instantiates a new GrantPostRequestBody and sets the default values.
      */
     public GrantPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -31,7 +31,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a grantPostRequestBody
+     * @return a GrantPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GrantPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
         return new GrantPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a driveRecipient
+     * @return a java.util.List<DriveRecipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
@@ -67,7 +67,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roles property value. The roles property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
@@ -84,8 +84,8 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

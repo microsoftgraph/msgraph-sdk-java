@@ -13,7 +13,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     private String self;
     /**
-     * Instantiates a new onenoteEntityBaseModel and sets the default values.
+     * Instantiates a new OnenoteEntityBaseModel and sets the default values.
      */
     public OnenoteEntityBaseModel() {
         super();
@@ -21,7 +21,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteEntityBaseModel
+     * @return a OnenoteEntityBaseModel
      */
     @jakarta.annotation.Nonnull
     public static OnenoteEntityBaseModel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     }
     /**
      * Gets the self property value. The endpoint where you can get details about the page. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSelf() {

@@ -44,7 +44,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
      */
     private String state;
     /**
-     * Instantiates a new licenseAssignmentState and sets the default values.
+     * Instantiates a new LicenseAssignmentState and sets the default values.
      */
     public LicenseAssignmentState() {
         this.setAdditionalData(new HashMap<>());
@@ -52,7 +52,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a licenseAssignmentState
+     * @return a LicenseAssignmentState
      */
     @jakarta.annotation.Nonnull
     public static LicenseAssignmentState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return new LicenseAssignmentState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the assignedByGroup property value. The assignedByGroup property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedByGroup() {
@@ -77,7 +77,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the disabledPlans property value. The disabledPlans property
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDisabledPlans() {
@@ -85,7 +85,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {
@@ -117,7 +117,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -155,8 +155,8 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

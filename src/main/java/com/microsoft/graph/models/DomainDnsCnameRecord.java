@@ -13,7 +13,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     private String canonicalName;
     /**
-     * Instantiates a new domainDnsCnameRecord and sets the default values.
+     * Instantiates a new DomainDnsCnameRecord and sets the default values.
      */
     public DomainDnsCnameRecord() {
         super();
@@ -21,7 +21,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsCnameRecord
+     * @return a DomainDnsCnameRecord
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsCnameRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the canonicalName property value. The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCanonicalName() {

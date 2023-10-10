@@ -56,17 +56,19 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get teamsAppSettings from teamwork
-     * @return a CompletableFuture of teamsAppSettings
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TeamsAppSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get() {
         return get(null);
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,19 +79,21 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsAppSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@jakarta.annotation.Nonnull final TeamsAppSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@jakarta.annotation.Nonnull final TeamsAppSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +132,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +140,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +161,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -166,7 +170,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -191,7 +195,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsAppSettingsRequestBuilder
+     * @return a TeamsAppSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsAppSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +209,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get teamsAppSettings from teamwork
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -38,7 +38,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new approvalSettings and sets the default values.
+     * Instantiates a new ApprovalSettings and sets the default values.
      */
     public ApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalSettings
+     * @return a ApprovalSettings
      */
     @jakarta.annotation.Nonnull
     public static ApprovalSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         return new ApprovalSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApprovalMode() {
@@ -71,7 +71,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
-     * @return a unifiedApprovalStage
+     * @return a java.util.List<UnifiedApprovalStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedApprovalStage> getApprovalStages() {
@@ -94,7 +94,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequired() {
@@ -102,7 +102,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForExtension() {
@@ -110,7 +110,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
@@ -118,7 +118,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

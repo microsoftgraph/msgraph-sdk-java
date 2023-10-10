@@ -30,7 +30,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
      */
     private String threadId;
     /**
-     * Instantiates a new chatInfo and sets the default values.
+     * Instantiates a new ChatInfo and sets the default values.
      */
     public ChatInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatInfo
+     * @return a ChatInfo
      */
     @jakarta.annotation.Nonnull
     public static ChatInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         return new ChatInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
@@ -76,7 +76,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the replyChainMessageId property value. The ID of the reply message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReplyChainMessageId() {
@@ -92,7 +92,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the threadId property value. The unique identifier for a thread in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThreadId() {
@@ -111,8 +111,8 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

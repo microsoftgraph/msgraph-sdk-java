@@ -13,7 +13,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      */
     private java.util.List<AppConsentRequest> appConsentRequests;
     /**
-     * Instantiates a new appConsentApprovalRoute and sets the default values.
+     * Instantiates a new AppConsentApprovalRoute and sets the default values.
      */
     public AppConsentApprovalRoute() {
         super();
@@ -21,7 +21,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appConsentApprovalRoute
+     * @return a AppConsentApprovalRoute
      */
     @jakarta.annotation.Nonnull
     public static AppConsentApprovalRoute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     }
     /**
      * Gets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
-     * @return a appConsentRequest
+     * @return a java.util.List<AppConsentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequest> getAppConsentRequests() {

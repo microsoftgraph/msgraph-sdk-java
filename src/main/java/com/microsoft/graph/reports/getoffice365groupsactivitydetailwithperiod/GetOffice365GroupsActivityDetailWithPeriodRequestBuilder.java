@@ -88,7 +88,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityDetailWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityDetailWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

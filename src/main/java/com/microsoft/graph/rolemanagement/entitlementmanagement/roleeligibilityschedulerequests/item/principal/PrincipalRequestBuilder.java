@@ -38,7 +38,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The principal that's getting a role eligibility through the request. Supports $expand.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -47,7 +47,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
     /**
      * The principal that's getting a role eligibility through the request. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a principalRequestBuilder
+     * @return a PrincipalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

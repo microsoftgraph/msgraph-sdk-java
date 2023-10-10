@@ -17,7 +17,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     private EducationFeedback publishedFeedback;
     /**
-     * Instantiates a new educationFeedbackOutcome and sets the default values.
+     * Instantiates a new EducationFeedbackOutcome and sets the default values.
      */
     public EducationFeedbackOutcome() {
         super();
@@ -26,7 +26,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationFeedbackOutcome
+     * @return a EducationFeedbackOutcome
      */
     @jakarta.annotation.Nonnull
     public static EducationFeedbackOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     }
     /**
      * Gets the feedback property value. Teacher's written feedback to the student.
-     * @return a educationFeedback
+     * @return a EducationFeedback
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getFeedback() {
@@ -54,7 +54,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     }
     /**
      * Gets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
-     * @return a educationFeedback
+     * @return a EducationFeedback
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getPublishedFeedback() {

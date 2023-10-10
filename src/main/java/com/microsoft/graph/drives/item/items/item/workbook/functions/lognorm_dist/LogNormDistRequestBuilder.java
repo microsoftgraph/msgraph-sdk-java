@@ -38,7 +38,7 @@ public class LogNormDistRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action logNorm_Dist
      * @param body The request body
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final LogNormDistPostRequestBody body) {
@@ -48,7 +48,7 @@ public class LogNormDistRequestBuilder extends BaseRequestBuilder {
      * Invoke action logNorm_Dist
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final LogNormDistPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

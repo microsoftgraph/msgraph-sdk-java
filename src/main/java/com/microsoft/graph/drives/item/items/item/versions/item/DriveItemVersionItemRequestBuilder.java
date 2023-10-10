@@ -72,8 +72,8 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
-     * @return a CompletableFuture of driveItemVersion
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DriveItemVersion
      * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItemVersion
+     * @return a CompletableFuture of DriveItemVersion
      * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property versions in drives
      * @param body The request body
-     * @return a CompletableFuture of driveItemVersion
+     * @return a CompletableFuture of DriveItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> patch(@jakarta.annotation.Nonnull final DriveItemVersion body) {
@@ -107,7 +107,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property versions in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItemVersion
+     * @return a CompletableFuture of DriveItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> patch(@jakarta.annotation.Nonnull final DriveItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * Retrieve the metadata for a specific version of a DriveItem. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -35,7 +35,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/contentTypes/{contentType%2Did}/associateWithHubSites", rawUrl);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type][contentType] present in a content type hub with a list of hub sites. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a associateWithHubSitesRequestBuilder
+     * @return a AssociateWithHubSitesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssociateWithHubSitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

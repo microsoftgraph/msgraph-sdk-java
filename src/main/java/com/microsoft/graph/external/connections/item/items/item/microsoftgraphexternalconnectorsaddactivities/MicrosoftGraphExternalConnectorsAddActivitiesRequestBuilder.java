@@ -37,26 +37,26 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
     /**
      * Invoke action addActivities
      * @param body The request body
-     * @return a CompletableFuture of addActivitiesResponse
+     * @return a CompletableFuture of AddActivitiesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AddActivitiesResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<AddActivitiesPostResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action addActivities
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of addActivitiesResponse
+     * @return a CompletableFuture of AddActivitiesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AddActivitiesResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AddActivitiesPostResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AddActivitiesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, AddActivitiesPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action addActivities
@@ -93,7 +93,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphExternalConnectorsAddActivitiesRequestBuilder
+     * @return a MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

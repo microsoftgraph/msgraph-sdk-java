@@ -30,7 +30,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     private String prefixFilter;
     /**
-     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      */
     private java.util.List<BucketAggregationRange> ranges;
     /**
@@ -38,7 +38,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     private BucketAggregationSortProperty sortBy;
     /**
-     * Instantiates a new bucketAggregationDefinition and sets the default values.
+     * Instantiates a new BucketAggregationDefinition and sets the default values.
      */
     public BucketAggregationDefinition() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bucketAggregationDefinition
+     * @return a BucketAggregationDefinition
      */
     @jakarta.annotation.Nonnull
     public static BucketAggregationDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         return new BucketAggregationDefinition();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDescending() {
@@ -86,7 +86,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumCount() {
@@ -94,7 +94,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,15 +102,15 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrefixFilter() {
         return this.prefixFilter;
     }
     /**
-     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
-     * @return a bucketAggregationRange
+     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
+     * @return a java.util.List<BucketAggregationRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BucketAggregationRange> getRanges() {
@@ -118,7 +118,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the sortBy property value. The sortBy property
-     * @return a bucketAggregationSortProperty
+     * @return a BucketAggregationSortProperty
      */
     @jakarta.annotation.Nullable
     public BucketAggregationSortProperty getSortBy() {
@@ -139,8 +139,8 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -174,7 +174,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         this.prefixFilter = value;
     }
     /**
-     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @param value Value to set for the ranges property.
      */
     public void setRanges(@jakarta.annotation.Nullable final java.util.List<BucketAggregationRange> value) {

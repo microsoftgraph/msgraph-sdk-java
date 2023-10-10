@@ -41,7 +41,7 @@ public class UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRe
     }
     /**
      * Invoke function usersRegisteredByMethod
-     * @return a CompletableFuture of userRegistrationMethodSummary
+     * @return a CompletableFuture of UserRegistrationMethodSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationMethodSummary> get() {
@@ -50,7 +50,7 @@ public class UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRe
     /**
      * Invoke function usersRegisteredByMethod
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationMethodSummary
+     * @return a CompletableFuture of UserRegistrationMethodSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationMethodSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,7 +91,7 @@ public class UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
+     * @return a UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

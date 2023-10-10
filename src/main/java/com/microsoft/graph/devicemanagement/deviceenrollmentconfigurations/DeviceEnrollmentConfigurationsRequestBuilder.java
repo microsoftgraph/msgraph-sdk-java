@@ -59,19 +59,19 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
-     * @return a CompletableFuture of deviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceEnrollmentConfigurationsRequestBuilder
+     * @return a DeviceEnrollmentConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return new DeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,9 +36,9 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names/addFormulaLocal", rawUrl);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookNamedItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user's locale for the formula. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addFormulaLocalRequestBuilder
+     * @return a AddFormulaLocalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddFormulaLocalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

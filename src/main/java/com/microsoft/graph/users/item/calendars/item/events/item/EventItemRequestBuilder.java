@@ -145,7 +145,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The events in the calendar. Navigation property. Read-only.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> get() {
@@ -154,7 +154,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The events in the calendar. Navigation property. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,9 +165,9 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Event::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update an event object.
+     * Update an event object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-event?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -175,10 +175,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an event object.
+     * Update an event object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-event?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -247,7 +247,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an event object.
+     * Update an event object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -256,7 +256,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an event object.
+     * Update an event object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

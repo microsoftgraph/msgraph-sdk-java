@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddLargeGalleryViewOperation extends CommsOperation implements Parsable {
     /**
-     * Instantiates a new addLargeGalleryViewOperation and sets the default values.
+     * Instantiates a new AddLargeGalleryViewOperation and sets the default values.
      */
     public AddLargeGalleryViewOperation() {
         super();
@@ -17,7 +17,7 @@ public class AddLargeGalleryViewOperation extends CommsOperation implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addLargeGalleryViewOperation
+     * @return a AddLargeGalleryViewOperation
      */
     @jakarta.annotation.Nonnull
     public static AddLargeGalleryViewOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

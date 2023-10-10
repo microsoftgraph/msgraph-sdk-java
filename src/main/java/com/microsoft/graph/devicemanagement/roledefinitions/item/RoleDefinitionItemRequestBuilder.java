@@ -45,17 +45,17 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a roleDefinition.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -67,7 +67,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the roleDefinition object.
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the roleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,21 +89,21 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of roleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of RoleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@jakarta.annotation.Nonnull final RoleDefinition body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of RoleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -115,7 +115,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
+     * Deletes a roleDefinition.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceAndAppManagementRoleDefinition.
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

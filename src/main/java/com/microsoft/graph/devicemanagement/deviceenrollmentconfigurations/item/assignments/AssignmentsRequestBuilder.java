@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the enrollmentConfigurationAssignment objects.
-     * @return a CompletableFuture of enrollmentConfigurationAssignmentCollectionResponse
+     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the enrollmentConfigurationAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentConfigurationAssignmentCollectionResponse
+     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new enrollmentConfigurationAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new enrollmentConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

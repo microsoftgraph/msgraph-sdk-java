@@ -14,7 +14,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+     * An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
      */
     private GenericError errorDetails;
     /**
@@ -26,11 +26,11 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     private String sourceId;
     /**
-     * The converted identifier. This value is not present if the conversion failed.
+     * The converted identifier. This value isn't present if the conversion failed.
      */
     private String targetId;
     /**
-     * Instantiates a new convertIdResult and sets the default values.
+     * Instantiates a new ConvertIdResult and sets the default values.
      */
     public ConvertIdResult() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a convertIdResult
+     * @return a ConvertIdResult
      */
     @jakarta.annotation.Nonnull
     public static ConvertIdResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
         return new ConvertIdResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,8 +54,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
-     * @return a genericError
+     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
+     * @return a GenericError
      */
     @jakarta.annotation.Nullable
     public GenericError getErrorDetails() {
@@ -76,7 +76,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,15 +84,15 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
         return this.sourceId;
     }
     /**
-     * Gets the targetId property value. The converted identifier. This value is not present if the conversion failed.
-     * @return a string
+     * Gets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetId() {
@@ -111,14 +111,14 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final GenericError value) {
@@ -139,7 +139,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
         this.sourceId = value;
     }
     /**
-     * Sets the targetId property value. The converted identifier. This value is not present if the conversion failed.
+     * Sets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {

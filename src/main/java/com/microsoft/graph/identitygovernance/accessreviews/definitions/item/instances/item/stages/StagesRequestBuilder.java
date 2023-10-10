@@ -62,7 +62,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,8 +70,8 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
-     * @return a CompletableFuture of accessReviewStageCollectionResponse
+     * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessReviewStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewStageCollectionResponse
+     * @return a CompletableFuture of AccessReviewStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewStage
+     * @return a CompletableFuture of AccessReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> post(@jakarta.annotation.Nonnull final AccessReviewStage body) {
@@ -105,7 +105,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewStage
+     * @return a CompletableFuture of AccessReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> post(@jakarta.annotation.Nonnull final AccessReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewStage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a stagesRequestBuilder
+     * @return a StagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -188,7 +188,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return new StagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the stages in a multi-stage access review instance. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

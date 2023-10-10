@@ -38,7 +38,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      */
     private String os;
     /**
@@ -54,7 +54,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     private String riskScore;
     /**
-     * Instantiates a new hostSecurityState and sets the default values.
+     * Instantiates a new HostSecurityState and sets the default values.
      */
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
@@ -62,7 +62,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostSecurityState
+     * @return a HostSecurityState
      */
     @jakarta.annotation.Nonnull
     public static HostSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         return new HostSecurityState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
@@ -106,7 +106,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
@@ -114,7 +114,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
@@ -122,7 +122,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
@@ -130,7 +130,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the netBiosName property value. The local host name, without the DNS domain name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetBiosName() {
@@ -138,15 +138,15 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
-     * @return a string
+     * Gets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -154,7 +154,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrivateIpAddress() {
@@ -162,7 +162,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicIpAddress() {
@@ -170,7 +170,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -195,8 +195,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -244,7 +244,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Sets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {

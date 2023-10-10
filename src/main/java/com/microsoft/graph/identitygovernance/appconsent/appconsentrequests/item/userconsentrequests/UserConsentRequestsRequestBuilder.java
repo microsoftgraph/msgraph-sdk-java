@@ -62,7 +62,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,8 +70,8 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
-     * @return a CompletableFuture of userConsentRequestCollectionResponse
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UserConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userConsentRequestCollectionResponse
+     * @return a CompletableFuture of UserConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to userConsentRequests for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of userConsentRequest
+     * @return a CompletableFuture of UserConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConsentRequest> post(@jakarta.annotation.Nonnull final UserConsentRequest body) {
@@ -105,7 +105,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userConsentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userConsentRequest
+     * @return a CompletableFuture of UserConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConsentRequest> post(@jakarta.annotation.Nonnull final UserConsentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserConsentRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userConsentRequestsRequestBuilder
+     * @return a UserConsentRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserConsentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -188,7 +188,7 @@ public class UserConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new UserConsentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a collection of userConsentRequest objects and their properties.
+     * Retrieve a collection of userConsentRequest objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -60,7 +60,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-     * @return a CompletableFuture of agreementFileVersionCollectionResponse
+     * @return a CompletableFuture of AgreementFileVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileVersionCollectionResponse
+     * @return a CompletableFuture of AgreementFileVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to versions for agreements
      * @param body The request body
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> post(@jakarta.annotation.Nonnull final AgreementFileVersion body) {
@@ -92,7 +92,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to versions for agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> post(@jakarta.annotation.Nonnull final AgreementFileVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a versionsRequestBuilder
+     * @return a VersionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VersionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

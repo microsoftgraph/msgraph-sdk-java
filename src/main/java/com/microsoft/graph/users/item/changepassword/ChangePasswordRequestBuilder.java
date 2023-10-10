@@ -35,7 +35,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/changePassword", rawUrl);
     }
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/user-changepassword?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/user-changepassword?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a changePasswordRequestBuilder
+     * @return a ChangePasswordRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChangePasswordRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

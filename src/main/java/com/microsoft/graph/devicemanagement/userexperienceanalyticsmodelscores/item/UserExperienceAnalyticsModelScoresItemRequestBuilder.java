@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRe
     }
     /**
      * User experience analytics model scores
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRe
     /**
      * User experience analytics model scores
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property userExperienceAnalyticsModelScores in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRe
      * Update the navigation property userExperienceAnalyticsModelScores in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

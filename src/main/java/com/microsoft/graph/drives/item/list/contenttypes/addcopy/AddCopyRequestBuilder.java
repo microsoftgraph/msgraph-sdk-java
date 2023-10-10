@@ -36,9 +36,9 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/contentTypes/addCopy", rawUrl);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addCopyRequestBuilder
+     * @return a AddCopyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddCopyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

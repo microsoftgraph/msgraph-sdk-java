@@ -45,7 +45,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/triggers/retentionEvents/{retentionEvent%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a retentionEvent object.
-     * @return a CompletableFuture of retentionEvent
+     * Read the properties and relationships of a retentionEvent object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of RetentionEvent
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionEvent
+     * @return a CompletableFuture of RetentionEvent
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property retentionEvents in security
      * @param body The request body
-     * @return a CompletableFuture of retentionEvent
+     * @return a CompletableFuture of RetentionEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> patch(@jakarta.annotation.Nonnull final RetentionEvent body) {
@@ -101,7 +101,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property retentionEvents in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionEvent
+     * @return a CompletableFuture of RetentionEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> patch(@jakarta.annotation.Nonnull final RetentionEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, RetentionEvent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a retentionEvent object.
+     * Delete a retentionEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a retentionEvent object.
+     * Read the properties and relationships of a retentionEvent object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

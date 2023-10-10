@@ -59,8 +59,8 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
-     * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
+     * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PermissionGrantConditionSetCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PermissionGrantConditionSet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy.
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the includes collection of a  permissionGrantPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a includesRequestBuilder
+     * @return a IncludesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IncludesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return new IncludesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

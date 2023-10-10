@@ -30,7 +30,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      */
     private java.util.List<String> translationLanguages;
     /**
-     * Instantiates a new broadcastMeetingCaptionSettings and sets the default values.
+     * Instantiates a new BroadcastMeetingCaptionSettings and sets the default values.
      */
     public BroadcastMeetingCaptionSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a broadcastMeetingCaptionSettings
+     * @return a BroadcastMeetingCaptionSettings
      */
     @jakarta.annotation.Nonnull
     public static BroadcastMeetingCaptionSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
         return new BroadcastMeetingCaptionSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCaptionEnabled() {
@@ -76,7 +76,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the spokenLanguage property value. The spoken language.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSpokenLanguage() {
@@ -92,7 +92,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the translationLanguages property value. The translation languages (choose up to 6).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTranslationLanguages() {
@@ -111,8 +111,8 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

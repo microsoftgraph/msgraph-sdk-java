@@ -13,7 +13,7 @@ public class MailFolderCollectionResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<MailFolder> value;
     /**
-     * Instantiates a new mailFolderCollectionResponse and sets the default values.
+     * Instantiates a new MailFolderCollectionResponse and sets the default values.
      */
     public MailFolderCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MailFolderCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mailFolderCollectionResponse
+     * @return a MailFolderCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MailFolderCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MailFolderCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a mailFolder
+     * @return a java.util.List<MailFolder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MailFolder> getValue() {

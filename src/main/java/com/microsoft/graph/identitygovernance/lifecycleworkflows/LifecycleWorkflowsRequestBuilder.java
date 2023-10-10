@@ -105,7 +105,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get lifecycleWorkflows from identityGovernance
-     * @return a CompletableFuture of lifecycleWorkflowsContainer
+     * @return a CompletableFuture of LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> get() {
@@ -114,7 +114,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get lifecycleWorkflows from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of lifecycleWorkflowsContainer
+     * @return a CompletableFuture of LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property lifecycleWorkflows in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of lifecycleWorkflowsContainer
+     * @return a CompletableFuture of LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body) {
@@ -137,7 +137,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property lifecycleWorkflows in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of lifecycleWorkflowsContainer
+     * @return a CompletableFuture of LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lifecycleWorkflowsRequestBuilder
+     * @return a LifecycleWorkflowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LifecycleWorkflowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of channels shared with the team.
-     * @return a CompletableFuture of channel
+     * @return a CompletableFuture of Channel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get() {
@@ -68,7 +68,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of channels shared with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of channel
+     * @return a CompletableFuture of Channel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

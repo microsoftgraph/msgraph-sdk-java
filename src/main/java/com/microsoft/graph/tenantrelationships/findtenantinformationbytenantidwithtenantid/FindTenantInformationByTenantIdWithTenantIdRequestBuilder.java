@@ -39,7 +39,7 @@ public class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends B
     }
     /**
      * Invoke function findTenantInformationByTenantId
-     * @return a CompletableFuture of tenantInformation
+     * @return a CompletableFuture of TenantInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantInformation> get() {
@@ -48,7 +48,7 @@ public class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends B
     /**
      * Invoke function findTenantInformationByTenantId
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantInformation
+     * @return a CompletableFuture of TenantInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantInformation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findTenantInformationByTenantIdWithTenantIdRequestBuilder
+     * @return a FindTenantInformationByTenantIdWithTenantIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindTenantInformationByTenantIdWithTenantIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

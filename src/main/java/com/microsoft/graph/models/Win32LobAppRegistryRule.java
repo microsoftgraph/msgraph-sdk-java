@@ -36,7 +36,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     private String valueName;
     /**
-     * Instantiates a new win32LobAppRegistryRule and sets the default values.
+     * Instantiates a new Win32LobAppRegistryRule and sets the default values.
      */
     public Win32LobAppRegistryRule() {
         super();
@@ -45,7 +45,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppRegistryRule
+     * @return a Win32LobAppRegistryRule
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppRegistryRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the check32BitOn64System property value. A value indicating whether to search the 32-bit registry on 64-bit systems.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
@@ -62,7 +62,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the comparisonValue property value. The registry comparison value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComparisonValue() {
@@ -85,7 +85,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the keyPath property value. The full path of the registry entry containing the value to detect.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyPath() {
@@ -93,7 +93,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the operationType property value. Contains all supported registry data detection type.
-     * @return a win32LobAppRegistryRuleOperationType
+     * @return a Win32LobAppRegistryRuleOperationType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRegistryRuleOperationType getOperationType() {
@@ -101,7 +101,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {
@@ -109,7 +109,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the valueName property value. The name of the registry value to detect.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueName() {

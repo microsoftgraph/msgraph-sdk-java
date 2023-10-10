@@ -102,7 +102,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Removes an item from a [list][].
+     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Removes an item from a [list][].
+     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -123,8 +123,8 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
-     * @return a CompletableFuture of listItem
+     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
+     * @return a CompletableFuture of ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,9 +132,9 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItem
+     * @return a CompletableFuture of ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -162,7 +162,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property items in shares
      * @param body The request body
-     * @return a CompletableFuture of listItem
+     * @return a CompletableFuture of ListItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> patch(@jakarta.annotation.Nonnull final ListItem body) {
@@ -172,7 +172,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property items in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItem
+     * @return a CompletableFuture of ListItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> patch(@jakarta.annotation.Nonnull final ListItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -184,7 +184,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ListItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Removes an item from a [list][].
+     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -192,7 +192,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes an item from a [list][].
+     * Removes an item from a list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +211,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -219,7 +219,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -288,7 +288,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * Returns the metadata for an item][] in a [list][]. This API is available in the following [national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

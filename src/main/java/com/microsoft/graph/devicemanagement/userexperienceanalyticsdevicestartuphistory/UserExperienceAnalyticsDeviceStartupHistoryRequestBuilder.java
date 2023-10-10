@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
     }
     /**
      * User experience analytics device Startup History
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
     /**
      * User experience analytics device Startup History
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupHistory for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
      * Create new navigation property to userExperienceAnalyticsDeviceStartupHistory for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDeviceStartupHistoryRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

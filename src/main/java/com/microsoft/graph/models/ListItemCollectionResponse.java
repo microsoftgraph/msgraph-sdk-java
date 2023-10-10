@@ -13,7 +13,7 @@ public class ListItemCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<ListItem> value;
     /**
-     * Instantiates a new listItemCollectionResponse and sets the default values.
+     * Instantiates a new ListItemCollectionResponse and sets the default values.
      */
     public ListItemCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ListItemCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a listItemCollectionResponse
+     * @return a ListItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ListItemCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ListItemCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a listItem
+     * @return a java.util.List<ListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ListItem> getValue() {

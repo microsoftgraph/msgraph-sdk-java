@@ -64,8 +64,8 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return get(null);
     }
     /**
-     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body) {
@@ -99,7 +99,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

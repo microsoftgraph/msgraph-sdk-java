@@ -1,11 +1,7 @@
 package com.microsoft.graph.groups.item.permissiongrants;
 
 import com.microsoft.graph.groups.item.permissiongrants.count.CountRequestBuilder;
-import com.microsoft.graph.groups.item.permissiongrants.delta.DeltaRequestBuilder;
-import com.microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import com.microsoft.graph.groups.item.permissiongrants.getbyids.GetByIdsRequestBuilder;
 import com.microsoft.graph.groups.item.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
-import com.microsoft.graph.groups.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
@@ -33,34 +29,6 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the delta method.
-     */
-    @jakarta.annotation.Nonnull
-    public DeltaRequestBuilder delta() {
-        return new DeltaRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getAvailableExtensionProperties method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
-        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getByIds method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetByIdsRequestBuilder getByIds() {
-        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the validateProperties method.
-     */
-    @jakarta.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
@@ -91,8 +59,8 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/permissionGrants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,9 +68,9 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +84,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to permissionGrants for groups
      * @param body The request body
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -126,7 +94,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to permissionGrants for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +106,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ResourceSpecificPermissionGrant::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +114,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +169,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionGrantsRequestBuilder
+     * @return a PermissionGrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +177,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return new PermissionGrantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

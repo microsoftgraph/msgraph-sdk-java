@@ -37,7 +37,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the number of the resource
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of Integer
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
@@ -49,7 +49,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of Integer
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */

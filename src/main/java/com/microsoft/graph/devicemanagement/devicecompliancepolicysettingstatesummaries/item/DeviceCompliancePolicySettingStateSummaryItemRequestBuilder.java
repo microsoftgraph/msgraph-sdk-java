@@ -67,7 +67,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     }
     /**
      * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     /**
      * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     /**
      * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
      * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

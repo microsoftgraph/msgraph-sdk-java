@@ -38,7 +38,7 @@ public class ToTermRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The to [term] of the relation. The term to which the relationship is defined.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get() {
@@ -47,7 +47,7 @@ public class ToTermRequestBuilder extends BaseRequestBuilder {
     /**
      * The to [term] of the relation. The term to which the relationship is defined.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ToTermRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a toTermRequestBuilder
+     * @return a ToTermRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ToTermRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

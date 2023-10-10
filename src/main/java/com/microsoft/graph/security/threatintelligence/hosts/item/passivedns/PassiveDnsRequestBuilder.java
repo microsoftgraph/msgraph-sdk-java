@@ -58,8 +58,8 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/passiveDns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated to a host.
-     * @return a CompletableFuture of passiveDnsRecordCollectionResponse
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated to a host.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passiveDnsRecordCollectionResponse
+     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated to a host.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated to a host.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a passiveDnsRequestBuilder
+     * @return a PassiveDnsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PassiveDnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated to a host.
+     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname.  This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

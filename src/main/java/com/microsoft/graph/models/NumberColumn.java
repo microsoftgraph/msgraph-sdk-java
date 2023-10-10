@@ -34,7 +34,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new numberColumn and sets the default values.
+     * Instantiates a new NumberColumn and sets the default values.
      */
     public NumberColumn() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a numberColumn
+     * @return a NumberColumn
      */
     @jakarta.annotation.Nonnull
     public static NumberColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
         return new NumberColumn();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDecimalPlaces() {
@@ -67,7 +67,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayAs() {
@@ -89,7 +89,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maximum property value. The maximum permitted value.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaximum() {
@@ -97,7 +97,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the minimum property value. The minimum permitted value.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMinimum() {
@@ -105,7 +105,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,8 +125,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

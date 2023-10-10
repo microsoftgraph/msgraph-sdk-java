@@ -65,7 +65,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> get() {
@@ -74,7 +74,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property localizations in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> patch(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
@@ -97,7 +97,7 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property localizations in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> patch(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

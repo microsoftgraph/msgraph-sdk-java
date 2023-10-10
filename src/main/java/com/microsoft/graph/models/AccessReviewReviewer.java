@@ -22,7 +22,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new accessReviewReviewer and sets the default values.
+     * Instantiates a new AccessReviewReviewer and sets the default values.
      */
     public AccessReviewReviewer() {
         super();
@@ -30,7 +30,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewReviewer
+     * @return a AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewReviewer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of reviewer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the reviewer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

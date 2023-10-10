@@ -56,17 +56,17 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * List of notes associcated with the request.
-     * @return a CompletableFuture of authoredNote
+     * List of notes associated with the request.
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> get() {
         return get(null);
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property notes in security
      * @param body The request body
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> patch(@jakarta.annotation.Nonnull final AuthoredNote body) {
@@ -89,7 +89,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notes in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> patch(@jakarta.annotation.Nonnull final AuthoredNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

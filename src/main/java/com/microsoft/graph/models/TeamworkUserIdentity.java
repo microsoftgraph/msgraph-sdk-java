@@ -13,7 +13,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      */
     private TeamworkUserIdentityType userIdentityType;
     /**
-     * Instantiates a new teamworkUserIdentity and sets the default values.
+     * Instantiates a new TeamworkUserIdentity and sets the default values.
      */
     public TeamworkUserIdentity() {
         super();
@@ -22,7 +22,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkUserIdentity
+     * @return a TeamworkUserIdentity
      */
     @jakarta.annotation.Nonnull
     public static TeamworkUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     * @return a teamworkUserIdentityType
+     * @return a TeamworkUserIdentityType
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentityType getUserIdentityType() {

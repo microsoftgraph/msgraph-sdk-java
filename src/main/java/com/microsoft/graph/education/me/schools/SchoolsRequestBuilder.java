@@ -58,8 +58,8 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/schools{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of schools for a user.
-     * @return a CompletableFuture of educationSchoolCollectionResponse
+     * Retrieve a list of schools for a user. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationSchoolCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchoolCollectionResponse
+     * @return a CompletableFuture of EducationSchoolCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationSchoolCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schoolsRequestBuilder
+     * @return a SchoolsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return new SchoolsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of schools for a user.
+     * Retrieve a list of schools for a user. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

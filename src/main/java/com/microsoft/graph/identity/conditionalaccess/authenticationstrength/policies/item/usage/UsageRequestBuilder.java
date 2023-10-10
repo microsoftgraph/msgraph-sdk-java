@@ -37,7 +37,7 @@ public class UsageRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function usage
-     * @return a CompletableFuture of authenticationStrengthUsage
+     * @return a CompletableFuture of AuthenticationStrengthUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthUsage> get() {
@@ -46,7 +46,7 @@ public class UsageRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function usage
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthUsage
+     * @return a CompletableFuture of AuthenticationStrengthUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthUsage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UsageRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usageRequestBuilder
+     * @return a UsageRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -122,7 +122,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     private String wifiVendorDriverVersion;
     /**
-     * Instantiates a new networkInfo and sets the default values.
+     * Instantiates a new NetworkInfo and sets the default values.
      */
     public NetworkInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -130,7 +130,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkInfo
+     * @return a NetworkInfo
      */
     @jakarta.annotation.Nonnull
     public static NetworkInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -138,7 +138,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return new NetworkInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getBandwidthLowEventRatio() {
@@ -155,7 +155,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBasicServiceSetIdentifier() {
@@ -163,7 +163,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectionType property value. The connectionType property
-     * @return a networkConnectionType
+     * @return a NetworkConnectionType
      */
     @jakarta.annotation.Nullable
     public NetworkConnectionType getConnectionType() {
@@ -171,7 +171,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getDelayEventRatio() {
@@ -179,7 +179,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDnsSuffix() {
@@ -223,7 +223,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address of the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -231,7 +231,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getLinkSpeed() {
@@ -239,7 +239,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -247,7 +247,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the networkTransportProtocol property value. The networkTransportProtocol property
-     * @return a networkTransportProtocol
+     * @return a NetworkTransportProtocol
      */
     @jakarta.annotation.Nullable
     public NetworkTransportProtocol getNetworkTransportProtocol() {
@@ -255,7 +255,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -263,7 +263,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the port property value. Network port number used by media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -271,7 +271,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getReceivedQualityEventRatio() {
@@ -279,7 +279,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReflexiveIPAddress() {
@@ -287,7 +287,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRelayIPAddress() {
@@ -295,7 +295,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRelayPort() {
@@ -303,7 +303,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getSentQualityEventRatio() {
@@ -311,7 +311,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subnet property value. Subnet used for media stream by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubnet() {
@@ -319,7 +319,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
-     * @return a traceRouteHop
+     * @return a java.util.List<TraceRouteHop>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TraceRouteHop> getTraceRouteHops() {
@@ -327,7 +327,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiBand property value. The wifiBand property
-     * @return a wifiBand
+     * @return a WifiBand
      */
     @jakarta.annotation.Nullable
     public WifiBand getWifiBand() {
@@ -335,7 +335,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWifiBatteryCharge() {
@@ -343,7 +343,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiChannel property value. WiFi channel used by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWifiChannel() {
@@ -351,7 +351,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiMicrosoftDriver() {
@@ -359,7 +359,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiMicrosoftDriverVersion() {
@@ -367,7 +367,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiRadioType property value. The wifiRadioType property
-     * @return a wifiRadioType
+     * @return a WifiRadioType
      */
     @jakarta.annotation.Nullable
     public WifiRadioType getWifiRadioType() {
@@ -375,7 +375,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWifiSignalStrength() {
@@ -383,7 +383,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiVendorDriver() {
@@ -391,7 +391,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiVendorDriverVersion() {
@@ -433,8 +433,8 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -38,7 +38,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostCookies that are associated with this host.
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> get() {
@@ -47,7 +47,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hostCookies that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

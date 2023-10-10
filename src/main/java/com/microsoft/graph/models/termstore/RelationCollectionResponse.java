@@ -14,7 +14,7 @@ public class RelationCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<Relation> value;
     /**
-     * Instantiates a new relationCollectionResponse and sets the default values.
+     * Instantiates a new RelationCollectionResponse and sets the default values.
      */
     public RelationCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class RelationCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relationCollectionResponse
+     * @return a RelationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RelationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class RelationCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a relation
+     * @return a java.util.List<Relation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getValue() {

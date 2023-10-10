@@ -88,7 +88,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityStorageWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityStorageWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

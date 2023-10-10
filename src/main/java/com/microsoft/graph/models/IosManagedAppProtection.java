@@ -40,7 +40,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     private String minimumRequiredSdkVersion;
     /**
-     * Instantiates a new iosManagedAppProtection and sets the default values.
+     * Instantiates a new IosManagedAppProtection and sets the default values.
      */
     public IosManagedAppProtection() {
         super();
@@ -49,7 +49,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosManagedAppProtection
+     * @return a IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static IosManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a managedAppDataEncryptionType
+     * @return a ManagedAppDataEncryptionType
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -66,7 +66,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -74,7 +74,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserProtocol() {
@@ -82,7 +82,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -90,7 +90,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -98,7 +98,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
@@ -122,7 +122,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {

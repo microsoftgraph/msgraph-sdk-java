@@ -13,7 +13,7 @@ public class ManagedAppRegistrationCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<ManagedAppRegistration> value;
     /**
-     * Instantiates a new managedAppRegistrationCollectionResponse and sets the default values.
+     * Instantiates a new ManagedAppRegistrationCollectionResponse and sets the default values.
      */
     public ManagedAppRegistrationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppRegistrationCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppRegistrationCollectionResponse
+     * @return a ManagedAppRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppRegistrationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ManagedAppRegistrationCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedAppRegistration
+     * @return a java.util.List<ManagedAppRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getValue() {

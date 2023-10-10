@@ -56,8 +56,8 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
      * @param body The request body
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> patch(@jakarta.annotation.Nonnull final SwapShiftsChangeRequest body) {
@@ -91,7 +91,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property swapShiftsChangeRequests in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> patch(@jakarta.annotation.Nonnull final SwapShiftsChangeRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -60,7 +60,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get subjectRightsRequests from security
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get subjectRightsRequests from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to subjectRightsRequests for security
      * @param body The request body
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
@@ -92,7 +92,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to subjectRightsRequests for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectRightsRequestsRequestBuilder
+     * @return a SubjectRightsRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubjectRightsRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Compliance Setting State Device Summary
-     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Compliance Setting State Device Summary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of settingStateDeviceSummary
+     * @return a CompletableFuture of SettingStateDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> post(@jakarta.annotation.Nonnull final SettingStateDeviceSummary body) {
@@ -92,7 +92,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of settingStateDeviceSummary
+     * @return a CompletableFuture of SettingStateDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> post(@jakarta.annotation.Nonnull final SettingStateDeviceSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceSettingStateSummariesRequestBuilder
+     * @return a DeviceSettingStateSummariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -45,7 +45,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete teamsApp
+     * This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete teamsApp
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get teamsApps from appCatalogs
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get() {
@@ -76,7 +76,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get teamsApps from appCatalogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamsApps in appCatalogs
      * @param body The request body
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> patch(@jakarta.annotation.Nonnull final TeamsApp body) {
@@ -99,7 +99,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamsApps in appCatalogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> patch(@jakarta.annotation.Nonnull final TeamsApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete teamsApp
+     * This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete teamsApp
+     * This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

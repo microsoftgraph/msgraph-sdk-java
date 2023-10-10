@@ -37,17 +37,17 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/drive{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
-     * @return a CompletableFuture of drive
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get() {
         return get(null);
     }
     /**
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +58,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a driveRequestBuilder
+     * @return a DriveRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +97,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return new DriveRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

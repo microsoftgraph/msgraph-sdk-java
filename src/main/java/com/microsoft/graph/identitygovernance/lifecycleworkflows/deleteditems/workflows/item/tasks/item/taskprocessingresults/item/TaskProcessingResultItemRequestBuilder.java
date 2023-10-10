@@ -62,7 +62,7 @@ public class TaskProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The result of processing the task.
-     * @return a CompletableFuture of taskProcessingResult
+     * @return a CompletableFuture of TaskProcessingResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get() {
@@ -71,7 +71,7 @@ public class TaskProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The result of processing the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taskProcessingResult
+     * @return a CompletableFuture of TaskProcessingResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskProcessingResult> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

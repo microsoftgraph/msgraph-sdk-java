@@ -60,7 +60,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from filterOperators
-     * @return a CompletableFuture of filterOperatorSchemaCollectionResponse
+     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from filterOperators
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filterOperatorSchemaCollectionResponse
+     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to filterOperators
      * @param body The request body
-     * @return a CompletableFuture of filterOperatorSchema
+     * @return a CompletableFuture of FilterOperatorSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchema> post(@jakarta.annotation.Nonnull final FilterOperatorSchema body) {
@@ -92,7 +92,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to filterOperators
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filterOperatorSchema
+     * @return a CompletableFuture of FilterOperatorSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchema> post(@jakarta.annotation.Nonnull final FilterOperatorSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filterOperatorsRequestBuilder
+     * @return a FilterOperatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterOperatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

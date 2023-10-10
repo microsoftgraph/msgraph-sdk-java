@@ -27,7 +27,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     private DateTimeTimeZone startDateTime;
     /**
-     * Instantiates a new getStaffAvailabilityPostRequestBody and sets the default values.
+     * Instantiates a new GetStaffAvailabilityPostRequestBody and sets the default values.
      */
     public GetStaffAvailabilityPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getStaffAvailabilityPostRequestBody
+     * @return a GetStaffAvailabilityPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetStaffAvailabilityPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
         return new GetStaffAvailabilityPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -72,7 +72,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the staffIds property value. The staffIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStaffIds() {
@@ -80,7 +80,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -98,8 +98,8 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

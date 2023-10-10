@@ -90,7 +90,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      */
     private TokenIssuerType tokenIssuerType;
     /**
-     * Instantiates a new servicePrincipalRiskDetection and sets the default values.
+     * Instantiates a new ServicePrincipalRiskDetection and sets the default values.
      */
     public ServicePrincipalRiskDetection() {
         super();
@@ -98,7 +98,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalRiskDetection
+     * @return a ServicePrincipalRiskDetection
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalRiskDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -107,7 +107,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
-     * @return a activityType
+     * @return a ActivityType
      */
     @jakarta.annotation.Nullable
     public ActivityType getActivity() {
@@ -123,7 +123,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInfo property value. Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInfo() {
@@ -131,7 +131,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The unique identifier for the associated application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -139,7 +139,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -155,7 +155,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a riskDetectionTimingType
+     * @return a RiskDetectionTimingType
      */
     @jakarta.annotation.Nullable
     public RiskDetectionTimingType getDetectionTimingType() {
@@ -192,7 +192,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -200,7 +200,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the keyIds property value. The unique identifier for the key credential associated with the risk detection.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeyIds() {
@@ -216,7 +216,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. Location from where the sign-in was initiated.
-     * @return a signInLocation
+     * @return a SignInLocation
      */
     @jakarta.annotation.Nullable
     public SignInLocation getLocation() {
@@ -224,7 +224,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestId() {
@@ -232,7 +232,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a riskDetail
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -240,7 +240,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskEventType() {
@@ -248,7 +248,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -256,7 +256,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
-     * @return a riskState
+     * @return a RiskState
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -264,7 +264,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalDisplayName property value. The display name for the service principal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalDisplayName() {
@@ -272,7 +272,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalId property value. The unique identifier for the service principal. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
@@ -280,7 +280,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Source of the risk detection. For example, identityProtection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -288,7 +288,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
-     * @return a tokenIssuerType
+     * @return a TokenIssuerType
      */
     @jakarta.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {

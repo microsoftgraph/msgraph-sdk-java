@@ -56,8 +56,8 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, TenantAppManagementPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultAppManagementPolicyRequestBuilder
+     * @return a DefaultAppManagementPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * Read the properties of a tenantAppManagementPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

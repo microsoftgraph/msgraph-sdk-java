@@ -13,7 +13,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse e
      */
     private java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value;
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatusCollectionResponse and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse e
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse e
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getValue() {

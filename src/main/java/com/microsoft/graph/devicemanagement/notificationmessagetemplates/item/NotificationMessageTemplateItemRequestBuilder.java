@@ -75,7 +75,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Read properties and relationships of the notificationMessageTemplate object.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     /**
      * Read properties and relationships of the notificationMessageTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
      * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

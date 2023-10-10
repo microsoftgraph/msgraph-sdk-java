@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder exten
     }
     /**
      * User experience analytics device Startup History
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder exten
     /**
      * User experience analytics device Startup History
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder exten
     /**
      * Update the navigation property userExperienceAnalyticsDeviceStartupHistory in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryItemRequestBuilder exten
      * Update the navigation property userExperienceAnalyticsDeviceStartupHistory in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

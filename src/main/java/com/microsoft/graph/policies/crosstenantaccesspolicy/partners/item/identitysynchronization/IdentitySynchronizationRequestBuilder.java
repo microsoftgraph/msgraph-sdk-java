@@ -37,7 +37,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/identitySynchronization{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
-     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property identitySynchronization in policies
      * @param body The request body
-     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> put(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
@@ -93,7 +93,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property identitySynchronization in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> put(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user synchronization policy for a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +195,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a identitySynchronizationRequestBuilder
+     * @return a IdentitySynchronizationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IdentitySynchronizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user synchronization policy of a partner-specific configuration. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

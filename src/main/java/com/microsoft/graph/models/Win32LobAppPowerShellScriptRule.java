@@ -44,7 +44,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     private String scriptContent;
     /**
-     * Instantiates a new win32LobAppPowerShellScriptRule and sets the default values.
+     * Instantiates a new Win32LobAppPowerShellScriptRule and sets the default values.
      */
     public Win32LobAppPowerShellScriptRule() {
         super();
@@ -53,7 +53,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppPowerShellScriptRule
+     * @return a Win32LobAppPowerShellScriptRule
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppPowerShellScriptRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the comparisonValue property value. The script output comparison value. Do not specify a value if the rule is used for detection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComparisonValue() {
@@ -70,7 +70,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -78,7 +78,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -103,7 +103,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the operationType property value. Contains all supported Powershell Script output detection type.
-     * @return a win32LobAppPowerShellScriptRuleOperationType
+     * @return a Win32LobAppPowerShellScriptRuleOperationType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppPowerShellScriptRuleOperationType getOperationType() {
@@ -111,7 +111,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {
@@ -119,7 +119,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -127,7 +127,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -135,7 +135,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the scriptContent property value. The base64-encoded script content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptContent() {

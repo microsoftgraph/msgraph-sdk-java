@@ -17,7 +17,7 @@ public class Hostname extends Host implements Parsable {
      */
     private String registrar;
     /**
-     * Instantiates a new hostname and sets the default values.
+     * Instantiates a new Hostname and sets the default values.
      */
     public Hostname() {
         super();
@@ -26,7 +26,7 @@ public class Hostname extends Host implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostname
+     * @return a Hostname
      */
     @jakarta.annotation.Nonnull
     public static Hostname createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Hostname extends Host implements Parsable {
     }
     /**
      * Gets the registrant property value. The company or individual who registered this hostname, from WHOIS data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistrant() {
@@ -54,7 +54,7 @@ public class Hostname extends Host implements Parsable {
     }
     /**
      * Gets the registrar property value. The registrar for this hostname, from WHOIS data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistrar() {

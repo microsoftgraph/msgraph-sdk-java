@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionD
     }
     /**
      * User experience analytics appHealth Application Performance by App Version Device Id
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionD
     /**
      * User experience analytics appHealth Application Performance by App Version Device Id
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionD
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionD
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionD
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

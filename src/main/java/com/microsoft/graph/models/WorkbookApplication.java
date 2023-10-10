@@ -13,7 +13,7 @@ public class WorkbookApplication extends Entity implements Parsable {
      */
     private String calculationMode;
     /**
-     * Instantiates a new workbookApplication and sets the default values.
+     * Instantiates a new WorkbookApplication and sets the default values.
      */
     public WorkbookApplication() {
         super();
@@ -21,7 +21,7 @@ public class WorkbookApplication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookApplication
+     * @return a WorkbookApplication
      */
     @jakarta.annotation.Nonnull
     public static WorkbookApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WorkbookApplication extends Entity implements Parsable {
     }
     /**
      * Gets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalculationMode() {

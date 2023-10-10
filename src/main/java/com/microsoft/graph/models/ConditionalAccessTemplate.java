@@ -26,7 +26,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      */
     private EnumSet<TemplateScenarios> scenarios;
     /**
-     * Instantiates a new conditionalAccessTemplate and sets the default values.
+     * Instantiates a new ConditionalAccessTemplate and sets the default values.
      */
     public ConditionalAccessTemplate() {
         super();
@@ -34,7 +34,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessTemplate
+     * @return a ConditionalAccessTemplate
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The user-friendly name of the template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a conditionalAccessPolicyDetail
+     * @return a ConditionalAccessPolicyDetail
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyDetail getDetails() {
@@ -72,7 +72,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The user-friendly name of the template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -80,7 +80,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the scenarios property value. The scenarios property
-     * @return a templateScenarios
+     * @return a EnumSet<TemplateScenarios>
      */
     @jakarta.annotation.Nullable
     public EnumSet<TemplateScenarios> getScenarios() {

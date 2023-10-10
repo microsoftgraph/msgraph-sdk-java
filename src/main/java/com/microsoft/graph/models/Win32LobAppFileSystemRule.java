@@ -36,7 +36,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      */
     private String path;
     /**
-     * Instantiates a new win32LobAppFileSystemRule and sets the default values.
+     * Instantiates a new Win32LobAppFileSystemRule and sets the default values.
      */
     public Win32LobAppFileSystemRule() {
         super();
@@ -45,7 +45,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppFileSystemRule
+     * @return a Win32LobAppFileSystemRule
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppFileSystemRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the check32BitOn64System property value. A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
@@ -62,7 +62,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the comparisonValue property value. The file or folder comparison value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComparisonValue() {
@@ -85,7 +85,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the fileOrFolderName property value. The file or folder name to look up.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileOrFolderName() {
@@ -93,7 +93,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operationType property value. Contains all supported file system detection type.
-     * @return a win32LobAppFileSystemOperationType
+     * @return a Win32LobAppFileSystemOperationType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppFileSystemOperationType getOperationType() {
@@ -101,7 +101,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {
@@ -109,7 +109,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the path property value. The file or folder path to look up.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {

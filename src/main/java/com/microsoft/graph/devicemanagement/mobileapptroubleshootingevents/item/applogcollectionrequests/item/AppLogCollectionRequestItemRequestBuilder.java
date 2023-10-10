@@ -67,7 +67,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Read properties and relationships of the appLogCollectionRequest object.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Read properties and relationships of the appLogCollectionRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

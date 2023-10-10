@@ -59,8 +59,8 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/serviceConfigurationRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
-     * @return a CompletableFuture of domainDnsRecordCollectionResponse
+     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-serviceconfigurationrecords?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
+     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecordCollectionResponse
+     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-serviceconfigurationrecords?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param body The request body
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
@@ -94,7 +94,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, DomainDnsRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
+     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
+     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a serviceConfigurationRecordsRequestBuilder
+     * @return a ServiceConfigurationRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServiceConfigurationRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         return new ServiceConfigurationRecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
+     * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

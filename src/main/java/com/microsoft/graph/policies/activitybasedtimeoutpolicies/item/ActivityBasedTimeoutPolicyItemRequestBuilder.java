@@ -45,7 +45,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/activityBasedTimeoutPolicies/{activityBasedTimeoutPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return delete(null);
     }
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
-     * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ActivityBasedTimeoutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @return a CompletableFuture of ActivityBasedTimeoutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,9 +89,9 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @return a CompletableFuture of ActivityBasedTimeoutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,10 +99,10 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @return a CompletableFuture of ActivityBasedTimeoutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an activityBasedTimeoutPolicy object.
+     * Delete an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +142,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an activityBasedTimeoutPolicy object.
+     * Update the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -219,7 +219,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of an activityBasedTimeoutPolicy object.
+     * Get the properties of an activityBasedTimeoutPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

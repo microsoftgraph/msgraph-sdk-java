@@ -57,7 +57,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the current status of a user's response to a company's customizable terms of use agreement.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> get() {
@@ -66,7 +66,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the current status of a user's response to a company's customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property agreementAcceptances in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> patch(@jakarta.annotation.Nonnull final AgreementAcceptance body) {
@@ -89,7 +89,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property agreementAcceptances in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> patch(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

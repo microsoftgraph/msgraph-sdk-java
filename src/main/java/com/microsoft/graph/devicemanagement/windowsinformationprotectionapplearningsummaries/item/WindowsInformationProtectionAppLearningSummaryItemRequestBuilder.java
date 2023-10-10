@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
     }
     /**
      * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
-     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
     /**
      * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
     /**
      * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
      * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

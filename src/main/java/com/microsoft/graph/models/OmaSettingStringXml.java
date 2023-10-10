@@ -18,9 +18,9 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * Value. (UTF8 encoded byte array)
      */
-    private byte[] value;
+    private Base64url value;
     /**
-     * Instantiates a new omaSettingStringXml and sets the default values.
+     * Instantiates a new OmaSettingStringXml and sets the default values.
      */
     public OmaSettingStringXml() {
         super();
@@ -29,7 +29,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSettingStringXml
+     * @return a OmaSettingStringXml
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingStringXml createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,12 +44,12 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
-        deserializerMap.put("value", (n) -> { this.setValue(n.getByteArrayValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fileName property value. File name associated with the Value property (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -57,10 +57,10 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getValue() {
+    public Base64url getValue() {
         return this.value;
     }
     /**
@@ -71,7 +71,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fileName", this.getFileName());
-        writer.writeByteArrayValue("value", this.getValue());
+        writer.writeObjectValue("value", this.getValue());
     }
     /**
      * Sets the fileName property value. File name associated with the Value property (.xml).
@@ -84,7 +84,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      * Sets the value property value. Value. (UTF8 encoded byte array)
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final byte[] value) {
+    public void setValue(@jakarta.annotation.Nullable final Base64url value) {
         this.value = value;
     }
 }

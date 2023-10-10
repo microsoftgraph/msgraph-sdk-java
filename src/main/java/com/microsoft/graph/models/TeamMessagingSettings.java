@@ -38,7 +38,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new teamMessagingSettings and sets the default values.
+     * Instantiates a new TeamMessagingSettings and sets the default values.
      */
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamMessagingSettings
+     * @return a TeamMessagingSettings
      */
     @jakarta.annotation.Nonnull
     public static TeamMessagingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
         return new TeamMessagingSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowChannelMentions() {
@@ -71,7 +71,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowOwnerDeleteMessages() {
@@ -79,7 +79,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowTeamMentions property value. If set to true, @team mentions are allowed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeamMentions() {
@@ -87,7 +87,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserDeleteMessages() {
@@ -95,7 +95,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowUserEditMessages property value. If set to true, users can edit their messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserEditMessages() {
@@ -118,7 +118,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

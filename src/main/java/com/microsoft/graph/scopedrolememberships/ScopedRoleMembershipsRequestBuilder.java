@@ -60,7 +60,7 @@ public class ScopedRoleMembershipsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from scopedRoleMemberships
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ScopedRoleMembershipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from scopedRoleMemberships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ScopedRoleMembershipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to scopedRoleMemberships
      * @param body The request body
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
@@ -92,7 +92,7 @@ public class ScopedRoleMembershipsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to scopedRoleMemberships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ScopedRoleMembershipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scopedRoleMembershipsRequestBuilder
+     * @return a ScopedRoleMembershipsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScopedRoleMembershipsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

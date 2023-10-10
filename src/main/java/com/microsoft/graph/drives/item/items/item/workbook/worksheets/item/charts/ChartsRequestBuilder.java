@@ -69,8 +69,8 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of chart objects.
-     * @return a CompletableFuture of workbookChartCollectionResponse
+     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookChartCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,9 +78,9 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartCollectionResponse
+     * @return a CompletableFuture of WorkbookChartCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -104,7 +104,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the item method.
      * @param name Usage: name='{name}'
-     * @return a itemWithNameRequestBuilder
+     * @return a ItemWithNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemWithNameRequestBuilder itemWithName(@jakarta.annotation.Nonnull final String name) {
@@ -112,9 +112,9 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ItemWithNameRequestBuilder(pathParameters, requestAdapter, name);
     }
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -122,10 +122,10 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Chart.
+     * Use this API to create a new Chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a chartsRequestBuilder
+     * @return a ChartsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChartsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ChartsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of chart objects.
+     * Retrieve a list of chart objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

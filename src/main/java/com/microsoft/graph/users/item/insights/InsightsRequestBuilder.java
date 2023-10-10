@@ -81,7 +81,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get insights from users
-     * @return a CompletableFuture of officeGraphInsights
+     * @return a CompletableFuture of OfficeGraphInsights
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfficeGraphInsights> get() {
@@ -90,7 +90,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get insights from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of officeGraphInsights
+     * @return a CompletableFuture of OfficeGraphInsights
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfficeGraphInsights> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property insights in users
      * @param body The request body
-     * @return a CompletableFuture of officeGraphInsights
+     * @return a CompletableFuture of OfficeGraphInsights
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfficeGraphInsights> patch(@jakarta.annotation.Nonnull final OfficeGraphInsights body) {
@@ -113,7 +113,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property insights in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of officeGraphInsights
+     * @return a CompletableFuture of OfficeGraphInsights
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfficeGraphInsights> patch(@jakarta.annotation.Nonnull final OfficeGraphInsights body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a insightsRequestBuilder
+     * @return a InsightsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InsightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

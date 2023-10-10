@@ -37,7 +37,7 @@ public class Participant extends Entity implements Parsable {
      */
     private OnlineMeetingRestricted restrictedExperience;
     /**
-     * Instantiates a new participant and sets the default values.
+     * Instantiates a new Participant and sets the default values.
      */
     public Participant() {
         super();
@@ -45,7 +45,7 @@ public class Participant extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a participant
+     * @return a Participant
      */
     @jakarta.annotation.Nonnull
     public static Participant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the info property value. The info property
-     * @return a participantInfo
+     * @return a ParticipantInfo
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getInfo() {
@@ -78,7 +78,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInLobby() {
@@ -86,7 +86,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMuted() {
@@ -94,7 +94,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the mediaStreams property value. The list of media streams.
-     * @return a mediaStream
+     * @return a java.util.List<MediaStream>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
@@ -102,7 +102,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetadata() {
@@ -110,7 +110,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the recordingInfo property value. Information about whether the participant has recording capability.
-     * @return a recordingInfo
+     * @return a RecordingInfo
      */
     @jakarta.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
@@ -118,7 +118,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
-     * @return a onlineMeetingRestricted
+     * @return a OnlineMeetingRestricted
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingRestricted getRestrictedExperience() {

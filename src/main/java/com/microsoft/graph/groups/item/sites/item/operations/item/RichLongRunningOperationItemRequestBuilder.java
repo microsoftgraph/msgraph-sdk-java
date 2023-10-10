@@ -56,8 +56,8 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
-     * @return a CompletableFuture of richLongRunningOperation
+     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of RichLongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property operations in groups
      * @param body The request body
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> patch(@jakarta.annotation.Nonnull final RichLongRunningOperation body) {
@@ -91,7 +91,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property operations in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> patch(@jakarta.annotation.Nonnull final RichLongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * Get the status of a rich long-running operation on a site or a list. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

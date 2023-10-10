@@ -29,7 +29,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     private String uri;
     /**
-     * Instantiates a new endpoint and sets the default values.
+     * Instantiates a new Endpoint and sets the default values.
      */
     public Endpoint() {
         super();
@@ -38,7 +38,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endpoint
+     * @return a Endpoint
      */
     @jakarta.annotation.Nonnull
     public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the capability property value. The capability property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCapability() {
@@ -69,7 +69,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerId property value. The providerId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderId() {
@@ -77,7 +77,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerName property value. The providerName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
@@ -85,7 +85,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerResourceId property value. The providerResourceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderResourceId() {
@@ -93,7 +93,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the uri property value. The uri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUri() {

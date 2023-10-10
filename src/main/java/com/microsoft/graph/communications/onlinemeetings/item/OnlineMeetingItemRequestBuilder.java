@@ -3,6 +3,7 @@ package com.microsoft.graph.communications.onlinemeetings.item;
 import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -45,6 +46,13 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
+     */
+    @jakarta.annotation.Nonnull
+    public TranscriptsRequestBuilder transcripts() {
+        return new TranscriptsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -81,7 +89,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get onlineMeetings from communications
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
@@ -90,7 +98,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get onlineMeetings from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +111,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property onlineMeetings in communications
      * @param body The request body
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
@@ -113,7 +121,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property onlineMeetings in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

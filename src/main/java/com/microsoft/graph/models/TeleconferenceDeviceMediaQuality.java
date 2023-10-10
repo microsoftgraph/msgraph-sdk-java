@@ -103,7 +103,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     private Integer remotePort;
     /**
-     * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceMediaQuality and sets the default values.
      */
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
@@ -111,7 +111,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceMediaQuality
+     * @return a TeleconferenceDeviceMediaQuality
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceMediaQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -128,7 +128,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         return new TeleconferenceDeviceMediaQuality();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the averageInboundPacketLossRateInPercentage property value. The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageInboundPacketLossRateInPercentage() {
@@ -169,7 +169,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the averageOutboundPacketLossRateInPercentage property value. The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageOutboundPacketLossRateInPercentage() {
@@ -185,7 +185,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the channelIndex property value. The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getChannelIndex() {
@@ -224,7 +224,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the inboundPackets property value. The total number of the inbound packets.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getInboundPackets() {
@@ -232,7 +232,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the localIPAddress property value. the local IP address for the media session.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalIPAddress() {
@@ -240,7 +240,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the localPort property value. The local media port.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLocalPort() {
@@ -256,7 +256,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the maximumInboundPacketLossRateInPercentage property value. The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaximumInboundPacketLossRateInPercentage() {
@@ -280,7 +280,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the maximumOutboundPacketLossRateInPercentage property value. The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaximumOutboundPacketLossRateInPercentage() {
@@ -304,7 +304,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the networkLinkSpeedInBytes property value. The network link speed in bytes
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNetworkLinkSpeedInBytes() {
@@ -312,7 +312,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -320,7 +320,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the outboundPackets property value. The total number of the outbound packets.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOutboundPackets() {
@@ -328,7 +328,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the remoteIPAddress property value. The remote IP address for the media session.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteIPAddress() {
@@ -336,7 +336,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the remotePort property value. The remote media port.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemotePort() {
@@ -373,8 +373,8 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

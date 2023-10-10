@@ -61,7 +61,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/{authenticationStrengthPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return delete(null);
     }
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
@@ -82,8 +82,8 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,9 +91,9 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,10 +115,10 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a custom authenticationStrengthPolicy object.
+     * Delete a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -187,7 +187,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -196,7 +196,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -235,7 +235,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationStrengthPolicy object.
+     * Read the properties and relationships of an authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -73,7 +73,7 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of termStores under this site.
-     * @return a CompletableFuture of store
+     * @return a CompletableFuture of Store
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> get() {
@@ -82,7 +82,7 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of termStores under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of store
+     * @return a CompletableFuture of Store
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property termStores in groups
      * @param body The request body
-     * @return a CompletableFuture of store
+     * @return a CompletableFuture of Store
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> patch(@jakarta.annotation.Nonnull final Store body) {
@@ -105,7 +105,7 @@ public class StoreItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property termStores in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of store
+     * @return a CompletableFuture of Store
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Store> patch(@jakarta.annotation.Nonnull final Store body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

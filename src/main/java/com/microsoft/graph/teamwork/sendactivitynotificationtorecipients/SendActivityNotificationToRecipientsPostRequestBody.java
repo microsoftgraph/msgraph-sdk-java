@@ -46,7 +46,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
      */
     private TeamworkActivityTopic topic;
     /**
-     * Instantiates a new sendActivityNotificationToRecipientsPostRequestBody and sets the default values.
+     * Instantiates a new SendActivityNotificationToRecipientsPostRequestBody and sets the default values.
      */
     public SendActivityNotificationToRecipientsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sendActivityNotificationToRecipientsPostRequestBody
+     * @return a SendActivityNotificationToRecipientsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SendActivityNotificationToRecipientsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,14 +63,14 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the activityType property value. The activityType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
         return this.activityType;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the chainId property value. The chainId property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getChainId() {
@@ -103,7 +103,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the previewText property value. The previewText property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
@@ -111,7 +111,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a teamworkNotificationRecipient
+     * @return a java.util.List<TeamworkNotificationRecipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkNotificationRecipient> getRecipients() {
@@ -119,7 +119,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -127,7 +127,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
@@ -135,7 +135,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     }
     /**
      * Gets the topic property value. The topic property
-     * @return a teamworkActivityTopic
+     * @return a TeamworkActivityTopic
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {
@@ -164,8 +164,8 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
         this.activityType = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

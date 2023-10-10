@@ -57,7 +57,7 @@ public class AccessPackageQuestionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Questions that are posed to the  requestor.
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> get() {
@@ -66,7 +66,7 @@ public class AccessPackageQuestionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Questions that are posed to the  requestor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AccessPackageQuestionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property questions in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> patch(@jakarta.annotation.Nonnull final AccessPackageQuestion body) {
@@ -89,7 +89,7 @@ public class AccessPackageQuestionItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property questions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> patch(@jakarta.annotation.Nonnull final AccessPackageQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

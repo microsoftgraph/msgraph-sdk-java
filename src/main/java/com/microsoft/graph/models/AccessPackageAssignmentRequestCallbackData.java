@@ -17,7 +17,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
      */
     private String customExtensionStageInstanceId;
     /**
-     * Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
+     * Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      */
     private AccessPackageCustomExtensionStage stage;
     /**
@@ -25,7 +25,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
      */
     private String state;
     /**
-     * Instantiates a new accessPackageAssignmentRequestCallbackData and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestCallbackData and sets the default values.
      */
     public AccessPackageAssignmentRequestCallbackData() {
         super();
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequestCallbackData
+     * @return a AccessPackageAssignmentRequestCallbackData
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestCallbackData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the customExtensionStageInstanceDetail property value. Details for the callback.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionStageInstanceDetail() {
@@ -51,7 +51,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the customExtensionStageInstanceId property value. Unique identifier of the callout to the custom extension.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionStageInstanceId() {
@@ -71,8 +71,8 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
         return deserializerMap;
     }
     /**
-     * Gets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a accessPackageCustomExtensionStage
+     * Gets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
+     * @return a AccessPackageCustomExtensionStage
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
@@ -80,7 +80,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     }
     /**
      * Gets the state property value. Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -113,7 +113,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
         this.customExtensionStageInstanceId = value;
     }
     /**
-     * Sets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
+     * Sets the stage property value. Indicates the stage at which the custom callout extension is executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {

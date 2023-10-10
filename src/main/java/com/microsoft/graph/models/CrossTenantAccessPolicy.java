@@ -21,7 +21,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
     /**
-     * Instantiates a new crossTenantAccessPolicy and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      */
     public CrossTenantAccessPolicy() {
         super();
@@ -30,7 +30,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessPolicy
+     * @return a CrossTenantAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedCloudEndpoints() {
@@ -47,7 +47,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
-     * @return a crossTenantAccessPolicyConfigurationDefault
+     * @return a CrossTenantAccessPolicyConfigurationDefault
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault getDefault() {
@@ -67,7 +67,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
-     * @return a crossTenantAccessPolicyConfigurationPartner
+     * @return a java.util.List<CrossTenantAccessPolicyConfigurationPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {

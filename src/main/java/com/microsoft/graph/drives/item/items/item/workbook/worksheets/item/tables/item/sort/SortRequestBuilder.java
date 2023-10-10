@@ -80,8 +80,8 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of tablesort object.
-     * @return a CompletableFuture of workbookTableSort
+     * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookTableSort
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,9 +89,9 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of tablesort object.
+     * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableSort
+     * @return a CompletableFuture of WorkbookTableSort
      * @see <a href="https://learn.microsoft.com/graph/api/tablesort-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sort in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookTableSort
+     * @return a CompletableFuture of WorkbookTableSort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableSort> patch(@jakarta.annotation.Nonnull final WorkbookTableSort body) {
@@ -115,7 +115,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sort in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableSort
+     * @return a CompletableFuture of WorkbookTableSort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableSort> patch(@jakarta.annotation.Nonnull final WorkbookTableSort body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of tablesort object.
+     * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -162,7 +162,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of tablesort object.
+     * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sortRequestBuilder
+     * @return a SortRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SortRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -231,7 +231,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of tablesort object.
+     * Retrieve the properties and relationships of tablesort object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

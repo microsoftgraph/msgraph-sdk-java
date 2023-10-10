@@ -105,7 +105,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
     }
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get() {
@@ -114,7 +114,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property noncustodialDataSources in security
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) {
@@ -137,7 +137,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * Update the navigation property noncustodialDataSources in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

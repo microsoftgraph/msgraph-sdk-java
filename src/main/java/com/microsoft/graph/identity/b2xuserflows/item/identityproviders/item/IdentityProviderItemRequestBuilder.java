@@ -65,7 +65,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The identity providers included in the user flow.
-     * @return a CompletableFuture of identityProvider
+     * @return a CompletableFuture of IdentityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
@@ -77,7 +77,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityProvider
+     * @return a CompletableFuture of IdentityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */

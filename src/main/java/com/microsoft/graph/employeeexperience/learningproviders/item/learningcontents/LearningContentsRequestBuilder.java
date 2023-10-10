@@ -59,8 +59,8 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
-     * @return a CompletableFuture of learningContentCollectionResponse
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of LearningContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContentCollectionResponse
+     * @return a CompletableFuture of LearningContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> post(@jakarta.annotation.Nonnull final LearningContent body) {
@@ -94,7 +94,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> post(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LearningContent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a learningContentsRequestBuilder
+     * @return a LearningContentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LearningContentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return new LearningContentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

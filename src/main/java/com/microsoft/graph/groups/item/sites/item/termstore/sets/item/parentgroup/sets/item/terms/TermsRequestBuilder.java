@@ -59,17 +59,17 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a term object.
-     * @return a CompletableFuture of termCollectionResponse
+     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TermCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termCollectionResponse
+     * @return a CompletableFuture of TermCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to terms for groups
      * @param body The request body
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> post(@jakarta.annotation.Nonnull final Term body) {
@@ -92,7 +92,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to terms for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> post(@jakarta.annotation.Nonnull final Term body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Term::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a termsRequestBuilder
+     * @return a TermsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TermsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return new TermsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * Read the properties and relationships of a term object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,9 +36,9 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/startHoldMusic", rawUrl);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Put a participant on hold and play music in the background. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of startHoldMusicOperation
+     * @return a CompletableFuture of StartHoldMusicOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-startholdmusic?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Put a participant on hold and play music in the background. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of startHoldMusicOperation
+     * @return a CompletableFuture of StartHoldMusicOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-startholdmusic?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, StartHoldMusicOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Put a participant on hold and play music in the background. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Put a participant on hold and play music in the background.
+     * Put a participant on hold and play music in the background. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class StartHoldMusicRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a startHoldMusicRequestBuilder
+     * @return a StartHoldMusicRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StartHoldMusicRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

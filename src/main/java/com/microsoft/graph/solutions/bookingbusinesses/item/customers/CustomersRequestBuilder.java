@@ -59,8 +59,8 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
-     * @return a CompletableFuture of bookingCustomerBaseCollectionResponse
+     * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCustomerBaseCollectionResponse
+     * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BookingCustomerBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of bookingCustomerBase
+     * @return a CompletableFuture of BookingCustomerBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCustomerBase
+     * @return a CompletableFuture of BookingCustomerBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BookingCustomerBase::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingCustomer object.
+     * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customersRequestBuilder
+     * @return a CustomersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return new CustomersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingCustomer objects of a business.
+     * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

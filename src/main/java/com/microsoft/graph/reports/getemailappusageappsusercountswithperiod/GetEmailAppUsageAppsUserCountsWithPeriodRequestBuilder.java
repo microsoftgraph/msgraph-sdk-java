@@ -88,7 +88,7 @@ public class GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getEmailAppUsageAppsUserCountsWithPeriodRequestBuilder
+     * @return a GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

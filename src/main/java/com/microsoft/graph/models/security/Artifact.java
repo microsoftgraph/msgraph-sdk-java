@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Artifact extends Entity implements Parsable {
     /**
-     * Instantiates a new artifact and sets the default values.
+     * Instantiates a new Artifact and sets the default values.
      */
     public Artifact() {
         super();
@@ -18,7 +18,7 @@ public class Artifact extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a artifact
+     * @return a Artifact
      */
     @jakarta.annotation.Nonnull
     public static Artifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,9 +31,11 @@ public class Artifact extends Entity implements Parsable {
                 case "#microsoft.graph.security.hostComponent": return new HostComponent();
                 case "#microsoft.graph.security.hostCookie": return new HostCookie();
                 case "#microsoft.graph.security.hostname": return new Hostname();
+                case "#microsoft.graph.security.hostSslCertificate": return new HostSslCertificate();
                 case "#microsoft.graph.security.hostTracker": return new HostTracker();
                 case "#microsoft.graph.security.ipAddress": return new IpAddress();
                 case "#microsoft.graph.security.passiveDnsRecord": return new PassiveDnsRecord();
+                case "#microsoft.graph.security.sslCertificate": return new SslCertificate();
                 case "#microsoft.graph.security.unclassifiedArtifact": return new UnclassifiedArtifact();
             }
         }

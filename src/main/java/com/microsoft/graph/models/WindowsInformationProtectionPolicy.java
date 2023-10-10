@@ -60,7 +60,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     private Boolean windowsHelloForBusinessBlocked;
     /**
-     * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
      */
     public WindowsInformationProtectionPolicy() {
         super();
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionPolicy
+     * @return a WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the daysWithoutContactBeforeUnenroll property value. Offline interval before app data is wiped (days)
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDaysWithoutContactBeforeUnenroll() {
@@ -107,7 +107,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the mdmEnrollmentUrl property value. Enrollment url for the MDM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdmEnrollmentUrl() {
@@ -115,7 +115,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinutesOfInactivityBeforeDeviceLock() {
@@ -123,7 +123,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfPastPinsRemembered() {
@@ -131,7 +131,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMaximumAttemptCount() {
@@ -139,7 +139,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPinExpirationDays() {
@@ -147,7 +147,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinLowercaseLetters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinLowercaseLetters() {
@@ -155,7 +155,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPinMinimumLength() {
@@ -163,7 +163,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinSpecialCharacters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinSpecialCharacters() {
@@ -171,7 +171,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinUppercaseLetters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinUppercaseLetters() {
@@ -179,7 +179,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRevokeOnMdmHandoffDisabled() {
@@ -187,7 +187,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsHelloForBusinessBlocked() {

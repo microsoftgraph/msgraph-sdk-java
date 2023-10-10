@@ -18,7 +18,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     private String conferenceId;
     /**
-     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      */
     private String joinUrl;
     /**
@@ -30,7 +30,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<Phone> phones;
     /**
-     * The pre-formatted quickdial for this call.
+     * The preformatted quick dial for this call.
      */
     private String quickDial;
     /**
@@ -42,7 +42,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     private String tollNumber;
     /**
-     * Instantiates a new onlineMeetingInfo and sets the default values.
+     * Instantiates a new OnlineMeetingInfo and sets the default values.
      */
     public OnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onlineMeetingInfo
+     * @return a OnlineMeetingInfo
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeetingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         return new OnlineMeetingInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the conferenceId property value. The ID of the conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -90,8 +90,8 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
-     * @return a string
+     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJoinUrl() {
@@ -99,7 +99,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -107,15 +107,15 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phones property value. All of the phone numbers associated with this conference.
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
         return this.phones;
     }
     /**
-     * Gets the quickDial property value. The pre-formatted quickdial for this call.
-     * @return a string
+     * Gets the quickDial property value. The preformatted quick dial for this call.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuickDial() {
@@ -123,7 +123,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
@@ -131,7 +131,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollNumber property value. The toll number that can be used to join the conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTollNumber() {
@@ -153,8 +153,8 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -167,7 +167,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         this.conferenceId = value;
     }
     /**
-     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      * @param value Value to set for the joinUrl property.
      */
     public void setJoinUrl(@jakarta.annotation.Nullable final String value) {
@@ -188,7 +188,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         this.phones = value;
     }
     /**
-     * Sets the quickDial property value. The pre-formatted quickdial for this call.
+     * Sets the quickDial property value. The preformatted quick dial for this call.
      * @param value Value to set for the quickDial property.
      */
     public void setQuickDial(@jakarta.annotation.Nullable final String value) {

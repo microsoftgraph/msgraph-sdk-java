@@ -37,7 +37,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities/{learningCourseActivity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return delete(null);
     }
     /**
-     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get learningCourseActivities from employeeExperience
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivity> get() {
@@ -68,7 +68,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get learningCourseActivities from employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,9 +79,9 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, LearningCourseActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the properties of a learningCourseActivity object.  This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the properties of a learningCourseActivity object.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, LearningCourseActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete a learningCourseActivity object by using the course activity ID of either an assignment or a self-initiated activity. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the properties of a learningCourseActivity object.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the properties of a learningCourseActivity object.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

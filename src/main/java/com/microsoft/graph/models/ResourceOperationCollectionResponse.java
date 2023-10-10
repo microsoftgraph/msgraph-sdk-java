@@ -13,7 +13,7 @@ public class ResourceOperationCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<ResourceOperation> value;
     /**
-     * Instantiates a new resourceOperationCollectionResponse and sets the default values.
+     * Instantiates a new ResourceOperationCollectionResponse and sets the default values.
      */
     public ResourceOperationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ResourceOperationCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceOperationCollectionResponse
+     * @return a ResourceOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ResourceOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ResourceOperationCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a resourceOperation
+     * @return a java.util.List<ResourceOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceOperation> getValue() {

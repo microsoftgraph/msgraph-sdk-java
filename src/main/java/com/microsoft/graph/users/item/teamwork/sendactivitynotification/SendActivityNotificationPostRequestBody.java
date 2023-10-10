@@ -37,7 +37,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     private TeamworkActivityTopic topic;
     /**
-     * Instantiates a new sendActivityNotificationPostRequestBody and sets the default values.
+     * Instantiates a new SendActivityNotificationPostRequestBody and sets the default values.
      */
     public SendActivityNotificationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sendActivityNotificationPostRequestBody
+     * @return a SendActivityNotificationPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SendActivityNotificationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,14 +54,14 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the activityType property value. The activityType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
         return this.activityType;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the chainId property value. The chainId property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getChainId() {
@@ -92,7 +92,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the previewText property value. The previewText property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
@@ -100,7 +100,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
@@ -108,7 +108,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the topic property value. The topic property
-     * @return a teamworkActivityTopic
+     * @return a TeamworkActivityTopic
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {
@@ -135,8 +135,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
         this.activityType = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

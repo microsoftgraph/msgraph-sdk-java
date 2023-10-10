@@ -13,7 +13,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionR
      */
     private java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> value;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionR
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> getValue() {

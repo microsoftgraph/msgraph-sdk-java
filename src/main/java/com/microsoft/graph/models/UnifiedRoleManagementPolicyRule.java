@@ -13,7 +13,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      */
     private UnifiedRoleManagementPolicyRuleTarget target;
     /**
-     * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyRule() {
         super();
@@ -21,7 +21,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyRule
+     * @return a UnifiedRoleManagementPolicyRule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     }
     /**
      * Gets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
-     * @return a unifiedRoleManagementPolicyRuleTarget
+     * @return a UnifiedRoleManagementPolicyRuleTarget
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget getTarget() {

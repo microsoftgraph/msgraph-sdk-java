@@ -60,7 +60,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The custom rules that define an access scenario.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * The custom rules that define an access scenario.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to conditionalAccessPolicies for policies
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
@@ -92,7 +92,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to conditionalAccessPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessPoliciesRequestBuilder
+     * @return a ConditionalAccessPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

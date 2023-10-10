@@ -60,7 +60,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
-     * @return a CompletableFuture of deviceComplianceSettingStateCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceSettingStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceSettingStateCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceSettingStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceSettingState
+     * @return a CompletableFuture of DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceComplianceSettingStatesRequestBuilder
+     * @return a DeviceComplianceSettingStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceComplianceSettingStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

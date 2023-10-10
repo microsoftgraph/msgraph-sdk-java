@@ -46,7 +46,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<PrintTaskDefinition> taskDefinitions;
     /**
-     * Instantiates a new print and sets the default values.
+     * Instantiates a new Print and sets the default values.
      */
     public Print() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a print
+     * @return a Print
      */
     @jakarta.annotation.Nonnull
     public static Print createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class Print implements AdditionalDataHolder, Parsable {
         return new Print();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectors property value. The list of available print connectors.
-     * @return a printConnector
+     * @return a java.util.List<PrintConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
@@ -96,7 +96,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operations property value. The list of print long running operations.
-     * @return a printOperation
+     * @return a java.util.List<PrintOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintOperation> getOperations() {
@@ -112,7 +112,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the printers property value. The list of printers registered in the tenant.
-     * @return a printer
+     * @return a java.util.List<Printer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Printer> getPrinters() {
@@ -120,7 +120,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the services property value. The list of available Universal Print service endpoints.
-     * @return a printService
+     * @return a java.util.List<PrintService>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintService> getServices() {
@@ -128,7 +128,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the settings property value. Tenant-wide settings for the Universal Print service.
-     * @return a printSettings
+     * @return a PrintSettings
      */
     @jakarta.annotation.Nullable
     public PrintSettings getSettings() {
@@ -136,7 +136,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shares property value. The list of printer shares registered in the tenant.
-     * @return a printerShare
+     * @return a java.util.List<PrinterShare>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
@@ -144,7 +144,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
-     * @return a printTaskDefinition
+     * @return a java.util.List<PrintTaskDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskDefinition> getTaskDefinitions() {
@@ -167,8 +167,8 @@ public class Print implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -60,7 +60,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the managedEBook objects.
-     * @return a CompletableFuture of managedEBookCollectionResponse
+     * @return a CompletableFuture of ManagedEBookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the managedEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBookCollectionResponse
+     * @return a CompletableFuture of ManagedEBookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new iosVppEBook object.
      * @param body The request body
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
      * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedEBooksRequestBuilder
+     * @return a ManagedEBooksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedEBooksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

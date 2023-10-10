@@ -13,7 +13,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      */
     private String userId;
     /**
-     * Instantiates a new microsoftAccountUserConversationMember and sets the default values.
+     * Instantiates a new MicrosoftAccountUserConversationMember and sets the default values.
      */
     public MicrosoftAccountUserConversationMember() {
         super();
@@ -22,7 +22,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAccountUserConversationMember
+     * @return a MicrosoftAccountUserConversationMember
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAccountUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     }
     /**
      * Gets the userId property value. Microsoft Account ID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

@@ -95,7 +95,7 @@ public class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder exte
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getConfigurationPolicyNonComplianceSummaryReportRequestBuilder
+     * @return a GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

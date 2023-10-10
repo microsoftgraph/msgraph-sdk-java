@@ -39,7 +39,7 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function item
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> get() {
@@ -48,7 +48,7 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function item
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemWithNameRequestBuilder
+     * @return a ItemWithNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemWithNameRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

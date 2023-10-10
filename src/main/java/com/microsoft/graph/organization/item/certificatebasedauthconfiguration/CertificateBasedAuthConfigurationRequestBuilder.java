@@ -59,8 +59,8 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return post(body, null);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create a new certificateBasedAuthConfiguration object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a certificateBasedAuthConfigurationRequestBuilder
+     * @return a CertificateBasedAuthConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return new CertificateBasedAuthConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Get a list of certificateBasedAuthConfiguration objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

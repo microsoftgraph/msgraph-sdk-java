@@ -56,19 +56,19 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the managedAppStatus object.
-     * @return a CompletableFuture of managedAppStatus
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the managedAppStatusRaw object.
+     * @return a CompletableFuture of ManagedAppStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatusraw-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedAppStatus object.
+     * Read properties and relationships of the managedAppStatusRaw object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ManagedAppStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatusraw-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedAppStatuses in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> patch(@jakarta.annotation.Nonnull final ManagedAppStatus body) {
@@ -91,7 +91,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedAppStatuses in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> patch(@jakarta.annotation.Nonnull final ManagedAppStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppStatus object.
+     * Read properties and relationships of the managedAppStatusRaw object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppStatus object.
+     * Read properties and relationships of the managedAppStatusRaw object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppStatus object.
+     * Read properties and relationships of the managedAppStatusRaw object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -177,7 +177,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get() {
@@ -186,7 +186,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -213,7 +213,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param listId Usage: listId='{listId}'
-     * @return a getApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
@@ -223,7 +223,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByPath method.
      * @param path Usage: path='{path}'
-     * @return a getByPathWithPathRequestBuilder
+     * @return a GetByPathWithPathRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPathRequestBuilder getByPathWithPath(@jakarta.annotation.Nonnull final String path) {
@@ -233,7 +233,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sites in groups
      * @param body The request body
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body) {
@@ -243,7 +243,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sites in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

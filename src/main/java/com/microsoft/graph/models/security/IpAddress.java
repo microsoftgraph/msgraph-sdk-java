@@ -13,7 +13,7 @@ public class IpAddress extends Host implements Parsable {
      */
     private AutonomousSystem autonomousSystem;
     /**
-     * The country or region for this IP address.
+     * The country/region for this IP address.
      */
     private String countryOrRegion;
     /**
@@ -25,7 +25,7 @@ public class IpAddress extends Host implements Parsable {
      */
     private String netblock;
     /**
-     * Instantiates a new ipAddress and sets the default values.
+     * Instantiates a new IpAddress and sets the default values.
      */
     public IpAddress() {
         super();
@@ -34,7 +34,7 @@ public class IpAddress extends Host implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipAddress
+     * @return a IpAddress
      */
     @jakarta.annotation.Nonnull
     public static IpAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,15 +43,15 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the autonomousSystem property value. The details about the autonomous system to which this IP address belongs.
-     * @return a autonomousSystem
+     * @return a AutonomousSystem
      */
     @jakarta.annotation.Nullable
     public AutonomousSystem getAutonomousSystem() {
         return this.autonomousSystem;
     }
     /**
-     * Gets the countryOrRegion property value. The country or region for this IP address.
-     * @return a string
+     * Gets the countryOrRegion property value. The country/region for this IP address.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -72,7 +72,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the hostingProvider property value. The hosting company listed for this host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostingProvider() {
@@ -80,7 +80,7 @@ public class IpAddress extends Host implements Parsable {
     }
     /**
      * Gets the netblock property value. The block of IP addresses this IP address belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetblock() {
@@ -106,7 +106,7 @@ public class IpAddress extends Host implements Parsable {
         this.autonomousSystem = value;
     }
     /**
-     * Sets the countryOrRegion property value. The country or region for this IP address.
+     * Sets the countryOrRegion property value. The country/region for this IP address.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {

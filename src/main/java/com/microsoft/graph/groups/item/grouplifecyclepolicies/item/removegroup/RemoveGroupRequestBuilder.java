@@ -35,33 +35,33 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}/removeGroup", rawUrl);
     }
     /**
-     * Removes a group from a lifecycle policy.
+     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of removeGroupResponse
+     * @return a CompletableFuture of RemoveGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RemoveGroupResponse> post(@jakarta.annotation.Nonnull final RemoveGroupPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<RemoveGroupPostResponse> post(@jakarta.annotation.Nonnull final RemoveGroupPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Removes a group from a lifecycle policy.
+     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of removeGroupResponse
+     * @return a CompletableFuture of RemoveGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RemoveGroupResponse> post(@jakarta.annotation.Nonnull final RemoveGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<RemoveGroupPostResponse> post(@jakarta.annotation.Nonnull final RemoveGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RemoveGroupResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, RemoveGroupPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Removes a group from a lifecycle policy.
+     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Removes a group from a lifecycle policy.
+     * Removes a group from a lifecycle policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -95,7 +95,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a removeGroupRequestBuilder
+     * @return a RemoveGroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemoveGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -36,9 +36,9 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/move", rawUrl);
     }
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-move?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-move?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Message::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a moveRequestBuilder
+     * @return a MoveRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MoveRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

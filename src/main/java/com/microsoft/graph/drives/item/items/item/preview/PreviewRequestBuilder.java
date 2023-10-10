@@ -38,7 +38,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action preview
      * @param body The request body
-     * @return a CompletableFuture of itemPreviewInfo
+     * @return a CompletableFuture of ItemPreviewInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@jakarta.annotation.Nonnull final PreviewPostRequestBody body) {
@@ -48,7 +48,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
      * Invoke action preview
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPreviewInfo
+     * @return a CompletableFuture of ItemPreviewInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@jakarta.annotation.Nonnull final PreviewPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a previewRequestBuilder
+     * @return a PreviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PreviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

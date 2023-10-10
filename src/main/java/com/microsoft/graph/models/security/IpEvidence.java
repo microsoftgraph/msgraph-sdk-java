@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpEvidence extends AlertEvidence implements Parsable {
     /**
-     * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+     * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
      */
     private String countryLetterCode;
     /**
@@ -17,7 +17,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      */
     private String ipAddress;
     /**
-     * Instantiates a new ipEvidence and sets the default values.
+     * Instantiates a new IpEvidence and sets the default values.
      */
     public IpEvidence() {
         super();
@@ -26,7 +26,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipEvidence
+     * @return a IpEvidence
      */
     @jakarta.annotation.Nonnull
     public static IpEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,8 +34,8 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         return new IpEvidence();
     }
     /**
-     * Gets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
-     * @return a string
+     * Gets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryLetterCode() {
@@ -54,7 +54,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -71,7 +71,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("ipAddress", this.getIpAddress());
     }
     /**
-     * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+     * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc.
      * @param value Value to set for the countryLetterCode property.
      */
     public void setCountryLetterCode(@jakarta.annotation.Nullable final String value) {

@@ -31,15 +31,15 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      */
     private ChatMessagePolicyViolationPolicyTip policyTip;
     /**
-     * Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
+     * Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn't required.
      */
     private EnumSet<ChatMessagePolicyViolationUserActionTypes> userAction;
     /**
-     * Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
+     * Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction hides it.AllowOverrideWithoutJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
      */
     private EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes> verdictDetails;
     /**
-     * Instantiates a new chatMessagePolicyViolation and sets the default values.
+     * Instantiates a new ChatMessagePolicyViolation and sets the default values.
      */
     public ChatMessagePolicyViolation() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessagePolicyViolation
+     * @return a ChatMessagePolicyViolation
      */
     @jakarta.annotation.Nonnull
     public static ChatMessagePolicyViolation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
         return new ChatMessagePolicyViolation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the dlpAction property value. The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
-     * @return a chatMessagePolicyViolationDlpActionTypes
+     * @return a EnumSet<ChatMessagePolicyViolationDlpActionTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ChatMessagePolicyViolationDlpActionTypes> getDlpAction() {
@@ -87,7 +87,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the justificationText property value. Justification text provided by the sender of the message when overriding a policy violation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustificationText() {
@@ -95,7 +95,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,23 +103,23 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the policyTip property value. Information to display to the message sender about why the message was flagged as a violation.
-     * @return a chatMessagePolicyViolationPolicyTip
+     * @return a ChatMessagePolicyViolationPolicyTip
      */
     @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationPolicyTip getPolicyTip() {
         return this.policyTip;
     }
     /**
-     * Gets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
-     * @return a chatMessagePolicyViolationUserActionTypes
+     * Gets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn't required.
+     * @return a EnumSet<ChatMessagePolicyViolationUserActionTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ChatMessagePolicyViolationUserActionTypes> getUserAction() {
         return this.userAction;
     }
     /**
-     * Gets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
-     * @return a chatMessagePolicyViolationVerdictDetailsTypes
+     * Gets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction hides it.AllowOverrideWithoutJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
+     * @return a EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes> getVerdictDetails() {
@@ -140,8 +140,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -175,14 +175,14 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
         this.policyTip = value;
     }
     /**
-     * Sets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
+     * Sets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn't required.
      * @param value Value to set for the userAction property.
      */
     public void setUserAction(@jakarta.annotation.Nullable final EnumSet<ChatMessagePolicyViolationUserActionTypes> value) {
         this.userAction = value;
     }
     /**
-     * Sets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
+     * Sets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction hides it.AllowOverrideWithoutJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to override the DLP violation and allow readers to see the message again if the dlpAction hides it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
      * @param value Value to set for the verdictDetails property.
      */
     public void setVerdictDetails(@jakarta.annotation.Nullable final EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes> value) {

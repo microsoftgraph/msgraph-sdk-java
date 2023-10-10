@@ -57,7 +57,7 @@ public class LastMessagePreviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
-     * @return a CompletableFuture of chatMessageInfo
+     * @return a CompletableFuture of ChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageInfo> get() {
@@ -66,7 +66,7 @@ public class LastMessagePreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageInfo
+     * @return a CompletableFuture of ChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LastMessagePreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property lastMessagePreview in chats
      * @param body The request body
-     * @return a CompletableFuture of chatMessageInfo
+     * @return a CompletableFuture of ChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageInfo> patch(@jakarta.annotation.Nonnull final ChatMessageInfo body) {
@@ -89,7 +89,7 @@ public class LastMessagePreviewRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property lastMessagePreview in chats
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageInfo
+     * @return a CompletableFuture of ChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageInfo> patch(@jakarta.annotation.Nonnull final ChatMessageInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class LastMessagePreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastMessagePreviewRequestBuilder
+     * @return a LastMessagePreviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastMessagePreviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

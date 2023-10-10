@@ -35,7 +35,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/resetDecisions", rawUrl);
     }
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed.
+     * Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to notReviewed. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ResetDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resetDecisionsRequestBuilder
+     * @return a ResetDecisionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResetDecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

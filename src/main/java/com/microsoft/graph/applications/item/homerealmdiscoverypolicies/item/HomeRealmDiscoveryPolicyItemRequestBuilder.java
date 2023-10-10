@@ -38,7 +38,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get homeRealmDiscoveryPolicies from applications
-     * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get() {
@@ -47,7 +47,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Get homeRealmDiscoveryPolicies from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

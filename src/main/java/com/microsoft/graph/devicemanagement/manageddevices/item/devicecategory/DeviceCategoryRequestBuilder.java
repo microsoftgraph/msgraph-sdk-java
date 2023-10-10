@@ -57,7 +57,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceCategory object.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicecategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicecategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceCategory object.
      * @param body The request body
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicecategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicecategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCategoryRequestBuilder
+     * @return a DeviceCategoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCategoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

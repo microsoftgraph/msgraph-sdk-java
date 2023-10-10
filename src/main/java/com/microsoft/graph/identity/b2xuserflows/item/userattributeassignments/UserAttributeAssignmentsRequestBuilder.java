@@ -75,8 +75,8 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,9 +84,9 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -98,9 +98,9 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IdentityUserFlowAttributeAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,10 +108,10 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -187,7 +187,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userAttributeAssignmentsRequestBuilder
+     * @return a UserAttributeAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserAttributeAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -195,7 +195,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new UserAttributeAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

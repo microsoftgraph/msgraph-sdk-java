@@ -24,7 +24,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     private Integer deviceCount;
     /**
-     * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
+     * Instantiates a new WindowsInformationProtectionAppLearningSummary and sets the default values.
      */
     public WindowsInformationProtectionAppLearningSummary() {
         super();
@@ -32,7 +32,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionAppLearningSummary
+     * @return a WindowsInformationProtectionAppLearningSummary
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionAppLearningSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     }
     /**
      * Gets the applicationName property value. Application Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationName() {
@@ -49,7 +49,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     }
     /**
      * Gets the applicationType property value. Possible types of Application
-     * @return a applicationType
+     * @return a ApplicationType
      */
     @jakarta.annotation.Nullable
     public ApplicationType getApplicationType() {
@@ -57,7 +57,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     }
     /**
      * Gets the deviceCount property value. Device Count
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {

@@ -13,7 +13,7 @@ public class LearningProviderCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<LearningProvider> value;
     /**
-     * Instantiates a new learningProviderCollectionResponse and sets the default values.
+     * Instantiates a new LearningProviderCollectionResponse and sets the default values.
      */
     public LearningProviderCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class LearningProviderCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a learningProviderCollectionResponse
+     * @return a LearningProviderCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static LearningProviderCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class LearningProviderCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a learningProvider
+     * @return a java.util.List<LearningProvider>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningProvider> getValue() {

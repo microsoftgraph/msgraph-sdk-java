@@ -39,7 +39,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     private String osPlatformDeviceDetails;
     /**
-     * Instantiates a new userSimulationEventInfo and sets the default values.
+     * Instantiates a new UserSimulationEventInfo and sets the default values.
      */
     public UserSimulationEventInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSimulationEventInfo
+     * @return a UserSimulationEventInfo
      */
     @jakarta.annotation.Nonnull
     public static UserSimulationEventInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
         return new UserSimulationEventInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBrowser() {
@@ -80,7 +80,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -103,7 +103,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -111,7 +111,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsPlatformDeviceDetails() {
@@ -140,8 +140,8 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

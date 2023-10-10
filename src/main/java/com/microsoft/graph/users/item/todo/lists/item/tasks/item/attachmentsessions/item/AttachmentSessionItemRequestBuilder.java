@@ -65,7 +65,7 @@ public class AttachmentSessionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get attachmentSessions from users
-     * @return a CompletableFuture of attachmentSession
+     * @return a CompletableFuture of AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSession> get() {
@@ -74,7 +74,7 @@ public class AttachmentSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get attachmentSessions from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentSession
+     * @return a CompletableFuture of AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSession> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AttachmentSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property attachmentSessions in users
      * @param body The request body
-     * @return a CompletableFuture of attachmentSession
+     * @return a CompletableFuture of AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSession> patch(@jakarta.annotation.Nonnull final AttachmentSession body) {
@@ -97,7 +97,7 @@ public class AttachmentSessionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property attachmentSessions in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentSession
+     * @return a CompletableFuture of AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSession> patch(@jakarta.annotation.Nonnull final AttachmentSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

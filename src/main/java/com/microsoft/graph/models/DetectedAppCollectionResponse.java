@@ -13,7 +13,7 @@ public class DetectedAppCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<DetectedApp> value;
     /**
-     * Instantiates a new detectedAppCollectionResponse and sets the default values.
+     * Instantiates a new DetectedAppCollectionResponse and sets the default values.
      */
     public DetectedAppCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DetectedAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectedAppCollectionResponse
+     * @return a DetectedAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DetectedAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DetectedAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a detectedApp
+     * @return a java.util.List<DetectedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DetectedApp> getValue() {

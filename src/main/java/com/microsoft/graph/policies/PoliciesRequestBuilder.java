@@ -190,7 +190,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policies
-     * @return a CompletableFuture of policyRoot
+     * @return a CompletableFuture of PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> get() {
@@ -199,7 +199,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyRoot
+     * @return a CompletableFuture of PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -212,7 +212,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update policies
      * @param body The request body
-     * @return a CompletableFuture of policyRoot
+     * @return a CompletableFuture of PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@jakarta.annotation.Nonnull final PolicyRoot body) {
@@ -222,7 +222,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Update policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyRoot
+     * @return a CompletableFuture of PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@jakarta.annotation.Nonnull final PolicyRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -297,7 +297,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policiesRequestBuilder
+     * @return a PoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

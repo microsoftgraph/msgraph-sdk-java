@@ -30,7 +30,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new localizedLabel and sets the default values.
+     * Instantiates a new LocalizedLabel and sets the default values.
      */
     public LocalizedLabel() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localizedLabel
+     * @return a LocalizedLabel
      */
     @jakarta.annotation.Nonnull
     public static LocalizedLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
         return new LocalizedLabel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates whether the label is the default label.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -76,7 +76,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the languageTag property value. The language tag for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -84,7 +84,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -92,7 +92,7 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

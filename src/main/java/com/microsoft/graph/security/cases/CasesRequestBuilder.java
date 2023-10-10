@@ -65,7 +65,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get cases from security
-     * @return a CompletableFuture of casesRoot
+     * @return a CompletableFuture of CasesRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CasesRoot> get() {
@@ -74,7 +74,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get cases from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of casesRoot
+     * @return a CompletableFuture of CasesRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CasesRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property cases in security
      * @param body The request body
-     * @return a CompletableFuture of casesRoot
+     * @return a CompletableFuture of CasesRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CasesRoot> patch(@jakarta.annotation.Nonnull final CasesRoot body) {
@@ -97,7 +97,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cases in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of casesRoot
+     * @return a CompletableFuture of CasesRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CasesRoot> patch(@jakarta.annotation.Nonnull final CasesRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a casesRequestBuilder
+     * @return a CasesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CasesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -30,7 +30,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
      */
     private String type;
     /**
-     * Instantiates a new accessReviewInstanceDecisionItemResource and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemResource and sets the default values.
      */
     public AccessReviewInstanceDecisionItemResource() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewInstanceDecisionItemResource
+     * @return a AccessReviewInstanceDecisionItemResource
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         return new AccessReviewInstanceDecisionItemResource();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     }
     /**
      * Gets the displayName property value. Display name of the resource
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -85,7 +85,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     }
     /**
      * Gets the id property value. Identifier of the resource
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -93,7 +93,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     }
     /**
      * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -120,8 +120,8 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

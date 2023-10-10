@@ -18,7 +18,7 @@ public class Subscription extends Entity implements Parsable {
      */
     private String changeType;
     /**
-     * Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      */
     private String clientState;
     /**
@@ -66,7 +66,7 @@ public class Subscription extends Entity implements Parsable {
      */
     private String resource;
     /**
-     * Instantiates a new subscription and sets the default values.
+     * Instantiates a new Subscription and sets the default values.
      */
     public Subscription() {
         super();
@@ -74,7 +74,7 @@ public class Subscription extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subscription
+     * @return a Subscription
      */
     @jakarta.annotation.Nonnull
     public static Subscription createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the applicationId property value. Optional. Identifier of the application used to create the subscription. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -91,15 +91,15 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeType() {
         return this.changeType;
     }
     /**
-     * Gets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
-     * @return a string
+     * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientState() {
@@ -107,7 +107,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatorId() {
@@ -115,7 +115,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionCertificate property value. Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEncryptionCertificate() {
@@ -123,7 +123,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEncryptionCertificateId() {
@@ -162,7 +162,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the includeResourceData property value. Optional. When set to true, change notifications include resource data (such as content of a chat message).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeResourceData() {
@@ -170,7 +170,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the latestSupportedTlsVersion property value. Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v10, v11, v12, v13. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLatestSupportedTlsVersion() {
@@ -178,7 +178,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the lifecycleNotificationUrl property value. Required for Teams resources if  the expirationDateTime value is more than 1 hour from now; optional otherwise. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol. For more information, see Reduce missing subscriptions and change notifications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLifecycleNotificationUrl() {
@@ -186,7 +186,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationQueryOptions() {
@@ -194,7 +194,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationUrl() {
@@ -202,7 +202,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationUrlAppId() {
@@ -210,7 +210,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResource() {
@@ -253,7 +253,7 @@ public class Subscription extends Entity implements Parsable {
         this.changeType = value;
     }
     /**
-     * Sets the clientState property value. Required. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Sets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      * @param value Value to set for the clientState property.
      */
     public void setClientState(@jakarta.annotation.Nullable final String value) {

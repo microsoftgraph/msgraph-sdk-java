@@ -13,7 +13,7 @@ public class BookingBusinessCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<BookingBusiness> value;
     /**
-     * Instantiates a new bookingBusinessCollectionResponse and sets the default values.
+     * Instantiates a new BookingBusinessCollectionResponse and sets the default values.
      */
     public BookingBusinessCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class BookingBusinessCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingBusinessCollectionResponse
+     * @return a BookingBusinessCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BookingBusinessCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BookingBusinessCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a bookingBusiness
+     * @return a java.util.List<BookingBusiness>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingBusiness> getValue() {

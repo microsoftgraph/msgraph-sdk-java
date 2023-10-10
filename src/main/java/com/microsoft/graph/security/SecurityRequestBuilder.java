@@ -43,7 +43,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
      */
     @jakarta.annotation.Nonnull
-    public AlertsV2RequestBuilder alerts_v2() {
+    public AlertsV2RequestBuilder alertsV2() {
         return new AlertsV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -134,7 +134,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get security
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get() {
@@ -143,7 +143,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -156,7 +156,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update security
      * @param body The request body
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> patch(@jakarta.annotation.Nonnull final Security body) {
@@ -166,7 +166,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Update security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> patch(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -241,7 +241,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a securityRequestBuilder
+     * @return a SecurityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecurityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

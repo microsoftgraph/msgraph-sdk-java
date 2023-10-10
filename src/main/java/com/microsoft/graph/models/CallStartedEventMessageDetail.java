@@ -21,7 +21,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new callStartedEventMessageDetail and sets the default values.
+     * Instantiates a new CallStartedEventMessageDetail and sets the default values.
      */
     public CallStartedEventMessageDetail() {
         super();
@@ -30,7 +30,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callStartedEventMessageDetail
+     * @return a CallStartedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static CallStartedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     * @return a teamworkCallEventType
+     * @return a TeamworkCallEventType
      */
     @jakarta.annotation.Nullable
     public TeamworkCallEventType getCallEventType() {
@@ -47,7 +47,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the callId property value. Unique identifier of the call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -67,7 +67,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

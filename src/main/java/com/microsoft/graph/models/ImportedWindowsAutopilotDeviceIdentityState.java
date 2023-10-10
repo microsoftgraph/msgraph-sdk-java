@@ -34,7 +34,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     private String odataType;
     /**
-     * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
+     * Instantiates a new ImportedWindowsAutopilotDeviceIdentityState and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedWindowsAutopilotDeviceIdentityState
+     * @return a ImportedWindowsAutopilotDeviceIdentityState
      */
     @jakarta.annotation.Nonnull
     public static ImportedWindowsAutopilotDeviceIdentityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         return new ImportedWindowsAutopilotDeviceIdentityState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceErrorCode() {
@@ -67,7 +67,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceErrorName() {
@@ -75,7 +75,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceImportStatus property value. The deviceImportStatus property
-     * @return a importedWindowsAutopilotDeviceIdentityImportStatus
+     * @return a ImportedWindowsAutopilotDeviceIdentityImportStatus
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityImportStatus getDeviceImportStatus() {
@@ -83,7 +83,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
@@ -105,7 +105,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,8 +125,8 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

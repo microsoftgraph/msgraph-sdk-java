@@ -42,7 +42,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     private ScheduleChangeState state;
     /**
-     * Instantiates a new scheduleChangeRequest and sets the default values.
+     * Instantiates a new ScheduleChangeRequest and sets the default values.
      */
     public ScheduleChangeRequest() {
         super();
@@ -51,7 +51,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a scheduleChangeRequest
+     * @return a ScheduleChangeRequest
      */
     @jakarta.annotation.Nonnull
     public static ScheduleChangeRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
-     * @return a scheduleChangeRequestActor
+     * @return a ScheduleChangeRequestActor
      */
     @jakarta.annotation.Nullable
     public ScheduleChangeRequestActor getAssignedTo() {
@@ -103,7 +103,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the managerActionMessage property value. The managerActionMessage property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagerActionMessage() {
@@ -111,7 +111,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the managerUserId property value. The managerUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagerUserId() {
@@ -127,7 +127,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the senderMessage property value. The senderMessage property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderMessage() {
@@ -135,7 +135,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the senderUserId property value. The senderUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderUserId() {
@@ -143,7 +143,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     }
     /**
      * Gets the state property value. The state property
-     * @return a scheduleChangeState
+     * @return a ScheduleChangeState
      */
     @jakarta.annotation.Nullable
     public ScheduleChangeState getState() {
