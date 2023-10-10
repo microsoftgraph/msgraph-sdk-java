@@ -50,7 +50,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Enforced Grant Controls.
-     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
      */
     @SerializedName(value = "enforcedGrantControls", alternate = {"EnforcedGrantControls"})
     @Expose

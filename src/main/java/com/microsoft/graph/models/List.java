@@ -46,7 +46,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * Provides additional details about the list.
+     * Contains more details about the list.
      */
     @SerializedName(value = "list", alternate = {"List"})
     @Expose
@@ -64,7 +64,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * If present, indicates that this is a system-managed list. Read-only.
+     * If present, indicates that the list is system-managed. Read-only.
      */
     @SerializedName(value = "system", alternate = {"System"})
     @Expose
@@ -91,7 +91,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      */
     @SerializedName(value = "drive", alternate = {"Drive"})
     @Expose

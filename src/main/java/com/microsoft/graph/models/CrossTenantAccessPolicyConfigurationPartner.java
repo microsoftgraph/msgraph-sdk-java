@@ -115,7 +115,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Identity Synchronization.
-     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
+     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
      */
     @SerializedName(value = "identitySynchronization", alternate = {"IdentitySynchronization"})
     @Expose

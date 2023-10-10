@@ -29,7 +29,7 @@ public class AuthenticationMethodsRoot extends Entity implements IJsonBackedObje
 
     /**
      * The User Registration Details.
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
+     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
      */
     @SerializedName(value = "userRegistrationDetails", alternate = {"UserRegistrationDetails"})
     @Expose

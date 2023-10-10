@@ -41,7 +41,7 @@ public class PresenceStatusMessage implements IJsonBackedObject {
 
     /**
      * The Expiry Date Time.
-     * Time in which the status message expires.If not provided, the status message does not expire.expiryDateTime.dateTime should not include time zone.expiryDateTime is not available when you request the presence of another user.
+     * Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
      */
     @SerializedName(value = "expiryDateTime", alternate = {"ExpiryDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class PresenceStatusMessage implements IJsonBackedObject {
 
     /**
      * The Published Date Time.
-     * Time in which the status message was published.Read-only.publishedDateTime is not available when you request the presence of another user.
+     * Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      */
     @SerializedName(value = "publishedDateTime", alternate = {"PublishedDateTime"})
     @Expose
