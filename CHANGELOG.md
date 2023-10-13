@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.74.0] - 2023-10-13
+
+### Changed
+
+- External/InternalSponsors for ConnectedOrganizationRequestBuilder are accessed via DirectoryObjectWithReferenceRequestBuilder, no longer DirectoryObjectRequestBuilder.
+
 ## [5.73.0] - 2023-10-06
 
 ### Added
