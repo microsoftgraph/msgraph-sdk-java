@@ -104,7 +104,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Broadcast Settings.
-     * Settings related to a live event.
+     * 
      */
     @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
     @Expose
@@ -149,7 +149,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * Indicates if this is a Teams live event.
+     * 
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose
@@ -275,7 +275,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcripts.
-     * 
+     * The transcripts of an online meeting. Read-only.
      */
     @SerializedName(value = "transcripts", alternate = {"Transcripts"})
     @Expose

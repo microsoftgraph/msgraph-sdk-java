@@ -86,8 +86,6 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The External Sponsors.
      * 
      */
-    @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage externalSponsors;
 
@@ -95,8 +93,6 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
      * The Internal Sponsors.
      * 
      */
-    @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage internalSponsors;
 

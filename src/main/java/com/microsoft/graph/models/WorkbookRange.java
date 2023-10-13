@@ -156,7 +156,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
-     * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

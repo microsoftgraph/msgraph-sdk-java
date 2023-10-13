@@ -28,7 +28,7 @@ public class CallTranscript extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class CallTranscript extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Id.
-     * 
+     * The unique identifier of the online meeting related to this transcript. Read-only.
      */
     @SerializedName(value = "meetingId", alternate = {"MeetingId"})
     @Expose
@@ -46,7 +46,7 @@ public class CallTranscript extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Organizer.
-     * 
+     * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
      */
     @SerializedName(value = "meetingOrganizer", alternate = {"MeetingOrganizer"})
     @Expose
@@ -55,7 +55,7 @@ public class CallTranscript extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcript Content Url.
-     * 
+     * The URL that can be used to access the content of the transcript. Read-only.
      */
     @SerializedName(value = "transcriptContentUrl", alternate = {"TranscriptContentUrl"})
     @Expose

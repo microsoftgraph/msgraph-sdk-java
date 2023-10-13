@@ -71,7 +71,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Bucket Id.
-     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
      */
     @SerializedName(value = "bucketId", alternate = {"BucketId"})
     @Expose
@@ -143,7 +143,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Description.
-     * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
      */
     @SerializedName(value = "hasDescription", alternate = {"HasDescription"})
     @Expose
@@ -242,7 +242,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Read-only. Nullable. Additional details about the task.
+     * Read-only. Nullable. More details about the task.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
