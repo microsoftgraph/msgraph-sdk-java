@@ -21,7 +21,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     private OpenShiftItem sharedOpenShift;
     /**
-     * Instantiates a new openShift and sets the default values.
+     * Instantiates a new OpenShift and sets the default values.
      */
     public OpenShift() {
         super();
@@ -30,7 +30,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a openShift
+     * @return a OpenShift
      */
     @jakarta.annotation.Nonnull
     public static OpenShift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftOpenShift property value. An unpublished open shift.
-     * @return a openShiftItem
+     * @return a OpenShiftItem
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getDraftOpenShift() {
@@ -59,7 +59,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
@@ -67,7 +67,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedOpenShift property value. A published open shift.
-     * @return a openShiftItem
+     * @return a OpenShiftItem
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {

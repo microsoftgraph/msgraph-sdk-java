@@ -13,7 +13,7 @@ public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<DocumentSetVersion> value;
     /**
-     * Instantiates a new documentSetVersionCollectionResponse and sets the default values.
+     * Instantiates a new DocumentSetVersionCollectionResponse and sets the default values.
      */
     public DocumentSetVersionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentSetVersionCollectionResponse
+     * @return a DocumentSetVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetVersionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a documentSetVersion
+     * @return a java.util.List<DocumentSetVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersion> getValue() {

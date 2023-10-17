@@ -13,7 +13,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     private java.util.List<ExternalDomainName> domains;
     /**
-     * Instantiates a new samlOrWsFedExternalDomainFederation and sets the default values.
+     * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
      */
     public SamlOrWsFedExternalDomainFederation() {
         super();
@@ -22,7 +22,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a samlOrWsFedExternalDomainFederation
+     * @return a SamlOrWsFedExternalDomainFederation
      */
     @jakarta.annotation.Nonnull
     public static SamlOrWsFedExternalDomainFederation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     }
     /**
      * Gets the domains property value. Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
-     * @return a externalDomainName
+     * @return a java.util.List<ExternalDomainName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalDomainName> getDomains() {

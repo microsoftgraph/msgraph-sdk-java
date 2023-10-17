@@ -73,7 +73,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      */
     private TicketInfo ticketInfo;
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleRequest and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.
      */
     public UnifiedRoleAssignmentScheduleRequest() {
         super();
@@ -81,7 +81,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleAssignmentScheduleRequest
+     * @return a UnifiedRoleAssignmentScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentScheduleRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the action property value. Represents the type of the operation on the role assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign roles to principals.adminRemove: For administrators to remove principals from roles. adminUpdate: For administrators to change existing role assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.selfExtend: For principals to request to extend their expiring assignments.selfRenew: For principals to request to renew their expired assignments.
-     * @return a unifiedRoleScheduleRequestActions
+     * @return a UnifiedRoleScheduleRequestActions
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleScheduleRequestActions getAction() {
@@ -98,7 +98,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
-     * @return a unifiedRoleEligibilitySchedule
+     * @return a UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getActivatedUsing() {
@@ -106,7 +106,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the appScope property value. Read-only property with details of the app-specific scope when the assignment is scoped to an app. Nullable. Supports $expand.
-     * @return a appScope
+     * @return a AppScope
      */
     @jakarta.annotation.Nullable
     public AppScope getAppScope() {
@@ -114,7 +114,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the appScopeId property value. Identifier of the app-specific scope when the assignment is scoped to an app. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppScopeId() {
@@ -122,7 +122,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
@@ -130,7 +130,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
@@ -163,7 +163,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
@@ -171,7 +171,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the justification property value. A message provided by users and administrators when create they create the unifiedRoleAssignmentScheduleRequest object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -179,7 +179,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the principal property value. The principal that's getting a role assignment through the request. Supports $expand.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
@@ -187,7 +187,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the principalId property value. Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
@@ -195,7 +195,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
-     * @return a unifiedRoleDefinition
+     * @return a UnifiedRoleDefinition
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
@@ -203,7 +203,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -211,7 +211,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the scheduleInfo property value. The period of the role assignment. Recurring schedules are currently unsupported.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
@@ -219,7 +219,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
-     * @return a unifiedRoleAssignmentSchedule
+     * @return a UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentSchedule getTargetSchedule() {
@@ -227,7 +227,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the targetScheduleId property value. Identifier of the schedule object that's linked to the assignment request. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetScheduleId() {
@@ -235,7 +235,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     }
     /**
      * Gets the ticketInfo property value. Ticket details linked to the role assignment request including details of the ticket number and ticket system.
-     * @return a ticketInfo
+     * @return a TicketInfo
      */
     @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {

@@ -33,7 +33,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     private String subject;
     /**
-     * Instantiates a new localizedNotificationMessage and sets the default values.
+     * Instantiates a new LocalizedNotificationMessage and sets the default values.
      */
     public LocalizedNotificationMessage() {
         super();
@@ -41,7 +41,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localizedNotificationMessage
+     * @return a LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public static LocalizedNotificationMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -80,7 +80,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * Gets the locale property value. The Locale for which this message is destined.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -88,7 +88,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * Gets the messageTemplate property value. The Message Template content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageTemplate() {
@@ -96,7 +96,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The Message Template Subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

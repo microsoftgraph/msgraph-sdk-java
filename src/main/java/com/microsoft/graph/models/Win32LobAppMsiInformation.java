@@ -49,7 +49,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     private String upgradeCode;
     /**
-     * Instantiates a new win32LobAppMsiInformation and sets the default values.
+     * Instantiates a new Win32LobAppMsiInformation and sets the default values.
      */
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -57,7 +57,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppMsiInformation
+     * @return a Win32LobAppMsiInformation
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppMsiInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
         return new Win32LobAppMsiInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
-     * @return a win32LobAppMsiPackageType
+     * @return a Win32LobAppMsiPackageType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppMsiPackageType getPackageType() {
@@ -107,7 +107,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the productCode property value. The MSI product code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
@@ -115,7 +115,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the productName property value. The MSI product name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
@@ -123,7 +123,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the productVersion property value. The MSI product version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
@@ -131,7 +131,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the publisher property value. The MSI publisher.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -139,7 +139,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresReboot() {
@@ -147,7 +147,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the upgradeCode property value. The MSI upgrade code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpgradeCode() {
@@ -170,8 +170,8 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

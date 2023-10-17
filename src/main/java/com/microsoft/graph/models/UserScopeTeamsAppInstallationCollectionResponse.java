@@ -13,7 +13,7 @@ public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollect
      */
     private java.util.List<UserScopeTeamsAppInstallation> value;
     /**
-     * Instantiates a new userScopeTeamsAppInstallationCollectionResponse and sets the default values.
+     * Instantiates a new UserScopeTeamsAppInstallationCollectionResponse and sets the default values.
      */
     public UserScopeTeamsAppInstallationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userScopeTeamsAppInstallationCollectionResponse
+     * @return a UserScopeTeamsAppInstallationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserScopeTeamsAppInstallationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserScopeTeamsAppInstallationCollectionResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a userScopeTeamsAppInstallation
+     * @return a java.util.List<UserScopeTeamsAppInstallation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getValue() {

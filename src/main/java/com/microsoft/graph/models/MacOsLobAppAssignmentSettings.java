@@ -16,7 +16,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     private Boolean uninstallOnDeviceRemoval;
     /**
-     * Instantiates a new macOsLobAppAssignmentSettings and sets the default values.
+     * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.
      */
     public MacOsLobAppAssignmentSettings() {
         super();
@@ -25,7 +25,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOsLobAppAssignmentSettings
+     * @return a MacOsLobAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static MacOsLobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {

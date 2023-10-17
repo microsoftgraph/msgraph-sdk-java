@@ -33,7 +33,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     private String version;
     /**
-     * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.
+     * Instantiates a new ManagedAppPolicyDeploymentSummary and sets the default values.
      */
     public ManagedAppPolicyDeploymentSummary() {
         super();
@@ -41,7 +41,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicyDeploymentSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the configurationDeployedUserCount property value. Not yet documented
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationDeployedUserCount() {
@@ -58,7 +58,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
-     * @return a managedAppPolicyDeploymentSummaryPerApp
+     * @return a java.util.List<ManagedAppPolicyDeploymentSummaryPerApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> getConfigurationDeploymentSummaryPerApp() {
@@ -66,7 +66,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the displayName property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -96,7 +96,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

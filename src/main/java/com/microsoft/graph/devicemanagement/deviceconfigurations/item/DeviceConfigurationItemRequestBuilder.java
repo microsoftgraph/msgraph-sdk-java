@@ -94,17 +94,17 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a windows10TeamGeneralConfiguration.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10teamgeneralconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a editionUpgradeConfiguration.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Deletes a windows10TeamGeneralConfiguration.
+     * Deletes a editionUpgradeConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10teamgeneralconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -115,19 +115,19 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
-     * @return a CompletableFuture of deviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10endpointprotectionconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
+     * @return a CompletableFuture of DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10endpointprotectionconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +140,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
      * @param secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
-     * @return a getOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
+     * @return a GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder getOmaSettingPlainTextValueWithSecretReferenceValueId(@jakarta.annotation.Nonnull final String secretReferenceValueId) {
@@ -148,21 +148,21 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the properties of a windows10EnterpriseModernAppManagementConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of deviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10enterprisemodernappmanagementconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windows10EnterpriseModernAppManagementConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10enterprisemodernappmanagementconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -174,7 +174,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a windows10TeamGeneralConfiguration.
+     * Deletes a editionUpgradeConfiguration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,26 +182,26 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a windows10TeamGeneralConfiguration.
+     * Deletes a editionUpgradeConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -209,17 +209,13 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -227,10 +223,14 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of a windows10EnterpriseModernAppManagementConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -239,7 +239,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windows10EnterpriseModernAppManagementConfiguration object.
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,17 +248,17 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -278,7 +278,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windows10EndpointProtectionConfiguration object.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

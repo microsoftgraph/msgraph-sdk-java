@@ -37,7 +37,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     private java.util.List<ListItemVersion> versions;
     /**
-     * Instantiates a new listItem and sets the default values.
+     * Instantiates a new ListItem and sets the default values.
      */
     public ListItem() {
         super();
@@ -46,7 +46,7 @@ public class ListItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nonnull
     public static ListItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
-     * @return a itemAnalytics
+     * @return a ItemAnalytics
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
@@ -63,7 +63,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the contentType property value. The content type of this list item
-     * @return a contentTypeInfo
+     * @return a ContentTypeInfo
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
@@ -71,7 +71,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
-     * @return a documentSetVersion
+     * @return a java.util.List<DocumentSetVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
@@ -79,7 +79,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
@@ -103,7 +103,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the fields property value. The values of the columns set on this list item.
-     * @return a fieldValueSet
+     * @return a FieldValueSet
      */
     @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
@@ -111,7 +111,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -119,7 +119,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the versions property value. The list of previous versions of the list item.
-     * @return a listItemVersion
+     * @return a java.util.List<ListItemVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ListItemVersion> getVersions() {

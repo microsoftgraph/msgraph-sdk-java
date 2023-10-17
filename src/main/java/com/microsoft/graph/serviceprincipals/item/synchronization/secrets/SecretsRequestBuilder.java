@@ -46,7 +46,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
+     * @return a CompletableFuture of java.util.List<SynchronizationSecretKeyStringValuePair>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
@@ -56,7 +56,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
+     * @return a CompletableFuture of java.util.List<SynchronizationSecretKeyStringValuePair>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -86,23 +86,23 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body.toArray(new SynchronizationSecretKeyStringValuePair[0]));
         if (requestConfiguration != null) {
             final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PUT;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body.toArray(new SynchronizationSecretKeyStringValuePair[0]));
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a secretsRequestBuilder
+     * @return a SecretsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecretsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

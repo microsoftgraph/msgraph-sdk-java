@@ -24,7 +24,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Instantiates a new bookingCustomQuestion and sets the default values.
+     * Instantiates a new BookingCustomQuestion and sets the default values.
      */
     public BookingCustomQuestion() {
         super();
@@ -32,7 +32,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomQuestion
+     * @return a BookingCustomQuestion
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a answerInputType
+     * @return a AnswerInputType
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
@@ -49,7 +49,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerOptions property value. List of possible answer values.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
@@ -57,7 +57,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

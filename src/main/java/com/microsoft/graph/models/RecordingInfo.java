@@ -26,7 +26,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     private RecordingStatus recordingStatus;
     /**
-     * Instantiates a new recordingInfo and sets the default values.
+     * Instantiates a new RecordingInfo and sets the default values.
      */
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recordingInfo
+     * @return a RecordingInfo
      */
     @jakarta.annotation.Nonnull
     public static RecordingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         return new RecordingInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the initiator property value. The identities of the recording initiator.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -71,7 +71,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recordingStatus property value. The recordingStatus property
-     * @return a recordingStatus
+     * @return a RecordingStatus
      */
     @jakarta.annotation.Nullable
     public RecordingStatus getRecordingStatus() {
@@ -97,8 +97,8 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

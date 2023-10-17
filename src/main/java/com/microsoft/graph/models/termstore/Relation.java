@@ -26,7 +26,7 @@ public class Relation extends Entity implements Parsable {
      */
     private Term toTerm;
     /**
-     * Instantiates a new relation and sets the default values.
+     * Instantiates a new Relation and sets the default values.
      */
     public Relation() {
         super();
@@ -34,7 +34,7 @@ public class Relation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relation
+     * @return a Relation
      */
     @jakarta.annotation.Nonnull
     public static Relation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * Gets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
-     * @return a term
+     * @return a Term
      */
     @jakarta.annotation.Nullable
     public Term getFromTerm() {
@@ -64,7 +64,7 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
-     * @return a relationType
+     * @return a RelationType
      */
     @jakarta.annotation.Nullable
     public RelationType getRelationship() {
@@ -72,7 +72,7 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * Gets the set property value. The [set] in which the relation is relevant.
-     * @return a set
+     * @return a Set
      */
     @jakarta.annotation.Nullable
     public Set getSet() {
@@ -80,7 +80,7 @@ public class Relation extends Entity implements Parsable {
     }
     /**
      * Gets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
-     * @return a term
+     * @return a Term
      */
     @jakarta.annotation.Nullable
     public Term getToTerm() {

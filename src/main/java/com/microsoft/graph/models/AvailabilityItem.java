@@ -22,7 +22,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
+     * Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      */
     private String serviceId;
     /**
@@ -34,7 +34,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     private BookingsAvailabilityStatus status;
     /**
-     * Instantiates a new availabilityItem and sets the default values.
+     * Instantiates a new AvailabilityItem and sets the default values.
      */
     public AvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a availabilityItem
+     * @return a AvailabilityItem
      */
     @jakarta.annotation.Nonnull
     public static AvailabilityItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         return new AvailabilityItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -81,15 +81,15 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
-     * @return a string
+     * Gets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
@@ -97,7 +97,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -105,7 +105,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     * @return a bookingsAvailabilityStatus
+     * @return a BookingsAvailabilityStatus
      */
     @jakarta.annotation.Nullable
     public BookingsAvailabilityStatus getStatus() {
@@ -125,8 +125,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -146,7 +146,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
+     * Sets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      * @param value Value to set for the serviceId property.
      */
     public void setServiceId(@jakarta.annotation.Nullable final String value) {

@@ -22,15 +22,15 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private Boolean allowEmailVerifiedUsersToJoinOrganization;
     /**
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values.
+     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      */
     private AllowInvitesFrom allowInvitesFrom;
     /**
-     * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false.
+     * Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
      */
     private Boolean allowUserConsentForRiskyApps;
     /**
-     * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph.
+     * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
      */
     private Boolean blockMsolPowerShell;
     /**
@@ -42,7 +42,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private UUID guestUserRoleId;
     /**
-     * Instantiates a new authorizationPolicy and sets the default values.
+     * Instantiates a new AuthorizationPolicy and sets the default values.
      */
     public AuthorizationPolicy() {
         super();
@@ -51,7 +51,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorizationPolicy
+     * @return a AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToSignUpEmailBasedSubscriptions property value. Indicates whether users can sign up for email based subscriptions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToSignUpEmailBasedSubscriptions() {
@@ -68,7 +68,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToUseSSPR() {
@@ -76,31 +76,31 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailVerifiedUsersToJoinOrganization() {
         return this.allowEmailVerifiedUsersToJoinOrganization;
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values.
-     * @return a allowInvitesFrom
+     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
+     * @return a AllowInvitesFrom
      */
     @jakarta.annotation.Nullable
     public AllowInvitesFrom getAllowInvitesFrom() {
         return this.allowInvitesFrom;
     }
     /**
-     * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false.
-     * @return a boolean
+     * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserConsentForRiskyApps() {
         return this.allowUserConsentForRiskyApps;
     }
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph.
-     * @return a boolean
+     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMsolPowerShell() {
@@ -108,7 +108,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
-     * @return a defaultUserRolePermissions
+     * @return a DefaultUserRolePermissions
      */
     @jakarta.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {
@@ -177,21 +177,21 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.allowEmailVerifiedUsersToJoinOrganization = value;
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values.
+     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
         this.allowInvitesFrom = value;
     }
     /**
-     * Sets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false.
+     * Sets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. We recommend keeping allowUserConsentForRiskyApps as false. Default value is false.
      * @param value Value to set for the allowUserConsentForRiskyApps property.
      */
     public void setAllowUserConsentForRiskyApps(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUserConsentForRiskyApps = value;
     }
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph.
+     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Azure Active Directory Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      */
     public void setBlockMsolPowerShell(@jakarta.annotation.Nullable final Boolean value) {

@@ -36,8 +36,8 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/follow", rawUrl);
     }
     /**
-     * Follow a driveItem.
-     * @return a CompletableFuture of driveItem
+     * Follow a driveItem. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,9 +45,9 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Follow a driveItem.
+     * Follow a driveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Follow a driveItem.
+     * Follow a driveItem. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,29 +67,29 @@ public class FollowRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Follow a driveItem.
+     * Follow a driveItem. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a followRequestBuilder
+     * @return a FollowRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FollowRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -17,7 +17,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      */
     private AuthenticationMethodTargetType targetType;
     /**
-     * Instantiates a new authenticationMethodTarget and sets the default values.
+     * Instantiates a new AuthenticationMethodTarget and sets the default values.
      */
     public AuthenticationMethodTarget() {
         super();
@@ -25,7 +25,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodTarget
+     * @return a AuthenticationMethodTarget
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     }
     /**
      * Gets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistrationRequired() {
@@ -61,7 +61,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     }
     /**
      * Gets the targetType property value. The targetType property
-     * @return a authenticationMethodTargetType
+     * @return a AuthenticationMethodTargetType
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {

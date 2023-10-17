@@ -75,7 +75,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new userSecurityState and sets the default values.
+     * Instantiates a new UserSecurityState and sets the default values.
      */
     public UserSecurityState() {
         this.setAdditionalData(new HashMap<>());
@@ -83,7 +83,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSecurityState
+     * @return a UserSecurityState
      */
     @jakarta.annotation.Nonnull
     public static UserSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,7 +92,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the aadUserId property value. AAD User object identifier (GUID) - represents the physical/multi-account user entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAadUserId() {
@@ -100,14 +100,14 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -124,7 +124,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     * @return a emailRole
+     * @return a EmailRole
      */
     @jakarta.annotation.Nullable
     public EmailRole getEmailRole() {
@@ -156,7 +156,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isVpn property value. Indicates whether the user logged on through a VPN.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVpn() {
@@ -172,7 +172,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonId property value. User sign-in ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogonId() {
@@ -180,7 +180,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonIp property value. IP Address the sign-in request originated from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogonIp() {
@@ -188,7 +188,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogonLocation() {
@@ -196,7 +196,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a logonType
+     * @return a LogonType
      */
     @jakarta.annotation.Nullable
     public LogonType getLogonType() {
@@ -204,7 +204,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -212,7 +212,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -220,7 +220,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -228,7 +228,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a userAccountSecurityType
+     * @return a UserAccountSecurityType
      */
     @jakarta.annotation.Nullable
     public UserAccountSecurityType getUserAccountType() {
@@ -236,7 +236,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -280,8 +280,8 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
         this.accountName = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

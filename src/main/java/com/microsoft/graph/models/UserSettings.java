@@ -21,7 +21,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     private ShiftPreferences shiftPreferences;
     /**
-     * Instantiates a new userSettings and sets the default values.
+     * Instantiates a new UserSettings and sets the default values.
      */
     public UserSettings() {
         super();
@@ -29,7 +29,7 @@ public class UserSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSettings
+     * @return a UserSettings
      */
     @jakarta.annotation.Nonnull
     public static UserSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class UserSettings extends Entity implements Parsable {
     }
     /**
      * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryAsOrganizationDisabled() {
@@ -46,7 +46,7 @@ public class UserSettings extends Entity implements Parsable {
     }
     /**
      * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryDisabled() {
@@ -66,7 +66,7 @@ public class UserSettings extends Entity implements Parsable {
     }
     /**
      * Gets the shiftPreferences property value. The shiftPreferences property
-     * @return a shiftPreferences
+     * @return a ShiftPreferences
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {

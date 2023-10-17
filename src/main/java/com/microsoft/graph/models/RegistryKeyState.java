@@ -58,7 +58,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     private RegistryValueType valueType;
     /**
-     * Instantiates a new registryKeyState and sets the default values.
+     * Instantiates a new RegistryKeyState and sets the default values.
      */
     public RegistryKeyState() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a registryKeyState
+     * @return a RegistryKeyState
      */
     @jakarta.annotation.Nonnull
     public static RegistryKeyState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
         return new RegistryKeyState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     * @return a registryHive
+     * @return a RegistryHive
      */
     @jakarta.annotation.Nullable
     public RegistryHive getHive() {
@@ -111,7 +111,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. Current (i.e. changed) registry key (excludes HIVE).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKey() {
@@ -119,7 +119,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -127,7 +127,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOldKey() {
@@ -135,7 +135,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOldValueData() {
@@ -143,7 +143,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oldValueName property value. Previous (i.e. before changed) registry key value name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOldValueName() {
@@ -151,7 +151,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     * @return a registryOperation
+     * @return a RegistryOperation
      */
     @jakarta.annotation.Nullable
     public RegistryOperation getOperation() {
@@ -159,7 +159,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProcessId() {
@@ -167,7 +167,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valueData property value. Current (i.e. changed) registry key value data (contents).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueData() {
@@ -175,7 +175,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valueName property value. Current (i.e. changed) registry key value name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueName() {
@@ -183,7 +183,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     * @return a registryValueType
+     * @return a RegistryValueType
      */
     @jakarta.annotation.Nullable
     public RegistryValueType getValueType() {
@@ -209,8 +209,8 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

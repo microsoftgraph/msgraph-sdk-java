@@ -42,7 +42,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      */
     private String subject;
     /**
-     * Instantiates a new scheduleItem and sets the default values.
+     * Instantiates a new ScheduleItem and sets the default values.
      */
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a scheduleItem
+     * @return a ScheduleItem
      */
     @jakarta.annotation.Nonnull
     public static ScheduleItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
         return new ScheduleItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the end property value. The date, time, and time zone that the corresponding event ends.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
@@ -91,7 +91,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isPrivate property value. The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivate() {
@@ -99,7 +99,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the location property value. The location where the corresponding event is held or attended from. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -107,7 +107,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the start property value. The date, time, and time zone that the corresponding event starts.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStart() {
@@ -123,7 +123,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a freeBusyStatus
+     * @return a FreeBusyStatus
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getStatus() {
@@ -131,7 +131,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subject property value. The corresponding event's subject line. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -153,8 +153,8 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

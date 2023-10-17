@@ -67,8 +67,8 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
-     * @return a CompletableFuture of contactFolderCollectionResponse
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ContactFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactFolderCollectionResponse
+     * @return a CompletableFuture of ContactFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContactFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContactFolder::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,17 +124,13 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -142,10 +138,14 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -163,23 +163,23 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ContactFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactFoldersRequestBuilder
+     * @return a ContactFoldersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactFoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +187,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return new ContactFoldersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the contact folder collection in the default Contacts folder of the signed-in user.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -45,7 +45,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return delete(null);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
-     * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethod
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return get(null);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethod
+     * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return this.requestAdapter.sendAsync(requestInfo, MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,26 +97,26 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,17 +124,13 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -142,6 +138,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -161,7 +161,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -14,7 +14,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
      */
     private java.util.List<AuthenticationMethodModes> appliesToCombinations;
     /**
-     * Instantiates a new authenticationCombinationConfiguration and sets the default values.
+     * Instantiates a new AuthenticationCombinationConfiguration and sets the default values.
      */
     public AuthenticationCombinationConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationCombinationConfiguration
+     * @return a AuthenticationCombinationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationCombinationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     }
     /**
      * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAppliesToCombinations() {

@@ -26,7 +26,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      */
     private String odataType;
     /**
-     * Instantiates a new accessReviewNotificationRecipientItem and sets the default values.
+     * Instantiates a new AccessReviewNotificationRecipientItem and sets the default values.
      */
     public AccessReviewNotificationRecipientItem() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewNotificationRecipientItem
+     * @return a AccessReviewNotificationRecipientItem
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewNotificationRecipientItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
         return new AccessReviewNotificationRecipientItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     }
     /**
      * Gets the notificationRecipientScope property value. Determines the recipient of the notification email.
-     * @return a accessReviewNotificationRecipientScope
+     * @return a AccessReviewNotificationRecipientScope
      */
     @jakarta.annotation.Nullable
     public AccessReviewNotificationRecipientScope getNotificationRecipientScope() {
@@ -71,7 +71,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     }
     /**
      * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationTemplateType() {
@@ -79,7 +79,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

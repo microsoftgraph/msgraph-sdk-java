@@ -37,7 +37,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/namedLocations/{namedLocation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a namedLocation object.
+     * Delete a namedLocation object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/namedlocation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a namedLocation object.
+     * Delete a namedLocation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/namedlocation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,19 +58,19 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
-     * @return a CompletableFuture of namedLocation
-     * @see <a href="https://learn.microsoft.com/graph/api/countrynamedlocation-get?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve the properties and relationships of a namedLocation object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of NamedLocation
+     * @see <a href="https://learn.microsoft.com/graph/api/namedlocation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of namedLocation
-     * @see <a href="https://learn.microsoft.com/graph/api/countrynamedlocation-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of NamedLocation
+     * @see <a href="https://learn.microsoft.com/graph/api/namedlocation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,21 +81,21 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, NamedLocation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the properties of a countryNamedLocation object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of namedLocation
-     * @see <a href="https://learn.microsoft.com/graph/api/ipnamedlocation-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of NamedLocation
+     * @see <a href="https://learn.microsoft.com/graph/api/countrynamedlocation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> patch(@jakarta.annotation.Nonnull final NamedLocation body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the properties of a countryNamedLocation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of namedLocation
-     * @see <a href="https://learn.microsoft.com/graph/api/ipnamedlocation-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of NamedLocation
+     * @see <a href="https://learn.microsoft.com/graph/api/countrynamedlocation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> patch(@jakarta.annotation.Nonnull final NamedLocation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, NamedLocation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a namedLocation object.
+     * Delete a namedLocation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,26 +115,26 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a namedLocation object.
+     * Delete a namedLocation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,17 +142,13 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -160,10 +156,14 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the properties of a countryNamedLocation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the properties of a countryNamedLocation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -181,17 +181,17 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NamedLocation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -211,7 +211,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a countryNamedLocation object.
+     * Retrieve the properties and relationships of a namedLocation object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

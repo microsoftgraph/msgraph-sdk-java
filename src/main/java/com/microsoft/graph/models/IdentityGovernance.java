@@ -35,11 +35,15 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
+     * The privilegedAccess property
+     */
+    private PrivilegedAccessRoot privilegedAccess;
+    /**
      * The termsOfUse property
      */
     private TermsOfUseContainer termsOfUse;
     /**
-     * Instantiates a new identityGovernance and sets the default values.
+     * Instantiates a new IdentityGovernance and sets the default values.
      */
     public IdentityGovernance() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +51,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityGovernance
+     * @return a IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public static IdentityGovernance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,14 +60,14 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessReviews property value. The accessReviews property
-     * @return a accessReviewSet
+     * @return a AccessReviewSet
      */
     @jakarta.annotation.Nullable
     public AccessReviewSet getAccessReviews() {
         return this.accessReviews;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +76,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appConsent property value. The appConsent property
-     * @return a appConsentApprovalRoute
+     * @return a AppConsentApprovalRoute
      */
     @jakarta.annotation.Nullable
     public AppConsentApprovalRoute getAppConsent() {
@@ -80,7 +84,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the entitlementManagement property value. The entitlementManagement property
-     * @return a entitlementManagement
+     * @return a EntitlementManagement
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement getEntitlementManagement() {
@@ -92,18 +96,19 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("accessReviews", (n) -> { this.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("appConsent", (n) -> { this.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
         deserializerMap.put("entitlementManagement", (n) -> { this.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
         deserializerMap.put("lifecycleWorkflows", (n) -> { this.setLifecycleWorkflows(n.getObjectValue(LifecycleWorkflowsContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("privilegedAccess", (n) -> { this.setPrivilegedAccess(n.getObjectValue(PrivilegedAccessRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("termsOfUse", (n) -> { this.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lifecycleWorkflows property value. The lifecycleWorkflows property
-     * @return a lifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowsContainer getLifecycleWorkflows() {
@@ -111,15 +116,23 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
+     * Gets the privilegedAccess property value. The privilegedAccess property
+     * @return a PrivilegedAccessRoot
+     */
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessRoot getPrivilegedAccess() {
+        return this.privilegedAccess;
+    }
+    /**
      * Gets the termsOfUse property value. The termsOfUse property
-     * @return a termsOfUseContainer
+     * @return a TermsOfUseContainer
      */
     @jakarta.annotation.Nullable
     public TermsOfUseContainer getTermsOfUse() {
@@ -136,6 +149,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
         writer.writeObjectValue("lifecycleWorkflows", this.getLifecycleWorkflows());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("privilegedAccess", this.getPrivilegedAccess());
         writer.writeObjectValue("termsOfUse", this.getTermsOfUse());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -147,8 +161,8 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         this.accessReviews = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -180,6 +194,13 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
+    }
+    /**
+     * Sets the privilegedAccess property value. The privilegedAccess property
+     * @param value Value to set for the privilegedAccess property.
+     */
+    public void setPrivilegedAccess(@jakarta.annotation.Nullable final PrivilegedAccessRoot value) {
+        this.privilegedAccess = value;
     }
     /**
      * Sets the termsOfUse property value. The termsOfUse property

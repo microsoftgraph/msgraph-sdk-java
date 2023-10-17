@@ -30,7 +30,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
      */
     private String title;
     /**
-     * Instantiates a new recommendedAction and sets the default values.
+     * Instantiates a new RecommendedAction and sets the default values.
      */
     public RecommendedAction() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recommendedAction
+     * @return a RecommendedAction
      */
     @jakarta.annotation.Nonnull
     public static RecommendedAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,14 +47,14 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actionWebUrl property value. Web URL to the recommended action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionWebUrl() {
         return this.actionWebUrl;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getPotentialScoreImpact() {
@@ -92,7 +92,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the title property value. Title of the recommended action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -118,8 +118,8 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
         this.actionWebUrl = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

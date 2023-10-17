@@ -14,7 +14,7 @@ public class StoreCollectionResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<Store> value;
     /**
-     * Instantiates a new storeCollectionResponse and sets the default values.
+     * Instantiates a new StoreCollectionResponse and sets the default values.
      */
     public StoreCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class StoreCollectionResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a storeCollectionResponse
+     * @return a StoreCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static StoreCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class StoreCollectionResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a store
+     * @return a java.util.List<Store>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Store> getValue() {

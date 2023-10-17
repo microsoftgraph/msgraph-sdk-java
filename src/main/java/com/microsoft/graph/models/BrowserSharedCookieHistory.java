@@ -51,7 +51,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
     /**
-     * Instantiates a new browserSharedCookieHistory and sets the default values.
+     * Instantiates a new BrowserSharedCookieHistory and sets the default values.
      */
     public BrowserSharedCookieHistory() {
         this.setAdditionalData(new HashMap<>());
@@ -59,7 +59,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSharedCookieHistory
+     * @return a BrowserSharedCookieHistory
      */
     @jakarta.annotation.Nonnull
     public static BrowserSharedCookieHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         return new BrowserSharedCookieHistory();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the comment property value. The comment for the shared cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -84,7 +84,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the displayName property value. The name of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -110,7 +110,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
@@ -118,7 +118,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the hostOrDomain property value. The URL of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostOrDomain() {
@@ -126,7 +126,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -134,7 +134,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -142,7 +142,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the path property value. The path of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -158,7 +158,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
-     * @return a browserSharedCookieSourceEnvironment
+     * @return a BrowserSharedCookieSourceEnvironment
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
@@ -182,8 +182,8 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -21,7 +21,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
-     * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
      */
     public X509CertificateAuthenticationMethodConfiguration() {
         super();
@@ -30,7 +30,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a x509CertificateAuthenticationMethodConfiguration
+     * @return a X509CertificateAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     }
     /**
      * Gets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
-     * @return a x509CertificateAuthenticationModeConfiguration
+     * @return a X509CertificateAuthenticationModeConfiguration
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration getAuthenticationModeConfiguration() {
@@ -47,7 +47,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     }
     /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
-     * @return a x509CertificateUserBinding
+     * @return a java.util.List<X509CertificateUserBinding>
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateUserBinding> getCertificateUserBindings() {
@@ -67,7 +67,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {

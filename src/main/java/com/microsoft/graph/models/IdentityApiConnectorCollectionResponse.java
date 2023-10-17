@@ -13,7 +13,7 @@ public class IdentityApiConnectorCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<IdentityApiConnector> value;
     /**
-     * Instantiates a new identityApiConnectorCollectionResponse and sets the default values.
+     * Instantiates a new IdentityApiConnectorCollectionResponse and sets the default values.
      */
     public IdentityApiConnectorCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class IdentityApiConnectorCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityApiConnectorCollectionResponse
+     * @return a IdentityApiConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IdentityApiConnectorCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class IdentityApiConnectorCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a identityApiConnector
+     * @return a java.util.List<IdentityApiConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getValue() {

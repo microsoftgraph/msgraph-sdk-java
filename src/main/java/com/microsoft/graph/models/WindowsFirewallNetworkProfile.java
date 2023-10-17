@@ -69,7 +69,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      */
     private Boolean unicastResponsesToMulticastBroadcastsBlocked;
     /**
-     * Instantiates a new windowsFirewallNetworkProfile and sets the default values.
+     * Instantiates a new WindowsFirewallNetworkProfile and sets the default values.
      */
     public WindowsFirewallNetworkProfile() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFirewallNetworkProfile
+     * @return a WindowsFirewallNetworkProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsFirewallNetworkProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         return new WindowsFirewallNetworkProfile();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the authorizedApplicationRulesFromGroupPolicyMerged property value. Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedApplicationRulesFromGroupPolicyMerged() {
@@ -102,7 +102,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the connectionSecurityRulesFromGroupPolicyMerged property value. Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectionSecurityRulesFromGroupPolicyMerged() {
@@ -132,7 +132,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the firewallEnabled property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getFirewallEnabled() {
@@ -140,7 +140,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the globalPortRulesFromGroupPolicyMerged property value. Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGlobalPortRulesFromGroupPolicyMerged() {
@@ -148,7 +148,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the inboundConnectionsBlocked property value. Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundConnectionsBlocked() {
@@ -156,7 +156,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the inboundNotificationsBlocked property value. Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundNotificationsBlocked() {
@@ -164,7 +164,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the incomingTrafficBlocked property value. Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncomingTrafficBlocked() {
@@ -172,7 +172,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -180,7 +180,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOutboundConnectionsBlocked() {
@@ -188,7 +188,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the policyRulesFromGroupPolicyMerged property value. Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPolicyRulesFromGroupPolicyMerged() {
@@ -196,7 +196,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the securedPacketExemptionAllowed property value. Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecuredPacketExemptionAllowed() {
@@ -204,7 +204,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the stealthModeBlocked property value. Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStealthModeBlocked() {
@@ -212,7 +212,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the unicastResponsesToMulticastBroadcastsBlocked property value. Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnicastResponsesToMulticastBroadcastsBlocked() {
@@ -240,8 +240,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

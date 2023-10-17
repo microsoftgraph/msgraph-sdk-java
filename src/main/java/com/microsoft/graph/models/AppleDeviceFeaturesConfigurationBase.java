@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new appleDeviceFeaturesConfigurationBase and sets the default values.
+     * Instantiates a new AppleDeviceFeaturesConfigurationBase and sets the default values.
      */
     public AppleDeviceFeaturesConfigurationBase() {
         super();
@@ -21,7 +21,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleDeviceFeaturesConfigurationBase
+     * @return a AppleDeviceFeaturesConfigurationBase
      */
     @jakarta.annotation.Nonnull
     public static AppleDeviceFeaturesConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

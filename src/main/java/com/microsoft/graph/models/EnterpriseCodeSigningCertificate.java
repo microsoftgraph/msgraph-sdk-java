@@ -42,7 +42,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      */
     private OffsetDateTime uploadDateTime;
     /**
-     * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
+     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
      */
     public EnterpriseCodeSigningCertificate() {
         super();
@@ -50,7 +50,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enterpriseCodeSigningCertificate
+     * @return a EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public static EnterpriseCodeSigningCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -92,7 +92,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuer property value. The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -100,7 +100,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuerName property value. The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerName() {
@@ -108,7 +108,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a certificateStatus
+     * @return a CertificateStatus
      */
     @jakarta.annotation.Nullable
     public CertificateStatus getStatus() {
@@ -116,7 +116,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subject property value. The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -124,7 +124,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subjectName property value. The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {

@@ -37,7 +37,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return delete(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
-     * @return a CompletableFuture of softwareOathAuthenticationMethod
+     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SoftwareOathAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of softwareOathAuthenticationMethod
+     * @return a CompletableFuture of SoftwareOathAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return this.requestAdapter.sendAsync(requestInfo, SoftwareOathAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,26 +89,26 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user's Software OATH token authentication method object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,17 +116,13 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,6 +130,10 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -153,7 +153,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * Retrieve a user's single Software OATH token authentication method object and its properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

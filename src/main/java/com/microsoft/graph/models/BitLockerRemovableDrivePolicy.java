@@ -33,7 +33,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     private Boolean requireEncryptionForWriteAccess;
     /**
-     * Instantiates a new bitLockerRemovableDrivePolicy and sets the default values.
+     * Instantiates a new BitLockerRemovableDrivePolicy and sets the default values.
      */
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bitLockerRemovableDrivePolicy
+     * @return a BitLockerRemovableDrivePolicy
      */
     @jakarta.annotation.Nonnull
     public static BitLockerRemovableDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
         return new BitLockerRemovableDrivePolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the blockCrossOrganizationWriteAccess property value. This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockCrossOrganizationWriteAccess() {
@@ -66,7 +66,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a bitLockerEncryptionMethod
+     * @return a BitLockerEncryptionMethod
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
@@ -87,7 +87,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireEncryptionForWriteAccess() {
@@ -114,8 +114,8 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSiteLocation implements Parsable {
     /**
-     * The urls property
+     * Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      */
     private java.util.List<String> urls;
     /**
-     * Instantiates a new subjectRightsRequestEnumeratedSiteLocation and sets the default values.
+     * Instantiates a new SubjectRightsRequestEnumeratedSiteLocation and sets the default values.
      */
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
@@ -22,7 +22,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequestEnumeratedSiteLocation
+     * @return a SubjectRightsRequestEnumeratedSiteLocation
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestEnumeratedSiteLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
         return deserializerMap;
     }
     /**
-     * Gets the urls property value. The urls property
-     * @return a string
+     * Gets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUrls() {
@@ -57,7 +57,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
         writer.writeCollectionOfPrimitiveValues("urls", this.getUrls());
     }
     /**
-     * Sets the urls property value. The urls property
+     * Sets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      * @param value Value to set for the urls property.
      */
     public void setUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {

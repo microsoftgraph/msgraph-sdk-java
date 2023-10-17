@@ -38,7 +38,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private java.util.List<MeetingAttendanceReport> attendanceReports;
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * The attendeeReport property
      */
     private byte[] attendeeReport;
     /**
@@ -46,7 +46,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private AudioConferencing audioConferencing;
     /**
-     * Settings related to a live event.
+     * The broadcastSettings property
      */
     private BroadcastMeetingSettings broadcastSettings;
     /**
@@ -66,7 +66,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private String externalId;
     /**
-     * Indicates if this is a Teams live event.
+     * The isBroadcast property
      */
     private Boolean isBroadcast;
     /**
@@ -110,6 +110,10 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private String subject;
     /**
+     * The transcripts of an online meeting. Read-only.
+     */
+    private java.util.List<CallTranscript> transcripts;
+    /**
      * The video teleconferencing ID. Read-only.
      */
     private String videoTeleconferenceId;
@@ -118,7 +122,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private WatermarkProtectionValues watermarkProtection;
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
      */
     public OnlineMeeting() {
         super();
@@ -126,7 +130,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onlineMeeting
+     * @return a OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -135,7 +139,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowAttendeeToEnableCamera property value. Indicates whether attendees can turn on their camera.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAttendeeToEnableCamera() {
@@ -143,7 +147,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowAttendeeToEnableMic property value. Indicates whether attendees can turn on their microphone.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAttendeeToEnableMic() {
@@ -151,7 +155,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
-     * @return a onlineMeetingPresenters
+     * @return a OnlineMeetingPresenters
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingPresenters getAllowedPresenters() {
@@ -159,7 +163,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @return a meetingChatMode
+     * @return a MeetingChatMode
      */
     @jakarta.annotation.Nullable
     public MeetingChatMode getAllowMeetingChat() {
@@ -167,7 +171,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowParticipantsToChangeName() {
@@ -175,7 +179,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeamworkReactions() {
@@ -183,15 +187,15 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
-     * @return a meetingAttendanceReport
+     * @return a java.util.List<MeetingAttendanceReport>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingAttendanceReport> getAttendanceReports() {
         return this.attendanceReports;
     }
     /**
-     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
-     * @return a base64url
+     * Gets the attendeeReport property value. The attendeeReport property
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getAttendeeReport() {
@@ -199,15 +203,15 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
-     * @return a audioConferencing
+     * @return a AudioConferencing
      */
     @jakarta.annotation.Nullable
     public AudioConferencing getAudioConferencing() {
         return this.audioConferencing;
     }
     /**
-     * Gets the broadcastSettings property value. Settings related to a live event.
-     * @return a broadcastMeetingSettings
+     * Gets the broadcastSettings property value. The broadcastSettings property
+     * @return a BroadcastMeetingSettings
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingSettings getBroadcastSettings() {
@@ -215,7 +219,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the chatInfo property value. The chat information associated with this online meeting.
-     * @return a chatInfo
+     * @return a ChatInfo
      */
     @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
@@ -239,7 +243,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The externalId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -277,13 +281,14 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode.class)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("transcripts", (n) -> { this.setTranscripts(n.getCollectionOfObjectValues(CallTranscript::createFromDiscriminatorValue)); });
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
         deserializerMap.put("watermarkProtection", (n) -> { this.setWatermarkProtection(n.getObjectValue(WatermarkProtectionValues::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
-     * @return a boolean
+     * Gets the isBroadcast property value. The isBroadcast property
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBroadcast() {
@@ -291,7 +296,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEntryExitAnnounced() {
@@ -299,7 +304,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getJoinInformation() {
@@ -307,7 +312,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
-     * @return a joinMeetingIdSettings
+     * @return a JoinMeetingIdSettings
      */
     @jakarta.annotation.Nullable
     public JoinMeetingIdSettings getJoinMeetingIdSettings() {
@@ -315,7 +320,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the joinWebUrl property value. The join URL of the online meeting. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
@@ -323,7 +328,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
-     * @return a lobbyBypassSettings
+     * @return a LobbyBypassSettings
      */
     @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {
@@ -331,7 +336,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
-     * @return a meetingParticipants
+     * @return a MeetingParticipants
      */
     @jakarta.annotation.Nullable
     public MeetingParticipants getParticipants() {
@@ -339,7 +344,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRecordAutomatically() {
@@ -347,7 +352,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
-     * @return a meetingChatHistoryDefaultMode
+     * @return a MeetingChatHistoryDefaultMode
      */
     @jakarta.annotation.Nullable
     public MeetingChatHistoryDefaultMode getShareMeetingChatHistoryDefault() {
@@ -363,15 +368,23 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject of the online meeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
+     * Gets the transcripts property value. The transcripts of an online meeting. Read-only.
+     * @return a java.util.List<CallTranscript>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CallTranscript> getTranscripts() {
+        return this.transcripts;
+    }
+    /**
      * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVideoTeleconferenceId() {
@@ -379,7 +392,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the watermarkProtection property value. Specifies whether a watermark should be applied to a content type by the client application.
-     * @return a watermarkProtectionValues
+     * @return a WatermarkProtectionValues
      */
     @jakarta.annotation.Nullable
     public WatermarkProtectionValues getWatermarkProtection() {
@@ -417,6 +430,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("subject", this.getSubject());
+        writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
         writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
         writer.writeObjectValue("watermarkProtection", this.getWatermarkProtection());
     }
@@ -470,7 +484,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this.attendanceReports = value;
     }
     /**
-     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Sets the attendeeReport property value. The attendeeReport property
      * @param value Value to set for the attendeeReport property.
      */
     public void setAttendeeReport(@jakarta.annotation.Nullable final byte[] value) {
@@ -484,7 +498,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this.audioConferencing = value;
     }
     /**
-     * Sets the broadcastSettings property value. Settings related to a live event.
+     * Sets the broadcastSettings property value. The broadcastSettings property
      * @param value Value to set for the broadcastSettings property.
      */
     public void setBroadcastSettings(@jakarta.annotation.Nullable final BroadcastMeetingSettings value) {
@@ -519,7 +533,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this.externalId = value;
     }
     /**
-     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Sets the isBroadcast property value. The isBroadcast property
      * @param value Value to set for the isBroadcast property.
      */
     public void setIsBroadcast(@jakarta.annotation.Nullable final Boolean value) {
@@ -594,6 +608,13 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
+    }
+    /**
+     * Sets the transcripts property value. The transcripts of an online meeting. Read-only.
+     * @param value Value to set for the transcripts property.
+     */
+    public void setTranscripts(@jakarta.annotation.Nullable final java.util.List<CallTranscript> value) {
+        this.transcripts = value;
     }
     /**
      * Sets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.

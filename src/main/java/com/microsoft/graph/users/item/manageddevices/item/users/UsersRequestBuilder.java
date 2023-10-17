@@ -38,7 +38,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the user objects.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,10 +75,6 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -86,12 +82,16 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usersRequestBuilder
+     * @return a UsersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

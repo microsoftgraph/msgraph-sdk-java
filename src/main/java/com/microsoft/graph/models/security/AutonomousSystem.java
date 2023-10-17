@@ -34,7 +34,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
      */
     private String value;
     /**
-     * Instantiates a new autonomousSystem and sets the default values.
+     * Instantiates a new AutonomousSystem and sets the default values.
      */
     public AutonomousSystem() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a autonomousSystem
+     * @return a AutonomousSystem
      */
     @jakarta.annotation.Nonnull
     public static AutonomousSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
         return new AutonomousSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name of the autonomous system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -81,7 +81,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the number property value. The autonomous system number, assigned by IANA.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumber() {
@@ -89,7 +89,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organization property value. The name of the autonomous system organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganization() {
@@ -105,7 +105,7 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. A displayable value for these autonomous system details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -125,8 +125,8 @@ public class AutonomousSystem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

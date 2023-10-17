@@ -42,7 +42,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     private Integer totalUsers;
     /**
-     * Instantiates a new runSummary and sets the default values.
+     * Instantiates a new RunSummary and sets the default values.
      */
     public RunSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a runSummary
+     * @return a RunSummary
      */
     @jakarta.annotation.Nonnull
     public static RunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return new RunSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the failedRuns property value. The number of failed workflow runs.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedRuns() {
@@ -75,7 +75,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the failedTasks property value. The number of failed tasks of a workflow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
@@ -99,7 +99,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -107,7 +107,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the successfulRuns property value. The number of successful workflow runs.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulRuns() {
@@ -115,7 +115,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the totalRuns property value. The total number of runs for a workflow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalRuns() {
@@ -123,7 +123,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the totalTasks property value. The total number of tasks processed by a workflow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
@@ -131,7 +131,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the totalUsers property value. The total number of users processed by a workflow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsers() {
@@ -153,8 +153,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

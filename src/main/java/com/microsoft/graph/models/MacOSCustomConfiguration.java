@@ -24,7 +24,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     private String payloadName;
     /**
-     * Instantiates a new macOSCustomConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomConfiguration and sets the default values.
      */
     public MacOSCustomConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomConfiguration
+     * @return a MacOSCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
@@ -62,7 +62,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -70,7 +70,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {

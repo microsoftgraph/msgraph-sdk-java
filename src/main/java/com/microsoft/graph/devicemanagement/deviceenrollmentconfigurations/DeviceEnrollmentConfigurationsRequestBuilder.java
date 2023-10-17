@@ -59,19 +59,19 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
-     * @return a CompletableFuture of deviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
+     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,17 +116,13 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,6 +130,10 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -155,23 +155,23 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceEnrollmentConfigurationsRequestBuilder
+     * @return a DeviceEnrollmentConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return new DeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

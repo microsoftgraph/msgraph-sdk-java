@@ -30,7 +30,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     private CustomExtensionEndpointConfiguration endpointConfiguration;
     /**
-     * Instantiates a new customCalloutExtension and sets the default values.
+     * Instantiates a new CustomCalloutExtension and sets the default values.
      */
     public CustomCalloutExtension() {
         super();
@@ -38,7 +38,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customCalloutExtension
+     * @return a CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public static CustomCalloutExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationConfiguration property value. Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
-     * @return a customExtensionAuthenticationConfiguration
+     * @return a CustomExtensionAuthenticationConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionAuthenticationConfiguration getAuthenticationConfiguration() {
@@ -64,7 +64,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     }
     /**
      * Gets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
-     * @return a customExtensionClientConfiguration
+     * @return a CustomExtensionClientConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionClientConfiguration getClientConfiguration() {
@@ -72,7 +72,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description for the customCalloutExtension object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -80,7 +80,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the customCalloutExtension object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -88,7 +88,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     }
     /**
      * Gets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
-     * @return a customExtensionEndpointConfiguration
+     * @return a CustomExtensionEndpointConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionEndpointConfiguration getEndpointConfiguration() {

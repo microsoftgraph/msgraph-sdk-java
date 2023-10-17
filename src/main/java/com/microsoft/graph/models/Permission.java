@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Permission extends Entity implements Parsable {
     /**
-     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      */
     private OffsetDateTime expirationDateTime;
     /**
@@ -34,7 +34,7 @@ public class Permission extends Entity implements Parsable {
      */
     private Boolean hasPassword;
     /**
-     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
      */
     private ItemReference inheritedFrom;
     /**
@@ -42,7 +42,7 @@ public class Permission extends Entity implements Parsable {
      */
     private SharingInvitation invitation;
     /**
-     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Provides the link details of the current permission, if it's a link type permission. Read-only.
      */
     private SharingLink link;
     /**
@@ -54,7 +54,7 @@ public class Permission extends Entity implements Parsable {
      */
     private String shareId;
     /**
-     * Instantiates a new permission and sets the default values.
+     * Instantiates a new Permission and sets the default values.
      */
     public Permission() {
         super();
@@ -62,7 +62,7 @@ public class Permission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a permission
+     * @return a Permission
      */
     @jakarta.annotation.Nonnull
     public static Permission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class Permission extends Entity implements Parsable {
         return new Permission();
     }
     /**
-     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedTo property value. The grantedTo property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getGrantedTo() {
@@ -107,7 +107,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToIdentities property value. The grantedToIdentities property
-     * @return a identitySet
+     * @return a java.util.List<IdentitySet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySet> getGrantedToIdentities() {
@@ -115,7 +115,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
-     * @return a sharePointIdentitySet
+     * @return a java.util.List<SharePointIdentitySet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharePointIdentitySet> getGrantedToIdentitiesV2() {
@@ -123,7 +123,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
-     * @return a sharePointIdentitySet
+     * @return a SharePointIdentitySet
      */
     @jakarta.annotation.Nullable
     public SharePointIdentitySet getGrantedToV2() {
@@ -131,15 +131,15 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPassword() {
         return this.hasPassword;
     }
     /**
-     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
-     * @return a itemReference
+     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
+     * @return a ItemReference
      */
     @jakarta.annotation.Nullable
     public ItemReference getInheritedFrom() {
@@ -147,15 +147,15 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
-     * @return a sharingInvitation
+     * @return a SharingInvitation
      */
     @jakarta.annotation.Nullable
     public SharingInvitation getInvitation() {
         return this.invitation;
     }
     /**
-     * Gets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
-     * @return a sharingLink
+     * Gets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
+     * @return a SharingLink
      */
     @jakarta.annotation.Nullable
     public SharingLink getLink() {
@@ -163,7 +163,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
@@ -171,7 +171,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShareId() {
@@ -197,7 +197,7 @@ public class Permission extends Entity implements Parsable {
         writer.writeStringValue("shareId", this.getShareId());
     }
     /**
-     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -239,7 +239,7 @@ public class Permission extends Entity implements Parsable {
         this.hasPassword = value;
     }
     /**
-     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
      * @param value Value to set for the inheritedFrom property.
      */
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
@@ -253,7 +253,7 @@ public class Permission extends Entity implements Parsable {
         this.invitation = value;
     }
     /**
-     * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Sets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
      * @param value Value to set for the link property.
      */
     public void setLink(@jakarta.annotation.Nullable final SharingLink value) {

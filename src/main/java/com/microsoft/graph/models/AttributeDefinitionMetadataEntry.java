@@ -26,7 +26,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
      */
     private String value;
     /**
-     * Instantiates a new attributeDefinitionMetadataEntry and sets the default values.
+     * Instantiates a new AttributeDefinitionMetadataEntry and sets the default values.
      */
     public AttributeDefinitionMetadataEntry() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeDefinitionMetadataEntry
+     * @return a AttributeDefinitionMetadataEntry
      */
     @jakarta.annotation.Nonnull
     public static AttributeDefinitionMetadataEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         return new AttributeDefinitionMetadataEntry();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
     }
     /**
      * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
-     * @return a attributeDefinitionMetadata
+     * @return a AttributeDefinitionMetadata
      */
     @jakarta.annotation.Nullable
     public AttributeDefinitionMetadata getKey() {
@@ -71,7 +71,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
     }
     /**
      * Gets the value property value. Value of the metadata property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -97,8 +97,8 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

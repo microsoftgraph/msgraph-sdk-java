@@ -57,7 +57,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies class-level assignments settings.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get() {
@@ -66,7 +66,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies class-level assignments settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,9 +77,9 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,10 +87,10 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,15 +118,15 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -145,10 +145,6 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -156,10 +152,14 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -177,23 +177,23 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignmentSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentSettingsRequestBuilder
+     * @return a AssignmentSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

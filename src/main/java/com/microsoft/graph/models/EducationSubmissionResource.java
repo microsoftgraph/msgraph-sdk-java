@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionResource extends Entity implements Parsable {
     /**
-     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Pointer to the assignment from which the resource was copied, and if null, the student uploaded the resource.
      */
     private String assignmentResourceUrl;
     /**
@@ -17,7 +17,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      */
     private EducationResource resource;
     /**
-     * Instantiates a new educationSubmissionResource and sets the default values.
+     * Instantiates a new EducationSubmissionResource and sets the default values.
      */
     public EducationSubmissionResource() {
         super();
@@ -25,7 +25,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSubmissionResource
+     * @return a EducationSubmissionResource
      */
     @jakarta.annotation.Nonnull
     public static EducationSubmissionResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,8 +33,8 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         return new EducationSubmissionResource();
     }
     /**
-     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
-     * @return a string
+     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied, and if null, the student uploaded the resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentResourceUrl() {
@@ -53,7 +53,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {
@@ -70,7 +70,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied, and if null, the student uploaded the resource.
      * @param value Value to set for the assignmentResourceUrl property.
      */
     public void setAssignmentResourceUrl(@jakarta.annotation.Nullable final String value) {

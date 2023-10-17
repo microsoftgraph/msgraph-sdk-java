@@ -36,7 +36,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new retentionEventType and sets the default values.
+     * Instantiates a new RetentionEventType and sets the default values.
      */
     public RetentionEventType() {
         super();
@@ -44,7 +44,7 @@ public class RetentionEventType extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retentionEventType
+     * @return a RetentionEventType
      */
     @jakarta.annotation.Nonnull
     public static RetentionEventType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class RetentionEventType extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the retentionEventType.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -69,7 +69,7 @@ public class RetentionEventType extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional information about the event type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -77,7 +77,7 @@ public class RetentionEventType extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the event type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -100,7 +100,7 @@ public class RetentionEventType extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the retentionEventType.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {

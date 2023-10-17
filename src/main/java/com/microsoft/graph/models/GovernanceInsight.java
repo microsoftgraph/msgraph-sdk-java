@@ -14,7 +14,7 @@ public class GovernanceInsight extends Entity implements Parsable {
      */
     private OffsetDateTime insightCreatedDateTime;
     /**
-     * Instantiates a new governanceInsight and sets the default values.
+     * Instantiates a new GovernanceInsight and sets the default values.
      */
     public GovernanceInsight() {
         super();
@@ -22,7 +22,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceInsight
+     * @return a GovernanceInsight
      */
     @jakarta.annotation.Nonnull
     public static GovernanceInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

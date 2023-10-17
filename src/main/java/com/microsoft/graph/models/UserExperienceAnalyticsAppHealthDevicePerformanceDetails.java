@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     private String eventType;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
         super();
@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformanceDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     }
     /**
      * Gets the eventType property value. The type of the event. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventType() {

@@ -50,7 +50,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     private EntitlementManagementSchedule schedule;
     /**
-     * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.
+     * Instantiates a new AccessPackageAssignmentReviewSettings and sets the default values.
      */
     public AccessPackageAssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentReviewSettings
+     * @return a AccessPackageAssignmentReviewSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         return new AccessPackageAssignmentReviewSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     * @return a accessReviewExpirationBehavior
+     * @return a AccessReviewExpirationBehavior
      */
     @jakarta.annotation.Nullable
     public AccessReviewExpirationBehavior getExpirationBehavior() {
@@ -83,7 +83,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackReviewers() {
@@ -109,7 +109,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isEnabled property value. If true, access reviews are required for assignments through this policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -117,7 +117,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecommendationEnabled() {
@@ -125,7 +125,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReviewerJustificationRequired() {
@@ -133,7 +133,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the isSelfReview property value. Specifies whether the principals can review their own assignments.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSelfReview() {
@@ -141,7 +141,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -149,7 +149,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryReviewers() {
@@ -157,7 +157,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     }
     /**
      * Gets the schedule property value. When the first review should start and how often it should recur.
-     * @return a entitlementManagementSchedule
+     * @return a EntitlementManagementSchedule
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
@@ -181,8 +181,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

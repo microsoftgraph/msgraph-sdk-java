@@ -57,7 +57,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The values of the columns set on this list item.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> get() {
@@ -66,7 +66,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     /**
      * The values of the columns set on this list item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,9 +77,9 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, FieldValueSet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties on a [listItem][].
+     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,10 +87,10 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties on a [listItem][].
+     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,15 +118,15 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -145,10 +145,6 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -156,10 +152,14 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties on a [listItem][].
+     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties on a [listItem][].
+     * Update the properties on a listItem][]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -177,23 +177,23 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final FieldValueSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a fieldsRequestBuilder
+     * @return a FieldsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FieldsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

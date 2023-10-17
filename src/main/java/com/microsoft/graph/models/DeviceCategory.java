@@ -20,7 +20,7 @@ public class DeviceCategory extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Instantiates a new deviceCategory and sets the default values.
+     * Instantiates a new DeviceCategory and sets the default values.
      */
     public DeviceCategory() {
         super();
@@ -28,7 +28,7 @@ public class DeviceCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCategory
+     * @return a DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public static DeviceCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional description for the device category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -45,7 +45,7 @@ public class DeviceCategory extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the device category.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

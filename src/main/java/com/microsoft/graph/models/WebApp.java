@@ -20,7 +20,7 @@ public class WebApp extends MobileApp implements Parsable {
      */
     private Boolean useManagedBrowser;
     /**
-     * Instantiates a new webApp and sets the default values.
+     * Instantiates a new WebApp and sets the default values.
      */
     public WebApp() {
         super();
@@ -29,7 +29,7 @@ public class WebApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webApp
+     * @return a WebApp
      */
     @jakarta.annotation.Nonnull
     public static WebApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WebApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appUrl property value. The web app URL. This property cannot be PATCHed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
@@ -57,7 +57,7 @@ public class WebApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseManagedBrowser() {

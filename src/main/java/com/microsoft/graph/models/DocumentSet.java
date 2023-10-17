@@ -46,7 +46,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     private String welcomePageUrl;
     /**
-     * Instantiates a new documentSet and sets the default values.
+     * Instantiates a new DocumentSet and sets the default values.
      */
     public DocumentSet() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentSet
+     * @return a DocumentSet
      */
     @jakarta.annotation.Nonnull
     public static DocumentSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         return new DocumentSet();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowedContentTypes property value. Content types allowed in document set.
-     * @return a contentTypeInfo
+     * @return a java.util.List<ContentTypeInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentTypeInfo> getAllowedContentTypes() {
@@ -79,7 +79,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the defaultContents property value. Default contents of document set.
-     * @return a documentSetContent
+     * @return a java.util.List<DocumentSetContent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetContent> getDefaultContents() {
@@ -104,7 +104,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPropagateWelcomePageChanges() {
@@ -120,7 +120,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharedColumns property value. The sharedColumns property
-     * @return a columnDefinition
+     * @return a java.util.List<ColumnDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getSharedColumns() {
@@ -128,7 +128,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldPrefixNameToFile() {
@@ -136,7 +136,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the welcomePageColumns property value. The welcomePageColumns property
-     * @return a columnDefinition
+     * @return a java.util.List<ColumnDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getWelcomePageColumns() {
@@ -144,7 +144,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the welcomePageUrl property value. Welcome page absolute URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWelcomePageUrl() {
@@ -167,8 +167,8 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

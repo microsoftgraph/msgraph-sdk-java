@@ -21,7 +21,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     private AppManagementConfiguration restrictions;
     /**
-     * Instantiates a new appManagementPolicy and sets the default values.
+     * Instantiates a new AppManagementPolicy and sets the default values.
      */
     public AppManagementPolicy() {
         super();
@@ -30,7 +30,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appManagementPolicy
+     * @return a AppManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public static AppManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
@@ -59,7 +59,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Denotes whether the policy is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -67,7 +67,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @return a appManagementConfiguration
+     * @return a AppManagementConfiguration
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {

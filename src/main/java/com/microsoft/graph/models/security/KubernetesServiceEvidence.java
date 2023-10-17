@@ -41,7 +41,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     private KubernetesServiceType serviceType;
     /**
-     * Instantiates a new kubernetesServiceEvidence and sets the default values.
+     * Instantiates a new KubernetesServiceEvidence and sets the default values.
      */
     public KubernetesServiceEvidence() {
         super();
@@ -50,7 +50,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesServiceEvidence
+     * @return a KubernetesServiceEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesServiceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the clusterIP property value. The service cluster IP.
-     * @return a ipEvidence
+     * @return a IpEvidence
      */
     @jakarta.annotation.Nullable
     public IpEvidence getClusterIP() {
@@ -67,7 +67,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the externalIPs property value. The service external IPs.
-     * @return a ipEvidence
+     * @return a java.util.List<IpEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpEvidence> getExternalIPs() {
@@ -92,7 +92,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the labels property value. The service labels.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
@@ -100,7 +100,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the name property value. The service name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -108,7 +108,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the namespace property value. The service namespace.
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
@@ -116,7 +116,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the selector property value. The service selector.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getSelector() {
@@ -124,7 +124,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the servicePorts property value. The list of service ports.
-     * @return a kubernetesServicePort
+     * @return a java.util.List<KubernetesServicePort>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KubernetesServicePort> getServicePorts() {
@@ -132,7 +132,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     }
     /**
      * Gets the serviceType property value. The serviceType property
-     * @return a kubernetesServiceType
+     * @return a KubernetesServiceType
      */
     @jakarta.annotation.Nullable
     public KubernetesServiceType getServiceType() {

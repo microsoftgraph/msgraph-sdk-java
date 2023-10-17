@@ -25,7 +25,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     private String userId;
     /**
-     * Instantiates a new aadUserConversationMember and sets the default values.
+     * Instantiates a new AadUserConversationMember and sets the default values.
      */
     public AadUserConversationMember() {
         super();
@@ -34,7 +34,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aadUserConversationMember
+     * @return a AadUserConversationMember
      */
     @jakarta.annotation.Nonnull
     public static AadUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     }
     /**
      * Gets the email property value. The email address of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -64,7 +64,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     }
     /**
      * Gets the tenantId property value. TenantId which the Azure AD user belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -72,7 +72,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     }
     /**
      * Gets the user property value. The user property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getUser() {
@@ -80,7 +80,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     }
     /**
      * Gets the userId property value. The guid of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

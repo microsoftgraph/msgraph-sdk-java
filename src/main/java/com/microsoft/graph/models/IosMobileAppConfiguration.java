@@ -20,7 +20,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     private java.util.List<AppConfigurationSettingItem> settings;
     /**
-     * Instantiates a new iosMobileAppConfiguration and sets the default values.
+     * Instantiates a new IosMobileAppConfiguration and sets the default values.
      */
     public IosMobileAppConfiguration() {
         super();
@@ -29,7 +29,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosMobileAppConfiguration
+     * @return a IosMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getEncodedSettingXml() {
@@ -57,7 +57,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * Gets the settings property value. app configuration setting items.
-     * @return a appConfigurationSettingItem
+     * @return a java.util.List<AppConfigurationSettingItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {

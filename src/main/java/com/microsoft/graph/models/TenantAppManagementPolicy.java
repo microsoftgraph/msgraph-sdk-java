@@ -21,7 +21,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     private AppManagementConfiguration servicePrincipalRestrictions;
     /**
-     * Instantiates a new tenantAppManagementPolicy and sets the default values.
+     * Instantiates a new TenantAppManagementPolicy and sets the default values.
      */
     public TenantAppManagementPolicy() {
         super();
@@ -30,7 +30,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantAppManagementPolicy
+     * @return a TenantAppManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public static TenantAppManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
-     * @return a appManagementConfiguration
+     * @return a AppManagementConfiguration
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getApplicationRestrictions() {
@@ -59,7 +59,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -67,7 +67,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
-     * @return a appManagementConfiguration
+     * @return a AppManagementConfiguration
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getServicePrincipalRestrictions() {

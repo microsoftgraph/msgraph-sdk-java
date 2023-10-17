@@ -20,7 +20,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     private Boolean enableExpeditedTelemetryReporting;
     /**
-     * Instantiates a new windowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
+     * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
      */
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
@@ -29,7 +29,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderAdvancedThreatProtectionConfiguration
+     * @return a WindowsDefenderAdvancedThreatProtectionConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderAdvancedThreatProtectionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     }
     /**
      * Gets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSampleSharing() {
@@ -46,7 +46,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     }
     /**
      * Gets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableExpeditedTelemetryReporting() {

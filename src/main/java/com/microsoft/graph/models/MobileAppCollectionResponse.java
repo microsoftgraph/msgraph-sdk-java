@@ -13,7 +13,7 @@ public class MobileAppCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<MobileApp> value;
     /**
-     * Instantiates a new mobileAppCollectionResponse and sets the default values.
+     * Instantiates a new MobileAppCollectionResponse and sets the default values.
      */
     public MobileAppCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MobileAppCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppCollectionResponse
+     * @return a MobileAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MobileAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MobileAppCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a mobileApp
+     * @return a java.util.List<MobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileApp> getValue() {

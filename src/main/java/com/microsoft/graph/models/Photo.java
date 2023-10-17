@@ -55,7 +55,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime takenDateTime;
     /**
-     * Instantiates a new photo and sets the default values.
+     * Instantiates a new Photo and sets the default values.
      */
     public Photo() {
         this.setAdditionalData(new HashMap<>());
@@ -63,7 +63,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a photo
+     * @return a Photo
      */
     @jakarta.annotation.Nonnull
     public static Photo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
         return new Photo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cameraMake property value. Camera manufacturer. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCameraMake() {
@@ -88,7 +88,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cameraModel property value. Camera model. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCameraModel() {
@@ -96,7 +96,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getExposureDenominator() {
@@ -104,7 +104,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getExposureNumerator() {
@@ -131,7 +131,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fNumber property value. The F-stop value from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getFNumber() {
@@ -139,7 +139,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the focalLength property value. The focal length from the camera. Read-only.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getFocalLength() {
@@ -147,7 +147,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the iso property value. The ISO value from the camera. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIso() {
@@ -155,7 +155,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -163,7 +163,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOrientation() {
@@ -196,8 +196,8 @@ public class Photo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

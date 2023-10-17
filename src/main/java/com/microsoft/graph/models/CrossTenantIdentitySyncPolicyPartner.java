@@ -30,7 +30,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
-     * Instantiates a new crossTenantIdentitySyncPolicyPartner and sets the default values.
+     * Instantiates a new CrossTenantIdentitySyncPolicyPartner and sets the default values.
      */
     public CrossTenantIdentitySyncPolicyPartner() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantIdentitySyncPolicyPartner
+     * @return a CrossTenantIdentitySyncPolicyPartner
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantIdentitySyncPolicyPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return new CrossTenantIdentitySyncPolicyPartner();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     }
     /**
      * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     }
     /**
      * Gets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -92,7 +92,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     }
     /**
      * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
-     * @return a crossTenantUserSyncInbound
+     * @return a CrossTenantUserSyncInbound
      */
     @jakarta.annotation.Nullable
     public CrossTenantUserSyncInbound getUserSyncInbound() {
@@ -111,8 +111,8 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

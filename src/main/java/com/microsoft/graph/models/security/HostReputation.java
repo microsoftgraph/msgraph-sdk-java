@@ -22,7 +22,7 @@ public class HostReputation extends Entity implements Parsable {
      */
     private Integer score;
     /**
-     * Instantiates a new hostReputation and sets the default values.
+     * Instantiates a new HostReputation and sets the default values.
      */
     public HostReputation() {
         super();
@@ -30,7 +30,7 @@ public class HostReputation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostReputation
+     * @return a HostReputation
      */
     @jakarta.annotation.Nonnull
     public static HostReputation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class HostReputation extends Entity implements Parsable {
     }
     /**
      * Gets the classification property value. The classification property
-     * @return a hostReputationClassification
+     * @return a HostReputationClassification
      */
     @jakarta.annotation.Nullable
     public HostReputationClassification getClassification() {
@@ -59,7 +59,7 @@ public class HostReputation extends Entity implements Parsable {
     }
     /**
      * Gets the rules property value. A collection of rules that have been used to calculate the classification and score.
-     * @return a hostReputationRule
+     * @return a java.util.List<HostReputationRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostReputationRule> getRules() {
@@ -67,7 +67,7 @@ public class HostReputation extends Entity implements Parsable {
     }
     /**
      * Gets the score property value. The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getScore() {

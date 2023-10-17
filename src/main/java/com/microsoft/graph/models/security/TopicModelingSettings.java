@@ -34,7 +34,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     private Integer topicCount;
     /**
-     * Instantiates a new topicModelingSettings and sets the default values.
+     * Instantiates a new TopicModelingSettings and sets the default values.
      */
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a topicModelingSettings
+     * @return a TopicModelingSettings
      */
     @jakarta.annotation.Nonnull
     public static TopicModelingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return new TopicModelingSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDynamicallyAdjustTopicCount() {
@@ -81,7 +81,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreNumbers() {
@@ -89,7 +89,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether themes model is enabled for the case.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -97,7 +97,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTopicCount() {
@@ -125,8 +125,8 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

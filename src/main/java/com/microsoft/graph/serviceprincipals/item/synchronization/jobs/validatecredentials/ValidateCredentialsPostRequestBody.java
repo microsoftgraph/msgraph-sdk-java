@@ -31,7 +31,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      */
     private Boolean useSavedCredentials;
     /**
-     * Instantiates a new validateCredentialsPostRequestBody and sets the default values.
+     * Instantiates a new ValidateCredentialsPostRequestBody and sets the default values.
      */
     public ValidateCredentialsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validateCredentialsPostRequestBody
+     * @return a ValidateCredentialsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ValidateCredentialsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
         return new ValidateCredentialsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the applicationIdentifier property value. The applicationIdentifier property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
@@ -64,7 +64,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the credentials property value. The credentials property
-     * @return a synchronizationSecretKeyStringValuePair
+     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getCredentials() {
@@ -85,7 +85,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
@@ -93,7 +93,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the useSavedCredentials property value. The useSavedCredentials property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseSavedCredentials() {
@@ -112,8 +112,8 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

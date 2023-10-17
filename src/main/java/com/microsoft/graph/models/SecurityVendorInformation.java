@@ -34,7 +34,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      */
     private String vendor;
     /**
-     * Instantiates a new securityVendorInformation and sets the default values.
+     * Instantiates a new SecurityVendorInformation and sets the default values.
      */
     public SecurityVendorInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nonnull
     public static SecurityVendorInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
         return new SecurityVendorInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,7 +81,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
@@ -89,7 +89,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderVersion() {
@@ -97,7 +97,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubProvider() {
@@ -105,7 +105,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
@@ -125,8 +125,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

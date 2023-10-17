@@ -13,7 +13,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      */
     private java.util.List<String> recipients;
     /**
-     * Instantiates a new educationAssignmentIndividualRecipient and sets the default values.
+     * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
      */
     public EducationAssignmentIndividualRecipient() {
         super();
@@ -22,7 +22,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentIndividualRecipient
+     * @return a EducationAssignmentIndividualRecipient
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentIndividualRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     }
     /**
      * Gets the recipients property value. A collection of IDs of the recipients.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipients() {

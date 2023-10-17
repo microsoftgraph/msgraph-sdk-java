@@ -25,7 +25,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     private String type;
     /**
-     * Instantiates a new identityProvider and sets the default values.
+     * Instantiates a new IdentityProvider and sets the default values.
      */
     public IdentityProvider() {
         super();
@@ -33,7 +33,7 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityProvider
+     * @return a IdentityProvider
      */
     @jakarta.annotation.Nonnull
     public static IdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -50,7 +50,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
@@ -71,7 +71,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the identity provider. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -79,7 +79,7 @@ public class IdentityProvider extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {

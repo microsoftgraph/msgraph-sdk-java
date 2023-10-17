@@ -41,7 +41,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      */
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
-     * Instantiates a new windowsAppX and sets the default values.
+     * Instantiates a new WindowsAppX and sets the default values.
      */
     public WindowsAppX() {
         super();
@@ -50,7 +50,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsAppX
+     * @return a WindowsAppX
      */
     @jakarta.annotation.Nonnull
     public static WindowsAppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a EnumSet<WindowsArchitecture>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
@@ -83,7 +83,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -91,7 +91,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
@@ -99,7 +99,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -107,7 +107,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -115,7 +115,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the isBundle property value. When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBundle() {
@@ -123,7 +123,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

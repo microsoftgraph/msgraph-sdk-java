@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDeviceVideoQuality implements Parsable {
     /**
-     * Instantiates a new teleconferenceDeviceScreenSharingQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceScreenSharingQuality and sets the default values.
      */
     public TeleconferenceDeviceScreenSharingQuality() {
         super();
@@ -17,7 +17,7 @@ public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDevi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceScreenSharingQuality
+     * @return a TeleconferenceDeviceScreenSharingQuality
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceScreenSharingQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

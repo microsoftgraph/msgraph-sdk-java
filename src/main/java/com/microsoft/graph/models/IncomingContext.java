@@ -34,7 +34,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     private IdentitySet transferor;
     /**
-     * Instantiates a new incomingContext and sets the default values.
+     * Instantiates a new IncomingContext and sets the default values.
      */
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a incomingContext
+     * @return a IncomingContext
      */
     @jakarta.annotation.Nonnull
     public static IncomingContext createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         return new IncomingContext();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObservedParticipantId() {
@@ -81,7 +81,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onBehalfOf property value. The identity that the call is happening on behalf of.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOnBehalfOf() {
@@ -97,7 +97,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceParticipantId() {
@@ -105,7 +105,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the transferor property value. The identity that transferred the call.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getTransferor() {
@@ -125,8 +125,8 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -43,7 +43,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private String physicalDeviceId;
     /**
-     * Instantiates a new createPostRequestBody and sets the default values.
+     * Instantiates a new CreatePostRequestBody and sets the default values.
      */
     public CreatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -51,7 +51,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createPostRequestBody
+     * @return a CreatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
         return new CreatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the certificateSigningRequest property value. The certificateSigningRequest property
-     * @return a printCertificateSigningRequest
+     * @return a PrintCertificateSigningRequest
      */
     @jakarta.annotation.Nullable
     public PrintCertificateSigningRequest getCertificateSigningRequest() {
@@ -76,7 +76,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectorId property value. The connectorId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorId() {
@@ -84,7 +84,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
@@ -116,7 +116,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -124,7 +124,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the model property value. The model property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -132,7 +132,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the physicalDeviceId property value. The physicalDeviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhysicalDeviceId() {
@@ -154,8 +154,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -34,7 +34,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     private String target;
     /**
-     * Instantiates a new onenotePatchContentCommand and sets the default values.
+     * Instantiates a new OnenotePatchContentCommand and sets the default values.
      */
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenotePatchContentCommand
+     * @return a OnenotePatchContentCommand
      */
     @jakarta.annotation.Nonnull
     public static OnenotePatchContentCommand createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,14 +51,14 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the action property value. The action property
-     * @return a onenotePatchActionType
+     * @return a OnenotePatchActionType
      */
     @jakarta.annotation.Nullable
     public OnenotePatchActionType getAction() {
         return this.action;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -89,7 +89,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     * @return a onenotePatchInsertPosition
+     * @return a OnenotePatchInsertPosition
      */
     @jakarta.annotation.Nullable
     public OnenotePatchInsertPosition getPosition() {
@@ -105,7 +105,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
@@ -132,8 +132,8 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         this.action = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

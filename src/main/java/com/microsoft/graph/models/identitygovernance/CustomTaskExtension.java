@@ -33,7 +33,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new customTaskExtension and sets the default values.
+     * Instantiates a new CustomTaskExtension and sets the default values.
      */
     public CustomTaskExtension() {
         super();
@@ -42,7 +42,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTaskExtension
+     * @return a CustomTaskExtension
      */
     @jakarta.annotation.Nonnull
     public static CustomTaskExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the callbackConfiguration property value. The callback configuration for a custom task extension.
-     * @return a customExtensionCallbackConfiguration
+     * @return a CustomExtensionCallbackConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
@@ -59,7 +59,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getCreatedBy() {
@@ -89,7 +89,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     }
     /**
      * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {

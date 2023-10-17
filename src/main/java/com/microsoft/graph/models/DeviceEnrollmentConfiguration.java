@@ -41,7 +41,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     private Integer version;
     /**
-     * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
      */
     public DeviceEnrollmentConfiguration() {
         super();
@@ -49,7 +49,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device configuration profile
-     * @return a enrollmentConfigurationAssignment
+     * @return a java.util.List<EnrollmentConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnrollmentConfigurationAssignment> getAssignments() {
@@ -83,7 +83,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device enrollment configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -91,7 +91,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the device enrollment configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -123,7 +123,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -131,7 +131,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the device enrollment configuration
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

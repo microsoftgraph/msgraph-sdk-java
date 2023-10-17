@@ -34,7 +34,7 @@ public class Request extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new request and sets the default values.
+     * Instantiates a new Request and sets the default values.
      */
     public Request() {
         super();
@@ -42,7 +42,7 @@ public class Request extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a request
+     * @return a Request
      */
     @jakarta.annotation.Nonnull
     public static Request createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,6 +51,9 @@ public class Request extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
+                case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest": return new PrivilegedAccessGroupEligibilityScheduleRequest();
+                case "#microsoft.graph.privilegedAccessScheduleRequest": return new PrivilegedAccessScheduleRequest();
                 case "#microsoft.graph.unifiedRoleAssignmentScheduleRequest": return new UnifiedRoleAssignmentScheduleRequest();
                 case "#microsoft.graph.unifiedRoleEligibilityScheduleRequest": return new UnifiedRoleEligibilityScheduleRequest();
                 case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
@@ -60,7 +63,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the approvalId property value. The identifier of the approval of the request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApprovalId() {
@@ -76,7 +79,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The principal that created the request.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -92,7 +95,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the customData property value. Free text field to define any custom data for the request. Not used.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomData() {
@@ -115,7 +118,7 @@ public class Request extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

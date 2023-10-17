@@ -41,7 +41,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      */
     private WorkbookChartAxisTitle title;
     /**
-     * Instantiates a new workbookChartAxis and sets the default values.
+     * Instantiates a new WorkbookChartAxis and sets the default values.
      */
     public WorkbookChartAxis() {
         super();
@@ -49,7 +49,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxis
+     * @return a WorkbookChartAxis
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxis createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
-     * @return a workbookChartAxisFormat
+     * @return a WorkbookChartAxisFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisFormat getFormat() {
@@ -83,7 +83,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
-     * @return a workbookChartGridlines
+     * @return a WorkbookChartGridlines
      */
     @jakarta.annotation.Nullable
     public WorkbookChartGridlines getMajorGridlines() {
@@ -115,7 +115,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
-     * @return a workbookChartGridlines
+     * @return a WorkbookChartGridlines
      */
     @jakarta.annotation.Nullable
     public WorkbookChartGridlines getMinorGridlines() {
@@ -131,7 +131,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Represents the axis title. Read-only.
-     * @return a workbookChartAxisTitle
+     * @return a WorkbookChartAxisTitle
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle getTitle() {

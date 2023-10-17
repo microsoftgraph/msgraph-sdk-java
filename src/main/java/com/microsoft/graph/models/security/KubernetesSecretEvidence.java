@@ -21,7 +21,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
      */
     private String secretType;
     /**
-     * Instantiates a new kubernetesSecretEvidence and sets the default values.
+     * Instantiates a new KubernetesSecretEvidence and sets the default values.
      */
     public KubernetesSecretEvidence() {
         super();
@@ -30,7 +30,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesSecretEvidence
+     * @return a KubernetesSecretEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesSecretEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the name property value. The secret name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -59,7 +59,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the namespace property value. The secret namespace.
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
@@ -67,7 +67,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecretType() {

@@ -17,7 +17,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new profilePhoto and sets the default values.
+     * Instantiates a new ProfilePhoto and sets the default values.
      */
     public ProfilePhoto() {
         super();
@@ -25,7 +25,7 @@ public class ProfilePhoto extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a profilePhoto
+     * @return a ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public static ProfilePhoto createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class ProfilePhoto extends Entity implements Parsable {
     }
     /**
      * Gets the height property value. The height of the photo. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
@@ -53,7 +53,7 @@ public class ProfilePhoto extends Entity implements Parsable {
     }
     /**
      * Gets the width property value. The width of the photo. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {

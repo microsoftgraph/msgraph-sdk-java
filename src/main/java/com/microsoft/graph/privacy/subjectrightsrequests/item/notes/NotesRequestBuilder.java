@@ -65,8 +65,8 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
-     * @return a CompletableFuture of authoredNoteCollectionResponse
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuthoredNoteCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -77,9 +77,9 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNoteCollectionResponse
+     * @return a CompletableFuture of AuthoredNoteCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
@@ -94,9 +94,9 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AuthoredNoteCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new authoredNote object.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
@@ -107,10 +107,10 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new authoredNote object.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
@@ -126,7 +126,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AuthoredNote::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -137,7 +137,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -147,10 +147,6 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -158,10 +154,14 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a new authoredNote object.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -173,7 +173,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authoredNote object.
+     * Create a new authoredNote object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,23 +185,23 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthoredNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a notesRequestBuilder
+     * @return a NotesRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -212,7 +212,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return new NotesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * Get the list of authored notes assoicated with a subject rights request.  This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

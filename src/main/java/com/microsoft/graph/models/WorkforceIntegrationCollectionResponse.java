@@ -13,7 +13,7 @@ public class WorkforceIntegrationCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<WorkforceIntegration> value;
     /**
-     * Instantiates a new workforceIntegrationCollectionResponse and sets the default values.
+     * Instantiates a new WorkforceIntegrationCollectionResponse and sets the default values.
      */
     public WorkforceIntegrationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class WorkforceIntegrationCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workforceIntegrationCollectionResponse
+     * @return a WorkforceIntegrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WorkforceIntegrationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WorkforceIntegrationCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a workforceIntegration
+     * @return a java.util.List<WorkforceIntegration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkforceIntegration> getValue() {

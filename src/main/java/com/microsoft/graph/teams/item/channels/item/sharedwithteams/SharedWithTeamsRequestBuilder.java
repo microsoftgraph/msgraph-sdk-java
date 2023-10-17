@@ -59,8 +59,8 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/sharedWithTeams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
-     * @return a CompletableFuture of sharedWithChannelTeamInfoCollectionResponse
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedWithChannelTeamInfoCollectionResponse
+     * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sharedWithTeams for teams
      * @param body The request body
-     * @return a CompletableFuture of sharedWithChannelTeamInfo
+     * @return a CompletableFuture of SharedWithChannelTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> post(@jakarta.annotation.Nonnull final SharedWithChannelTeamInfo body) {
@@ -94,7 +94,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedWithTeams for teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedWithChannelTeamInfo
+     * @return a CompletableFuture of SharedWithChannelTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> post(@jakarta.annotation.Nonnull final SharedWithChannelTeamInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SharedWithChannelTeamInfo::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,17 +114,13 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -132,6 +128,10 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -153,23 +153,23 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SharedWithChannelTeamInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharedWithTeamsRequestBuilder
+     * @return a SharedWithTeamsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharedWithTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return new SharedWithTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

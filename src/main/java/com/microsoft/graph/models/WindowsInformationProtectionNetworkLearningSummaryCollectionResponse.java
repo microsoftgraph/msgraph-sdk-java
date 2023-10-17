@@ -13,7 +13,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRespons
      */
     private java.util.List<WindowsInformationProtectionNetworkLearningSummary> value;
     /**
-     * Instantiates a new windowsInformationProtectionNetworkLearningSummaryCollectionResponse and sets the default values.
+     * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryCollectionResponse and sets the default values.
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionNetworkLearningSummaryCollectionResponse
+     * @return a WindowsInformationProtectionNetworkLearningSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionNetworkLearningSummaryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRespons
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsInformationProtectionNetworkLearningSummary
+     * @return a java.util.List<WindowsInformationProtectionNetworkLearningSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionNetworkLearningSummary> getValue() {

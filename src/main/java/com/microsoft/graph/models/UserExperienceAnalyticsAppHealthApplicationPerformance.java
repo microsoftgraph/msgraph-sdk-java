@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      */
     private Integer meanTimeToFailureInMinutes;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
         super();
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthApplicationPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the activeDeviceCount property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appHangCount property value. The number of hangs for the application. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppHangCount() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAppHealthScore() {
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
@@ -147,7 +147,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {

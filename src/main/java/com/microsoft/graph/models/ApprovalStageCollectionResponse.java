@@ -13,7 +13,7 @@ public class ApprovalStageCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<ApprovalStage> value;
     /**
-     * Instantiates a new approvalStageCollectionResponse and sets the default values.
+     * Instantiates a new ApprovalStageCollectionResponse and sets the default values.
      */
     public ApprovalStageCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ApprovalStageCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalStageCollectionResponse
+     * @return a ApprovalStageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ApprovalStageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ApprovalStageCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a approvalStage
+     * @return a java.util.List<ApprovalStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApprovalStage> getValue() {

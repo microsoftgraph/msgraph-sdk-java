@@ -13,7 +13,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<DirectoryRole> value;
     /**
-     * Instantiates a new directoryRoleCollectionResponse and sets the default values.
+     * Instantiates a new DirectoryRoleCollectionResponse and sets the default values.
      */
     public DirectoryRoleCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryRoleCollectionResponse
+     * @return a DirectoryRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DirectoryRoleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a directoryRole
+     * @return a java.util.List<DirectoryRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryRole> getValue() {

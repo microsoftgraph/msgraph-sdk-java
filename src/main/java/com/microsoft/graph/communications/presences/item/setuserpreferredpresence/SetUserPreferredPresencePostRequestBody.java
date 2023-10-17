@@ -27,7 +27,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      */
     private PeriodAndDuration expirationDuration;
     /**
-     * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.
+     * Instantiates a new SetUserPreferredPresencePostRequestBody and sets the default values.
      */
     public SetUserPreferredPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a setUserPreferredPresencePostRequestBody
+     * @return a SetUserPreferredPresencePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SetUserPreferredPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,14 +44,14 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the availability property value. The availability property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
@@ -105,8 +105,8 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
         this.activity = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

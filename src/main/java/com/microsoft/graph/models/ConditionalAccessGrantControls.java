@@ -38,7 +38,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     private java.util.List<String> termsOfUse;
     /**
-     * Instantiates a new conditionalAccessGrantControls and sets the default values.
+     * Instantiates a new ConditionalAccessGrantControls and sets the default values.
      */
     public ConditionalAccessGrantControls() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessGrantControls
+     * @return a ConditionalAccessGrantControls
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessGrantControls createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         return new ConditionalAccessGrantControls();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the authenticationStrength property value. The authenticationStrength property
-     * @return a authenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy getAuthenticationStrength() {
@@ -71,7 +71,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     * @return a conditionalAccessGrantControl
+     * @return a java.util.List<ConditionalAccessGrantControl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessGrantControl> getBuiltInControls() {
@@ -79,7 +79,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCustomAuthenticationFactors() {
@@ -102,7 +102,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the operator property value. Defines the relationship of the grant controls. Possible values: AND, OR.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
@@ -118,7 +118,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the termsOfUse property value. List of terms of use IDs required by the policy.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTermsOfUse() {
@@ -139,8 +139,8 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

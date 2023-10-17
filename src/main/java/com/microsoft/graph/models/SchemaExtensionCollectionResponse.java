@@ -13,7 +13,7 @@ public class SchemaExtensionCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<SchemaExtension> value;
     /**
-     * Instantiates a new schemaExtensionCollectionResponse and sets the default values.
+     * Instantiates a new SchemaExtensionCollectionResponse and sets the default values.
      */
     public SchemaExtensionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class SchemaExtensionCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a schemaExtensionCollectionResponse
+     * @return a SchemaExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SchemaExtensionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SchemaExtensionCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a schemaExtension
+     * @return a java.util.List<SchemaExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SchemaExtension> getValue() {

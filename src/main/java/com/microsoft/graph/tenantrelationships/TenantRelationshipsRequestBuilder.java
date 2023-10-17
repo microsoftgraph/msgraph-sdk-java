@@ -57,7 +57,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findTenantInformationByDomainName method.
      * @param domainName Usage: domainName='{domainName}'
-     * @return a findTenantInformationByDomainNameWithDomainNameRequestBuilder
+     * @return a FindTenantInformationByDomainNameWithDomainNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindTenantInformationByDomainNameWithDomainNameRequestBuilder findTenantInformationByDomainNameWithDomainName(@jakarta.annotation.Nonnull final String domainName) {
@@ -67,7 +67,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findTenantInformationByTenantId method.
      * @param tenantId Usage: tenantId='{tenantId}'
-     * @return a findTenantInformationByTenantIdWithTenantIdRequestBuilder
+     * @return a FindTenantInformationByTenantIdWithTenantIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindTenantInformationByTenantIdWithTenantIdRequestBuilder findTenantInformationByTenantIdWithTenantId(@jakarta.annotation.Nonnull final String tenantId) {
@@ -76,7 +76,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get tenantRelationships
-     * @return a CompletableFuture of tenantRelationship
+     * @return a CompletableFuture of TenantRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantRelationship> get() {
@@ -85,7 +85,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantRelationship
+     * @return a CompletableFuture of TenantRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantRelationship> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of tenantRelationship
+     * @return a CompletableFuture of TenantRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body) {
@@ -108,7 +108,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * Update tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantRelationship
+     * @return a CompletableFuture of TenantRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,10 +135,6 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -146,6 +142,10 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -167,23 +167,23 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tenantRelationshipsRequestBuilder
+     * @return a TenantRelationshipsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TenantRelationshipsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

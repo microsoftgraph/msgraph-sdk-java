@@ -26,7 +26,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new itemActionStat and sets the default values.
+     * Instantiates a new ItemActionStat and sets the default values.
      */
     public ItemActionStat() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemActionStat
+     * @return a ItemActionStat
      */
     @jakarta.annotation.Nonnull
     public static ItemActionStat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actionCount property value. The number of times the action took place. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActionCount() {
@@ -51,14 +51,14 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actorCount property value. The number of distinct actors that performed the action. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActorCount() {
         return this.actorCount;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
         this.actorCount = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

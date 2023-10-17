@@ -36,26 +36,26 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     }
     /**
      * Set mobile device management authority
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post() {
+    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityPostResponse> post() {
         return post(null);
     }
     /**
      * Set mobile device management authority
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SetMobileDeviceManagementAuthorityResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, SetMobileDeviceManagementAuthorityPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Set mobile device management authority
@@ -73,22 +73,22 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setMobileDeviceManagementAuthorityRequestBuilder
+     * @return a SetMobileDeviceManagementAuthorityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetMobileDeviceManagementAuthorityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

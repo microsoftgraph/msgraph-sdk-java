@@ -26,7 +26,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<StringKeyObjectValuePair> properties;
     /**
-     * Instantiates a new expressionInputObject and sets the default values.
+     * Instantiates a new ExpressionInputObject and sets the default values.
      */
     public ExpressionInputObject() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a expressionInputObject
+     * @return a ExpressionInputObject
      */
     @jakarta.annotation.Nonnull
     public static ExpressionInputObject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         return new ExpressionInputObject();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the definition property value. Definition of the test object.
-     * @return a objectDefinition
+     * @return a ObjectDefinition
      */
     @jakarta.annotation.Nullable
     public ObjectDefinition getDefinition() {
@@ -71,7 +71,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the properties property value. Property values of the test object.
-     * @return a stringKeyObjectValuePair
+     * @return a java.util.List<StringKeyObjectValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyObjectValuePair> getProperties() {
@@ -97,8 +97,8 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

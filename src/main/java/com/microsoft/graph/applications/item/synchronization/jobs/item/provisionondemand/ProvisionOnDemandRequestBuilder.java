@@ -36,9 +36,9 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}/provisionOnDemand", rawUrl);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of stringKeyStringValuePair
+     * @return a CompletableFuture of StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of stringKeyStringValuePair
+     * @return a CompletableFuture of StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, StringKeyStringValuePair::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds.  This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -80,23 +80,23 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ProvisionOnDemandPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a provisionOnDemandRequestBuilder
+     * @return a ProvisionOnDemandRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProvisionOnDemandRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

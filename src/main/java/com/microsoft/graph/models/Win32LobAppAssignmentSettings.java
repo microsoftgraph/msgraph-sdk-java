@@ -28,7 +28,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     private Win32LobAppRestartSettings restartSettings;
     /**
-     * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
+     * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
      */
     public Win32LobAppAssignmentSettings() {
         super();
@@ -37,7 +37,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppAssignmentSettings
+     * @return a Win32LobAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
-     * @return a win32LobAppDeliveryOptimizationPriority
+     * @return a Win32LobAppDeliveryOptimizationPriority
      */
     @jakarta.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
@@ -67,7 +67,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
-     * @return a mobileAppInstallTimeSettings
+     * @return a MobileAppInstallTimeSettings
      */
     @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
@@ -75,7 +75,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
-     * @return a win32LobAppNotification
+     * @return a Win32LobAppNotification
      */
     @jakarta.annotation.Nullable
     public Win32LobAppNotification getNotifications() {
@@ -83,7 +83,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
-     * @return a win32LobAppRestartSettings
+     * @return a Win32LobAppRestartSettings
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartSettings getRestartSettings() {

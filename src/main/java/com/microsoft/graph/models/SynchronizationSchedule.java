@@ -16,11 +16,11 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime expiration;
     /**
-     * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
+     * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
      */
     private PeriodAndDuration interval;
     /**
@@ -32,7 +32,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
      */
     private SynchronizationScheduleState state;
     /**
-     * Instantiates a new synchronizationSchedule and sets the default values.
+     * Instantiates a new SynchronizationSchedule and sets the default values.
      */
     public SynchronizationSchedule() {
         this.setAdditionalData(new HashMap<>());
@@ -40,7 +40,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationSchedule
+     * @return a SynchronizationSchedule
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         return new SynchronizationSchedule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the expiration property value. Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expiration property value. Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a synchronizationScheduleState
+     * @return a SynchronizationScheduleState
      */
     @jakarta.annotation.Nullable
     public SynchronizationScheduleState getState() {
@@ -113,21 +113,21 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the expiration property value. Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expiration property value. Date and time when this job expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expiration property.
      */
     public void setExpiration(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expiration = value;
     }
     /**
-     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
      * @param value Value to set for the interval property.
      */
     public void setInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {

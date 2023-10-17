@@ -30,11 +30,11 @@ public class HostComponent extends Artifact implements Parsable {
      */
     private String name;
     /**
-     * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      */
     private String version;
     /**
-     * Instantiates a new hostComponent and sets the default values.
+     * Instantiates a new HostComponent and sets the default values.
      */
     public HostComponent() {
         super();
@@ -43,7 +43,7 @@ public class HostComponent extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostComponent
+     * @return a HostComponent
      */
     @jakarta.annotation.Nonnull
     public static HostComponent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the category property value. The type of component that was detected (for example, Operating System, Framework, Remote Access, or Server).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -83,7 +83,7 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -99,15 +99,15 @@ public class HostComponent extends Artifact implements Parsable {
     }
     /**
      * Gets the name property value. A name running on the artifact, for example, Microsoft IIS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
     /**
-     * Gets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
-     * @return a string
+     * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -163,7 +163,7 @@ public class HostComponent extends Artifact implements Parsable {
         this.name = value;
     }
     /**
-     * Sets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * Sets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

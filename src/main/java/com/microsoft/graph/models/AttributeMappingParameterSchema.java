@@ -34,7 +34,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     private AttributeType type;
     /**
-     * Instantiates a new attributeMappingParameterSchema and sets the default values.
+     * Instantiates a new AttributeMappingParameterSchema and sets the default values.
      */
     public AttributeMappingParameterSchema() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeMappingParameterSchema
+     * @return a AttributeMappingParameterSchema
      */
     @jakarta.annotation.Nonnull
     public static AttributeMappingParameterSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         return new AttributeMappingParameterSchema();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleOccurrences() {
@@ -81,7 +81,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the name property value. Parameter name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -89,7 +89,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the required property value. true if the parameter is required; otherwise false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -105,7 +105,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeType
+     * @return a AttributeType
      */
     @jakarta.annotation.Nullable
     public AttributeType getType() {
@@ -125,8 +125,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

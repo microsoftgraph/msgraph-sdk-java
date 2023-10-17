@@ -80,22 +80,22 @@ public class GetPolicyNonComplianceMetadataRequestBuilder extends BaseRequestBui
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getPolicyNonComplianceMetadataRequestBuilder
+     * @return a GetPolicyNonComplianceMetadataRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceMetadataRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

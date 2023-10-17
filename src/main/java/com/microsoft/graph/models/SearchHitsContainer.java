@@ -30,11 +30,11 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     * The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      */
     private Integer total;
     /**
-     * Instantiates a new searchHitsContainer and sets the default values.
+     * Instantiates a new SearchHitsContainer and sets the default values.
      */
     public SearchHitsContainer() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchHitsContainer
+     * @return a SearchHitsContainer
      */
     @jakarta.annotation.Nonnull
     public static SearchHitsContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         return new SearchHitsContainer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the aggregations property value. The aggregations property
-     * @return a searchAggregation
+     * @return a java.util.List<SearchAggregation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchAggregation> getAggregations() {
@@ -81,7 +81,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hits property value. A collection of the search results.
-     * @return a searchHit
+     * @return a java.util.List<SearchHit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchHit> getHits() {
@@ -89,7 +89,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMoreResultsAvailable() {
@@ -97,15 +97,15 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
-     * @return a integer
+     * Gets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotal() {
@@ -125,8 +125,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -160,7 +160,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     * Sets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {

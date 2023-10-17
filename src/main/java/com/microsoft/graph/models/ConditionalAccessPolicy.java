@@ -46,7 +46,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     private String templateId;
     /**
-     * Instantiates a new conditionalAccessPolicy and sets the default values.
+     * Instantiates a new ConditionalAccessPolicy and sets the default values.
      */
     public ConditionalAccessPolicy() {
         super();
@@ -54,7 +54,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the conditions property value. The conditions property
-     * @return a conditionalAccessConditionSet
+     * @return a ConditionalAccessConditionSet
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
@@ -79,7 +79,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -87,7 +87,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -113,7 +113,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
-     * @return a conditionalAccessGrantControls
+     * @return a ConditionalAccessGrantControls
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
@@ -129,7 +129,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
-     * @return a conditionalAccessSessionControls
+     * @return a ConditionalAccessSessionControls
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {
@@ -137,7 +137,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a conditionalAccessPolicyState
+     * @return a ConditionalAccessPolicyState
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyState getState() {
@@ -145,7 +145,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {

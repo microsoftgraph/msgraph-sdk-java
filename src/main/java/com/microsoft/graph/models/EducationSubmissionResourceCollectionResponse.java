@@ -13,7 +13,7 @@ public class EducationSubmissionResourceCollectionResponse extends BaseCollectio
      */
     private java.util.List<EducationSubmissionResource> value;
     /**
-     * Instantiates a new educationSubmissionResourceCollectionResponse and sets the default values.
+     * Instantiates a new EducationSubmissionResourceCollectionResponse and sets the default values.
      */
     public EducationSubmissionResourceCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EducationSubmissionResourceCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSubmissionResourceCollectionResponse
+     * @return a EducationSubmissionResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EducationSubmissionResourceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EducationSubmissionResourceCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a educationSubmissionResource
+     * @return a java.util.List<EducationSubmissionResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getValue() {

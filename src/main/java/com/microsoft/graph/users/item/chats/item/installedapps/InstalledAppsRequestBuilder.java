@@ -59,8 +59,8 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/installedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all app installations within a chat.
-     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
+     * List all app installations within a chat. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,17 +116,13 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,10 +130,14 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Install a teamsApp to the specified chat.
+     * Install a teamsApp to the specified chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -155,23 +155,23 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a installedAppsRequestBuilder
+     * @return a InstalledAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return new InstalledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all app installations within a chat.
+     * List all app installations within a chat. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

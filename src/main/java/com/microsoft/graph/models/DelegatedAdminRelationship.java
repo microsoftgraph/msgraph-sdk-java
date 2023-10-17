@@ -27,15 +27,15 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
      */
     private DelegatedAdminRelationshipCustomerParticipant customer;
     /**
-     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      */
     private String displayName;
     /**
-     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      */
     private PeriodAndDuration duration;
     /**
@@ -59,7 +59,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     private DelegatedAdminRelationshipStatus status;
     /**
-     * Instantiates a new delegatedAdminRelationship and sets the default values.
+     * Instantiates a new DelegatedAdminRelationship and sets the default values.
      */
     public DelegatedAdminRelationship() {
         super();
@@ -67,16 +67,23 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationship
+     * @return a DelegatedAdminRelationship
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
+            }
+        }
         return new DelegatedAdminRelationship();
     }
     /**
      * Gets the accessAssignments property value. The access assignments associated with the delegated admin relationship.
-     * @return a delegatedAdminAccessAssignment
+     * @return a java.util.List<DelegatedAdminAccessAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminAccessAssignment> getAccessAssignments() {
@@ -84,7 +91,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
@@ -107,23 +114,23 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
-     * @return a delegatedAdminRelationshipCustomerParticipant
+     * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
+     * @return a DelegatedAdminRelationshipCustomerParticipant
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipCustomerParticipant getCustomer() {
         return this.customer;
     }
     /**
-     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
-     * @return a string
+     * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
     /**
-     * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -169,7 +176,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The long running operations associated with the delegated admin relationship.
-     * @return a delegatedAdminRelationshipOperation
+     * @return a java.util.List<DelegatedAdminRelationshipOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getOperations() {
@@ -177,7 +184,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the requests property value. The requests associated with the delegated admin relationship.
-     * @return a delegatedAdminRelationshipRequest
+     * @return a java.util.List<DelegatedAdminRelationshipRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipRequest> getRequests() {
@@ -185,7 +192,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
-     * @return a delegatedAdminRelationshipStatus
+     * @return a DelegatedAdminRelationshipStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipStatus getStatus() {
@@ -240,21 +247,21 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     * Sets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
      * @param value Value to set for the customer property.
      */
     public void setCustomer(@jakarta.annotation.Nullable final DelegatedAdminRelationshipCustomerParticipant value) {
         this.customer = value;
     }
     /**
-     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * Sets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

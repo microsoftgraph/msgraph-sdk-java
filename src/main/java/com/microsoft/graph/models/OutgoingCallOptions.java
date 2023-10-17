@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutgoingCallOptions extends CallOptions implements Parsable {
     /**
-     * Instantiates a new outgoingCallOptions and sets the default values.
+     * Instantiates a new OutgoingCallOptions and sets the default values.
      */
     public OutgoingCallOptions() {
         super();
@@ -18,7 +18,7 @@ public class OutgoingCallOptions extends CallOptions implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outgoingCallOptions
+     * @return a OutgoingCallOptions
      */
     @jakarta.annotation.Nonnull
     public static OutgoingCallOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

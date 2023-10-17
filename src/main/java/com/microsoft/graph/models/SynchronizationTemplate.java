@@ -38,7 +38,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     private SynchronizationSchema schema;
     /**
-     * Instantiates a new synchronizationTemplate and sets the default values.
+     * Instantiates a new SynchronizationTemplate and sets the default values.
      */
     public SynchronizationTemplate() {
         super();
@@ -46,7 +46,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationTemplate
+     * @return a SynchronizationTemplate
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the default property value. true if this template is recommended to be the default for the application.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefault() {
@@ -71,7 +71,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -79,7 +79,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscoverable() {
@@ -87,7 +87,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFactoryTag() {
@@ -111,7 +111,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     * @return a synchronizationMetadataEntry
+     * @return a java.util.List<SynchronizationMetadataEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationMetadataEntry> getMetadata() {
@@ -119,7 +119,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the schema property value. Default synchronization schema for the jobs based on this template.
-     * @return a synchronizationSchema
+     * @return a SynchronizationSchema
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {

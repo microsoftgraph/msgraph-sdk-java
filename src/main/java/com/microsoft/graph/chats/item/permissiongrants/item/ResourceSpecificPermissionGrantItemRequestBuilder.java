@@ -1,10 +1,5 @@
 package com.microsoft.graph.chats.item.permissiongrants.item;
 
-import com.microsoft.graph.chats.item.permissiongrants.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import com.microsoft.graph.chats.item.permissiongrants.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import com.microsoft.graph.chats.item.permissiongrants.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import com.microsoft.graph.chats.item.permissiongrants.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import com.microsoft.graph.chats.item.permissiongrants.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,41 +20,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to call the checkMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the checkMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the restore method.
-     */
-    @jakarta.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -97,7 +57,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     }
     /**
      * A collection of permissions granted to apps for the chat.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> get() {
@@ -106,7 +66,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     /**
      * A collection of permissions granted to apps for the chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +79,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property permissionGrants in chats
      * @param body The request body
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> patch(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -129,7 +89,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
      * Update the navigation property permissionGrants in chats
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> patch(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -156,15 +116,15 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -183,10 +143,6 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -194,6 +150,10 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -215,17 +175,17 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

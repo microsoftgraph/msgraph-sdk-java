@@ -26,7 +26,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      */
     private java.util.List<UserTrainingStatusInfo> userTrainings;
     /**
-     * Instantiates a new attackSimulationTrainingUserCoverage and sets the default values.
+     * Instantiates a new AttackSimulationTrainingUserCoverage and sets the default values.
      */
     public AttackSimulationTrainingUserCoverage() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationTrainingUserCoverage
+     * @return a AttackSimulationTrainingUserCoverage
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationTrainingUserCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
         return new AttackSimulationTrainingUserCoverage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     }
     /**
      * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
@@ -71,7 +71,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     }
     /**
      * Gets the userTrainings property value. List of assigned trainings and their statuses for the user.
-     * @return a userTrainingStatusInfo
+     * @return a java.util.List<UserTrainingStatusInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserTrainingStatusInfo> getUserTrainings() {
@@ -97,8 +97,8 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

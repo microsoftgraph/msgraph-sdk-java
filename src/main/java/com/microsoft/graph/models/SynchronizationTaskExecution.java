@@ -75,7 +75,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     private OffsetDateTime timeEnded;
     /**
-     * Instantiates a new synchronizationTaskExecution and sets the default values.
+     * Instantiates a new SynchronizationTaskExecution and sets the default values.
      */
     public SynchronizationTaskExecution() {
         this.setAdditionalData(new HashMap<>());
@@ -83,7 +83,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationTaskExecution
+     * @return a SynchronizationTaskExecution
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationTaskExecution createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,14 +92,14 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the activityIdentifier property value. Identifier of the job run.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityIdentifier() {
         return this.activityIdentifier;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countEntitled property value. Count of processed entries that were assigned for this application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEntitled() {
@@ -116,7 +116,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEntitledForProvisioning() {
@@ -124,7 +124,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countEscrowed property value. Count of entries that were escrowed (errors).
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEscrowed() {
@@ -132,7 +132,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountEscrowedRaw() {
@@ -140,7 +140,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countExported property value. Count of exported entries.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountExported() {
@@ -148,7 +148,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countExports property value. Count of entries that were expected to be exported.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountExports() {
@@ -156,7 +156,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countImported property value. Count of imported entries.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImported() {
@@ -164,7 +164,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countImportedDeltas property value. Count of imported delta-changes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImportedDeltas() {
@@ -172,7 +172,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountImportedReferenceDeltas() {
@@ -180,7 +180,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the error property value. If an error was encountered, contains a synchronizationError object with details.
-     * @return a synchronizationError
+     * @return a SynchronizationError
      */
     @jakarta.annotation.Nullable
     public SynchronizationError getError() {
@@ -212,7 +212,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -220,7 +220,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the state property value. The state property
-     * @return a synchronizationTaskExecutionResult
+     * @return a SynchronizationTaskExecutionResult
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecutionResult getState() {
@@ -273,8 +273,8 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.activityIdentifier = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

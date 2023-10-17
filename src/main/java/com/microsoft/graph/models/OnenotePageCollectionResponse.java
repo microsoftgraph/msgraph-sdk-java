@@ -13,7 +13,7 @@ public class OnenotePageCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<OnenotePage> value;
     /**
-     * Instantiates a new onenotePageCollectionResponse and sets the default values.
+     * Instantiates a new OnenotePageCollectionResponse and sets the default values.
      */
     public OnenotePageCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OnenotePageCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenotePageCollectionResponse
+     * @return a OnenotePageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OnenotePageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OnenotePageCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a onenotePage
+     * @return a java.util.List<OnenotePage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getValue() {

@@ -16,7 +16,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new targetedManagedAppPolicyAssignment and sets the default values.
+     * Instantiates a new TargetedManagedAppPolicyAssignment and sets the default values.
      */
     public TargetedManagedAppPolicyAssignment() {
         super();
@@ -24,7 +24,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a TargetedManagedAppPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public static TargetedManagedAppPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
     }
     /**
      * Gets the target property value. Identifier for deployment to a group or app
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

@@ -38,7 +38,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The printTaskTrigger that triggered this task's execution. Read-only.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> get() {
@@ -47,7 +47,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
     /**
      * The printTaskTrigger that triggered this task's execution. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -73,10 +73,6 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +80,16 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a triggerRequestBuilder
+     * @return a TriggerRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TriggerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -13,7 +13,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      */
     private CloudAppSecuritySessionControlType cloudAppSecurityType;
     /**
-     * Instantiates a new cloudAppSecuritySessionControl and sets the default values.
+     * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
      */
     public CloudAppSecuritySessionControl() {
         super();
@@ -22,7 +22,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudAppSecuritySessionControl
+     * @return a CloudAppSecuritySessionControl
      */
     @jakarta.annotation.Nonnull
     public static CloudAppSecuritySessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     }
     /**
      * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     * @return a cloudAppSecuritySessionControlType
+     * @return a CloudAppSecuritySessionControlType
      */
     @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControlType getCloudAppSecurityType() {

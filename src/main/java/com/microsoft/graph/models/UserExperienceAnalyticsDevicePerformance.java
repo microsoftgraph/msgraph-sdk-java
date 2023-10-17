@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     private Double startupPerformanceScore;
     /**
-     * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
      */
     public UserExperienceAnalyticsDevicePerformance() {
         super();
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDevicePerformance
+     * @return a UserExperienceAnalyticsDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageBlueScreens() {
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageRestarts() {
@@ -125,7 +125,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
@@ -133,7 +133,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the bootScore property value. The user experience analytics device boot score.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBootScore() {
@@ -141,7 +141,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the coreBootTimeInMs property value. The user experience analytics device core boot time in milliseconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCoreBootTimeInMs() {
@@ -149,7 +149,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the coreLoginTimeInMs property value. The user experience analytics device core login time in milliseconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCoreLoginTimeInMs() {
@@ -157,7 +157,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the deviceCount property value. User experience analytics summarized device count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
@@ -165,7 +165,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the deviceName property value. The user experience analytics device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -173,7 +173,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the diskType property value. The diskType property
-     * @return a diskType
+     * @return a DiskType
      */
     @jakarta.annotation.Nullable
     public DiskType getDiskType() {
@@ -210,7 +210,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the groupPolicyBootTimeInMs property value. The user experience analytics device group policy boot time in milliseconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyBootTimeInMs() {
@@ -218,7 +218,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the groupPolicyLoginTimeInMs property value. The user experience analytics device group policy login time in milliseconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGroupPolicyLoginTimeInMs() {
@@ -226,7 +226,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -234,7 +234,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the loginScore property value. The user experience analytics device login score.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLoginScore() {
@@ -242,7 +242,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -250,7 +250,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the model property value. The user experience analytics device model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -258,7 +258,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getModelStartupPerformanceScore() {
@@ -266,7 +266,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the operatingSystemVersion property value. The user experience analytics device Operating System version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
@@ -274,7 +274,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the responsiveDesktopTimeInMs property value. The user experience analytics responsive desktop time in milliseconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getResponsiveDesktopTimeInMs() {
@@ -282,7 +282,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRestartCount() {
@@ -290,7 +290,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {

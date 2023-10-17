@@ -30,7 +30,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
      */
     private String oldValue;
     /**
-     * Instantiates a new modifiedProperty and sets the default values.
+     * Instantiates a new ModifiedProperty and sets the default values.
      */
     public ModifiedProperty() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a modifiedProperty
+     * @return a ModifiedProperty
      */
     @jakarta.annotation.Nonnull
     public static ModifiedProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         return new ModifiedProperty();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Indicates the property name of the target attribute that was changed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the newValue property value. Indicates the updated value for the propery.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNewValue() {
@@ -84,7 +84,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oldValue property value. Indicates the previous value (before the update) for the property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOldValue() {
@@ -111,8 +111,8 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

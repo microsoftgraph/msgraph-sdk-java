@@ -84,7 +84,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from permissionGrants
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from permissionGrants
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to permissionGrants
      * @param body The request body
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -116,7 +116,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to permissionGrants
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -143,10 +143,6 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -154,6 +150,10 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -175,23 +175,23 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionGrantsRequestBuilder
+     * @return a PermissionGrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

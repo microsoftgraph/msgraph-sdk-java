@@ -13,7 +13,7 @@ public class UserCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     private java.util.List<User> value;
     /**
-     * Instantiates a new userCollectionResponse and sets the default values.
+     * Instantiates a new UserCollectionResponse and sets the default values.
      */
     public UserCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UserCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userCollectionResponse
+     * @return a UserCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserCollectionResponse extends BaseCollectionPaginationCountRespons
     }
     /**
      * Gets the value property value. The value property
-     * @return a user
+     * @return a java.util.List<User>
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getValue() {

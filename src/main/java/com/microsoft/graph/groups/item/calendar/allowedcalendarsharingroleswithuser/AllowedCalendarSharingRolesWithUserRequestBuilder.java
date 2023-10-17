@@ -25,9 +25,9 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param User Usage: User='{User}'
      */
-    public AllowedCalendarSharingRolesWithUserRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String user) {
+    public AllowedCalendarSharingRolesWithUserRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String User) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar/allowedCalendarSharingRoles(User='{User}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
-        this.pathParameters.put("User", user);
+        this.pathParameters.put("User", User);
     }
     /**
      * Instantiates a new AllowedCalendarSharingRolesWithUserRequestBuilder and sets the default values.
@@ -39,24 +39,24 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
     }
     /**
      * Invoke function allowedCalendarSharingRoles
-     * @return a CompletableFuture of allowedCalendarSharingRolesWithUserResponse
+     * @return a CompletableFuture of AllowedCalendarSharingRolesWithUserGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserResponse> get() {
+    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function allowedCalendarSharingRoles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allowedCalendarSharingRolesWithUserResponse
+     * @return a CompletableFuture of AllowedCalendarSharingRolesWithUserGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AllowedCalendarSharingRolesWithUserGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AllowedCalendarSharingRolesWithUserResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, AllowedCalendarSharingRolesWithUserGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function allowedCalendarSharingRoles
@@ -74,10 +74,6 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -85,12 +81,16 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allowedCalendarSharingRolesWithUserRequestBuilder
+     * @return a AllowedCalendarSharingRolesWithUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllowedCalendarSharingRolesWithUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

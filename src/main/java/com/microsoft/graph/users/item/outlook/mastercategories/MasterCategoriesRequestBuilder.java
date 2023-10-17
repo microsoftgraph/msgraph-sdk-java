@@ -59,8 +59,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get all the categories that have been defined for the user.
-     * @return a CompletableFuture of outlookCategoryCollectionResponse
+     * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OutlookCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookCategoryCollectionResponse
+     * @return a CompletableFuture of OutlookCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OutlookCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OutlookCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,17 +116,13 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -134,10 +130,14 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -155,23 +155,23 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a masterCategoriesRequestBuilder
+     * @return a MasterCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MasterCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return new MasterCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

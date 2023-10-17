@@ -59,17 +59,17 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object.
-     * @return a CompletableFuture of printOperationCollectionResponse
+     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrintOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintOperationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object.
+     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printOperationCollectionResponse
+     * @return a CompletableFuture of PrintOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to operations for print
      * @param body The request body
-     * @return a CompletableFuture of printOperation
+     * @return a CompletableFuture of PrintOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintOperation> post(@jakarta.annotation.Nonnull final PrintOperation body) {
@@ -92,7 +92,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to operations for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printOperation
+     * @return a CompletableFuture of PrintOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintOperation> post(@jakarta.annotation.Nonnull final PrintOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PrintOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object.
+     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,17 +112,13 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object.
+     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a operationsRequestBuilder
+     * @return a OperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a printOperation object.
+     * Retrieve the properties and relationships of a printOperation object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

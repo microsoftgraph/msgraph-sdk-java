@@ -17,7 +17,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     private String teamId;
     /**
-     * Instantiates a new channelMembersNotificationRecipient and sets the default values.
+     * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
      */
     public ChannelMembersNotificationRecipient() {
         super();
@@ -26,7 +26,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a channelMembersNotificationRecipient
+     * @return a ChannelMembersNotificationRecipient
      */
     @jakarta.annotation.Nonnull
     public static ChannelMembersNotificationRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     }
     /**
      * Gets the channelId property value. The unique identifier for the channel whose members should receive the notification.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
@@ -54,7 +54,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     }
     /**
      * Gets the teamId property value. The unique identifier for the team under which the channel resides.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {

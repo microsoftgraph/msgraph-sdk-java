@@ -22,7 +22,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     private String displayName;
     /**
-     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      */
     private EducationAssignmentGradeType grading;
     /**
@@ -34,7 +34,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new rubricLevel and sets the default values.
+     * Instantiates a new RubricLevel and sets the default values.
      */
     public RubricLevel() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rubricLevel
+     * @return a RubricLevel
      */
     @jakarta.annotation.Nonnull
     public static RubricLevel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         return new RubricLevel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description of this rubric level.
-     * @return a educationItemBody
+     * @return a EducationItemBody
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
@@ -67,7 +67,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The name of this rubric level.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -88,8 +88,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
-     * @return a educationAssignmentGradeType
+     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
+     * @return a EducationAssignmentGradeType
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
@@ -97,7 +97,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the levelId property value. The ID of this resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLevelId() {
@@ -105,7 +105,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,8 +125,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -146,7 +146,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      * @param value Value to set for the grading property.
      */
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {

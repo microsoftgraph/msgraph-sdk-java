@@ -16,7 +16,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
      */
     private Boolean useDeviceContext;
     /**
-     * Instantiates a new windowsUniversalAppXAppAssignmentSettings and sets the default values.
+     * Instantiates a new WindowsUniversalAppXAppAssignmentSettings and sets the default values.
      */
     public WindowsUniversalAppXAppAssignmentSettings() {
         super();
@@ -25,7 +25,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUniversalAppXAppAssignmentSettings
+     * @return a WindowsUniversalAppXAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static WindowsUniversalAppXAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
     }
     /**
      * Gets the useDeviceContext property value. If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {

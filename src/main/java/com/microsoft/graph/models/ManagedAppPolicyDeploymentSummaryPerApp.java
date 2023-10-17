@@ -29,7 +29,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
      */
     private String odataType;
     /**
-     * Instantiates a new managedAppPolicyDeploymentSummaryPerApp and sets the default values.
+     * Instantiates a new ManagedAppPolicyDeploymentSummaryPerApp and sets the default values.
      */
     public ManagedAppPolicyDeploymentSummaryPerApp() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppPolicyDeploymentSummaryPerApp
+     * @return a ManagedAppPolicyDeploymentSummaryPerApp
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicyDeploymentSummaryPerApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
         return new ManagedAppPolicyDeploymentSummaryPerApp();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the configurationAppliedUserCount property value. Number of users the policy is applied.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationAppliedUserCount() {
@@ -74,7 +74,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the mobileAppIdentifier property value. Deployment of an app.
-     * @return a mobileAppIdentifier
+     * @return a MobileAppIdentifier
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
@@ -82,7 +82,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,8 +100,8 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -30,7 +30,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new fido2KeyRestrictions and sets the default values.
+     * Instantiates a new Fido2KeyRestrictions and sets the default values.
      */
     public Fido2KeyRestrictions() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fido2KeyRestrictions
+     * @return a Fido2KeyRestrictions
      */
     @jakarta.annotation.Nonnull
     public static Fido2KeyRestrictions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,14 +47,14 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the aaGuids property value. A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAaGuids() {
         return this.aaGuids;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     * @return a fido2RestrictionEnforcementType
+     * @return a Fido2RestrictionEnforcementType
      */
     @jakarta.annotation.Nullable
     public Fido2RestrictionEnforcementType getEnforcementType() {
@@ -84,7 +84,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEnforced property value. Determines if the configured key enforcement is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnforced() {
@@ -92,7 +92,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,8 +118,8 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
         this.aaGuids = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

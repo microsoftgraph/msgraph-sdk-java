@@ -26,7 +26,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new localeInfo and sets the default values.
+     * Instantiates a new LocaleInfo and sets the default values.
      */
     public LocaleInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @jakarta.annotation.Nonnull
     public static LocaleInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
         return new LocaleInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. A name representing the user's locale in natural language, for example, 'English (United States)'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locale property value. A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -79,7 +79,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

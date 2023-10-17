@@ -45,7 +45,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/pinnedMessages/{pinnedChatMessageInfo%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Unpin a message from a chat.
+     * Unpin a message from a chat. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return delete(null);
     }
     /**
-     * Unpin a message from a chat.
+     * Unpin a message from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * A collection of all the pinned messages in the chat. Nullable.
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> get() {
@@ -76,7 +76,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
     /**
      * A collection of all the pinned messages in the chat. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property pinnedMessages in users
      * @param body The request body
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> patch(@jakarta.annotation.Nonnull final PinnedChatMessageInfo body) {
@@ -99,7 +99,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property pinnedMessages in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> patch(@jakarta.annotation.Nonnull final PinnedChatMessageInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, PinnedChatMessageInfo::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Unpin a message from a chat.
+     * Unpin a message from a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,22 +119,22 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Unpin a message from a chat.
+     * Unpin a message from a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -153,10 +153,6 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -164,6 +160,10 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -185,17 +185,17 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PinnedChatMessageInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

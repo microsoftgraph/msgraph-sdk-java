@@ -29,7 +29,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> targetObjects;
     /**
-     * Instantiates a new extensionProperty and sets the default values.
+     * Instantiates a new ExtensionProperty and sets the default values.
      */
     public ExtensionProperty() {
         super();
@@ -38,7 +38,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a extensionProperty
+     * @return a ExtensionProperty
      */
     @jakarta.annotation.Nonnull
     public static ExtensionProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -55,7 +55,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataType() {
@@ -77,7 +77,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSyncedFromOnPremises() {
@@ -85,7 +85,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -93,7 +93,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetObjects() {

@@ -14,7 +14,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<HostTracker> value;
     /**
-     * Instantiates a new hostTrackerCollectionResponse and sets the default values.
+     * Instantiates a new HostTrackerCollectionResponse and sets the default values.
      */
     public HostTrackerCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostTrackerCollectionResponse
+     * @return a HostTrackerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static HostTrackerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class HostTrackerCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a hostTracker
+     * @return a java.util.List<HostTracker>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getValue() {

@@ -22,7 +22,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * Instantiates a new authoredNote and sets the default values.
+     * Instantiates a new AuthoredNote and sets the default values.
      */
     public AuthoredNote() {
         super();
@@ -30,7 +30,7 @@ public class AuthoredNote extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authoredNote
+     * @return a AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public static AuthoredNote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AuthoredNote extends Entity implements Parsable {
     }
     /**
      * Gets the author property value. Identity information about the note's author.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getAuthor() {
@@ -47,7 +47,7 @@ public class AuthoredNote extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the note.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getContent() {

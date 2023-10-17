@@ -26,7 +26,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     private Boolean isChecked;
     /**
-     * Instantiates a new checklistItem and sets the default values.
+     * Instantiates a new ChecklistItem and sets the default values.
      */
     public ChecklistItem() {
         super();
@@ -34,7 +34,7 @@ public class ChecklistItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a checklistItem
+     * @return a ChecklistItem
      */
     @jakarta.annotation.Nonnull
     public static ChecklistItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class ChecklistItem extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Field indicating the title of checklistItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -80,7 +80,7 @@ public class ChecklistItem extends Entity implements Parsable {
     }
     /**
      * Gets the isChecked property value. State indicating whether the item is checked off or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsChecked() {

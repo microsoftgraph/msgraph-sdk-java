@@ -59,17 +59,17 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/presences{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a user's presence information.
-     * @return a CompletableFuture of presenceCollectionResponse
+     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PresenceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presenceCollectionResponse
+     * @return a CompletableFuture of PresenceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to presences for communications
      * @param body The request body
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> post(@jakarta.annotation.Nonnull final Presence body) {
@@ -92,7 +92,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to presences for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> post(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Presence::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,17 +112,13 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a presencesRequestBuilder
+     * @return a PresencesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PresencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return new PresencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

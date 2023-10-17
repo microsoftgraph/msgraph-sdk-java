@@ -39,7 +39,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     private RecurrenceRangeType type;
     /**
-     * Instantiates a new recurrenceRange and sets the default values.
+     * Instantiates a new RecurrenceRange and sets the default values.
      */
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recurrenceRange
+     * @return a RecurrenceRange
      */
     @jakarta.annotation.Nonnull
     public static RecurrenceRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
         return new RecurrenceRange();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfOccurrences() {
@@ -95,7 +95,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceTimeZone() {
@@ -119,7 +119,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     * @return a recurrenceRangeType
+     * @return a RecurrenceRangeType
      */
     @jakarta.annotation.Nullable
     public RecurrenceRangeType getType() {
@@ -140,8 +140,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

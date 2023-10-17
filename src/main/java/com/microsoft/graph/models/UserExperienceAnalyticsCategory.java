@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
      */
     private java.util.List<UserExperienceAnalyticsMetric> metricValues;
     /**
-     * Instantiates a new userExperienceAnalyticsCategory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsCategory and sets the default values.
      */
     public UserExperienceAnalyticsCategory() {
         super();
@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * Gets the insights property value. The insights for the category. Read-only.
-     * @return a userExperienceAnalyticsInsight
+     * @return a java.util.List<UserExperienceAnalyticsInsight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     }
     /**
      * Gets the metricValues property value. The metric values for the user experience analytics category. Read-only.
-     * @return a userExperienceAnalyticsMetric
+     * @return a java.util.List<UserExperienceAnalyticsMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetric> getMetricValues() {

@@ -36,8 +36,8 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/templates/{synchronizationTemplate%2Did}/schema/directories/{directoryDefinition%2Did}/discover", rawUrl);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
-     * @return a CompletableFuture of directoryDefinition
+     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DirectoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,9 +45,9 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DirectoryDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,29 +67,29 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a discoverRequestBuilder
+     * @return a DiscoverRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DiscoverRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

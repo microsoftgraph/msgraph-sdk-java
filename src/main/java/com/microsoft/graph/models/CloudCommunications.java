@@ -35,7 +35,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<Presence> presences;
     /**
-     * Instantiates a new cloudCommunications and sets the default values.
+     * Instantiates a new CloudCommunications and sets the default values.
      */
     public CloudCommunications() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudCommunications
+     * @return a CloudCommunications
      */
     @jakarta.annotation.Nonnull
     public static CloudCommunications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
         return new CloudCommunications();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callRecords property value. The callRecords property
-     * @return a callRecord
+     * @return a java.util.List<CallRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRecord> getCallRecords() {
@@ -68,7 +68,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the calls property value. The calls property
-     * @return a call
+     * @return a java.util.List<Call>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Call> getCalls() {
@@ -90,7 +90,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
-     * @return a onlineMeeting
+     * @return a java.util.List<OnlineMeeting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
@@ -106,7 +106,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the presences property value. The presences property
-     * @return a presence
+     * @return a java.util.List<Presence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Presence> getPresences() {
@@ -126,8 +126,8 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

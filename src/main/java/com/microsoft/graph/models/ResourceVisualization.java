@@ -26,7 +26,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     private String containerWebUrl;
     /**
-     * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+     * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      */
     private String mediaType;
     /**
@@ -46,11 +46,11 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     private String title;
     /**
-     * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     * The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      */
     private String type;
     /**
-     * Instantiates a new resourceVisualization and sets the default values.
+     * Instantiates a new ResourceVisualization and sets the default values.
      */
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceVisualization
+     * @return a ResourceVisualization
      */
     @jakarta.annotation.Nonnull
     public static ResourceVisualization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         return new ResourceVisualization();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainerDisplayName() {
@@ -83,7 +83,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainerType() {
@@ -91,7 +91,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the containerWebUrl property value. A path leading to the folder in which the item is stored.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainerWebUrl() {
@@ -116,8 +116,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
-     * @return a string
+     * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -125,7 +125,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the previewImageUrl property value. A URL leading to the preview image for the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreviewImageUrl() {
@@ -141,7 +141,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the previewText property value. A preview text for the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreviewText() {
@@ -149,15 +149,15 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the title property value. The item's title text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
-     * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
-     * @return a string
+     * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -181,8 +181,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -209,7 +209,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         this.containerWebUrl = value;
     }
     /**
-     * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+     * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
@@ -244,7 +244,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         this.title = value;
     }
     /**
-     * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

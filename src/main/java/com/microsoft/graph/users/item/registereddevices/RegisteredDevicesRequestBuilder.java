@@ -82,8 +82,8 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/registeredDevices{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-registereddevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,9 +91,9 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-registereddevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,17 +113,13 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -131,12 +127,16 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a registeredDevicesRequestBuilder
+     * @return a RegisteredDevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegisteredDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -144,7 +144,7 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
         return new RegisteredDevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

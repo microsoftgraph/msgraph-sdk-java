@@ -35,33 +35,33 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}/getSchedule", rawUrl);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of getScheduleResponse
+     * @return a CompletableFuture of GetSchedulePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetSchedulePostResponse> post(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getScheduleResponse
+     * @return a CompletableFuture of GetSchedulePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetSchedulePostResponse> post(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetScheduleResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetSchedulePostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,23 +79,23 @@ public class GetScheduleRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetSchedulePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getScheduleRequestBuilder
+     * @return a GetScheduleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetScheduleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

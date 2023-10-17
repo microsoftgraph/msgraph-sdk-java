@@ -36,7 +36,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     private Integer notInstalledUserCount;
     /**
-     * Instantiates a new eBookInstallSummary and sets the default values.
+     * Instantiates a new EBookInstallSummary and sets the default values.
      */
     public EBookInstallSummary() {
         super();
@@ -44,7 +44,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a eBookInstallSummary
+     * @return a EBookInstallSummary
      */
     @jakarta.annotation.Nonnull
     public static EBookInstallSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedDeviceCount property value. Number of Devices that have failed to install this book.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -61,7 +61,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this book.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUserCount() {
@@ -84,7 +84,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedDeviceCount property value. Number of Devices that have successfully installed this book.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
@@ -92,7 +92,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedUserCount property value. Number of Users whose devices have all succeeded to install this book.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledUserCount() {
@@ -100,7 +100,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notInstalledDeviceCount property value. Number of Devices that does not have this book installed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
@@ -108,7 +108,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notInstalledUserCount property value. Number of Users that did not install this book.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledUserCount() {

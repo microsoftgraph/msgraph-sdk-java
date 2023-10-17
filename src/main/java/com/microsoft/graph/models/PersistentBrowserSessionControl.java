@@ -13,7 +13,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      */
     private PersistentBrowserSessionMode mode;
     /**
-     * Instantiates a new persistentBrowserSessionControl and sets the default values.
+     * Instantiates a new PersistentBrowserSessionControl and sets the default values.
      */
     public PersistentBrowserSessionControl() {
         super();
@@ -22,7 +22,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a persistentBrowserSessionControl
+     * @return a PersistentBrowserSessionControl
      */
     @jakarta.annotation.Nonnull
     public static PersistentBrowserSessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     }
     /**
      * Gets the mode property value. Possible values are: always, never.
-     * @return a persistentBrowserSessionMode
+     * @return a PersistentBrowserSessionMode
      */
     @jakarta.annotation.Nullable
     public PersistentBrowserSessionMode getMode() {

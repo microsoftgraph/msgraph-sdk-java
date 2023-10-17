@@ -138,7 +138,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      */
     private SizeRange withinSizeRange;
     /**
-     * Instantiates a new messageRulePredicates and sets the default values.
+     * Instantiates a new MessageRulePredicates and sets the default values.
      */
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
@@ -146,7 +146,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageRulePredicates
+     * @return a MessageRulePredicates
      */
     @jakarta.annotation.Nonnull
     public static MessageRulePredicates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -154,7 +154,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return new MessageRulePredicates();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bodyContains property value. Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBodyContains() {
@@ -171,7 +171,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bodyOrSubjectContains property value. Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBodyOrSubjectContains() {
@@ -179,7 +179,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the categories property value. Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -227,7 +227,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getFromAddresses() {
@@ -235,7 +235,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -243,7 +243,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the headerContains property value. Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getHeaderContains() {
@@ -251,7 +251,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     * @return a importance
+     * @return a Importance
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
@@ -259,7 +259,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isApprovalRequest property value. Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequest() {
@@ -267,7 +267,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAutomaticForward property value. Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomaticForward() {
@@ -275,7 +275,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAutomaticReply property value. Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomaticReply() {
@@ -283,7 +283,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEncrypted property value. Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
@@ -291,7 +291,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMeetingRequest property value. Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMeetingRequest() {
@@ -299,7 +299,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMeetingResponse property value. Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMeetingResponse() {
@@ -307,7 +307,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isNonDeliveryReport property value. Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsNonDeliveryReport() {
@@ -315,7 +315,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isPermissionControlled property value. Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPermissionControlled() {
@@ -323,7 +323,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isReadReceipt property value. Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReadReceipt() {
@@ -331,7 +331,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isSigned property value. Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSigned() {
@@ -339,7 +339,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isVoicemail property value. Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVoicemail() {
@@ -347,7 +347,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     * @return a messageActionFlag
+     * @return a MessageActionFlag
      */
     @jakarta.annotation.Nullable
     public MessageActionFlag getMessageActionFlag() {
@@ -355,7 +355,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the notSentToMe property value. Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNotSentToMe() {
@@ -363,7 +363,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -371,7 +371,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipientContains() {
@@ -379,7 +379,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the senderContains property value. Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSenderContains() {
@@ -387,7 +387,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     * @return a sensitivity
+     * @return a Sensitivity
      */
     @jakarta.annotation.Nullable
     public Sensitivity getSensitivity() {
@@ -395,7 +395,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentCcMe property value. Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSentCcMe() {
@@ -403,7 +403,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentOnlyToMe property value. Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSentOnlyToMe() {
@@ -411,7 +411,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentToAddresses property value. Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getSentToAddresses() {
@@ -419,7 +419,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentToMe property value. Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSentToMe() {
@@ -427,7 +427,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentToOrCcMe property value. Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSentToOrCcMe() {
@@ -435,7 +435,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subjectContains property value. Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubjectContains() {
@@ -443,7 +443,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the withinSizeRange property value. Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
-     * @return a sizeRange
+     * @return a SizeRange
      */
     @jakarta.annotation.Nullable
     public SizeRange getWithinSizeRange() {
@@ -489,8 +489,8 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

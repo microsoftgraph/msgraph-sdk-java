@@ -42,7 +42,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     private AccessPackageSubject target;
     /**
-     * Instantiates a new accessPackageAssignment and sets the default values.
+     * Instantiates a new AccessPackageAssignment and sets the default values.
      */
     public AccessPackageAssignment() {
         super();
@@ -50,7 +50,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignment
+     * @return a AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -67,7 +67,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy getAssignmentPolicy() {
@@ -75,7 +75,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
-     * @return a customExtensionCalloutInstance
+     * @return a java.util.List<CustomExtensionCalloutInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
@@ -108,7 +108,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.
-     * @return a entitlementManagementSchedule
+     * @return a EntitlementManagementSchedule
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
@@ -116,7 +116,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return a accessPackageAssignmentState
+     * @return a AccessPackageAssignmentState
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentState getState() {
@@ -124,7 +124,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -132,7 +132,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getTarget() {

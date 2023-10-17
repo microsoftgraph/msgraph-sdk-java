@@ -22,7 +22,7 @@ public class ConversationMember extends Entity implements Parsable {
      */
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
-     * Instantiates a new conversationMember and sets the default values.
+     * Instantiates a new ConversationMember and sets the default values.
      */
     public ConversationMember() {
         super();
@@ -30,7 +30,7 @@ public class ConversationMember extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conversationMember
+     * @return a ConversationMember
      */
     @jakarta.annotation.Nonnull
     public static ConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class ConversationMember extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class ConversationMember extends Entity implements Parsable {
     }
     /**
      * Gets the roles property value. The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {

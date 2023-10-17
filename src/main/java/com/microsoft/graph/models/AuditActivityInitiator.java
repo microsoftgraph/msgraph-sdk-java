@@ -26,7 +26,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     private UserIdentity user;
     /**
-     * Instantiates a new auditActivityInitiator and sets the default values.
+     * Instantiates a new AuditActivityInitiator and sets the default values.
      */
     public AuditActivityInitiator() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditActivityInitiator
+     * @return a AuditActivityInitiator
      */
     @jakarta.annotation.Nonnull
     public static AuditActivityInitiator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
         return new AuditActivityInitiator();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
-     * @return a appIdentity
+     * @return a AppIdentity
      */
     @jakarta.annotation.Nullable
     public AppIdentity getApp() {
@@ -71,7 +71,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getUser() {
@@ -97,8 +97,8 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

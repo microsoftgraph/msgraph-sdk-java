@@ -85,7 +85,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return delete(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -106,8 +106,8 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,9 +115,9 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property assignmentRequests in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> patch(@jakarta.annotation.Nonnull final AccessPackageAssignmentRequest body) {
@@ -141,7 +141,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Update the navigation property assignmentRequests in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> patch(@jakarta.annotation.Nonnull final AccessPackageAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignmentRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -161,26 +161,26 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -188,17 +188,13 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -206,6 +202,10 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -227,17 +227,17 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -257,7 +257,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
