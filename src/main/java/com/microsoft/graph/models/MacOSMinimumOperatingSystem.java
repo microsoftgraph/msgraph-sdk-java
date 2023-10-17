@@ -69,7 +69,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
      */
     private Boolean v130;
     /**
-     * Instantiates a new macOSMinimumOperatingSystem and sets the default values.
+     * Instantiates a new MacOSMinimumOperatingSystem and sets the default values.
      */
     public MacOSMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSMinimumOperatingSystem
+     * @return a MacOSMinimumOperatingSystem
      */
     @jakarta.annotation.Nonnull
     public static MacOSMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return new MacOSMinimumOperatingSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1010() {
@@ -132,7 +132,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1011() {
@@ -140,7 +140,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1012() {
@@ -148,7 +148,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1013() {
@@ -156,7 +156,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1014() {
@@ -164,7 +164,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1015() {
@@ -172,7 +172,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV107() {
@@ -180,7 +180,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV108() {
@@ -188,7 +188,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV109() {
@@ -196,7 +196,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV110() {
@@ -204,7 +204,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV120() {
@@ -212,7 +212,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV130() {
@@ -240,8 +240,8 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

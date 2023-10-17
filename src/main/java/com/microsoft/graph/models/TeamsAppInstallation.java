@@ -21,7 +21,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     private TeamsAppDefinition teamsAppDefinition;
     /**
-     * Instantiates a new teamsAppInstallation and sets the default values.
+     * Instantiates a new TeamsAppInstallation and sets the default values.
      */
     public TeamsAppInstallation() {
         super();
@@ -29,7 +29,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsAppInstallation
+     * @return a TeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppInstallation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the consentedPermissionSet property value. The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
-     * @return a teamsAppPermissionSet
+     * @return a TeamsAppPermissionSet
      */
     @jakarta.annotation.Nullable
     public TeamsAppPermissionSet getConsentedPermissionSet() {
@@ -65,7 +65,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the teamsApp property value. The app that is installed.
-     * @return a teamsApp
+     * @return a TeamsApp
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
@@ -73,7 +73,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppDefinition property value. The details of this version of the app.
-     * @return a teamsAppDefinition
+     * @return a TeamsAppDefinition
      */
     @jakarta.annotation.Nullable
     public TeamsAppDefinition getTeamsAppDefinition() {

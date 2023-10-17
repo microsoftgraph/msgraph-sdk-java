@@ -47,7 +47,7 @@ public class Article extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new article and sets the default values.
+     * Instantiates a new Article and sets the default values.
      */
     public Article() {
         super();
@@ -55,7 +55,7 @@ public class Article extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a article
+     * @return a Article
      */
     @jakarta.annotation.Nonnull
     public static Article createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a formattedContent
+     * @return a FormattedContent
      */
     @jakarta.annotation.Nullable
     public FormattedContent getBody() {
@@ -98,7 +98,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the imageUrl property value. URL of the header image for this article, used for display purposes.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageUrl() {
@@ -106,7 +106,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the indicators property value. Indicators related to this article.
-     * @return a articleIndicator
+     * @return a java.util.List<ArticleIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getIndicators() {
@@ -114,7 +114,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the isFeatured property value. Indicates whether this article is currently featured by Microsoft.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
@@ -130,7 +130,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a formattedContent
+     * @return a FormattedContent
      */
     @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
@@ -138,7 +138,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. Tags for this article, communicating keywords, or key concepts.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -146,7 +146,7 @@ public class Article extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of this article.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

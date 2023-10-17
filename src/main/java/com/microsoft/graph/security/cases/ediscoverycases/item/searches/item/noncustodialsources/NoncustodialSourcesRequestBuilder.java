@@ -59,7 +59,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a noncustodialSourcesRequestBuilder
+     * @return a NoncustodialSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NoncustodialSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

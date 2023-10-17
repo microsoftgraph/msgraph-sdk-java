@@ -61,7 +61,7 @@ public class BrowserSite extends Entity implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new browserSite and sets the default values.
+     * Instantiates a new BrowserSite and sets the default values.
      */
     public BrowserSite() {
         super();
@@ -69,7 +69,7 @@ public class BrowserSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSite
+     * @return a BrowserSite
      */
     @jakarta.annotation.Nonnull
     public static BrowserSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowRedirect() {
@@ -86,7 +86,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment for the site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -94,7 +94,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the compatibilityMode property value. The compatibilityMode property
-     * @return a browserSiteCompatibilityMode
+     * @return a BrowserSiteCompatibilityMode
      */
     @jakarta.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
@@ -139,7 +139,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the site.
-     * @return a browserSiteHistory
+     * @return a java.util.List<BrowserSiteHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteHistory> getHistory() {
@@ -147,7 +147,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the site.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -163,7 +163,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the mergeType property value. The mergeType property
-     * @return a browserSiteMergeType
+     * @return a BrowserSiteMergeType
      */
     @jakarta.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
@@ -171,7 +171,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a browserSiteStatus
+     * @return a BrowserSiteStatus
      */
     @jakarta.annotation.Nullable
     public BrowserSiteStatus getStatus() {
@@ -179,7 +179,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the targetEnvironment property value. The targetEnvironment property
-     * @return a browserSiteTargetEnvironment
+     * @return a BrowserSiteTargetEnvironment
      */
     @jakarta.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {
@@ -187,7 +187,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The URL of the site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

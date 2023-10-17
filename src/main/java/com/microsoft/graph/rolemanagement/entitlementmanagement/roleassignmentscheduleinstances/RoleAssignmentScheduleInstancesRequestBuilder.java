@@ -62,7 +62,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,8 +70,8 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstanceCollectionResponse
+     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstance> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body) {
@@ -105,7 +105,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstance> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentScheduleInstancesRequestBuilder
+     * @return a RoleAssignmentScheduleInstancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -188,7 +188,7 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return new RoleAssignmentScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
+     * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

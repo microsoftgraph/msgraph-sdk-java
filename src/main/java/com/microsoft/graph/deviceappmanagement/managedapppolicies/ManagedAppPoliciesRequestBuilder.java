@@ -59,19 +59,19 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
-     * @return a CompletableFuture of managedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the windowsInformationProtection objects.
+     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
@@ -94,7 +94,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedAppPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedAppPoliciesRequestBuilder
+     * @return a ManagedAppPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedAppPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ManagedAppPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the targetedManagedAppProtection objects.
+     * List properties and relationships of the windowsInformationProtection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

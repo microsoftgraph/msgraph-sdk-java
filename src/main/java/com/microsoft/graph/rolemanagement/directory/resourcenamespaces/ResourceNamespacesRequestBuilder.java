@@ -60,7 +60,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceNamespaces from roleManagement
-     * @return a CompletableFuture of unifiedRbacResourceNamespaceCollectionResponse
+     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get resourceNamespaces from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespaceCollectionResponse
+     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resourceNamespaces for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body) {
@@ -92,7 +92,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resourceNamespaces for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceNamespacesRequestBuilder
+     * @return a ResourceNamespacesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceNamespacesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

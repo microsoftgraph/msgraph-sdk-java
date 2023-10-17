@@ -37,17 +37,17 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}/members/{identity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-identity-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is available in the following national cloud deployments.
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-identity-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroupmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -59,7 +59,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> get() {
@@ -68,7 +68,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in connections
      * @param body The request body
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> patch(@jakarta.annotation.Nonnull final Identity body) {
@@ -91,7 +91,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> patch(@jakarta.annotation.Nonnull final Identity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Identity::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an identity resource to remove the corresponding member from an externalGroup.
+     * Delete an identity resource to remove the corresponding member from an externalGroup. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -60,7 +60,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceInstallState objects.
-     * @return a CompletableFuture of deviceInstallStateCollectionResponse
+     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceInstallState objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallStateCollectionResponse
+     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceInstallState object.
      * @param body The request body
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceInstallState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatesRequestBuilder
+     * @return a DeviceStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

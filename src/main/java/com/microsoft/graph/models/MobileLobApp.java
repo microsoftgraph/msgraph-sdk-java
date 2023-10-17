@@ -28,7 +28,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     private Long size;
     /**
-     * Instantiates a new mobileLobApp and sets the default values.
+     * Instantiates a new MobileLobApp and sets the default values.
      */
     public MobileLobApp() {
         super();
@@ -37,7 +37,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileLobApp
+     * @return a MobileLobApp
      */
     @jakarta.annotation.Nonnull
     public static MobileLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the committedContentVersion property value. The internal committed content version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommittedContentVersion() {
@@ -68,7 +68,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the contentVersions property value. The list of content versions for this app.
-     * @return a mobileAppContent
+     * @return a java.util.List<MobileAppContent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppContent> getContentVersions() {
@@ -89,7 +89,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the fileName property value. The name of the main Lob application file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -97,7 +97,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the size property value. The total size, including all uploaded files.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {

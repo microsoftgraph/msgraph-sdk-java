@@ -2,12 +2,18 @@ package com.microsoft.graph.security.threatintelligence.hosts.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.Host;
+import com.microsoft.graph.security.threatintelligence.hosts.item.childhostpairs.ChildHostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.components.ComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.cookies.CookiesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.hostpairs.HostPairsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.parenthostpairs.ParentHostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivedns.PassiveDnsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivednsreverse.PassiveDnsReverseRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.reputation.ReputationRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.sslcertificates.SslCertificatesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.subdomains.SubdomainsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.trackers.TrackersRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.whois.WhoisRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +33,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the childHostPairs property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ChildHostPairsRequestBuilder childHostPairs() {
+        return new ChildHostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the components property of the microsoft.graph.security.host entity.
      */
     @jakarta.annotation.Nonnull
@@ -39,6 +52,20 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CookiesRequestBuilder cookies() {
         return new CookiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostPairs property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostPairsRequestBuilder hostPairs() {
+        return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the parentHostPairs property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ParentHostPairsRequestBuilder parentHostPairs() {
+        return new ParentHostPairsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the passiveDns property of the microsoft.graph.security.host entity.
@@ -62,11 +89,32 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return new ReputationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the sslCertificates property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SslCertificatesRequestBuilder sslCertificates() {
+        return new SslCertificatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subdomains property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SubdomainsRequestBuilder subdomains() {
+        return new SubdomainsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the trackers property of the microsoft.graph.security.host entity.
      */
     @jakarta.annotation.Nonnull
     public TrackersRequestBuilder trackers() {
         return new TrackersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the whois property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public WhoisRequestBuilder whois() {
+        return new WhoisRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new HostItemRequestBuilder and sets the default values.
@@ -104,8 +152,8 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
-     * @return a CompletableFuture of host
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,9 +161,9 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +177,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hosts in security
      * @param body The request body
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body) {
@@ -139,7 +187,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hosts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -178,7 +226,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -186,7 +234,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -255,7 +303,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
+     * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

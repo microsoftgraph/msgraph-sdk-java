@@ -46,7 +46,7 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphUserRequestBuilder
+     * @return a GraphUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

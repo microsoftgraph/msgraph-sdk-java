@@ -37,17 +37,17 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}/lastIndexOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
-     * @return a CompletableFuture of ediscoveryIndexOperation
+     * Operation entity that represents the latest indexing for the noncustodial data source.
+     * @return a CompletableFuture of EdiscoveryIndexOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get() {
         return get(null);
     }
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryIndexOperation
+     * @return a CompletableFuture of EdiscoveryIndexOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +58,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EdiscoveryIndexOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastIndexOperationRequestBuilder
+     * @return a LastIndexOperationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastIndexOperationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +97,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return new LastIndexOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

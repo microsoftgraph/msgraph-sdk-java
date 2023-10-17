@@ -65,7 +65,7 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> get() {
@@ -74,7 +74,7 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property used in users
      * @param body The request body
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> patch(@jakarta.annotation.Nonnull final UsedInsight body) {
@@ -97,7 +97,7 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property used in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> patch(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

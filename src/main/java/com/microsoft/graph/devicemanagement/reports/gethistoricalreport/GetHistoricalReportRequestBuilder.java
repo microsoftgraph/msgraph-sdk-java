@@ -95,7 +95,7 @@ public class GetHistoricalReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getHistoricalReportRequestBuilder
+     * @return a GetHistoricalReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetHistoricalReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

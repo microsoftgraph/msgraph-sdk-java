@@ -13,7 +13,7 @@ public class GroupLifecyclePolicyCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<GroupLifecyclePolicy> value;
     /**
-     * Instantiates a new groupLifecyclePolicyCollectionResponse and sets the default values.
+     * Instantiates a new GroupLifecyclePolicyCollectionResponse and sets the default values.
      */
     public GroupLifecyclePolicyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class GroupLifecyclePolicyCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupLifecyclePolicyCollectionResponse
+     * @return a GroupLifecyclePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GroupLifecyclePolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GroupLifecyclePolicyCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a groupLifecyclePolicy
+     * @return a java.util.List<GroupLifecyclePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupLifecyclePolicy> getValue() {

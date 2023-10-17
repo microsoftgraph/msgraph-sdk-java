@@ -78,7 +78,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * Instantiates a new onPremisesExtensionAttributes and sets the default values.
+     * Instantiates a new OnPremisesExtensionAttributes and sets the default values.
      */
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
@@ -86,7 +86,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesExtensionAttributes
+     * @return a OnPremisesExtensionAttributes
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesExtensionAttributes createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -94,7 +94,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
         return new OnPremisesExtensionAttributes();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute1 property value. First customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute1() {
@@ -111,7 +111,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute10 property value. Tenth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute10() {
@@ -119,7 +119,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute11 property value. Eleventh customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute11() {
@@ -127,7 +127,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute12 property value. Twelfth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute12() {
@@ -135,7 +135,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute13() {
@@ -143,7 +143,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute14() {
@@ -151,7 +151,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute15() {
@@ -159,7 +159,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute2 property value. Second customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute2() {
@@ -167,7 +167,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute3 property value. Third customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute3() {
@@ -175,7 +175,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute4 property value. Fourth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute4() {
@@ -183,7 +183,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute5 property value. Fifth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute5() {
@@ -191,7 +191,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute6 property value. Sixth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute6() {
@@ -199,7 +199,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute7 property value. Seventh customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute7() {
@@ -207,7 +207,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute8 property value. Eighth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute8() {
@@ -215,7 +215,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the extensionAttribute9 property value. Ninth customizable extension attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionAttribute9() {
@@ -248,7 +248,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -279,8 +279,8 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

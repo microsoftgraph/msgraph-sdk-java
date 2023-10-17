@@ -20,7 +20,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     private Boolean isAssigned;
     /**
-     * Instantiates a new targetedManagedAppProtection and sets the default values.
+     * Instantiates a new TargetedManagedAppProtection and sets the default values.
      */
     public TargetedManagedAppProtection() {
         super();
@@ -29,7 +29,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppProtection
+     * @return a TargetedManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
@@ -65,7 +65,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {

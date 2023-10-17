@@ -35,7 +35,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/changeScreenSharingRole", rawUrl);
     }
     /**
-     * Allow applications to share screen content with the participants of a group call.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/call-changescreensharingrole?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Allow applications to share screen content with the participants of a group call.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/call-changescreensharingrole?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Allow applications to share screen content with the participants of a group call.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Allow applications to share screen content with the participants of a group call.
+     * Allow applications to share screen content with the participants of a group call. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a changeScreenSharingRoleRequestBuilder
+     * @return a ChangeScreenSharingRoleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChangeScreenSharingRoleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

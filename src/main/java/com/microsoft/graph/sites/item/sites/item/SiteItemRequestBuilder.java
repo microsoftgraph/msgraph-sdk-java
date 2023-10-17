@@ -38,7 +38,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of the sub-sites under this site.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get() {
@@ -47,7 +47,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of the sub-sites under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

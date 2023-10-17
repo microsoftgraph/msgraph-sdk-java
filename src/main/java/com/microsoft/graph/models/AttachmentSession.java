@@ -22,7 +22,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     private java.util.List<String> nextExpectedRanges;
     /**
-     * Instantiates a new attachmentSession and sets the default values.
+     * Instantiates a new AttachmentSession and sets the default values.
      */
     public AttachmentSession() {
         super();
@@ -30,7 +30,7 @@ public class AttachmentSession extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentSession
+     * @return a AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public static AttachmentSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AttachmentSession extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content streams that are uploaded.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -67,7 +67,7 @@ public class AttachmentSession extends Entity implements Parsable {
     }
     /**
      * Gets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {

@@ -13,7 +13,7 @@ public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionP
      */
     private java.util.List<Fido2AuthenticationMethod> value;
     /**
-     * Instantiates a new fido2AuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new Fido2AuthenticationMethodCollectionResponse and sets the default values.
      */
     public Fido2AuthenticationMethodCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fido2AuthenticationMethodCollectionResponse
+     * @return a Fido2AuthenticationMethodCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static Fido2AuthenticationMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a fido2AuthenticationMethod
+     * @return a java.util.List<Fido2AuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Fido2AuthenticationMethod> getValue() {

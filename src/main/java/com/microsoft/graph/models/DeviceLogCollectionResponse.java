@@ -46,7 +46,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     private AppLogUploadState status;
     /**
-     * Instantiates a new deviceLogCollectionResponse and sets the default values.
+     * Instantiates a new DeviceLogCollectionResponse and sets the default values.
      */
     public DeviceLogCollectionResponse() {
         super();
@@ -54,7 +54,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLogCollectionResponse
+     * @return a DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrolledByUser() {
@@ -96,7 +96,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
@@ -128,7 +128,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSizeInKB() {
@@ -136,7 +136,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. AppLogUploadStatus
-     * @return a appLogUploadState
+     * @return a AppLogUploadState
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {

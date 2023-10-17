@@ -46,7 +46,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -55,7 +55,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -72,8 +72,8 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the details of a role management policy.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Retrieve the details of a role management policy.
+     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property roleManagementPolicies in policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body) {
@@ -107,7 +107,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
      * Update the navigation property roleManagementPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Retrieve the details of a role management policy.
+     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the details of a role management policy.
+     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the details of a role management policy.
+     * Retrieve the details of a role management policy. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

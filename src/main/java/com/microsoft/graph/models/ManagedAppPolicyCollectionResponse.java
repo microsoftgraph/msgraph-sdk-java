@@ -13,7 +13,7 @@ public class ManagedAppPolicyCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<ManagedAppPolicy> value;
     /**
-     * Instantiates a new managedAppPolicyCollectionResponse and sets the default values.
+     * Instantiates a new ManagedAppPolicyCollectionResponse and sets the default values.
      */
     public ManagedAppPolicyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ManagedAppPolicyCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppPolicyCollectionResponse
+     * @return a ManagedAppPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ManagedAppPolicyCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedAppPolicy
+     * @return a java.util.List<ManagedAppPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getValue() {

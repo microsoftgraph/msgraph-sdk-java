@@ -88,8 +88,8 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
-     * @return a CompletableFuture of accessPackageAssignment
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessPackageAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property assignments in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property assignments in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +170,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -239,7 +239,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

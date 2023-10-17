@@ -65,7 +65,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The group's profile photo
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
@@ -74,7 +74,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     /**
      * The group's profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property photo in groups
      * @param body The request body
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> patch(@jakarta.annotation.Nonnull final ProfilePhoto body) {
@@ -97,7 +97,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property photo in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> patch(@jakarta.annotation.Nonnull final ProfilePhoto body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a photoRequestBuilder
+     * @return a PhotoRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PhotoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

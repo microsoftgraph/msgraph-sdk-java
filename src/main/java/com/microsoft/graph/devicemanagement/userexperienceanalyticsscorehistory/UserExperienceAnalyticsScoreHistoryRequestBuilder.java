@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
     }
     /**
      * User experience analytics device Startup Score History
-     * @return a CompletableFuture of userExperienceAnalyticsScoreHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsScoreHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsScoreHistoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
     /**
      * User experience analytics device Startup Score History
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsScoreHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsScoreHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsScoreHistoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
     /**
      * Create new navigation property to userExperienceAnalyticsScoreHistory for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsScoreHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsScoreHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsScoreHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsScoreHistory body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
      * Create new navigation property to userExperienceAnalyticsScoreHistory for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsScoreHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsScoreHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsScoreHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsScoreHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsScoreHistoryRequestBuilder
+     * @return a UserExperienceAnalyticsScoreHistoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsScoreHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

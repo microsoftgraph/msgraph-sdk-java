@@ -13,7 +13,7 @@ public class UnifiedRoleManagementPolicyAssignmentCollectionResponse extends Bas
      */
     private java.util.List<UnifiedRoleManagementPolicyAssignment> value;
     /**
-     * Instantiates a new unifiedRoleManagementPolicyAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyAssignmentCollectionResponse and sets the default values.
      */
     public UnifiedRoleManagementPolicyAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UnifiedRoleManagementPolicyAssignmentCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyAssignmentCollectionResponse
+     * @return a UnifiedRoleManagementPolicyAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnifiedRoleManagementPolicyAssignmentCollectionResponse extends Bas
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleManagementPolicyAssignment
+     * @return a java.util.List<UnifiedRoleManagementPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyAssignment> getValue() {

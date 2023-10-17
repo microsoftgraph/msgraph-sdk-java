@@ -29,7 +29,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     private String subject;
     /**
-     * Instantiates a new federatedIdentityCredential and sets the default values.
+     * Instantiates a new FederatedIdentityCredential and sets the default values.
      */
     public FederatedIdentityCredential() {
         super();
@@ -37,7 +37,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a federatedIdentityCredential
+     * @return a FederatedIdentityCredential
      */
     @jakarta.annotation.Nonnull
     public static FederatedIdentityCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     }
     /**
      * Gets the audiences property value. The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAudiences() {
@@ -54,7 +54,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -76,7 +76,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     }
     /**
      * Gets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -84,7 +84,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -92,7 +92,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

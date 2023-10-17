@@ -57,7 +57,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
     }
     /**
      * Get entity from functions by key
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> get() {
@@ -66,7 +66,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
     /**
      * Get entity from functions by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
     /**
      * Update entity in functions
      * @param body The request body
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> patch(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body) {
@@ -89,7 +89,7 @@ public class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseReques
      * Update entity in functions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeMappingFunctionSchema
+     * @return a CompletableFuture of AttributeMappingFunctionSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> patch(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

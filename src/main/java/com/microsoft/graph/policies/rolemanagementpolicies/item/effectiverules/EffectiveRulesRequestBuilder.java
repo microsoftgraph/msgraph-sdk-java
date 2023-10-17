@@ -60,7 +60,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRuleCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRuleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to effectiveRules for policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body) {
@@ -92,7 +92,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to effectiveRules for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a effectiveRulesRequestBuilder
+     * @return a EffectiveRulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EffectiveRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

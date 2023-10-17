@@ -34,7 +34,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     private String residency;
     /**
-     * Instantiates a new dataSubject and sets the default values.
+     * Instantiates a new DataSubject and sets the default values.
      */
     public DataSubject() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataSubject
+     * @return a DataSubject
      */
     @jakarta.annotation.Nonnull
     public static DataSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
         return new DataSubject();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. Email of the data subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -81,7 +81,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the firstName property value. First name of the data subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirstName() {
@@ -89,7 +89,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastName property value. Last Name of the data subject.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastName() {
@@ -97,7 +97,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResidency() {
@@ -125,8 +125,8 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -35,7 +35,7 @@ public class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/copyToDefaultContentLocation", rawUrl);
     }
     /**
-     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
+     * Copy a file to a default content location in a content type][contentType]. The file can then be added as a default file or template via a POST operation. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-copytodefaultcontentlocation?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuild
         return post(body, null);
     }
     /**
-     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
+     * Copy a file to a default content location in a content type][contentType]. The file can then be added as a default file or template via a POST operation. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-copytodefaultcontentlocation?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
+     * Copy a file to a default content location in a content type][contentType]. The file can then be added as a default file or template via a POST operation. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
+     * Copy a file to a default content location in a content type][contentType]. The file can then be added as a default file or template via a POST operation. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a copyToDefaultContentLocationRequestBuilder
+     * @return a CopyToDefaultContentLocationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CopyToDefaultContentLocationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
     }
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.
-     * @return a CompletableFuture of mobileAppTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of MobileAppTroubleshootingEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of MobileAppTroubleshootingEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
     /**
      * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
      * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobileAppTroubleshootingEventsRequestBuilder
+     * @return a MobileAppTroubleshootingEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MobileAppTroubleshootingEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

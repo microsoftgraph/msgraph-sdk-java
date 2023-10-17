@@ -22,7 +22,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     private TopicModelingSettings topicModeling;
     /**
-     * Instantiates a new ediscoveryCaseSettings and sets the default values.
+     * Instantiates a new EdiscoveryCaseSettings and sets the default values.
      */
     public EdiscoveryCaseSettings() {
         super();
@@ -30,7 +30,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryCaseSettings
+     * @return a EdiscoveryCaseSettings
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryCaseSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
-     * @return a ocrSettings
+     * @return a OcrSettings
      */
     @jakarta.annotation.Nullable
     public OcrSettings getOcr() {
@@ -59,7 +59,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
-     * @return a redundancyDetectionSettings
+     * @return a RedundancyDetectionSettings
      */
     @jakarta.annotation.Nullable
     public RedundancyDetectionSettings getRedundancyDetection() {
@@ -67,7 +67,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     }
     /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
-     * @return a topicModelingSettings
+     * @return a TopicModelingSettings
      */
     @jakarta.annotation.Nullable
     public TopicModelingSettings getTopicModeling() {

@@ -66,7 +66,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private AttributeType type;
     /**
-     * Instantiates a new attributeDefinition and sets the default values.
+     * Instantiates a new AttributeDefinition and sets the default values.
      */
     public AttributeDefinition() {
         this.setAdditionalData(new HashMap<>());
@@ -74,7 +74,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeDefinition
+     * @return a AttributeDefinition
      */
     @jakarta.annotation.Nonnull
     public static AttributeDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return new AttributeDefinition();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAnchor() {
@@ -99,7 +99,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the apiExpressions property value. The apiExpressions property
-     * @return a stringKeyStringValuePair
+     * @return a java.util.List<StringKeyStringValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyStringValuePair> getApiExpressions() {
@@ -107,7 +107,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCaseExact() {
@@ -115,7 +115,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the defaultValue property value. The defaultValue property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -145,7 +145,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowNullValues property value. 'true' to allow null values for attributes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFlowNullValues() {
@@ -153,7 +153,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the metadata property value. Metadata for the given object.
-     * @return a attributeDefinitionMetadataEntry
+     * @return a java.util.List<AttributeDefinitionMetadataEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeDefinitionMetadataEntry> getMetadata() {
@@ -161,7 +161,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the multivalued property value. true if an attribute can have multiple values. Default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMultivalued() {
@@ -169,7 +169,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mutability property value. The mutability property
-     * @return a mutability
+     * @return a Mutability
      */
     @jakarta.annotation.Nullable
     public Mutability getMutability() {
@@ -177,7 +177,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -185,7 +185,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -193,7 +193,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
-     * @return a referencedObject
+     * @return a java.util.List<ReferencedObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReferencedObject> getReferencedObjects() {
@@ -201,7 +201,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -209,7 +209,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeType
+     * @return a AttributeType
      */
     @jakarta.annotation.Nullable
     public AttributeType getType() {
@@ -237,8 +237,8 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

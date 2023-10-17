@@ -37,7 +37,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     private OutlierMemberType outlierMemberType;
     /**
-     * Instantiates a new membershipOutlierInsight and sets the default values.
+     * Instantiates a new MembershipOutlierInsight and sets the default values.
      */
     public MembershipOutlierInsight() {
         super();
@@ -46,7 +46,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a membershipOutlierInsight
+     * @return a MembershipOutlierInsight
      */
     @jakarta.annotation.Nonnull
     public static MembershipOutlierInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the container property value. Navigation link to the container directory object. For example, to a group.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getContainer() {
@@ -63,7 +63,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the containerId property value. Indicates the identifier of the container, for example, a group ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainerId() {
@@ -87,7 +87,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the lastModifiedBy property value. Navigation link to a member object who modified the record. For example, to a user.
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
@@ -95,7 +95,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the member property value. Navigation link to a member object. For example, to a user.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getMember() {
@@ -103,7 +103,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the memberId property value. Indicates the identifier of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberId() {
@@ -111,7 +111,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the outlierContainerType property value. The outlierContainerType property
-     * @return a outlierContainerType
+     * @return a OutlierContainerType
      */
     @jakarta.annotation.Nullable
     public OutlierContainerType getOutlierContainerType() {
@@ -119,7 +119,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
     }
     /**
      * Gets the outlierMemberType property value. The outlierMemberType property
-     * @return a outlierMemberType
+     * @return a OutlierMemberType
      */
     @jakarta.annotation.Nullable
     public OutlierMemberType getOutlierMemberType() {

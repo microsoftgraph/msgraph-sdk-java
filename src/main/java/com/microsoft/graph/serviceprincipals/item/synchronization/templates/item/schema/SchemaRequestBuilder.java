@@ -89,7 +89,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Default synchronization schema for the jobs based on this template.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationSchema> get() {
@@ -98,7 +98,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Default synchronization schema for the jobs based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationSchema> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property schema in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationSchema> patch(@jakarta.annotation.Nonnull final SynchronizationSchema body) {
@@ -121,7 +121,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property schema in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationSchema> patch(@jakarta.annotation.Nonnull final SynchronizationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schemaRequestBuilder
+     * @return a SchemaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

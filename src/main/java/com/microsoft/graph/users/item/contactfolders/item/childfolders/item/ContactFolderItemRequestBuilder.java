@@ -65,7 +65,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> get() {
@@ -74,7 +74,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property childFolders in users
      * @param body The request body
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> patch(@jakarta.annotation.Nonnull final ContactFolder body) {
@@ -97,7 +97,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property childFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactFolder
+     * @return a CompletableFuture of ContactFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> patch(@jakarta.annotation.Nonnull final ContactFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

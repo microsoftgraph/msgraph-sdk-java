@@ -46,7 +46,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     private String summary;
     /**
-     * Instantiates a new searchHit and sets the default values.
+     * Instantiates a new SearchHit and sets the default values.
      */
     public SearchHit() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchHit
+     * @return a SearchHit
      */
     @jakarta.annotation.Nonnull
     public static SearchHit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return new SearchHit();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentSource property value. The name of the content source that the externalItem is part of.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentSource() {
@@ -96,7 +96,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHitId() {
@@ -104,7 +104,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCollapsed() {
@@ -112,7 +112,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -120,7 +120,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rank property value. The rank or the order of the result.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
@@ -128,7 +128,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resource property value. The resource property
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nullable
     public Entity getResource() {
@@ -136,7 +136,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultTemplateId() {
@@ -144,7 +144,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the summary property value. A summary of the result, if a summary is available.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
@@ -167,8 +167,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

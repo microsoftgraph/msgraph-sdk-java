@@ -59,8 +59,8 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call.
-     * @return a CompletableFuture of contentSharingSessionCollectionResponse
+     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ContentSharingSessionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call.
+     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentSharingSessionCollectionResponse
+     * @return a CompletableFuture of ContentSharingSessionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to contentSharingSessions for communications
      * @param body The request body
-     * @return a CompletableFuture of contentSharingSession
+     * @return a CompletableFuture of ContentSharingSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentSharingSession> post(@jakarta.annotation.Nonnull final ContentSharingSession body) {
@@ -94,7 +94,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to contentSharingSessions for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentSharingSession
+     * @return a CompletableFuture of ContentSharingSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentSharingSession> post(@jakarta.annotation.Nonnull final ContentSharingSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ContentSharingSession::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call.
+     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call.
+     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contentSharingSessionsRequestBuilder
+     * @return a ContentSharingSessionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContentSharingSessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return new ContentSharingSessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of contentSharingSession objects in a call.
+     * Retrieve a list of contentSharingSession objects in a call. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,8 +59,8 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/siteSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
-     * @return a CompletableFuture of siteSourceCollectionResponse
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SiteSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of siteSourceCollectionResponse
+     * @return a CompletableFuture of SiteSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SiteSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create a new siteSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of siteSource
+     * @return a CompletableFuture of SiteSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create a new siteSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of siteSource
+     * @return a CompletableFuture of SiteSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SiteSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create a new siteSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create a new siteSource object associated with an eDiscovery custodian. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a siteSourcesRequestBuilder
+     * @return a SiteSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SiteSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return new SiteSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

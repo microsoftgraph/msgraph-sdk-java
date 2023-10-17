@@ -73,7 +73,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The contacts in the folder. Navigation property. Read-only. Nullable.
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> get() {
@@ -82,7 +82,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The contacts in the folder. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property contacts in users
      * @param body The request body
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> patch(@jakarta.annotation.Nonnull final Contact body) {
@@ -105,7 +105,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property contacts in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> patch(@jakarta.annotation.Nonnull final Contact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

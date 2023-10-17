@@ -67,8 +67,8 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
-     * @return a CompletableFuture of printerCollectionResponse
+     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerCollectionResponse
+     * @return a CompletableFuture of PrinterCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to printers for print
      * @param body The request body
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> post(@jakarta.annotation.Nonnull final Printer body) {
@@ -102,7 +102,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to printers for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> post(@jakarta.annotation.Nonnull final Printer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Printer::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a printersRequestBuilder
+     * @return a PrintersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrintersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return new PrintersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * Retrieve the list of printers that are registered in the tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

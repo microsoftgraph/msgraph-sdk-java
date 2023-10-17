@@ -22,7 +22,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      */
     private String contentType;
     /**
-     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      */
     private String name;
     /**
@@ -34,7 +34,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      */
     private Long size;
     /**
-     * Instantiates a new attachmentInfo and sets the default values.
+     * Instantiates a new AttachmentInfo and sets the default values.
      */
     public AttachmentInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentInfo
+     * @return a AttachmentInfo
      */
     @jakarta.annotation.Nonnull
     public static AttachmentInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         return new AttachmentInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
-     * @return a attachmentType
+     * @return a AttachmentType
      */
     @jakarta.annotation.Nullable
     public AttachmentType getAttachmentType() {
@@ -67,7 +67,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -88,8 +88,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-     * @return a string
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -97,7 +97,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -125,8 +125,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -146,7 +146,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
         this.contentType = value;
     }
     /**
-     * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssociatedTeamInfo extends TeamInfo implements Parsable {
     /**
-     * Instantiates a new associatedTeamInfo and sets the default values.
+     * Instantiates a new AssociatedTeamInfo and sets the default values.
      */
     public AssociatedTeamInfo() {
         super();
@@ -17,7 +17,7 @@ public class AssociatedTeamInfo extends TeamInfo implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a associatedTeamInfo
+     * @return a AssociatedTeamInfo
      */
     @jakarta.annotation.Nonnull
     public static AssociatedTeamInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

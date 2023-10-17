@@ -13,7 +13,7 @@ public class PrintDocumentCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<PrintDocument> value;
     /**
-     * Instantiates a new printDocumentCollectionResponse and sets the default values.
+     * Instantiates a new PrintDocumentCollectionResponse and sets the default values.
      */
     public PrintDocumentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrintDocumentCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printDocumentCollectionResponse
+     * @return a PrintDocumentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrintDocumentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrintDocumentCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a printDocument
+     * @return a java.util.List<PrintDocument>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintDocument> getValue() {

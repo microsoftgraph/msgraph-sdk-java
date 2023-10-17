@@ -57,7 +57,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get resourceActions from roleManagement
-     * @return a CompletableFuture of unifiedRbacResourceAction
+     * @return a CompletableFuture of UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> get() {
@@ -66,7 +66,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
     /**
      * Get resourceActions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceAction
+     * @return a CompletableFuture of UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property resourceActions in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacResourceAction
+     * @return a CompletableFuture of UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body) {
@@ -89,7 +89,7 @@ public class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property resourceActions in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceAction
+     * @return a CompletableFuture of UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.
-     * @return a CompletableFuture of deviceManagementExchangeConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceManagementExchangeConnector object.
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exchangeConnectorsRequestBuilder
+     * @return a ExchangeConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExchangeConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -96,8 +96,8 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of contract object.
-     * @return a CompletableFuture of contract
+     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Contract
      * @see <a href="https://learn.microsoft.com/graph/api/contract-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of contract object.
+     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contract
+     * @return a CompletableFuture of Contract
      * @see <a href="https://learn.microsoft.com/graph/api/contract-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in contracts
      * @param body The request body
-     * @return a CompletableFuture of contract
+     * @return a CompletableFuture of Contract
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contract> patch(@jakarta.annotation.Nonnull final Contract body) {
@@ -131,7 +131,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in contracts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contract
+     * @return a CompletableFuture of Contract
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contract> patch(@jakarta.annotation.Nonnull final Contract body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of contract object.
+     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,7 +178,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of contract object.
+     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +247,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of contract object.
+     * Retrieve the properties and relationships of contract object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

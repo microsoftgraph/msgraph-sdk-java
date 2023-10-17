@@ -67,8 +67,8 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AdministrativeUnitCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AdministrativeUnit::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new administrativeUnit.
+     * Use this API to create a new administrativeUnit. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a administrativeUnitsRequestBuilder
+     * @return a AdministrativeUnitsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +187,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return new AdministrativeUnitsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of administrativeUnit objects.
+     * Retrieve a list of administrativeUnit objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

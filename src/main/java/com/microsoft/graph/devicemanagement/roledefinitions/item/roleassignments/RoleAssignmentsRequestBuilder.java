@@ -60,7 +60,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the roleAssignment objects.
-     * @return a CompletableFuture of roleAssignmentCollectionResponse
+     * @return a CompletableFuture of RoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the roleAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleAssignmentCollectionResponse
+     * @return a CompletableFuture of RoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new roleAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new roleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentsRequestBuilder
+     * @return a RoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

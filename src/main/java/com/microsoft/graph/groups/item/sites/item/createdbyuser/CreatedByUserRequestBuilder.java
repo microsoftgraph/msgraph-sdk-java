@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.sites.item.createdbyuser;
 
 import com.microsoft.graph.groups.item.sites.item.createdbyuser.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.createdbyuser.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new CreatedByUserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -46,7 +54,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Identity of the user who created the item. Read-only.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -55,7 +63,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Identity of the user who created the item. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +105,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createdByUserRequestBuilder
+     * @return a CreatedByUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -35,7 +35,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/setOrder", rawUrl);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class SetOrderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setOrderRequestBuilder
+     * @return a SetOrderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetOrderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

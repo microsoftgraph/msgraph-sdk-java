@@ -57,7 +57,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The custom rules that define an access scenario.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get() {
@@ -66,7 +66,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * The custom rules that define an access scenario.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property conditionalAccessPolicies in policies
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
@@ -89,7 +89,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property conditionalAccessPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

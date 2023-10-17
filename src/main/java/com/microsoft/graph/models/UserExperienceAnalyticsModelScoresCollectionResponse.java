@@ -13,7 +13,7 @@ public class UserExperienceAnalyticsModelScoresCollectionResponse extends BaseCo
      */
     private java.util.List<UserExperienceAnalyticsModelScores> value;
     /**
-     * Instantiates a new userExperienceAnalyticsModelScoresCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsModelScoresCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsModelScoresCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsModelScoresCollectionResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsModelScoresCollectionResponse
+     * @return a UserExperienceAnalyticsModelScoresCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsModelScoresCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsModelScoresCollectionResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsModelScores
+     * @return a java.util.List<UserExperienceAnalyticsModelScores>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsModelScores> getValue() {

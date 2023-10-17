@@ -90,7 +90,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new todoTask and sets the default values.
+     * Instantiates a new TodoTask and sets the default values.
      */
     public TodoTask() {
         super();
@@ -98,7 +98,7 @@ public class TodoTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a todoTask
+     * @return a TodoTask
      */
     @jakarta.annotation.Nonnull
     public static TodoTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -107,7 +107,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the attachments property value. A collection of file attachments for the task.
-     * @return a attachmentBase
+     * @return a java.util.List<AttachmentBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttachmentBase> getAttachments() {
@@ -115,7 +115,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the attachmentSessions property value. The attachmentSessions property
-     * @return a attachmentSession
+     * @return a java.util.List<AttachmentSession>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttachmentSession> getAttachmentSessions() {
@@ -123,7 +123,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The task body that typically contains information about the task.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -139,7 +139,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -147,7 +147,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the checklistItems property value. A collection of checklistItems linked to a task.
-     * @return a checklistItem
+     * @return a java.util.List<ChecklistItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChecklistItem> getChecklistItems() {
@@ -155,7 +155,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getCompletedDateTime() {
@@ -171,7 +171,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -179,7 +179,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the task. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -216,7 +216,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the task has attachments.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -224,7 +224,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a importance
+     * @return a Importance
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
@@ -232,7 +232,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReminderOn() {
@@ -248,7 +248,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the linkedResources property value. A collection of resources linked to the task.
-     * @return a linkedResource
+     * @return a java.util.List<LinkedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LinkedResource> getLinkedResources() {
@@ -256,7 +256,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the recurrence property value. The recurrence pattern for the task.
-     * @return a patternedRecurrence
+     * @return a PatternedRecurrence
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -264,7 +264,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getReminderDateTime() {
@@ -272,7 +272,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -280,7 +280,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a taskStatus
+     * @return a TaskStatus
      */
     @jakarta.annotation.Nullable
     public TaskStatus getStatus() {
@@ -288,7 +288,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. A brief description of the task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

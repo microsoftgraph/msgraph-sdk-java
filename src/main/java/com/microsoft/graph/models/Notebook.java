@@ -41,7 +41,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     private OnenoteUserRole userRole;
     /**
-     * Instantiates a new notebook and sets the default values.
+     * Instantiates a new Notebook and sets the default values.
      */
     public Notebook() {
         super();
@@ -50,7 +50,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notebook
+     * @return a Notebook
      */
     @jakarta.annotation.Nonnull
     public static Notebook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +76,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -84,7 +84,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the isShared property value. Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
@@ -92,7 +92,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
-     * @return a notebookLinks
+     * @return a NotebookLinks
      */
     @jakarta.annotation.Nullable
     public NotebookLinks getLinks() {
@@ -100,7 +100,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the sectionGroups property value. The section groups in the notebook. Read-only. Nullable.
-     * @return a sectionGroup
+     * @return a java.util.List<SectionGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
@@ -108,7 +108,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
@@ -116,7 +116,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the sections property value. The sections in the notebook. Read-only. Nullable.
-     * @return a onenoteSection
+     * @return a java.util.List<OnenoteSection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
@@ -124,7 +124,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionsUrl() {
@@ -132,7 +132,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     }
     /**
      * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     * @return a onenoteUserRole
+     * @return a OnenoteUserRole
      */
     @jakarta.annotation.Nullable
     public OnenoteUserRole getUserRole() {

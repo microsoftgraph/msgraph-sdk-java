@@ -53,7 +53,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     private String url;
     /**
-     * Instantiates a new deviceManagementExportJob and sets the default values.
+     * Instantiates a new DeviceManagementExportJob and sets the default values.
      */
     public DeviceManagementExportJob() {
         super();
@@ -61,7 +61,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementExportJob
+     * @return a DeviceManagementExportJob
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +97,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the filter property value. Filters applied on the report
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -105,7 +105,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Possible values for the file format of a report
-     * @return a deviceManagementReportFileFormat
+     * @return a DeviceManagementReportFileFormat
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportFileFormat getFormat() {
@@ -113,7 +113,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the localizationType property value. Configures how the requested export job is localized
-     * @return a deviceManagementExportJobLocalizationType
+     * @return a DeviceManagementExportJobLocalizationType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJobLocalizationType getLocalizationType() {
@@ -121,7 +121,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the reportName property value. Name of the report
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportName() {
@@ -137,7 +137,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the select property value. Columns selected from the report
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -145,7 +145,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSnapshotId() {
@@ -153,7 +153,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report
-     * @return a deviceManagementReportStatus
+     * @return a DeviceManagementReportStatus
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {
@@ -161,7 +161,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the url property value. Temporary location of the exported report
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

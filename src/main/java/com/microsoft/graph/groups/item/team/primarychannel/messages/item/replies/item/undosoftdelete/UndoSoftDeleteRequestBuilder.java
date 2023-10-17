@@ -35,7 +35,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/messages/{chatMessage%2Did}/replies/{chatMessage%2Did1}/undoSoftDelete", rawUrl);
     }
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a undoSoftDeleteRequestBuilder
+     * @return a UndoSoftDeleteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UndoSoftDeleteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

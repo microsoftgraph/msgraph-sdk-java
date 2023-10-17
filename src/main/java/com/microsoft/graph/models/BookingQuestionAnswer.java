@@ -46,7 +46,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> selectedOptions;
     /**
-     * Instantiates a new bookingQuestionAnswer and sets the default values.
+     * Instantiates a new BookingQuestionAnswer and sets the default values.
      */
     public BookingQuestionAnswer() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingQuestionAnswer
+     * @return a BookingQuestionAnswer
      */
     @jakarta.annotation.Nonnull
     public static BookingQuestionAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
         return new BookingQuestionAnswer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the answer property value. The answer given by the user in case the answerInputType is text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnswer() {
@@ -79,7 +79,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     * @return a answerInputType
+     * @return a AnswerInputType
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
@@ -87,7 +87,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
@@ -112,7 +112,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -120,7 +120,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -128,7 +128,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the question property value. The question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestion() {
@@ -136,7 +136,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the questionId property value. The ID of the custom question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuestionId() {
@@ -144,7 +144,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the selectedOptions property value. The answers selected by the user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelectedOptions() {
@@ -167,8 +167,8 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

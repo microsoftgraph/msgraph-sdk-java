@@ -13,7 +13,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      */
     private Float maxPoints;
     /**
-     * Instantiates a new educationAssignmentPointsGradeType and sets the default values.
+     * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.
      */
     public EducationAssignmentPointsGradeType() {
         super();
@@ -22,7 +22,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentPointsGradeType
+     * @return a EducationAssignmentPointsGradeType
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentPointsGradeType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
     }
     /**
      * Gets the maxPoints property value. Max points possible for this assignment.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getMaxPoints() {

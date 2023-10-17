@@ -57,7 +57,7 @@ public class LicenseDetailsItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of this user's license details. Read-only.
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> get() {
@@ -66,7 +66,7 @@ public class LicenseDetailsItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of this user's license details. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LicenseDetailsItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property licenseDetails in users
      * @param body The request body
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> patch(@jakarta.annotation.Nonnull final LicenseDetails body) {
@@ -89,7 +89,7 @@ public class LicenseDetailsItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property licenseDetails in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> patch(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

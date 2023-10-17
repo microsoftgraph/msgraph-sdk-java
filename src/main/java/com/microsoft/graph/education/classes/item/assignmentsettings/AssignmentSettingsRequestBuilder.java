@@ -57,7 +57,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies class-level assignments settings.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get() {
@@ -66,7 +66,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies class-level assignments settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,9 +77,9 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,10 +87,10 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentSettings
+     * @return a CompletableFuture of EducationAssignmentSettings
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +159,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -168,7 +168,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,7 +193,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentSettingsRequestBuilder
+     * @return a AssignmentSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

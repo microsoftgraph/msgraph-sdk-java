@@ -20,7 +20,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      */
     private byte[] value;
     /**
-     * Instantiates a new omaSettingStringXml and sets the default values.
+     * Instantiates a new OmaSettingStringXml and sets the default values.
      */
     public OmaSettingStringXml() {
         super();
@@ -29,7 +29,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSettingStringXml
+     * @return a OmaSettingStringXml
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingStringXml createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     }
     /**
      * Gets the fileName property value. File name associated with the Value property (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -57,7 +57,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getValue() {

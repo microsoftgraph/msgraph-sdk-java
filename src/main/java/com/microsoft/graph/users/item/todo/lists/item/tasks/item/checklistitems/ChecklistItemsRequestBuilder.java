@@ -59,8 +59,8 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/checklistItems{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
-     * @return a CompletableFuture of checklistItemCollectionResponse
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ChecklistItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checklistItemCollectionResponse
+     * @return a CompletableFuture of ChecklistItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ChecklistItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of ChecklistItem
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of ChecklistItem
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new checklistItem object.
+     * Create a new checklistItem object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a checklistItemsRequestBuilder
+     * @return a ChecklistItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChecklistItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return new ChecklistItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -64,8 +64,8 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationMethodsPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationMethodsPolicy object.
+     * Update the properties of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +203,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationMethodsPolicyRequestBuilder
+     * @return a AuthenticationMethodsPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +217,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationMethodsPolicy object.
+     * Read the properties and relationships of an authenticationMethodsPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -37,7 +37,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers/{bookingStaffMemberBase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness.
+     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return delete(null);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness.
+     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
-     * @return a CompletableFuture of bookingStaffMemberBase
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingStaffMemberBase
+     * @return a CompletableFuture of BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, BookingStaffMemberBase::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of bookingStaffMemberBase
+     * @return a CompletableFuture of BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingStaffMemberBase
+     * @return a CompletableFuture of BookingStaffMemberBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, BookingStaffMemberBase::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness.
+     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a bookingStaffMember in the specified bookingBusiness.
+     * Delete a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a bookingStaffMember in the specified bookingBusiness.
+     * Update the properties of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
+     * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

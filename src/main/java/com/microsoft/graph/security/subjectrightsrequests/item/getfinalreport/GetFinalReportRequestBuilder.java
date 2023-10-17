@@ -86,7 +86,7 @@ public class GetFinalReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getFinalReportRequestBuilder
+     * @return a GetFinalReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFinalReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

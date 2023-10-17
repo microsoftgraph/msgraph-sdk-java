@@ -38,7 +38,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of drives (document libraries) under this site.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get() {
@@ -47,7 +47,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of drives (document libraries) under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

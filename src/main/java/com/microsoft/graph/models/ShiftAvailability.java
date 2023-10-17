@@ -30,7 +30,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     private String timeZone;
     /**
-     * Instantiates a new shiftAvailability and sets the default values.
+     * Instantiates a new ShiftAvailability and sets the default values.
      */
     public ShiftAvailability() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shiftAvailability
+     * @return a ShiftAvailability
      */
     @jakarta.annotation.Nonnull
     public static ShiftAvailability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
         return new ShiftAvailability();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,7 +76,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recurrence property value. Specifies the pattern for recurrence
-     * @return a patternedRecurrence
+     * @return a PatternedRecurrence
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -84,7 +84,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeSlots property value. The time slot(s) preferred by the user.
-     * @return a timeRange
+     * @return a java.util.List<TimeRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeRange> getTimeSlots() {
@@ -92,7 +92,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeZone property value. Specifies the time zone for the indicated time.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
@@ -111,8 +111,8 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

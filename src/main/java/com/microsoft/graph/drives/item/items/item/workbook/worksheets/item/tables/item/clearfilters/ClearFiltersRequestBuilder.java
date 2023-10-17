@@ -35,7 +35,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/clearFilters", rawUrl);
     }
     /**
-     * Clears all the filters currently applied on the table.
+     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/table-clearfilters?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Clears all the filters currently applied on the table.
+     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/table-clearfilters?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Clears all the filters currently applied on the table.
+     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Clears all the filters currently applied on the table.
+     * Clears all the filters currently applied on the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ClearFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a clearFiltersRequestBuilder
+     * @return a ClearFiltersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClearFiltersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

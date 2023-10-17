@@ -46,7 +46,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get photos from users
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
@@ -55,7 +55,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get photos from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

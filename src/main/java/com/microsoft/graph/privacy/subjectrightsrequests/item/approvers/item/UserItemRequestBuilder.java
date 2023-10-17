@@ -3,6 +3,7 @@ package com.microsoft.graph.privacy.subjectrightsrequests.item.approvers.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.approvers.item.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.approvers.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -48,8 +59,8 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/approvers/{user%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get approvers from privacy
-     * @return a CompletableFuture of user
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
+     * @return a CompletableFuture of User
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -59,9 +70,9 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -75,7 +86,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -86,7 +97,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -123,7 +134,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new UserItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

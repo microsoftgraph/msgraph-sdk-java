@@ -33,7 +33,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     private Boolean isEnabled;
     /**
-     * Instantiates a new featureRolloutPolicy and sets the default values.
+     * Instantiates a new FeatureRolloutPolicy and sets the default values.
      */
     public FeatureRolloutPolicy() {
         super();
@@ -41,7 +41,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a featureRolloutPolicy
+     * @return a FeatureRolloutPolicy
      */
     @jakarta.annotation.Nonnull
     public static FeatureRolloutPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
@@ -58,7 +58,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description for this feature rollout policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -66,7 +66,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for this  feature rollout policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -74,7 +74,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a stagedFeatureName
+     * @return a StagedFeatureName
      */
     @jakarta.annotation.Nullable
     public StagedFeatureName getFeature() {
@@ -97,7 +97,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAppliedToOrganization() {
@@ -105,7 +105,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the feature rollout is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {

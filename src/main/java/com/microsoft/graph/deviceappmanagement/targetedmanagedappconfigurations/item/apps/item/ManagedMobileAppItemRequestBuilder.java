@@ -57,7 +57,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of apps to which the policy is deployed.
-     * @return a CompletableFuture of managedMobileApp
+     * @return a CompletableFuture of ManagedMobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> get() {
@@ -66,7 +66,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of apps to which the policy is deployed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedMobileApp
+     * @return a CompletableFuture of ManagedMobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property apps in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedMobileApp
+     * @return a CompletableFuture of ManagedMobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> patch(@jakarta.annotation.Nonnull final ManagedMobileApp body) {
@@ -89,7 +89,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property apps in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedMobileApp
+     * @return a CompletableFuture of ManagedMobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> patch(@jakarta.annotation.Nonnull final ManagedMobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

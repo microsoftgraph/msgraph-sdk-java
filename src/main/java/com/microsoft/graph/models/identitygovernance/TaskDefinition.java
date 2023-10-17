@@ -35,7 +35,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     private Integer version;
     /**
-     * Instantiates a new taskDefinition and sets the default values.
+     * Instantiates a new TaskDefinition and sets the default values.
      */
     public TaskDefinition() {
         super();
@@ -43,7 +43,7 @@ public class TaskDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a taskDefinition
+     * @return a TaskDefinition
      */
     @jakarta.annotation.Nonnull
     public static TaskDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a lifecycleTaskCategory
+     * @return a EnumSet<LifecycleTaskCategory>
      */
     @jakarta.annotation.Nullable
     public EnumSet<LifecycleTaskCategory> getCategory() {
@@ -60,7 +60,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the continueOnError property value. The continueOnError property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContinueOnError() {
@@ -68,7 +68,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the taskDefinition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -76,7 +76,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -99,7 +99,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
-     * @return a parameter
+     * @return a java.util.List<Parameter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Parameter> getParameters() {
@@ -107,7 +107,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

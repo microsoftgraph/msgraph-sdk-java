@@ -14,7 +14,7 @@ public class SiteSource extends DataSource implements Parsable {
      */
     private Site site;
     /**
-     * Instantiates a new siteSource and sets the default values.
+     * Instantiates a new SiteSource and sets the default values.
      */
     public SiteSource() {
         super();
@@ -23,7 +23,7 @@ public class SiteSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a siteSource
+     * @return a SiteSource
      */
     @jakarta.annotation.Nonnull
     public static SiteSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SiteSource extends DataSource implements Parsable {
     }
     /**
      * Gets the site property value. The site property
-     * @return a site
+     * @return a Site
      */
     @jakarta.annotation.Nullable
     public Site getSite() {

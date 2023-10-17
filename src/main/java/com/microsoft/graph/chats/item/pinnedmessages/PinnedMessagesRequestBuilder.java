@@ -59,8 +59,8 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/pinnedMessages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of pinnedChatMessages in a chat.
-     * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
+     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PinnedChatMessageInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of pinnedChatMessages in a chat.
+     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
+     * @return a CompletableFuture of PinnedChatMessageInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PinnedChatMessageInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PinnedChatMessageInfo::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of pinnedChatMessages in a chat.
+     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of pinnedChatMessages in a chat.
+     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pinnedMessagesRequestBuilder
+     * @return a PinnedMessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PinnedMessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return new PinnedMessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of pinnedChatMessages in a chat.
+     * Get a list of pinnedChatMessages in a chat. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

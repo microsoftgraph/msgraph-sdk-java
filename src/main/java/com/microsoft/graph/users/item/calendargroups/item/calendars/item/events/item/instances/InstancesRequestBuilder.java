@@ -67,7 +67,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a instancesRequestBuilder
+     * @return a InstancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

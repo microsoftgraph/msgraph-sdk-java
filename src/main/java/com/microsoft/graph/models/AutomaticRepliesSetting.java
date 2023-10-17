@@ -42,7 +42,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      */
     private AutomaticRepliesStatus status;
     /**
-     * Instantiates a new automaticRepliesSetting and sets the default values.
+     * Instantiates a new AutomaticRepliesSetting and sets the default values.
      */
     public AutomaticRepliesSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a automaticRepliesSetting
+     * @return a AutomaticRepliesSetting
      */
     @jakarta.annotation.Nonnull
     public static AutomaticRepliesSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         return new AutomaticRepliesSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     * @return a externalAudienceScope
+     * @return a ExternalAudienceScope
      */
     @jakarta.annotation.Nullable
     public ExternalAudienceScope getExternalAudience() {
@@ -75,7 +75,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalReplyMessage property value. The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalReplyMessage() {
@@ -99,7 +99,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalReplyMessage() {
@@ -107,7 +107,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledEndDateTime() {
@@ -123,7 +123,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scheduledStartDateTime property value. The date and time that automatic replies are set to begin, if Status is set to Scheduled.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getScheduledStartDateTime() {
@@ -131,7 +131,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     * @return a automaticRepliesStatus
+     * @return a AutomaticRepliesStatus
      */
     @jakarta.annotation.Nullable
     public AutomaticRepliesStatus getStatus() {
@@ -153,8 +153,8 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -60,7 +60,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The install state of the eBook.
-     * @return a CompletableFuture of deviceInstallStateCollectionResponse
+     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * The install state of the eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallStateCollectionResponse
+     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> post(@jakarta.annotation.Nonnull final DeviceInstallState body) {
@@ -92,7 +92,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> post(@jakarta.annotation.Nonnull final DeviceInstallState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatesRequestBuilder
+     * @return a DeviceStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

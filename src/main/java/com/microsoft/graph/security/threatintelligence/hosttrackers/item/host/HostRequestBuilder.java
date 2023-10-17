@@ -38,7 +38,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The host related to this hostTracker. When navigating to a hostTracker from a host, this should be assumed to be a return reference.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get() {
@@ -47,7 +47,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     /**
      * The host related to this hostTracker. When navigating to a hostTracker from a host, this should be assumed to be a return reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostRequestBuilder
+     * @return a HostRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

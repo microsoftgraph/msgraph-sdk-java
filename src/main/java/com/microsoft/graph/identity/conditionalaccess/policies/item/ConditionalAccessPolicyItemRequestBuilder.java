@@ -37,7 +37,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return delete(null);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the properties of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

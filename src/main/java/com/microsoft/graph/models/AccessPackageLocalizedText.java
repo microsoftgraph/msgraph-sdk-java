@@ -26,7 +26,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      */
     private String text;
     /**
-     * Instantiates a new accessPackageLocalizedText and sets the default values.
+     * Instantiates a new AccessPackageLocalizedText and sets the default values.
      */
     public AccessPackageLocalizedText() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageLocalizedText
+     * @return a AccessPackageLocalizedText
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageLocalizedText createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
         return new AccessPackageLocalizedText();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the languageCode property value. The language code that text is in. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageCode() {
@@ -71,7 +71,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the text property value. The question in the specific language. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
@@ -97,8 +97,8 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

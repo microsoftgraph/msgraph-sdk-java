@@ -22,7 +22,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
-     * Instantiates a new membersAddedEventMessageDetail and sets the default values.
+     * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
      */
     public MembersAddedEventMessageDetail() {
         super();
@@ -31,7 +31,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a membersAddedEventMessageDetail
+     * @return a MembersAddedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static MembersAddedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -60,7 +60,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * Gets the members property value. List of members added.
-     * @return a teamworkUserIdentity
+     * @return a java.util.List<TeamworkUserIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {

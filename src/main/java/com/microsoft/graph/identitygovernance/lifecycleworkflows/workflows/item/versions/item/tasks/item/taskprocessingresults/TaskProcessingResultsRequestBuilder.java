@@ -59,7 +59,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The result of processing the task.
-     * @return a CompletableFuture of taskProcessingResultCollectionResponse
+     * @return a CompletableFuture of TaskProcessingResultCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskProcessingResultCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * The result of processing the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taskProcessingResultCollectionResponse
+     * @return a CompletableFuture of TaskProcessingResultCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskProcessingResultCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskProcessingResultsRequestBuilder
+     * @return a TaskProcessingResultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -38,7 +38,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Zero or more managed app registrations that belong to the user.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
@@ -47,7 +47,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Zero or more managed app registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

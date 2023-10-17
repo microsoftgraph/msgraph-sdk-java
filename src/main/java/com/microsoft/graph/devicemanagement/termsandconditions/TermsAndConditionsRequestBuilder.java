@@ -60,7 +60,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the termsAndConditions objects.
-     * @return a CompletableFuture of termsAndConditionsCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the termsAndConditions objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new termsAndConditions object.
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
      * Create a new termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a termsAndConditionsRequestBuilder
+     * @return a TermsAndConditionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TermsAndConditionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

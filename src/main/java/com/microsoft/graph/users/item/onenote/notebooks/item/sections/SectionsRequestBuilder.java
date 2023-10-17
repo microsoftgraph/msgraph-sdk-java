@@ -59,8 +59,8 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/notebooks/{notebook%2Did}/sections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook.
+     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OnenoteSectionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new onenoteSection in the specified notebook.
+     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new onenoteSection in the specified notebook.
+     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OnenoteSection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook.
+     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook.
+     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new onenoteSection in the specified notebook.
+     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new onenoteSection in the specified notebook.
+     * Create a new onenoteSection in the specified notebook. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sectionsRequestBuilder
+     * @return a SectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return new SectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of onenoteSection objects from the specified notebook.
+     * Retrieve a list of onenoteSection objects from the specified notebook. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -181,7 +181,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -189,7 +189,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -202,8 +202,8 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
-     * @return a CompletableFuture of call
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Call
      * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -211,9 +211,9 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -227,7 +227,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property calls in communications
      * @param body The request body
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> patch(@jakarta.annotation.Nonnull final Call body) {
@@ -237,7 +237,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calls in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> patch(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -249,7 +249,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Call::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -257,7 +257,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -276,7 +276,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -284,7 +284,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -353,7 +353,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Retrieve the properties and relationships of a call object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -20,7 +20,7 @@ public class DataSource extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The display name of the dataSource. This will be the name of the SharePoint site.
+     * The display name of the dataSource and is the name of the SharePoint site.
      */
     private String displayName;
     /**
@@ -28,7 +28,7 @@ public class DataSource extends Entity implements Parsable {
      */
     private DataSourceHoldStatus holdStatus;
     /**
-     * Instantiates a new dataSource and sets the default values.
+     * Instantiates a new DataSource and sets the default values.
      */
     public DataSource() {
         super();
@@ -36,7 +36,7 @@ public class DataSource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataSource
+     * @return a DataSource
      */
     @jakarta.annotation.Nonnull
     public static DataSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DataSource extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the dataSource.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -69,8 +69,8 @@ public class DataSource extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
-     * @return a string
+     * Gets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class DataSource extends Entity implements Parsable {
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-     * @return a dataSourceHoldStatus
+     * @return a DataSourceHoldStatus
      */
     @jakarta.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
@@ -124,7 +124,7 @@ public class DataSource extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
+     * Sets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

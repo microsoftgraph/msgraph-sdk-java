@@ -129,7 +129,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get directory from roleManagement
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
@@ -138,7 +138,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +151,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property directory in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -161,7 +161,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property directory in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -263,7 +263,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoryRequestBuilder
+     * @return a DirectoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

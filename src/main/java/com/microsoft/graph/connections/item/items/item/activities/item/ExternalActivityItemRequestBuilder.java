@@ -65,7 +65,7 @@ public class ExternalActivityItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of activities performed on the item. Write-only.
-     * @return a CompletableFuture of externalActivity
+     * @return a CompletableFuture of ExternalActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalActivity> get() {
@@ -74,7 +74,7 @@ public class ExternalActivityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of activities performed on the item. Write-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalActivity
+     * @return a CompletableFuture of ExternalActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ExternalActivityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property activities in connections
      * @param body The request body
-     * @return a CompletableFuture of externalActivity
+     * @return a CompletableFuture of ExternalActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalActivity> patch(@jakarta.annotation.Nonnull final ExternalActivity body) {
@@ -97,7 +97,7 @@ public class ExternalActivityItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property activities in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalActivity
+     * @return a CompletableFuture of ExternalActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalActivity> patch(@jakarta.annotation.Nonnull final ExternalActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

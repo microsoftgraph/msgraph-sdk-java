@@ -46,7 +46,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     private String webId;
     /**
-     * Instantiates a new sharepointIds and sets the default values.
+     * Instantiates a new SharepointIds and sets the default values.
      */
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nonnull
     public static SharepointIds createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
         return new SharepointIds();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getListId() {
@@ -96,7 +96,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the listItemId property value. An integer identifier for the item within the containing list.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getListItemId() {
@@ -104,7 +104,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getListItemUniqueId() {
@@ -112,7 +112,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -120,7 +120,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSiteId() {
@@ -128,7 +128,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the siteUrl property value. The SharePoint URL for the site that contains the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSiteUrl() {
@@ -136,7 +136,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantId property value. The unique identifier (guid) for the tenancy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -144,7 +144,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebId() {
@@ -167,8 +167,8 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

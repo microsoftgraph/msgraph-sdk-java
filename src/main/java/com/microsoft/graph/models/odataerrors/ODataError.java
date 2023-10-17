@@ -35,7 +35,7 @@ public class ODataError extends ApiException implements AdditionalDataHolder, Pa
         return new ODataError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,12 +62,12 @@ public class ODataError extends ApiException implements AdditionalDataHolder, Pa
     }
     /**
      * The primary error message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nonnull
     @Override
     public String getMessage() {
-        return this.error.getMessage();
+        return this.getError().getMessage();
     }
     /**
      * Serializes information the current object
@@ -79,8 +79,8 @@ public class ODataError extends ApiException implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

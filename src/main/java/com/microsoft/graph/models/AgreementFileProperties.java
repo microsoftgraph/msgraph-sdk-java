@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileProperties extends Entity implements Parsable {
     /**
-     * The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime createdDateTime;
     /**
@@ -26,7 +26,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     private String fileName;
     /**
-     * If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      */
     private Boolean isDefault;
     /**
@@ -38,7 +38,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     private String language;
     /**
-     * Instantiates a new agreementFileProperties and sets the default values.
+     * Instantiates a new AgreementFileProperties and sets the default values.
      */
     public AgreementFileProperties() {
         super();
@@ -46,7 +46,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreementFileProperties
+     * @return a AgreementFileProperties
      */
     @jakarta.annotation.Nonnull
     public static AgreementFileProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
         return new AgreementFileProperties();
     }
     /**
-     * Gets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the createdDateTime property value. The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -96,7 +96,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the fileData property value. Data that represents the terms of use PDF document. Read-only.
-     * @return a agreementFileData
+     * @return a AgreementFileData
      */
     @jakarta.annotation.Nullable
     public AgreementFileData getFileData() {
@@ -104,15 +104,15 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
     /**
-     * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
-     * @return a boolean
+     * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -120,7 +120,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMajorVersion() {
@@ -128,7 +128,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -150,7 +150,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
         writer.writeStringValue("language", this.getLanguage());
     }
     /**
-     * Sets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the createdDateTime property value. The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -178,7 +178,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
         this.fileName = value;
     }
     /**
-     * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {

@@ -18,7 +18,7 @@ public class CustomSecurityAttributeValue implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * Instantiates a new customSecurityAttributeValue and sets the default values.
+     * Instantiates a new CustomSecurityAttributeValue and sets the default values.
      */
     public CustomSecurityAttributeValue() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class CustomSecurityAttributeValue implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customSecurityAttributeValue
+     * @return a CustomSecurityAttributeValue
      */
     @jakarta.annotation.Nonnull
     public static CustomSecurityAttributeValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class CustomSecurityAttributeValue implements AdditionalDataHolder, Parsa
         return new CustomSecurityAttributeValue();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class CustomSecurityAttributeValue implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -69,8 +69,8 @@ public class CustomSecurityAttributeValue implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

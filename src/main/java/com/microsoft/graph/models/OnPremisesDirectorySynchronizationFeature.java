@@ -94,7 +94,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     private Boolean userWritebackEnabled;
     /**
-     * Instantiates a new onPremisesDirectorySynchronizationFeature and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronizationFeature and sets the default values.
      */
     public OnPremisesDirectorySynchronizationFeature() {
         this.setAdditionalData(new HashMap<>());
@@ -102,7 +102,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesDirectorySynchronizationFeature
+     * @return a OnPremisesDirectorySynchronizationFeature
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronizationFeature createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -110,7 +110,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return new OnPremisesDirectorySynchronizationFeature();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the blockCloudObjectTakeoverThroughHardMatchEnabled property value. Used to block cloud object takeover via source anchor hard match if enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockCloudObjectTakeoverThroughHardMatchEnabled() {
@@ -127,7 +127,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the blockSoftMatchEnabled property value. Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSoftMatchEnabled() {
@@ -135,7 +135,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassDirSyncOverridesEnabled() {
@@ -143,7 +143,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the cloudPasswordPolicyForPasswordSyncedUsersEnabled property value. Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCloudPasswordPolicyForPasswordSyncedUsersEnabled() {
@@ -151,7 +151,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the concurrentCredentialUpdateEnabled property value. Used to enable concurrent user credentials update in OrgId.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConcurrentCredentialUpdateEnabled() {
@@ -159,7 +159,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the concurrentOrgIdProvisioningEnabled property value. Used to enable concurrent user creation in OrgId.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConcurrentOrgIdProvisioningEnabled() {
@@ -167,7 +167,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the deviceWritebackEnabled property value. Used to indicate that device write-back is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceWritebackEnabled() {
@@ -175,7 +175,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDirectoryExtensionsEnabled() {
@@ -212,7 +212,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the fopeConflictResolutionEnabled property value. Used to indicate that for a Microsoft Forefront Online Protection for Exchange (FOPE) migrated tenant, the conflicting proxy address should be migrated over.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFopeConflictResolutionEnabled() {
@@ -220,7 +220,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the groupWriteBackEnabled property value. Used to enable object-level group writeback feature for additional group types.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGroupWriteBackEnabled() {
@@ -228,7 +228,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -236,7 +236,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the passwordSyncEnabled property value. Used to indicate on-premise password synchronization is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordSyncEnabled() {
@@ -244,7 +244,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordWritebackEnabled() {
@@ -252,7 +252,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the quarantineUponProxyAddressesConflictEnabled property value. Used to indicate that we should quarantine objects with conflicting proxy address.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getQuarantineUponProxyAddressesConflictEnabled() {
@@ -260,7 +260,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the quarantineUponUpnConflictEnabled property value. Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getQuarantineUponUpnConflictEnabled() {
@@ -268,7 +268,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the softMatchOnUpnEnabled property value. Used to indicate that we should soft match objects based on userPrincipalName.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSoftMatchOnUpnEnabled() {
@@ -276,7 +276,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the synchronizeUpnForManagedUsersEnabled property value. Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSynchronizeUpnForManagedUsersEnabled() {
@@ -284,7 +284,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the unifiedGroupWritebackEnabled property value. Used to indicate that Microsoft 365 Group write-back is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnifiedGroupWritebackEnabled() {
@@ -292,7 +292,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the userForcePasswordChangeOnLogonEnabled property value. Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUserForcePasswordChangeOnLogonEnabled() {
@@ -300,7 +300,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
     }
     /**
      * Gets the userWritebackEnabled property value. Used to indicate that user writeback is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUserWritebackEnabled() {
@@ -335,8 +335,8 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

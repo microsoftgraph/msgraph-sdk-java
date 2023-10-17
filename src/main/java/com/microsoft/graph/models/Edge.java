@@ -13,7 +13,7 @@ public class Edge extends Entity implements Parsable {
      */
     private InternetExplorerMode internetExplorerMode;
     /**
-     * Instantiates a new edge and sets the default values.
+     * Instantiates a new Edge and sets the default values.
      */
     public Edge() {
         super();
@@ -21,7 +21,7 @@ public class Edge extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a edge
+     * @return a Edge
      */
     @jakarta.annotation.Nonnull
     public static Edge createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class Edge extends Entity implements Parsable {
     }
     /**
      * Gets the internetExplorerMode property value. A container for Internet Explorer mode resources.
-     * @return a internetExplorerMode
+     * @return a InternetExplorerMode
      */
     @jakarta.annotation.Nullable
     public InternetExplorerMode getInternetExplorerMode() {

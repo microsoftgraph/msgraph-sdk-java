@@ -56,8 +56,8 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a userRegistrationDetails object.
-     * @return a CompletableFuture of userRegistrationDetails
+     * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UserRegistrationDetails
      * @see <a href="https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Read the properties and relationships of a userRegistrationDetails object.
+     * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      * @see <a href="https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property userRegistrationDetails in reports
      * @param body The request body
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> patch(@jakarta.annotation.Nonnull final UserRegistrationDetails body) {
@@ -91,7 +91,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property userRegistrationDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> patch(@jakarta.annotation.Nonnull final UserRegistrationDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a userRegistrationDetails object.
+     * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a userRegistrationDetails object.
+     * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a userRegistrationDetails object.
+     * Read the properties and relationships of a userRegistrationDetails object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

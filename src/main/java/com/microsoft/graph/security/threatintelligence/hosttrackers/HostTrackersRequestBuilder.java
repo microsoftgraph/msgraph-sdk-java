@@ -59,17 +59,17 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostTrackers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a hostTracker object.
-     * @return a CompletableFuture of hostTrackerCollectionResponse
+     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of HostTrackerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTrackerCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostTrackerCollectionResponse
+     * @return a CompletableFuture of HostTrackerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTrackerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostTrackers for security
      * @param body The request body
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> post(@jakarta.annotation.Nonnull final HostTracker body) {
@@ -92,7 +92,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostTrackers for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> post(@jakarta.annotation.Nonnull final HostTracker body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostTrackersRequestBuilder
+     * @return a HostTrackersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostTrackersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
         return new HostTrackersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -64,8 +64,8 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/collaborators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get collaborators from privacy
-     * @return a CompletableFuture of userCollectionResponse
+     * Collection of users who can collaborate on the request.
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -75,9 +75,9 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -91,7 +91,7 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -102,7 +102,7 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -128,7 +128,7 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a collaboratorsRequestBuilder
+     * @return a CollaboratorsRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -139,7 +139,7 @@ public class CollaboratorsRequestBuilder extends BaseRequestBuilder {
         return new CollaboratorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get collaborators from privacy
+     * Collection of users who can collaborate on the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

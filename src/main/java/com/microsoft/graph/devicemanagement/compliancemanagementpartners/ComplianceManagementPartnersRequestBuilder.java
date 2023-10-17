@@ -60,7 +60,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the complianceManagementPartner objects.
-     * @return a CompletableFuture of complianceManagementPartnerCollectionResponse
+     * @return a CompletableFuture of ComplianceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     /**
      * List properties and relationships of the complianceManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of complianceManagementPartnerCollectionResponse
+     * @return a CompletableFuture of ComplianceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     /**
      * Create a new complianceManagementPartner object.
      * @param body The request body
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
      * Create a new complianceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a complianceManagementPartnersRequestBuilder
+     * @return a ComplianceManagementPartnersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ComplianceManagementPartnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

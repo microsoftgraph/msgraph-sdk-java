@@ -62,7 +62,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,17 +70,17 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
-     * @return a CompletableFuture of approvalCollectionResponse
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
         return get(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalCollectionResponse
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body) {
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, Approval::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentApprovalsRequestBuilder
+     * @return a AccessPackageAssignmentApprovalsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -186,7 +186,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return new AccessPackageAssignmentApprovalsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

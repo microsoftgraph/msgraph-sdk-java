@@ -38,7 +38,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new visualInfo and sets the default values.
+     * Instantiates a new VisualInfo and sets the default values.
      */
     public VisualInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a visualInfo
+     * @return a VisualInfo
      */
     @jakarta.annotation.Nonnull
     public static VisualInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         return new VisualInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
-     * @return a imageInfo
+     * @return a ImageInfo
      */
     @jakarta.annotation.Nullable
     public ImageInfo getAttribution() {
@@ -71,7 +71,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBackgroundColor() {
@@ -87,7 +87,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -95,7 +95,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayText() {
@@ -118,7 +118,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

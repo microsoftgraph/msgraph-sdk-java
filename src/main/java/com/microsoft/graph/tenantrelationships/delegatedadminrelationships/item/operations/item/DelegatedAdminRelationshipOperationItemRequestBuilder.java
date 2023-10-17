@@ -56,8 +56,8 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object.
-     * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DelegatedAdminRelationshipOperation
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * @return a CompletableFuture of DelegatedAdminRelationshipOperation
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
     /**
      * Update the navigation property operations in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * @return a CompletableFuture of DelegatedAdminRelationshipOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperation> patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationshipOperation body) {
@@ -91,7 +91,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
      * Update the navigation property operations in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * @return a CompletableFuture of DelegatedAdminRelationshipOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperation> patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationshipOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminRelationshipOperation object.
+     * Read the properties of a delegatedAdminRelationshipOperation object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

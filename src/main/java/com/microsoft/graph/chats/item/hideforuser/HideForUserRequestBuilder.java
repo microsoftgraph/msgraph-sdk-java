@@ -35,7 +35,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/hideForUser", rawUrl);
     }
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chat-hideforuser?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chat-hideforuser?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Hide a chat for a user.
+     * Hide a chat for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class HideForUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hideForUserRequestBuilder
+     * @return a HideForUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HideForUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

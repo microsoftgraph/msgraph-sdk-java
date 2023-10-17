@@ -38,7 +38,7 @@ public class LastSharedMethodRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get lastSharedMethod from users
-     * @return a CompletableFuture of entity
+     * @return a CompletableFuture of Entity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Entity> get() {
@@ -47,7 +47,7 @@ public class LastSharedMethodRequestBuilder extends BaseRequestBuilder {
     /**
      * Get lastSharedMethod from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of entity
+     * @return a CompletableFuture of Entity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Entity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class LastSharedMethodRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastSharedMethodRequestBuilder
+     * @return a LastSharedMethodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastSharedMethodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

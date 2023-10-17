@@ -65,7 +65,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The tasks in the workflow.
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> get() {
@@ -74,7 +74,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The tasks in the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tasks in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> patch(@jakarta.annotation.Nonnull final Task body) {
@@ -97,7 +97,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tasks in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> patch(@jakarta.annotation.Nonnull final Task body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

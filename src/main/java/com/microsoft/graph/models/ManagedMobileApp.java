@@ -20,7 +20,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new managedMobileApp and sets the default values.
+     * Instantiates a new ManagedMobileApp and sets the default values.
      */
     public ManagedMobileApp() {
         super();
@@ -28,7 +28,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedMobileApp
+     * @return a ManagedMobileApp
      */
     @jakarta.annotation.Nonnull
     public static ManagedMobileApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
-     * @return a mobileAppIdentifier
+     * @return a MobileAppIdentifier
      */
     @jakarta.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
@@ -56,7 +56,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

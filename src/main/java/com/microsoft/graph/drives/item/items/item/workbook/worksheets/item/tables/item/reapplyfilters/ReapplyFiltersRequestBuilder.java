@@ -35,7 +35,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/reapplyFilters", rawUrl);
     }
     /**
-     * Reapplies all the filters currently on the table.
+     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/table-reapplyfilters?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reapplies all the filters currently on the table.
+     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/table-reapplyfilters?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reapplies all the filters currently on the table.
+     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reapplies all the filters currently on the table.
+     * Reapplies all the filters currently on the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ReapplyFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reapplyFiltersRequestBuilder
+     * @return a ReapplyFiltersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReapplyFiltersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

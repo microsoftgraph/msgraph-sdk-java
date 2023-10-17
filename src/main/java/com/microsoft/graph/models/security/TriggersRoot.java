@@ -14,7 +14,7 @@ public class TriggersRoot extends Entity implements Parsable {
      */
     private java.util.List<RetentionEvent> retentionEvents;
     /**
-     * Instantiates a new triggersRoot and sets the default values.
+     * Instantiates a new TriggersRoot and sets the default values.
      */
     public TriggersRoot() {
         super();
@@ -22,7 +22,7 @@ public class TriggersRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a triggersRoot
+     * @return a TriggersRoot
      */
     @jakarta.annotation.Nonnull
     public static TriggersRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TriggersRoot extends Entity implements Parsable {
     }
     /**
      * Gets the retentionEvents property value. The retentionEvents property
-     * @return a retentionEvent
+     * @return a java.util.List<RetentionEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RetentionEvent> getRetentionEvents() {

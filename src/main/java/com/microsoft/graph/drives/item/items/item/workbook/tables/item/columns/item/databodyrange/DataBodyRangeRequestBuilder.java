@@ -36,8 +36,8 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/dataBodyRange()", rawUrl);
     }
     /**
-     * Gets the range object associated with the data body of the column.
-     * @return a CompletableFuture of workbookRange
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,9 +45,9 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Gets the range object associated with the data body of the column.
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Gets the range object associated with the data body of the column.
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Gets the range object associated with the data body of the column.
+     * Gets the range object associated with the data body of the column. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataBodyRangeRequestBuilder
+     * @return a DataBodyRangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataBodyRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -34,7 +34,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     private Double score;
     /**
-     * Instantiates a new controlScore and sets the default values.
+     * Instantiates a new ControlScore and sets the default values.
      */
     public ControlScore() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a controlScore
+     * @return a ControlScore
      */
     @jakarta.annotation.Nonnull
     public static ControlScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         return new ControlScore();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlCategory() {
@@ -67,7 +67,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the controlName property value. Control unique name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlName() {
@@ -75,7 +75,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. Description of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -97,7 +97,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getScore() {
@@ -125,8 +125,8 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

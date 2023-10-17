@@ -39,7 +39,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}'){?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return delete(null);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -60,8 +60,8 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
-     * @return a CompletableFuture of servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,9 +69,9 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update entity in servicePrincipals by appId
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipal> patch(@jakarta.annotation.Nonnull final ServicePrincipal body) {
@@ -95,7 +95,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
      * Update entity in servicePrincipals by appId
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipal> patch(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, ServicePrincipal::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +197,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalsWithAppIdRequestBuilder
+     * @return a ServicePrincipalsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsWithAppIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -211,7 +211,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

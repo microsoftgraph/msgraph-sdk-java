@@ -60,7 +60,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentsRequestBuilder
+     * @return a RoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

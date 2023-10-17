@@ -26,7 +26,7 @@ public class Store extends Entity implements Parsable {
      */
     private java.util.List<Set> sets;
     /**
-     * Instantiates a new store and sets the default values.
+     * Instantiates a new Store and sets the default values.
      */
     public Store() {
         super();
@@ -34,7 +34,7 @@ public class Store extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a store
+     * @return a Store
      */
     @jakarta.annotation.Nonnull
     public static Store createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the defaultLanguageTag property value. Default language of the term store.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguageTag() {
@@ -64,7 +64,7 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the groups property value. Collection of all groups available in the term store.
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getGroups() {
@@ -72,7 +72,7 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the languageTags property value. List of languages for the term store.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
@@ -80,7 +80,7 @@ public class Store extends Entity implements Parsable {
     }
     /**
      * Gets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
-     * @return a set
+     * @return a java.util.List<Set>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Set> getSets() {

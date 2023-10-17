@@ -59,8 +59,8 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/apiConnectors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties of an identityApiConnector object.
-     * @return a CompletableFuture of identityApiConnectorCollectionResponse
+     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnectorCollectionResponse
+     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a apiConnectorsRequestBuilder
+     * @return a ApiConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApiConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return new ApiConnectorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

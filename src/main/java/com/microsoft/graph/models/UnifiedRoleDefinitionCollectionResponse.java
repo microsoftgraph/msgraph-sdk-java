@@ -13,7 +13,7 @@ public class UnifiedRoleDefinitionCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<UnifiedRoleDefinition> value;
     /**
-     * Instantiates a new unifiedRoleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleDefinitionCollectionResponse and sets the default values.
      */
     public UnifiedRoleDefinitionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UnifiedRoleDefinitionCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleDefinitionCollectionResponse
+     * @return a UnifiedRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnifiedRoleDefinitionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleDefinition
+     * @return a java.util.List<UnifiedRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getValue() {

@@ -38,7 +38,7 @@ public class DvarPRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action dvarP
      * @param body The request body
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final DvarPPostRequestBody body) {
@@ -48,7 +48,7 @@ public class DvarPRequestBuilder extends BaseRequestBuilder {
      * Invoke action dvarP
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final DvarPPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class DvarPRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dvarPRequestBuilder
+     * @return a DvarPRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DvarPRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -37,24 +37,24 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function availableProviderTypes
-     * @return a CompletableFuture of availableProviderTypesResponse
+     * @return a CompletableFuture of AvailableProviderTypesGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AvailableProviderTypesResponse> get() {
+    public java.util.concurrent.CompletableFuture<AvailableProviderTypesGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function availableProviderTypes
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of availableProviderTypesResponse
+     * @return a CompletableFuture of AvailableProviderTypesGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AvailableProviderTypesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AvailableProviderTypesGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AvailableProviderTypesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, AvailableProviderTypesGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function availableProviderTypes
@@ -88,7 +88,7 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a availableProviderTypesRequestBuilder
+     * @return a AvailableProviderTypesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AvailableProviderTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

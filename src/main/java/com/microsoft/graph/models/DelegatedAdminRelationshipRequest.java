@@ -26,7 +26,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      */
     private DelegatedAdminRelationshipRequestStatus status;
     /**
-     * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
+     * Instantiates a new DelegatedAdminRelationshipRequest and sets the default values.
      */
     public DelegatedAdminRelationshipRequest() {
         super();
@@ -34,7 +34,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationshipRequest
+     * @return a DelegatedAdminRelationshipRequest
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationshipRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the action property value. The action property
-     * @return a delegatedAdminRelationshipRequestAction
+     * @return a DelegatedAdminRelationshipRequestAction
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestAction getAction() {
@@ -80,7 +80,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
-     * @return a delegatedAdminRelationshipRequestStatus
+     * @return a DelegatedAdminRelationshipRequestStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequestStatus getStatus() {

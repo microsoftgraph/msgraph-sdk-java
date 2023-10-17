@@ -17,7 +17,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
      */
     private AccessPackageCustomExtensionStage stage;
     /**
-     * Instantiates a new customExtensionStageSetting and sets the default values.
+     * Instantiates a new CustomExtensionStageSetting and sets the default values.
      */
     public CustomExtensionStageSetting() {
         super();
@@ -25,7 +25,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionStageSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     }
     /**
      * Gets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
-     * @return a customCalloutExtension
+     * @return a CustomCalloutExtension
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension getCustomExtension() {
@@ -53,7 +53,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
     }
     /**
      * Gets the stage property value. The stage property
-     * @return a accessPackageCustomExtensionStage
+     * @return a AccessPackageCustomExtensionStage
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {

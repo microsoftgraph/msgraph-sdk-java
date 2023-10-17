@@ -60,7 +60,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Exposes the itemActivities represented in this itemActivityStat resource.
-     * @return a CompletableFuture of itemActivityCollectionResponse
+     * @return a CompletableFuture of ItemActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Exposes the itemActivities represented in this itemActivityStat resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityCollectionResponse
+     * @return a CompletableFuture of ItemActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to activities for drives
      * @param body The request body
-     * @return a CompletableFuture of itemActivity
+     * @return a CompletableFuture of ItemActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivity> post(@jakarta.annotation.Nonnull final ItemActivity body) {
@@ -92,7 +92,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to activities for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivity
+     * @return a CompletableFuture of ItemActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivity> post(@jakarta.annotation.Nonnull final ItemActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activitiesRequestBuilder
+     * @return a ActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

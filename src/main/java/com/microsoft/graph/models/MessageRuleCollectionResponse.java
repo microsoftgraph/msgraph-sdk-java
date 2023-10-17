@@ -13,7 +13,7 @@ public class MessageRuleCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<MessageRule> value;
     /**
-     * Instantiates a new messageRuleCollectionResponse and sets the default values.
+     * Instantiates a new MessageRuleCollectionResponse and sets the default values.
      */
     public MessageRuleCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MessageRuleCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageRuleCollectionResponse
+     * @return a MessageRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MessageRuleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MessageRuleCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a messageRule
+     * @return a java.util.List<MessageRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageRule> getValue() {

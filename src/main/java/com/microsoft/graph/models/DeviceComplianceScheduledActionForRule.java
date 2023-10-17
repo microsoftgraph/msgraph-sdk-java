@@ -20,7 +20,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      */
     private java.util.List<DeviceComplianceActionItem> scheduledActionConfigurations;
     /**
-     * Instantiates a new deviceComplianceScheduledActionForRule and sets the default values.
+     * Instantiates a new DeviceComplianceScheduledActionForRule and sets the default values.
      */
     public DeviceComplianceScheduledActionForRule() {
         super();
@@ -28,7 +28,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScheduledActionForRule
+     * @return a DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScheduledActionForRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     }
     /**
      * Gets the ruleName property value. Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
@@ -56,7 +56,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     }
     /**
      * Gets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     * @return a deviceComplianceActionItem
+     * @return a java.util.List<DeviceComplianceActionItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceActionItem> getScheduledActionConfigurations() {

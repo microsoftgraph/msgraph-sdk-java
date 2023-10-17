@@ -37,7 +37,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/appRoleAssignedTo/{appRoleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> get() {
@@ -68,7 +68,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appRoleAssignedTo in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> patch(@jakarta.annotation.Nonnull final AppRoleAssignment body) {
@@ -91,7 +91,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appRoleAssignedTo in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> patch(@jakarta.annotation.Nonnull final AppRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AppRoleAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -64,8 +64,8 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/approvers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get approvers from privacy
-     * @return a CompletableFuture of userCollectionResponse
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -75,9 +75,9 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -91,7 +91,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @return a RequestInformation
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
@@ -102,7 +102,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -128,7 +128,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a approversRequestBuilder
+     * @return a ApproversRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -139,7 +139,7 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         return new ApproversRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get approvers from privacy
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

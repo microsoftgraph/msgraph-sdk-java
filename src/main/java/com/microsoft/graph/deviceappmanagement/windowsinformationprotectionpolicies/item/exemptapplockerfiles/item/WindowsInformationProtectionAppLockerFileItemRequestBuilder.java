@@ -57,7 +57,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
     }
     /**
      * Another way to input exempt apps through xml files
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> get() {
@@ -66,7 +66,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
     /**
      * Another way to input exempt apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
     /**
      * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
@@ -89,7 +89,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
      * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

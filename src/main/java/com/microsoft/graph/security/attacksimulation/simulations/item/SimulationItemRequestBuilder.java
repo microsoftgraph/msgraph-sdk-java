@@ -2,6 +2,9 @@ package com.microsoft.graph.security.attacksimulation.simulations.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Simulation;
+import com.microsoft.graph.security.attacksimulation.simulations.item.landingpage.LandingPageRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulations.item.loginpage.LoginPageRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.simulations.item.payload.PayloadRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +23,27 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the landingPage property of the microsoft.graph.simulation entity.
+     */
+    @jakarta.annotation.Nonnull
+    public LandingPageRequestBuilder landingPage() {
+        return new LandingPageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the loginPage property of the microsoft.graph.simulation entity.
+     */
+    @jakarta.annotation.Nonnull
+    public LoginPageRequestBuilder loginPage() {
+        return new LoginPageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the payload property of the microsoft.graph.simulation entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PayloadRequestBuilder payload() {
+        return new PayloadRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new SimulationItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -56,8 +80,8 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
-     * @return a CompletableFuture of simulation
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +89,9 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +105,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property simulations in security
      * @param body The request body
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> patch(@jakarta.annotation.Nonnull final Simulation body) {
@@ -91,7 +115,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property simulations in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> patch(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +154,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +162,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +231,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

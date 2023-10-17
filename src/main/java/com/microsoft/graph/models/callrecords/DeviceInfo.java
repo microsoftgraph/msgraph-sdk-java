@@ -102,7 +102,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     private Float speakerGlitchRate;
     /**
-     * Instantiates a new deviceInfo and sets the default values.
+     * Instantiates a new DeviceInfo and sets the default values.
      */
     public DeviceInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -110,7 +110,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceInfo
+     * @return a DeviceInfo
      */
     @jakarta.annotation.Nonnull
     public static DeviceInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +118,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
         return new DeviceInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the captureDeviceDriver property value. Name of the capture device driver used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCaptureDeviceDriver() {
@@ -135,7 +135,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the captureDeviceName property value. Name of the capture device used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCaptureDeviceName() {
@@ -143,7 +143,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the captureNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the capture device was not working properly.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getCaptureNotFunctioningEventRatio() {
@@ -151,7 +151,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cpuInsufficentEventRatio property value. Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getCpuInsufficentEventRatio() {
@@ -159,7 +159,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceClippingEventRatio property value. Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getDeviceClippingEventRatio() {
@@ -167,7 +167,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceGlitchEventRatio property value. Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getDeviceGlitchEventRatio() {
@@ -206,7 +206,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHowlingEventCount() {
@@ -214,7 +214,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the initialSignalLevelRootMeanSquare property value. The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getInitialSignalLevelRootMeanSquare() {
@@ -222,7 +222,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lowSpeechLevelEventRatio property value. Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getLowSpeechLevelEventRatio() {
@@ -230,7 +230,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lowSpeechToNoiseEventRatio property value. Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getLowSpeechToNoiseEventRatio() {
@@ -238,7 +238,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getMicGlitchRate() {
@@ -246,7 +246,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -254,7 +254,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReceivedNoiseLevel() {
@@ -262,7 +262,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the receivedSignalLevel property value. Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReceivedSignalLevel() {
@@ -270,7 +270,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the renderDeviceDriver property value. Name of the render device driver used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRenderDeviceDriver() {
@@ -278,7 +278,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the renderDeviceName property value. Name of the render device used by the media endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRenderDeviceName() {
@@ -286,7 +286,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the renderMuteEventRatio property value. Fraction of the call that media endpoint detected device render is muted.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getRenderMuteEventRatio() {
@@ -294,7 +294,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the renderNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the render device was not working properly.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getRenderNotFunctioningEventRatio() {
@@ -302,7 +302,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the renderZeroVolumeEventRatio property value. Fraction of the call that media endpoint detected device render volume is set to 0.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getRenderZeroVolumeEventRatio() {
@@ -310,7 +310,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentNoiseLevel property value. Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSentNoiseLevel() {
@@ -318,7 +318,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentSignalLevel property value. Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSentSignalLevel() {
@@ -326,7 +326,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getSpeakerGlitchRate() {
@@ -363,8 +363,8 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

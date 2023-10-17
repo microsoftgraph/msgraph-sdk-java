@@ -98,7 +98,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     private Boolean tamperProtectionEnabled;
     /**
-     * Instantiates a new windowsProtectionState and sets the default values.
+     * Instantiates a new WindowsProtectionState and sets the default values.
      */
     public WindowsProtectionState() {
         super();
@@ -106,7 +106,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsProtectionState
+     * @return a WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public static WindowsProtectionState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -115,7 +115,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the antiMalwareVersion property value. Current anti malware version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAntiMalwareVersion() {
@@ -123,7 +123,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the detectedMalwareState property value. Device malware list
-     * @return a windowsDeviceMalwareState
+     * @return a java.util.List<WindowsDeviceMalwareState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDeviceMalwareState> getDetectedMalwareState() {
@@ -131,7 +131,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
-     * @return a windowsDeviceHealthState
+     * @return a EnumSet<WindowsDeviceHealthState>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsDeviceHealthState> getDeviceState() {
@@ -139,7 +139,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the engineVersion property value. Current endpoint protection engine's version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEngineVersion() {
@@ -177,7 +177,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the fullScanOverdue property value. When TRUE indicates full scan is overdue, when FALSE indicates full scan is not overdue. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScanOverdue() {
@@ -185,7 +185,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the fullScanRequired property value. When TRUE indicates full scan is required, when FALSE indicates full scan is not required. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScanRequired() {
@@ -193,7 +193,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the isVirtualMachine property value. When TRUE indicates the device is a virtual machine, when FALSE indicates the device is not a virtual machine. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVirtualMachine() {
@@ -209,7 +209,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the lastFullScanSignatureVersion property value. Last full scan signature version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastFullScanSignatureVersion() {
@@ -225,7 +225,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the lastQuickScanSignatureVersion property value. Last quick scan signature version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastQuickScanSignatureVersion() {
@@ -241,7 +241,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the malwareProtectionEnabled property value. When TRUE indicates anti malware is enabled when FALSE indicates anti malware is not enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMalwareProtectionEnabled() {
@@ -249,7 +249,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the networkInspectionSystemEnabled property value. When TRUE indicates network inspection system enabled, when FALSE indicates network inspection system is not enabled. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNetworkInspectionSystemEnabled() {
@@ -257,7 +257,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
-     * @return a windowsDefenderProductStatus
+     * @return a EnumSet<WindowsDefenderProductStatus>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsDefenderProductStatus> getProductStatus() {
@@ -265,7 +265,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the quickScanOverdue property value. When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getQuickScanOverdue() {
@@ -273,7 +273,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the realTimeProtectionEnabled property value. When TRUE indicates real time protection is enabled, when FALSE indicates real time protection is not enabled. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRealTimeProtectionEnabled() {
@@ -281,7 +281,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the rebootRequired property value. When TRUE indicates reboot is required, when FALSE indicates when TRUE indicates reboot is not required. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRebootRequired() {
@@ -289,7 +289,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the signatureUpdateOverdue property value. When TRUE indicates signature is out of date, when FALSE indicates signature is not out of date. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSignatureUpdateOverdue() {
@@ -297,7 +297,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the signatureVersion property value. Current malware definitions version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignatureVersion() {
@@ -305,7 +305,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     }
     /**
      * Gets the tamperProtectionEnabled property value. When TRUE indicates the Windows Defender tamper protection feature is enabled, when FALSE indicates the Windows Defender tamper protection feature is not enabled. Defaults to setting on client device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTamperProtectionEnabled() {

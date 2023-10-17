@@ -37,7 +37,7 @@ public class UsedRangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function usedRange
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get() {
@@ -46,7 +46,7 @@ public class UsedRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function usedRange
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UsedRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usedRangeRequestBuilder
+     * @return a UsedRangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsedRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

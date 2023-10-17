@@ -17,7 +17,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     private java.util.List<PermissionGrantConditionSet> includes;
     /**
-     * Instantiates a new permissionGrantPolicy and sets the default values.
+     * Instantiates a new PermissionGrantPolicy and sets the default values.
      */
     public PermissionGrantPolicy() {
         super();
@@ -26,7 +26,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a permissionGrantPolicy
+     * @return a PermissionGrantPolicy
      */
     @jakarta.annotation.Nonnull
     public static PermissionGrantPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
-     * @return a permissionGrantConditionSet
+     * @return a java.util.List<PermissionGrantConditionSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getExcludes() {
@@ -54,7 +54,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
-     * @return a permissionGrantConditionSet
+     * @return a java.util.List<PermissionGrantConditionSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getIncludes() {

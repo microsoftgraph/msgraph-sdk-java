@@ -73,7 +73,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of printTasks that were triggered by this print job.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get() {
@@ -82,7 +82,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of printTasks that were triggered by this print job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tasks in print
      * @param body The request body
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@jakarta.annotation.Nonnull final PrintTask body) {
@@ -105,7 +105,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tasks in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@jakarta.annotation.Nonnull final PrintTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

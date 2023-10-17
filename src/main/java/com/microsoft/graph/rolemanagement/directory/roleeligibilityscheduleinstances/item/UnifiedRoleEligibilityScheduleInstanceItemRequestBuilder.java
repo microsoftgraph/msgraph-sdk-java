@@ -88,8 +88,8 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the instance of a role eligibility.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * Get the instance of a role eligibility.
+     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body) {
@@ -123,7 +123,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Get the instance of a role eligibility.
+     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +170,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instance of a role eligibility.
+     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -239,7 +239,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the instance of a role eligibility.
+     * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

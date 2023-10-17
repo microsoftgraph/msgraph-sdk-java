@@ -60,7 +60,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Another way to input exempt apps through xml files
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Another way to input exempt apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
@@ -92,7 +92,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionAppLockerFile
+     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exemptAppLockerFilesRequestBuilder
+     * @return a ExemptAppLockerFilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExemptAppLockerFilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> get() {
@@ -66,7 +66,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property scopedMembers in directoryRoles
      * @param body The request body
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> patch(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
@@ -89,7 +89,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property scopedMembers in directoryRoles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> patch(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

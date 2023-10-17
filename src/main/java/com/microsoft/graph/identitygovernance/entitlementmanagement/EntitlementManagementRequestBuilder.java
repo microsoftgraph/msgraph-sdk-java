@@ -153,7 +153,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entitlementManagement from identityGovernance
-     * @return a CompletableFuture of entitlementManagement
+     * @return a CompletableFuture of EntitlementManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagement> get() {
@@ -162,7 +162,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entitlementManagement from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of entitlementManagement
+     * @return a CompletableFuture of EntitlementManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of entitlementManagement
+     * @return a CompletableFuture of EntitlementManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagement> patch(@jakarta.annotation.Nonnull final EntitlementManagement body) {
@@ -185,7 +185,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of entitlementManagement
+     * @return a CompletableFuture of EntitlementManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagement> patch(@jakarta.annotation.Nonnull final EntitlementManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -287,7 +287,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a entitlementManagementRequestBuilder
+     * @return a EntitlementManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -65,7 +65,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sharepoint from admin
-     * @return a CompletableFuture of sharepoint
+     * @return a CompletableFuture of Sharepoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Sharepoint> get() {
@@ -74,7 +74,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sharepoint from admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharepoint
+     * @return a CompletableFuture of Sharepoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Sharepoint> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sharepoint in admin
      * @param body The request body
-     * @return a CompletableFuture of sharepoint
+     * @return a CompletableFuture of Sharepoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Sharepoint> patch(@jakarta.annotation.Nonnull final Sharepoint body) {
@@ -97,7 +97,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sharepoint in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharepoint
+     * @return a CompletableFuture of Sharepoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Sharepoint> patch(@jakarta.annotation.Nonnull final Sharepoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharepointRequestBuilder
+     * @return a SharepointRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharepointRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

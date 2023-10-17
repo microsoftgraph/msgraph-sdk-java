@@ -60,7 +60,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of troubleshooting events for the tenant.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of troubleshooting events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to troubleshootingEvents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body) {
@@ -92,7 +92,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to troubleshootingEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTroubleshootingEvent
+     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a troubleshootingEventsRequestBuilder
+     * @return a TroubleshootingEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TroubleshootingEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -69,7 +69,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the auditEvent objects.
-     * @return a CompletableFuture of auditEventCollectionResponse
+     * @return a CompletableFuture of AuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the auditEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEventCollectionResponse
+     * @return a CompletableFuture of AuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAuditActivityTypes method.
      * @param category Usage: category='{category}'
-     * @return a getAuditActivityTypesWithCategoryRequestBuilder
+     * @return a GetAuditActivityTypesWithCategoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAuditActivityTypesWithCategoryRequestBuilder getAuditActivityTypesWithCategory(@jakarta.annotation.Nonnull final String category) {
@@ -103,7 +103,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new auditEvent object.
      * @param body The request body
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
      * Create a new auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a auditEventsRequestBuilder
+     * @return a AuditEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

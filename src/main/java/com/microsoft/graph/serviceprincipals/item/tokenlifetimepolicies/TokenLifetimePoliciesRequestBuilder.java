@@ -59,7 +59,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The tokenLifetimePolicies assigned to this service principal.
-     * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
+     * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * The tokenLifetimePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
+     * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tokenLifetimePoliciesRequestBuilder
+     * @return a TokenLifetimePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

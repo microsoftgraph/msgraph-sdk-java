@@ -37,7 +37,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete a samlOrWsFedExternalDomainFederation object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/samlorwsfedexternaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete a samlOrWsFedExternalDomainFederation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/samlorwsfedexternaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> get() {
@@ -68,7 +68,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property federationConfigurations in directory
      * @param body The request body
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> patch(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
@@ -91,7 +91,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property federationConfigurations in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> patch(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IdentityProviderBase::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete a samlOrWsFedExternalDomainFederation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete a samlOrWsFedExternalDomainFederation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

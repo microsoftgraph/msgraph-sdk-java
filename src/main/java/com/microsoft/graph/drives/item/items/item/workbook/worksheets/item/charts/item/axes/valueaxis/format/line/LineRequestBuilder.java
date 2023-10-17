@@ -64,8 +64,8 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookChartLineFormat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of chartlineformat object.
+     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of chartlineformat object.
+     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartLineFormat
+     * @return a CompletableFuture of WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartlineformat object.
+     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartlineformat object.
+     * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -203,7 +203,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lineRequestBuilder
+     * @return a LineRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LineRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +217,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

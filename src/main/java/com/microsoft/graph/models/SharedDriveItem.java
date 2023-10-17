@@ -41,7 +41,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     private Site site;
     /**
-     * Instantiates a new sharedDriveItem and sets the default values.
+     * Instantiates a new SharedDriveItem and sets the default values.
      */
     public SharedDriveItem() {
         super();
@@ -50,7 +50,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedDriveItem
+     * @return a SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public static SharedDriveItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the driveItem property value. Used to access the underlying driveItem
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
@@ -84,7 +84,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getItems() {
@@ -92,7 +92,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the list property value. Used to access the underlying list
-     * @return a list
+     * @return a List
      */
     @jakarta.annotation.Nullable
     public List getList() {
@@ -100,7 +100,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the listItem property value. Used to access the underlying listItem
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nullable
     public ListItem getListItem() {
@@ -108,7 +108,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the owner property value. Information about the owner of the shared item being referenced.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOwner() {
@@ -116,7 +116,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the permission property value. Used to access the permission representing the underlying sharing link
-     * @return a permission
+     * @return a Permission
      */
     @jakarta.annotation.Nullable
     public Permission getPermission() {
@@ -124,7 +124,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the root property value. Used to access the underlying driveItem. Deprecated -- use driveItem instead.
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getRoot() {
@@ -132,7 +132,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the site property value. Used to access the underlying site
-     * @return a site
+     * @return a Site
      */
     @jakarta.annotation.Nullable
     public Site getSite() {

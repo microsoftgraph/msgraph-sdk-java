@@ -13,7 +13,7 @@ public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollecti
      */
     private java.util.List<TermsAndConditionsAssignment> value;
     /**
-     * Instantiates a new termsAndConditionsAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new TermsAndConditionsAssignmentCollectionResponse and sets the default values.
      */
     public TermsAndConditionsAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termsAndConditionsAssignmentCollectionResponse
+     * @return a TermsAndConditionsAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TermsAndConditionsAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a termsAndConditionsAssignment
+     * @return a java.util.List<TermsAndConditionsAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAssignment> getValue() {

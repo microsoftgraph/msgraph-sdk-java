@@ -57,7 +57,7 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a CompletableFuture of threatAssessmentResult
+     * @return a CompletableFuture of ThreatAssessmentResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> get() {
@@ -66,7 +66,7 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentResult
+     * @return a CompletableFuture of ThreatAssessmentResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property results in informationProtection
      * @param body The request body
-     * @return a CompletableFuture of threatAssessmentResult
+     * @return a CompletableFuture of ThreatAssessmentResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body) {
@@ -89,7 +89,7 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property results in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentResult
+     * @return a CompletableFuture of ThreatAssessmentResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

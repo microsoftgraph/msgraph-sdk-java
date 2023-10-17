@@ -9,15 +9,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable {
     /**
-     * Indicates whether the answer will be in single or multiple line format.
+     * Indicates whether the answer is in single or multiple line format.
      */
     private Boolean isSingleLineQuestion;
     /**
-     * The regular expression pattern which any answer to this question must match.
+     * The regular expression pattern that any answer to this question must match.
      */
     private String regexPattern;
     /**
-     * Instantiates a new accessPackageTextInputQuestion and sets the default values.
+     * Instantiates a new AccessPackageTextInputQuestion and sets the default values.
      */
     public AccessPackageTextInputQuestion() {
         super();
@@ -26,7 +26,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageTextInputQuestion
+     * @return a AccessPackageTextInputQuestion
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageTextInputQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,16 +45,16 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         return deserializerMap;
     }
     /**
-     * Gets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
-     * @return a boolean
+     * Gets the isSingleLineQuestion property value. Indicates whether the answer is in single or multiple line format.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSingleLineQuestion() {
         return this.isSingleLineQuestion;
     }
     /**
-     * Gets the regexPattern property value. The regular expression pattern which any answer to this question must match.
-     * @return a string
+     * Gets the regexPattern property value. The regular expression pattern that any answer to this question must match.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegexPattern() {
@@ -71,14 +71,14 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         writer.writeStringValue("regexPattern", this.getRegexPattern());
     }
     /**
-     * Sets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
+     * Sets the isSingleLineQuestion property value. Indicates whether the answer is in single or multiple line format.
      * @param value Value to set for the isSingleLineQuestion property.
      */
     public void setIsSingleLineQuestion(@jakarta.annotation.Nullable final Boolean value) {
         this.isSingleLineQuestion = value;
     }
     /**
-     * Sets the regexPattern property value. The regular expression pattern which any answer to this question must match.
+     * Sets the regexPattern property value. The regular expression pattern that any answer to this question must match.
      * @param value Value to set for the regexPattern property.
      */
     public void setRegexPattern(@jakarta.annotation.Nullable final String value) {

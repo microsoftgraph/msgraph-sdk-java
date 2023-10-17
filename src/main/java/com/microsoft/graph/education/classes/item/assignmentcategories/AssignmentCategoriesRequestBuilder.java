@@ -67,8 +67,8 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
-     * @return a CompletableFuture of educationCategoryCollectionResponse
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategoryCollectionResponse
+     * @return a CompletableFuture of EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create a new educationCategory on an educationClass. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentCategoriesRequestBuilder
+     * @return a AssignmentCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +187,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return new AssignmentCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * Retrieve a list of educationCategory objects. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

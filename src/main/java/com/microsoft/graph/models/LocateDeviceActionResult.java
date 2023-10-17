@@ -16,7 +16,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      */
     private DeviceGeoLocation deviceLocation;
     /**
-     * Instantiates a new locateDeviceActionResult and sets the default values.
+     * Instantiates a new LocateDeviceActionResult and sets the default values.
      */
     public LocateDeviceActionResult() {
         super();
@@ -24,7 +24,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a locateDeviceActionResult
+     * @return a LocateDeviceActionResult
      */
     @jakarta.annotation.Nonnull
     public static LocateDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     }
     /**
      * Gets the deviceLocation property value. device location
-     * @return a deviceGeoLocation
+     * @return a DeviceGeoLocation
      */
     @jakarta.annotation.Nullable
     public DeviceGeoLocation getDeviceLocation() {

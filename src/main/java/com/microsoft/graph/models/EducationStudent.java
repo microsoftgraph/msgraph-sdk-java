@@ -43,7 +43,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     private String studentNumber;
     /**
-     * Instantiates a new educationStudent and sets the default values.
+     * Instantiates a new EducationStudent and sets the default values.
      */
     public EducationStudent() {
         this.setAdditionalData(new HashMap<>());
@@ -51,7 +51,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationStudent
+     * @return a EducationStudent
      */
     @jakarta.annotation.Nonnull
     public static EducationStudent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         return new EducationStudent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalId property value. ID of the student in the source system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -100,7 +100,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     * @return a educationGender
+     * @return a EducationGender
      */
     @jakarta.annotation.Nullable
     public EducationGender getGender() {
@@ -108,7 +108,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the grade property value. Current grade level of the student.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGrade() {
@@ -116,7 +116,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the graduationYear property value. Year the student is graduating from the school.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGraduationYear() {
@@ -124,7 +124,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -132,7 +132,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the studentNumber property value. Student Number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStudentNumber() {
@@ -154,8 +154,8 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

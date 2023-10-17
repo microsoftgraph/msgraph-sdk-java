@@ -13,7 +13,7 @@ public class RiskyServicePrincipalCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<RiskyServicePrincipal> value;
     /**
-     * Instantiates a new riskyServicePrincipalCollectionResponse and sets the default values.
+     * Instantiates a new RiskyServicePrincipalCollectionResponse and sets the default values.
      */
     public RiskyServicePrincipalCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class RiskyServicePrincipalCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyServicePrincipalCollectionResponse
+     * @return a RiskyServicePrincipalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RiskyServicePrincipalCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class RiskyServicePrincipalCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a riskyServicePrincipal
+     * @return a java.util.List<RiskyServicePrincipal>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipal> getValue() {

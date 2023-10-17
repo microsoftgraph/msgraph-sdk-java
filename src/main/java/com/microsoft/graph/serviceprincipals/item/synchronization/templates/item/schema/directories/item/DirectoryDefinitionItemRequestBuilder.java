@@ -65,7 +65,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Contains the collection of directories and all of their objects.
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> get() {
@@ -74,7 +74,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property directories in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> patch(@jakarta.annotation.Nonnull final DirectoryDefinition body) {
@@ -97,7 +97,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property directories in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> patch(@jakarta.annotation.Nonnull final DirectoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

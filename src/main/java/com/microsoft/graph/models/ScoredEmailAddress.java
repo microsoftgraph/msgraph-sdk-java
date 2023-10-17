@@ -34,7 +34,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     private SelectionLikelihoodInfo selectionLikelihood;
     /**
-     * Instantiates a new scoredEmailAddress and sets the default values.
+     * Instantiates a new ScoredEmailAddress and sets the default values.
      */
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a scoredEmailAddress
+     * @return a ScoredEmailAddress
      */
     @jakarta.annotation.Nonnull
     public static ScoredEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         return new ScoredEmailAddress();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -81,7 +81,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the itemId property value. The itemId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
@@ -89,7 +89,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRelevanceScore() {
@@ -105,7 +105,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
-     * @return a selectionLikelihoodInfo
+     * @return a SelectionLikelihoodInfo
      */
     @jakarta.annotation.Nullable
     public SelectionLikelihoodInfo getSelectionLikelihood() {
@@ -125,8 +125,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

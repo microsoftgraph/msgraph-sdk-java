@@ -28,7 +28,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<BrowserSite> sites;
     /**
-     * Instantiates a new publishPostRequestBody and sets the default values.
+     * Instantiates a new PublishPostRequestBody and sets the default values.
      */
     public PublishPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -36,7 +36,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a publishPostRequestBody
+     * @return a PublishPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static PublishPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
         return new PublishPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the revision property value. The revision property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRevision() {
@@ -73,7 +73,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharedCookies property value. The sharedCookies property
-     * @return a browserSharedCookie
+     * @return a java.util.List<BrowserSharedCookie>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookie> getSharedCookies() {
@@ -81,7 +81,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sites property value. The sites property
-     * @return a browserSite
+     * @return a java.util.List<BrowserSite>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSite> getSites() {
@@ -99,8 +99,8 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

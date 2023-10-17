@@ -15,7 +15,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Number of the user or bot who received the call. E.164 format, but may include other data.
      */
     private String calleeNumber;
     /**
@@ -23,7 +23,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Integer callEndSubReason;
     /**
-     * Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Number of the user or bot who made the call. E.164 format, but may include other data.
      */
     private String callerNumber;
     /**
@@ -47,7 +47,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime failureDateTime;
     /**
-     * The code with which the call ended, RFC 3261.
+     * The code with which the call ended, see RFC 3261.
      */
     private Integer finalSipCode;
     /**
@@ -67,7 +67,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Boolean mediaBypassEnabled;
     /**
-     * The datacenter used for media path in non-bypass call.
+     * The datacenter used for media path in nonbypass call.
      */
     private String mediaPathLocation;
     /**
@@ -75,7 +75,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The datacenter used for signaling for both bypass and non-bypass calls.
+     * The datacenter used for signaling for both bypass and nonbypass calls.
      */
     private String signalingLocation;
     /**
@@ -103,7 +103,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new directRoutingLogRow and sets the default values.
+     * Instantiates a new DirectRoutingLogRow and sets the default values.
      */
     public DirectRoutingLogRow() {
         this.setAdditionalData(new HashMap<>());
@@ -111,7 +111,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directRoutingLogRow
+     * @return a DirectRoutingLogRow
      */
     @jakarta.annotation.Nonnull
     public static DirectRoutingLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -119,7 +119,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return new DirectRoutingLogRow();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -127,8 +127,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
-     * @return a string
+     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
@@ -136,15 +136,15 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCallEndSubReason() {
         return this.callEndSubReason;
     }
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
-     * @return a string
+     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
@@ -152,7 +152,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callType property value. Call type and direction.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
@@ -160,7 +160,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -168,7 +168,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. Duration of the call in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
@@ -222,8 +222,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the finalSipCode property value. The code with which the call ended, RFC 3261.
-     * @return a integer
+     * Gets the finalSipCode property value. The code with which the call ended, see RFC 3261.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFinalSipCode() {
@@ -231,7 +231,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
@@ -239,7 +239,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique call identifier. GUID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -255,15 +255,15 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMediaBypassEnabled() {
         return this.mediaBypassEnabled;
     }
     /**
-     * Gets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
-     * @return a string
+     * Gets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaPathLocation() {
@@ -271,15 +271,15 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
-     * @return a string
+     * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignalingLocation() {
@@ -295,7 +295,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the successfulCall property value. Success or attempt.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSuccessfulCall() {
@@ -303,7 +303,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTrunkFullyQualifiedDomainName() {
@@ -311,7 +311,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -319,7 +319,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -327,7 +327,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -364,14 +364,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
@@ -385,7 +385,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.callEndSubReason = value;
     }
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
@@ -427,7 +427,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.failureDateTime = value;
     }
     /**
-     * Sets the finalSipCode property value. The code with which the call ended, RFC 3261.
+     * Sets the finalSipCode property value. The code with which the call ended, see RFC 3261.
      * @param value Value to set for the finalSipCode property.
      */
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
@@ -462,7 +462,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.mediaBypassEnabled = value;
     }
     /**
-     * Sets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
+     * Sets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
      * @param value Value to set for the mediaPathLocation property.
      */
     public void setMediaPathLocation(@jakarta.annotation.Nullable final String value) {
@@ -476,7 +476,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
+     * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and nonbypass calls.
      * @param value Value to set for the signalingLocation property.
      */
     public void setSignalingLocation(@jakarta.annotation.Nullable final String value) {

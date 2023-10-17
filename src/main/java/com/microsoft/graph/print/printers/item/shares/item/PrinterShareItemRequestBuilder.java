@@ -38,7 +38,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> get() {
@@ -47,7 +47,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

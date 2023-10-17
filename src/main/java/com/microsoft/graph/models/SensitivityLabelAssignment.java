@@ -30,7 +30,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     private String tenantId;
     /**
-     * Instantiates a new sensitivityLabelAssignment and sets the default values.
+     * Instantiates a new SensitivityLabelAssignment and sets the default values.
      */
     public SensitivityLabelAssignment() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityLabelAssignment
+     * @return a SensitivityLabelAssignment
      */
     @jakarta.annotation.Nonnull
     public static SensitivityLabelAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
         return new SensitivityLabelAssignment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a sensitivityLabelAssignmentMethod
+     * @return a SensitivityLabelAssignmentMethod
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {
@@ -76,7 +76,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
@@ -92,7 +92,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the tenantId property value. The unique identifier for the tenant that hosts the file when this label is applied.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -111,8 +111,8 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

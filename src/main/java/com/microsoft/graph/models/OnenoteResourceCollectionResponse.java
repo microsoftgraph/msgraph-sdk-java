@@ -13,7 +13,7 @@ public class OnenoteResourceCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<OnenoteResource> value;
     /**
-     * Instantiates a new onenoteResourceCollectionResponse and sets the default values.
+     * Instantiates a new OnenoteResourceCollectionResponse and sets the default values.
      */
     public OnenoteResourceCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OnenoteResourceCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteResourceCollectionResponse
+     * @return a OnenoteResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OnenoteResourceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OnenoteResourceCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a onenoteResource
+     * @return a java.util.List<OnenoteResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteResource> getValue() {

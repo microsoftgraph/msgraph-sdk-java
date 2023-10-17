@@ -59,7 +59,7 @@ public class DataSourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Custodian sources that are included in the eDiscovery search.
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> get() {
@@ -68,7 +68,7 @@ public class DataSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Custodian sources that are included in the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

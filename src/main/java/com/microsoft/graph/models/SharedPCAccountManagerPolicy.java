@@ -37,7 +37,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     private Integer removeAccountsBelowDiskFreePercentage;
     /**
-     * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
+     * Instantiates a new SharedPCAccountManagerPolicy and sets the default values.
      */
     public SharedPCAccountManagerPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedPCAccountManagerPolicy
+     * @return a SharedPCAccountManagerPolicy
      */
     @jakarta.annotation.Nonnull
     public static SharedPCAccountManagerPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,14 +54,14 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
-     * @return a sharedPCAccountDeletionPolicyType
+     * @return a SharedPCAccountDeletionPolicyType
      */
     @jakarta.annotation.Nullable
     public SharedPCAccountDeletionPolicyType getAccountDeletionPolicy() {
         return this.accountDeletionPolicy;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the cacheAccountsAboveDiskFreePercentage property value. Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCacheAccountsAboveDiskFreePercentage() {
@@ -92,7 +92,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the inactiveThresholdDays property value. Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInactiveThresholdDays() {
@@ -100,7 +100,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -108,7 +108,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemoveAccountsBelowDiskFreePercentage() {
@@ -135,8 +135,8 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
         this.accountDeletionPolicy = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

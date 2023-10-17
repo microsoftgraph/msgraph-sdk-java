@@ -73,7 +73,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
     }
     /**
      * Represents a request to add or remove a resource to or from a catalog respectively.
-     * @return a CompletableFuture of accessPackageResourceRequest
+     * @return a CompletableFuture of AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> get() {
@@ -82,7 +82,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
     /**
      * Represents a request to add or remove a resource to or from a catalog respectively.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRequest
+     * @return a CompletableFuture of AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property resourceRequests in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRequest
+     * @return a CompletableFuture of AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRequest body) {
@@ -105,7 +105,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
      * Update the navigation property resourceRequests in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRequest
+     * @return a CompletableFuture of AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRequest> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

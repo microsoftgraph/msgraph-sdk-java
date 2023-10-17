@@ -65,7 +65,7 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of associatedTeamInfo objects that a user is associated with.
-     * @return a CompletableFuture of associatedTeamInfo
+     * @return a CompletableFuture of AssociatedTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfo> get() {
@@ -74,7 +74,7 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of associatedTeamInfo objects that a user is associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of associatedTeamInfo
+     * @return a CompletableFuture of AssociatedTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property associatedTeams in users
      * @param body The request body
-     * @return a CompletableFuture of associatedTeamInfo
+     * @return a CompletableFuture of AssociatedTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfo> patch(@jakarta.annotation.Nonnull final AssociatedTeamInfo body) {
@@ -97,7 +97,7 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property associatedTeams in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of associatedTeamInfo
+     * @return a CompletableFuture of AssociatedTeamInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfo> patch(@jakarta.annotation.Nonnull final AssociatedTeamInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

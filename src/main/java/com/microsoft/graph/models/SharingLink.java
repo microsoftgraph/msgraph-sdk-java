@@ -42,7 +42,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new sharingLink and sets the default values.
+     * Instantiates a new SharingLink and sets the default values.
      */
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharingLink
+     * @return a SharingLink
      */
     @jakarta.annotation.Nonnull
     public static SharingLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
         return new SharingLink();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the application property value. The app the link is associated with.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getApplication() {
@@ -91,7 +91,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventsDownload() {
@@ -107,7 +107,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScope() {
@@ -115,7 +115,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type of the link created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -123,7 +123,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebHtml() {
@@ -131,7 +131,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
@@ -153,8 +153,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

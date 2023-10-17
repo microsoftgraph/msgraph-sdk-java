@@ -18,7 +18,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
      */
     private DateTimeTimeZone completedDateTime;
     /**
-     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      */
     private DateTimeTimeZone dueDateTime;
     /**
@@ -34,7 +34,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
      */
     private DateTimeTimeZone startDateTime;
     /**
-     * Instantiates a new followupFlag and sets the default values.
+     * Instantiates a new FollowupFlag and sets the default values.
      */
     public FollowupFlag() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a followupFlag
+     * @return a FollowupFlag
      */
     @jakarta.annotation.Nonnull
     public static FollowupFlag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         return new FollowupFlag();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,15 +59,15 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date and time that the follow-up was finished.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getCompletedDateTime() {
         return this.completedDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
-     * @return a dateTimeTimeZone
+     * Gets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -89,7 +89,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     * @return a followupFlagStatus
+     * @return a FollowupFlagStatus
      */
     @jakarta.annotation.Nullable
     public FollowupFlagStatus getFlagStatus() {
@@ -97,7 +97,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the startDateTime property value. The date and time that the follow-up is to begin.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -125,8 +125,8 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -139,7 +139,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this.completedDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Sets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {

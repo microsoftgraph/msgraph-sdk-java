@@ -35,7 +35,7 @@ public class EnableSmsSignInRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/phoneMethods/{phoneAuthenticationMethod%2Did}/enableSmsSignIn", rawUrl);
     }
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled:
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-enablesmssignin?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class EnableSmsSignInRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled:
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-enablesmssignin?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class EnableSmsSignInRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled:
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class EnableSmsSignInRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled:
+     * Enable SMS sign-in for an existing mobile phone number registered to a user. To be successfully enabled: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class EnableSmsSignInRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a enableSmsSignInRequestBuilder
+     * @return a EnableSmsSignInRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EnableSmsSignInRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

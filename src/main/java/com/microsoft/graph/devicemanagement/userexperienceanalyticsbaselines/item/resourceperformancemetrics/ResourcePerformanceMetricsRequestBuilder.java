@@ -38,7 +38,7 @@ public class ResourcePerformanceMetricsRequestBuilder extends BaseRequestBuilder
     }
     /**
      * The scores and insights for the resource performance metrics.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get() {
@@ -47,7 +47,7 @@ public class ResourcePerformanceMetricsRequestBuilder extends BaseRequestBuilder
     /**
      * The scores and insights for the resource performance metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ResourcePerformanceMetricsRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourcePerformanceMetricsRequestBuilder
+     * @return a ResourcePerformanceMetricsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourcePerformanceMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

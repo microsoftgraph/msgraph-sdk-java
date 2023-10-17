@@ -60,7 +60,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     }
     /**
      * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * Create a new windowsAutopilotDeviceIdentity object.
      * @param body The request body
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
      * Create a new windowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsAutopilotDeviceIdentitiesRequestBuilder
+     * @return a WindowsAutopilotDeviceIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsAutopilotDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

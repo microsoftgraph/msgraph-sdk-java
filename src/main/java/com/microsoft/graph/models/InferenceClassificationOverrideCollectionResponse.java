@@ -13,7 +13,7 @@ public class InferenceClassificationOverrideCollectionResponse extends BaseColle
      */
     private java.util.List<InferenceClassificationOverride> value;
     /**
-     * Instantiates a new inferenceClassificationOverrideCollectionResponse and sets the default values.
+     * Instantiates a new InferenceClassificationOverrideCollectionResponse and sets the default values.
      */
     public InferenceClassificationOverrideCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class InferenceClassificationOverrideCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inferenceClassificationOverrideCollectionResponse
+     * @return a InferenceClassificationOverrideCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static InferenceClassificationOverrideCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class InferenceClassificationOverrideCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a inferenceClassificationOverride
+     * @return a java.util.List<InferenceClassificationOverride>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InferenceClassificationOverride> getValue() {

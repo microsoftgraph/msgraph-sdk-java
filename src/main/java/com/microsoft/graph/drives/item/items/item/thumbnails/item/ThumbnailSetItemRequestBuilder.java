@@ -57,7 +57,7 @@ public class ThumbnailSetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
-     * @return a CompletableFuture of thumbnailSet
+     * @return a CompletableFuture of ThumbnailSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThumbnailSet> get() {
@@ -66,7 +66,7 @@ public class ThumbnailSetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of thumbnailSet
+     * @return a CompletableFuture of ThumbnailSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThumbnailSet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ThumbnailSetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property thumbnails in drives
      * @param body The request body
-     * @return a CompletableFuture of thumbnailSet
+     * @return a CompletableFuture of ThumbnailSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThumbnailSet> patch(@jakarta.annotation.Nonnull final ThumbnailSet body) {
@@ -89,7 +89,7 @@ public class ThumbnailSetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property thumbnails in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of thumbnailSet
+     * @return a CompletableFuture of ThumbnailSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThumbnailSet> patch(@jakarta.annotation.Nonnull final ThumbnailSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

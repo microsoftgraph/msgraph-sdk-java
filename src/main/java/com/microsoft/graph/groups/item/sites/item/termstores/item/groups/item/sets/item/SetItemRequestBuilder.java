@@ -89,7 +89,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All sets under the group in a term [store].
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> get() {
@@ -98,7 +98,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sets in groups
      * @param body The request body
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> patch(@jakarta.annotation.Nonnull final Set body) {
@@ -121,7 +121,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sets in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> patch(@jakarta.annotation.Nonnull final Set body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

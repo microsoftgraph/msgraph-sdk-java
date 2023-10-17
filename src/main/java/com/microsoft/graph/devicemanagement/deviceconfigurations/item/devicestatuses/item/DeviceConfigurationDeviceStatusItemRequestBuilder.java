@@ -59,7 +59,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     }
     /**
      * Read properties and relationships of the deviceConfigurationDeviceStatus object.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     /**
      * Read properties and relationships of the deviceConfigurationDeviceStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     /**
      * Update the properties of a deviceConfigurationDeviceStatus object.
      * @param body The request body
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
      * Update the properties of a deviceConfigurationDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

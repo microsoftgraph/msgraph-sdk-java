@@ -30,7 +30,7 @@ public class HostCookie extends Artifact implements Parsable {
      */
     private String name;
     /**
-     * Instantiates a new hostCookie and sets the default values.
+     * Instantiates a new HostCookie and sets the default values.
      */
     public HostCookie() {
         super();
@@ -39,7 +39,7 @@ public class HostCookie extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostCookie
+     * @return a HostCookie
      */
     @jakarta.annotation.Nonnull
     public static HostCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class HostCookie extends Artifact implements Parsable {
     }
     /**
      * Gets the domain property value. The URI for which the cookie is valid.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -78,7 +78,7 @@ public class HostCookie extends Artifact implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -94,7 +94,7 @@ public class HostCookie extends Artifact implements Parsable {
     }
     /**
      * Gets the name property value. The name of the cookie, for example, JSESSIONID or SEARCH_NAMESITE.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {

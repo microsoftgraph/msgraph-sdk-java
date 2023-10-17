@@ -29,7 +29,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      */
     private Long saasAppId;
     /**
-     * Instantiates a new cloudApplicationEvidence and sets the default values.
+     * Instantiates a new CloudApplicationEvidence and sets the default values.
      */
     public CloudApplicationEvidence() {
         super();
@@ -38,7 +38,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudApplicationEvidence
+     * @return a CloudApplicationEvidence
      */
     @jakarta.annotation.Nonnull
     public static CloudApplicationEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the appId property value. Unique identifier of the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getAppId() {
@@ -55,7 +55,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the displayName property value. Name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -77,7 +77,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getInstanceId() {
@@ -85,7 +85,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the instanceName property value. Name of the instance of the SaaS application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstanceName() {
@@ -93,7 +93,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     }
     /**
      * Gets the saasAppId property value. The identifier of the SaaS application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSaasAppId() {

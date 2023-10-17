@@ -38,7 +38,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     private String replacesCallId;
     /**
-     * Instantiates a new invitationParticipantInfo and sets the default values.
+     * Instantiates a new InvitationParticipantInfo and sets the default values.
      */
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitationParticipantInfo
+     * @return a InvitationParticipantInfo
      */
     @jakarta.annotation.Nonnull
     public static InvitationParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         return new InvitationParticipantInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the hidden property value. Optional. Whether to hide the participant from the roster.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -86,7 +86,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -94,7 +94,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the participantId property value. Optional. The ID of the target participant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
@@ -110,7 +110,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRemoveFromDefaultAudioRoutingGroup() {
@@ -118,7 +118,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReplacesCallId() {
@@ -139,8 +139,8 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

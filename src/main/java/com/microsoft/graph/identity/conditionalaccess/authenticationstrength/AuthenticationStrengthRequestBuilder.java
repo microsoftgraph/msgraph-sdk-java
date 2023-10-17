@@ -73,7 +73,7 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get authenticationStrength from identity
-     * @return a CompletableFuture of authenticationStrengthRoot
+     * @return a CompletableFuture of AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthRoot> get() {
@@ -82,7 +82,7 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
     /**
      * Get authenticationStrength from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthRoot
+     * @return a CompletableFuture of AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authenticationStrength in identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthRoot
+     * @return a CompletableFuture of AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthRoot> patch(@jakarta.annotation.Nonnull final AuthenticationStrengthRoot body) {
@@ -105,7 +105,7 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authenticationStrength in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthRoot
+     * @return a CompletableFuture of AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthRoot> patch(@jakarta.annotation.Nonnull final AuthenticationStrengthRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationStrengthRequestBuilder
+     * @return a AuthenticationStrengthRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

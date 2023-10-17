@@ -37,24 +37,24 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
     }
     /**
      * Invoke function getAttackSimulationRepeatOffenders
-     * @return a CompletableFuture of getAttackSimulationRepeatOffendersResponse
+     * @return a CompletableFuture of GetAttackSimulationRepeatOffendersGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getAttackSimulationRepeatOffenders
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAttackSimulationRepeatOffendersResponse
+     * @return a CompletableFuture of GetAttackSimulationRepeatOffendersGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetAttackSimulationRepeatOffendersResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetAttackSimulationRepeatOffendersGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getAttackSimulationRepeatOffenders
@@ -88,7 +88,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAttackSimulationRepeatOffendersRequestBuilder
+     * @return a GetAttackSimulationRepeatOffendersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAttackSimulationRepeatOffendersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

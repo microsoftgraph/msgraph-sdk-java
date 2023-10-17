@@ -30,7 +30,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     private String resourceId;
     /**
-     * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.
+     * Instantiates a new BatchRecordDecisionsPostRequestBody and sets the default values.
      */
     public BatchRecordDecisionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a batchRecordDecisionsPostRequestBody
+     * @return a BatchRecordDecisionsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static BatchRecordDecisionsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
         return new BatchRecordDecisionsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the decision property value. The decision property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDecision() {
@@ -76,7 +76,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the justification property value. The justification property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -84,7 +84,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the principalId property value. The principalId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
@@ -92,7 +92,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the resourceId property value. The resourceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -111,8 +111,8 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

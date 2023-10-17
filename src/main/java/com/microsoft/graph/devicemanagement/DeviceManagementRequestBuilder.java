@@ -504,8 +504,8 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceManagement object.
-     * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
@@ -514,8 +514,8 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -528,7 +528,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEffectivePermissions method.
      * @param scope Usage: scope='{scope}'
-     * @return a getEffectivePermissionsWithScopeRequestBuilder
+     * @return a GetEffectivePermissionsWithScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEffectivePermissionsWithScopeRequestBuilder getEffectivePermissionsWithScope(@jakarta.annotation.Nonnull final String scope) {
@@ -538,8 +538,8 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceManagement object.
      * @param body The request body
-     * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-androidforwork-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
@@ -549,8 +549,8 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-androidforwork-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -625,7 +625,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param domainName Usage: domainName='{domainName}'
-     * @return a verifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder verifyWindowsEnrollmentAutoDiscoveryWithDomainName(@jakarta.annotation.Nonnull final String domainName) {
@@ -635,7 +635,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceManagementRequestBuilder
+     * @return a DeviceManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

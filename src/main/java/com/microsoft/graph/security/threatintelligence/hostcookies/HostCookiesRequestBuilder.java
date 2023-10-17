@@ -59,17 +59,17 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostCookies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a hostCookie object.
-     * @return a CompletableFuture of hostCookieCollectionResponse
+     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of HostCookieCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostCookie object.
+     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCookieCollectionResponse
+     * @return a CompletableFuture of HostCookieCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostCookies for security
      * @param body The request body
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body) {
@@ -92,7 +92,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostCookies for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostCookie::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a hostCookie object.
+     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostCookie object.
+     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostCookiesRequestBuilder
+     * @return a HostCookiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostCookiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return new HostCookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a hostCookie object.
+     * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

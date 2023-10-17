@@ -25,7 +25,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      */
     private java.util.List<RubricQualitySelectedColumnModel> rubricQualitySelectedLevels;
     /**
-     * Instantiates a new educationRubricOutcome and sets the default values.
+     * Instantiates a new EducationRubricOutcome and sets the default values.
      */
     public EducationRubricOutcome() {
         super();
@@ -34,7 +34,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationRubricOutcome
+     * @return a EducationRubricOutcome
      */
     @jakarta.annotation.Nonnull
     public static EducationRubricOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
-     * @return a rubricQualityFeedbackModel
+     * @return a java.util.List<RubricQualityFeedbackModel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQualityFeedbackModel> getPublishedRubricQualityFeedback() {
@@ -64,7 +64,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the publishedRubricQualitySelectedLevels property value. A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
-     * @return a rubricQualitySelectedColumnModel
+     * @return a java.util.List<RubricQualitySelectedColumnModel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQualitySelectedColumnModel> getPublishedRubricQualitySelectedLevels() {
@@ -72,7 +72,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the rubricQualityFeedback property value. A collection of specific feedback for each quality of this rubric.
-     * @return a rubricQualityFeedbackModel
+     * @return a java.util.List<RubricQualityFeedbackModel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQualityFeedbackModel> getRubricQualityFeedback() {
@@ -80,7 +80,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     }
     /**
      * Gets the rubricQualitySelectedLevels property value. The level that the teacher has selected for each quality while grading this assignment.
-     * @return a rubricQualitySelectedColumnModel
+     * @return a java.util.List<RubricQualitySelectedColumnModel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQualitySelectedColumnModel> getRubricQualitySelectedLevels() {

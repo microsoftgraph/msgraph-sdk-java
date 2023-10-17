@@ -59,8 +59,8 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of queries associated with an eDiscovery review set.
-     * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
+     * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of queries associated with an eDiscovery review set.
+     * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EdiscoveryReviewSetQueryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new ediscoveryReviewSetQuery object.
+     * Create a new ediscoveryReviewSetQuery object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new ediscoveryReviewSetQuery object.
+     * Create a new ediscoveryReviewSetQuery object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EdiscoveryReviewSetQuery::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of queries associated with an eDiscovery review set.
+     * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of queries associated with an eDiscovery review set.
+     * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoveryReviewSetQuery object.
+     * Create a new ediscoveryReviewSetQuery object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoveryReviewSetQuery object.
+     * Create a new ediscoveryReviewSetQuery object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a queriesRequestBuilder
+     * @return a QueriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public QueriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return new QueriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of queries associated with an eDiscovery review set.
+     * Get the list of queries associated with an eDiscovery review set. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

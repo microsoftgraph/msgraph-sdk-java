@@ -57,7 +57,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deploymentSummaryRequestBuilder
+     * @return a DeploymentSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeploymentSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

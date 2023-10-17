@@ -65,7 +65,7 @@ public class MajorGridlinesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
-     * @return a CompletableFuture of workbookChartGridlines
+     * @return a CompletableFuture of WorkbookChartGridlines
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get() {
@@ -74,7 +74,7 @@ public class MajorGridlinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartGridlines
+     * @return a CompletableFuture of WorkbookChartGridlines
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MajorGridlinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property majorGridlines in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartGridlines
+     * @return a CompletableFuture of WorkbookChartGridlines
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@jakarta.annotation.Nonnull final WorkbookChartGridlines body) {
@@ -97,7 +97,7 @@ public class MajorGridlinesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property majorGridlines in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartGridlines
+     * @return a CompletableFuture of WorkbookChartGridlines
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@jakarta.annotation.Nonnull final WorkbookChartGridlines body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class MajorGridlinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a majorGridlinesRequestBuilder
+     * @return a MajorGridlinesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MajorGridlinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

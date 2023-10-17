@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
     }
     /**
      * User experience analytics work from anywhere metrics.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> get() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
     /**
      * User experience analytics work from anywhere metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
     /**
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereMetrics in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereMetric body) {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricItemRequestBuilder ext
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereMetrics in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereMetric body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

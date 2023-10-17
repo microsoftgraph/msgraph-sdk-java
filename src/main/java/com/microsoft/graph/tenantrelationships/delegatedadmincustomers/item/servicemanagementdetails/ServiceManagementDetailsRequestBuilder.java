@@ -59,8 +59,8 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer%2Did}/serviceManagementDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetailCollectionResponse
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-list-servicemanagementdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetailCollectionResponse
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-list-servicemanagementdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to serviceManagementDetails for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> post(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body) {
@@ -94,7 +94,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to serviceManagementDetails for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> post(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a serviceManagementDetailsRequestBuilder
+     * @return a ServiceManagementDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServiceManagementDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return new ServiceManagementDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

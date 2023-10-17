@@ -57,7 +57,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read properties and relationships of the onPremisesConditionalAccessSettings object.
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Read properties and relationships of the onPremisesConditionalAccessSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param body The request body
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
      * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessSettingsRequestBuilder
+     * @return a ConditionalAccessSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

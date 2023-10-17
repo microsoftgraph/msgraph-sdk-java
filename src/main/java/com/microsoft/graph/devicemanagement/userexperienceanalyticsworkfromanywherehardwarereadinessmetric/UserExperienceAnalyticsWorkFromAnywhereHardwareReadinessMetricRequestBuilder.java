@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricReque
     }
     /**
      * User experience analytics work from anywhere hardware readiness metrics.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricReque
     /**
      * User experience analytics work from anywhere hardware readiness metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricReque
     /**
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricReque
      * Update the navigation property userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

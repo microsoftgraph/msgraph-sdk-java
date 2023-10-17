@@ -96,8 +96,8 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentSchedule body) {
@@ -131,7 +131,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
      * Update the navigation property roleAssignmentSchedules in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentSchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Retrieve the schedule for an active role assignment operation.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,7 +178,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the schedule for an active role assignment operation.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +247,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the schedule for an active role assignment operation.
+     * Retrieve the schedule for an active role assignment operation. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

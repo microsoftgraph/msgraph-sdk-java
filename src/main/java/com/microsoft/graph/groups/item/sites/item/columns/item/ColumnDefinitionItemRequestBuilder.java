@@ -65,7 +65,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of column definitions reusable across lists under this site.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -74,7 +74,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of column definitions reusable across lists under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property columns in groups
      * @param body The request body
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> patch(@jakarta.annotation.Nonnull final ColumnDefinition body) {
@@ -97,7 +97,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property columns in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> patch(@jakarta.annotation.Nonnull final ColumnDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -36,7 +36,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/owners/{directoryObject%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.
+     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -44,7 +44,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.
+     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-owners?view=graph-rest-1.0">Find more info here</a>
      */
@@ -57,7 +57,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.
+     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.
+     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -95,7 +95,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners.
+     * Remove an owner from a servicePrincipal object. As a recommended best practice, service principals should have at least two owners. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters {

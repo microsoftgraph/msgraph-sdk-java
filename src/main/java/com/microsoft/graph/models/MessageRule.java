@@ -41,7 +41,7 @@ public class MessageRule extends Entity implements Parsable {
      */
     private Integer sequence;
     /**
-     * Instantiates a new messageRule and sets the default values.
+     * Instantiates a new MessageRule and sets the default values.
      */
     public MessageRule() {
         super();
@@ -49,7 +49,7 @@ public class MessageRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageRule
+     * @return a MessageRule
      */
     @jakarta.annotation.Nonnull
     public static MessageRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the actions property value. Actions to be taken on a message when the corresponding conditions are fulfilled.
-     * @return a messageRuleActions
+     * @return a MessageRuleActions
      */
     @jakarta.annotation.Nullable
     public MessageRuleActions getActions() {
@@ -66,7 +66,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
-     * @return a messageRulePredicates
+     * @return a MessageRulePredicates
      */
     @jakarta.annotation.Nullable
     public MessageRulePredicates getConditions() {
@@ -74,7 +74,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the exceptions property value. Exception conditions for the rule.
-     * @return a messageRulePredicates
+     * @return a MessageRulePredicates
      */
     @jakarta.annotation.Nullable
     public MessageRulePredicates getExceptions() {
@@ -107,7 +107,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the hasError property value. Indicates whether the rule is in an error condition. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasError() {
@@ -115,7 +115,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the rule is enabled to be applied to messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -123,7 +123,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the isReadOnly property value. Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReadOnly() {
@@ -131,7 +131,7 @@ public class MessageRule extends Entity implements Parsable {
     }
     /**
      * Gets the sequence property value. Indicates the order in which the rule is executed, among other rules.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {

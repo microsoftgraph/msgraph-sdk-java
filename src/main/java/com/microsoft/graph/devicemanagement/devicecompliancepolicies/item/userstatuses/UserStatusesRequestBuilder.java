@@ -60,7 +60,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceComplianceUserStatus objects.
-     * @return a CompletableFuture of deviceComplianceUserStatusCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceUserStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the deviceComplianceUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceUserStatusCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceUserStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deviceComplianceUserStatus object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceUserStatus
+     * @return a CompletableFuture of DeviceComplianceUserStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
      * Create a new deviceComplianceUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceUserStatus
+     * @return a CompletableFuture of DeviceComplianceUserStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userStatusesRequestBuilder
+     * @return a UserStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

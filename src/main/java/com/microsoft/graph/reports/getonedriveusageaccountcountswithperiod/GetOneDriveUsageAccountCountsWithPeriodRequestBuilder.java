@@ -88,7 +88,7 @@ public class GetOneDriveUsageAccountCountsWithPeriodRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOneDriveUsageAccountCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveUsageAccountCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageAccountCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

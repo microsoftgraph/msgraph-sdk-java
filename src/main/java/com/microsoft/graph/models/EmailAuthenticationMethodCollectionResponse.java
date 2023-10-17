@@ -13,7 +13,7 @@ public class EmailAuthenticationMethodCollectionResponse extends BaseCollectionP
      */
     private java.util.List<EmailAuthenticationMethod> value;
     /**
-     * Instantiates a new emailAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new EmailAuthenticationMethodCollectionResponse and sets the default values.
      */
     public EmailAuthenticationMethodCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EmailAuthenticationMethodCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailAuthenticationMethodCollectionResponse
+     * @return a EmailAuthenticationMethodCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EmailAuthenticationMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EmailAuthenticationMethodCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a emailAuthenticationMethod
+     * @return a java.util.List<EmailAuthenticationMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAuthenticationMethod> getValue() {

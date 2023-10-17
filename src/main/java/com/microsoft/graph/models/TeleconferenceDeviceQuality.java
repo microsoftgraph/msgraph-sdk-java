@@ -59,7 +59,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     private UUID participantId;
     /**
-     * Instantiates a new teleconferenceDeviceQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceQuality and sets the default values.
      */
     public TeleconferenceDeviceQuality() {
         this.setAdditionalData(new HashMap<>());
@@ -67,7 +67,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceQuality
+     * @return a TeleconferenceDeviceQuality
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         return new TeleconferenceDeviceQuality();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentEnvironment() {
@@ -100,7 +100,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentId() {
@@ -108,7 +108,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceInstanceName() {
@@ -116,7 +116,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudServiceName() {
@@ -124,7 +124,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDescription() {
@@ -132,7 +132,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the deviceName property value. The user media agent name, such as Cisco SX80.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -168,7 +168,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     * @return a teleconferenceDeviceMediaQuality
+     * @return a java.util.List<TeleconferenceDeviceMediaQuality>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {
@@ -176,7 +176,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -210,8 +210,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

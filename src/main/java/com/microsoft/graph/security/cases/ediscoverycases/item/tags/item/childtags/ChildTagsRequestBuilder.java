@@ -59,7 +59,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the tags that are a child of a tag.
-     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a childTagsRequestBuilder
+     * @return a ChildTagsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChildTagsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

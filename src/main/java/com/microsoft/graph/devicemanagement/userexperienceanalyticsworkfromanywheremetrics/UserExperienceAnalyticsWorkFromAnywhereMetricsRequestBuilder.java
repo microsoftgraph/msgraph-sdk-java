@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extend
     }
     /**
      * User experience analytics work from anywhere metrics.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extend
     /**
      * User experience analytics work from anywhere metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extend
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereMetrics for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereMetric body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extend
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereMetrics for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereMetric
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereMetric> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereMetric body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extend
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder
+     * @return a UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

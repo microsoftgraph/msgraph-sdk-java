@@ -60,7 +60,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
-     * @return a CompletableFuture of androidManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Create a new androidManagedAppProtection object.
      * @param body The request body
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
      * Create a new androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a androidManagedAppProtectionsRequestBuilder
+     * @return a AndroidManagedAppProtectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AndroidManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

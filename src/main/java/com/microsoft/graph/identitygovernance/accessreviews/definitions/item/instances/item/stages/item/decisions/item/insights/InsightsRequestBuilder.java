@@ -60,7 +60,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
-     * @return a CompletableFuture of governanceInsightCollectionResponse
+     * @return a CompletableFuture of GovernanceInsightCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceInsightCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceInsightCollectionResponse
+     * @return a CompletableFuture of GovernanceInsightCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceInsightCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to insights for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of governanceInsight
+     * @return a CompletableFuture of GovernanceInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceInsight> post(@jakarta.annotation.Nonnull final GovernanceInsight body) {
@@ -92,7 +92,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to insights for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceInsight
+     * @return a CompletableFuture of GovernanceInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceInsight> post(@jakarta.annotation.Nonnull final GovernanceInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a insightsRequestBuilder
+     * @return a InsightsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InsightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

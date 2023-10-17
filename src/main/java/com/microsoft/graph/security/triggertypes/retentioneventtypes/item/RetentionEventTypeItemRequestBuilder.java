@@ -58,8 +58,8 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a retentionEventType object.
-     * @return a CompletableFuture of retentionEventType
+     * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of RetentionEventType
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a retentionEventType object.
+     * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionEventType
+     * @return a CompletableFuture of RetentionEventType
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property retentionEventTypes in security
      * @param body The request body
-     * @return a CompletableFuture of retentionEventType
+     * @return a CompletableFuture of RetentionEventType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> patch(@jakarta.annotation.Nonnull final RetentionEventType body) {
@@ -93,7 +93,7 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property retentionEventTypes in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionEventType
+     * @return a CompletableFuture of RetentionEventType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> patch(@jakarta.annotation.Nonnull final RetentionEventType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -132,7 +132,7 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a retentionEventType object.
+     * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a retentionEventType object.
+     * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a retentionEventType object.
+     * Read the properties and relationships of a retentionEventType object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

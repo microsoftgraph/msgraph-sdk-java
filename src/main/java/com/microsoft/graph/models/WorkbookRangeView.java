@@ -45,11 +45,11 @@ public class WorkbookRangeView extends Entity implements Parsable {
      */
     private java.util.List<WorkbookRangeView> rows;
     /**
-     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      */
     private Json text;
     /**
-     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      */
     private Json values;
     /**
@@ -57,7 +57,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      */
     private Json valueTypes;
     /**
-     * Instantiates a new workbookRangeView and sets the default values.
+     * Instantiates a new WorkbookRangeView and sets the default values.
      */
     public WorkbookRangeView() {
         super();
@@ -65,7 +65,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookRangeView
+     * @return a WorkbookRangeView
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRangeView createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the columnCount property value. Returns the number of visible columns. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getColumnCount() {
@@ -135,7 +135,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the index property value. Index of the range.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
@@ -151,7 +151,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the rowCount property value. Returns the number of visible rows. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRowCount() {
@@ -159,14 +159,14 @@ public class WorkbookRangeView extends Entity implements Parsable {
     }
     /**
      * Gets the rows property value. Represents a collection of range views associated with the range. Read-only. Read-only.
-     * @return a workbookRangeView
+     * @return a java.util.List<WorkbookRangeView>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookRangeView> getRows() {
         return this.rows;
     }
     /**
-     * Gets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @return a Json
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.text;
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @return a Json
      */
     @jakarta.annotation.Nullable
@@ -273,14 +273,14 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.rows = value;
     }
     /**
-     * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final Json value) {
         this.text = value;
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {

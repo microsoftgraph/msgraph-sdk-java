@@ -37,7 +37,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}/outcomes/{educationOutcome%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher.
+     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher.
+     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get outcomes from education
-     * @return a CompletableFuture of educationOutcome
+     * @return a CompletableFuture of EducationOutcome
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationOutcome> get() {
@@ -68,7 +68,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get outcomes from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationOutcome
+     * @return a CompletableFuture of EducationOutcome
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationOutcome> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,9 +79,9 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationOutcome::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationOutcome
+     * @return a CompletableFuture of EducationOutcome
      * @see <a href="https://learn.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationOutcome
+     * @return a CompletableFuture of EducationOutcome
      * @see <a href="https://learn.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationOutcome::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher.
+     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a feedback resource from a submission. This can only be done by a teacher.
+     * Delete a feedback resource from a submission. This can only be done by a teacher. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

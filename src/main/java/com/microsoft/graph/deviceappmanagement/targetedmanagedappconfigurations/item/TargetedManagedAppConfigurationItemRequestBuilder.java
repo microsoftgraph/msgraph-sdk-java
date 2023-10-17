@@ -99,7 +99,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Read properties and relationships of the targetedManagedAppConfiguration object.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
      * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -38,7 +38,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostTrackers that are associated with this host.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> get() {
@@ -47,7 +47,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hostTrackers that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -56,17 +56,17 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
-     * @return a CompletableFuture of dataSource
+     * User source or SharePoint site data source as noncustodial data source.
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> get() {
         return get(null);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property dataSource in security
      * @param body The request body
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> patch(@jakarta.annotation.Nonnull final DataSource body) {
@@ -89,7 +89,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property dataSource in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> patch(@jakarta.annotation.Nonnull final DataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -191,7 +191,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataSourceRequestBuilder
+     * @return a DataSourceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataSourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +205,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

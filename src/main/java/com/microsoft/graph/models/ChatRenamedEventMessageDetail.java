@@ -21,7 +21,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
+     * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
      */
     public ChatRenamedEventMessageDetail() {
         super();
@@ -30,7 +30,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatRenamedEventMessageDetail
+     * @return a ChatRenamedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static ChatRenamedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the chatDisplayName property value. The updated name of the chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatDisplayName() {
@@ -47,7 +47,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the chatId property value. Unique identifier of the chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
@@ -67,7 +67,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {

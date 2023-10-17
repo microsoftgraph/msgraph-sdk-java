@@ -13,7 +13,7 @@ public class EducationCategoryCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<EducationCategory> value;
     /**
-     * Instantiates a new educationCategoryCollectionResponse and sets the default values.
+     * Instantiates a new EducationCategoryCollectionResponse and sets the default values.
      */
     public EducationCategoryCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EducationCategoryCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationCategoryCollectionResponse
+     * @return a EducationCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EducationCategoryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EducationCategoryCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a educationCategory
+     * @return a java.util.List<EducationCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getValue() {

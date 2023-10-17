@@ -50,7 +50,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     private TimeConstraint timeConstraint;
     /**
-     * Instantiates a new findMeetingTimesPostRequestBody and sets the default values.
+     * Instantiates a new FindMeetingTimesPostRequestBody and sets the default values.
      */
     public FindMeetingTimesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a findMeetingTimesPostRequestBody
+     * @return a FindMeetingTimesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static FindMeetingTimesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
         return new FindMeetingTimesPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the attendees property value. The attendees property
-     * @return a attendeeBase
+     * @return a java.util.List<AttendeeBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendeeBase> getAttendees() {
@@ -100,7 +100,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the isOrganizerOptional property value. The isOrganizerOptional property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizerOptional() {
@@ -108,7 +108,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the locationConstraint property value. The locationConstraint property
-     * @return a locationConstraint
+     * @return a LocationConstraint
      */
     @jakarta.annotation.Nullable
     public LocationConstraint getLocationConstraint() {
@@ -116,7 +116,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the maxCandidates property value. The maxCandidates property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxCandidates() {
@@ -132,7 +132,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMinimumAttendeePercentage() {
@@ -140,7 +140,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the returnSuggestionReasons property value. The returnSuggestionReasons property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getReturnSuggestionReasons() {
@@ -148,7 +148,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the timeConstraint property value. The timeConstraint property
-     * @return a timeConstraint
+     * @return a TimeConstraint
      */
     @jakarta.annotation.Nullable
     public TimeConstraint getTimeConstraint() {
@@ -171,8 +171,8 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

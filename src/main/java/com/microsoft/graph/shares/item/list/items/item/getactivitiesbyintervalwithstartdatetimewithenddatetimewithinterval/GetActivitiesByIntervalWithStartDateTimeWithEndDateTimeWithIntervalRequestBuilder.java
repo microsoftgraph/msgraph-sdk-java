@@ -43,24 +43,24 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     }
     /**
      * Invoke function getActivitiesByInterval
-     * @return a CompletableFuture of getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
+     * @return a CompletableFuture of GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getActivitiesByInterval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
+     * @return a CompletableFuture of GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getActivitiesByInterval
@@ -94,7 +94,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

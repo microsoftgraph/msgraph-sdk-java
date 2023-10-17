@@ -88,7 +88,7 @@ public class GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getSharePointSiteUsageSiteCountsWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

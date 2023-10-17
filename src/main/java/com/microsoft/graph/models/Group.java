@@ -274,7 +274,7 @@ public class Group extends DirectoryObject implements Parsable {
      */
     private String visibility;
     /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
      */
     public Group() {
         super();
@@ -283,7 +283,7 @@ public class Group extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a group
+     * @return a Group
      */
     @jakarta.annotation.Nonnull
     public static Group createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -292,7 +292,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the acceptedSenders property value. The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAcceptedSenders() {
@@ -300,7 +300,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowExternalSenders() {
@@ -308,7 +308,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleAssignments property value. Represents the app roles a group has been granted for an application. Supports $expand.
-     * @return a appRoleAssignment
+     * @return a java.util.List<AppRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignments() {
@@ -316,7 +316,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
-     * @return a assignedLabel
+     * @return a java.util.List<AssignedLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedLabel> getAssignedLabels() {
@@ -324,7 +324,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
-     * @return a assignedLicense
+     * @return a java.util.List<AssignedLicense>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -332,7 +332,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the autoSubscribeNewMembers property value. Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoSubscribeNewMembers() {
@@ -340,7 +340,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendar property value. The group's calendar. Read-only.
-     * @return a calendar
+     * @return a Calendar
      */
     @jakarta.annotation.Nullable
     public Calendar getCalendar() {
@@ -348,7 +348,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendarView property value. The calendar view for the calendar. Read-only.
-     * @return a event
+     * @return a java.util.List<Event>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getCalendarView() {
@@ -356,7 +356,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the classification property value. Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClassification() {
@@ -364,7 +364,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the conversations property value. The group's conversations.
-     * @return a conversation
+     * @return a java.util.List<Conversation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Conversation> getConversations() {
@@ -380,7 +380,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getCreatedOnBehalfOf() {
@@ -388,7 +388,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. An optional description for the group. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -396,7 +396,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the group. This property is required when a group is created and cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -404,7 +404,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the drive property value. The group's default drive. Read-only.
-     * @return a drive
+     * @return a Drive
      */
     @jakarta.annotation.Nullable
     public Drive getDrive() {
@@ -412,7 +412,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the drives property value. The group's drives. Read-only.
-     * @return a drive
+     * @return a java.util.List<Drive>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Drive> getDrives() {
@@ -420,7 +420,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the events property value. The group's calendar events.
-     * @return a event
+     * @return a java.util.List<Event>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getEvents() {
@@ -436,7 +436,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the group. Read-only. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -519,7 +519,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the groupLifecyclePolicies property value. The collection of lifecycle policies for this group. Read-only. Nullable.
-     * @return a groupLifecyclePolicy
+     * @return a java.util.List<GroupLifecyclePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupLifecyclePolicy> getGroupLifecyclePolicies() {
@@ -527,7 +527,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the groupTypes property value. Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupTypes() {
@@ -535,7 +535,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the hasMembersWithLicenseErrors property value. Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasMembersWithLicenseErrors() {
@@ -543,7 +543,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the hideFromAddressLists property value. True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHideFromAddressLists() {
@@ -551,7 +551,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the hideFromOutlookClients property value. True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHideFromOutlookClients() {
@@ -559,7 +559,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isArchived property value. When a group is associated with a team this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsArchived() {
@@ -567,7 +567,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isAssignableToRole property value. Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsUsing this feature requires a Azure AD Premium P1 license. Returned by default. Supports $filter (eq, ne, not).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssignableToRole() {
@@ -575,7 +575,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSubscribedByMail() {
@@ -583,7 +583,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the licenseProcessingState property value. Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
-     * @return a licenseProcessingState
+     * @return a LicenseProcessingState
      */
     @jakarta.annotation.Nullable
     public LicenseProcessingState getLicenseProcessingState() {
@@ -591,7 +591,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mail property value. The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMail() {
@@ -599,7 +599,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailEnabled property value. Specifies whether the group is mail-enabled. Required. Returned by default. Supports $filter (eq, ne, not).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMailEnabled() {
@@ -607,7 +607,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailNickname property value. The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] ' ; : <> , SPACE. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -615,7 +615,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the memberOf property value. Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
@@ -623,7 +623,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the members property value. The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
@@ -631,7 +631,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the membershipRule property value. The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMembershipRule() {
@@ -639,7 +639,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the membershipRuleProcessingState property value. Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default. Supports $filter (eq, ne, not, in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMembershipRuleProcessingState() {
@@ -647,7 +647,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the membersWithLicenseErrors property value. A list of group members with license errors from this group-based license assignment. Read-only.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembersWithLicenseErrors() {
@@ -655,7 +655,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onenote property value. The onenote property
-     * @return a onenote
+     * @return a Onenote
      */
     @jakarta.annotation.Nullable
     public Onenote getOnenote() {
@@ -663,7 +663,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesDomainName property value. The onPremisesDomainName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesDomainName() {
@@ -679,7 +679,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesNetBiosName() {
@@ -687,7 +687,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesProvisioningErrors property value. Errors when using Microsoft synchronization product during provisioning. Returned by default. Supports $filter (eq, not).
-     * @return a onPremisesProvisioningError
+     * @return a java.util.List<OnPremisesProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
@@ -695,7 +695,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSamAccountName property value. Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSamAccountName() {
@@ -703,7 +703,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -711,7 +711,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
@@ -719,7 +719,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
@@ -727,7 +727,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the permissionGrants property value. The permissionGrants property
-     * @return a resourceSpecificPermissionGrant
+     * @return a java.util.List<ResourceSpecificPermissionGrant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
@@ -735,7 +735,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the photo property value. The group's profile photo
-     * @return a profilePhoto
+     * @return a ProfilePhoto
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto getPhoto() {
@@ -743,7 +743,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the photos property value. The profile photos owned by the group. Read-only. Nullable.
-     * @return a profilePhoto
+     * @return a java.util.List<ProfilePhoto>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfilePhoto> getPhotos() {
@@ -751,7 +751,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the planner property value. Entry-point to Planner resource that might exist for a Unified Group.
-     * @return a plannerGroup
+     * @return a PlannerGroup
      */
     @jakarta.annotation.Nullable
     public PlannerGroup getPlanner() {
@@ -759,7 +759,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredDataLocation property value. The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo. Nullable. Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredDataLocation() {
@@ -767,7 +767,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
@@ -775,7 +775,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the proxyAddresses property value. Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
@@ -783,7 +783,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the rejectedSenders property value. The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRejectedSenders() {
@@ -799,7 +799,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the securityEnabled property value. Specifies whether the group is a security group. Required. Returned by default. Supports $filter (eq, ne, not, in).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityEnabled() {
@@ -807,7 +807,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the securityIdentifier property value. Security identifier of the group, used in Windows scenarios. Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityIdentifier() {
@@ -815,7 +815,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
-     * @return a serviceProvisioningError
+     * @return a java.util.List<ServiceProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
@@ -823,7 +823,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the settings property value. Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
-     * @return a groupSetting
+     * @return a java.util.List<GroupSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupSetting> getSettings() {
@@ -831,7 +831,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the sites property value. The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a site
+     * @return a java.util.List<Site>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Site> getSites() {
@@ -839,7 +839,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the team property value. The team associated with this group.
-     * @return a team
+     * @return a Team
      */
     @jakarta.annotation.Nullable
     public Team getTeam() {
@@ -847,7 +847,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the theme property value. Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTheme() {
@@ -855,7 +855,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the threads property value. The group's conversation threads. Nullable.
-     * @return a conversationThread
+     * @return a java.util.List<ConversationThread>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationThread> getThreads() {
@@ -863,7 +863,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMemberOf property value. The groups that a group is a member of, either directly and through nested membership. Nullable.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
@@ -871,7 +871,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMembers property value. The direct and transitive members of a group. Nullable.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMembers() {
@@ -879,7 +879,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnseenCount() {
@@ -887,7 +887,7 @@ public class Group extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVisibility() {

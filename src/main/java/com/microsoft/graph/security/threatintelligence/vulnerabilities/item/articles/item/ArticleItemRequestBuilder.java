@@ -38,7 +38,7 @@ public class ArticleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Articles related to this vulnerability.
-     * @return a CompletableFuture of article
+     * @return a CompletableFuture of Article
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Article> get() {
@@ -47,7 +47,7 @@ public class ArticleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Articles related to this vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of article
+     * @return a CompletableFuture of Article
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Article> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

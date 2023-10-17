@@ -37,8 +37,8 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
-     * @return a CompletableFuture of ediscoveryEstimateOperation
+     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EdiscoveryEstimateOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,9 +46,9 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryEstimateOperation
+     * @return a CompletableFuture of EdiscoveryEstimateOperation
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, EdiscoveryEstimateOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +91,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastEstimateStatisticsOperationRequestBuilder
+     * @return a LastEstimateStatisticsOperationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastEstimateStatisticsOperationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -99,7 +99,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return new LastEstimateStatisticsOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * Get the last  ediscoveryEstimateOperation objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

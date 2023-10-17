@@ -64,8 +64,8 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
-     * @return a CompletableFuture of alert
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Alert::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an alert object in an organization based on the specified alert id property.
+     * Update the properties of an alert object in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an alert in an organization based on the specified alert id property.
+     * Get the properties and relationships of an alert in an organization based on the specified alert id property. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

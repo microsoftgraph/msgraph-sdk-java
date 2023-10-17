@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable {
     /**
-     * Identity of the user, device, and application which created the item. Read-only.
+     * Identity of the user, device, and application that created the item. Read-only.
      */
     private IdentitySet createdBy;
     /**
@@ -18,7 +18,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     private String displayName;
     /**
-     * Identity of the user, device, and application which created the item. Read-only.
+     * Identity of the user, device, and application that created the item. Read-only.
      */
     private IdentitySet lastModifiedBy;
     /**
@@ -26,7 +26,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new onenoteEntityHierarchyModel and sets the default values.
+     * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.
      */
     public OnenoteEntityHierarchyModel() {
         super();
@@ -35,7 +35,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteEntityHierarchyModel
+     * @return a OnenoteEntityHierarchyModel
      */
     @jakarta.annotation.Nonnull
     public static OnenoteEntityHierarchyModel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,8 +52,8 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         return new OnenoteEntityHierarchyModel();
     }
     /**
-     * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
-     * @return a identitySet
+     * Gets the createdBy property value. Identity of the user, device, and application that created the item. Read-only.
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -61,7 +61,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
     }
     /**
      * Gets the displayName property value. The name of the notebook.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,8 +81,8 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
-     * @return a identitySet
+     * Gets the lastModifiedBy property value. Identity of the user, device, and application that created the item. Read-only.
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -109,7 +109,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the createdBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -123,7 +123,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
         this.displayName = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user, device, and application which created the item. Read-only.
+     * Sets the lastModifiedBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {

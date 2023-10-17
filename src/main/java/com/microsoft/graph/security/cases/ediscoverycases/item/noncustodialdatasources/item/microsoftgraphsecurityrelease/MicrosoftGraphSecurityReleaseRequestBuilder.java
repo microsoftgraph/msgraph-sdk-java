@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}/microsoft.graph.security.release", rawUrl);
     }
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         return post(null);
     }
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(null);
     }
     /**
-     * Release the non-custodial data source from the case.
+     * Release the non-custodial data source from the case. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityReleaseRequestBuilder
+     * @return a MicrosoftGraphSecurityReleaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReleaseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

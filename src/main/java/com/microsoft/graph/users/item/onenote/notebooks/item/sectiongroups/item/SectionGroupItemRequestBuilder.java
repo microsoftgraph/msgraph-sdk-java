@@ -89,7 +89,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The section groups in the notebook. Read-only. Nullable.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get() {
@@ -98,7 +98,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The section groups in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sectionGroups in users
      * @param body The request body
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> patch(@jakarta.annotation.Nonnull final SectionGroup body) {
@@ -121,7 +121,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sectionGroups in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> patch(@jakarta.annotation.Nonnull final SectionGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

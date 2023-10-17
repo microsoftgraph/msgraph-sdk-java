@@ -37,7 +37,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return delete(null);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationCombinationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationCombinationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Read the properties and relationships of an authenticationCombinationConfiguration object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

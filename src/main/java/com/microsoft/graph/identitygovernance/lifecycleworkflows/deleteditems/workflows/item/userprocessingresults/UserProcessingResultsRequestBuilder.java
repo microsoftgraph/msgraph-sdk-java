@@ -60,8 +60,8 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/userProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the userProcessingResult resources for a workflow.
-     * @return a CompletableFuture of userProcessingResultCollectionResponse
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UserProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,9 +69,9 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the userProcessingResult resources for a workflow.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userProcessingResultCollectionResponse
+     * @return a CompletableFuture of UserProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -95,7 +95,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Get the userProcessingResult resources for a workflow.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the userProcessingResult resources for a workflow.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userProcessingResultsRequestBuilder
+     * @return a UserProcessingResultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserProcessingResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -134,7 +134,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the userProcessingResult resources for a workflow.
+     * Get the userProcessingResult resources for a workflow. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

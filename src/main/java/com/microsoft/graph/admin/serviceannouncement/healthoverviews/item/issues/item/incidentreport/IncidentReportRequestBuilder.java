@@ -86,7 +86,7 @@ public class IncidentReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a incidentReportRequestBuilder
+     * @return a IncidentReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IncidentReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

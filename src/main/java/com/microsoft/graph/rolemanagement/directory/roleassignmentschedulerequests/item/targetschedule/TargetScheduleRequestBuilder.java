@@ -38,7 +38,7 @@ public class TargetScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> get() {
@@ -47,7 +47,7 @@ public class TargetScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TargetScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a targetScheduleRequestBuilder
+     * @return a TargetScheduleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

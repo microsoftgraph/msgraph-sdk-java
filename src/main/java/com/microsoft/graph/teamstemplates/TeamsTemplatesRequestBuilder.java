@@ -60,7 +60,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from teamsTemplates
-     * @return a CompletableFuture of teamsTemplateCollectionResponse
+     * @return a CompletableFuture of TeamsTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from teamsTemplates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTemplateCollectionResponse
+     * @return a CompletableFuture of TeamsTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to teamsTemplates
      * @param body The request body
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> post(@jakarta.annotation.Nonnull final TeamsTemplate body) {
@@ -92,7 +92,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to teamsTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> post(@jakarta.annotation.Nonnull final TeamsTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsTemplatesRequestBuilder
+     * @return a TeamsTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

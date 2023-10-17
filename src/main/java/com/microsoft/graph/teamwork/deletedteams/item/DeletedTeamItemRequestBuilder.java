@@ -65,7 +65,7 @@ public class DeletedTeamItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The deleted team.
-     * @return a CompletableFuture of deletedTeam
+     * @return a CompletableFuture of DeletedTeam
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeam> get() {
@@ -74,7 +74,7 @@ public class DeletedTeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The deleted team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deletedTeam
+     * @return a CompletableFuture of DeletedTeam
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeam> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeletedTeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deletedTeams in teamwork
      * @param body The request body
-     * @return a CompletableFuture of deletedTeam
+     * @return a CompletableFuture of DeletedTeam
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeam> patch(@jakarta.annotation.Nonnull final DeletedTeam body) {
@@ -97,7 +97,7 @@ public class DeletedTeamItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deletedTeams in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deletedTeam
+     * @return a CompletableFuture of DeletedTeam
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedTeam> patch(@jakarta.annotation.Nonnull final DeletedTeam body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

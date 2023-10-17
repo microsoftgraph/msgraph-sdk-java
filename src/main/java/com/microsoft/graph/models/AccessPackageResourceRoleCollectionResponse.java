@@ -13,7 +13,7 @@ public class AccessPackageResourceRoleCollectionResponse extends BaseCollectionP
      */
     private java.util.List<AccessPackageResourceRole> value;
     /**
-     * Instantiates a new accessPackageResourceRoleCollectionResponse and sets the default values.
+     * Instantiates a new AccessPackageResourceRoleCollectionResponse and sets the default values.
      */
     public AccessPackageResourceRoleCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AccessPackageResourceRoleCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceRoleCollectionResponse
+     * @return a AccessPackageResourceRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRoleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AccessPackageResourceRoleCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageResourceRole
+     * @return a java.util.List<AccessPackageResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getValue() {

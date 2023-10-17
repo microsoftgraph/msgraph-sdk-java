@@ -27,7 +27,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private Integer timeout;
     /**
-     * Instantiates a new redirectPostRequestBody and sets the default values.
+     * Instantiates a new RedirectPostRequestBody and sets the default values.
      */
     public RedirectPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a redirectPostRequestBody
+     * @return a RedirectPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RedirectPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
         return new RedirectPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
@@ -72,7 +72,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targets property value. The targets property
-     * @return a invitationParticipantInfo
+     * @return a java.util.List<InvitationParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
@@ -80,7 +80,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeout property value. The timeout property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimeout() {
@@ -98,8 +98,8 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

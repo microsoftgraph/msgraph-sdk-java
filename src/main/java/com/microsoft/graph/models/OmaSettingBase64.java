@@ -20,7 +20,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new omaSettingBase64 and sets the default values.
+     * Instantiates a new OmaSettingBase64 and sets the default values.
      */
     public OmaSettingBase64() {
         super();
@@ -29,7 +29,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a omaSettingBase64
+     * @return a OmaSettingBase64
      */
     @jakarta.annotation.Nonnull
     public static OmaSettingBase64 createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     }
     /**
      * Gets the fileName property value. File name associated with the Value property (.cer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -57,7 +57,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     }
     /**
      * Gets the value property value. Value. (Base64 encoded string)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

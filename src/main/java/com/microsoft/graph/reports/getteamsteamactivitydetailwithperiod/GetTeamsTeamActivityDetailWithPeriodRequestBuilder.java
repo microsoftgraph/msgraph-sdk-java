@@ -88,7 +88,7 @@ public class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getTeamsTeamActivityDetailWithPeriodRequestBuilder
+     * @return a GetTeamsTeamActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamActivityDetailWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of columns that are required by this content type.
-     * @return a CompletableFuture of columnLinkCollectionResponse
+     * @return a CompletableFuture of ColumnLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnLinkCollectionResponse
+     * @return a CompletableFuture of ColumnLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to columnLinks for shares
      * @param body The request body
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> post(@jakarta.annotation.Nonnull final ColumnLink body) {
@@ -92,7 +92,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to columnLinks for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> post(@jakarta.annotation.Nonnull final ColumnLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a columnLinksRequestBuilder
+     * @return a ColumnLinksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ColumnLinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

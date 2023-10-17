@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.list.items.item.lastmodifiedbyuser;
 
 import com.microsoft.graph.drives.item.list.items.item.lastmodifiedbyuser.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.drives.item.list.items.item.lastmodifiedbyuser.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new LastModifiedByUserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -46,7 +54,7 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Identity of the user who last modified the item. Read-only.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -55,7 +63,7 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Identity of the user who last modified the item. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +105,7 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastModifiedByUserRequestBuilder
+     * @return a LastModifiedByUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

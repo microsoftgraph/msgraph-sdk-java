@@ -14,7 +14,7 @@ public class ExternalItemCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<ExternalItem> value;
     /**
-     * Instantiates a new externalItemCollectionResponse and sets the default values.
+     * Instantiates a new ExternalItemCollectionResponse and sets the default values.
      */
     public ExternalItemCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ExternalItemCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalItemCollectionResponse
+     * @return a ExternalItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ExternalItemCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ExternalItemCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a externalItem
+     * @return a java.util.List<ExternalItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getValue() {

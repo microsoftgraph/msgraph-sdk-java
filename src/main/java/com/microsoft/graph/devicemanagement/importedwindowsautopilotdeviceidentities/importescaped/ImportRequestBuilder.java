@@ -37,28 +37,28 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
     /**
      * Not yet documented
      * @param body The request body
-     * @return a CompletableFuture of importResponse
+     * @return a CompletableFuture of ImportPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportResponse> post(@jakarta.annotation.Nonnull final ImportPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ImportPostResponse> post(@jakarta.annotation.Nonnull final ImportPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importResponse
+     * @return a CompletableFuture of ImportPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportResponse> post(@jakarta.annotation.Nonnull final ImportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ImportPostResponse> post(@jakarta.annotation.Nonnull final ImportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, ImportPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Not yet documented
@@ -95,7 +95,7 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importRequestBuilder
+     * @return a ImportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

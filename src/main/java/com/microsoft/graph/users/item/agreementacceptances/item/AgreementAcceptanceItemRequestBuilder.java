@@ -38,7 +38,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> get() {
@@ -47,7 +47,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -59,8 +59,8 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
-     * @return a CompletableFuture of ediscoverySearchCollectionResponse
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoverySearchCollectionResponse
+     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EdiscoverySearchCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ediscoverySearch
+     * @return a CompletableFuture of EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoverySearch
+     * @return a CompletableFuture of EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EdiscoverySearch::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a searchesRequestBuilder
+     * @return a SearchesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return new SearchesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

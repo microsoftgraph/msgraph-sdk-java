@@ -52,7 +52,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from agreements
-     * @return a CompletableFuture of agreementCollectionResponse
+     * @return a CompletableFuture of AgreementCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get() {
@@ -61,7 +61,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from agreements
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementCollectionResponse
+     * @return a CompletableFuture of AgreementCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -74,7 +74,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to agreements
      * @param body The request body
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@jakarta.annotation.Nonnull final Agreement body) {
@@ -84,7 +84,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@jakarta.annotation.Nonnull final Agreement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agreementsRequestBuilder
+     * @return a AgreementsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgreementsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

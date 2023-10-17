@@ -59,8 +59,8 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/dailyPrintUsageByUser{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-dailyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to dailyPrintUsageByUser for reports
      * @param body The request body
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body) {
@@ -94,7 +94,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to dailyPrintUsageByUser for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PrintUsageByUser::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dailyPrintUsageByUserRequestBuilder
+     * @return a DailyPrintUsageByUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DailyPrintUsageByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class DailyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return new DailyPrintUsageByUserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a list of daily print usage summaries, grouped by user. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

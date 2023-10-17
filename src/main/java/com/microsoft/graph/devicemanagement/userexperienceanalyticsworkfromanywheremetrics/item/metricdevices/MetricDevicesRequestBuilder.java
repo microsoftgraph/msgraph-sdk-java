@@ -60,7 +60,7 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The work from anywhere metric devices. Read-only.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * The work from anywhere metric devices. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to metricDevices for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body) {
@@ -92,7 +92,7 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to metricDevices for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a metricDevicesRequestBuilder
+     * @return a MetricDevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MetricDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -38,7 +38,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> get() {
@@ -47,7 +47,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
     /**
      * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceRequestBuilder
+     * @return a DeviceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

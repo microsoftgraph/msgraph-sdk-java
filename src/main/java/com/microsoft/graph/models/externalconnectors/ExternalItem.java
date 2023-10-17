@@ -26,7 +26,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     private Properties properties;
     /**
-     * Instantiates a new externalItem and sets the default values.
+     * Instantiates a new ExternalItem and sets the default values.
      */
     public ExternalItem() {
         super();
@@ -34,7 +34,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalItem
+     * @return a ExternalItem
      */
     @jakarta.annotation.Nonnull
     public static ExternalItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the acl property value. An array of access control entries. Each entry specifies the access granted to a user or group. Required.
-     * @return a acl
+     * @return a java.util.List<Acl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acl> getAcl() {
@@ -51,7 +51,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the activities property value. Returns a list of activities performed on the item. Write-only.
-     * @return a externalActivity
+     * @return a java.util.List<ExternalActivity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalActivity> getActivities() {
@@ -59,7 +59,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
-     * @return a externalItemContent
+     * @return a ExternalItemContent
      */
     @jakarta.annotation.Nullable
     public ExternalItemContent getContent() {
@@ -80,7 +80,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
-     * @return a properties
+     * @return a Properties
      */
     @jakarta.annotation.Nullable
     public Properties getProperties() {

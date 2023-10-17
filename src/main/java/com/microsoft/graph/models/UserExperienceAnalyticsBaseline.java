@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     private UserExperienceAnalyticsCategory workFromAnywhereMetrics;
     /**
-     * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
      */
     public UserExperienceAnalyticsBaseline() {
         super();
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBaseline
+     * @return a UserExperienceAnalyticsBaseline
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the appHealthMetrics property value. The scores and insights for the application health metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getAppHealthMetrics() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the batteryHealthMetrics property value. The scores and insights for the battery health metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBatteryHealthMetrics() {
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the bestPracticesMetrics property value. The scores and insights for the best practices metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBestPracticesMetrics() {
@@ -102,7 +102,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the deviceBootPerformanceMetrics property value. The scores and insights for the device boot performance metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getDeviceBootPerformanceMetrics() {
@@ -110,7 +110,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. The name of the baseline.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -137,7 +137,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the isBuiltIn property value. When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
@@ -145,7 +145,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the rebootAnalyticsMetrics property value. The scores and insights for the reboot analytics metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getRebootAnalyticsMetrics() {
@@ -153,7 +153,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the resourcePerformanceMetrics property value. The scores and insights for the resource performance metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getResourcePerformanceMetrics() {
@@ -161,7 +161,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     }
     /**
      * Gets the workFromAnywhereMetrics property value. The scores and insights for the work from anywhere metrics.
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getWorkFromAnywhereMetrics() {

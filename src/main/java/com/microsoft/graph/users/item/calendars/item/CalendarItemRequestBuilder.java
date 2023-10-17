@@ -56,12 +56,12 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param User Usage: User='{User}'
-     * @return a allowedCalendarSharingRolesWithUserRequestBuilder
+     * @return a AllowedCalendarSharingRolesWithUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String user) {
-        Objects.requireNonNull(user);
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
+    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String User) {
+        Objects.requireNonNull(User);
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, User);
     }
     /**
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
@@ -100,7 +100,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The user's calendars. Read-only. Nullable.
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> get() {
@@ -109,7 +109,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The user's calendars. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property calendars in users
      * @param body The request body
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> patch(@jakarta.annotation.Nonnull final Calendar body) {
@@ -132,7 +132,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calendars in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> patch(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

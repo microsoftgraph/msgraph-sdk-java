@@ -46,7 +46,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     private String targetAttributeName;
     /**
-     * Instantiates a new attributeMapping and sets the default values.
+     * Instantiates a new AttributeMapping and sets the default values.
      */
     public AttributeMapping() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attributeMapping
+     * @return a AttributeMapping
      */
     @jakarta.annotation.Nonnull
     public static AttributeMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return new AttributeMapping();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -79,7 +79,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the exportMissingReferences property value. For internal use only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExportMissingReferences() {
@@ -104,7 +104,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
-     * @return a attributeFlowBehavior
+     * @return a AttributeFlowBehavior
      */
     @jakarta.annotation.Nullable
     public AttributeFlowBehavior getFlowBehavior() {
@@ -112,7 +112,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowType property value. The flowType property
-     * @return a attributeFlowType
+     * @return a AttributeFlowType
      */
     @jakarta.annotation.Nullable
     public AttributeFlowType getFlowType() {
@@ -120,7 +120,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMatchingPriority() {
@@ -128,7 +128,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -136,7 +136,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
-     * @return a attributeMappingSource
+     * @return a AttributeMappingSource
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSource getSource() {
@@ -144,7 +144,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targetAttributeName property value. Name of the attribute on the target object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetAttributeName() {
@@ -167,8 +167,8 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

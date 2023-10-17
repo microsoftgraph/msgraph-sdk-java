@@ -58,8 +58,8 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/taskProcessingResults{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the taskProcessingResult resources for a run.
-     * @return a CompletableFuture of taskProcessingResultCollectionResponse
+     * Get the taskProcessingResult resources for a run. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the taskProcessingResult resources for a run.
+     * Get the taskProcessingResult resources for a run. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taskProcessingResultCollectionResponse
+     * @return a CompletableFuture of TaskProcessingResultCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the taskProcessingResult resources for a run.
+     * Get the taskProcessingResult resources for a run. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the taskProcessingResult resources for a run.
+     * Get the taskProcessingResult resources for a run. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskProcessingResultsRequestBuilder
+     * @return a TaskProcessingResultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new TaskProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the taskProcessingResult resources for a run.
+     * Get the taskProcessingResult resources for a run. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

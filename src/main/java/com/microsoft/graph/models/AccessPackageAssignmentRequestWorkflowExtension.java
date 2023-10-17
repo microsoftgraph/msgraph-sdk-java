@@ -30,7 +30,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new accessPackageAssignmentRequestWorkflowExtension and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestWorkflowExtension and sets the default values.
      */
     public AccessPackageAssignmentRequestWorkflowExtension() {
         super();
@@ -39,7 +39,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequestWorkflowExtension
+     * @return a AccessPackageAssignmentRequestWorkflowExtension
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestWorkflowExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
-     * @return a customExtensionCallbackConfiguration
+     * @return a CustomExtensionCallbackConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
@@ -56,7 +56,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
     }
     /**
      * Gets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {

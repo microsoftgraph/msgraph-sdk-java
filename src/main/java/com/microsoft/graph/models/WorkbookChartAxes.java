@@ -21,7 +21,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     private WorkbookChartAxis valueAxis;
     /**
-     * Instantiates a new workbookChartAxes and sets the default values.
+     * Instantiates a new WorkbookChartAxes and sets the default values.
      */
     public WorkbookChartAxes() {
         super();
@@ -29,7 +29,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxes
+     * @return a WorkbookChartAxes
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxes createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the categoryAxis property value. Represents the category axis in a chart. Read-only.
-     * @return a workbookChartAxis
+     * @return a WorkbookChartAxis
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getCategoryAxis() {
@@ -58,7 +58,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
-     * @return a workbookChartAxis
+     * @return a WorkbookChartAxis
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getSeriesAxis() {
@@ -66,7 +66,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     }
     /**
      * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
-     * @return a workbookChartAxis
+     * @return a WorkbookChartAxis
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getValueAxis() {

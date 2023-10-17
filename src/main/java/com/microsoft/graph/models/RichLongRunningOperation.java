@@ -25,7 +25,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     private String type;
     /**
-     * Instantiates a new richLongRunningOperation and sets the default values.
+     * Instantiates a new RichLongRunningOperation and sets the default values.
      */
     public RichLongRunningOperation() {
         super();
@@ -33,7 +33,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a richLongRunningOperation
+     * @return a RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public static RichLongRunningOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the error property value. Error that caused the operation to fail.
-     * @return a publicError
+     * @return a PublicError
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
@@ -63,7 +63,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageComplete() {
@@ -71,7 +71,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the resourceId property value. The unique identifier for the result.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -79,7 +79,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the type property value. The type of the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {

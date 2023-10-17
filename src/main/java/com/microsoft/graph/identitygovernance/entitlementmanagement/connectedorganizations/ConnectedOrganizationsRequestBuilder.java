@@ -59,8 +59,8 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
-     * @return a CompletableFuture of connectedOrganizationCollectionResponse
+     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectedOrganizationCollectionResponse
+     * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConnectedOrganizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of connectedOrganization
+     * @return a CompletableFuture of ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectedOrganization
+     * @return a CompletableFuture of ConnectedOrganization
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConnectedOrganization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new connectedOrganization object.
+     * Create a new connectedOrganization object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectedOrganizationsRequestBuilder
+     * @return a ConnectedOrganizationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * Retrieve a list of connectedOrganization objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

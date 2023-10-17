@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     }
     /**
      * User experience analytics device Startup Process Performance
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     /**
      * User experience analytics device Startup Process Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcessPerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcessPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

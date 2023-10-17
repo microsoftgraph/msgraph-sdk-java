@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
     }
     /**
      * User experience analytics appHealth overview
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
     /**
      * User experience analytics appHealth overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthOverview in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body) {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
      * Update the navigation property userExperienceAnalyticsAppHealthOverview in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsAppHealthOverviewRequestBuilder
+     * @return a UserExperienceAnalyticsAppHealthOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAppHealthOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

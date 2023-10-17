@@ -29,7 +29,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     private String signingCertificate;
     /**
-     * Instantiates a new samlOrWsFedProvider and sets the default values.
+     * Instantiates a new SamlOrWsFedProvider and sets the default values.
      */
     public SamlOrWsFedProvider() {
         super();
@@ -38,7 +38,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a samlOrWsFedProvider
+     * @return a SamlOrWsFedProvider
      */
     @jakarta.annotation.Nonnull
     public static SamlOrWsFedProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,7 +69,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the issuerUri property value. Issuer URI of the federation server.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerUri() {
@@ -77,7 +77,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetadataExchangeUri() {
@@ -85,7 +85,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassiveSignInUri() {
@@ -93,7 +93,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
-     * @return a authenticationProtocol
+     * @return a AuthenticationProtocol
      */
     @jakarta.annotation.Nullable
     public AuthenticationProtocol getPreferredAuthenticationProtocol() {
@@ -101,7 +101,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     }
     /**
      * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSigningCertificate() {

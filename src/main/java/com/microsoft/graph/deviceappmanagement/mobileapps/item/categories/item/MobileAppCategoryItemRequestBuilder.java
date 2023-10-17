@@ -38,7 +38,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of categories for this app.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get() {
@@ -47,7 +47,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of categories for this app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

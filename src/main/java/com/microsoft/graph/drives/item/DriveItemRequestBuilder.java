@@ -138,7 +138,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from drives by key
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get() {
@@ -147,7 +147,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from drives by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +160,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in drives
      * @param body The request body
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> patch(@jakarta.annotation.Nonnull final Drive body) {
@@ -170,7 +170,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> patch(@jakarta.annotation.Nonnull final Drive body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -184,7 +184,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the search method.
      * @param q Usage: q='{q}'
-     * @return a searchWithQRequestBuilder
+     * @return a SearchWithQRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchWithQRequestBuilder searchWithQ(@jakarta.annotation.Nonnull final String q) {

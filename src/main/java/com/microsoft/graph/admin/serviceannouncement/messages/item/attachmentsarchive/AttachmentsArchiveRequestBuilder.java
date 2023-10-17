@@ -143,7 +143,7 @@ public class AttachmentsArchiveRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attachmentsArchiveRequestBuilder
+     * @return a AttachmentsArchiveRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttachmentsArchiveRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

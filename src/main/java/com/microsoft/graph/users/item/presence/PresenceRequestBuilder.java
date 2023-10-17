@@ -96,8 +96,8 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a user's presence information.
-     * @return a CompletableFuture of presence
+     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property presence in users
      * @param body The request body
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> patch(@jakarta.annotation.Nonnull final Presence body) {
@@ -131,7 +131,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property presence in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> patch(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,7 +178,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -233,7 +233,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a presenceRequestBuilder
+     * @return a PresenceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -247,7 +247,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a user's presence information.
+     * Get a user's presence information. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

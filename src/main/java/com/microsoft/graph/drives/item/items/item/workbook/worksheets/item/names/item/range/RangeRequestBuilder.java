@@ -36,19 +36,19 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names/{workbookNamedItem%2Did}/range()", rawUrl);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
-     * @return a CompletableFuture of workbookRange
-     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookRange
+     * @see <a href="https://learn.microsoft.com/graph/api/range-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get() {
         return get(null);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
-     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookRange
+     * @see <a href="https://learn.microsoft.com/graph/api/range-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +59,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rangeRequestBuilder
+     * @return a RangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -14,7 +14,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
      */
     private OffsetDateTime startedDateTime;
     /**
-     * Instantiates a new learningSelfInitiatedCourse and sets the default values.
+     * Instantiates a new LearningSelfInitiatedCourse and sets the default values.
      */
     public LearningSelfInitiatedCourse() {
         super();
@@ -22,7 +22,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a learningSelfInitiatedCourse
+     * @return a LearningSelfInitiatedCourse
      */
     @jakarta.annotation.Nonnull
     public static LearningSelfInitiatedCourse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

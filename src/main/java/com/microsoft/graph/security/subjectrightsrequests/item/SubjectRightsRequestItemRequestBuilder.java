@@ -105,7 +105,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get subjectRightsRequests from security
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get() {
@@ -114,7 +114,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get subjectRightsRequests from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property subjectRightsRequests in security
      * @param body The request body
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
@@ -137,7 +137,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property subjectRightsRequests in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

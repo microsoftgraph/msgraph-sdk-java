@@ -2,6 +2,7 @@ package com.microsoft.graph.print.shares.item.allowedusers.item;
 
 import com.microsoft.graph.print.shares.item.allowedusers.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedusers.item.ref.RefRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedusers.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
@@ -24,6 +25,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.

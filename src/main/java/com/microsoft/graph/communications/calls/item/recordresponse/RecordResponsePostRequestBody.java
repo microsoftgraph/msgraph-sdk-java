@@ -47,7 +47,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
      */
     private java.util.List<String> stopTones;
     /**
-     * Instantiates a new recordResponsePostRequestBody and sets the default values.
+     * Instantiates a new RecordResponsePostRequestBody and sets the default values.
      */
     public RecordResponsePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recordResponsePostRequestBody
+     * @return a RecordResponsePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RecordResponsePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
         return new RecordResponsePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the bargeInAllowed property value. The bargeInAllowed property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBargeInAllowed() {
@@ -80,7 +80,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the clientContext property value. The clientContext property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
@@ -105,7 +105,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInitialSilenceTimeoutInSeconds() {
@@ -113,7 +113,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxRecordDurationInSeconds() {
@@ -121,7 +121,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxSilenceTimeoutInSeconds() {
@@ -129,7 +129,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the playBeep property value. The playBeep property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPlayBeep() {
@@ -137,7 +137,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the prompts property value. The prompts property
-     * @return a prompt
+     * @return a java.util.List<Prompt>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Prompt> getPrompts() {
@@ -145,7 +145,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the stopTones property value. The stopTones property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStopTones() {
@@ -168,8 +168,8 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

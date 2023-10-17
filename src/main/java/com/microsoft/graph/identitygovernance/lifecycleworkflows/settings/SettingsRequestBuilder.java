@@ -37,8 +37,8 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/settings{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
-     * @return a CompletableFuture of lifecycleManagementSettings
+     * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,9 +46,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of lifecycleManagementSettings
+     * @return a CompletableFuture of LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -60,9 +60,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of lifecycleManagementSettings
+     * @return a CompletableFuture of LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,10 +70,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of lifecycleManagementSettings
+     * @return a CompletableFuture of LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +115,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -124,7 +124,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -149,7 +149,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingsRequestBuilder
+     * @return a SettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +157,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return new SettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

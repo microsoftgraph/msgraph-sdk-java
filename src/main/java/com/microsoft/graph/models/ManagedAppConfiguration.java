@@ -16,7 +16,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      */
     private java.util.List<KeyValuePair> customSettings;
     /**
-     * Instantiates a new managedAppConfiguration and sets the default values.
+     * Instantiates a new ManagedAppConfiguration and sets the default values.
      */
     public ManagedAppConfiguration() {
         super();
@@ -25,7 +25,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppConfiguration
+     * @return a ManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {

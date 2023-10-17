@@ -59,8 +59,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the default and localized agreement files.
-     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to localizations for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> post(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
@@ -94,7 +94,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to localizations for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> post(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AgreementFileLocalization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a localizationsRequestBuilder
+     * @return a LocalizationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LocalizationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * Get a list of the default and localized agreement files. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

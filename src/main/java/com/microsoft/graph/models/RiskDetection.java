@@ -86,7 +86,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new riskDetection and sets the default values.
+     * Instantiates a new RiskDetection and sets the default values.
      */
     public RiskDetection() {
         super();
@@ -94,7 +94,7 @@ public class RiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskDetection
+     * @return a RiskDetection
      */
     @jakarta.annotation.Nonnull
     public static RiskDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,7 +103,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
-     * @return a activityType
+     * @return a ActivityType
      */
     @jakarta.annotation.Nullable
     public ActivityType getActivity() {
@@ -119,7 +119,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInfo() {
@@ -127,7 +127,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -143,7 +143,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a riskDetectionTimingType
+     * @return a RiskDetectionTimingType
      */
     @jakarta.annotation.Nullable
     public RiskDetectionTimingType getDetectionTimingType() {
@@ -179,7 +179,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -195,7 +195,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. Location of the sign-in.
-     * @return a signInLocation
+     * @return a SignInLocation
      */
     @jakarta.annotation.Nullable
     public SignInLocation getLocation() {
@@ -203,7 +203,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestId() {
@@ -211,7 +211,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: m365DAdminDismissedDetection.
-     * @return a riskDetail
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -219,7 +219,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and anomalousUserActivity. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskEventType() {
@@ -227,7 +227,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -235,7 +235,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     * @return a riskState
+     * @return a RiskState
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -243,7 +243,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Source of the risk detection. For example, activeDirectory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -251,7 +251,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
-     * @return a tokenIssuerType
+     * @return a TokenIssuerType
      */
     @jakarta.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
@@ -259,7 +259,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. The user principal name (UPN) of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -267,7 +267,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. Unique ID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -275,7 +275,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -1,5 +1,6 @@
 package com.microsoft.graph.groups.item.team.group;
 
+import com.microsoft.graph.groups.item.team.group.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +22,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GroupRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +46,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get group from groups
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -47,7 +55,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Get group from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +97,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupRequestBuilder
+     * @return a GroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.versions.item.lastmodifiedby;
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.versions.item.lastmodifiedby.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.versions.item.lastmodifiedby.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new LastModifiedByRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -45,17 +53,17 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}/lastModifiedBy{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
-     * @return a CompletableFuture of user
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
         return get(null);
     }
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -66,7 +74,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +82,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +105,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastModifiedByRequestBuilder
+     * @return a LastModifiedByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -105,7 +113,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return new LastModifiedByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

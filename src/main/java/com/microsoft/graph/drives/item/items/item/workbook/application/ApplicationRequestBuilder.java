@@ -64,8 +64,8 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
-     * @return a CompletableFuture of workbookApplication
+     * Retrieve the properties and relationships of a workbookApplication object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookApplication
      * @see <a href="https://learn.microsoft.com/graph/api/workbookapplication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Retrieve the properties and relationships of a workbookApplication object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookApplication
+     * @return a CompletableFuture of WorkbookApplication
      * @see <a href="https://learn.microsoft.com/graph/api/workbookapplication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property application in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookApplication
+     * @return a CompletableFuture of WorkbookApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookApplication> patch(@jakarta.annotation.Nonnull final WorkbookApplication body) {
@@ -99,7 +99,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property application in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookApplication
+     * @return a CompletableFuture of WorkbookApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookApplication> patch(@jakarta.annotation.Nonnull final WorkbookApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Retrieve the properties and relationships of a workbookApplication object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Retrieve the properties and relationships of a workbookApplication object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a applicationRequestBuilder
+     * @return a ApplicationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +215,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Retrieve the properties and relationships of a workbookApplication object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

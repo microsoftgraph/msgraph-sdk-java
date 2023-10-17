@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetApplicationOwners extends SubjectSet implements Parsable {
     /**
-     * Instantiates a new targetApplicationOwners and sets the default values.
+     * Instantiates a new TargetApplicationOwners and sets the default values.
      */
     public TargetApplicationOwners() {
         super();
@@ -18,7 +18,7 @@ public class TargetApplicationOwners extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetApplicationOwners
+     * @return a TargetApplicationOwners
      */
     @jakarta.annotation.Nonnull
     public static TargetApplicationOwners createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

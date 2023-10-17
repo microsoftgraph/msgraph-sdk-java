@@ -31,7 +31,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     private Boolean requestAccessForAllowedTargets;
     /**
-     * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
+     * Instantiates a new AccessPackageAutomaticRequestSettings and sets the default values.
      */
     public AccessPackageAutomaticRequestSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAutomaticRequestSettings
+     * @return a AccessPackageAutomaticRequestSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAutomaticRequestSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         return new AccessPackageAutomaticRequestSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     }
     /**
      * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRemoveAccessWhenTargetLeavesAllowedTargets() {
@@ -93,7 +93,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     }
     /**
      * Gets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequestAccessForAllowedTargets() {
@@ -112,8 +112,8 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

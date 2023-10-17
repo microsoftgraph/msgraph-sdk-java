@@ -68,19 +68,19 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
-     * @return a CompletableFuture of workbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -101,9 +101,9 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ItemAtWithIndexRequestBuilder(pathParameters, requestAdapter, index);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -111,10 +111,10 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookTableColumn::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -156,7 +156,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -165,7 +165,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Use this API to create a new TableColumn. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -190,7 +190,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a columnsRequestBuilder
+     * @return a ColumnsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -198,7 +198,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Retrieve a list of tablecolumn objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

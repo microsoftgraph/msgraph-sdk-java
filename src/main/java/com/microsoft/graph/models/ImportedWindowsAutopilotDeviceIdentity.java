@@ -40,7 +40,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     private ImportedWindowsAutopilotDeviceIdentityState state;
     /**
-     * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedWindowsAutopilotDeviceIdentity and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentity() {
         super();
@@ -48,7 +48,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static ImportedWindowsAutopilotDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the assignedUserPrincipalName property value. UPN of the user the device will be assigned
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedUserPrincipalName() {
@@ -81,7 +81,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
@@ -89,7 +89,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getHardwareIdentifier() {
@@ -97,7 +97,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the importId property value. The Import Id of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImportId() {
@@ -105,7 +105,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the productKey property value. Product Key of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
@@ -113,7 +113,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -121,7 +121,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     }
     /**
      * Gets the state property value. Current state of the imported device.
-     * @return a importedWindowsAutopilotDeviceIdentityState
+     * @return a ImportedWindowsAutopilotDeviceIdentityState
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState getState() {

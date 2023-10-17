@@ -78,7 +78,7 @@ public class PostItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get posts from groups
-     * @return a CompletableFuture of post
+     * @return a CompletableFuture of Post
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Post> get() {
@@ -87,7 +87,7 @@ public class PostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get posts from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of post
+     * @return a CompletableFuture of Post
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Post> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

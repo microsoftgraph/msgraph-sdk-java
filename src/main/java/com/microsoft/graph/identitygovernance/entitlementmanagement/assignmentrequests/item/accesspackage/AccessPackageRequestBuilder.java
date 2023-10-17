@@ -38,7 +38,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -47,7 +47,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageRequestBuilder
+     * @return a AccessPackageRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

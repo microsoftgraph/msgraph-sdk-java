@@ -77,7 +77,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes the column from the table.
+     * Deletes the column from the table. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes the column from the table.
+     * Deletes the column from the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -98,8 +98,8 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of tablecolumn object.
-     * @return a CompletableFuture of workbookTableColumn
+     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,9 +107,9 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of tablecolumn object.
+     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,9 +121,9 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookTableColumn::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of tablecolumn object.
+     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,10 +131,10 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of tablecolumn object.
+     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookTableColumn::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes the column from the table.
+     * Deletes the column from the table. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the column from the table.
+     * Deletes the column from the table. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -174,7 +174,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of tablecolumn object.
+     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of tablecolumn object.
+     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of tablecolumn object.
+     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -212,7 +212,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of tablecolumn object.
+     * Update the properties of tablecolumn object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -251,7 +251,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of tablecolumn object.
+     * Retrieve the properties and relationships of tablecolumn object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

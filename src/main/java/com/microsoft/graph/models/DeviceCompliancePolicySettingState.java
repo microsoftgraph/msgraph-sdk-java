@@ -69,7 +69,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
+     * Instantiates a new DeviceCompliancePolicySettingState and sets the default values.
      */
     public DeviceCompliancePolicySettingState() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicySettingState
+     * @return a DeviceCompliancePolicySettingState
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicySettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         return new DeviceCompliancePolicySettingState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the currentValue property value. Current value of setting on device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrentValue() {
@@ -102,7 +102,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the errorCode property value. Error code for the setting
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getErrorCode() {
@@ -110,7 +110,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the errorDescription property value. Error description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -140,7 +140,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the instanceDisplayName property value. Name of setting instance that is being reported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstanceDisplayName() {
@@ -148,7 +148,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the setting property value. The setting that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -164,7 +164,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the settingName property value. Localized/user friendly setting name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -172,7 +172,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the sources property value. Contributing policies
-     * @return a settingSource
+     * @return a java.util.List<SettingSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSources() {
@@ -180,7 +180,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -188,7 +188,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -196,7 +196,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userId property value. UserId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -204,7 +204,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userName property value. UserName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -212,7 +212,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -240,8 +240,8 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageHostedContent extends TeamworkHostedContent implements Parsable {
     /**
-     * Instantiates a new chatMessageHostedContent and sets the default values.
+     * Instantiates a new ChatMessageHostedContent and sets the default values.
      */
     public ChatMessageHostedContent() {
         super();
@@ -17,7 +17,7 @@ public class ChatMessageHostedContent extends TeamworkHostedContent implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessageHostedContent
+     * @return a ChatMessageHostedContent
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageHostedContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

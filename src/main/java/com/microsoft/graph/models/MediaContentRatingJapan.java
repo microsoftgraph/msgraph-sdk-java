@@ -26,7 +26,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      */
     private RatingJapanTelevisionType tvRating;
     /**
-     * Instantiates a new mediaContentRatingJapan and sets the default values.
+     * Instantiates a new MediaContentRatingJapan and sets the default values.
      */
     public MediaContentRatingJapan() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mediaContentRatingJapan
+     * @return a MediaContentRatingJapan
      */
     @jakarta.annotation.Nonnull
     public static MediaContentRatingJapan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
         return new MediaContentRatingJapan();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Japan
-     * @return a ratingJapanMoviesType
+     * @return a RatingJapanMoviesType
      */
     @jakarta.annotation.Nullable
     public RatingJapanMoviesType getMovieRating() {
@@ -71,7 +71,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Japan
-     * @return a ratingJapanTelevisionType
+     * @return a RatingJapanTelevisionType
      */
     @jakarta.annotation.Nullable
     public RatingJapanTelevisionType getTvRating() {
@@ -97,8 +97,8 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

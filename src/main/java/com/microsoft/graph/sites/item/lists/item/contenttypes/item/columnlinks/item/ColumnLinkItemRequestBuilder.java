@@ -57,7 +57,7 @@ public class ColumnLinkItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of columns that are required by this content type.
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> get() {
@@ -66,7 +66,7 @@ public class ColumnLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ColumnLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property columnLinks in sites
      * @param body The request body
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> patch(@jakarta.annotation.Nonnull final ColumnLink body) {
@@ -89,7 +89,7 @@ public class ColumnLinkItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property columnLinks in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnLink
+     * @return a CompletableFuture of ColumnLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLink> patch(@jakarta.annotation.Nonnull final ColumnLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

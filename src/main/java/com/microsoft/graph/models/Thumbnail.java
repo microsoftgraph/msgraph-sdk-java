@@ -38,7 +38,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new thumbnail and sets the default values.
+     * Instantiates a new Thumbnail and sets the default values.
      */
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nonnull
     public static Thumbnail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
         return new Thumbnail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the content property value. The content stream for the thumbnail.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -86,7 +86,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the height property value. The height of the thumbnail, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
@@ -94,7 +94,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceItemId() {
@@ -110,7 +110,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the url property value. The URL used to fetch the thumbnail content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
@@ -118,7 +118,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the width property value. The width of the thumbnail, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
@@ -139,8 +139,8 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

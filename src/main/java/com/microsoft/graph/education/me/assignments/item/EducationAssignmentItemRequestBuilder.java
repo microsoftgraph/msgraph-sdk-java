@@ -113,7 +113,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Assignments belonging to the user.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> get() {
@@ -122,7 +122,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property assignments in education
      * @param body The request body
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> patch(@jakarta.annotation.Nonnull final EducationAssignment body) {
@@ -145,7 +145,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property assignments in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> patch(@jakarta.annotation.Nonnull final EducationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

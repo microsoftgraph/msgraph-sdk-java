@@ -25,7 +25,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     private String resourceLocation;
     /**
-     * Instantiates a new onenoteOperation and sets the default values.
+     * Instantiates a new OnenoteOperation and sets the default values.
      */
     public OnenoteOperation() {
         super();
@@ -33,7 +33,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteOperation
+     * @return a OnenoteOperation
      */
     @jakarta.annotation.Nonnull
     public static OnenoteOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the error property value. The error returned by the operation.
-     * @return a onenoteOperationError
+     * @return a OnenoteOperationError
      */
     @jakarta.annotation.Nullable
     public OnenoteOperationError getError() {
@@ -63,7 +63,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPercentComplete() {
@@ -71,7 +71,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the resourceId property value. The resource id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -79,7 +79,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {

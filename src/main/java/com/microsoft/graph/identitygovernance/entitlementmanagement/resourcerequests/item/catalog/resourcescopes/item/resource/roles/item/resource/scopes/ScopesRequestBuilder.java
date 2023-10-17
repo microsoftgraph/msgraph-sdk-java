@@ -60,7 +60,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageResourceScopeCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScopeCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScopeCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScopeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to scopes for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceScope body) {
@@ -92,7 +92,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to scopes for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scopesRequestBuilder
+     * @return a ScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

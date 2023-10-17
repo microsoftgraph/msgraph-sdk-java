@@ -26,7 +26,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     private AuthenticationMethodKeyStrength keyStrength;
     /**
-     * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
      */
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
@@ -35,7 +35,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsHelloForBusinessAuthenticationMethod
+     * @return a WindowsHelloForBusinessAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     * @return a device
+     * @return a Device
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -60,7 +60,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the displayName property value. The name of the device on which Windows Hello for Business is registered
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     * @return a authenticationMethodKeyStrength
+     * @return a AuthenticationMethodKeyStrength
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodKeyStrength getKeyStrength() {

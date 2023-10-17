@@ -57,7 +57,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get provisioning from auditLogs
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> get() {
@@ -66,7 +66,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
     /**
      * Get provisioning from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property provisioning in auditLogs
      * @param body The request body
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> patch(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body) {
@@ -89,7 +89,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property provisioning in auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> patch(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

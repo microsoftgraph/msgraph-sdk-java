@@ -61,7 +61,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a school.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a school.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -82,8 +82,8 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an educationSchool object.
-     * @return a CompletableFuture of educationSchool
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,9 +91,9 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an educationSchool object.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationSchool::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an educationSchool object.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,10 +115,10 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationSchool object.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationSchool::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a school.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a school.
+     * Delete a school. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an educationSchool object.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an educationSchool object.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -187,7 +187,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationSchool object.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -196,7 +196,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationSchool object.
+     * Update the properties of an educationSchool object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -235,7 +235,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an educationSchool object.
+     * Read the properties and relationships of an educationSchool object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

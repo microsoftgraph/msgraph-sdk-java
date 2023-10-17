@@ -64,8 +64,8 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return patch(body, null);
     }
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

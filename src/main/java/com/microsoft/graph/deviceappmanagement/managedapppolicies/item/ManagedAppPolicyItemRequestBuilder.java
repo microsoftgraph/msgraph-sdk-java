@@ -65,7 +65,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the windowsInformationProtection object.
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the windowsInformationProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedAppPolicies in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> patch(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
@@ -99,7 +99,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedAppPolicies in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicy
+     * @return a CompletableFuture of ManagedAppPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> patch(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

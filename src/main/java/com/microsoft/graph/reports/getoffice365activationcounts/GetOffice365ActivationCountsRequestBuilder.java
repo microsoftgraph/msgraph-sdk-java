@@ -86,7 +86,7 @@ public class GetOffice365ActivationCountsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365ActivationCountsRequestBuilder
+     * @return a GetOffice365ActivationCountsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ActivationCountsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

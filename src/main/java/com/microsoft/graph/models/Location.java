@@ -50,7 +50,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     private LocationUniqueIdType uniqueIdType;
     /**
-     * Instantiates a new location and sets the default values.
+     * Instantiates a new Location and sets the default values.
      */
     public Location() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a location
+     * @return a Location
      */
     @jakarta.annotation.Nonnull
     public static Location createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return new Location();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +82,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The street address of the location.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -90,7 +90,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the coordinates property value. The geographic coordinates and elevation of the location.
-     * @return a outlookGeoCoordinates
+     * @return a OutlookGeoCoordinates
      */
     @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getCoordinates() {
@@ -98,7 +98,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The name associated with the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -124,7 +124,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locationEmailAddress property value. Optional email address of the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocationEmailAddress() {
@@ -132,7 +132,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @return a locationType
+     * @return a LocationType
      */
     @jakarta.annotation.Nullable
     public LocationType getLocationType() {
@@ -140,7 +140,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locationUri property value. Optional URI representing the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocationUri() {
@@ -148,7 +148,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uniqueId property value. For internal use only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueId() {
@@ -164,7 +164,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uniqueIdType property value. For internal use only.
-     * @return a locationUniqueIdType
+     * @return a LocationUniqueIdType
      */
     @jakarta.annotation.Nullable
     public LocationUniqueIdType getUniqueIdType() {
@@ -188,8 +188,8 @@ public class Location implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

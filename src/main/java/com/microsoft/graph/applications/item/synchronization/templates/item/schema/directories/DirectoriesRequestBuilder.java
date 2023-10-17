@@ -60,7 +60,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Contains the collection of directories and all of their objects.
-     * @return a CompletableFuture of directoryDefinitionCollectionResponse
+     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryDefinitionCollectionResponse
+     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to directories for applications
      * @param body The request body
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@jakarta.annotation.Nonnull final DirectoryDefinition body) {
@@ -92,7 +92,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to directories for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryDefinition
+     * @return a CompletableFuture of DirectoryDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@jakarta.annotation.Nonnull final DirectoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoriesRequestBuilder
+     * @return a DirectoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

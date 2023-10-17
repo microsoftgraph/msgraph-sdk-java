@@ -37,7 +37,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function preview
-     * @return a CompletableFuture of onenotePagePreview
+     * @return a CompletableFuture of OnenotePagePreview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePagePreview> get() {
@@ -46,7 +46,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function preview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePagePreview
+     * @return a CompletableFuture of OnenotePagePreview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePagePreview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a previewRequestBuilder
+     * @return a PreviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PreviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

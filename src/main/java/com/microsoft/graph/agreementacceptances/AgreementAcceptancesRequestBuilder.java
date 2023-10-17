@@ -52,7 +52,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from agreementAcceptances
-     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get() {
@@ -61,7 +61,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from agreementAcceptances
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -74,7 +74,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to agreementAcceptances
      * @param body The request body
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@jakarta.annotation.Nonnull final AgreementAcceptance body) {
@@ -84,7 +84,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to agreementAcceptances
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementAcceptance
+     * @return a CompletableFuture of AgreementAcceptance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agreementAcceptancesRequestBuilder
+     * @return a AgreementAcceptancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

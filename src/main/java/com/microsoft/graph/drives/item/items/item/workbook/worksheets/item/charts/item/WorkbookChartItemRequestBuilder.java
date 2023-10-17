@@ -120,7 +120,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes the chart object.
+     * Deletes the chart object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +128,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes the chart object.
+     * Deletes the chart object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -141,8 +141,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of chart object.
-     * @return a CompletableFuture of workbookChart
+     * Retrieve the properties and relationships of chart object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -150,9 +150,9 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Retrieve the properties and relationships of chart object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the image method.
      * @param width Usage: width={width}
-     * @return a imageWithWidthRequestBuilder
+     * @return a ImageWithWidthRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthRequestBuilder imageWithWidth(@jakarta.annotation.Nonnull final Integer width) {
@@ -177,7 +177,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the image method.
      * @param height Usage: height={height}
      * @param width Usage: width={width}
-     * @return a imageWithWidthWithHeightRequestBuilder
+     * @return a ImageWithWidthWithHeightRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightRequestBuilder imageWithWidthWithHeight(@jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
@@ -190,7 +190,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param fittingMode Usage: fittingMode='{fittingMode}'
      * @param height Usage: height={height}
      * @param width Usage: width={width}
-     * @return a imageWithWidthWithHeightWithFittingModeRequestBuilder
+     * @return a ImageWithWidthWithHeightWithFittingModeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightWithFittingModeRequestBuilder imageWithWidthWithHeightWithFittingMode(@jakarta.annotation.Nonnull final String fittingMode, @jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
@@ -200,9 +200,9 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return new ImageWithWidthWithHeightWithFittingModeRequestBuilder(pathParameters, requestAdapter, fittingMode, height, width);
     }
     /**
-     * Update the properties of chart object.
+     * Update the properties of chart object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -210,10 +210,10 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of chart object.
+     * Update the properties of chart object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -226,7 +226,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes the chart object.
+     * Deletes the chart object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -234,7 +234,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the chart object.
+     * Deletes the chart object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -253,7 +253,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Retrieve the properties and relationships of chart object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -261,7 +261,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Retrieve the properties and relationships of chart object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -282,7 +282,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chart object.
+     * Update the properties of chart object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -291,7 +291,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chart object.
+     * Update the properties of chart object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -330,7 +330,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Retrieve the properties and relationships of chart object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

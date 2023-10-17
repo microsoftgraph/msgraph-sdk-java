@@ -57,7 +57,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from domainDnsRecords by key
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> get() {
@@ -66,7 +66,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from domainDnsRecords by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in domainDnsRecords
      * @param body The request body
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> patch(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
@@ -89,7 +89,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in domainDnsRecords
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> patch(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -24,7 +24,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     private String packageId;
     /**
-     * Instantiates a new managedAndroidStoreApp and sets the default values.
+     * Instantiates a new ManagedAndroidStoreApp and sets the default values.
      */
     public ManagedAndroidStoreApp() {
         super();
@@ -33,7 +33,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAndroidStoreApp
+     * @return a ManagedAndroidStoreApp
      */
     @jakarta.annotation.Nonnull
     public static ManagedAndroidStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the appStoreUrl property value. The Android AppStoreUrl.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
@@ -62,7 +62,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
-     * @return a androidMinimumOperatingSystem
+     * @return a AndroidMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -70,7 +70,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the packageId property value. The app's package ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {

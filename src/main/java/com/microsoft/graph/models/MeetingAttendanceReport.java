@@ -26,7 +26,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     private Integer totalParticipantCount;
     /**
-     * Instantiates a new meetingAttendanceReport and sets the default values.
+     * Instantiates a new MeetingAttendanceReport and sets the default values.
      */
     public MeetingAttendanceReport() {
         super();
@@ -34,7 +34,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingAttendanceReport
+     * @return a MeetingAttendanceReport
      */
     @jakarta.annotation.Nonnull
     public static MeetingAttendanceReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     }
     /**
      * Gets the attendanceRecords property value. List of attendance records of an attendance report. Read-only.
-     * @return a attendanceRecord
+     * @return a java.util.List<AttendanceRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendanceRecord> getAttendanceRecords() {
@@ -80,7 +80,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     }
     /**
      * Gets the totalParticipantCount property value. Total number of participants. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalParticipantCount() {

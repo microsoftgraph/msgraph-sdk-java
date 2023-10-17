@@ -26,7 +26,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
      */
     private Boolean useCompanyBranding;
     /**
-     * Instantiates a new emailSettings and sets the default values.
+     * Instantiates a new EmailSettings and sets the default values.
      */
     public EmailSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailSettings
+     * @return a EmailSettings
      */
     @jakarta.annotation.Nonnull
     public static EmailSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
         return new EmailSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the senderDomain property value. Specifies the domain that should be used when sending email notifications. This domain must be verified in order to be used. We recommend that you use a domain that has the appropriate DNS records to facilitate email validation, like SPF, DKIM, DMARC, and MX, because this then complies with the RFC compliance for sending and receiving email. For details, see Learn more about Exchange Online Email Routing.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderDomain() {
@@ -79,7 +79,7 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the useCompanyBranding property value. Specifies if the organizations banner logo should be included in email notifications. The banner logo will replace the Microsoft logo at the top of the email notification. If true the banner logo will be taken from the tenants branding settings. This value can only be set to true if the organizationalBranding bannerLogo property is set.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseCompanyBranding() {
@@ -97,8 +97,8 @@ public class EmailSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

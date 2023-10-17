@@ -34,7 +34,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> supportedApis;
     /**
-     * Instantiates a new objectDefinition and sets the default values.
+     * Instantiates a new ObjectDefinition and sets the default values.
      */
     public ObjectDefinition() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a objectDefinition
+     * @return a ObjectDefinition
      */
     @jakarta.annotation.Nonnull
     public static ObjectDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return new ObjectDefinition();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attributes property value. Defines attributes of the object.
-     * @return a attributeDefinition
+     * @return a java.util.List<AttributeDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeDefinition> getAttributes() {
@@ -81,7 +81,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the metadata property value. Metadata for the given object.
-     * @return a objectDefinitionMetadataEntry
+     * @return a java.util.List<ObjectDefinitionMetadataEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectDefinitionMetadataEntry> getMetadata() {
@@ -89,7 +89,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -97,7 +97,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedApis() {
@@ -125,8 +125,8 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

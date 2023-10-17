@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileVersion extends AgreementFileProperties implements Parsable {
     /**
-     * Instantiates a new agreementFileVersion and sets the default values.
+     * Instantiates a new AgreementFileVersion and sets the default values.
      */
     public AgreementFileVersion() {
         super();
@@ -17,7 +17,7 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreementFileVersion
+     * @return a AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public static AgreementFileVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

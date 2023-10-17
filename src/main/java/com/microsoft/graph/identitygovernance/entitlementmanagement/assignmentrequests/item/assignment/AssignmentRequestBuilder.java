@@ -38,7 +38,7 @@ public class AssignmentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
@@ -47,7 +47,7 @@ public class AssignmentRequestBuilder extends BaseRequestBuilder {
     /**
      * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class AssignmentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentRequestBuilder
+     * @return a AssignmentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

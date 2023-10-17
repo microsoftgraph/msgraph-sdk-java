@@ -60,7 +60,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * The content stream, if the item represents a file.
      * @param body Binary request body
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> put(@jakarta.annotation.Nonnull final InputStream body) {
@@ -70,7 +70,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * The content stream, if the item represents a file.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -143,7 +143,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contentRequestBuilder
+     * @return a ContentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

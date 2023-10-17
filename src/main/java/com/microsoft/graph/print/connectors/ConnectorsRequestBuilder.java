@@ -59,8 +59,8 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/connectors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of print connectors.
-     * @return a CompletableFuture of printConnectorCollectionResponse
+     * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrintConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of print connectors.
+     * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printConnectorCollectionResponse
+     * @return a CompletableFuture of PrintConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to connectors for print
      * @param body The request body
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> post(@jakarta.annotation.Nonnull final PrintConnector body) {
@@ -94,7 +94,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to connectors for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> post(@jakarta.annotation.Nonnull final PrintConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PrintConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of print connectors.
+     * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of print connectors.
+     * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectorsRequestBuilder
+     * @return a ConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return new ConnectorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of print connectors.
+     * Retrieve a list of print connectors. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

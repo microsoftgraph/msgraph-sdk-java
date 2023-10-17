@@ -57,7 +57,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     }
     /**
      * Names and descriptions of all valid authentication method modes in the system.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> get() {
@@ -66,7 +66,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     /**
      * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property authenticationMethodModes in identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> patch(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body) {
@@ -89,7 +89,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
      * Update the navigation property authenticationMethodModes in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> patch(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

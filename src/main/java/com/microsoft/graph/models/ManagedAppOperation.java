@@ -29,7 +29,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new managedAppOperation and sets the default values.
+     * Instantiates a new ManagedAppOperation and sets the default values.
      */
     public ManagedAppOperation() {
         super();
@@ -37,7 +37,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppOperation
+     * @return a ManagedAppOperation
      */
     @jakarta.annotation.Nonnull
     public static ManagedAppOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The operation name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The current state of the operation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -83,7 +83,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

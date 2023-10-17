@@ -38,7 +38,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -50,7 +50,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -66,7 +66,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property mailboxSettings value.
      * @param body The request body
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -79,7 +79,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      * Update property mailboxSettings value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -169,7 +169,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mailboxSettingsRequestBuilder
+     * @return a MailboxSettingsRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */

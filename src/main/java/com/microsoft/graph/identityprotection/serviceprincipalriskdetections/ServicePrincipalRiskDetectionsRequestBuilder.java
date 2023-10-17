@@ -59,8 +59,8 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityProtection/servicePrincipalRiskDetections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
-     * @return a CompletableFuture of servicePrincipalRiskDetectionCollectionResponse
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ServicePrincipalRiskDetectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalRiskDetectionCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalRiskDetectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalRiskDetection
+     * @return a CompletableFuture of ServicePrincipalRiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetection> post(@jakarta.annotation.Nonnull final ServicePrincipalRiskDetection body) {
@@ -94,7 +94,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalRiskDetection
+     * @return a CompletableFuture of ServicePrincipalRiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetection> post(@jakarta.annotation.Nonnull final ServicePrincipalRiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, ServicePrincipalRiskDetection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalRiskDetectionsRequestBuilder
+     * @return a ServicePrincipalRiskDetectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalRiskDetectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return new ServicePrincipalRiskDetectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

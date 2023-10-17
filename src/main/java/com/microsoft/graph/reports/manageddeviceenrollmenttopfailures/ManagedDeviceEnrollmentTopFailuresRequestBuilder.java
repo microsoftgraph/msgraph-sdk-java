@@ -37,7 +37,7 @@ public class ManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseReques
     }
     /**
      * Invoke function managedDeviceEnrollmentTopFailures
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Report> get() {
@@ -46,7 +46,7 @@ public class ManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseReques
     /**
      * Invoke function managedDeviceEnrollmentTopFailures
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Report> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedDeviceEnrollmentTopFailuresRequestBuilder
+     * @return a ManagedDeviceEnrollmentTopFailuresRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEnrollmentTopFailuresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

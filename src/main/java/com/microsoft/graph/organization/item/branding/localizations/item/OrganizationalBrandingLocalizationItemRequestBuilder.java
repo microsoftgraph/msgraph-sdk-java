@@ -93,7 +93,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return delete(null);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -114,8 +114,8 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,9 +123,9 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return get(null);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -137,9 +137,9 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.sendAsync(requestInfo, OrganizationalBrandingLocalization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,10 +147,10 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return patch(body, null);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.sendAsync(requestInfo, OrganizationalBrandingLocalization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -190,7 +190,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -198,7 +198,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +219,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +228,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -267,7 +267,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

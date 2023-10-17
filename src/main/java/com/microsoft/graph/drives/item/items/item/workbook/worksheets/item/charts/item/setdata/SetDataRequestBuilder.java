@@ -35,7 +35,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/setData", rawUrl);
     }
     /**
-     * Resets the source data for the chart.
+     * Resets the source data for the chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/chart-setdata?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Resets the source data for the chart.
+     * Resets the source data for the chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/chart-setdata?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Resets the source data for the chart.
+     * Resets the source data for the chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Resets the source data for the chart.
+     * Resets the source data for the chart. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class SetDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setDataRequestBuilder
+     * @return a SetDataRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetDataRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
