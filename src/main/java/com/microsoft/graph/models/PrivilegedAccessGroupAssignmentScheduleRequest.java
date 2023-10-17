@@ -31,7 +31,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Access Id.
-     * 
+     * The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
      */
     @SerializedName(value = "accessId", alternate = {"AccessId"})
     @Expose
@@ -40,7 +40,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Group Id.
-     * 
+     * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
@@ -49,7 +49,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Principal Id.
-     * 
+     * The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Supports $filter (eq, ne).
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -58,7 +58,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Target Schedule Id.
-     * 
+     * The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
      */
     @SerializedName(value = "targetScheduleId", alternate = {"TargetScheduleId"})
     @Expose
@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Activated Using.
-     * 
+     * When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose
@@ -76,7 +76,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Group.
-     * 
+     * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -85,7 +85,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Principal.
-     * 
+     * References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
@@ -94,7 +94,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
 
     /**
      * The Target Schedule.
-     * 
+     * Schedule created by this request. Supports $expand.
      */
     @SerializedName(value = "targetSchedule", alternate = {"TargetSchedule"})
     @Expose

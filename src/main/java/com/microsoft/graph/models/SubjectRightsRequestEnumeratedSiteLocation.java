@@ -28,7 +28,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
 
     /**
      * The Urls.
-     * 
+     * Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      */
     @SerializedName(value = "urls", alternate = {"Urls"})
     @Expose

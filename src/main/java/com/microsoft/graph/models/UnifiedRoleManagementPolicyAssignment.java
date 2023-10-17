@@ -37,7 +37,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Role Definition Id.
-     * The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
+     * For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Scope Type.
-     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
+     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. Required.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose

@@ -28,7 +28,7 @@ public class PrivilegedAccessSchedule extends Entity implements IJsonBackedObjec
 
     /**
      * The Created Date Time.
-     * 
+     * When the schedule was created. Optional.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class PrivilegedAccessSchedule extends Entity implements IJsonBackedObjec
 
     /**
      * The Created Using.
-     * 
+     * The identifier of the access assignment or eligibility request that created this schedule. Optional.
      */
     @SerializedName(value = "createdUsing", alternate = {"CreatedUsing"})
     @Expose
@@ -46,7 +46,7 @@ public class PrivilegedAccessSchedule extends Entity implements IJsonBackedObjec
 
     /**
      * The Modified Date Time.
-     * 
+     * When the schedule was last modified. Optional.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class PrivilegedAccessSchedule extends Entity implements IJsonBackedObjec
 
     /**
      * The Schedule Info.
-     * 
+     * Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
      */
     @SerializedName(value = "scheduleInfo", alternate = {"ScheduleInfo"})
     @Expose
@@ -64,7 +64,7 @@ public class PrivilegedAccessSchedule extends Entity implements IJsonBackedObjec
 
     /**
      * The Status.
-     * 
+     * The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

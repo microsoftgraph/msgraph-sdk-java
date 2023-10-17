@@ -31,7 +31,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Access Id.
-     * 
+     * The identifier of the membership or ownership eligibility to the group that is governed by PIM. Required. The possible values are: owner, member. Supports $filter (eq).
      */
     @SerializedName(value = "accessId", alternate = {"AccessId"})
     @Expose
@@ -40,7 +40,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Group Id.
-     * 
+     * The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
@@ -49,7 +49,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Member Type.
-     * 
+     * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the schedule. Required. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -58,7 +58,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Principal Id.
-     * 
+     * The identifier of the principal whose membership or ownership eligibility is granted through PIM for groups. Required. Supports $filter (eq).
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Group.
-     * 
+     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -76,7 +76,7 @@ public class PrivilegedAccessGroupEligibilitySchedule extends PrivilegedAccessSc
 
     /**
      * The Principal.
-     * 
+     * References the principal that's in the scope of this membership or ownership eligibility request to the group that's governed by PIM. Supports $expand.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose

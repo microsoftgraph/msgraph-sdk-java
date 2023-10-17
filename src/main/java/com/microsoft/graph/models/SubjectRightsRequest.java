@@ -50,7 +50,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Closed Date Time.
-     * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time when the request was closed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Query.
-     * 
+     * KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -77,7 +77,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -122,7 +122,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -140,7 +140,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Include All Versions.
-     * 
+     * Include all versions of the documents. By default, the current copies of the documents are returned. If SharePoint sites have versioning enabled, including all versions includes the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "includeAllVersions", alternate = {"IncludeAllVersions"})
     @Expose
@@ -149,7 +149,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Include Authored Content.
-     * 
+     * Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "includeAuthoredContent", alternate = {"IncludeAuthoredContent"})
     @Expose
@@ -167,7 +167,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Due Date Time.
-     * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time when the request is internally due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "internalDueDateTime", alternate = {"InternalDueDateTime"})
     @Expose
@@ -185,7 +185,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time when the request was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -194,7 +194,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Mailbox Locations.
-     * 
+     * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "mailboxLocations", alternate = {"MailboxLocations"})
     @Expose
@@ -203,7 +203,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Pause After Estimate.
-     * 
+     * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "pauseAfterEstimate", alternate = {"PauseAfterEstimate"})
     @Expose
@@ -212,7 +212,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Regulations.
-     * List of regulations that this request fulfills.
+     * List of regulations that this request fulfill.
      */
     @SerializedName(value = "regulations", alternate = {"Regulations"})
     @Expose
@@ -221,7 +221,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Site Locations.
-     * 
+     * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "siteLocations", alternate = {"SiteLocations"})
     @Expose
@@ -248,7 +248,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+     * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -257,14 +257,14 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Approvers.
-     * 
+     * Collection of users who can approve the request. Currently only supported for requests of type delete.
      */
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage approvers;
 
     /**
      * The Collaborators.
-     * 
+     * Collection of users who can collaborate on the request.
      */
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage collaborators;

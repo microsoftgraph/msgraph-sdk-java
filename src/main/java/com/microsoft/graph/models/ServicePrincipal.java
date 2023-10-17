@@ -92,7 +92,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Id.
-     * The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
+     * The unique identifier for the associated application (its appId property). Alternate key. Supports $filter (eq, ne, not, in, startsWith).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
