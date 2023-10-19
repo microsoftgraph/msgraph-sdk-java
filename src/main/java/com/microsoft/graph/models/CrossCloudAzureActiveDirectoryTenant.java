@@ -21,7 +21,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     private String tenantId;
     /**
-     * Instantiates a new crossCloudAzureActiveDirectoryTenant and sets the default values.
+     * Instantiates a new CrossCloudAzureActiveDirectoryTenant and sets the default values.
      */
     public CrossCloudAzureActiveDirectoryTenant() {
         super();
@@ -30,7 +30,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossCloudAzureActiveDirectoryTenant
+     * @return a CrossCloudAzureActiveDirectoryTenant
      */
     @jakarta.annotation.Nonnull
     public static CrossCloudAzureActiveDirectoryTenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     }
     /**
      * Gets the cloudInstance property value. The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudInstance() {
@@ -47,7 +47,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     }
     /**
      * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     }
     /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

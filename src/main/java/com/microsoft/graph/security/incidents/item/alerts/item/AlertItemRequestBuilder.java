@@ -46,7 +46,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of related alerts. Supports $expand.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get() {
@@ -55,7 +55,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,10 +81,6 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,6 +88,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

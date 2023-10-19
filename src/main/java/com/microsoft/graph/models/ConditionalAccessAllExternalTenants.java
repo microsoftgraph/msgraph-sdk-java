@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessAllExternalTenants extends ConditionalAccessExternalTenants implements Parsable {
     /**
-     * Instantiates a new conditionalAccessAllExternalTenants and sets the default values.
+     * Instantiates a new ConditionalAccessAllExternalTenants and sets the default values.
      */
     public ConditionalAccessAllExternalTenants() {
         super();
@@ -18,7 +18,7 @@ public class ConditionalAccessAllExternalTenants extends ConditionalAccessExtern
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessAllExternalTenants
+     * @return a ConditionalAccessAllExternalTenants
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessAllExternalTenants createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

@@ -39,7 +39,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     private Integer year;
     /**
-     * Instantiates a new standardTimeZoneOffset and sets the default values.
+     * Instantiates a new StandardTimeZoneOffset and sets the default values.
      */
     public StandardTimeZoneOffset() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a standardTimeZoneOffset
+     * @return a StandardTimeZoneOffset
      */
     @jakarta.annotation.Nonnull
     public static StandardTimeZoneOffset createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         return new StandardTimeZoneOffset();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDayOccurrence() {
@@ -79,7 +79,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     * @return a dayOfWeek
+     * @return a DayOfWeek
      */
     @jakarta.annotation.Nullable
     public DayOfWeek getDayOfWeek() {
@@ -102,7 +102,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMonth() {
@@ -110,7 +110,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -126,7 +126,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {
@@ -147,8 +147,8 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -13,7 +13,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      */
     private Float points;
     /**
-     * Instantiates a new educationAssignmentPointsGrade and sets the default values.
+     * Instantiates a new EducationAssignmentPointsGrade and sets the default values.
      */
     public EducationAssignmentPointsGrade() {
         super();
@@ -22,7 +22,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentPointsGrade
+     * @return a EducationAssignmentPointsGrade
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentPointsGrade createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     }
     /**
      * Gets the points property value. Number of points a teacher is giving this submission object.
-     * @return a float
+     * @return a Float
      */
     @jakarta.annotation.Nullable
     public Float getPoints() {

@@ -26,7 +26,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      */
     private java.util.List<String> riskEventTypes;
     /**
-     * Instantiates a new riskServicePrincipalActivity and sets the default values.
+     * Instantiates a new RiskServicePrincipalActivity and sets the default values.
      */
     public RiskServicePrincipalActivity() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskServicePrincipalActivity
+     * @return a RiskServicePrincipalActivity
      */
     @jakarta.annotation.Nonnull
     public static RiskServicePrincipalActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
         return new RiskServicePrincipalActivity();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     * @return a riskDetail
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getDetail() {
@@ -71,7 +71,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the riskEventTypes property value. The riskEventTypes property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRiskEventTypes() {
@@ -97,8 +97,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

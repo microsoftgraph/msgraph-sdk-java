@@ -13,7 +13,7 @@ public class TargetManager extends SubjectSet implements Parsable {
      */
     private Integer managerLevel;
     /**
-     * Instantiates a new targetManager and sets the default values.
+     * Instantiates a new TargetManager and sets the default values.
      */
     public TargetManager() {
         super();
@@ -22,7 +22,7 @@ public class TargetManager extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetManager
+     * @return a TargetManager
      */
     @jakarta.annotation.Nonnull
     public static TargetManager createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TargetManager extends SubjectSet implements Parsable {
     }
     /**
      * Gets the managerLevel property value. Manager level, between 1 and 4. The direct manager is 1.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagerLevel() {

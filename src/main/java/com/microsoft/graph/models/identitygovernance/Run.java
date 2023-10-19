@@ -67,7 +67,7 @@ public class Run extends Entity implements Parsable {
      */
     private WorkflowExecutionType workflowExecutionType;
     /**
-     * Instantiates a new run and sets the default values.
+     * Instantiates a new Run and sets the default values.
      */
     public Run() {
         super();
@@ -75,7 +75,7 @@ public class Run extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a run
+     * @return a Run
      */
     @jakarta.annotation.Nonnull
     public static Run createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,7 +92,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the failedTasksCount property value. The number of tasks that failed in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasksCount() {
@@ -100,7 +100,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the failedUsersCount property value. The number of users that failed in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUsersCount() {
@@ -139,7 +139,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a lifecycleWorkflowProcessingStatus
+     * @return a LifecycleWorkflowProcessingStatus
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
@@ -163,7 +163,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the successfulUsersCount property value. The number of successfully completed users in the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulUsersCount() {
@@ -171,7 +171,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the taskProcessingResults property value. The related taskProcessingResults.
-     * @return a taskProcessingResult
+     * @return a java.util.List<TaskProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
@@ -179,7 +179,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the totalTasksCount property value. The totalTasksCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasksCount() {
@@ -187,7 +187,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnprocessedTasksCount() {
@@ -195,7 +195,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the totalUsersCount property value. The total number of users in the workflow execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsersCount() {
@@ -203,7 +203,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the userProcessingResults property value. The associated individual user execution.
-     * @return a userProcessingResult
+     * @return a java.util.List<UserProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
@@ -211,7 +211,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the workflowExecutionType property value. The workflowExecutionType property
-     * @return a workflowExecutionType
+     * @return a WorkflowExecutionType
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {

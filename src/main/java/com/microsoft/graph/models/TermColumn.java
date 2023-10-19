@@ -16,7 +16,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Specifies whether the column will allow more than one value.
+     * Specifies whether the column allows more than one value.
      */
     private Boolean allowMultipleValues;
     /**
@@ -36,7 +36,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     private Set termSet;
     /**
-     * Instantiates a new termColumn and sets the default values.
+     * Instantiates a new TermColumn and sets the default values.
      */
     public TermColumn() {
         this.setAdditionalData(new HashMap<>());
@@ -44,7 +44,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termColumn
+     * @return a TermColumn
      */
     @jakarta.annotation.Nonnull
     public static TermColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         return new TermColumn();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,8 +60,8 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
-     * @return a boolean
+     * Gets the allowMultipleValues property value. Specifies whether the column allows more than one value.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleValues() {
@@ -83,7 +83,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -91,7 +91,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parentTerm property value. The parentTerm property
-     * @return a term
+     * @return a Term
      */
     @jakarta.annotation.Nullable
     public Term getParentTerm() {
@@ -99,7 +99,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowFullyQualifiedName() {
@@ -107,7 +107,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the termSet property value. The termSet property
-     * @return a set
+     * @return a Set
      */
     @jakarta.annotation.Nullable
     public Set getTermSet() {
@@ -127,14 +127,14 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
+     * Sets the allowMultipleValues property value. Specifies whether the column allows more than one value.
      * @param value Value to set for the allowMultipleValues property.
      */
     public void setAllowMultipleValues(@jakarta.annotation.Nullable final Boolean value) {

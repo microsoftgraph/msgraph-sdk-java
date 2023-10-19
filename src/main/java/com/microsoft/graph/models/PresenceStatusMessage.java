@@ -15,11 +15,11 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The expiryDateTime property
+     * Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
      */
     private DateTimeTimeZone expiryDateTime;
     /**
-     * The message property
+     * Status message item. The only supported format currently is message.contentType = 'text'.
      */
     private ItemBody message;
     /**
@@ -27,11 +27,11 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The publishedDateTime property
+     * Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      */
     private OffsetDateTime publishedDateTime;
     /**
-     * Instantiates a new presenceStatusMessage and sets the default values.
+     * Instantiates a new PresenceStatusMessage and sets the default values.
      */
     public PresenceStatusMessage() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presenceStatusMessage
+     * @return a PresenceStatusMessage
      */
     @jakarta.annotation.Nonnull
     public static PresenceStatusMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         return new PresenceStatusMessage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,8 +55,8 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the expiryDateTime property value. The expiryDateTime property
-     * @return a dateTimeTimeZone
+     * Gets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getExpiryDateTime() {
@@ -76,8 +76,8 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The message property
-     * @return a itemBody
+     * Gets the message property value. Status message item. The only supported format currently is message.contentType = 'text'.
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getMessage() {
@@ -85,14 +85,14 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the publishedDateTime property value. The publishedDateTime property
+     * Gets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -112,21 +112,21 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the expiryDateTime property value. The expiryDateTime property
+     * Sets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.expiryDateTime = value;
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. Status message item. The only supported format currently is message.contentType = 'text'.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final ItemBody value) {
@@ -140,7 +140,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the publishedDateTime property value. The publishedDateTime property
+     * Sets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
      * @param value Value to set for the publishedDateTime property.
      */
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

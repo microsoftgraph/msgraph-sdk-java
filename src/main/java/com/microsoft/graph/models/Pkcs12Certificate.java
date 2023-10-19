@@ -17,7 +17,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     private String pkcs12Value;
     /**
-     * Instantiates a new pkcs12Certificate and sets the default values.
+     * Instantiates a new Pkcs12Certificate and sets the default values.
      */
     public Pkcs12Certificate() {
         super();
@@ -26,7 +26,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pkcs12Certificate
+     * @return a Pkcs12Certificate
      */
     @jakarta.annotation.Nonnull
     public static Pkcs12Certificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     }
     /**
      * Gets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
@@ -54,7 +54,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     }
     /**
      * Gets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPkcs12Value() {

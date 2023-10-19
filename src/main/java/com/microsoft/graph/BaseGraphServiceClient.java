@@ -562,7 +562,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param appId Alternate key of application
-     * @return a applicationsWithAppIdRequestBuilder
+     * @return a ApplicationsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@jakarta.annotation.Nonnull final String appId) {
@@ -591,7 +591,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of device entities.
      * @param deviceId Alternate key of device
-     * @return a devicesWithDeviceIdRequestBuilder
+     * @return a DevicesWithDeviceIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@jakarta.annotation.Nonnull final String deviceId) {
@@ -601,7 +601,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of directoryRole entities.
      * @param roleTemplateId Alternate key of directoryRole
-     * @return a directoryRolesWithRoleTemplateIdRequestBuilder
+     * @return a DirectoryRolesWithRoleTemplateIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryRolesWithRoleTemplateIdRequestBuilder directoryRolesWithRoleTemplateId(@jakarta.annotation.Nonnull final String roleTemplateId) {
@@ -611,7 +611,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of servicePrincipal entities.
      * @param appId Alternate key of servicePrincipal
-     * @return a servicePrincipalsWithAppIdRequestBuilder
+     * @return a ServicePrincipalsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@jakarta.annotation.Nonnull final String appId) {

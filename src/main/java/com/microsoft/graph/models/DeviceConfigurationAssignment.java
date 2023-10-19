@@ -16,7 +16,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new deviceConfigurationAssignment and sets the default values.
+     * Instantiates a new DeviceConfigurationAssignment and sets the default values.
      */
     public DeviceConfigurationAssignment() {
         super();
@@ -24,7 +24,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationAssignment
+     * @return a DeviceConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The assignment target for the device configuration.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

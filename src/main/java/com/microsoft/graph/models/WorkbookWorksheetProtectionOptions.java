@@ -62,7 +62,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     private String odataType;
     /**
-     * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
+     * Instantiates a new WorkbookWorksheetProtectionOptions and sets the default values.
      */
     public WorkbookWorksheetProtectionOptions() {
         this.setAdditionalData(new HashMap<>());
@@ -70,7 +70,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookWorksheetProtectionOptions
+     * @return a WorkbookWorksheetProtectionOptions
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheetProtectionOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
         return new WorkbookWorksheetProtectionOptions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAutoFilter() {
@@ -95,7 +95,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteColumns() {
@@ -103,7 +103,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteRows() {
@@ -111,7 +111,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatCells() {
@@ -119,7 +119,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatColumns() {
@@ -127,7 +127,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatRows() {
@@ -135,7 +135,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertColumns() {
@@ -143,7 +143,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertHyperlinks() {
@@ -151,7 +151,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertRows() {
@@ -159,7 +159,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPivotTables() {
@@ -167,7 +167,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSort() {
@@ -196,7 +196,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -223,8 +223,8 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

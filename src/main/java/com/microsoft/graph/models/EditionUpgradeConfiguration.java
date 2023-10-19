@@ -28,7 +28,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     private Windows10EditionType targetEdition;
     /**
-     * Instantiates a new editionUpgradeConfiguration and sets the default values.
+     * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      */
     public EditionUpgradeConfiguration() {
         super();
@@ -37,7 +37,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a editionUpgradeConfiguration
+     * @return a EditionUpgradeConfiguration
      */
     @jakarta.annotation.Nonnull
     public static EditionUpgradeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLicense() {
@@ -67,7 +67,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
-     * @return a editionUpgradeLicenseType
+     * @return a EditionUpgradeLicenseType
      */
     @jakarta.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
@@ -75,7 +75,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
@@ -83,7 +83,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
-     * @return a windows10EditionType
+     * @return a Windows10EditionType
      */
     @jakarta.annotation.Nullable
     public Windows10EditionType getTargetEdition() {

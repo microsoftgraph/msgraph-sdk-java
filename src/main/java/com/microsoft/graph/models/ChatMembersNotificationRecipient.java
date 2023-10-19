@@ -13,7 +13,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     private String chatId;
     /**
-     * Instantiates a new chatMembersNotificationRecipient and sets the default values.
+     * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
      */
     public ChatMembersNotificationRecipient() {
         super();
@@ -22,7 +22,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMembersNotificationRecipient
+     * @return a ChatMembersNotificationRecipient
      */
     @jakarta.annotation.Nonnull
     public static ChatMembersNotificationRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     }
     /**
      * Gets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatId() {

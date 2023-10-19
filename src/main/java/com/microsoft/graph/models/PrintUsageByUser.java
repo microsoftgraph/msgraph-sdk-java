@@ -13,7 +13,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new printUsageByUser and sets the default values.
+     * Instantiates a new PrintUsageByUser and sets the default values.
      */
     public PrintUsageByUser() {
         super();
@@ -22,7 +22,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printUsageByUser
+     * @return a PrintUsageByUser
      */
     @jakarta.annotation.Nonnull
     public static PrintUsageByUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The UPN of the user represented by these statistics.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -38,7 +38,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     private String textType;
     /**
-     * Instantiates a new textColumn and sets the default values.
+     * Instantiates a new TextColumn and sets the default values.
      */
     public TextColumn() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a textColumn
+     * @return a TextColumn
      */
     @jakarta.annotation.Nonnull
     public static TextColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         return new TextColumn();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowMultipleLines property value. Whether to allow multiple lines of text.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleLines() {
@@ -71,7 +71,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppendChangesToExistingText() {
@@ -94,7 +94,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the linesForEditing property value. The size of the text box.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLinesForEditing() {
@@ -102,7 +102,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maxLength property value. The maximum number of characters for the value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxLength() {
@@ -110,7 +110,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTextType() {
@@ -139,8 +139,8 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

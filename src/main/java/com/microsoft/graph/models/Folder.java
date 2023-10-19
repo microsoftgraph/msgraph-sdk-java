@@ -26,7 +26,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
      */
     private FolderView view;
     /**
-     * Instantiates a new folder and sets the default values.
+     * Instantiates a new Folder and sets the default values.
      */
     public Folder() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a folder
+     * @return a Folder
      */
     @jakarta.annotation.Nonnull
     public static Folder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
         return new Folder();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the childCount property value. Number of children contained immediately within this container.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getChildCount() {
@@ -71,7 +71,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the view property value. A collection of properties defining the recommended view for the folder.
-     * @return a folderView
+     * @return a FolderView
      */
     @jakarta.annotation.Nullable
     public FolderView getView() {
@@ -97,8 +97,8 @@ public class Folder implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

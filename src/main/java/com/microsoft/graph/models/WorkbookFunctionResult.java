@@ -17,7 +17,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      */
     private Json value;
     /**
-     * Instantiates a new workbookFunctionResult and sets the default values.
+     * Instantiates a new WorkbookFunctionResult and sets the default values.
      */
     public WorkbookFunctionResult() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookFunctionResult
+     * @return a WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public static WorkbookFunctionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {

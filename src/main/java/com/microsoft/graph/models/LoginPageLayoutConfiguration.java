@@ -22,7 +22,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
      */
     private Boolean isHeaderShown;
     /**
-     * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      */
     private LayoutTemplateType layoutTemplateType;
     /**
@@ -30,7 +30,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * Instantiates a new loginPageLayoutConfiguration and sets the default values.
+     * Instantiates a new LoginPageLayoutConfiguration and sets the default values.
      */
     public LoginPageLayoutConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a loginPageLayoutConfiguration
+     * @return a LoginPageLayoutConfiguration
      */
     @jakarta.annotation.Nonnull
     public static LoginPageLayoutConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         return new LoginPageLayoutConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isFooterShown property value. Option to show the footer on the sign-in page.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFooterShown() {
@@ -76,15 +76,15 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isHeaderShown property value. Option to show the header on the sign-in page.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHeaderShown() {
         return this.isHeaderShown;
     }
     /**
-     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     * @return a layoutTemplateType
+     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
+     * @return a LayoutTemplateType
      */
     @jakarta.annotation.Nullable
     public LayoutTemplateType getLayoutTemplateType() {
@@ -92,7 +92,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -132,7 +132,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         this.isHeaderShown = value;
     }
     /**
-     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param value Value to set for the layoutTemplateType property.
      */
     public void setLayoutTemplateType(@jakarta.annotation.Nullable final LayoutTemplateType value) {

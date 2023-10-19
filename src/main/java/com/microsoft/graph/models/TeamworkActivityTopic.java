@@ -22,7 +22,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
      */
     private TeamworkActivityTopicSource source;
     /**
-     * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+     * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
      */
     private String value;
     /**
@@ -30,7 +30,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new teamworkActivityTopic and sets the default values.
+     * Instantiates a new TeamworkActivityTopic and sets the default values.
      */
     public TeamworkActivityTopic() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkActivityTopic
+     * @return a TeamworkActivityTopic
      */
     @jakarta.annotation.Nonnull
     public static TeamworkActivityTopic createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
         return new TeamworkActivityTopic();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,15 +76,15 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
-     * @return a teamworkActivityTopicSource
+     * @return a TeamworkActivityTopicSource
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopicSource getSource() {
         return this.source;
     }
     /**
-     * Gets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
-     * @return a string
+     * Gets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -92,7 +92,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webUrl property value. The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
@@ -111,8 +111,8 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -132,7 +132,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
         this.source = value;
     }
     /**
-     * Sets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+     * Sets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

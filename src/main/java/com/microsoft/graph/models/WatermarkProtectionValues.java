@@ -26,7 +26,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
      */
     private String odataType;
     /**
-     * Instantiates a new watermarkProtectionValues and sets the default values.
+     * Instantiates a new WatermarkProtectionValues and sets the default values.
      */
     public WatermarkProtectionValues() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a watermarkProtectionValues
+     * @return a WatermarkProtectionValues
      */
     @jakarta.annotation.Nonnull
     public static WatermarkProtectionValues createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
         return new WatermarkProtectionValues();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the isEnabledForContentSharing property value. Indicates whether to apply a watermark to any shared content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForContentSharing() {
@@ -71,7 +71,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone's video feed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForVideo() {
@@ -79,7 +79,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

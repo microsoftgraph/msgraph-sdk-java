@@ -17,7 +17,7 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Instantiates a new outlookCategory and sets the default values.
+     * Instantiates a new OutlookCategory and sets the default values.
      */
     public OutlookCategory() {
         super();
@@ -25,7 +25,7 @@ public class OutlookCategory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookCategory
+     * @return a OutlookCategory
      */
     @jakarta.annotation.Nonnull
     public static OutlookCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class OutlookCategory extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
-     * @return a categoryColor
+     * @return a CategoryColor
      */
     @jakarta.annotation.Nullable
     public CategoryColor getColor() {
@@ -42,7 +42,7 @@ public class OutlookCategory extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

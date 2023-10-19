@@ -26,7 +26,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<SinglePropertySchema> schema;
     /**
-     * Instantiates a new huntingQueryResults and sets the default values.
+     * Instantiates a new HuntingQueryResults and sets the default values.
      */
     public HuntingQueryResults() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a huntingQueryResults
+     * @return a HuntingQueryResults
      */
     @jakarta.annotation.Nonnull
     public static HuntingQueryResults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
         return new HuntingQueryResults();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the results property value. The results of the hunting query.
-     * @return a huntingRowResult
+     * @return a java.util.List<HuntingRowResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HuntingRowResult> getResults() {
@@ -79,7 +79,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the schema property value. The schema for the response.
-     * @return a singlePropertySchema
+     * @return a java.util.List<SinglePropertySchema>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SinglePropertySchema> getSchema() {
@@ -97,8 +97,8 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

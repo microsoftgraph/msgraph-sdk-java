@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+     * Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
      */
     private String contentData;
     /**
@@ -21,7 +21,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     private String recipientEmail;
     /**
-     * Instantiates a new emailFileAssessmentRequest and sets the default values.
+     * Instantiates a new EmailFileAssessmentRequest and sets the default values.
      */
     public EmailFileAssessmentRequest() {
         super();
@@ -30,7 +30,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailFileAssessmentRequest
+     * @return a EmailFileAssessmentRequest
      */
     @jakarta.annotation.Nonnull
     public static EmailFileAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,8 +38,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
         return new EmailFileAssessmentRequest();
     }
     /**
-     * Gets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
-     * @return a string
+     * Gets the contentData property value. Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentData() {
@@ -47,7 +47,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     * @return a mailDestinationRoutingReason
+     * @return a MailDestinationRoutingReason
      */
     @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
@@ -67,7 +67,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmail() {
@@ -85,7 +85,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
         writer.writeStringValue("recipientEmail", this.getRecipientEmail());
     }
     /**
-     * Sets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+     * Sets the contentData property value. Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
      * @param value Value to set for the contentData property.
      */
     public void setContentData(@jakarta.annotation.Nullable final String value) {

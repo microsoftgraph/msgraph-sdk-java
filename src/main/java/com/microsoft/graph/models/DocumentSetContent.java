@@ -30,7 +30,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new documentSetContent and sets the default values.
+     * Instantiates a new DocumentSetContent and sets the default values.
      */
     public DocumentSetContent() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentSetContent
+     * @return a DocumentSetContent
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         return new DocumentSetContent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentType property value. Content type information of the file.
-     * @return a contentTypeInfo
+     * @return a ContentTypeInfo
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
@@ -76,7 +76,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -84,7 +84,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFolderName() {
@@ -92,7 +92,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

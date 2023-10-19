@@ -46,7 +46,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     private java.util.List<WorkflowVersion> versions;
     /**
-     * Instantiates a new workflow and sets the default values.
+     * Instantiates a new Workflow and sets the default values.
      */
     public Workflow() {
         super();
@@ -55,7 +55,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workflow
+     * @return a Workflow
      */
     @jakarta.annotation.Nonnull
     public static Workflow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the executionScope property value. The unique identifier of the Azure AD identity that last modified the workflow object.
-     * @return a userProcessingResult
+     * @return a java.util.List<UserProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getExecutionScope() {
@@ -98,7 +98,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the id property value. Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -114,7 +114,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the runs property value. Workflow runs.
-     * @return a run
+     * @return a java.util.List<Run>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Run> getRuns() {
@@ -122,7 +122,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
-     * @return a taskReport
+     * @return a java.util.List<TaskReport>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskReport> getTaskReports() {
@@ -130,7 +130,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the userProcessingResults property value. Per-user workflow execution results.
-     * @return a userProcessingResult
+     * @return a java.util.List<UserProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
@@ -138,7 +138,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -146,7 +146,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     }
     /**
      * Gets the versions property value. The workflow versions that are available.
-     * @return a workflowVersion
+     * @return a java.util.List<WorkflowVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowVersion> getVersions() {

@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     private java.util.List<UserExperienceAnalyticsInsightValue> values;
     /**
-     * Instantiates a new userExperienceAnalyticsInsight and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsInsight and sets the default values.
      */
     public UserExperienceAnalyticsInsight() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsInsight
+     * @return a UserExperienceAnalyticsInsight
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
         return new UserExperienceAnalyticsInsight();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     }
     /**
      * Gets the insightId property value. The unique identifier of the user experience analytics insight.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInsightId() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     }
     /**
      * Gets the severity property value. Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
-     * @return a userExperienceAnalyticsInsightSeverity
+     * @return a UserExperienceAnalyticsInsightSeverity
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsInsightSeverity getSeverity() {
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     }
     /**
      * Gets the userExperienceAnalyticsMetricId property value. The unique identifier of the user experience analytics metric.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserExperienceAnalyticsMetricId() {
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     }
     /**
      * Gets the values property value. The value of the user experience analytics insight.
-     * @return a userExperienceAnalyticsInsightValue
+     * @return a java.util.List<UserExperienceAnalyticsInsightValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsightValue> getValues() {
@@ -128,8 +128,8 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

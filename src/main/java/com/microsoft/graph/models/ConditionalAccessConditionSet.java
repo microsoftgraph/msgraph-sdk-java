@@ -58,7 +58,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     private ConditionalAccessUsers users;
     /**
-     * Instantiates a new conditionalAccessConditionSet and sets the default values.
+     * Instantiates a new ConditionalAccessConditionSet and sets the default values.
      */
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessConditionSet
+     * @return a ConditionalAccessConditionSet
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return new ConditionalAccessConditionSet();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the applications property value. Applications and user actions included in and excluded from the policy. Required.
-     * @return a conditionalAccessApplications
+     * @return a ConditionalAccessApplications
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessApplications getApplications() {
@@ -91,7 +91,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
-     * @return a conditionalAccessClientApplications
+     * @return a ConditionalAccessClientApplications
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessClientApplications getClientApplications() {
@@ -99,7 +99,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
-     * @return a conditionalAccessClientApp
+     * @return a java.util.List<ConditionalAccessClientApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessClientApp> getClientAppTypes() {
@@ -107,7 +107,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the devices property value. Devices in the policy.
-     * @return a conditionalAccessDevices
+     * @return a ConditionalAccessDevices
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessDevices getDevices() {
@@ -135,7 +135,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the locations property value. Locations included in and excluded from the policy.
-     * @return a conditionalAccessLocations
+     * @return a ConditionalAccessLocations
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessLocations getLocations() {
@@ -143,7 +143,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -151,7 +151,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the platforms property value. Platforms included in and excluded from the policy.
-     * @return a conditionalAccessPlatforms
+     * @return a ConditionalAccessPlatforms
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPlatforms getPlatforms() {
@@ -159,7 +159,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
-     * @return a riskLevel
+     * @return a java.util.List<RiskLevel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getServicePrincipalRiskLevels() {
@@ -167,7 +167,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-     * @return a riskLevel
+     * @return a java.util.List<RiskLevel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getSignInRiskLevels() {
@@ -175,7 +175,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-     * @return a riskLevel
+     * @return a java.util.List<RiskLevel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getUserRiskLevels() {
@@ -183,7 +183,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
-     * @return a conditionalAccessUsers
+     * @return a ConditionalAccessUsers
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessUsers getUsers() {
@@ -209,8 +209,8 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

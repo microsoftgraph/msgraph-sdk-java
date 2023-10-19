@@ -34,7 +34,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     private String source;
     /**
-     * Instantiates a new optionalClaim and sets the default values.
+     * Instantiates a new OptionalClaim and sets the default values.
      */
     public OptionalClaim() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a optionalClaim
+     * @return a OptionalClaim
      */
     @jakarta.annotation.Nonnull
     public static OptionalClaim createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
         return new OptionalClaim();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdditionalProperties() {
@@ -67,7 +67,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEssential() {
@@ -89,7 +89,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name of the optional claim.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -97,7 +97,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -125,8 +125,8 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

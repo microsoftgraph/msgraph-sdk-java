@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     private Boolean isMostUsedVersion;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails() {
         super();
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the app. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the appName property value. The name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the appPublisher property value. The publisher of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the appVersion property value. The version of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the deviceCountWithCrashes property value. The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCountWithCrashes() {
@@ -126,7 +126,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the isLatestUsedVersion property value. When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLatestUsedVersion() {
@@ -134,7 +134,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     }
     /**
      * Gets the isMostUsedVersion property value. When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMostUsedVersion() {

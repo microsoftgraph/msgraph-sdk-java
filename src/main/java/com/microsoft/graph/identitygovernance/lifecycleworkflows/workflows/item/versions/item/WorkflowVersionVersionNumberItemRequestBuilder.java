@@ -61,8 +61,8 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a workflowVersion object.
-     * @return a CompletableFuture of workflowVersion
+     * Read the properties and relationships of a workflowVersion object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkflowVersion
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,9 +70,9 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of a workflowVersion object.
+     * Read the properties and relationships of a workflowVersion object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflowVersion
+     * @return a CompletableFuture of WorkflowVersion
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, WorkflowVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a workflowVersion object.
+     * Read the properties and relationships of a workflowVersion object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -92,17 +92,13 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a workflowVersion object.
+     * Read the properties and relationships of a workflowVersion object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +106,10 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -123,7 +123,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
         return new WorkflowVersionVersionNumberItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a workflowVersion object.
+     * Read the properties and relationships of a workflowVersion object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

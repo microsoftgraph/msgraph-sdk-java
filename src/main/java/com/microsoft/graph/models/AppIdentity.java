@@ -18,7 +18,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     private String appId;
     /**
-     * Refers to the Application Name displayed in the Azure Portal.
+     * Refers to the application name displayed in the Microsoft Entra admin center.
      */
     private String displayName;
     /**
@@ -34,7 +34,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     private String servicePrincipalName;
     /**
-     * Instantiates a new appIdentity and sets the default values.
+     * Instantiates a new AppIdentity and sets the default values.
      */
     public AppIdentity() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appIdentity
+     * @return a AppIdentity
      */
     @jakarta.annotation.Nonnull
     public static AppIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         return new AppIdentity();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,15 +59,15 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
     /**
-     * Gets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
-     * @return a string
+     * Gets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,7 +89,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
@@ -105,7 +105,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePrincipalName property value. Refers to the Service Principal Name is the Application name in the tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -125,8 +125,8 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -139,7 +139,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         this.appId = value;
     }
     /**
-     * Sets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
+     * Sets the displayName property value. Refers to the application name displayed in the Microsoft Entra admin center.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

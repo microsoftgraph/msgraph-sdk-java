@@ -69,7 +69,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     private Integer windowsMobileCount;
     /**
-     * Instantiates a new deviceOperatingSystemSummary and sets the default values.
+     * Instantiates a new DeviceOperatingSystemSummary and sets the default values.
      */
     public DeviceOperatingSystemSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceOperatingSystemSummary
+     * @return a DeviceOperatingSystemSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceOperatingSystemSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
         return new DeviceOperatingSystemSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCorporateWorkProfileCount() {
@@ -102,7 +102,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidCount property value. Number of android device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidCount() {
@@ -110,7 +110,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidDedicatedCount property value. Number of dedicated Android devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDedicatedCount() {
@@ -118,7 +118,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidDeviceAdminCount property value. Number of device admin Android devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidDeviceAdminCount() {
@@ -126,7 +126,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidFullyManagedCount property value. Number of fully managed Android devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidFullyManagedCount() {
@@ -134,7 +134,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the androidWorkProfileCount property value. Number of work profile Android devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAndroidWorkProfileCount() {
@@ -142,7 +142,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigMgrDeviceCount() {
@@ -172,7 +172,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the iosCount property value. Number of iOS device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIosCount() {
@@ -180,7 +180,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the macOSCount property value. Number of Mac OS X device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMacOSCount() {
@@ -188,7 +188,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -196,7 +196,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the unknownCount property value. Number of unknown device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownCount() {
@@ -204,7 +204,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the windowsCount property value. Number of Windows device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsCount() {
@@ -212,7 +212,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the windowsMobileCount property value. Number of Windows mobile device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsMobileCount() {
@@ -240,8 +240,8 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

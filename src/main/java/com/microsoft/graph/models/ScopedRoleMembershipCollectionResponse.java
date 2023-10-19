@@ -13,7 +13,7 @@ public class ScopedRoleMembershipCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<ScopedRoleMembership> value;
     /**
-     * Instantiates a new scopedRoleMembershipCollectionResponse and sets the default values.
+     * Instantiates a new ScopedRoleMembershipCollectionResponse and sets the default values.
      */
     public ScopedRoleMembershipCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ScopedRoleMembershipCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a scopedRoleMembershipCollectionResponse
+     * @return a ScopedRoleMembershipCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ScopedRoleMembershipCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ScopedRoleMembershipCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a scopedRoleMembership
+     * @return a java.util.List<ScopedRoleMembership>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getValue() {

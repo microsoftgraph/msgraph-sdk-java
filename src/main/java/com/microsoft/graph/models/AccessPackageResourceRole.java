@@ -29,7 +29,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     private AccessPackageResource resource;
     /**
-     * Instantiates a new accessPackageResourceRole and sets the default values.
+     * Instantiates a new AccessPackageResourceRole and sets the default values.
      */
     public AccessPackageResourceRole() {
         super();
@@ -37,7 +37,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceRole
+     * @return a AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description for the resource role.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -84,7 +84,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -92,7 +92,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. The resource property
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {

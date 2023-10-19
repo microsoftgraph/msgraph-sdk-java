@@ -13,7 +13,7 @@ public class PrintService extends Entity implements Parsable {
      */
     private java.util.List<PrintServiceEndpoint> endpoints;
     /**
-     * Instantiates a new printService and sets the default values.
+     * Instantiates a new PrintService and sets the default values.
      */
     public PrintService() {
         super();
@@ -21,7 +21,7 @@ public class PrintService extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printService
+     * @return a PrintService
      */
     @jakarta.annotation.Nonnull
     public static PrintService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class PrintService extends Entity implements Parsable {
     }
     /**
      * Gets the endpoints property value. Endpoints that can be used to access the service. Read-only. Nullable.
-     * @return a printServiceEndpoint
+     * @return a java.util.List<PrintServiceEndpoint>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintServiceEndpoint> getEndpoints() {

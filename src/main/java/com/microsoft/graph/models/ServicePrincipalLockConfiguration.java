@@ -38,7 +38,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     private Boolean tokenEncryptionKeyId;
     /**
-     * Instantiates a new servicePrincipalLockConfiguration and sets the default values.
+     * Instantiates a new ServicePrincipalLockConfiguration and sets the default values.
      */
     public ServicePrincipalLockConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalLockConfiguration
+     * @return a ServicePrincipalLockConfiguration
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalLockConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
         return new ServicePrincipalLockConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the allProperties property value. Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllProperties() {
@@ -71,7 +71,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the credentialsWithUsageSign property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageSign() {
@@ -79,7 +79,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the credentialsWithUsageVerify property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageVerify() {
@@ -102,7 +102,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the isEnabled property value. Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -110,7 +110,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Locks the tokenEncryptionKeyId property for modification on the service principal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTokenEncryptionKeyId() {
@@ -139,8 +139,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

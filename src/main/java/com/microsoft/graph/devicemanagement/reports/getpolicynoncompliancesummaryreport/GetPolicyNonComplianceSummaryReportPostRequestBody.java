@@ -50,7 +50,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
      */
     private Integer top;
     /**
-     * Instantiates a new getPolicyNonComplianceSummaryReportPostRequestBody and sets the default values.
+     * Instantiates a new GetPolicyNonComplianceSummaryReportPostRequestBody and sets the default values.
      */
     public GetPolicyNonComplianceSummaryReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPolicyNonComplianceSummaryReportPostRequestBody
+     * @return a GetPolicyNonComplianceSummaryReportPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetPolicyNonComplianceSummaryReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
         return new GetPolicyNonComplianceSummaryReportPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the filter property value. The filter property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -101,7 +101,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the groupBy property value. The groupBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
@@ -109,7 +109,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -117,7 +117,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the orderBy property value. The orderBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -125,7 +125,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the search property value. The search property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -133,7 +133,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the select property value. The select property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -141,7 +141,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -149,7 +149,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -157,7 +157,7 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
     }
     /**
      * Gets the top property value. The top property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
@@ -181,8 +181,8 @@ public class GetPolicyNonComplianceSummaryReportPostRequestBody implements Addit
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

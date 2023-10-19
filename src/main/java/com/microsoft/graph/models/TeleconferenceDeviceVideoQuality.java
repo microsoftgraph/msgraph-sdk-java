@@ -25,7 +25,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      */
     private Double averageOutboundFrameRate;
     /**
-     * Instantiates a new teleconferenceDeviceVideoQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.
      */
     public TeleconferenceDeviceVideoQuality() {
         super();
@@ -34,7 +34,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceVideoQuality
+     * @return a TeleconferenceDeviceVideoQuality
      */
     @jakarta.annotation.Nonnull
     public static TeleconferenceDeviceVideoQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     }
     /**
      * Gets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageInboundBitRate() {
@@ -58,7 +58,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     }
     /**
      * Gets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageInboundFrameRate() {
@@ -66,7 +66,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     }
     /**
      * Gets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageOutboundBitRate() {
@@ -74,7 +74,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     }
     /**
      * Gets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAverageOutboundFrameRate() {

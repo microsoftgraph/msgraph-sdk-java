@@ -42,7 +42,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     private String userSid;
     /**
-     * Instantiates a new userAccount and sets the default values.
+     * Instantiates a new UserAccount and sets the default values.
      */
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userAccount
+     * @return a UserAccount
      */
     @jakarta.annotation.Nonnull
     public static UserAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,14 +59,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountName property value. The displayed name of the user account.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureAdUserId() {
@@ -83,7 +83,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The user display name in Azure AD.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the domainName property value. The name of the Active Directory domain of which the user is a member.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -115,7 +115,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name of the account in Azure AD.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -131,7 +131,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userSid property value. The local security identifier of the user account.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserSid() {
@@ -160,8 +160,8 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this.accountName = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

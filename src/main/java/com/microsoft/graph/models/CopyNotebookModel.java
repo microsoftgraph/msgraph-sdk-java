@@ -95,7 +95,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         return new CopyNotebookModel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -104,7 +104,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -112,7 +112,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the createdByIdentity property value. The createdByIdentity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedByIdentity() {
@@ -153,7 +153,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -161,7 +161,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isDefault property value. The isDefault property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -169,7 +169,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isShared property value. The isShared property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
@@ -177,7 +177,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -185,7 +185,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedByIdentity() {
@@ -201,7 +201,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the links property value. The links property
-     * @return a notebookLinks
+     * @return a NotebookLinks
      */
     @jakarta.annotation.Nullable
     public NotebookLinks getLinks() {
@@ -209,7 +209,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -217,7 +217,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -225,7 +225,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
@@ -233,7 +233,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sectionsUrl property value. The sectionsUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSectionsUrl() {
@@ -241,7 +241,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the self property value. The self property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSelf() {
@@ -249,7 +249,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userRole property value. The userRole property
-     * @return a onenoteUserRole
+     * @return a OnenoteUserRole
      */
     @jakarta.annotation.Nullable
     public OnenoteUserRole getUserRole() {
@@ -280,8 +280,8 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

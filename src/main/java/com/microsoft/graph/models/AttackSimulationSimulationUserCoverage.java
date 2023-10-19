@@ -39,7 +39,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     private Integer simulationCount;
     /**
-     * Instantiates a new attackSimulationSimulationUserCoverage and sets the default values.
+     * Instantiates a new AttackSimulationSimulationUserCoverage and sets the default values.
      */
     public AttackSimulationSimulationUserCoverage() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationSimulationUserCoverage
+     * @return a AttackSimulationSimulationUserCoverage
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationSimulationUserCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
         return new AttackSimulationSimulationUserCoverage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
@@ -72,7 +72,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getClickCount() {
@@ -80,7 +80,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompromisedCount() {
@@ -111,7 +111,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     }
     /**
      * Gets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSimulationCount() {
@@ -140,8 +140,8 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

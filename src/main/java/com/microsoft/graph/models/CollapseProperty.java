@@ -26,7 +26,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new collapseProperty and sets the default values.
+     * Instantiates a new CollapseProperty and sets the default values.
      */
     public CollapseProperty() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a collapseProperty
+     * @return a CollapseProperty
      */
     @jakarta.annotation.Nonnull
     public static CollapseProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         return new CollapseProperty();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
@@ -71,7 +71,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLimit() {
@@ -79,7 +79,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

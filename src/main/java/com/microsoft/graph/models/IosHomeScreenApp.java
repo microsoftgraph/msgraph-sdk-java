@@ -16,7 +16,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
      */
     private String bundleID;
     /**
-     * Instantiates a new iosHomeScreenApp and sets the default values.
+     * Instantiates a new IosHomeScreenApp and sets the default values.
      */
     public IosHomeScreenApp() {
         super();
@@ -25,7 +25,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosHomeScreenApp
+     * @return a IosHomeScreenApp
      */
     @jakarta.annotation.Nonnull
     public static IosHomeScreenApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the bundleID property value. BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {

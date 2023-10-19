@@ -21,7 +21,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      */
     private String teamId;
     /**
-     * Instantiates a new teamDescriptionUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new TeamDescriptionUpdatedEventMessageDetail and sets the default values.
      */
     public TeamDescriptionUpdatedEventMessageDetail() {
         super();
@@ -30,7 +30,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamDescriptionUpdatedEventMessageDetail
+     * @return a TeamDescriptionUpdatedEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static TeamDescriptionUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -59,7 +59,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
      * Gets the teamDescription property value. The updated description for the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamDescription() {
@@ -67,7 +67,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
      * Gets the teamId property value. Unique identifier of the team.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {

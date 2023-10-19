@@ -21,7 +21,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     private String targetUrl;
     /**
-     * Instantiates a new identityApiConnector and sets the default values.
+     * Instantiates a new IdentityApiConnector and sets the default values.
      */
     public IdentityApiConnector() {
         super();
@@ -29,7 +29,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityApiConnector
+     * @return a IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public static IdentityApiConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationConfiguration property value. The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
-     * @return a apiAuthenticationConfigurationBase
+     * @return a ApiAuthenticationConfigurationBase
      */
     @jakarta.annotation.Nullable
     public ApiAuthenticationConfigurationBase getAuthenticationConfiguration() {
@@ -46,7 +46,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the API connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     }
     /**
      * Gets the targetUrl property value. The URL of the API endpoint to call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetUrl() {

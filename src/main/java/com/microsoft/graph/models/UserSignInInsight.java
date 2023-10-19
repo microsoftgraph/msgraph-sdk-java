@@ -14,7 +14,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      */
     private OffsetDateTime lastSignInDateTime;
     /**
-     * Instantiates a new userSignInInsight and sets the default values.
+     * Instantiates a new UserSignInInsight and sets the default values.
      */
     public UserSignInInsight() {
         super();
@@ -23,7 +23,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSignInInsight
+     * @return a UserSignInInsight
      */
     @jakarta.annotation.Nonnull
     public static UserSignInInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

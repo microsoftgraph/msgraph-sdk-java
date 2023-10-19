@@ -13,7 +13,7 @@ public class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<DomainDnsRecord> value;
     /**
-     * Instantiates a new domainDnsRecordCollectionResponse and sets the default values.
+     * Instantiates a new DomainDnsRecordCollectionResponse and sets the default values.
      */
     public DomainDnsRecordCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsRecordCollectionResponse
+     * @return a DomainDnsRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsRecordCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a domainDnsRecord
+     * @return a java.util.List<DomainDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DomainDnsRecord> getValue() {

@@ -13,7 +13,7 @@ public class OrgContactCollectionResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<OrgContact> value;
     /**
-     * Instantiates a new orgContactCollectionResponse and sets the default values.
+     * Instantiates a new OrgContactCollectionResponse and sets the default values.
      */
     public OrgContactCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OrgContactCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a orgContactCollectionResponse
+     * @return a OrgContactCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OrgContactCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OrgContactCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a orgContact
+     * @return a java.util.List<OrgContact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OrgContact> getValue() {

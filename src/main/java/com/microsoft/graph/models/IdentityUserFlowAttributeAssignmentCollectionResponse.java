@@ -13,7 +13,7 @@ public class IdentityUserFlowAttributeAssignmentCollectionResponse extends BaseC
      */
     private java.util.List<IdentityUserFlowAttributeAssignment> value;
     /**
-     * Instantiates a new identityUserFlowAttributeAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new IdentityUserFlowAttributeAssignmentCollectionResponse and sets the default values.
      */
     public IdentityUserFlowAttributeAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class IdentityUserFlowAttributeAssignmentCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityUserFlowAttributeAssignmentCollectionResponse
+     * @return a IdentityUserFlowAttributeAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IdentityUserFlowAttributeAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class IdentityUserFlowAttributeAssignmentCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a identityUserFlowAttributeAssignment
+     * @return a java.util.List<IdentityUserFlowAttributeAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttributeAssignment> getValue() {

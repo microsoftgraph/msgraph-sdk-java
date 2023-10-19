@@ -21,7 +21,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     private java.util.List<WorkbookCommentReply> replies;
     /**
-     * Instantiates a new workbookComment and sets the default values.
+     * Instantiates a new WorkbookComment and sets the default values.
      */
     public WorkbookComment() {
         super();
@@ -29,7 +29,7 @@ public class WorkbookComment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookComment
+     * @return a WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public static WorkbookComment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of comment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -46,7 +46,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -66,7 +66,7 @@ public class WorkbookComment extends Entity implements Parsable {
     }
     /**
      * Gets the replies property value. The replies property
-     * @return a workbookCommentReply
+     * @return a java.util.List<WorkbookCommentReply>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {

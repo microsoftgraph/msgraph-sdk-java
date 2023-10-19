@@ -38,7 +38,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new outlookGeoCoordinates and sets the default values.
+     * Instantiates a new OutlookGeoCoordinates and sets the default values.
      */
     public OutlookGeoCoordinates() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookGeoCoordinates
+     * @return a OutlookGeoCoordinates
      */
     @jakarta.annotation.Nonnull
     public static OutlookGeoCoordinates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,14 +55,14 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAccuracy() {
         return this.accuracy;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the altitude property value. The altitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
@@ -79,7 +79,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the altitudeAccuracy property value. The accuracy of the altitude.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAltitudeAccuracy() {
@@ -102,7 +102,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the latitude property value. The latitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
@@ -110,7 +110,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the longitude property value. The longitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
@@ -118,7 +118,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -146,8 +146,8 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
         this.accuracy = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

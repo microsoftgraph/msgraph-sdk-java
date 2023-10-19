@@ -26,7 +26,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new operationError and sets the default values.
+     * Instantiates a new OperationError and sets the default values.
      */
     public OperationError() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a operationError
+     * @return a OperationError
      */
     @jakarta.annotation.Nonnull
     public static OperationError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
         return new OperationError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. Operation error code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -71,7 +71,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. Operation error message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -79,7 +79,7 @@ public class OperationError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class OperationError implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

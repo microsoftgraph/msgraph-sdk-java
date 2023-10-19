@@ -36,7 +36,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/attendeeReport", rawUrl);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Get attendeeReport for the navigation property onlineMeetings from communications
      * @return a CompletableFuture of InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Get attendeeReport for the navigation property onlineMeetings from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Update attendeeReport for the navigation property onlineMeetings in communications
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -68,7 +68,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Update attendeeReport for the navigation property onlineMeetings in communications
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -83,7 +83,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Get attendeeReport for the navigation property onlineMeetings from communications
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -91,26 +91,26 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Get attendeeReport for the navigation property onlineMeetings from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Update attendeeReport for the navigation property onlineMeetings in communications
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     * Update attendeeReport for the navigation property onlineMeetings in communications
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -128,22 +128,22 @@ public class AttendeeReportRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
         if (requestConfiguration != null) {
             final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PUT;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setStreamContent(body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attendeeReportRequestBuilder
+     * @return a AttendeeReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttendeeReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

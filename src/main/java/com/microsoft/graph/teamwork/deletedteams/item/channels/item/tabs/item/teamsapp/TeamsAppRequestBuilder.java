@@ -37,17 +37,17 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/tabs/{teamsTab%2Did}/teamsApp{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
-     * @return a CompletableFuture of teamsApp
+     * The application that is linked to the tab. This can't be changed after tab creation.
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get() {
         return get(null);
     }
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +58,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,17 +66,13 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +80,16 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsAppRequestBuilder
+     * @return a TeamsAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +97,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return new TeamsAppRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab. This can't be changed after tab creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

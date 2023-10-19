@@ -21,7 +21,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     private java.util.List<SettingTemplateValue> values;
     /**
-     * Instantiates a new groupSettingTemplate and sets the default values.
+     * Instantiates a new GroupSettingTemplate and sets the default values.
      */
     public GroupSettingTemplate() {
         super();
@@ -30,7 +30,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupSettingTemplate
+     * @return a GroupSettingTemplate
      */
     @jakarta.annotation.Nonnull
     public static GroupSettingTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. Description of the template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -47,7 +47,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
-     * @return a settingTemplateValue
+     * @return a java.util.List<SettingTemplateValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {

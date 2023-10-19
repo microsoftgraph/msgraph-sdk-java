@@ -33,7 +33,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     private Boolean useForLocalAddresses;
     /**
-     * Instantiates a new windows10NetworkProxyServer and sets the default values.
+     * Instantiates a new Windows10NetworkProxyServer and sets the default values.
      */
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10NetworkProxyServer
+     * @return a Windows10NetworkProxyServer
      */
     @jakarta.annotation.Nonnull
     public static Windows10NetworkProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         return new Windows10NetworkProxyServer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -66,7 +66,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExceptions() {
@@ -87,7 +87,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseForLocalAddresses() {
@@ -114,8 +114,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

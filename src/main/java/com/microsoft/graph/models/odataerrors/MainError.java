@@ -50,7 +50,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
         return new MainError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -67,7 +67,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a ErrorDetails
+     * @return a java.util.List<ErrorDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ErrorDetails> getDetails() {
@@ -97,7 +97,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. The message property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -105,7 +105,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the target property value. The target property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
@@ -125,8 +125,8 @@ public class MainError implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

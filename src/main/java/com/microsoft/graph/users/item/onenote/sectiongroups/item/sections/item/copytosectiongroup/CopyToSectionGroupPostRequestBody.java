@@ -34,7 +34,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
      */
     private String siteId;
     /**
-     * Instantiates a new copyToSectionGroupPostRequestBody and sets the default values.
+     * Instantiates a new CopyToSectionGroupPostRequestBody and sets the default values.
      */
     public CopyToSectionGroupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a copyToSectionGroupPostRequestBody
+     * @return a CopyToSectionGroupPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CopyToSectionGroupPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
         return new CopyToSectionGroupPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the groupId property value. The groupId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -81,7 +81,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -89,7 +89,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the renameAs property value. The renameAs property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRenameAs() {
@@ -97,7 +97,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the siteCollectionId property value. The siteCollectionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSiteCollectionId() {
@@ -105,7 +105,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the siteId property value. The siteId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSiteId() {
@@ -125,8 +125,8 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

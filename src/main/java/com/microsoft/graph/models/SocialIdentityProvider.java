@@ -21,7 +21,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
      */
     private String identityProviderType;
     /**
-     * Instantiates a new socialIdentityProvider and sets the default values.
+     * Instantiates a new SocialIdentityProvider and sets the default values.
      */
     public SocialIdentityProvider() {
         super();
@@ -30,7 +30,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a socialIdentityProvider
+     * @return a SocialIdentityProvider
      */
     @jakarta.annotation.Nonnull
     public static SocialIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     }
     /**
      * Gets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -47,7 +47,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     }
     /**
      * Gets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
@@ -67,7 +67,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     }
     /**
      * Gets the identityProviderType property value. For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityProviderType() {

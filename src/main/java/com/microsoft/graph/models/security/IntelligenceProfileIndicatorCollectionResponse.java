@@ -14,7 +14,7 @@ public class IntelligenceProfileIndicatorCollectionResponse extends BaseCollecti
      */
     private java.util.List<IntelligenceProfileIndicator> value;
     /**
-     * Instantiates a new intelligenceProfileIndicatorCollectionResponse and sets the default values.
+     * Instantiates a new IntelligenceProfileIndicatorCollectionResponse and sets the default values.
      */
     public IntelligenceProfileIndicatorCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class IntelligenceProfileIndicatorCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a intelligenceProfileIndicatorCollectionResponse
+     * @return a IntelligenceProfileIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IntelligenceProfileIndicatorCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class IntelligenceProfileIndicatorCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a intelligenceProfileIndicator
+     * @return a java.util.List<IntelligenceProfileIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getValue() {

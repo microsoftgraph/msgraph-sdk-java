@@ -30,7 +30,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
      */
     private String suggestion;
     /**
-     * Instantiates a new alteredQueryToken and sets the default values.
+     * Instantiates a new AlteredQueryToken and sets the default values.
      */
     public AlteredQueryToken() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alteredQueryToken
+     * @return a AlteredQueryToken
      */
     @jakarta.annotation.Nonnull
     public static AlteredQueryToken createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
         return new AlteredQueryToken();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the length property value. Defines the length of a changed segment.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLength() {
@@ -76,7 +76,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the offset property value. Defines the offset of a changed segment.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOffset() {
@@ -92,7 +92,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the suggestion property value. Represents the corrected segment string.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSuggestion() {
@@ -111,8 +111,8 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

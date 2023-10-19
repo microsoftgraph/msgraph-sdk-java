@@ -30,7 +30,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new chatMessageMention and sets the default values.
+     * Instantiates a new ChatMessageMention and sets the default values.
      */
     public ChatMessageMention() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessageMention
+     * @return a ChatMessageMention
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageMention createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         return new ChatMessageMention();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getId() {
@@ -76,7 +76,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
-     * @return a chatMessageMentionedIdentitySet
+     * @return a ChatMessageMentionedIdentitySet
      */
     @jakarta.annotation.Nullable
     public ChatMessageMentionedIdentitySet getMentioned() {
@@ -84,7 +84,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMentionText() {
@@ -92,7 +92,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -17,7 +17,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     private String contentUrl;
     /**
-     * Instantiates a new onenoteResource and sets the default values.
+     * Instantiates a new OnenoteResource and sets the default values.
      */
     public OnenoteResource() {
         super();
@@ -26,7 +26,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenoteResource
+     * @return a OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public static OnenoteResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     }
     /**
      * Gets the content property value. The content stream
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -43,7 +43,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     }
     /**
      * Gets the contentUrl property value. The URL for downloading the content
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {

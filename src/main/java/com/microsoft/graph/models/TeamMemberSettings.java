@@ -42,7 +42,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new teamMemberSettings and sets the default values.
+     * Instantiates a new TeamMemberSettings and sets the default values.
      */
     public TeamMemberSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamMemberSettings
+     * @return a TeamMemberSettings
      */
     @jakarta.annotation.Nonnull
     public static TeamMemberSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
         return new TeamMemberSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAddRemoveApps() {
@@ -75,7 +75,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreatePrivateChannels() {
@@ -83,7 +83,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateChannels() {
@@ -91,7 +91,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveConnectors() {
@@ -99,7 +99,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveTabs() {
@@ -107,7 +107,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowDeleteChannels property value. If set to true, members can delete channels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteChannels() {
@@ -131,7 +131,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -153,8 +153,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

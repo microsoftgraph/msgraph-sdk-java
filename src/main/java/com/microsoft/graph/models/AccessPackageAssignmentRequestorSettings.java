@@ -14,7 +14,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     private Map<String, Object> additionalData;
     /**
-     * False indicates that the requestor is not permitted to include a schedule in their request.
+     * False indicates that the requestor isn't permitted to include a schedule in their request.
      */
     private Boolean allowCustomAssignmentSchedule;
     /**
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     private java.util.List<SubjectSet> onBehalfRequestors;
     /**
-     * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestorSettings and sets the default values.
      */
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequestorSettings
+     * @return a AccessPackageAssignmentRequestorSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestorSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return new AccessPackageAssignmentRequestorSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,8 +74,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return this.additionalData;
     }
     /**
-     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
-     * @return a boolean
+     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCustomAssignmentSchedule() {
@@ -83,7 +83,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToAddAccess() {
@@ -91,7 +91,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToRemoveAccess() {
@@ -99,7 +99,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToUpdateAccess() {
@@ -107,7 +107,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfAddAccess() {
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfRemoveAccess() {
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfUpdateAccess() {
@@ -149,7 +149,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -157,7 +157,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     }
     /**
      * Gets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getOnBehalfRequestors() {
@@ -181,14 +181,14 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
+     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      */
     public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {

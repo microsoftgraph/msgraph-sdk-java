@@ -18,7 +18,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private ContainerFilter containerFilter;
     /**
-     * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+     * true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
      */
     private Boolean editable;
     /**
@@ -30,7 +30,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private String id;
     /**
-     * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+     * Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
      */
     private java.util.List<StringKeyStringValuePair> metadata;
     /**
@@ -58,7 +58,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private String targetDirectoryName;
     /**
-     * Instantiates a new synchronizationRule and sets the default values.
+     * Instantiates a new SynchronizationRule and sets the default values.
      */
     public SynchronizationRule() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationRule
+     * @return a SynchronizationRule
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return new SynchronizationRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,15 +83,15 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the containerFilter property value. The containerFilter property
-     * @return a containerFilter
+     * @return a ContainerFilter
      */
     @jakarta.annotation.Nullable
     public ContainerFilter getContainerFilter() {
         return this.containerFilter;
     }
     /**
-     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
-     * @return a boolean
+     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEditable() {
@@ -119,7 +119,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the groupFilter property value. The groupFilter property
-     * @return a groupFilter
+     * @return a GroupFilter
      */
     @jakarta.annotation.Nullable
     public GroupFilter getGroupFilter() {
@@ -127,15 +127,15 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
     /**
-     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
-     * @return a stringKeyStringValuePair
+     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
+     * @return a java.util.List<StringKeyStringValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyStringValuePair> getMetadata() {
@@ -143,7 +143,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Human-readable name of the synchronization rule. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -151,7 +151,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
-     * @return a objectMapping
+     * @return a java.util.List<ObjectMapping>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectMapping> getObjectMappings() {
@@ -159,7 +159,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -167,7 +167,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -175,7 +175,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceDirectoryName() {
@@ -183,7 +183,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetDirectoryName() {
@@ -209,8 +209,8 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -223,7 +223,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.containerFilter = value;
     }
     /**
-     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
      * @param value Value to set for the editable property.
      */
     public void setEditable(@jakarta.annotation.Nullable final Boolean value) {
@@ -244,7 +244,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.id = value;
     }
     /**
-     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {

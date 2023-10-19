@@ -30,7 +30,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      */
     private java.util.List<SynchronizationJobSubject> owners;
     /**
-     * Instantiates a new synchronizationLinkedObjects and sets the default values.
+     * Instantiates a new SynchronizationLinkedObjects and sets the default values.
      */
     public SynchronizationLinkedObjects() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationLinkedObjects
+     * @return a SynchronizationLinkedObjects
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationLinkedObjects createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         return new SynchronizationLinkedObjects();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the manager property value. The manager property
-     * @return a synchronizationJobSubject
+     * @return a SynchronizationJobSubject
      */
     @jakarta.annotation.Nullable
     public SynchronizationJobSubject getManager() {
@@ -76,7 +76,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the members property value. All group members that you would like to provision.
-     * @return a synchronizationJobSubject
+     * @return a java.util.List<SynchronizationJobSubject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJobSubject> getMembers() {
@@ -84,7 +84,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the owners property value. The owners property
-     * @return a synchronizationJobSubject
+     * @return a java.util.List<SynchronizationJobSubject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJobSubject> getOwners() {
@@ -111,8 +111,8 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

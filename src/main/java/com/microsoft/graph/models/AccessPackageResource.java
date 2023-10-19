@@ -46,7 +46,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageResourceScope> scopes;
     /**
-     * Instantiates a new accessPackageResource and sets the default values.
+     * Instantiates a new AccessPackageResource and sets the default values.
      */
     public AccessPackageResource() {
         super();
@@ -54,7 +54,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description for the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -79,7 +79,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -87,7 +87,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
-     * @return a accessPackageResourceEnvironment
+     * @return a AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment getEnvironment() {
@@ -121,7 +121,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -129,7 +129,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -137,7 +137,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the roles property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageResourceRole
+     * @return a java.util.List<AccessPackageResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getRoles() {
@@ -145,7 +145,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the scopes property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageResourceScope
+     * @return a java.util.List<AccessPackageResourceScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getScopes() {

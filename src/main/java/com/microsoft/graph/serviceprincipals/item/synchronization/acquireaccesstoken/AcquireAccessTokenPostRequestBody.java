@@ -19,7 +19,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
      */
     private java.util.List<SynchronizationSecretKeyStringValuePair> credentials;
     /**
-     * Instantiates a new acquireAccessTokenPostRequestBody and sets the default values.
+     * Instantiates a new AcquireAccessTokenPostRequestBody and sets the default values.
      */
     public AcquireAccessTokenPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acquireAccessTokenPostRequestBody
+     * @return a AcquireAccessTokenPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AcquireAccessTokenPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
         return new AcquireAccessTokenPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -44,7 +44,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the credentials property value. The credentials property
-     * @return a synchronizationSecretKeyStringValuePair
+     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getCredentials() {
@@ -70,8 +70,8 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

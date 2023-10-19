@@ -35,7 +35,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     private BinaryOperator valuesJoinedBy;
     /**
-     * Instantiates a new propertyRule and sets the default values.
+     * Instantiates a new PropertyRule and sets the default values.
      */
     public PropertyRule() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a propertyRule
+     * @return a PropertyRule
      */
     @jakarta.annotation.Nonnull
     public static PropertyRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
         return new PropertyRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -82,7 +82,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operation property value. The operation property
-     * @return a ruleOperation
+     * @return a RuleOperation
      */
     @jakarta.annotation.Nullable
     public RuleOperation getOperation() {
@@ -90,7 +90,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the property property value. The property from the externalItem schema. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProperty() {
@@ -98,7 +98,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValues() {
@@ -106,7 +106,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valuesJoinedBy property value. The valuesJoinedBy property
-     * @return a binaryOperator
+     * @return a BinaryOperator
      */
     @jakarta.annotation.Nullable
     public BinaryOperator getValuesJoinedBy() {
@@ -126,8 +126,8 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

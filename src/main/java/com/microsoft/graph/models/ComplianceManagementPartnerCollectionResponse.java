@@ -13,7 +13,7 @@ public class ComplianceManagementPartnerCollectionResponse extends BaseCollectio
      */
     private java.util.List<ComplianceManagementPartner> value;
     /**
-     * Instantiates a new complianceManagementPartnerCollectionResponse and sets the default values.
+     * Instantiates a new ComplianceManagementPartnerCollectionResponse and sets the default values.
      */
     public ComplianceManagementPartnerCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ComplianceManagementPartnerCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceManagementPartnerCollectionResponse
+     * @return a ComplianceManagementPartnerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ComplianceManagementPartnerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ComplianceManagementPartnerCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a complianceManagementPartner
+     * @return a java.util.List<ComplianceManagementPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartner> getValue() {

@@ -46,7 +46,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     private String thumbnailUrl;
     /**
-     * Instantiates a new chatMessageAttachment and sets the default values.
+     * Instantiates a new ChatMessageAttachment and sets the default values.
      */
     public ChatMessageAttachment() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessageAttachment
+     * @return a ChatMessageAttachment
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         return new ChatMessageAttachment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -79,7 +79,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -87,7 +87,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
@@ -112,7 +112,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Read-only. Unique id of the attachment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -120,7 +120,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name of the attachment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -128,7 +128,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -136,7 +136,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -144,7 +144,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -167,8 +167,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

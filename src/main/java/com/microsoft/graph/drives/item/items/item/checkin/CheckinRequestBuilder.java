@@ -35,7 +35,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/checkin", rawUrl);
     }
     /**
-     * Check in a checked out driveItem resource, which makes the version of the document available to others.
+     * Check in a checked out driveItem resource, which makes the version of the document available to others. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkin?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Check in a checked out driveItem resource, which makes the version of the document available to others.
+     * Check in a checked out driveItem resource, which makes the version of the document available to others. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkin?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Check in a checked out driveItem resource, which makes the version of the document available to others.
+     * Check in a checked out driveItem resource, which makes the version of the document available to others. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Check in a checked out driveItem resource, which makes the version of the document available to others.
+     * Check in a checked out driveItem resource, which makes the version of the document available to others. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -77,22 +77,22 @@ public class CheckinRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CheckinPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a checkinRequestBuilder
+     * @return a CheckinRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CheckinRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

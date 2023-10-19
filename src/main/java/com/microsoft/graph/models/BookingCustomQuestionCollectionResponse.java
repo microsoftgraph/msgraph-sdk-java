@@ -13,7 +13,7 @@ public class BookingCustomQuestionCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<BookingCustomQuestion> value;
     /**
-     * Instantiates a new bookingCustomQuestionCollectionResponse and sets the default values.
+     * Instantiates a new BookingCustomQuestionCollectionResponse and sets the default values.
      */
     public BookingCustomQuestionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class BookingCustomQuestionCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomQuestionCollectionResponse
+     * @return a BookingCustomQuestionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomQuestionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BookingCustomQuestionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a bookingCustomQuestion
+     * @return a java.util.List<BookingCustomQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomQuestion> getValue() {

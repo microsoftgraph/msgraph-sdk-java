@@ -70,7 +70,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private java.util.List<SubjectSet> specificAllowedTargets;
     /**
-     * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
+     * Instantiates a new AccessPackageAssignmentPolicy and sets the default values.
      */
     public AccessPackageAssignmentPolicy() {
         super();
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-     * @return a allowedTargetScope
+     * @return a AllowedTargetScope
      */
     @jakarta.annotation.Nullable
     public AllowedTargetScope getAllowedTargetScope() {
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
-     * @return a accessPackageAutomaticRequestSettings
+     * @return a AccessPackageAutomaticRequestSettings
      */
     @jakarta.annotation.Nullable
     public AccessPackageAutomaticRequestSettings getAutomaticRequestSettings() {
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the catalog property value. Catalog of the access package containing this policy. Read-only.
-     * @return a accessPackageCatalog
+     * @return a AccessPackageCatalog
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
@@ -127,7 +127,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a customExtensionStageSetting
+     * @return a java.util.List<CustomExtensionStageSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
@@ -135,7 +135,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -143,7 +143,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -151,7 +151,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the expiration property value. The expiration date for assignments created in this policy.
-     * @return a expirationPattern
+     * @return a ExpirationPattern
      */
     @jakarta.annotation.Nullable
     public ExpirationPattern getExpiration() {
@@ -191,7 +191,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the questions property value. Questions that are posed to the  requestor.
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
@@ -199,7 +199,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
-     * @return a accessPackageAssignmentApprovalSettings
+     * @return a AccessPackageAssignmentApprovalSettings
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings getRequestApprovalSettings() {
@@ -207,7 +207,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
-     * @return a accessPackageAssignmentRequestorSettings
+     * @return a AccessPackageAssignmentRequestorSettings
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings getRequestorSettings() {
@@ -215,7 +215,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the reviewSettings property value. Settings for access reviews of assignments through this policy.
-     * @return a accessPackageAssignmentReviewSettings
+     * @return a AccessPackageAssignmentReviewSettings
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentReviewSettings getReviewSettings() {
@@ -223,7 +223,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
-     * @return a subjectSet
+     * @return a java.util.List<SubjectSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getSpecificAllowedTargets() {

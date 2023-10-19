@@ -43,7 +43,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
      */
     private EnumSet<AuthenticationStrengthRequirements> requirementsSatisfied;
     /**
-     * Instantiates a new authenticationStrengthPolicy and sets the default values.
+     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
      */
     public AuthenticationStrengthPolicy() {
         super();
@@ -51,7 +51,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationStrengthPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
@@ -68,7 +68,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the combinationConfigurations property value. Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     * @return a authenticationCombinationConfiguration
+     * @return a java.util.List<AuthenticationCombinationConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationCombinationConfiguration> getCombinationConfigurations() {
@@ -84,7 +84,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The human-readable description of this policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -92,7 +92,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -125,7 +125,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a authenticationStrengthPolicyType
+     * @return a AuthenticationStrengthPolicyType
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyType getPolicyType() {
@@ -133,7 +133,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requirementsSatisfied property value. The requirementsSatisfied property
-     * @return a authenticationStrengthRequirements
+     * @return a EnumSet<AuthenticationStrengthRequirements>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AuthenticationStrengthRequirements> getRequirementsSatisfied() {

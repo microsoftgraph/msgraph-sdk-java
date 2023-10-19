@@ -18,7 +18,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     private LocalTime scheduledInstallTime;
     /**
-     * Instantiates a new windowsUpdateScheduledInstall and sets the default values.
+     * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
      */
     public WindowsUpdateScheduledInstall() {
         super();
@@ -27,7 +27,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateScheduledInstall
+     * @return a WindowsUpdateScheduledInstall
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateScheduledInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
-     * @return a weeklySchedule
+     * @return a WeeklySchedule
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {

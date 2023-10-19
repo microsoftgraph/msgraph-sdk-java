@@ -13,7 +13,7 @@ public class AttendanceRecordCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<AttendanceRecord> value;
     /**
-     * Instantiates a new attendanceRecordCollectionResponse and sets the default values.
+     * Instantiates a new AttendanceRecordCollectionResponse and sets the default values.
      */
     public AttendanceRecordCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AttendanceRecordCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendanceRecordCollectionResponse
+     * @return a AttendanceRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AttendanceRecordCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AttendanceRecordCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a attendanceRecord
+     * @return a java.util.List<AttendanceRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendanceRecord> getValue() {

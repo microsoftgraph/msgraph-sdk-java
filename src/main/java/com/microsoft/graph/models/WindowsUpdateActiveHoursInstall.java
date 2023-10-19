@@ -18,7 +18,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     private LocalTime activeHoursStart;
     /**
-     * Instantiates a new windowsUpdateActiveHoursInstall and sets the default values.
+     * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
      */
     public WindowsUpdateActiveHoursInstall() {
         super();
@@ -27,7 +27,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateActiveHoursInstall
+     * @return a WindowsUpdateActiveHoursInstall
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateActiveHoursInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

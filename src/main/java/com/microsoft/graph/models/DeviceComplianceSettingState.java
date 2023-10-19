@@ -57,7 +57,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceComplianceSettingState and sets the default values.
+     * Instantiates a new DeviceComplianceSettingState and sets the default values.
      */
     public DeviceComplianceSettingState() {
         super();
@@ -65,7 +65,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceSettingState
+     * @return a DeviceComplianceSettingState
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -90,7 +90,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -98,7 +98,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -126,7 +126,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the setting property value. The setting class name and property name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -134,7 +134,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -142,7 +142,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -150,7 +150,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -158,7 +158,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The user Id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -166,7 +166,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -174,7 +174,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

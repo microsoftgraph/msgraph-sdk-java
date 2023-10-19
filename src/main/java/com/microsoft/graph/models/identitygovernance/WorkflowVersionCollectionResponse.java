@@ -14,7 +14,7 @@ public class WorkflowVersionCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<WorkflowVersion> value;
     /**
-     * Instantiates a new workflowVersionCollectionResponse and sets the default values.
+     * Instantiates a new WorkflowVersionCollectionResponse and sets the default values.
      */
     public WorkflowVersionCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class WorkflowVersionCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workflowVersionCollectionResponse
+     * @return a WorkflowVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WorkflowVersionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class WorkflowVersionCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a workflowVersion
+     * @return a java.util.List<WorkflowVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowVersion> getValue() {

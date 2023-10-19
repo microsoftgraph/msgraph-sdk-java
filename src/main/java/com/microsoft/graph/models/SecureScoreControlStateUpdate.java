@@ -39,7 +39,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     private OffsetDateTime updatedDateTime;
     /**
-     * Instantiates a new secureScoreControlStateUpdate and sets the default values.
+     * Instantiates a new SecureScoreControlStateUpdate and sets the default values.
      */
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScoreControlStateUpdate
+     * @return a SecureScoreControlStateUpdate
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreControlStateUpdate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         return new SecureScoreControlStateUpdate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the assignedTo property value. Assigns the control to the user who will take the action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -72,7 +72,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the comment property value. Provides optional comment about the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -95,7 +95,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -111,7 +111,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the updatedBy property value. ID of the user who updated tenant state.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpdatedBy() {
@@ -140,8 +140,8 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

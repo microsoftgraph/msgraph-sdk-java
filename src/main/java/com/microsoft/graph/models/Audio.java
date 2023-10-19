@@ -82,7 +82,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      */
     private Integer year;
     /**
-     * Instantiates a new audio and sets the default values.
+     * Instantiates a new Audio and sets the default values.
      */
     public Audio() {
         this.setAdditionalData(new HashMap<>());
@@ -90,7 +90,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a audio
+     * @return a Audio
      */
     @jakarta.annotation.Nonnull
     public static Audio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
         return new Audio();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the album property value. The title of the album for this audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlbum() {
@@ -115,7 +115,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the albumArtist property value. The artist named on the album for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlbumArtist() {
@@ -123,7 +123,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the artist property value. The performing artist for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getArtist() {
@@ -131,7 +131,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bitrate property value. Bitrate expressed in kbps.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getBitrate() {
@@ -139,7 +139,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the composers property value. The name of the composer of the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComposers() {
@@ -147,7 +147,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the copyright property value. Copyright information for the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCopyright() {
@@ -155,7 +155,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisc() {
@@ -163,7 +163,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the discCount property value. The total number of discs in this album.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDiscCount() {
@@ -171,7 +171,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. Duration of the audio file, expressed in milliseconds
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDuration() {
@@ -205,7 +205,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the genre property value. The genre of this audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGenre() {
@@ -213,7 +213,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hasDrm property value. Indicates if the file is protected with digital rights management.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasDrm() {
@@ -221,7 +221,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVariableBitrate() {
@@ -229,7 +229,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -237,7 +237,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the title property value. The title of the audio file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -245,7 +245,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the track property value. The number of the track on the original disc for this audio file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTrack() {
@@ -253,7 +253,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trackCount property value. The total number of tracks on the original disc for this audio file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTrackCount() {
@@ -261,7 +261,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the year property value. The year the audio file was recorded.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {
@@ -293,8 +293,8 @@ public class Audio implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

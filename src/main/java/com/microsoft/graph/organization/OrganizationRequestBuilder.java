@@ -91,19 +91,19 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of organization objects.
-     * @return a CompletableFuture of organizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the organization objects.
+     * @return a CompletableFuture of OrganizationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve a list of organization objects.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of OrganizationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to organization
      * @param body The request body
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body) {
@@ -126,7 +126,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
      * Add new entity to organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Organization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of organization objects.
+     * List properties and relationships of the organization objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,17 +146,13 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of organization objects.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -164,6 +160,10 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -185,23 +185,23 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Organization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a organizationRequestBuilder
+     * @return a OrganizationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OrganizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return new OrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of organization objects.
+     * List properties and relationships of the organization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

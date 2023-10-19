@@ -35,7 +35,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/restoreFactoryDefaults", rawUrl);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,28 +64,28 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer's default settings to the values specified by the manufacturer. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreFactoryDefaultsRequestBuilder
+     * @return a RestoreFactoryDefaultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RestoreFactoryDefaultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

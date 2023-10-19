@@ -26,7 +26,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
      */
     private String urlPattern;
     /**
-     * Instantiates a new urlMatchInfo and sets the default values.
+     * Instantiates a new UrlMatchInfo and sets the default values.
      */
     public UrlMatchInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a urlMatchInfo
+     * @return a UrlMatchInfo
      */
     @jakarta.annotation.Nonnull
     public static UrlMatchInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
         return new UrlMatchInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBaseUrls() {
@@ -71,7 +71,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrlPattern() {
@@ -97,8 +97,8 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

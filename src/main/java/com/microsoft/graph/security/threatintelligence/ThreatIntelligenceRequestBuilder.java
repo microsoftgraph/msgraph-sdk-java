@@ -6,12 +6,18 @@ import com.microsoft.graph.security.threatintelligence.articleindicators.Article
 import com.microsoft.graph.security.threatintelligence.articles.ArticlesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcomponents.HostComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcookies.HostCookiesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostpairs.HostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.HostsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostsslcertificates.HostSslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosttrackers.HostTrackersRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.intelligenceprofileindicators.IntelligenceProfileIndicatorsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.intelprofiles.IntelProfilesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.passivednsrecords.PassiveDnsRecordsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.sslcertificates.SslCertificatesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.subdomains.SubdomainsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.vulnerabilities.VulnerabilitiesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.whoishistoryrecords.WhoisHistoryRecordsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.whoisrecords.WhoisRecordsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -59,11 +65,25 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         return new HostCookiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the hostPairs property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostPairsRequestBuilder hostPairs() {
+        return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
      */
     @jakarta.annotation.Nonnull
     public HostsRequestBuilder hosts() {
         return new HostsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostSslCertificates property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostSslCertificatesRequestBuilder hostSslCertificates() {
+        return new HostSslCertificatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hostTrackers property of the microsoft.graph.security.threatIntelligence entity.
@@ -94,11 +114,39 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the sslCertificates property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SslCertificatesRequestBuilder sslCertificates() {
+        return new SslCertificatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subdomains property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public SubdomainsRequestBuilder subdomains() {
+        return new SubdomainsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the vulnerabilities property of the microsoft.graph.security.threatIntelligence entity.
      */
     @jakarta.annotation.Nonnull
     public VulnerabilitiesRequestBuilder vulnerabilities() {
         return new VulnerabilitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the whoisHistoryRecords property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public WhoisHistoryRecordsRequestBuilder whoisHistoryRecords() {
+        return new WhoisHistoryRecordsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the whoisRecords property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public WhoisRecordsRequestBuilder whoisRecords() {
+        return new WhoisRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ThreatIntelligenceRequestBuilder and sets the default values.
@@ -137,7 +185,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get threatIntelligence from security
-     * @return a CompletableFuture of threatIntelligence
+     * @return a CompletableFuture of ThreatIntelligence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatIntelligence> get() {
@@ -146,7 +194,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get threatIntelligence from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatIntelligence
+     * @return a CompletableFuture of ThreatIntelligence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatIntelligence> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +207,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property threatIntelligence in security
      * @param body The request body
-     * @return a CompletableFuture of threatIntelligence
+     * @return a CompletableFuture of ThreatIntelligence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatIntelligence> patch(@jakarta.annotation.Nonnull final ThreatIntelligence body) {
@@ -169,7 +217,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property threatIntelligence in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatIntelligence
+     * @return a CompletableFuture of ThreatIntelligence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatIntelligence> patch(@jakarta.annotation.Nonnull final ThreatIntelligence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -196,15 +244,15 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -223,10 +271,6 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -234,6 +278,10 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -255,23 +303,23 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ThreatIntelligence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a threatIntelligenceRequestBuilder
+     * @return a ThreatIntelligenceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ThreatIntelligenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

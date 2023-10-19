@@ -58,7 +58,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      */
     private BrowserSharedCookieStatus status;
     /**
-     * Instantiates a new browserSharedCookie and sets the default values.
+     * Instantiates a new BrowserSharedCookie and sets the default values.
      */
     public BrowserSharedCookie() {
         super();
@@ -66,7 +66,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSharedCookie
+     * @return a BrowserSharedCookie
      */
     @jakarta.annotation.Nonnull
     public static BrowserSharedCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment for the shared cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -99,7 +99,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -128,7 +128,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the cookie.
-     * @return a browserSharedCookieHistory
+     * @return a java.util.List<BrowserSharedCookieHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookieHistory> getHistory() {
@@ -136,7 +136,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
@@ -144,7 +144,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the hostOrDomain property value. The URL of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostOrDomain() {
@@ -152,7 +152,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the cookie.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -168,7 +168,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the path property value. The path of the cookie.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -176,7 +176,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the sourceEnvironment property value. The sourceEnvironment property
-     * @return a browserSharedCookieSourceEnvironment
+     * @return a BrowserSharedCookieSourceEnvironment
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
@@ -184,7 +184,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a browserSharedCookieStatus
+     * @return a BrowserSharedCookieStatus
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieStatus getStatus() {

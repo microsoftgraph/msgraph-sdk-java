@@ -13,7 +13,7 @@ public class PlannerTaskCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<PlannerTask> value;
     /**
-     * Instantiates a new plannerTaskCollectionResponse and sets the default values.
+     * Instantiates a new PlannerTaskCollectionResponse and sets the default values.
      */
     public PlannerTaskCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PlannerTaskCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskCollectionResponse
+     * @return a PlannerTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PlannerTaskCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getValue() {

@@ -18,7 +18,7 @@ public class CancelMediaProcessingPostRequestBody implements AdditionalDataHolde
      */
     private String clientContext;
     /**
-     * Instantiates a new cancelMediaProcessingPostRequestBody and sets the default values.
+     * Instantiates a new CancelMediaProcessingPostRequestBody and sets the default values.
      */
     public CancelMediaProcessingPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class CancelMediaProcessingPostRequestBody implements AdditionalDataHolde
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cancelMediaProcessingPostRequestBody
+     * @return a CancelMediaProcessingPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CancelMediaProcessingPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class CancelMediaProcessingPostRequestBody implements AdditionalDataHolde
         return new CancelMediaProcessingPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class CancelMediaProcessingPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the clientContext property value. The clientContext property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
@@ -69,8 +69,8 @@ public class CancelMediaProcessingPostRequestBody implements AdditionalDataHolde
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

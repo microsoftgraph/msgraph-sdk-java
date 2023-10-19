@@ -45,7 +45,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     private ServiceHealthStatus status;
     /**
-     * Instantiates a new serviceHealthIssue and sets the default values.
+     * Instantiates a new ServiceHealthIssue and sets the default values.
      */
     public ServiceHealthIssue() {
         super();
@@ -54,7 +54,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceHealthIssue
+     * @return a ServiceHealthIssue
      */
     @jakarta.annotation.Nonnull
     public static ServiceHealthIssue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the classification property value. The classification property
-     * @return a serviceHealthClassificationType
+     * @return a ServiceHealthClassificationType
      */
     @jakarta.annotation.Nullable
     public ServiceHealthClassificationType getClassification() {
@@ -71,7 +71,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the feature property value. The feature name of the service issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFeature() {
@@ -79,7 +79,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the featureGroup property value. The feature group name of the service issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFeatureGroup() {
@@ -105,7 +105,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the impactDescription property value. The description of the service issue impact.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImpactDescription() {
@@ -113,7 +113,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the isResolved property value. Indicates whether the issue is resolved.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsResolved() {
@@ -121,7 +121,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the origin property value. The origin property
-     * @return a serviceHealthOrigin
+     * @return a ServiceHealthOrigin
      */
     @jakarta.annotation.Nullable
     public ServiceHealthOrigin getOrigin() {
@@ -129,7 +129,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the posts property value. Collection of historical posts for the service issue.
-     * @return a serviceHealthIssuePost
+     * @return a java.util.List<ServiceHealthIssuePost>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssuePost> getPosts() {
@@ -137,7 +137,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the service property value. Indicates the service affected by the issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -145,7 +145,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a serviceHealthStatus
+     * @return a ServiceHealthStatus
      */
     @jakarta.annotation.Nullable
     public ServiceHealthStatus getStatus() {

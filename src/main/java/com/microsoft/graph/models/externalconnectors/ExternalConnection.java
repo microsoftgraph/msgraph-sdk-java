@@ -50,7 +50,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     private ConnectionState state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      */
     public ExternalConnection() {
         super();
@@ -58,7 +58,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @jakarta.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the activitySettings property value. Collects configurable settings related to activities involving connector content.
-     * @return a activitySettings
+     * @return a ActivitySettings
      */
     @jakarta.annotation.Nullable
     public ActivitySettings getActivitySettings() {
@@ -75,7 +75,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
-     * @return a configuration
+     * @return a Configuration
      */
     @jakarta.annotation.Nullable
     public Configuration getConfiguration() {
@@ -83,7 +83,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -110,7 +110,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the groups property value. The groups property
-     * @return a externalGroup
+     * @return a java.util.List<ExternalGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
@@ -118,7 +118,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the items property value. The items property
-     * @return a externalItem
+     * @return a java.util.List<ExternalItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
@@ -126,7 +126,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -134,7 +134,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a connectionOperation
+     * @return a java.util.List<ConnectionOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
@@ -142,7 +142,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the schema property value. The schema property
-     * @return a schema
+     * @return a Schema
      */
     @jakarta.annotation.Nullable
     public Schema getSchema() {
@@ -150,7 +150,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
-     * @return a searchSettings
+     * @return a SearchSettings
      */
     @jakarta.annotation.Nullable
     public SearchSettings getSearchSettings() {
@@ -158,7 +158,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     * @return a connectionState
+     * @return a ConnectionState
      */
     @jakarta.annotation.Nullable
     public ConnectionState getState() {

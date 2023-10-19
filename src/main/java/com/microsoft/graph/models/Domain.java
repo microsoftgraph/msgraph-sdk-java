@@ -77,7 +77,7 @@ public class Domain extends Entity implements Parsable {
      */
     private java.util.List<DomainDnsRecord> verificationDnsRecords;
     /**
-     * Instantiates a new domain and sets the default values.
+     * Instantiates a new Domain and sets the default values.
      */
     public Domain() {
         super();
@@ -85,7 +85,7 @@ public class Domain extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domain
+     * @return a Domain
      */
     @jakarta.annotation.Nonnull
     public static Domain createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -94,7 +94,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationType() {
@@ -102,7 +102,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the availabilityStatus property value. This property is always null except when the verify action is used. When the verify action is used, a domain entity is returned in the response. The availabilityStatus property of the domain entity in the response is either AvailableImmediately or EmailVerifiedDomainTakeoverScheduled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailabilityStatus() {
@@ -110,7 +110,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDomainNameReferences() {
@@ -118,7 +118,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
-     * @return a internalDomainFederation
+     * @return a java.util.List<InternalDomainFederation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InternalDomainFederation> getFederationConfiguration() {
@@ -152,7 +152,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAdminManaged() {
@@ -160,7 +160,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -168,7 +168,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInitial() {
@@ -176,7 +176,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRoot() {
@@ -184,7 +184,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the isVerified property value. true if the domain has completed domain ownership verification. Not nullable
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVerified() {
@@ -192,7 +192,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -200,7 +200,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. The model property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -208,7 +208,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordNotificationWindowInDays() {
@@ -216,7 +216,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordValidityPeriodInDays() {
@@ -224,7 +224,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
-     * @return a domainDnsRecord
+     * @return a java.util.List<DomainDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DomainDnsRecord> getServiceConfigurationRecords() {
@@ -232,7 +232,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Status of asynchronous operations scheduled for the domain.
-     * @return a domainState
+     * @return a DomainState
      */
     @jakarta.annotation.Nullable
     public DomainState getState() {
@@ -240,7 +240,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedServices() {
@@ -248,7 +248,7 @@ public class Domain extends Entity implements Parsable {
     }
     /**
      * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
-     * @return a domainDnsRecord
+     * @return a java.util.List<DomainDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DomainDnsRecord> getVerificationDnsRecords() {

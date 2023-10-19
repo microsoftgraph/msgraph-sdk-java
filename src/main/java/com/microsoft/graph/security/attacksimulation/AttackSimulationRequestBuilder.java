@@ -2,8 +2,14 @@ package com.microsoft.graph.security.attacksimulation;
 
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.security.attacksimulation.endusernotifications.EndUserNotificationsRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.landingpages.LandingPagesRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.loginpages.LoginPagesRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.operations.OperationsRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.payloads.PayloadsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.simulationautomations.SimulationAutomationsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.simulations.SimulationsRequestBuilder;
+import com.microsoft.graph.security.attacksimulation.trainings.TrainingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,6 +29,41 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the endUserNotifications property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public EndUserNotificationsRequestBuilder endUserNotifications() {
+        return new EndUserNotificationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the landingPages property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public LandingPagesRequestBuilder landingPages() {
+        return new LandingPagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the loginPages property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public LoginPagesRequestBuilder loginPages() {
+        return new LoginPagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public OperationsRequestBuilder operations() {
+        return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the payloads property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PayloadsRequestBuilder payloads() {
+        return new PayloadsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
      */
     @jakarta.annotation.Nonnull
@@ -35,6 +76,13 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SimulationsRequestBuilder simulations() {
         return new SimulationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the trainings property of the microsoft.graph.attackSimulationRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public TrainingsRequestBuilder trainings() {
+        return new TrainingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new AttackSimulationRequestBuilder and sets the default values.
@@ -73,7 +121,7 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get attackSimulation from security
-     * @return a CompletableFuture of attackSimulationRoot
+     * @return a CompletableFuture of AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationRoot> get() {
@@ -82,7 +130,7 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get attackSimulation from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationRoot
+     * @return a CompletableFuture of AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +143,7 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property attackSimulation in security
      * @param body The request body
-     * @return a CompletableFuture of attackSimulationRoot
+     * @return a CompletableFuture of AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationRoot> patch(@jakarta.annotation.Nonnull final AttackSimulationRoot body) {
@@ -105,7 +153,7 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property attackSimulation in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationRoot
+     * @return a CompletableFuture of AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationRoot> patch(@jakarta.annotation.Nonnull final AttackSimulationRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -132,15 +180,15 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -159,10 +207,6 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -170,6 +214,10 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -191,23 +239,23 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AttackSimulationRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attackSimulationRequestBuilder
+     * @return a AttackSimulationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttackSimulationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

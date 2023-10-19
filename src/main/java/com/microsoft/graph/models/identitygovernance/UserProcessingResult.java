@@ -56,7 +56,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      */
     private Integer workflowVersion;
     /**
-     * Instantiates a new userProcessingResult and sets the default values.
+     * Instantiates a new UserProcessingResult and sets the default values.
      */
     public UserProcessingResult() {
         super();
@@ -64,7 +64,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userProcessingResult
+     * @return a UserProcessingResult
      */
     @jakarta.annotation.Nonnull
     public static UserProcessingResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the failedTasksCount property value. The number of tasks that failed in the workflow execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasksCount() {
@@ -109,7 +109,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a lifecycleWorkflowProcessingStatus
+     * @return a LifecycleWorkflowProcessingStatus
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
@@ -133,7 +133,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getSubject() {
@@ -141,7 +141,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the taskProcessingResults property value. The associated individual task execution.
-     * @return a taskProcessingResult
+     * @return a java.util.List<TaskProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
@@ -149,7 +149,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the totalTasksCount property value. The total number of tasks that in the workflow execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasksCount() {
@@ -157,7 +157,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks for the workflow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnprocessedTasksCount() {
@@ -165,7 +165,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the workflowExecutionType property value. The workflowExecutionType property
-     * @return a workflowExecutionType
+     * @return a WorkflowExecutionType
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {
@@ -173,7 +173,7 @@ public class UserProcessingResult extends Entity implements Parsable {
     }
     /**
      * Gets the workflowVersion property value. The version of the workflow that was executed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkflowVersion() {

@@ -34,7 +34,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new dataPolicyOperation and sets the default values.
+     * Instantiates a new DataPolicyOperation and sets the default values.
      */
     public DataPolicyOperation() {
         super();
@@ -42,7 +42,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataPolicyOperation
+     * @return a DataPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public static DataPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the progress property value. Specifies the progress of an operation.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getProgress() {
@@ -82,7 +82,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     * @return a dataPolicyOperationStatus
+     * @return a DataPolicyOperationStatus
      */
     @jakarta.annotation.Nullable
     public DataPolicyOperationStatus getStatus() {
@@ -90,7 +90,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the storageLocation property value. The URL location to where data is being exported for export requests.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStorageLocation() {
@@ -106,7 +106,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The id for the user on whom the operation is performed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

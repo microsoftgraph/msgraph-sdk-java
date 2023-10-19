@@ -28,7 +28,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
      */
     private java.util.List<Recipient> toRecipients;
     /**
-     * Instantiates a new createForwardPostRequestBody and sets the default values.
+     * Instantiates a new CreateForwardPostRequestBody and sets the default values.
      */
     public CreateForwardPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -36,7 +36,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createForwardPostRequestBody
+     * @return a CreateForwardPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreateForwardPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
         return new CreateForwardPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the Comment property value. The Comment property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -73,7 +73,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the Message property value. The Message property
-     * @return a message
+     * @return a Message
      */
     @jakarta.annotation.Nullable
     public Message getMessage() {
@@ -81,7 +81,7 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the ToRecipients property value. The ToRecipients property
-     * @return a recipient
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
@@ -99,8 +99,8 @@ public class CreateForwardPostRequestBody implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

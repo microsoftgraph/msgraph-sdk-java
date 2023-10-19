@@ -42,7 +42,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     private String odataType;
     /**
-     * Instantiates a new broadcastMeetingSettings and sets the default values.
+     * Instantiates a new BroadcastMeetingSettings and sets the default values.
      */
     public BroadcastMeetingSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a broadcastMeetingSettings
+     * @return a BroadcastMeetingSettings
      */
     @jakarta.annotation.Nonnull
     public static BroadcastMeetingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         return new BroadcastMeetingSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     * @return a broadcastMeetingAudience
+     * @return a BroadcastMeetingAudience
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingAudience getAllowedAudience() {
@@ -75,7 +75,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the captions property value. Caption settings of a Teams live event.
-     * @return a broadcastMeetingCaptionSettings
+     * @return a BroadcastMeetingCaptionSettings
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingCaptionSettings getCaptions() {
@@ -99,7 +99,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAttendeeReportEnabled() {
@@ -107,7 +107,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsQuestionAndAnswerEnabled() {
@@ -115,7 +115,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordingEnabled() {
@@ -123,7 +123,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVideoOnDemandEnabled() {
@@ -131,7 +131,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -153,8 +153,8 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

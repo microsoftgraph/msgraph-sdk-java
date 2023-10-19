@@ -71,7 +71,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     private Boolean reminderNotificationsEnabled;
     /**
-     * Instantiates a new accessReviewScheduleSettings and sets the default values.
+     * Instantiates a new AccessReviewScheduleSettings and sets the default values.
      */
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -79,7 +79,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewScheduleSettings
+     * @return a AccessReviewScheduleSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewScheduleSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         return new AccessReviewScheduleSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the applyActions property value. Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.
-     * @return a accessReviewApplyAction
+     * @return a java.util.List<AccessReviewApplyAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewApplyAction> getApplyActions() {
@@ -104,7 +104,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the autoApplyDecisionsEnabled property value. Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoApplyDecisionsEnabled() {
@@ -112,7 +112,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the decisionHistoriesForReviewersEnabled property value. Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDecisionHistoriesForReviewersEnabled() {
@@ -120,7 +120,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the defaultDecision property value. Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultDecision() {
@@ -128,7 +128,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the defaultDecisionEnabled property value. Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefaultDecisionEnabled() {
@@ -159,7 +159,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstanceDurationInDays() {
@@ -167,7 +167,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide justification with their decision. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getJustificationRequiredOnApproval() {
@@ -175,7 +175,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the mailNotificationsEnabled property value. Indicates whether emails are enabled or disabled. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
@@ -183,7 +183,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -191,7 +191,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
-     * @return a accessReviewRecommendationInsightSetting
+     * @return a java.util.List<AccessReviewRecommendationInsightSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
@@ -207,7 +207,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRecommendationsEnabled() {
@@ -215,7 +215,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the recurrence property value. Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
-     * @return a patternedRecurrence
+     * @return a PatternedRecurrence
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -223,7 +223,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the reminderNotificationsEnabled property value. Indicates whether reminders are enabled or disabled. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getReminderNotificationsEnabled() {
@@ -252,8 +252,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

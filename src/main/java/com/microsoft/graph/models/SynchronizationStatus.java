@@ -67,7 +67,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     private String troubleshootingUrl;
     /**
-     * Instantiates a new synchronizationStatus and sets the default values.
+     * Instantiates a new SynchronizationStatus and sets the default values.
      */
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -75,7 +75,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationStatus
+     * @return a SynchronizationStatus
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return new SynchronizationStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a synchronizationStatusCode
+     * @return a SynchronizationStatusCode
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatusCode getCode() {
@@ -100,7 +100,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getCountSuccessiveCompleteFailures() {
@@ -108,7 +108,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEscrowsPruned() {
@@ -138,7 +138,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastExecution property value. Details of the last execution of the job.
-     * @return a synchronizationTaskExecution
+     * @return a SynchronizationTaskExecution
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastExecution() {
@@ -146,7 +146,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
-     * @return a synchronizationTaskExecution
+     * @return a SynchronizationTaskExecution
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecution() {
@@ -154,7 +154,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
-     * @return a synchronizationTaskExecution
+     * @return a SynchronizationTaskExecution
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
@@ -162,7 +162,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -170,7 +170,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the progress property value. Details of the progress of a job toward completion.
-     * @return a synchronizationProgress
+     * @return a java.util.List<SynchronizationProgress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationProgress> getProgress() {
@@ -178,7 +178,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the quarantine property value. If job is in quarantine, quarantine details.
-     * @return a synchronizationQuarantine
+     * @return a SynchronizationQuarantine
      */
     @jakarta.annotation.Nullable
     public SynchronizationQuarantine getQuarantine() {
@@ -202,7 +202,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
-     * @return a stringKeyLongValuePair
+     * @return a java.util.List<StringKeyLongValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyLongValuePair> getSynchronizedEntryCountByType() {
@@ -210,7 +210,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTroubleshootingUrl() {
@@ -238,8 +238,8 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

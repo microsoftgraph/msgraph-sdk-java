@@ -99,7 +99,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     private String urlParameters;
     /**
-     * Instantiates a new networkConnection and sets the default values.
+     * Instantiates a new NetworkConnection and sets the default values.
      */
     public NetworkConnection() {
         this.setAdditionalData(new HashMap<>());
@@ -107,7 +107,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkConnection
+     * @return a NetworkConnection
      */
     @jakarta.annotation.Nonnull
     public static NetworkConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -115,7 +115,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
         return new NetworkConnection();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationName() {
@@ -132,7 +132,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationAddress property value. Destination IP address (of the network connection).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationAddress() {
@@ -140,7 +140,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationDomain() {
@@ -148,7 +148,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationLocation property value. Location (by IP address mapping) associated with the destination of a network connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationLocation() {
@@ -156,7 +156,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationPort property value. Destination port (of the network connection).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationPort() {
@@ -164,7 +164,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationUrl() {
@@ -172,7 +172,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
-     * @return a connectionDirection
+     * @return a ConnectionDirection
      */
     @jakarta.annotation.Nullable
     public ConnectionDirection getDirection() {
@@ -218,7 +218,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalDnsName() {
@@ -226,7 +226,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the natDestinationAddress property value. Network Address Translation destination IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNatDestinationAddress() {
@@ -234,7 +234,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the natDestinationPort property value. Network Address Translation destination port.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNatDestinationPort() {
@@ -242,7 +242,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the natSourceAddress property value. Network Address Translation source IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNatSourceAddress() {
@@ -250,7 +250,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the natSourcePort property value. Network Address Translation source port.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNatSourcePort() {
@@ -258,7 +258,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -266,7 +266,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
-     * @return a securityNetworkProtocol
+     * @return a SecurityNetworkProtocol
      */
     @jakarta.annotation.Nullable
     public SecurityNetworkProtocol getProtocol() {
@@ -274,7 +274,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the riskScore property value. Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -282,7 +282,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceAddress property value. Source (i.e. origin) IP address (of the network connection).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceAddress() {
@@ -290,7 +290,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceLocation property value. Location (by IP address mapping) associated with the source of a network connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceLocation() {
@@ -298,7 +298,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourcePort property value. Source (i.e. origin) IP port (of the network connection).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourcePort() {
@@ -306,7 +306,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
-     * @return a connectionStatus
+     * @return a ConnectionStatus
      */
     @jakarta.annotation.Nullable
     public ConnectionStatus getStatus() {
@@ -314,7 +314,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the urlParameters property value. Parameters (suffix) of the destination URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrlParameters() {
@@ -350,8 +350,8 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

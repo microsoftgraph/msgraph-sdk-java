@@ -46,7 +46,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     private Long totalItemSize;
     /**
-     * Instantiates a new subjectRightsRequestDetail and sets the default values.
+     * Instantiates a new SubjectRightsRequestDetail and sets the default values.
      */
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequestDetail
+     * @return a SubjectRightsRequestDetail
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
         return new SubjectRightsRequestDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the excludedItemCount property value. Count of items that are excluded from the request.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExcludedItemCount() {
@@ -96,7 +96,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the insightCounts property value. Count of items per insight.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getInsightCounts() {
@@ -104,7 +104,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the itemCount property value. Count of items found.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getItemCount() {
@@ -112,7 +112,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the itemNeedReview property value. Count of item that need review.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getItemNeedReview() {
@@ -120,7 +120,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -128,7 +128,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProductItemCounts() {
@@ -136,7 +136,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the signedOffItemCount property value. Count of items signed off by the administrator.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSignedOffItemCount() {
@@ -144,7 +144,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the totalItemSize property value. Total item size in bytes.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalItemSize() {
@@ -167,8 +167,8 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

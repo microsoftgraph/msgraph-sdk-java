@@ -13,7 +13,7 @@ public class SoftwareOathAuthenticationMethodConfiguration extends Authenticatio
      */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
-     * Instantiates a new softwareOathAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new SoftwareOathAuthenticationMethodConfiguration and sets the default values.
      */
     public SoftwareOathAuthenticationMethodConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class SoftwareOathAuthenticationMethodConfiguration extends Authenticatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a softwareOathAuthenticationMethodConfiguration
+     * @return a SoftwareOathAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static SoftwareOathAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class SoftwareOathAuthenticationMethodConfiguration extends Authenticatio
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {

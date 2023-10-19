@@ -26,7 +26,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
      */
     private String referencedProperty;
     /**
-     * Instantiates a new referencedObject and sets the default values.
+     * Instantiates a new ReferencedObject and sets the default values.
      */
     public ReferencedObject() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a referencedObject
+     * @return a ReferencedObject
      */
     @jakarta.annotation.Nonnull
     public static ReferencedObject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         return new ReferencedObject();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the referencedObjectName property value. Name of the referenced object. Must match one of the objects in the directory definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferencedObjectName() {
@@ -79,7 +79,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the referencedProperty property value. Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferencedProperty() {
@@ -97,8 +97,8 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

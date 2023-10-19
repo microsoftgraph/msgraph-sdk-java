@@ -34,7 +34,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     private String sha256Hash;
     /**
-     * Instantiates a new hashes and sets the default values.
+     * Instantiates a new Hashes and sets the default values.
      */
     public Hashes() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hashes
+     * @return a Hashes
      */
     @jakarta.annotation.Nonnull
     public static Hashes createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
         return new Hashes();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCrc32Hash() {
@@ -81,7 +81,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuickXorHash() {
@@ -97,7 +97,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sha1Hash property value. SHA1 hash for the contents of the file (if available). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSha1Hash() {
@@ -105,7 +105,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSha256Hash() {
@@ -125,8 +125,8 @@ public class Hashes implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

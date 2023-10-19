@@ -44,11 +44,11 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      */
     private Boolean isEnabled;
     /**
-     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      */
     private Boolean isSchedulingEnabled;
     /**
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      */
     private User lastModifiedBy;
     /**
@@ -64,7 +64,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<Task> tasks;
     /**
-     * Instantiates a new workflowBase and sets the default values.
+     * Instantiates a new WorkflowBase and sets the default values.
      */
     public WorkflowBase() {
         this.setAdditionalData(new HashMap<>());
@@ -72,7 +72,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workflowBase
+     * @return a WorkflowBase
      */
     @jakarta.annotation.Nonnull
     public static WorkflowBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +88,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return new WorkflowBase();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a lifecycleWorkflowCategory
+     * @return a LifecycleWorkflowCategory
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {
@@ -105,7 +105,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the workflow.
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getCreatedBy() {
@@ -121,7 +121,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. A string that describes the purpose of the workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -129,7 +129,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. A string to identify the workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -137,7 +137,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the executionConditions property value. Defines when and for who the workflow will run.
-     * @return a workflowExecutionConditions
+     * @return a WorkflowExecutionConditions
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionConditions getExecutionConditions() {
@@ -166,23 +166,23 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
-     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
-     * @return a boolean
+     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSchedulingEnabled() {
         return this.isSchedulingEnabled;
     }
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
-     * @return a user
+     * Gets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
@@ -198,7 +198,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -206,7 +206,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tasks property value. The tasks in the workflow.
-     * @return a task
+     * @return a java.util.List<Task>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Task> getTasks() {
@@ -233,8 +233,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -289,14 +289,14 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this.isEnabled = value;
     }
     /**
-     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      * @param value Value to set for the isSchedulingEnabled property.
      */
     public void setIsSchedulingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSchedulingEnabled = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
+     * Sets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {

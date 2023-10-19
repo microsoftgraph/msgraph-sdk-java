@@ -14,7 +14,7 @@ public class TaskReportCollectionResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<TaskReport> value;
     /**
-     * Instantiates a new taskReportCollectionResponse and sets the default values.
+     * Instantiates a new TaskReportCollectionResponse and sets the default values.
      */
     public TaskReportCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class TaskReportCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a taskReportCollectionResponse
+     * @return a TaskReportCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TaskReportCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TaskReportCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a taskReport
+     * @return a java.util.List<TaskReport>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskReport> getValue() {

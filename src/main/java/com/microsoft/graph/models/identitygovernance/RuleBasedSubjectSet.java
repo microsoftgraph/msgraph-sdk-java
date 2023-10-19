@@ -14,7 +14,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      */
     private String rule;
     /**
-     * Instantiates a new ruleBasedSubjectSet and sets the default values.
+     * Instantiates a new RuleBasedSubjectSet and sets the default values.
      */
     public RuleBasedSubjectSet() {
         super();
@@ -23,7 +23,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ruleBasedSubjectSet
+     * @return a RuleBasedSubjectSet
      */
     @jakarta.annotation.Nonnull
     public static RuleBasedSubjectSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     }
     /**
      * Gets the rule property value. The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRule() {

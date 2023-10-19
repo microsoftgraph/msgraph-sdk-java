@@ -13,7 +13,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      */
     private OutlookItem item;
     /**
-     * Instantiates a new itemAttachment and sets the default values.
+     * Instantiates a new ItemAttachment and sets the default values.
      */
     public ItemAttachment() {
         super();
@@ -22,7 +22,7 @@ public class ItemAttachment extends Attachment implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemAttachment
+     * @return a ItemAttachment
      */
     @jakarta.annotation.Nonnull
     public static ItemAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ItemAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the item property value. The attached message or event. Navigation property.
-     * @return a outlookItem
+     * @return a OutlookItem
      */
     @jakarta.annotation.Nullable
     public OutlookItem getItem() {

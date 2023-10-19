@@ -54,7 +54,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
     /**
-     * Instantiates a new accessPackage and sets the default values.
+     * Instantiates a new AccessPackage and sets the default values.
      */
     public AccessPackage() {
         super();
@@ -62,7 +62,7 @@ public class AccessPackage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nonnull
     public static AccessPackage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
-     * @return a accessPackage
+     * @return a java.util.List<AccessPackage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
@@ -79,7 +79,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageAssignmentPolicy
+     * @return a java.util.List<AccessPackageAssignmentPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
@@ -87,7 +87,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the catalog property value. Required when creating the access package. Read-only. Nullable.
-     * @return a accessPackageCatalog
+     * @return a AccessPackageCatalog
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
@@ -103,7 +103,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the access package.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -111,7 +111,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -139,7 +139,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
-     * @return a accessPackage
+     * @return a java.util.List<AccessPackage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
@@ -147,7 +147,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getIncompatibleGroups() {
@@ -155,7 +155,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHidden() {
@@ -171,7 +171,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the resourceRoleScopes property value. The resource roles and scopes in this access package.
-     * @return a accessPackageResourceRoleScope
+     * @return a java.util.List<AccessPackageResourceRoleScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {

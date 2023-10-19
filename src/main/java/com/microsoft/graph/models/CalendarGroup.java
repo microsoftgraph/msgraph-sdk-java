@@ -26,7 +26,7 @@ public class CalendarGroup extends Entity implements Parsable {
      */
     private String name;
     /**
-     * Instantiates a new calendarGroup and sets the default values.
+     * Instantiates a new CalendarGroup and sets the default values.
      */
     public CalendarGroup() {
         super();
@@ -34,7 +34,7 @@ public class CalendarGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calendarGroup
+     * @return a CalendarGroup
      */
     @jakarta.annotation.Nonnull
     public static CalendarGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class CalendarGroup extends Entity implements Parsable {
     }
     /**
      * Gets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
-     * @return a calendar
+     * @return a java.util.List<Calendar>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Calendar> getCalendars() {
@@ -51,7 +51,7 @@ public class CalendarGroup extends Entity implements Parsable {
     }
     /**
      * Gets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
@@ -80,7 +80,7 @@ public class CalendarGroup extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The group name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {

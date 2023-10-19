@@ -33,7 +33,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      */
     private String resourceType;
     /**
-     * Instantiates a new googleCloudResourceEvidence and sets the default values.
+     * Instantiates a new GoogleCloudResourceEvidence and sets the default values.
      */
     public GoogleCloudResourceEvidence() {
         super();
@@ -42,7 +42,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a googleCloudResourceEvidence
+     * @return a GoogleCloudResourceEvidence
      */
     @jakarta.annotation.Nonnull
     public static GoogleCloudResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the location property value. The zone or region where the resource is located.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -74,7 +74,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
-     * @return a googleCloudLocationType
+     * @return a GoogleCloudLocationType
      */
     @jakarta.annotation.Nullable
     public GoogleCloudLocationType getLocationType() {
@@ -82,7 +82,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the projectId property value. The Google project ID as defined by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProjectId() {
@@ -90,7 +90,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the projectNumber property value. The project number assigned by Google.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getProjectNumber() {
@@ -98,7 +98,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the resourceName property value. The name of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
@@ -106,7 +106,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     }
     /**
      * Gets the resourceType property value. The type of the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {

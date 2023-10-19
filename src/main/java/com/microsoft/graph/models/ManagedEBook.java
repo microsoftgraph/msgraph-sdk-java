@@ -65,7 +65,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     private java.util.List<UserInstallStateSummary> userStateSummary;
     /**
-     * Instantiates a new managedEBook and sets the default values.
+     * Instantiates a new ManagedEBook and sets the default values.
      */
     public ManagedEBook() {
         super();
@@ -73,7 +73,7 @@ public class ManagedEBook extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedEBook
+     * @return a ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public static ManagedEBook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of assignments for this eBook.
-     * @return a managedEBookAssignment
+     * @return a java.util.List<ManagedEBookAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBookAssignment> getAssignments() {
@@ -105,7 +105,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -113,7 +113,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStates property value. The list of installation states for this eBook.
-     * @return a deviceInstallState
+     * @return a java.util.List<DeviceInstallState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
@@ -121,7 +121,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the eBook.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -151,7 +151,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the informationUrl property value. The more information Url.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInformationUrl() {
@@ -159,7 +159,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the installSummary property value. Mobile App Install Summary.
-     * @return a eBookInstallSummary
+     * @return a EBookInstallSummary
      */
     @jakarta.annotation.Nullable
     public EBookInstallSummary getInstallSummary() {
@@ -167,7 +167,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the largeCover property value. Book cover.
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getLargeCover() {
@@ -183,7 +183,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrivacyInformationUrl() {
@@ -199,7 +199,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. Publisher.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -207,7 +207,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the userStateSummary property value. The list of installation states for this eBook.
-     * @return a userInstallStateSummary
+     * @return a java.util.List<UserInstallStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserInstallStateSummary> getUserStateSummary() {

@@ -17,7 +17,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      */
     private Integer preference;
     /**
-     * Instantiates a new domainDnsMxRecord and sets the default values.
+     * Instantiates a new DomainDnsMxRecord and sets the default values.
      */
     public DomainDnsMxRecord() {
         super();
@@ -25,7 +25,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsMxRecord
+     * @return a DomainDnsMxRecord
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsMxRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailExchange() {
@@ -53,7 +53,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPreference() {

@@ -59,8 +59,8 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
-     * @return a CompletableFuture of simulationAutomationCollectionResponse
+     * Get a list of attack simulation automations for a tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SimulationAutomationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Get a list of attack simulation automations for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomationCollectionResponse
+     * @return a CompletableFuture of SimulationAutomationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> post(@jakarta.annotation.Nonnull final SimulationAutomation body) {
@@ -94,7 +94,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to simulationAutomations for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> post(@jakarta.annotation.Nonnull final SimulationAutomation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SimulationAutomation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Get a list of attack simulation automations for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,17 +114,13 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Get a list of attack simulation automations for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -132,6 +128,10 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -153,23 +153,23 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SimulationAutomation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a simulationAutomationsRequestBuilder
+     * @return a SimulationAutomationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SimulationAutomationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationAutomationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Get a list of attack simulation automations for a tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

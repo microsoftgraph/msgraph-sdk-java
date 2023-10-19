@@ -30,7 +30,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
      */
     private Integer type;
     /**
-     * Instantiates a new alternativeSecurityId and sets the default values.
+     * Instantiates a new AlternativeSecurityId and sets the default values.
      */
     public AlternativeSecurityId() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alternativeSecurityId
+     * @return a AlternativeSecurityId
      */
     @jakarta.annotation.Nonnull
     public static AlternativeSecurityId createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         return new AlternativeSecurityId();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identityProvider property value. For internal use only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityProvider() {
@@ -76,7 +76,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. For internal use only.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getKey() {
@@ -84,7 +84,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. For internal use only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getType() {
@@ -111,8 +111,8 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

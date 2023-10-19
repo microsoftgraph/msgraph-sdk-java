@@ -13,7 +13,7 @@ public class PrintTaskTriggerCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<PrintTaskTrigger> value;
     /**
-     * Instantiates a new printTaskTriggerCollectionResponse and sets the default values.
+     * Instantiates a new PrintTaskTriggerCollectionResponse and sets the default values.
      */
     public PrintTaskTriggerCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrintTaskTriggerCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printTaskTriggerCollectionResponse
+     * @return a PrintTaskTriggerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrintTaskTriggerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrintTaskTriggerCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a printTaskTrigger
+     * @return a java.util.List<PrintTaskTrigger>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskTrigger> getValue() {

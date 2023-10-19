@@ -29,7 +29,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     private String resourceAppId;
     /**
-     * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
+     * Instantiates a new ResourceSpecificPermissionGrant and sets the default values.
      */
     public ResourceSpecificPermissionGrant() {
         super();
@@ -38,7 +38,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceSpecificPermissionGrant
+     * @return a ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public static ResourceSpecificPermissionGrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     }
     /**
      * Gets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientAppId() {
@@ -55,7 +55,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     }
     /**
      * Gets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -77,7 +77,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     }
     /**
      * Gets the permission property value. The name of the resource-specific permission. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPermission() {
@@ -85,7 +85,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     }
     /**
      * Gets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPermissionType() {
@@ -93,7 +93,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     }
     /**
      * Gets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceAppId() {

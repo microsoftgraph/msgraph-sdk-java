@@ -32,7 +32,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     private java.util.List<IosNotificationSettings> notificationSettings;
     /**
-     * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      */
     public IosDeviceFeaturesConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosDeviceFeaturesConfiguration
+     * @return a IosDeviceFeaturesConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetTagTemplate() {
@@ -72,7 +72,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenItem
+     * @return a java.util.List<IosHomeScreenItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
@@ -80,7 +80,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenPage
+     * @return a java.util.List<IosHomeScreenPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
@@ -88,7 +88,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLockScreenFootnote() {
@@ -96,7 +96,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
-     * @return a iosNotificationSettings
+     * @return a java.util.List<IosNotificationSettings>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {

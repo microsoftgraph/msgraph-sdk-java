@@ -29,7 +29,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     private String templateId;
     /**
-     * Instantiates a new synchronizationJob and sets the default values.
+     * Instantiates a new SynchronizationJob and sets the default values.
      */
     public SynchronizationJob() {
         super();
@@ -37,7 +37,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationJob
+     * @return a SynchronizationJob
      */
     @jakarta.annotation.Nonnull
     public static SynchronizationJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. Schedule used to run the job. Read-only.
-     * @return a synchronizationSchedule
+     * @return a SynchronizationSchedule
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchedule getSchedule() {
@@ -68,7 +68,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the schema property value. The synchronization schema configured for the job.
-     * @return a synchronizationSchema
+     * @return a SynchronizationSchema
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {
@@ -76,7 +76,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
-     * @return a synchronizationStatus
+     * @return a SynchronizationStatus
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatus getStatus() {
@@ -84,7 +84,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getSynchronizationJobSettings() {
@@ -92,7 +92,7 @@ public class SynchronizationJob extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. Identifier of the synchronization template this job is based on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {

@@ -17,7 +17,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      */
     private UrlMatchInfo urlMatchInfo;
     /**
-     * Instantiates a new itemIdResolver and sets the default values.
+     * Instantiates a new ItemIdResolver and sets the default values.
      */
     public ItemIdResolver() {
         super();
@@ -26,7 +26,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemIdResolver
+     * @return a ItemIdResolver
      */
     @jakarta.annotation.Nonnull
     public static ItemIdResolver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * Gets the itemId property value. Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
@@ -54,7 +54,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     }
     /**
      * Gets the urlMatchInfo property value. Configurations to match and resolve URL.
-     * @return a urlMatchInfo
+     * @return a UrlMatchInfo
      */
     @jakarta.annotation.Nullable
     public UrlMatchInfo getUrlMatchInfo() {

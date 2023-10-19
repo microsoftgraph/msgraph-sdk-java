@@ -57,7 +57,7 @@ public class VppToken extends Entity implements Parsable {
      */
     private VppTokenAccountType vppTokenAccountType;
     /**
-     * Instantiates a new vppToken and sets the default values.
+     * Instantiates a new VppToken and sets the default values.
      */
     public VppToken() {
         super();
@@ -65,7 +65,7 @@ public class VppToken extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vppToken
+     * @return a VppToken
      */
     @jakarta.annotation.Nonnull
     public static VppToken createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
@@ -82,7 +82,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the automaticallyUpdateApps property value. Whether or not apps for the VPP token will be automatically updated.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutomaticallyUpdateApps() {
@@ -90,7 +90,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -142,7 +142,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
-     * @return a vppTokenSyncStatus
+     * @return a VppTokenSyncStatus
      */
     @jakarta.annotation.Nullable
     public VppTokenSyncStatus getLastSyncStatus() {
@@ -150,7 +150,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationName() {
@@ -158,7 +158,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Possible states associated with an Apple Volume Purchase Program token.
-     * @return a vppTokenState
+     * @return a VppTokenState
      */
     @jakarta.annotation.Nullable
     public VppTokenState getState() {
@@ -166,7 +166,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the token property value. The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getToken() {
@@ -174,7 +174,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     * @return a vppTokenAccountType
+     * @return a VppTokenAccountType
      */
     @jakarta.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {

@@ -34,7 +34,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     private String statusInformation;
     /**
-     * Instantiates a new eventPropagationResult and sets the default values.
+     * Instantiates a new EventPropagationResult and sets the default values.
      */
     public EventPropagationResult() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a eventPropagationResult
+     * @return a EventPropagationResult
      */
     @jakarta.annotation.Nonnull
     public static EventPropagationResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
         return new EventPropagationResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the location property value. The name of the specific location in the workload associated with the event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -81,7 +81,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the serviceName property value. The name of the workload associated with the event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
@@ -97,7 +97,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
-     * @return a eventPropagationStatus
+     * @return a EventPropagationStatus
      */
     @jakarta.annotation.Nullable
     public EventPropagationStatus getStatus() {
@@ -105,7 +105,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the statusInformation property value. Additional information about the status of the event creation request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusInformation() {
@@ -125,8 +125,8 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

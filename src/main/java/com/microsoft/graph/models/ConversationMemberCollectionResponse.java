@@ -13,7 +13,7 @@ public class ConversationMemberCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<ConversationMember> value;
     /**
-     * Instantiates a new conversationMemberCollectionResponse and sets the default values.
+     * Instantiates a new ConversationMemberCollectionResponse and sets the default values.
      */
     public ConversationMemberCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ConversationMemberCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conversationMemberCollectionResponse
+     * @return a ConversationMemberCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ConversationMemberCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ConversationMemberCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a conversationMember
+     * @return a java.util.List<ConversationMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getValue() {

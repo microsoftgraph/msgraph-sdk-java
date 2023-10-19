@@ -54,7 +54,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     private Double verticalAccuracy;
     /**
-     * Instantiates a new deviceGeoLocation and sets the default values.
+     * Instantiates a new DeviceGeoLocation and sets the default values.
      */
     public DeviceGeoLocation() {
         this.setAdditionalData(new HashMap<>());
@@ -62,7 +62,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceGeoLocation
+     * @return a DeviceGeoLocation
      */
     @jakarta.annotation.Nonnull
     public static DeviceGeoLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         return new DeviceGeoLocation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the altitude property value. Altitude, given in meters above sea level
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
@@ -105,7 +105,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the heading property value. Heading in degrees from true north
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getHeading() {
@@ -113,7 +113,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getHorizontalAccuracy() {
@@ -129,7 +129,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the latitude property value. Latitude coordinate of the device's location
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
@@ -137,7 +137,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the longitude property value. Longitude coordinate of the device's location
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
@@ -145,7 +145,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -153,7 +153,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the speed property value. Speed the device is traveling in meters per second
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSpeed() {
@@ -161,7 +161,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verticalAccuracy property value. Accuracy of altitude in meters
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getVerticalAccuracy() {
@@ -185,8 +185,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

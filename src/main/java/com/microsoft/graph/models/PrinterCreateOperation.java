@@ -17,7 +17,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     private Printer printer;
     /**
-     * Instantiates a new printerCreateOperation and sets the default values.
+     * Instantiates a new PrinterCreateOperation and sets the default values.
      */
     public PrinterCreateOperation() {
         super();
@@ -26,7 +26,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerCreateOperation
+     * @return a PrinterCreateOperation
      */
     @jakarta.annotation.Nonnull
     public static PrinterCreateOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     }
     /**
      * Gets the certificate property value. The signed certificate created during the registration process. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificate() {
@@ -54,7 +54,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     }
     /**
      * Gets the printer property value. The created printer entity. Read-only.
-     * @return a printer
+     * @return a Printer
      */
     @jakarta.annotation.Nullable
     public Printer getPrinter() {

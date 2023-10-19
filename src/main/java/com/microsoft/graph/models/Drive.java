@@ -53,7 +53,7 @@ public class Drive extends BaseItem implements Parsable {
      */
     private SystemFacet system;
     /**
-     * Instantiates a new drive and sets the default values.
+     * Instantiates a new Drive and sets the default values.
      */
     public Drive() {
         super();
@@ -62,7 +62,7 @@ public class Drive extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a drive
+     * @return a Drive
      */
     @jakarta.annotation.Nonnull
     public static Drive createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getBundles() {
@@ -79,7 +79,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDriveType() {
@@ -107,7 +107,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the following property value. The list of items the user is following. Only in OneDrive for Business.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getFollowing() {
@@ -115,7 +115,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the items property value. All items contained in the drive. Read-only. Nullable.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getItems() {
@@ -123,7 +123,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
-     * @return a list
+     * @return a List
      */
     @jakarta.annotation.Nullable
     public List getList() {
@@ -131,7 +131,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the owner property value. Optional. The user account that owns the drive. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOwner() {
@@ -139,7 +139,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
-     * @return a quota
+     * @return a Quota
      */
     @jakarta.annotation.Nullable
     public Quota getQuota() {
@@ -147,7 +147,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the root property value. The root folder of the drive. Read-only.
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getRoot() {
@@ -155,7 +155,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharePointIds property value. The sharePointIds property
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharePointIds() {
@@ -163,7 +163,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the special property value. Collection of common folders available in OneDrive. Read-only. Nullable.
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getSpecial() {
@@ -171,7 +171,7 @@ public class Drive extends BaseItem implements Parsable {
     }
     /**
      * Gets the system property value. If present, indicates that this is a system-managed drive. Read-only.
-     * @return a systemFacet
+     * @return a SystemFacet
      */
     @jakarta.annotation.Nullable
     public SystemFacet getSystem() {

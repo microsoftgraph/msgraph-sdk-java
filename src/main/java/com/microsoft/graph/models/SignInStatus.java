@@ -30,7 +30,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new signInStatus and sets the default values.
+     * Instantiates a new SignInStatus and sets the default values.
      */
     public SignInStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a signInStatus
+     * @return a SignInStatus
      */
     @jakarta.annotation.Nonnull
     public static SignInStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
         return new SignInStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the additionalDetails property value. Provides additional details on the sign-in activity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -63,7 +63,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -71,7 +71,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -92,7 +92,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

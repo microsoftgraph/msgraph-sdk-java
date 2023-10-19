@@ -36,9 +36,9 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/playPrompt", rawUrl);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of playPromptOperation
+     * @return a CompletableFuture of PlayPromptOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of playPromptOperation
+     * @return a CompletableFuture of PlayPromptOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PlayPromptOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -80,23 +80,23 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PlayPromptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a playPromptRequestBuilder
+     * @return a PlayPromptRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlayPromptRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

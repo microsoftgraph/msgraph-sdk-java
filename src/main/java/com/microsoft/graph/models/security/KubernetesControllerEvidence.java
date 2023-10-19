@@ -25,7 +25,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      */
     private String type;
     /**
-     * Instantiates a new kubernetesControllerEvidence and sets the default values.
+     * Instantiates a new KubernetesControllerEvidence and sets the default values.
      */
     public KubernetesControllerEvidence() {
         super();
@@ -34,7 +34,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kubernetesControllerEvidence
+     * @return a KubernetesControllerEvidence
      */
     @jakarta.annotation.Nonnull
     public static KubernetesControllerEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the labels property value. The labels for the Kubernetes pod.
-     * @return a dictionary
+     * @return a Dictionary
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
@@ -64,7 +64,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the name property value. The controller name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -72,7 +72,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the namespace property value. The service account namespace.
-     * @return a kubernetesNamespaceEvidence
+     * @return a KubernetesNamespaceEvidence
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
@@ -80,7 +80,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     }
     /**
      * Gets the type property value. The controller type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {

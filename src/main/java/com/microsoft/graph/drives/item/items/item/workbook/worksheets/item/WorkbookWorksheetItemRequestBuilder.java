@@ -83,7 +83,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the cell method.
      * @param column Usage: column={column}
      * @param row Usage: row={row}
-     * @return a cellWithRowWithColumnRequestBuilder
+     * @return a CellWithRowWithColumnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CellWithRowWithColumnRequestBuilder cellWithRowWithColumn(@jakarta.annotation.Nonnull final Integer column, @jakarta.annotation.Nonnull final Integer row) {
@@ -108,7 +108,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -129,8 +129,8 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
-     * @return a CompletableFuture of workbookWorksheet
+     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -138,9 +138,9 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheet
+     * @return a CompletableFuture of WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -152,9 +152,9 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookWorksheet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookWorksheet
+     * @return a CompletableFuture of WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -162,10 +162,10 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheet
+     * @return a CompletableFuture of WorkbookWorksheet
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -180,7 +180,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the range method.
      * @param address Usage: address='{address}'
-     * @return a rangeWithAddressRequestBuilder
+     * @return a RangeWithAddressRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RangeWithAddressRequestBuilder rangeWithAddress(@jakarta.annotation.Nonnull final String address) {
@@ -188,7 +188,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return new RangeWithAddressRequestBuilder(pathParameters, requestAdapter, address);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -196,26 +196,26 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Deletes the worksheet from the workbook. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -223,17 +223,13 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -241,10 +237,14 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -253,7 +253,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the properties of worksheet object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -262,23 +262,23 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookWorksheet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Provides operations to call the usedRange method.
      * @param valuesOnly Usage: valuesOnly={valuesOnly}
-     * @return a usedRangeWithValuesOnlyRequestBuilder
+     * @return a UsedRangeWithValuesOnlyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsedRangeWithValuesOnlyRequestBuilder usedRangeWithValuesOnly(@jakarta.annotation.Nonnull final Boolean valuesOnly) {
@@ -302,7 +302,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Retrieve the properties and relationships of worksheet object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

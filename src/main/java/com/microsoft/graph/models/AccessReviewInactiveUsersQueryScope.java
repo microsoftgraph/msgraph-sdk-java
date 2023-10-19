@@ -14,7 +14,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      */
     private PeriodAndDuration inactiveDuration;
     /**
-     * Instantiates a new accessReviewInactiveUsersQueryScope and sets the default values.
+     * Instantiates a new AccessReviewInactiveUsersQueryScope and sets the default values.
      */
     public AccessReviewInactiveUsersQueryScope() {
         super();
@@ -23,7 +23,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewInactiveUsersQueryScope
+     * @return a AccessReviewInactiveUsersQueryScope
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInactiveUsersQueryScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

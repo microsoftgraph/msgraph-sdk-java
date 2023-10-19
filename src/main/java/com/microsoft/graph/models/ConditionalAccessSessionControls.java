@@ -38,7 +38,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     private SignInFrequencySessionControl signInFrequency;
     /**
-     * Instantiates a new conditionalAccessSessionControls and sets the default values.
+     * Instantiates a new ConditionalAccessSessionControls and sets the default values.
      */
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessSessionControls
+     * @return a ConditionalAccessSessionControls
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessSessionControls createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         return new ConditionalAccessSessionControls();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
-     * @return a applicationEnforcedRestrictionsSessionControl
+     * @return a ApplicationEnforcedRestrictionsSessionControl
      */
     @jakarta.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl getApplicationEnforcedRestrictions() {
@@ -71,7 +71,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the cloudAppSecurity property value. Session control to apply cloud app security.
-     * @return a cloudAppSecuritySessionControl
+     * @return a CloudAppSecuritySessionControl
      */
     @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControl getCloudAppSecurity() {
@@ -79,7 +79,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableResilienceDefaults() {
@@ -102,7 +102,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
-     * @return a persistentBrowserSessionControl
+     * @return a PersistentBrowserSessionControl
      */
     @jakarta.annotation.Nullable
     public PersistentBrowserSessionControl getPersistentBrowser() {
@@ -118,7 +118,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
-     * @return a signInFrequencySessionControl
+     * @return a SignInFrequencySessionControl
      */
     @jakarta.annotation.Nullable
     public SignInFrequencySessionControl getSignInFrequency() {
@@ -139,8 +139,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

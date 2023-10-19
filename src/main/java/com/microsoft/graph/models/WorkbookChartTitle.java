@@ -21,11 +21,11 @@ public class WorkbookChartTitle extends Entity implements Parsable {
      */
     private String text;
     /**
-     * A boolean value the represents the visibility of a chart title object.
+     * A boolean value that represents the visibility of a chart title object.
      */
     private Boolean visible;
     /**
-     * Instantiates a new workbookChartTitle and sets the default values.
+     * Instantiates a new WorkbookChartTitle and sets the default values.
      */
     public WorkbookChartTitle() {
         super();
@@ -33,7 +33,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartTitle
+     * @return a WorkbookChartTitle
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartTitle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
-     * @return a workbookChartTitleFormat
+     * @return a WorkbookChartTitleFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartTitleFormat getFormat() {
@@ -63,7 +63,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOverlay() {
@@ -71,15 +71,15 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. Represents the title text of a chart.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
         return this.text;
     }
     /**
-     * Gets the visible property value. A boolean value the represents the visibility of a chart title object.
-     * @return a boolean
+     * Gets the visible property value. A boolean value that represents the visibility of a chart title object.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVisible() {
@@ -119,7 +119,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         this.text = value;
     }
     /**
-     * Sets the visible property value. A boolean value the represents the visibility of a chart title object.
+     * Sets the visible property value. A boolean value that represents the visibility of a chart title object.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {

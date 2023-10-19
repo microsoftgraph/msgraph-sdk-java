@@ -27,7 +27,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     private String odataType;
     /**
-     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
      */
     private SubjectRightsRequestStage stage;
     /**
@@ -39,7 +39,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     private String type;
     /**
-     * Instantiates a new subjectRightsRequestHistory and sets the default values.
+     * Instantiates a new SubjectRightsRequestHistory and sets the default values.
      */
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequestHistory
+     * @return a SubjectRightsRequestHistory
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequestHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
         return new SubjectRightsRequestHistory();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the changedBy property value. Identity of the user who changed the  subject rights request.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getChangedBy() {
@@ -95,15 +95,15 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
-     * @return a subjectRightsRequestStage
+     * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
+     * @return a SubjectRightsRequestStage
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestStage getStage() {
@@ -111,7 +111,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     * @return a subjectRightsRequestStageStatus
+     * @return a SubjectRightsRequestStageStatus
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestStageStatus getStageStatus() {
@@ -119,7 +119,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the type property value. Type of history.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -140,8 +140,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -168,7 +168,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
         this.odataType = value;
     }
     /**
-     * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {

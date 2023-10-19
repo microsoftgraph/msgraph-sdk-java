@@ -20,7 +20,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      */
     private java.util.List<AuthenticationMethodModes> allowedCombinations;
     /**
-     * Instantiates a new updateAllowedCombinationsPostRequestBody and sets the default values.
+     * Instantiates a new UpdateAllowedCombinationsPostRequestBody and sets the default values.
      */
     public UpdateAllowedCombinationsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -28,7 +28,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateAllowedCombinationsPostRequestBody
+     * @return a UpdateAllowedCombinationsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateAllowedCombinationsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
         return new UpdateAllowedCombinationsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
@@ -71,8 +71,8 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

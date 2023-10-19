@@ -26,7 +26,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     private Long userCount;
     /**
-     * Instantiates a new userRegistrationFeatureCount and sets the default values.
+     * Instantiates a new UserRegistrationFeatureCount and sets the default values.
      */
     public UserRegistrationFeatureCount() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userRegistrationFeatureCount
+     * @return a UserRegistrationFeatureCount
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationFeatureCount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         return new UserRegistrationFeatureCount();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a authenticationMethodFeature
+     * @return a AuthenticationMethodFeature
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodFeature getFeature() {
@@ -71,7 +71,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the userCount property value. Number of users.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUserCount() {
@@ -97,8 +97,8 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

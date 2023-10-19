@@ -42,7 +42,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      */
     private String sortOn;
     /**
-     * Instantiates a new workbookSortField and sets the default values.
+     * Instantiates a new WorkbookSortField and sets the default values.
      */
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookSortField
+     * @return a WorkbookSortField
      */
     @jakarta.annotation.Nonnull
     public static WorkbookSortField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         return new WorkbookSortField();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ascending property value. Represents whether the sorting is done in an ascending fashion.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAscending() {
@@ -75,7 +75,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -83,7 +83,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataOption() {
@@ -107,7 +107,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-     * @return a workbookIcon
+     * @return a WorkbookIcon
      */
     @jakarta.annotation.Nullable
     public WorkbookIcon getIcon() {
@@ -115,7 +115,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getKey() {
@@ -123,7 +123,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOn() {
@@ -153,8 +153,8 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

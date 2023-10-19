@@ -13,7 +13,7 @@ public class SimulationAutomationCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<SimulationAutomation> value;
     /**
-     * Instantiates a new simulationAutomationCollectionResponse and sets the default values.
+     * Instantiates a new SimulationAutomationCollectionResponse and sets the default values.
      */
     public SimulationAutomationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class SimulationAutomationCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a simulationAutomationCollectionResponse
+     * @return a SimulationAutomationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SimulationAutomationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SimulationAutomationCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a simulationAutomation
+     * @return a java.util.List<SimulationAutomation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomation> getValue() {
