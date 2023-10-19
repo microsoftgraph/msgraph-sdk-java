@@ -47,7 +47,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Methods Policy.
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      */
     @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
     @Expose
@@ -56,7 +56,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Strength Policies.
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      */
     @SerializedName(value = "authenticationStrengthPolicies", alternate = {"AuthenticationStrengthPolicies"})
     @Expose
@@ -92,7 +92,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authorization Policy.
-     * The policy that controls Azure AD authorization settings.
+     * The policy that controls Microsoft Entra authorization settings.
      */
     @SerializedName(value = "authorizationPolicy", alternate = {"AuthorizationPolicy"})
     @Expose
@@ -110,7 +110,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Cross Tenant Access Policy.
-     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      */
     @SerializedName(value = "crossTenantAccessPolicy", alternate = {"CrossTenantAccessPolicy"})
     @Expose
@@ -128,7 +128,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Home Realm Discovery Policies.
-     * The policy to control Azure AD authentication behavior for federated users.
+     * The policy to control Microsoft Entra authentication behavior for federated users.
      */
     @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
@@ -146,7 +146,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuance Policies.
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      */
     @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
@@ -155,7 +155,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Lifetime Policies.
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      */
     @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose

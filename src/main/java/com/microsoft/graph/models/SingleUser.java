@@ -27,7 +27,7 @@ public class SingleUser extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The name of the user in Azure AD. Read only.
+     * The name of the user in Microsoft Entra ID. Read only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class SingleUser extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The ID of the user in Azure AD.
+     * The ID of the user in Microsoft Entra ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

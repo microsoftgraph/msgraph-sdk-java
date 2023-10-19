@@ -59,7 +59,7 @@ public class AuthenticationMethodFeatureConfiguration implements IJsonBackedObje
 
     /**
      * The State.
-     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

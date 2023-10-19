@@ -42,7 +42,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Methods.
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      */
     @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
     @Expose

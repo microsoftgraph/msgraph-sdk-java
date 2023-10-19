@@ -86,4 +86,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     public com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for PeopleAdminSettings
+     *
+     * @return the PeopleAdminSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PeopleAdminSettingsRequestBuilder people() {
+        return new com.microsoft.graph.requests.PeopleAdminSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
+    }
 }

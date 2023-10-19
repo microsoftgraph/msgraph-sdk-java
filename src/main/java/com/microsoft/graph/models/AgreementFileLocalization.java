@@ -29,7 +29,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
 
     /**
      * The Versions.
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose

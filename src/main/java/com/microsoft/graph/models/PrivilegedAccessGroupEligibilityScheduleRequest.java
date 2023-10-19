@@ -31,7 +31,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Access Id.
-     * 
+     * The identifier of membership or ownership eligibility relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
      */
     @SerializedName(value = "accessId", alternate = {"AccessId"})
     @Expose
@@ -40,7 +40,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Group Id.
-     * 
+     * The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
@@ -49,7 +49,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Principal Id.
-     * 
+     * The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -58,7 +58,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Target Schedule Id.
-     * 
+     * The identifier of the schedule that's created from the eligibility request. Optional.
      */
     @SerializedName(value = "targetScheduleId", alternate = {"TargetScheduleId"})
     @Expose
@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Group.
-     * 
+     * References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -76,7 +76,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Principal.
-     * 
+     * References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
@@ -85,7 +85,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
 
     /**
      * The Target Schedule.
-     * 
+     * Schedule created by this request.
      */
     @SerializedName(value = "targetSchedule", alternate = {"TargetSchedule"})
     @Expose

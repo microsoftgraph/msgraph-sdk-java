@@ -57,7 +57,7 @@ public class OnPremisesDirectorySynchronizationFeature implements IJsonBackedObj
 
     /**
      * The Bypass Dir Sync Overrides Enabled.
-     * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+     * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
      */
     @SerializedName(value = "bypassDirSyncOverridesEnabled", alternate = {"BypassDirSyncOverridesEnabled"})
     @Expose
@@ -102,7 +102,7 @@ public class OnPremisesDirectorySynchronizationFeature implements IJsonBackedObj
 
     /**
      * The Directory Extensions Enabled.
-     * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+     * Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
      */
     @SerializedName(value = "directoryExtensionsEnabled", alternate = {"DirectoryExtensionsEnabled"})
     @Expose
@@ -138,7 +138,7 @@ public class OnPremisesDirectorySynchronizationFeature implements IJsonBackedObj
 
     /**
      * The Password Writeback Enabled.
-     * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+     * Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
      */
     @SerializedName(value = "passwordWritebackEnabled", alternate = {"PasswordWritebackEnabled"})
     @Expose

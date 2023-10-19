@@ -67,7 +67,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Execution Scope.
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      */
 	@Nullable
     public com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage executionScope;

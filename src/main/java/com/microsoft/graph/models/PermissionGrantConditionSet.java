@@ -56,7 +56,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Client Application Tenant Ids.
-     * A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      */
     @SerializedName(value = "clientApplicationTenantIds", alternate = {"ClientApplicationTenantIds"})
     @Expose

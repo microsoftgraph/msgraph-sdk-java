@@ -34,7 +34,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Azure Ad Device Id.
-     * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      */
     @SerializedName(value = "azureAdDeviceId", alternate = {"AzureAdDeviceId"})
     @Expose

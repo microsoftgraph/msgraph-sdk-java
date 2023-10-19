@@ -83,7 +83,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Type.
-     * The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
+     * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose

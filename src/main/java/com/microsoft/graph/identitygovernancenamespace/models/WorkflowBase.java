@@ -125,7 +125,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

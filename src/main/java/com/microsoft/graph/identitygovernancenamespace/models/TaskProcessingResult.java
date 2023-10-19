@@ -75,7 +75,7 @@ public class TaskProcessingResult extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

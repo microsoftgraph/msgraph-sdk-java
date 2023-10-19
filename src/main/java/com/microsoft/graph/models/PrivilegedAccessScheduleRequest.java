@@ -30,7 +30,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements IJsonBac
 
     /**
      * The Action.
-     * 
+     * Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -39,7 +39,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements IJsonBac
 
     /**
      * The Is Validation Only.
-     * 
+     * Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      */
     @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
@@ -48,7 +48,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements IJsonBac
 
     /**
      * The Justification.
-     * 
+     * A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -57,7 +57,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements IJsonBac
 
     /**
      * The Schedule Info.
-     * 
+     * The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
      */
     @SerializedName(value = "scheduleInfo", alternate = {"ScheduleInfo"})
     @Expose
@@ -66,7 +66,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements IJsonBac
 
     /**
      * The Ticket Info.
-     * 
+     * Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
      */
     @SerializedName(value = "ticketInfo", alternate = {"TicketInfo"})
     @Expose

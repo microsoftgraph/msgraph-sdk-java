@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Action.
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      */
     @SerializedName(value = "provisioningAction", alternate = {"ProvisioningAction"})
     @Expose
@@ -171,7 +171,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Tenant Id.
-     * Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

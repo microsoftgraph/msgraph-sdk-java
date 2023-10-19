@@ -69,7 +69,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * The unique identifier for the application that is assigned to an application by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -150,7 +150,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all of the security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -159,7 +159,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identifier Uris.
-     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      */
     @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
@@ -168,7 +168,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Info.
-     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -186,7 +186,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      */
     @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
@@ -222,7 +222,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Optional Claims.
-     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      */
     @SerializedName(value = "optionalClaims", alternate = {"OptionalClaims"})
     @Expose
@@ -267,7 +267,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Request Signature Verification.
-     * Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
      */
     @SerializedName(value = "requestSignatureVerification", alternate = {"RequestSignatureVerification"})
     @Expose
@@ -339,7 +339,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Token Encryption Key Id.
-     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      */
     @SerializedName(value = "tokenEncryptionKeyId", alternate = {"TokenEncryptionKeyId"})
     @Expose
@@ -428,7 +428,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Synchronization.
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      */
     @SerializedName(value = "synchronization", alternate = {"Synchronization"})
     @Expose

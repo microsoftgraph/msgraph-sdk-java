@@ -28,7 +28,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
 
     /**
      * The User Principal Names.
-     * 
+     * Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
      */
     @SerializedName(value = "userPrincipalNames", alternate = {"UserPrincipalNames"})
     @Expose

@@ -148,7 +148,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Service.
-     * Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose

@@ -28,7 +28,7 @@ public class PrivilegedAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * 
+     * A group that's governed through Privileged Identity Management (PIM).
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose

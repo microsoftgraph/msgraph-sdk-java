@@ -30,7 +30,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements IJs
 
     /**
      * The Active Sign In Uri.
-     * URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      */
     @SerializedName(value = "activeSignInUri", alternate = {"ActiveSignInUri"})
     @Expose
@@ -39,7 +39,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements IJs
 
     /**
      * The Federated Idp Mfa Behavior.
-     * Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
+     * Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
      */
     @SerializedName(value = "federatedIdpMfaBehavior", alternate = {"FederatedIdpMfaBehavior"})
     @Expose
@@ -48,7 +48,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements IJs
 
     /**
      * The Is Signed Authentication Request Required.
-     * If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
+     * If true, when SAML authentication requests are sent to the federated SAML IdP, Microsoft Entra ID will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
      */
     @SerializedName(value = "isSignedAuthenticationRequestRequired", alternate = {"IsSignedAuthenticationRequestRequired"})
     @Expose
@@ -84,7 +84,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements IJs
 
     /**
      * The Sign Out Uri.
-     * URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
      */
     @SerializedName(value = "signOutUri", alternate = {"SignOutUri"})
     @Expose

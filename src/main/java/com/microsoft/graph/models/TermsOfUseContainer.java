@@ -39,7 +39,7 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Agreements.
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      */
     @SerializedName(value = "agreements", alternate = {"Agreements"})
     @Expose

@@ -59,7 +59,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Processing.
-     * Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      */
     @SerializedName(value = "isProcessing", alternate = {"IsProcessing"})
     @Expose
@@ -104,7 +104,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Principal Type.
-     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      */
     @SerializedName(value = "servicePrincipalType", alternate = {"ServicePrincipalType"})
     @Expose
@@ -113,7 +113,7 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
 
     /**
      * The History.
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      */
     @SerializedName(value = "history", alternate = {"History"})
     @Expose
