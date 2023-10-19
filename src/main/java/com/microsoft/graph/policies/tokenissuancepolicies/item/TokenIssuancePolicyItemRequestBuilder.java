@@ -66,7 +66,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @return a CompletableFuture of TokenIssuancePolicy
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenIssuancePolicy
      */
@@ -140,7 +140,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

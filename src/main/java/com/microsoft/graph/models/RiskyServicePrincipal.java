@@ -18,7 +18,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      */
     private java.util.List<RiskyServicePrincipalHistoryItem> history;
     /**
@@ -26,7 +26,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     private Boolean isEnabled;
     /**
-     * Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      */
     private Boolean isProcessing;
     /**
@@ -46,7 +46,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     private RiskState riskState;
     /**
-     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      */
     private String servicePrincipalType;
     /**
@@ -108,7 +108,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the history property value. Represents the risk history of Azure AD service principals.
+     * Gets the history property value. Represents the risk history of Microsoft Entra service principals.
      * @return a java.util.List<RiskyServicePrincipalHistoryItem>
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         return this.isEnabled;
     }
     /**
-     * Gets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         return this.riskState;
     }
     /**
-     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the history property value. Represents the risk history of Azure AD service principals.
+     * Sets the history property value. Represents the risk history of Microsoft Entra service principals.
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipalHistoryItem> value) {
@@ -218,7 +218,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         this.isEnabled = value;
     }
     /**
-     * Sets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
+     * Sets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
@@ -253,7 +253,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         this.riskState = value;
     }
     /**
-     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      * @param value Value to set for the servicePrincipalType property.
      */
     public void setServicePrincipalType(@jakarta.annotation.Nullable final String value) {

@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SingleUser extends SubjectSet implements Parsable {
     /**
-     * The name of the user in Azure AD. Read only.
+     * The name of the user in Microsoft Entra ID. Read only.
      */
     private String description;
     /**
-     * The ID of the user in Azure AD.
+     * The ID of the user in Microsoft Entra ID.
      */
     private String userId;
     /**
@@ -34,7 +34,7 @@ public class SingleUser extends SubjectSet implements Parsable {
         return new SingleUser();
     }
     /**
-     * Gets the description property value. The name of the user in Azure AD. Read only.
+     * Gets the description property value. The name of the user in Microsoft Entra ID. Read only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SingleUser extends SubjectSet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the userId property value. The ID of the user in Azure AD.
+     * Gets the userId property value. The ID of the user in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class SingleUser extends SubjectSet implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the description property value. The name of the user in Azure AD. Read only.
+     * Sets the description property value. The name of the user in Microsoft Entra ID. Read only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the userId property value. The ID of the user in Azure AD.
+     * Sets the userId property value. The ID of the user in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

@@ -14,15 +14,15 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Primary domain name of an Azure AD tenant.
+     * Primary domain name of a Microsoft Entra tenant.
      */
     private String defaultDomainName;
     /**
-     * Display name of an Azure AD tenant.
+     * Display name of a Microsoft Entra tenant.
      */
     private String displayName;
     /**
-     * Name shown to users that sign in to an Azure AD tenant.
+     * Name shown to users that sign in to a Microsoft Entra tenant.
      */
     private String federationBrandName;
     /**
@@ -30,7 +30,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Unique identifier of an Azure AD tenant.
+     * Unique identifier of a Microsoft Entra tenant.
      */
     private String tenantId;
     /**
@@ -58,7 +58,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
+     * Gets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.defaultDomainName;
     }
     /**
-     * Gets the displayName property value. Display name of an Azure AD tenant.
+     * Gets the displayName property value. Display name of a Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.displayName;
     }
     /**
-     * Gets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
+     * Gets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. Unique identifier of an Azure AD tenant.
+     * Gets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -132,21 +132,21 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
+     * Sets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
         this.defaultDomainName = value;
     }
     /**
-     * Sets the displayName property value. Display name of an Azure AD tenant.
+     * Sets the displayName property value. Display name of a Microsoft Entra tenant.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
+     * Sets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @param value Value to set for the federationBrandName property.
      */
     public void setFederationBrandName(@jakarta.annotation.Nullable final String value) {
@@ -160,7 +160,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. Unique identifier of an Azure AD tenant.
+     * Sets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

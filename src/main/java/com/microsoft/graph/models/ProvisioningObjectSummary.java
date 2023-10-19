@@ -38,7 +38,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private java.util.List<ModifiedProperty> modifiedProperties;
     /**
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      */
     private ProvisioningAction provisioningAction;
     /**
@@ -70,7 +70,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private ProvisioningSystem targetSystem;
     /**
-     * Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      */
     private String tenantId;
     /**
@@ -171,7 +171,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.modifiedProperties;
     }
     /**
-     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @return a ProvisioningAction
      */
     @jakarta.annotation.Nullable
@@ -235,7 +235,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.targetSystem;
     }
     /**
-     * Gets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Gets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -316,7 +316,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.modifiedProperties = value;
     }
     /**
-     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      */
     public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {
@@ -372,7 +372,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.targetSystem = value;
     }
     /**
-     * Sets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Sets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      */
     private String odataType;
     /**
-     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      */
     private AdvancedConfigState state;
     /**
@@ -91,7 +91,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return this.odataType;
     }
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         this.odataType = value;
     }
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {

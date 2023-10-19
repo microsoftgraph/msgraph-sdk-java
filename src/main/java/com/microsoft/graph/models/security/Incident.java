@@ -75,7 +75,7 @@ public class Incident extends Entity implements Parsable {
      */
     private java.util.List<String> systemTags;
     /**
-     * The Azure Active Directory tenant in which the alert was created.
+     * The Microsoft Entra tenant in which the alert was created.
      */
     private String tenantId;
     /**
@@ -249,7 +249,7 @@ public class Incident extends Entity implements Parsable {
         return this.systemTags;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
+     * Gets the tenantId property value. The Microsoft Entra tenant in which the alert was created.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -394,7 +394,7 @@ public class Incident extends Entity implements Parsable {
         this.systemTags = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
+     * Sets the tenantId property value. The Microsoft Entra tenant in which the alert was created.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

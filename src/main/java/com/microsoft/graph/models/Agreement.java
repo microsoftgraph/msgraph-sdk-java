@@ -26,7 +26,7 @@ public class Agreement extends Entity implements Parsable {
      */
     private java.util.List<AgreementFileLocalization> files;
     /**
-     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      */
     private Boolean isPerDeviceAcceptanceRequired;
     /**
@@ -107,7 +107,7 @@ public class Agreement extends Entity implements Parsable {
         return this.files;
     }
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class Agreement extends Entity implements Parsable {
         this.files = value;
     }
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      */
     public void setIsPerDeviceAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {

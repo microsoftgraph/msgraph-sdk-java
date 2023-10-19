@@ -59,7 +59,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations/{agreementFileLocalization%2Did}/versions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @return a CompletableFuture of AgreementFileVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AgreementFileVersionCollectionResponse
      */
@@ -104,7 +104,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AgreementFileVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +175,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return new VersionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

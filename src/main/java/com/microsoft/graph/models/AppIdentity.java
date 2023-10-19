@@ -14,7 +14,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Refers to the unique ID representing application in Microsoft Entra ID.
      */
     private String appId;
     /**
@@ -26,7 +26,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Refers to the unique ID for the service principal in Microsoft Entra ID.
      */
     private String servicePrincipalId;
     /**
@@ -58,7 +58,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Gets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     * Sets the appId property value. Refers to the unique ID representing application in Microsoft Entra ID.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
@@ -153,7 +153,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the unique ID for the service principal in Microsoft Entra ID.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {

@@ -17,7 +17,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     private String metadataExchangeUri;
     /**
-     * URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
+     * URI that web-based clients are directed to when signing in to Microsoft Entra services.
      */
     private String passiveSignInUri;
     /**
@@ -25,7 +25,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     private AuthenticationProtocol preferredAuthenticationProtocol;
     /**
-     * Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
+     * Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Microsoft Entra ID updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Microsoft Entra ID monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      */
     private String signingCertificate;
     /**
@@ -84,7 +84,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         return this.metadataExchangeUri;
     }
     /**
-     * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
+     * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Microsoft Entra services.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         return this.preferredAuthenticationProtocol;
     }
     /**
-     * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
+     * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Microsoft Entra ID updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Microsoft Entra ID monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         this.metadataExchangeUri = value;
     }
     /**
-     * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
+     * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Microsoft Entra services.
      * @param value Value to set for the passiveSignInUri property.
      */
     public void setPassiveSignInUri(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         this.preferredAuthenticationProtocol = value;
     }
     /**
-     * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
+     * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Microsoft Entra ID updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Microsoft Entra ID monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      * @param value Value to set for the signingCertificate property.
      */
     public void setSigningCertificate(@jakarta.annotation.Nullable final String value) {

@@ -53,7 +53,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}/lastModifiedBy{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of User
      */
@@ -74,7 +74,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +82,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -113,7 +113,7 @@ public class LastModifiedByRequestBuilder extends BaseRequestBuilder {
         return new LastModifiedByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

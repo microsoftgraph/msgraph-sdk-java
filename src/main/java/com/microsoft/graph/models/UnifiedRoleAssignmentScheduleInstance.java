@@ -26,7 +26,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     private String memberType;
     /**
-     * The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
+     * The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
      */
     private String roleAssignmentOriginId;
     /**
@@ -102,7 +102,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this.memberType;
     }
     /**
-     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
+     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this.memberType = value;
     }
     /**
-     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
+     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
      * @param value Value to set for the roleAssignmentOriginId property.
      */
     public void setRoleAssignmentOriginId(@jakarta.annotation.Nullable final String value) {

@@ -59,7 +59,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/policies/roleManagementPolicyAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return new RoleManagementPolicyAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the details of all role management policy assignments made in PIM for Azure AD roles and PIM for groups. This API is available in the following national cloud deployments.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

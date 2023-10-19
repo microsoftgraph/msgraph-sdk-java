@@ -14,7 +14,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The Azure AD-generated password.
+     * The Microsoft Entra ID-generated password.
      */
     private String newPassword;
     /**
@@ -57,7 +57,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the newPassword property value. The Azure AD-generated password.
+     * Gets the newPassword property value. The Microsoft Entra ID-generated password.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the newPassword property value. The Azure AD-generated password.
+     * Sets the newPassword property value. The Microsoft Entra ID-generated password.
      * @param value Value to set for the newPassword property.
      */
     public void setNewPassword(@jakarta.annotation.Nullable final String value) {

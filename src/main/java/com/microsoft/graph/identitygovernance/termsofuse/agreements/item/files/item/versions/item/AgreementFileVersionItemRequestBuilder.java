@@ -56,7 +56,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AgreementFileVersion
      */
@@ -128,7 +128,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -17,7 +17,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      */
     private String policyId;
     /**
-     * For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      */
     private String roleDefinitionId;
     /**
@@ -75,7 +75,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this.policyId;
     }
     /**
-     * Gets the roleDefinitionId property value. For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this.policyId = value;
     }
     /**
-     * Sets the roleDefinitionId property value. For Azure AD roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {

@@ -111,7 +111,7 @@ public class Alert extends Entity implements Parsable {
      */
     private AlertStatus status;
     /**
-     * The Azure Active Directory tenant the alert was created in.
+     * The Microsoft Entra tenant the alert was created in.
      */
     private String tenantId;
     /**
@@ -381,7 +381,7 @@ public class Alert extends Entity implements Parsable {
         return this.status;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant the alert was created in.
+     * Gets the tenantId property value. The Microsoft Entra tenant the alert was created in.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -625,7 +625,7 @@ public class Alert extends Entity implements Parsable {
         this.status = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant the alert was created in.
+     * Sets the tenantId property value. The Microsoft Entra tenant the alert was created in.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

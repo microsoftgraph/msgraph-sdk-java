@@ -37,7 +37,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/executionScope/{userProcessingResult%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @return a CompletableFuture of UserProcessingResult
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserProcessingResult
      */
@@ -58,7 +58,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserProcessingResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

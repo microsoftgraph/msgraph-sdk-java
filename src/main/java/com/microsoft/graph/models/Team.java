@@ -110,7 +110,7 @@ public class Team extends Entity implements Parsable {
      */
     private TeamsTemplate template;
     /**
-     * The ID of the Azure Active Directory tenant.
+     * The ID of the Microsoft Entra tenant.
      */
     private String tenantId;
     /**
@@ -375,7 +375,7 @@ public class Team extends Entity implements Parsable {
         return this.template;
     }
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -610,7 +610,7 @@ public class Team extends Entity implements Parsable {
         this.template = value;
     }
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -14,7 +14,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      */
     private AuthenticationMethodsRoot authenticationMethods;
     /**
@@ -66,7 +66,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
+     * Gets the authenticationMethods property value. Container for navigation properties for Microsoft Entra authentication methods resources.
      * @return a AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
+     * Sets the authenticationMethods property value. Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param value Value to set for the authenticationMethods property.
      */
     public void setAuthenticationMethods(@jakarta.annotation.Nullable final AuthenticationMethodsRoot value) {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEvidence extends AlertEvidence implements Parsable {
     /**
-     * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      */
     private String azureAdDeviceId;
     /**
@@ -91,7 +91,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return new DeviceEvidence();
     }
     /**
-     * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -268,7 +268,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("vmMetadata", this.getVmMetadata());
     }
     /**
-     * Sets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     * Sets the azureAdDeviceId property value. A unique identifier assigned to a device by Microsoft Entra ID when device is Microsoft Entra joined.
      * @param value Value to set for the azureAdDeviceId property.
      */
     public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {

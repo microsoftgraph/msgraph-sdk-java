@@ -13,7 +13,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     private X509CertificateAuthenticationModeConfiguration authenticationModeConfiguration;
     /**
-     * Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      */
     private java.util.List<X509CertificateUserBinding> certificateUserBindings;
     /**
@@ -46,7 +46,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.authenticationModeConfiguration;
     }
     /**
-     * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @return a java.util.List<X509CertificateUserBinding>
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         this.authenticationModeConfiguration = value;
     }
     /**
-     * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @param value Value to set for the certificateUserBindings property.
      */
     public void setCertificateUserBindings(@jakarta.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {

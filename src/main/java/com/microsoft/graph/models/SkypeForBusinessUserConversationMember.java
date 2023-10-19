@@ -13,7 +13,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      */
     private String tenantId;
     /**
-     * Azure Active Directory ID of the user.
+     * Microsoft Entra ID of the user.
      */
     private String userId;
     /**
@@ -53,7 +53,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
         return this.tenantId;
     }
     /**
-     * Gets the userId property value. Azure Active Directory ID of the user.
+     * Gets the userId property value. Microsoft Entra ID of the user.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
         this.tenantId = value;
     }
     /**
-     * Sets the userId property value. Azure Active Directory ID of the user.
+     * Sets the userId property value. Microsoft Entra ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

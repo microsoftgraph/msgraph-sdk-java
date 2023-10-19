@@ -59,7 +59,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{approval%2Did}/stages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of ApprovalStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApprovalStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return new StagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Azure AD entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
+     * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

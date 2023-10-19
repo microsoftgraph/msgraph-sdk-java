@@ -56,7 +56,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
      */
@@ -128,7 +128,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Represents the risk history of Microsoft Entra service principals.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

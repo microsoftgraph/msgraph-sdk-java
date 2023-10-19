@@ -26,7 +26,7 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * This is the id property value of the user resource that represents the user in the Microsoft Entra tenant.
      */
     private String userId;
     /**
@@ -91,7 +91,7 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * Gets the userId property value. This is the id property value of the user resource that represents the user in the Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * Sets the userId property value. This is the id property value of the user resource that represents the user in the Microsoft Entra tenant.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
