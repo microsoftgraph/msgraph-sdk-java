@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.75.0] - 2023-10-20
+
+### Added 
+
+- AzureCommunicationServicesUserIdentity, CommunicationsApplicationIdentity, CommunicationsApplicationInstanceIdentity, CommunicationsEncryptedIdentity, CommunicationsGuestIdentity, CommunicationsIdentitySet, CommunicationsPhoneIdentity, and CommunicationsUserIdentity models.
+- PeopleAdminSettings model and derived request.
+- ProfileCardAnnotation and ProfileCardProperty models and derived requests.
+
+### Changed
+
+- Admin model and derived request.
+
 ## [5.74.0] - 2023-10-13
 
 ### Changed

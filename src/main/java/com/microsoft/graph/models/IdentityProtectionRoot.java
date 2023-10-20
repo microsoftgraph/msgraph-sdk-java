@@ -44,7 +44,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Risk Detections.
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      */
     @SerializedName(value = "riskDetections", alternate = {"RiskDetections"})
     @Expose
@@ -53,7 +53,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Risky Service Principals.
-     * Azure AD service principals that are at risk.
+     * Microsoft Entra service principals that are at risk.
      */
     @SerializedName(value = "riskyServicePrincipals", alternate = {"RiskyServicePrincipals"})
     @Expose
@@ -62,7 +62,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Risky Users.
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      */
     @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
@@ -71,7 +71,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Service Principal Risk Detections.
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      */
     @SerializedName(value = "servicePrincipalRiskDetections", alternate = {"ServicePrincipalRiskDetections"})
     @Expose

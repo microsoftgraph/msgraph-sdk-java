@@ -40,7 +40,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
 
     /**
      * The Certificate User Bindings.
-     * Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      */
     @SerializedName(value = "certificateUserBindings", alternate = {"CertificateUserBindings"})
     @Expose

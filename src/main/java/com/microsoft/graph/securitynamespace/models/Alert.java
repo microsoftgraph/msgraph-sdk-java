@@ -271,7 +271,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant the alert was created in.
+     * The Microsoft Entra tenant the alert was created in.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

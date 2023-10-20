@@ -169,7 +169,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant in which the alert was created.
+     * The Microsoft Entra tenant in which the alert was created.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

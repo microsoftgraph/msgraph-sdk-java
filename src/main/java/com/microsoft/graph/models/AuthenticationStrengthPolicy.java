@@ -77,7 +77,7 @@ public class AuthenticationStrengthPolicy extends Entity implements IJsonBackedO
 
     /**
      * The Policy Type.
-     * A descriptor of whether this policy is built into Azure AD or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
+     * A descriptor of whether this policy is built into Microsoft Entra ID or created by an admin for the tenant. The possible values are: builtIn, custom, unknownFutureValue. Supports $filter (eq, ne, not , and in).
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose

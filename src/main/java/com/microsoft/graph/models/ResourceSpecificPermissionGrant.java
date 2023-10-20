@@ -27,7 +27,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Client App Id.
-     * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      */
     @SerializedName(value = "clientAppId", alternate = {"ClientAppId"})
     @Expose
@@ -36,7 +36,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Client Id.
-     * ID of the Azure AD app that has been granted access. Read-only.
+     * ID of the Microsoft Entra app that has been granted access. Read-only.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -63,7 +63,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Resource App Id.
-     * ID of the Azure AD app that is hosting the resource. Read-only.
+     * ID of the Microsoft Entra app that is hosting the resource. Read-only.
      */
     @SerializedName(value = "resourceAppId", alternate = {"ResourceAppId"})
     @Expose

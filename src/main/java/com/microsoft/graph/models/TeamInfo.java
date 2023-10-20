@@ -37,7 +37,7 @@ public class TeamInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The ID of the Azure Active Directory tenant.
+     * The ID of the Microsoft Entra tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

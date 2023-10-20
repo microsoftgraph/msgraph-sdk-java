@@ -44,7 +44,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Schedule Instances.
-     * 
+     * The instances of assignment schedules to activate a just-in-time access.
      */
     @SerializedName(value = "assignmentScheduleInstances", alternate = {"AssignmentScheduleInstances"})
     @Expose
@@ -53,7 +53,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Schedule Requests.
-     * 
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      */
     @SerializedName(value = "assignmentScheduleRequests", alternate = {"AssignmentScheduleRequests"})
     @Expose
@@ -62,7 +62,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Schedules.
-     * 
+     * The assignment schedules to activate a just-in-time access.
      */
     @SerializedName(value = "assignmentSchedules", alternate = {"AssignmentSchedules"})
     @Expose
@@ -71,7 +71,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Eligibility Schedule Instances.
-     * 
+     * The instances of eligibility schedules to activate a just-in-time access.
      */
     @SerializedName(value = "eligibilityScheduleInstances", alternate = {"EligibilityScheduleInstances"})
     @Expose
@@ -80,7 +80,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Eligibility Schedule Requests.
-     * 
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      */
     @SerializedName(value = "eligibilityScheduleRequests", alternate = {"EligibilityScheduleRequests"})
     @Expose
@@ -89,7 +89,7 @@ public class PrivilegedAccessGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Eligibility Schedules.
-     * 
+     * The eligibility schedules to activate a just-in-time access.
      */
     @SerializedName(value = "eligibilitySchedules", alternate = {"EligibilitySchedules"})
     @Expose

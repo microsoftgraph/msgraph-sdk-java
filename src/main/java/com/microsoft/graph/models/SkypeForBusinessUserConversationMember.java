@@ -36,7 +36,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
 
     /**
      * The User Id.
-     * Azure Active Directory ID of the user.
+     * Microsoft Entra ID of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

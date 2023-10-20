@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.Edge;
 import com.microsoft.graph.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
+import com.microsoft.graph.models.PeopleAdminSettings;
 
 
 import com.google.gson.JsonObject;
@@ -66,6 +67,15 @@ public class Admin implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ServiceAnnouncement serviceAnnouncement;
+
+    /**
+     * The People.
+     * 
+     */
+    @SerializedName(value = "people", alternate = {"People"})
+    @Expose
+	@Nullable
+    public PeopleAdminSettings people;
 
 
     /**

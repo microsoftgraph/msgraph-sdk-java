@@ -27,7 +27,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements IJsonBac
 
     /**
      * The End Date Time.
-     * 
+     * When the schedule instance ends. Required.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements IJsonBac
 
     /**
      * The Start Date Time.
-     * 
+     * When this instance starts. Required.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

@@ -55,7 +55,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Role Assignment Origin Id.
-     * The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
+     * The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
      */
     @SerializedName(value = "roleAssignmentOriginId", alternate = {"RoleAssignmentOriginId"})
     @Expose

@@ -48,7 +48,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The Azure Ad User Id.
-     * The user object identifier in Azure Active Directory (Azure AD).
+     * The user object identifier in Microsoft Entra ID.
      */
     @SerializedName(value = "azureAdUserId", alternate = {"AzureAdUserId"})
     @Expose
@@ -57,7 +57,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The user display name in Azure AD.
+     * The user display name in Microsoft Entra ID.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -75,7 +75,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name of the account in Azure AD.
+     * The user principal name of the account in Microsoft Entra ID.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

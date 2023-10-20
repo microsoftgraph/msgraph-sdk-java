@@ -39,7 +39,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Capable.
-     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multifactor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaCapable", alternate = {"IsMfaCapable"})
     @Expose
@@ -48,7 +48,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Registered.
-     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multifactor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
@@ -138,7 +138,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Preferred Method For Secondary Authentication.
-     * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
+     * The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
      */
     @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
     @Expose

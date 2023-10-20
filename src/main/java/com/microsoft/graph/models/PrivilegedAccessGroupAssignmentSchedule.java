@@ -33,7 +33,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Access Id.
-     * 
+     * The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue. Supports $filter (eq).
      */
     @SerializedName(value = "accessId", alternate = {"AccessId"})
     @Expose
@@ -42,7 +42,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Assignment Type.
-     * 
+     * Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue. Supports $filter (eq).
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -51,7 +51,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Group Id.
-     * 
+     * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required. Supports $filter (eq).
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
@@ -60,7 +60,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Member Type.
-     * 
+     * Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue. Supports $filter (eq).
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -69,7 +69,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Principal Id.
-     * 
+     * The identifier of the principal whose membership or ownership assignment is granted through PIM for groups. Required. Supports $filter (eq).
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -78,7 +78,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Activated Using.
-     * 
+     * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose
@@ -87,7 +87,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Group.
-     * 
+     * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -96,7 +96,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Principal.
-     * 
+     * References the principal that's in the scope of this membership or ownership assignment request to the group that's governed by PIM. Supports $expand.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose

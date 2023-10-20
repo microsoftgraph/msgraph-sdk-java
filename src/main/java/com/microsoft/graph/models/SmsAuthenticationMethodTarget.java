@@ -27,7 +27,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
 
     /**
      * The Is Usable For Sign In.
-     * Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     * Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
      */
     @SerializedName(value = "isUsableForSignIn", alternate = {"IsUsableForSignIn"})
     @Expose

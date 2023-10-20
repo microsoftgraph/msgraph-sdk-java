@@ -60,7 +60,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Stage.
-     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: approval.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
