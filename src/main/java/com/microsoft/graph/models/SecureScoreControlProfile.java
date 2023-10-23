@@ -62,7 +62,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      */
     private String remediationImpact;
     /**
-     * Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      */
     private String service;
     /**
@@ -234,7 +234,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.remediationImpact;
     }
     /**
-     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Gets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -400,7 +400,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.remediationImpact = value;
     }
     /**
-     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
+     * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Microsoft Entra ID).
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {

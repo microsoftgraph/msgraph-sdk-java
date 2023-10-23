@@ -88,7 +88,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @return a CompletableFuture of Synchronization
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Synchronization
      */
@@ -160,7 +160,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +168,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -237,7 +237,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

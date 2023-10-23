@@ -74,7 +74,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users. This API is available in the following national cloud deployments.
+     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -83,7 +83,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users. This API is available in the following national cloud deployments.
+     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
@@ -150,7 +150,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users. This API is available in the following national cloud deployments.
+     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users. This API is available in the following national cloud deployments.
+     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +227,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users. This API is available in the following national cloud deployments.
+     * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

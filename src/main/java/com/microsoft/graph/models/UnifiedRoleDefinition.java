@@ -17,11 +17,11 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      */
     private java.util.List<UnifiedRoleDefinition> inheritsPermissionsFrom;
     /**
-     * Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      */
     private Boolean isBuiltIn;
     /**
@@ -95,7 +95,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @return a java.util.List<UnifiedRoleDefinition>
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return this.inheritsPermissionsFrom;
     }
     /**
-     * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -182,14 +182,14 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param value Value to set for the inheritsPermissionsFrom property.
      */
     public void setInheritsPermissionsFrom(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this.inheritsPermissionsFrom = value;
     }
     /**
-     * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {

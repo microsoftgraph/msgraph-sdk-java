@@ -82,7 +82,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @return a CompletableFuture of AuthenticationMethodsRoot
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationMethodsRoot
      */
@@ -154,7 +154,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -162,7 +162,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -255,7 +255,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -96,19 +96,19 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> get() {
         return get(null);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Presence
-     * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,7 +178,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +247,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a user's presence information. This API is available in the following national cloud deployments.
+     * Set a presence status message for a user. An optional expiration date and time can be supplied. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

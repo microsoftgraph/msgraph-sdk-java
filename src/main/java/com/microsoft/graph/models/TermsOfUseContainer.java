@@ -13,7 +13,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      */
     private java.util.List<AgreementAcceptance> agreementAcceptances;
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      */
     private java.util.List<Agreement> agreements;
     /**
@@ -41,7 +41,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
         return this.agreementAcceptances;
     }
     /**
-     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @return a java.util.List<Agreement>
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
         this.agreementAcceptances = value;
     }
     /**
-     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param value Value to set for the agreements property.
      */
     public void setAgreements(@jakarta.annotation.Nullable final java.util.List<Agreement> value) {

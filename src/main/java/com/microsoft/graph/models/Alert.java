@@ -26,7 +26,7 @@ public class Alert extends Entity implements Parsable {
      */
     private String azureSubscriptionId;
     /**
-     * Azure Active Directory tenant ID. Required.
+     * Microsoft Entra tenant ID. Required.
      */
     private String azureTenantId;
     /**
@@ -214,7 +214,7 @@ public class Alert extends Entity implements Parsable {
         return this.azureSubscriptionId;
     }
     /**
-     * Gets the azureTenantId property value. Azure Active Directory tenant ID. Required.
+     * Gets the azureTenantId property value. Microsoft Entra tenant ID. Required.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -617,7 +617,7 @@ public class Alert extends Entity implements Parsable {
         this.azureSubscriptionId = value;
     }
     /**
-     * Sets the azureTenantId property value. Azure Active Directory tenant ID. Required.
+     * Sets the azureTenantId property value. Microsoft Entra tenant ID. Required.
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {

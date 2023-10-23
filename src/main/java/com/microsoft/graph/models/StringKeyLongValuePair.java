@@ -14,7 +14,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
+     * The mapping of the user type from the source system to the target system. For example:User to User - For Microsoft Entra ID to Microsoft Entra ID synchronization worker to user - For Workday to Microsoft Entra synchronization.
      */
     private String key;
     /**
@@ -62,7 +62,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
+     * Gets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Microsoft Entra ID to Microsoft Entra ID synchronization worker to user - For Workday to Microsoft Entra synchronization.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
+     * Sets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Microsoft Entra ID to Microsoft Entra ID synchronization worker to user - For Workday to Microsoft Entra synchronization.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {

@@ -25,15 +25,15 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     private AuthenticationFlowsPolicy authenticationFlowsPolicy;
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      */
     private AuthenticationMethodsPolicy authenticationMethodsPolicy;
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      */
     private java.util.List<AuthenticationStrengthPolicy> authenticationStrengthPolicies;
     /**
-     * The policy that controls Azure AD authorization settings.
+     * The policy that controls Microsoft Entra authorization settings.
      */
     private AuthorizationPolicy authorizationPolicy;
     /**
@@ -45,7 +45,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     private java.util.List<ConditionalAccessPolicy> conditionalAccessPolicies;
     /**
-     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      */
     private CrossTenantAccessPolicy crossTenantAccessPolicy;
     /**
@@ -57,7 +57,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * The policy to control Microsoft Entra authentication behavior for federated users.
      */
     private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
     /**
@@ -77,11 +77,11 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     private java.util.List<UnifiedRoleManagementPolicyAssignment> roleManagementPolicyAssignments;
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      */
     private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      */
     private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /**
@@ -133,7 +133,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationFlowsPolicy;
     }
     /**
-     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @return a AuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationMethodsPolicy;
     }
     /**
-     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @return a java.util.List<AuthenticationStrengthPolicy>
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.authenticationStrengthPolicies;
     }
     /**
-     * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
+     * Gets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @return a AuthorizationPolicy
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.conditionalAccessPolicies;
     }
     /**
-     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @return a CrossTenantAccessPolicy
      */
     @jakarta.annotation.Nullable
@@ -225,7 +225,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
+     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @return a java.util.List<HomeRealmDiscoveryPolicy>
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.roleManagementPolicyAssignments;
     }
     /**
-     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @return a java.util.List<TokenIssuancePolicy>
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.tokenIssuancePolicies;
     }
     /**
-     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @return a java.util.List<TokenLifetimePolicy>
      */
     @jakarta.annotation.Nullable
@@ -336,21 +336,21 @@ public class PolicyRoot extends Entity implements Parsable {
         this.authenticationFlowsPolicy = value;
     }
     /**
-     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @param value Value to set for the authenticationMethodsPolicy property.
      */
     public void setAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this.authenticationMethodsPolicy = value;
     }
     /**
-     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param value Value to set for the authenticationStrengthPolicies property.
      */
     public void setAuthenticationStrengthPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
         this.authenticationStrengthPolicies = value;
     }
     /**
-     * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
+     * Sets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @param value Value to set for the authorizationPolicy property.
      */
     public void setAuthorizationPolicy(@jakarta.annotation.Nullable final AuthorizationPolicy value) {
@@ -371,7 +371,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.conditionalAccessPolicies = value;
     }
     /**
-     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @param value Value to set for the crossTenantAccessPolicy property.
      */
     public void setCrossTenantAccessPolicy(@jakarta.annotation.Nullable final CrossTenantAccessPolicy value) {
@@ -392,7 +392,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.featureRolloutPolicies = value;
     }
     /**
-     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
+     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      */
     public void setHomeRealmDiscoveryPolicies(@jakarta.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
@@ -427,14 +427,14 @@ public class PolicyRoot extends Entity implements Parsable {
         this.roleManagementPolicyAssignments = value;
     }
     /**
-     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param value Value to set for the tokenIssuancePolicies property.
      */
     public void setTokenIssuancePolicies(@jakarta.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this.tokenIssuancePolicies = value;
     }
     /**
-     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param value Value to set for the tokenLifetimePolicies property.
      */
     public void setTokenLifetimePolicies(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {

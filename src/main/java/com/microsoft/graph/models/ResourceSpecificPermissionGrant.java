@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
     /**
-     * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      */
     private String clientAppId;
     /**
-     * ID of the Azure AD app that has been granted access. Read-only.
+     * ID of the Microsoft Entra app that has been granted access. Read-only.
      */
     private String clientId;
     /**
@@ -25,7 +25,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     private String permissionType;
     /**
-     * ID of the Azure AD app that is hosting the resource. Read-only.
+     * ID of the Microsoft Entra app that is hosting the resource. Read-only.
      */
     private String resourceAppId;
     /**
@@ -46,7 +46,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         return new ResourceSpecificPermissionGrant();
     }
     /**
-     * Gets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * Gets the clientAppId property value. ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         return this.clientAppId;
     }
     /**
-     * Gets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
+     * Gets the clientId property value. ID of the Microsoft Entra app that has been granted access. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         return this.permissionType;
     }
     /**
-     * Gets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
+     * Gets the resourceAppId property value. ID of the Microsoft Entra app that is hosting the resource. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -113,14 +113,14 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         writer.writeStringValue("resourceAppId", this.getResourceAppId());
     }
     /**
-     * Sets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     * Sets the clientAppId property value. ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
      * @param value Value to set for the clientAppId property.
      */
     public void setClientAppId(@jakarta.annotation.Nullable final String value) {
         this.clientAppId = value;
     }
     /**
-     * Sets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
+     * Sets the clientId property value. ID of the Microsoft Entra app that has been granted access. Read-only.
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
@@ -141,7 +141,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         this.permissionType = value;
     }
     /**
-     * Sets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
+     * Sets the resourceAppId property value. ID of the Microsoft Entra app that is hosting the resource. Read-only.
      * @param value Value to set for the resourceAppId property.
      */
     public void setResourceAppId(@jakarta.annotation.Nullable final String value) {

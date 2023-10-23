@@ -77,7 +77,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     private String customTermsOfUseUrl;
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      */
     private byte[] favicon;
     /**
@@ -289,7 +289,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.customTermsOfUseUrl;
     }
     /**
-     * Gets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * Gets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @return a byte[]
      */
     @jakarta.annotation.Nullable
@@ -589,7 +589,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.customTermsOfUseUrl = value;
     }
     /**
-     * Sets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * Sets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param value Value to set for the favicon property.
      */
     public void setFavicon(@jakarta.annotation.Nullable final byte[] value) {

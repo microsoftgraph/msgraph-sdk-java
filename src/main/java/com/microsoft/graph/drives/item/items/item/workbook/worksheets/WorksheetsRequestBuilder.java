@@ -69,7 +69,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of worksheet objects. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get() {
@@ -79,7 +79,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of worksheet objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

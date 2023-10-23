@@ -36,7 +36,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}/favicon", rawUrl);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @return a CompletableFuture of InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -68,7 +68,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -83,7 +83,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
+     * A custom icon (favicon) to replace a default Microsoft product favicon on a Microsoft Entra tenant.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

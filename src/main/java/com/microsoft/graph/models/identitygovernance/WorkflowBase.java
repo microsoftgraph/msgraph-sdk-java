@@ -48,7 +48,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      */
     private Boolean isSchedulingEnabled;
     /**
-     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow.
      */
     private User lastModifiedBy;
     /**
@@ -181,7 +181,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this.isSchedulingEnabled;
     }
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @return a User
      */
     @jakarta.annotation.Nullable
@@ -296,7 +296,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this.isSchedulingEnabled = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the Azure Active Directory identity that last modified the workflow.
+     * Sets the lastModifiedBy property value. The unique identifier of the Microsoft Entra identity that last modified the workflow.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {

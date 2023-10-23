@@ -14,7 +14,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      */
     private Map<String, Object> additionalData;
     /**
-     * The object identifier of an Azure Active Directory user or group.
+     * The object identifier of a Microsoft Entra user or group.
      */
     private String id;
     /**
@@ -67,7 +67,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Gets the id property value. The object identifier of a Microsoft Entra user or group.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
         this.additionalData = value;
     }
     /**
-     * Sets the id property value. The object identifier of an Azure Active Directory user or group.
+     * Sets the id property value. The object identifier of a Microsoft Entra user or group.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

@@ -90,21 +90,21 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ChatMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of ChatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
+     * Send a new reply to a chatMessage in a specified channel. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

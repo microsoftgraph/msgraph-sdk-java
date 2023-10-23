@@ -59,7 +59,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/scopedRoleMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
+     * List Microsoft Entra role assignments with administrative unit scope. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
+     * List Microsoft Entra role assignments with administrative unit scope. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
@@ -82,7 +82,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope. This API is available in the following national cloud deployments.
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of ScopedRoleMembership
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
@@ -92,7 +92,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope. This API is available in the following national cloud deployments.
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ScopedRoleMembership
@@ -108,7 +108,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembership::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
+     * List Microsoft Entra role assignments with administrative unit scope. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
+     * List Microsoft Entra role assignments with administrative unit scope. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope. This API is available in the following national cloud deployments.
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope. This API is available in the following national cloud deployments.
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return new ScopedRoleMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List Azure Active Directory (Azure AD) role assignments with administrative unit scope. This API is available in the following national cloud deployments.
+     * List Microsoft Entra role assignments with administrative unit scope. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

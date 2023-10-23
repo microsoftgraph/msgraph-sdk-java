@@ -50,6 +50,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.chatMessageFromIdentitySet": return new ChatMessageFromIdentitySet();
                 case "#microsoft.graph.chatMessageMentionedIdentitySet": return new ChatMessageMentionedIdentitySet();
                 case "#microsoft.graph.chatMessageReactionIdentitySet": return new ChatMessageReactionIdentitySet();
+                case "#microsoft.graph.communicationsIdentitySet": return new CommunicationsIdentitySet();
                 case "#microsoft.graph.sharePointIdentitySet": return new SharePointIdentitySet();
             }
         }

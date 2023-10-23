@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable {
     /**
-     * If set to true, Azure Active Directory security defaults are enabled for the tenant.
+     * If set to true, Microsoft Entra security defaults are enabled for the tenant.
      */
     private Boolean isEnabled;
     /**
@@ -40,7 +40,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. If set to true, Azure Active Directory security defaults are enabled for the tenant.
+     * Gets the isEnabled property value. If set to true, Microsoft Entra security defaults are enabled for the tenant.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
     }
     /**
-     * Sets the isEnabled property value. If set to true, Azure Active Directory security defaults are enabled for the tenant.
+     * Sets the isEnabled property value. If set to true, Microsoft Entra security defaults are enabled for the tenant.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

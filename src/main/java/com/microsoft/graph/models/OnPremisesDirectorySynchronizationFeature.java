@@ -22,7 +22,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     private Boolean blockSoftMatchEnabled;
     /**
-     * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+     * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
      */
     private Boolean bypassDirSyncOverridesEnabled;
     /**
@@ -42,7 +42,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     private Boolean deviceWritebackEnabled;
     /**
-     * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+     * Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
      */
     private Boolean directoryExtensionsEnabled;
     /**
@@ -62,7 +62,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     private Boolean passwordSyncEnabled;
     /**
-     * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+     * Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
      */
     private Boolean passwordWritebackEnabled;
     /**
@@ -134,7 +134,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return this.blockSoftMatchEnabled;
     }
     /**
-     * Gets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+     * Gets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return this.deviceWritebackEnabled;
     }
     /**
-     * Gets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+     * Gets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return this.passwordSyncEnabled;
     }
     /**
-     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -356,7 +356,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         this.blockSoftMatchEnabled = value;
     }
     /**
-     * Sets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
+     * Sets the bypassDirSyncOverridesEnabled property value. When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Microsoft Entra ID.
      * @param value Value to set for the bypassDirSyncOverridesEnabled property.
      */
     public void setBypassDirSyncOverridesEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -391,7 +391,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         this.deviceWritebackEnabled = value;
     }
     /**
-     * Sets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
+     * Sets the directoryExtensionsEnabled property value. Used to indicate that directory extensions are being synced from on-premises AD to Microsoft Entra ID.
      * @param value Value to set for the directoryExtensionsEnabled property.
      */
     public void setDirectoryExtensionsEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -426,7 +426,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         this.passwordSyncEnabled = value;
     }
     /**
-     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
+     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
      * @param value Value to set for the passwordWritebackEnabled property.
      */
     public void setPasswordWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {

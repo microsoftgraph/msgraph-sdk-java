@@ -18,11 +18,11 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The user object identifier in Azure Active Directory (Azure AD).
+     * The user object identifier in Microsoft Entra ID.
      */
     private String azureAdUserId;
     /**
-     * The user display name in Azure AD.
+     * The user display name in Microsoft Entra ID.
      */
     private String displayName;
     /**
@@ -34,7 +34,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The user principal name of the account in Azure AD.
+     * The user principal name of the account in Microsoft Entra ID.
      */
     private String userPrincipalName;
     /**
@@ -74,7 +74,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
+     * Gets the azureAdUserId property value. The user object identifier in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this.azureAdUserId;
     }
     /**
-     * Gets the displayName property value. The user display name in Azure AD.
+     * Gets the displayName property value. The user display name in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name of the account in Azure AD.
+     * Gets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -167,14 +167,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
+     * Sets the azureAdUserId property value. The user object identifier in Microsoft Entra ID.
      * @param value Value to set for the azureAdUserId property.
      */
     public void setAzureAdUserId(@jakarta.annotation.Nullable final String value) {
         this.azureAdUserId = value;
     }
     /**
-     * Sets the displayName property value. The user display name in Azure AD.
+     * Sets the displayName property value. The user display name in Microsoft Entra ID.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -195,7 +195,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name of the account in Azure AD.
+     * Sets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

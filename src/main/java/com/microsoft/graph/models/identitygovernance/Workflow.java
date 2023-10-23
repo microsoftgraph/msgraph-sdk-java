@@ -14,7 +14,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     private OffsetDateTime deletedDateTime;
     /**
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      */
     private java.util.List<UserProcessingResult> executionScope;
     /**
@@ -71,7 +71,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.deletedDateTime;
     }
     /**
-     * Gets the executionScope property value. The unique identifier of the Azure AD identity that last modified the workflow object.
+     * Gets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @return a java.util.List<UserProcessingResult>
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         this.deletedDateTime = value;
     }
     /**
-     * Sets the executionScope property value. The unique identifier of the Azure AD identity that last modified the workflow object.
+     * Sets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param value Value to set for the executionScope property.
      */
     public void setExecutionScope(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {

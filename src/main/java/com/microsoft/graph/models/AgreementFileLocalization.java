@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      */
     private java.util.List<AgreementFileVersion> versions;
     /**
@@ -39,7 +39,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
         return deserializerMap;
     }
     /**
-     * Gets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Gets the versions property value. Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @return a java.util.List<AgreementFileVersion>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
     /**
-     * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<AgreementFileVersion> value) {

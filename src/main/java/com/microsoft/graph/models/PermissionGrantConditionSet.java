@@ -21,7 +21,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     private Boolean clientApplicationsFromVerifiedPublisherOnly;
     /**
-     * A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      */
     private java.util.List<String> clientApplicationTenantIds;
     /**
@@ -81,7 +81,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.clientApplicationsFromVerifiedPublisherOnly;
     }
     /**
-     * Gets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * Gets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         this.clientApplicationsFromVerifiedPublisherOnly = value;
     }
     /**
-     * Sets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
+     * Sets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @param value Value to set for the clientApplicationTenantIds property.
      */
     public void setClientApplicationTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
