@@ -162,6 +162,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private String preferredTokenSigningKeyThumbprint;
     /**
+     * The remoteDesktopSecurityConfiguration property
+     */
+    private RemoteDesktopSecurityConfiguration remoteDesktopSecurityConfiguration;
+    /**
      * The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
      */
     private java.util.List<String> replyUrls;
@@ -451,6 +455,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("passwordCredentials", (n) -> { this.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("preferredSingleSignOnMode", (n) -> { this.setPreferredSingleSignOnMode(n.getStringValue()); });
         deserializerMap.put("preferredTokenSigningKeyThumbprint", (n) -> { this.setPreferredTokenSigningKeyThumbprint(n.getStringValue()); });
+        deserializerMap.put("remoteDesktopSecurityConfiguration", (n) -> { this.setRemoteDesktopSecurityConfiguration(n.getObjectValue(RemoteDesktopSecurityConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("replyUrls", (n) -> { this.setReplyUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("resourceSpecificApplicationPermissions", (n) -> { this.setResourceSpecificApplicationPermissions(n.getCollectionOfObjectValues(ResourceSpecificPermission::createFromDiscriminatorValue)); });
         deserializerMap.put("samlSingleSignOnSettings", (n) -> { this.setSamlSingleSignOnSettings(n.getObjectValue(SamlSingleSignOnSettings::createFromDiscriminatorValue)); });
@@ -593,6 +598,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getPreferredTokenSigningKeyThumbprint() {
         return this.preferredTokenSigningKeyThumbprint;
+    }
+    /**
+     * Gets the remoteDesktopSecurityConfiguration property value. The remoteDesktopSecurityConfiguration property
+     * @return a RemoteDesktopSecurityConfiguration
+     */
+    @jakarta.annotation.Nullable
+    public RemoteDesktopSecurityConfiguration getRemoteDesktopSecurityConfiguration() {
+        return this.remoteDesktopSecurityConfiguration;
     }
     /**
      * Gets the replyUrls property value. The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
@@ -743,6 +756,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("passwordCredentials", this.getPasswordCredentials());
         writer.writeStringValue("preferredSingleSignOnMode", this.getPreferredSingleSignOnMode());
         writer.writeStringValue("preferredTokenSigningKeyThumbprint", this.getPreferredTokenSigningKeyThumbprint());
+        writer.writeObjectValue("remoteDesktopSecurityConfiguration", this.getRemoteDesktopSecurityConfiguration());
         writer.writeCollectionOfPrimitiveValues("replyUrls", this.getReplyUrls());
         writer.writeCollectionOfObjectValues("resourceSpecificApplicationPermissions", this.getResourceSpecificApplicationPermissions());
         writer.writeObjectValue("samlSingleSignOnSettings", this.getSamlSingleSignOnSettings());
@@ -1022,6 +1036,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setPreferredTokenSigningKeyThumbprint(@jakarta.annotation.Nullable final String value) {
         this.preferredTokenSigningKeyThumbprint = value;
+    }
+    /**
+     * Sets the remoteDesktopSecurityConfiguration property value. The remoteDesktopSecurityConfiguration property
+     * @param value Value to set for the remoteDesktopSecurityConfiguration property.
+     */
+    public void setRemoteDesktopSecurityConfiguration(@jakarta.annotation.Nullable final RemoteDesktopSecurityConfiguration value) {
+        this.remoteDesktopSecurityConfiguration = value;
     }
     /**
      * Sets the replyUrls property value. The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.

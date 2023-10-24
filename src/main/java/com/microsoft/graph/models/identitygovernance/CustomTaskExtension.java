@@ -17,7 +17,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     private CustomExtensionCallbackConfiguration callbackConfiguration;
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      */
     private User createdBy;
     /**
@@ -25,7 +25,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      */
     private User lastModifiedBy;
     /**
@@ -58,7 +58,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this.callbackConfiguration;
     }
     /**
-     * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * Gets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @return a User
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * Gets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @return a User
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this.callbackConfiguration = value;
     }
     /**
-     * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * Sets the createdBy property value. The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
@@ -138,7 +138,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         this.createdDateTime = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * Sets the lastModifiedBy property value. The unique identifier of the Microsoft Entra user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {

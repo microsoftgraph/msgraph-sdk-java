@@ -16,7 +16,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
+     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      */
     private PstnCallDurationSource callDurationSource;
     /**
@@ -32,7 +32,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String callId;
     /**
-     * Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     * Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
      */
     private String callType;
     /**
@@ -52,7 +52,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String currency;
     /**
-     * Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     * Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
      */
     private String destinationContext;
     /**
@@ -84,7 +84,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
      */
     private String operator;
     /**
@@ -104,11 +104,11 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     private String userId;
     /**
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
      */
     private String userPrincipalName;
     /**
@@ -136,7 +136,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
+     * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      * @return a PstnCallDurationSource
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.callId;
     }
     /**
-     * Gets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     * Gets the callType property value. Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.currency;
     }
     /**
-     * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -305,7 +305,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -345,7 +345,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Gets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -353,7 +353,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -400,7 +400,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
+     * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      * @param value Value to set for the callDurationSource property.
      */
     public void setCallDurationSource(@jakarta.annotation.Nullable final PstnCallDurationSource value) {
@@ -428,7 +428,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.callId = value;
     }
     /**
-     * Sets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     * Sets the callType property value. Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
      * @param value Value to set for the callType property.
      */
     public void setCallType(@jakarta.annotation.Nullable final String value) {
@@ -463,7 +463,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.currency = value;
     }
     /**
-     * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
@@ -519,7 +519,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {
@@ -554,14 +554,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Sets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

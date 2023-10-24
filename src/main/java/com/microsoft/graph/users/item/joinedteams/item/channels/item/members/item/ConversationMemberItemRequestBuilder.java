@@ -37,17 +37,17 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conversationMember from a channel. This API is available in the following national cloud deployments.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,6 +131,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -159,7 +160,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -190,7 +191,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

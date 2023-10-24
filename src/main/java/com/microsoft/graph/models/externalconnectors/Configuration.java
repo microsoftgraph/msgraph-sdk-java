@@ -14,7 +14,7 @@ public class Configuration implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      */
     private java.util.List<String> authorizedAppIds;
     /**
@@ -46,7 +46,7 @@ public class Configuration implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the authorizedAppIds property value. A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Gets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class Configuration implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the authorizedAppIds property value. A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Sets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      * @param value Value to set for the authorizedAppIds property.
      */
     public void setAuthorizedAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

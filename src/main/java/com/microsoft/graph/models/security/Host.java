@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
     private java.util.List<HostPair> childHostPairs;
     /**
@@ -91,7 +91,7 @@ public class Host extends Artifact implements Parsable {
         return new Host();
     }
     /**
-     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Host extends Artifact implements Parsable {
         writer.writeObjectValue("whois", this.getWhois());
     }
     /**
-     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param value Value to set for the childHostPairs property.
      */
     public void setChildHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {

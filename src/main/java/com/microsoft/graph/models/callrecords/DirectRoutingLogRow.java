@@ -15,15 +15,15 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Number of the user or bot who received the call. E.164 format, but might include other data.
      */
     private String calleeNumber;
     /**
-     * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      */
     private Integer callEndSubReason;
     /**
-     * Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Number of the user or bot who made the call. E.164 format, but might include other data.
      */
     private String callerNumber;
     /**
@@ -47,7 +47,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime failureDateTime;
     /**
-     * The code with which the call ended, see RFC 3261.
+     * The code with which the call ended. For more information, see RFC 3261.
      */
     private Integer finalSipCode;
     /**
@@ -63,11 +63,11 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime inviteDateTime;
     /**
-     * Indicates if the trunk was enabled for media bypass or not.
+     * Indicates whether the trunk was enabled for media bypass.
      */
     private Boolean mediaBypassEnabled;
     /**
-     * The datacenter used for media path in nonbypass call.
+     * The datacenter used for media path in a nonbypass call.
      */
     private String mediaPathLocation;
     /**
@@ -79,7 +79,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String signalingLocation;
     /**
-     * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      */
     private OffsetDateTime startDateTime;
     /**
@@ -95,11 +95,11 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      */
     private String userId;
     /**
-     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      */
     private String userPrincipalName;
     /**
@@ -127,7 +127,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Gets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.calleeNumber;
     }
     /**
-     * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.callEndSubReason;
     }
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Gets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the finalSipCode property value. The code with which the call ended, see RFC 3261.
+     * Gets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -254,7 +254,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.inviteDateTime;
     }
     /**
-     * Gets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
+     * Gets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.mediaBypassEnabled;
     }
     /**
-     * Gets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
+     * Gets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -286,7 +286,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.signalingLocation;
     }
     /**
-     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -318,7 +318,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Gets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -326,7 +326,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -371,21 +371,21 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but might include other data.
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
         this.calleeNumber = value;
     }
     /**
-     * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      * @param value Value to set for the callEndSubReason property.
      */
     public void setCallEndSubReason(@jakarta.annotation.Nullable final Integer value) {
         this.callEndSubReason = value;
     }
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but might include other data.
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
@@ -427,7 +427,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.failureDateTime = value;
     }
     /**
-     * Sets the finalSipCode property value. The code with which the call ended, see RFC 3261.
+     * Sets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
      * @param value Value to set for the finalSipCode property.
      */
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
@@ -455,14 +455,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.inviteDateTime = value;
     }
     /**
-     * Sets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
+     * Sets the mediaBypassEnabled property value. Indicates whether the trunk was enabled for media bypass.
      * @param value Value to set for the mediaBypassEnabled property.
      */
     public void setMediaBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.mediaBypassEnabled = value;
     }
     /**
-     * Sets the mediaPathLocation property value. The datacenter used for media path in nonbypass call.
+     * Sets the mediaPathLocation property value. The datacenter used for media path in a nonbypass call.
      * @param value Value to set for the mediaPathLocation property.
      */
     public void setMediaPathLocation(@jakarta.annotation.Nullable final String value) {
@@ -483,7 +483,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.signalingLocation = value;
     }
     /**
-     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -511,14 +511,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Sets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

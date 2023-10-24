@@ -505,7 +505,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mstunnel-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
@@ -515,7 +515,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mstunnel-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -539,7 +539,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
@@ -550,7 +550,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -587,7 +587,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -618,7 +618,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

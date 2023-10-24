@@ -23,7 +23,12 @@ public enum DetectionSource implements ValuedEnum {
     AppGovernancePolicy("appGovernancePolicy"),
     AppGovernanceDetection("appGovernanceDetection"),
     UnknownFutureValue("unknownFutureValue"),
-    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud"),
+    NrtAlerts("nrtAlerts"),
+    ScheduledAlerts("scheduledAlerts"),
+    MicrosoftDefenderThreatIntelligenceAnalytics("microsoftDefenderThreatIntelligenceAnalytics"),
+    BuiltInMl("builtInMl"),
+    MicrosoftSentinel("microsoftSentinel");
     public final String value;
     DetectionSource(final String value) {
         this.value = value;
@@ -53,6 +58,11 @@ public enum DetectionSource implements ValuedEnum {
             case "appGovernanceDetection": return AppGovernanceDetection;
             case "unknownFutureValue": return UnknownFutureValue;
             case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
+            case "nrtAlerts": return NrtAlerts;
+            case "scheduledAlerts": return ScheduledAlerts;
+            case "microsoftDefenderThreatIntelligenceAnalytics": return MicrosoftDefenderThreatIntelligenceAnalytics;
+            case "builtInMl": return BuiltInMl;
+            case "microsoftSentinel": return MicrosoftSentinel;
             default: return null;
         }
     }
