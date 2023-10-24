@@ -46,7 +46,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Is Synced From On Premises.
-     * Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      */
     @SerializedName(value = "isSyncedFromOnPremises", alternate = {"IsSyncedFromOnPremises"})
     @Expose

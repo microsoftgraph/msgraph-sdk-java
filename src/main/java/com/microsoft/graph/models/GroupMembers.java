@@ -27,7 +27,7 @@ public class GroupMembers extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The name of the group in Azure AD. Read only.
+     * The name of the group in Microsoft Entra ID. Read only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class GroupMembers extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The Group Id.
-     * The ID of the group in Azure AD.
+     * The ID of the group in Microsoft Entra ID.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose

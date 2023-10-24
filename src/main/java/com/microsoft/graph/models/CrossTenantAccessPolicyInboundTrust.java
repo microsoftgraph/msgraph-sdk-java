@@ -39,7 +39,7 @@ public class CrossTenantAccessPolicyInboundTrust implements IJsonBackedObject {
 
     /**
      * The Is Compliant Device Accepted.
-     * Specifies whether compliant devices from external Azure AD organizations are trusted.
+     * Specifies whether compliant devices from external Microsoft Entra organizations are trusted.
      */
     @SerializedName(value = "isCompliantDeviceAccepted", alternate = {"IsCompliantDeviceAccepted"})
     @Expose
@@ -48,7 +48,7 @@ public class CrossTenantAccessPolicyInboundTrust implements IJsonBackedObject {
 
     /**
      * The Is Hybrid Azure ADJoined Device Accepted.
-     * Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
+     * Specifies whether Microsoft Entra hybrid joined devices from external Microsoft Entra organizations are trusted.
      */
     @SerializedName(value = "isHybridAzureADJoinedDeviceAccepted", alternate = {"IsHybridAzureADJoinedDeviceAccepted"})
     @Expose
@@ -57,7 +57,7 @@ public class CrossTenantAccessPolicyInboundTrust implements IJsonBackedObject {
 
     /**
      * The Is Mfa Accepted.
-     * Specifies whether MFA from external Azure AD organizations is trusted.
+     * Specifies whether MFA from external Microsoft Entra organizations is trusted.
      */
     @SerializedName(value = "isMfaAccepted", alternate = {"IsMfaAccepted"})
     @Expose

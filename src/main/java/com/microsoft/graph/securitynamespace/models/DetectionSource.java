@@ -88,6 +88,26 @@ public enum DetectionSource
     */
     MICROSOFT_DEFENDER_FOR_CLOUD,
     /**
+    * nrt Alerts
+    */
+    NRT_ALERTS,
+    /**
+    * scheduled Alerts
+    */
+    SCHEDULED_ALERTS,
+    /**
+    * microsoft Defender Threat Intelligence Analytics
+    */
+    MICROSOFT_DEFENDER_THREAT_INTELLIGENCE_ANALYTICS,
+    /**
+    * built In Ml
+    */
+    BUILT_IN_ML,
+    /**
+    * microsoft Sentinel
+    */
+    MICROSOFT_SENTINEL,
+    /**
     * For DetectionSource values that were not expected from the service
     */
     UNEXPECTED_VALUE

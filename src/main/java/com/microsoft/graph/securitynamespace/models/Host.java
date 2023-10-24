@@ -53,7 +53,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Child Host Pairs.
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.HostPairCollectionPage childHostPairs;

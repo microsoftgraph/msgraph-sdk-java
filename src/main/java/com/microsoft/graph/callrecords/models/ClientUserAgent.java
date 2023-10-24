@@ -29,7 +29,7 @@ public class ClientUserAgent extends UserAgent implements IJsonBackedObject {
 
     /**
      * The Azure ADApp Id.
-     * The unique identifier of the Azure AD application used by this endpoint.
+     * The unique identifier of the Microsoft Entra application used by this endpoint.
      */
     @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
     @Expose
