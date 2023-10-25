@@ -39,7 +39,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * Number of the user or bot who received the call. E.164 format, but may include other data.
+     * Number of the user or bot who received the call. E.164 format, but might include other data.
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -48,7 +48,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Call End Sub Reason.
-     * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     * In addition to the SIP codes, Microsoft has subcodes that indicate the specific issue.
      */
     @SerializedName(value = "callEndSubReason", alternate = {"CallEndSubReason"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * Number of the user or bot who made the call. E.164 format, but may include other data.
+     * Number of the user or bot who made the call. E.164 format, but might include other data.
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -111,7 +111,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Final Sip Code.
-     * The code with which the call ended, see RFC 3261.
+     * The code with which the call ended. For more information, see RFC 3261.
      */
     @SerializedName(value = "finalSipCode", alternate = {"FinalSipCode"})
     @Expose
@@ -147,7 +147,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Bypass Enabled.
-     * Indicates if the trunk was enabled for media bypass or not.
+     * Indicates whether the trunk was enabled for media bypass.
      */
     @SerializedName(value = "mediaBypassEnabled", alternate = {"MediaBypassEnabled"})
     @Expose
@@ -156,7 +156,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Path Location.
-     * The datacenter used for media path in nonbypass call.
+     * The datacenter used for media path in a nonbypass call.
      */
     @SerializedName(value = "mediaPathLocation", alternate = {"MediaPathLocation"})
     @Expose
@@ -174,7 +174,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -210,7 +210,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -219,7 +219,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

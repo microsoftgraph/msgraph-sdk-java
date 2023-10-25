@@ -196,6 +196,26 @@ public class IpAddressRequestBuilder extends BaseRequestBuilder<IpAddress> {
     public com.microsoft.graph.security.requests.PassiveDnsRecordWithReferenceRequestBuilder passiveDnsReverse(@Nonnull final String id) {
         return new com.microsoft.graph.security.requests.PassiveDnsRecordWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("passiveDnsReverse") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the HostPort collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPortCollectionWithReferencesRequestBuilder ports() {
+        return new com.microsoft.graph.security.requests.HostPortCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ports"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostPort item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPortWithReferenceRequestBuilder ports(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostPortWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ports") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for HostReputation

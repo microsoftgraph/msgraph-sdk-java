@@ -14,6 +14,7 @@ import com.microsoft.graph.security.models.WhoisRecord;
 import com.microsoft.graph.security.models.Artifact;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
+import com.microsoft.graph.security.requests.HostPortCollectionPage;
 import com.microsoft.graph.security.requests.HostSslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
@@ -53,7 +54,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Child Host Pairs.
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.HostPairCollectionPage childHostPairs;
@@ -99,6 +100,13 @@ public class Host extends Artifact implements IJsonBackedObject {
      */
 	@Nullable
     public com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage passiveDnsReverse;
+
+    /**
+     * The Ports.
+     * The hostPorts associated with a host.
+     */
+	@Nullable
+    public com.microsoft.graph.security.requests.HostPortCollectionPage ports;
 
     /**
      * The Reputation.
@@ -175,6 +183,10 @@ public class Host extends Artifact implements IJsonBackedObject {
 
         if (json.has("passiveDnsReverse")) {
             passiveDnsReverse = serializer.deserializeObject(json.get("passiveDnsReverse"), com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage.class);
+        }
+
+        if (json.has("ports")) {
+            ports = serializer.deserializeObject(json.get("ports"), com.microsoft.graph.security.requests.HostPortCollectionPage.class);
         }
 
         if (json.has("sslCertificates")) {

@@ -61,7 +61,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Disable Resilience Defaults.
-     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      */
     @SerializedName(value = "disableResilienceDefaults", alternate = {"DisableResilienceDefaults"})
     @Expose

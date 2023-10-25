@@ -197,7 +197,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Info.
-     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      */
     @SerializedName(value = "onPremisesInfo", alternate = {"OnPremisesInfo"})
     @Expose

@@ -51,6 +51,15 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     public java.time.OffsetDateTime activatedDateTime;
 
     /**
+     * The Auto Extend Duration.
+     * 
+     */
+    @SerializedName(value = "autoExtendDuration", alternate = {"AutoExtendDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration autoExtendDuration;
+
+    /**
      * The Created Date Time.
      * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      */

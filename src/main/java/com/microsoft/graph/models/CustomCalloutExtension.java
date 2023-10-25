@@ -39,7 +39,7 @@ public class CustomCalloutExtension extends Entity implements IJsonBackedObject 
 
     /**
      * The Client Configuration.
-     * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      */
     @SerializedName(value = "clientConfiguration", alternate = {"ClientConfiguration"})
     @Expose

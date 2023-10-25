@@ -27,7 +27,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
 
     /**
      * The User Id.
-     * Azure AD user identifier. Use the List users method to get this ID.
+     * Microsoft Entra user identifier. Use the List users method to get this ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

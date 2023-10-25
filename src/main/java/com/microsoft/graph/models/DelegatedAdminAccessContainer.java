@@ -40,7 +40,7 @@ public class DelegatedAdminAccessContainer implements IJsonBackedObject {
 
     /**
      * The Access Container Id.
-     * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      */
     @SerializedName(value = "accessContainerId", alternate = {"AccessContainerId"})
     @Expose

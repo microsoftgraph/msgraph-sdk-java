@@ -56,6 +56,10 @@ public enum ServiceSource
     */
     MICROSOFT_DEFENDER_FOR_CLOUD,
     /**
+    * microsoft Sentinel
+    */
+    MICROSOFT_SENTINEL,
+    /**
     * For ServiceSource values that were not expected from the service
     */
     UNEXPECTED_VALUE
