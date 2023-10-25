@@ -18,6 +18,7 @@ import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
+import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -63,14 +64,14 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return builder to start configuring the client
      */
     @Nonnull
-    public static <nativeClient, nativeRequest> Builder<nativeClient, nativeRequest> builder(@Nonnull final Class<nativeClient> nativeClientClass, @Nonnull final Class<nativeRequest> nativeRequestClass) {
+    public static <nativeClient extends Call.Factory, nativeRequest> Builder<nativeClient, nativeRequest> builder(@Nonnull final Class<nativeClient> nativeClientClass, @Nonnull final Class<nativeRequest> nativeRequestClass) {
         return new Builder<>();
     }
     /**
      * Builder to help configure the Graph service client
      * @param <nativeRequestType> type of a request for the native http client
      */
-    public static class Builder<httpClientType, nativeRequestType> extends BaseClient.Builder<httpClientType, nativeRequestType> {
+    public static class Builder<httpClientType extends Call.Factory, nativeRequestType> extends BaseClient.Builder<httpClientType, nativeRequestType> {
         /**
          * Sets the serializer.
          *
