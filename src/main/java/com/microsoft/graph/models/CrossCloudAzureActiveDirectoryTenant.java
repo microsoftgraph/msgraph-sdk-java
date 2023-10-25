@@ -13,11 +13,11 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     private String cloudInstance;
     /**
-     * The name of the Azure Active Directory tenant. Read only.
+     * The name of the Microsoft Entra tenant. Read only.
      */
     private String displayName;
     /**
-     * The ID of the Azure Active Directory tenant. Read only.
+     * The ID of the Microsoft Entra tenant. Read only.
      */
     private String tenantId;
     /**
@@ -46,7 +46,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
         return this.cloudInstance;
     }
     /**
-     * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -92,14 +92,14 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
         this.cloudInstance = value;
     }
     /**
-     * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * Sets the displayName property value. The name of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

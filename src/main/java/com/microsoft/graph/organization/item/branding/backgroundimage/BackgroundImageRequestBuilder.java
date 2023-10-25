@@ -107,6 +107,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json, application/json");
         return requestInfo;
     }
     /**
@@ -137,7 +138,8 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PUT;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
+        requestInfo.setStreamContent(body, "application/octet-stream");
         return requestInfo;
     }
     /**

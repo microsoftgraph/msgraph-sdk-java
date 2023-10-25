@@ -38,7 +38,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get media content for the navigation property messages from users
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -48,7 +48,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Get media content for the navigation property messages from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,6 +107,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json, application/json");
         return requestInfo;
     }
     /**
@@ -137,7 +138,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PUT;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
+        requestInfo.setStreamContent(body, "application/octet-stream");
         return requestInfo;
     }
     /**

@@ -14,7 +14,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     private Map<String, Object> additionalData;
     /**
-     * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+     * Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
      */
     private String displayName;
     /**
@@ -22,7 +22,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     private String odataType;
     /**
-     * Tenant identifier for the partner Azure AD organization. Read-only.
+     * Tenant identifier for the partner Microsoft Entra organization. Read-only.
      */
     private String tenantId;
     /**
@@ -54,7 +54,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+     * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
+     * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+     * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
+     * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

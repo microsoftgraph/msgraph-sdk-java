@@ -62,7 +62,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get() {
@@ -72,7 +72,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -175,7 +175,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitlockerRecoveryKey extends Entity implements Parsable {
     /**
-     * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     * The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
      */
     private OffsetDateTime createdDateTime;
     /**
@@ -42,7 +42,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         return new BitlockerRecoveryKey();
     }
     /**
-     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     * Gets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         writer.writeEnumValue("volumeType", this.getVolumeType());
     }
     /**
-     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     * Sets the createdDateTime property value. The date and time when the key was originally backed up to Microsoft Entra ID. Not nullable.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

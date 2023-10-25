@@ -18,7 +18,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     private String odataType;
     /**
-     * The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
      */
     private Integer timeoutInMilliseconds;
     /**
@@ -65,7 +65,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         return this.odataType;
     }
     /**
-     * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         this.odataType = value;
     }
     /**
-     * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
      * @param value Value to set for the timeoutInMilliseconds property.
      */
     public void setTimeoutInMilliseconds(@jakarta.annotation.Nullable final Integer value) {

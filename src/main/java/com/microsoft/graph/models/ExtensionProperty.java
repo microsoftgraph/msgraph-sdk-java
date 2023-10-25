@@ -17,7 +17,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     private String dataType;
     /**
-     * Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      */
     private Boolean isSyncedFromOnPremises;
     /**
@@ -76,7 +76,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this.dataType = value;
     }
     /**
-     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @param value Value to set for the isSyncedFromOnPremises property.
      */
     public void setIsSyncedFromOnPremises(@jakarta.annotation.Nullable final Boolean value) {

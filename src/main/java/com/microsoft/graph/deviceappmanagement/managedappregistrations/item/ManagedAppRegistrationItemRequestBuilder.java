@@ -80,19 +80,19 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @return a CompletableFuture of ManagedAppRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ManagedAppRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,10 +151,11 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -162,7 +163,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +180,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -210,7 +211,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -231,7 +232,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

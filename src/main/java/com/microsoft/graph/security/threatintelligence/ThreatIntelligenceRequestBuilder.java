@@ -7,6 +7,7 @@ import com.microsoft.graph.security.threatintelligence.articles.ArticlesRequestB
 import com.microsoft.graph.security.threatintelligence.hostcomponents.HostComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcookies.HostCookiesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostpairs.HostPairsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostports.HostPortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.HostsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostsslcertificates.HostSslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosttrackers.HostTrackersRequestBuilder;
@@ -70,6 +71,13 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder hostPairs() {
         return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostPorts property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostPortsRequestBuilder hostPorts() {
+        return new HostPortsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
@@ -253,6 +261,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -281,7 +290,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -312,7 +321,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
