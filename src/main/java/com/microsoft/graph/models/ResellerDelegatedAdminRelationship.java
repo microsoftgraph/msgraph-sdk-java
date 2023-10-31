@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationship implements Parsable {
     /**
-     * The tenant ID of the indirect provider partner who created the relationship for the indirect reseller partner.
-     */
-    private String indirectProviderTenantId;
-    /**
-     * Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
-     */
-    private Boolean isPartnerConsentPending;
-    /**
      * Instantiates a new ResellerDelegatedAdminRelationship and sets the default values.
      */
     public ResellerDelegatedAdminRelationship() {
@@ -49,7 +41,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
      */
     @jakarta.annotation.Nullable
     public String getIndirectProviderTenantId() {
-        return this.indirectProviderTenantId;
+        return this.getBackingStore().get("indirectProviderTenantId");
     }
     /**
      * Gets the isPartnerConsentPending property value. Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
@@ -57,7 +49,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPartnerConsentPending() {
-        return this.isPartnerConsentPending;
+        return this.getBackingStore().get("isPartnerConsentPending");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
      * @param value Value to set for the indirectProviderTenantId property.
      */
     public void setIndirectProviderTenantId(@jakarta.annotation.Nullable final String value) {
-        this.indirectProviderTenantId = value;
+        this.getBackingStore().set("indirectProviderTenantId", value);
     }
     /**
      * Sets the isPartnerConsentPending property value. Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
      * @param value Value to set for the isPartnerConsentPending property.
      */
     public void setIsPartnerConsentPending(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPartnerConsentPending = value;
+        this.getBackingStore().set("isPartnerConsentPending", value);
     }
 }

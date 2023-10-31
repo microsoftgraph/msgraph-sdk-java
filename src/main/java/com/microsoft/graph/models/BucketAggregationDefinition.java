@@ -1,46 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BucketAggregationDefinition implements AdditionalDataHolder, Parsable {
+public class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
-     */
-    private Boolean isDescending;
-    /**
-     * The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
-     */
-    private Integer minimumCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
-     */
-    private String prefixFilter;
-    /**
-     * Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
-     */
-    private java.util.List<BucketAggregationRange> ranges;
-    /**
-     * The sortBy property
-     */
-    private BucketAggregationSortProperty sortBy;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BucketAggregationDefinition and sets the default values.
      */
     public BucketAggregationDefinition() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +38,20 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +74,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDescending() {
-        return this.isDescending;
+        return this.getBackingStore().get("isDescending");
     }
     /**
      * Gets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
@@ -90,7 +82,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumCount() {
-        return this.minimumCount;
+        return this.getBackingStore().get("minimumCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,7 +90,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
@@ -106,7 +98,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getPrefixFilter() {
-        return this.prefixFilter;
+        return this.getBackingStore().get("prefixFilter");
     }
     /**
      * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
@@ -114,7 +106,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public java.util.List<BucketAggregationRange> getRanges() {
-        return this.ranges;
+        return this.getBackingStore().get("ranges");
     }
     /**
      * Gets the sortBy property value. The sortBy property
@@ -122,7 +114,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public BucketAggregationSortProperty getSortBy() {
-        return this.sortBy;
+        return this.getBackingStore().get("sortBy");
     }
     /**
      * Serializes information the current object
@@ -136,55 +128,61 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         writer.writeStringValue("prefixFilter", this.getPrefixFilter());
         writer.writeCollectionOfObjectValues("ranges", this.getRanges());
         writer.writeEnumValue("sortBy", this.getSortBy());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
      * @param value Value to set for the isDescending property.
      */
     public void setIsDescending(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDescending = value;
+        this.getBackingStore().set("isDescending", value);
     }
     /**
      * Sets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumCount = value;
+        this.getBackingStore().set("minimumCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
      * @param value Value to set for the prefixFilter property.
      */
     public void setPrefixFilter(@jakarta.annotation.Nullable final String value) {
-        this.prefixFilter = value;
+        this.getBackingStore().set("prefixFilter", value);
     }
     /**
      * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @param value Value to set for the ranges property.
      */
     public void setRanges(@jakarta.annotation.Nullable final java.util.List<BucketAggregationRange> value) {
-        this.ranges = value;
+        this.getBackingStore().set("ranges", value);
     }
     /**
      * Sets the sortBy property value. The sortBy property
      * @param value Value to set for the sortBy property.
      */
     public void setSortBy(@jakarta.annotation.Nullable final BucketAggregationSortProperty value) {
-        this.sortBy = value;
+        this.getBackingStore().set("sortBy", value);
     }
 }

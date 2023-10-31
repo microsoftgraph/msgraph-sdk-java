@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomQuestion extends Entity implements Parsable {
     /**
-     * The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     */
-    private AnswerInputType answerInputType;
-    /**
-     * List of possible answer values.
-     */
-    private java.util.List<String> answerOptions;
-    /**
-     * The question.
-     */
-    private String displayName;
-    /**
      * Instantiates a new BookingCustomQuestion and sets the default values.
      */
     public BookingCustomQuestion() {
@@ -45,7 +33,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
-        return this.answerInputType;
+        return this.getBackingStore().get("answerInputType");
     }
     /**
      * Gets the answerOptions property value. List of possible answer values.
@@ -53,7 +41,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
-        return this.answerOptions;
+        return this.getBackingStore().get("answerOptions");
     }
     /**
      * Gets the displayName property value. The question.
@@ -61,7 +49,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -91,20 +79,20 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * @param value Value to set for the answerInputType property.
      */
     public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
-        this.answerInputType = value;
+        this.getBackingStore().set("answerInputType", value);
     }
     /**
      * Sets the answerOptions property value. List of possible answer values.
      * @param value Value to set for the answerOptions property.
      */
     public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.answerOptions = value;
+        this.getBackingStore().set("answerOptions", value);
     }
     /**
      * Sets the displayName property value. The question.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
 }

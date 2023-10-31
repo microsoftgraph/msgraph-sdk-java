@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable {
     /**
-     * ShiftId for the recipient user with whom the request is to swap.
-     */
-    private String recipientShiftId;
-    /**
      * Instantiates a new SwapShiftsChangeRequest and sets the default values.
      */
     public SwapShiftsChangeRequest() {
@@ -45,7 +41,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getRecipientShiftId() {
-        return this.recipientShiftId;
+        return this.getBackingStore().get("recipientShiftId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
      * @param value Value to set for the recipientShiftId property.
      */
     public void setRecipientShiftId(@jakarta.annotation.Nullable final String value) {
-        this.recipientShiftId = value;
+        this.getBackingStore().set("recipientShiftId", value);
     }
 }

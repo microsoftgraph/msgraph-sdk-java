@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceUserAgent extends UserAgent implements Parsable {
     /**
-     * The role property
-     */
-    private ServiceRole role;
-    /**
      * Instantiates a new ServiceUserAgent and sets the default values.
      */
     public ServiceUserAgent() {
@@ -45,7 +41,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ServiceRole getRole() {
-        return this.role;
+        return this.getBackingStore().get("role");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final ServiceRole value) {
-        this.role = value;
+        this.getBackingStore().set("role", value);
     }
 }

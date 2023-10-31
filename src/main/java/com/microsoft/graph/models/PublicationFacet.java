@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PublicationFacet implements AdditionalDataHolder, Parsable {
+public class PublicationFacet implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * User who has checked out the file.
-     */
-    private IdentitySet checkedOutBy;
-    /**
-     * The state of publication for this document. Either published or checkout. Read-only.
-     */
-    private String level;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier for the version that is visible to the current caller. Read-only.
-     */
-    private String versionId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new PublicationFacet and sets the default values.
      */
     public PublicationFacet() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,20 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the checkedOutBy property value. User who has checked out the file.
@@ -59,7 +59,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCheckedOutBy() {
-        return this.checkedOutBy;
+        return this.getBackingStore().get("checkedOutBy");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +80,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLevel() {
-        return this.level;
+        return this.getBackingStore().get("level");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +88,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.
@@ -96,7 +96,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersionId() {
-        return this.versionId;
+        return this.getBackingStore().get("versionId");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("versionId", this.getVersionId());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the checkedOutBy property value. User who has checked out the file.
      * @param value Value to set for the checkedOutBy property.
      */
     public void setCheckedOutBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.checkedOutBy = value;
+        this.getBackingStore().set("checkedOutBy", value);
     }
     /**
      * Sets the level property value. The state of publication for this document. Either published or checkout. Read-only.
      * @param value Value to set for the level property.
      */
     public void setLevel(@jakarta.annotation.Nullable final String value) {
-        this.level = value;
+        this.getBackingStore().set("level", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.
      * @param value Value to set for the versionId property.
      */
     public void setVersionId(@jakarta.annotation.Nullable final String value) {
-        this.versionId = value;
+        this.getBackingStore().set("versionId", value);
     }
 }

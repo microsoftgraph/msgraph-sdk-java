@@ -1,39 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.syd;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
+public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The cost property
-     */
-    private Json cost;
-    /**
-     * The life property
-     */
-    private Json life;
-    /**
-     * The per property
-     */
-    private Json per;
-    /**
-     * The salvage property
-     */
-    private Json salvage;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SydPostRequestBody and sets the default values.
      */
     public SydPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +39,20 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cost property value. The cost property
@@ -60,7 +60,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
-        return this.cost;
+        return this.getBackingStore().get("cost");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +81,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLife() {
-        return this.life;
+        return this.getBackingStore().get("life");
     }
     /**
      * Gets the per property value. The per property
@@ -89,7 +89,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPer() {
-        return this.per;
+        return this.getBackingStore().get("per");
     }
     /**
      * Gets the salvage property value. The salvage property
@@ -97,7 +97,7 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {
-        return this.salvage;
+        return this.getBackingStore().get("salvage");
     }
     /**
      * Serializes information the current object
@@ -109,41 +109,47 @@ public class SydPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("life", this.getLife());
         writer.writeObjectValue("per", this.getPer());
         writer.writeObjectValue("salvage", this.getSalvage());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
     public void setCost(@jakarta.annotation.Nullable final Json value) {
-        this.cost = value;
+        this.getBackingStore().set("cost", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
     public void setLife(@jakarta.annotation.Nullable final Json value) {
-        this.life = value;
+        this.getBackingStore().set("life", value);
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
      */
     public void setPer(@jakarta.annotation.Nullable final Json value) {
-        this.per = value;
+        this.getBackingStore().set("per", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
-        this.salvage = value;
+        this.getBackingStore().set("salvage", value);
     }
 }

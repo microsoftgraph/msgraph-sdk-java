@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * Base64 encoded file content. The file content can't fetch back because it isn't stored.
-     */
-    private String contentData;
-    /**
-     * The file name.
-     */
-    private String fileName;
-    /**
      * Instantiates a new FileAssessmentRequest and sets the default values.
      */
     public FileAssessmentRequest() {
@@ -39,7 +31,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @jakarta.annotation.Nullable
     public String getContentData() {
-        return this.contentData;
+        return this.getBackingStore().get("contentData");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.getBackingStore().get("fileName");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the contentData property.
      */
     public void setContentData(@jakarta.annotation.Nullable final String value) {
-        this.contentData = value;
+        this.getBackingStore().set("contentData", value);
     }
     /**
      * Sets the fileName property value. The file name.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.getBackingStore().set("fileName", value);
     }
 }

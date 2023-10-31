@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdC
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

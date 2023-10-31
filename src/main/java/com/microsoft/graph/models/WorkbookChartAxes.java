@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxes extends Entity implements Parsable {
     /**
-     * Represents the category axis in a chart. Read-only.
-     */
-    private WorkbookChartAxis categoryAxis;
-    /**
-     * Represents the series axis of a 3-dimensional chart. Read-only.
-     */
-    private WorkbookChartAxis seriesAxis;
-    /**
-     * Represents the value axis in an axis. Read-only.
-     */
-    private WorkbookChartAxis valueAxis;
-    /**
      * Instantiates a new WorkbookChartAxes and sets the default values.
      */
     public WorkbookChartAxes() {
@@ -42,7 +30,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getCategoryAxis() {
-        return this.categoryAxis;
+        return this.getBackingStore().get("categoryAxis");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getSeriesAxis() {
-        return this.seriesAxis;
+        return this.getBackingStore().get("seriesAxis");
     }
     /**
      * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
@@ -70,7 +58,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxis getValueAxis() {
-        return this.valueAxis;
+        return this.getBackingStore().get("valueAxis");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the categoryAxis property.
      */
     public void setCategoryAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
-        this.categoryAxis = value;
+        this.getBackingStore().set("categoryAxis", value);
     }
     /**
      * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
      * @param value Value to set for the seriesAxis property.
      */
     public void setSeriesAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
-        this.seriesAxis = value;
+        this.getBackingStore().set("seriesAxis", value);
     }
     /**
      * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
      * @param value Value to set for the valueAxis property.
      */
     public void setValueAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
-        this.valueAxis = value;
+        this.getBackingStore().set("valueAxis", value);
     }
 }

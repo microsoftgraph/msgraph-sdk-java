@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AvailabilityItem implements AdditionalDataHolder, Parsable {
+public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The endDateTime property
-     */
-    private DateTimeTimeZone endDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
-     */
-    private String serviceId;
-    /**
-     * The startDateTime property
-     */
-    private DateTimeTimeZone startDateTime;
-    /**
-     * The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     */
-    private BookingsAvailabilityStatus status;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AvailabilityItem and sets the default values.
      */
     public AvailabilityItem() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -63,7 +59,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +81,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
@@ -93,7 +89,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
-        return this.serviceId;
+        return this.getBackingStore().get("serviceId");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -101,7 +97,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
@@ -109,7 +105,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public BookingsAvailabilityStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("serviceId", this.getServiceId());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the serviceId property value. Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      * @param value Value to set for the serviceId property.
      */
     public void setServiceId(@jakarta.annotation.Nullable final String value) {
-        this.serviceId = value;
+        this.getBackingStore().set("serviceId", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final BookingsAvailabilityStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

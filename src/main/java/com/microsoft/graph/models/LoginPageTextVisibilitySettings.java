@@ -1,50 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Parsable {
+public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
-     */
-    private Boolean hideAccountResetCredentials;
-    /**
-     * Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
-     */
-    private Boolean hideCannotAccessYourAccount;
-    /**
-     * Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
-     */
-    private Boolean hideForgotMyPassword;
-    /**
-     * Option to hide the 'Privacy & Cookies' hyperlink in the footer.
-     */
-    private Boolean hidePrivacyAndCookies;
-    /**
-     * Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
-     */
-    private Boolean hideResetItNow;
-    /**
-     * Option to hide the 'Terms of Use' hyperlink in the footer.
-     */
-    private Boolean hideTermsOfUse;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new LoginPageTextVisibilitySettings and sets the default values.
      */
     public LoginPageTextVisibilitySettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +38,20 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +75,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHideAccountResetCredentials() {
-        return this.hideAccountResetCredentials;
+        return this.getBackingStore().get("hideAccountResetCredentials");
     }
     /**
      * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
@@ -95,7 +83,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHideCannotAccessYourAccount() {
-        return this.hideCannotAccessYourAccount;
+        return this.getBackingStore().get("hideCannotAccessYourAccount");
     }
     /**
      * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
@@ -103,7 +91,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHideForgotMyPassword() {
-        return this.hideForgotMyPassword;
+        return this.getBackingStore().get("hideForgotMyPassword");
     }
     /**
      * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
@@ -111,7 +99,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHidePrivacyAndCookies() {
-        return this.hidePrivacyAndCookies;
+        return this.getBackingStore().get("hidePrivacyAndCookies");
     }
     /**
      * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
@@ -119,7 +107,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHideResetItNow() {
-        return this.hideResetItNow;
+        return this.getBackingStore().get("hideResetItNow");
     }
     /**
      * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
@@ -127,7 +115,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getHideTermsOfUse() {
-        return this.hideTermsOfUse;
+        return this.getBackingStore().get("hideTermsOfUse");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -135,7 +123,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -150,62 +138,68 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         writer.writeBooleanValue("hideResetItNow", this.getHideResetItNow());
         writer.writeBooleanValue("hideTermsOfUse", this.getHideTermsOfUse());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
      */
     public void setHideAccountResetCredentials(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideAccountResetCredentials = value;
+        this.getBackingStore().set("hideAccountResetCredentials", value);
     }
     /**
      * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @param value Value to set for the hideCannotAccessYourAccount property.
      */
     public void setHideCannotAccessYourAccount(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideCannotAccessYourAccount = value;
+        this.getBackingStore().set("hideCannotAccessYourAccount", value);
     }
     /**
      * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @param value Value to set for the hideForgotMyPassword property.
      */
     public void setHideForgotMyPassword(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideForgotMyPassword = value;
+        this.getBackingStore().set("hideForgotMyPassword", value);
     }
     /**
      * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @param value Value to set for the hidePrivacyAndCookies property.
      */
     public void setHidePrivacyAndCookies(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidePrivacyAndCookies = value;
+        this.getBackingStore().set("hidePrivacyAndCookies", value);
     }
     /**
      * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @param value Value to set for the hideResetItNow property.
      */
     public void setHideResetItNow(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideResetItNow = value;
+        this.getBackingStore().set("hideResetItNow", value);
     }
     /**
      * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @param value Value to set for the hideTermsOfUse property.
      */
     public void setHideTermsOfUse(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideTermsOfUse = value;
+        this.getBackingStore().set("hideTermsOfUse", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

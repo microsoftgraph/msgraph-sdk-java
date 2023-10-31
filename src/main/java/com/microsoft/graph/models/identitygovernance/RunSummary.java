@@ -1,50 +1,25 @@
 package com.microsoft.graph.models.identitygovernance;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RunSummary implements AdditionalDataHolder, Parsable {
+public class RunSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of failed workflow runs.
-     */
-    private Integer failedRuns;
-    /**
-     * The number of failed tasks of a workflow.
-     */
-    private Integer failedTasks;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of successful workflow runs.
-     */
-    private Integer successfulRuns;
-    /**
-     * The total number of runs for a workflow.
-     */
-    private Integer totalRuns;
-    /**
-     * The total number of tasks processed by a workflow.
-     */
-    private Integer totalTasks;
-    /**
-     * The total number of users processed by a workflow.
-     */
-    private Integer totalUsers;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new RunSummary and sets the default values.
      */
     public RunSummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +38,20 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the failedRuns property value. The number of failed workflow runs.
@@ -71,7 +59,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedRuns() {
-        return this.failedRuns;
+        return this.getBackingStore().get("failedRuns");
     }
     /**
      * Gets the failedTasks property value. The number of failed tasks of a workflow.
@@ -79,7 +67,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
-        return this.failedTasks;
+        return this.getBackingStore().get("failedTasks");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +91,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the successfulRuns property value. The number of successful workflow runs.
@@ -111,7 +99,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulRuns() {
-        return this.successfulRuns;
+        return this.getBackingStore().get("successfulRuns");
     }
     /**
      * Gets the totalRuns property value. The total number of runs for a workflow.
@@ -119,7 +107,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalRuns() {
-        return this.totalRuns;
+        return this.getBackingStore().get("totalRuns");
     }
     /**
      * Gets the totalTasks property value. The total number of tasks processed by a workflow.
@@ -127,7 +115,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
-        return this.totalTasks;
+        return this.getBackingStore().get("totalTasks");
     }
     /**
      * Gets the totalUsers property value. The total number of users processed by a workflow.
@@ -135,7 +123,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsers() {
-        return this.totalUsers;
+        return this.getBackingStore().get("totalUsers");
     }
     /**
      * Serializes information the current object
@@ -150,62 +138,68 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("totalRuns", this.getTotalRuns());
         writer.writeIntegerValue("totalTasks", this.getTotalTasks());
         writer.writeIntegerValue("totalUsers", this.getTotalUsers());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the failedRuns property value. The number of failed workflow runs.
      * @param value Value to set for the failedRuns property.
      */
     public void setFailedRuns(@jakarta.annotation.Nullable final Integer value) {
-        this.failedRuns = value;
+        this.getBackingStore().set("failedRuns", value);
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks of a workflow.
      * @param value Value to set for the failedTasks property.
      */
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.failedTasks = value;
+        this.getBackingStore().set("failedTasks", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the successfulRuns property value. The number of successful workflow runs.
      * @param value Value to set for the successfulRuns property.
      */
     public void setSuccessfulRuns(@jakarta.annotation.Nullable final Integer value) {
-        this.successfulRuns = value;
+        this.getBackingStore().set("successfulRuns", value);
     }
     /**
      * Sets the totalRuns property value. The total number of runs for a workflow.
      * @param value Value to set for the totalRuns property.
      */
     public void setTotalRuns(@jakarta.annotation.Nullable final Integer value) {
-        this.totalRuns = value;
+        this.getBackingStore().set("totalRuns", value);
     }
     /**
      * Sets the totalTasks property value. The total number of tasks processed by a workflow.
      * @param value Value to set for the totalTasks property.
      */
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.totalTasks = value;
+        this.getBackingStore().set("totalTasks", value);
     }
     /**
      * Sets the totalUsers property value. The total number of users processed by a workflow.
      * @param value Value to set for the totalUsers property.
      */
     public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUsers = value;
+        this.getBackingStore().set("totalUsers", value);
     }
 }

@@ -2,43 +2,26 @@ package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.models.termstore.Term;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TermColumn implements AdditionalDataHolder, Parsable {
+public class TermColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Specifies whether the column allows more than one value.
-     */
-    private Boolean allowMultipleValues;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The parentTerm property
-     */
-    private Term parentTerm;
-    /**
-     * Specifies whether to display the entire term path or only the term label.
-     */
-    private Boolean showFullyQualifiedName;
-    /**
-     * The termSet property
-     */
-    private Set termSet;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TermColumn and sets the default values.
      */
     public TermColumn() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -57,7 +40,12 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowMultipleValues property value. Specifies whether the column allows more than one value.
@@ -65,7 +53,15 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleValues() {
-        return this.allowMultipleValues;
+        return this.getBackingStore().get("allowMultipleValues");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +83,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the parentTerm property value. The parentTerm property
@@ -95,7 +91,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Term getParentTerm() {
-        return this.parentTerm;
+        return this.getBackingStore().get("parentTerm");
     }
     /**
      * Gets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
@@ -103,7 +99,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowFullyQualifiedName() {
-        return this.showFullyQualifiedName;
+        return this.getBackingStore().get("showFullyQualifiedName");
     }
     /**
      * Gets the termSet property value. The termSet property
@@ -111,7 +107,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Set getTermSet() {
-        return this.termSet;
+        return this.getBackingStore().get("termSet");
     }
     /**
      * Serializes information the current object
@@ -124,48 +120,54 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("parentTerm", this.getParentTerm());
         writer.writeBooleanValue("showFullyQualifiedName", this.getShowFullyQualifiedName());
         writer.writeObjectValue("termSet", this.getTermSet());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowMultipleValues property value. Specifies whether the column allows more than one value.
      * @param value Value to set for the allowMultipleValues property.
      */
     public void setAllowMultipleValues(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowMultipleValues = value;
+        this.getBackingStore().set("allowMultipleValues", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the parentTerm property value. The parentTerm property
      * @param value Value to set for the parentTerm property.
      */
     public void setParentTerm(@jakarta.annotation.Nullable final Term value) {
-        this.parentTerm = value;
+        this.getBackingStore().set("parentTerm", value);
     }
     /**
      * Sets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
      * @param value Value to set for the showFullyQualifiedName property.
      */
     public void setShowFullyQualifiedName(@jakarta.annotation.Nullable final Boolean value) {
-        this.showFullyQualifiedName = value;
+        this.getBackingStore().set("showFullyQualifiedName", value);
     }
     /**
      * Sets the termSet property value. The termSet property
      * @param value Value to set for the termSet property.
      */
     public void setTermSet(@jakarta.annotation.Nullable final Set value) {
-        this.termSet = value;
+        this.getBackingStore().set("termSet", value);
     }
 }

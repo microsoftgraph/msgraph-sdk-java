@@ -1,58 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
+public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The color property
-     */
-    private String color;
-    /**
-     * The criterion1 property
-     */
-    private String criterion1;
-    /**
-     * The criterion2 property
-     */
-    private String criterion2;
-    /**
-     * The dynamicCriteria property
-     */
-    private String dynamicCriteria;
-    /**
-     * The filterOn property
-     */
-    private String filterOn;
-    /**
-     * The icon property
-     */
-    private WorkbookIcon icon;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The operator property
-     */
-    private String operator;
-    /**
-     * The values property
-     */
-    private Json values;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new WorkbookFilterCriteria and sets the default values.
      */
     public WorkbookFilterCriteria() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +38,20 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the color property value. The color property
@@ -79,7 +59,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.getBackingStore().get("color");
     }
     /**
      * Gets the criterion1 property value. The criterion1 property
@@ -87,7 +67,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCriterion1() {
-        return this.criterion1;
+        return this.getBackingStore().get("criterion1");
     }
     /**
      * Gets the criterion2 property value. The criterion2 property
@@ -95,7 +75,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCriterion2() {
-        return this.criterion2;
+        return this.getBackingStore().get("criterion2");
     }
     /**
      * Gets the dynamicCriteria property value. The dynamicCriteria property
@@ -103,7 +83,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDynamicCriteria() {
-        return this.dynamicCriteria;
+        return this.getBackingStore().get("dynamicCriteria");
     }
     /**
      * The deserialization information for the current model
@@ -129,7 +109,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFilterOn() {
-        return this.filterOn;
+        return this.getBackingStore().get("filterOn");
     }
     /**
      * Gets the icon property value. The icon property
@@ -137,7 +117,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookIcon getIcon() {
-        return this.icon;
+        return this.getBackingStore().get("icon");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -145,7 +125,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the operator property value. The operator property
@@ -153,7 +133,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
-        return this.operator;
+        return this.getBackingStore().get("operator");
     }
     /**
      * Gets the values property value. The values property
@@ -161,7 +141,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.getBackingStore().get("values");
     }
     /**
      * Serializes information the current object
@@ -178,76 +158,82 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operator", this.getOperator());
         writer.writeObjectValue("values", this.getValues());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the color property value. The color property
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.getBackingStore().set("color", value);
     }
     /**
      * Sets the criterion1 property value. The criterion1 property
      * @param value Value to set for the criterion1 property.
      */
     public void setCriterion1(@jakarta.annotation.Nullable final String value) {
-        this.criterion1 = value;
+        this.getBackingStore().set("criterion1", value);
     }
     /**
      * Sets the criterion2 property value. The criterion2 property
      * @param value Value to set for the criterion2 property.
      */
     public void setCriterion2(@jakarta.annotation.Nullable final String value) {
-        this.criterion2 = value;
+        this.getBackingStore().set("criterion2", value);
     }
     /**
      * Sets the dynamicCriteria property value. The dynamicCriteria property
      * @param value Value to set for the dynamicCriteria property.
      */
     public void setDynamicCriteria(@jakarta.annotation.Nullable final String value) {
-        this.dynamicCriteria = value;
+        this.getBackingStore().set("dynamicCriteria", value);
     }
     /**
      * Sets the filterOn property value. The filterOn property
      * @param value Value to set for the filterOn property.
      */
     public void setFilterOn(@jakarta.annotation.Nullable final String value) {
-        this.filterOn = value;
+        this.getBackingStore().set("filterOn", value);
     }
     /**
      * Sets the icon property value. The icon property
      * @param value Value to set for the icon property.
      */
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {
-        this.icon = value;
+        this.getBackingStore().set("icon", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the operator property value. The operator property
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {
-        this.operator = value;
+        this.getBackingStore().set("operator", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.getBackingStore().set("values", value);
     }
 }

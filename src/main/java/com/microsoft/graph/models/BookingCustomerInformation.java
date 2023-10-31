@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
     /**
-     * The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-     */
-    private String customerId;
-    /**
-     * It consists of the list of custom questions and answers given by the customer as part of the appointment
-     */
-    private java.util.List<BookingQuestionAnswer> customQuestionAnswers;
-    /**
-     * The SMTP address of the bookingCustomer who is booking the appointment
-     */
-    private String emailAddress;
-    /**
-     * Represents location information for thebookingCustomerwho is booking the appointment.
-     */
-    private Location location;
-    /**
-     * The customer's name.
-     */
-    private String name;
-    /**
-     * Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-     */
-    private String notes;
-    /**
-     * The customer's phone number.
-     */
-    private String phone;
-    /**
-     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     */
-    private String timeZone;
-    /**
      * Instantiates a new BookingCustomerInformation and sets the default values.
      */
     public BookingCustomerInformation() {
@@ -63,7 +31,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getCustomerId() {
-        return this.customerId;
+        return this.getBackingStore().get("customerId");
     }
     /**
      * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
@@ -71,7 +39,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAnswer> getCustomQuestionAnswers() {
-        return this.customQuestionAnswers;
+        return this.getBackingStore().get("customQuestionAnswers");
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
@@ -79,7 +47,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.getBackingStore().get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -104,7 +72,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
-        return this.location;
+        return this.getBackingStore().get("location");
     }
     /**
      * Gets the name property value. The customer's name.
@@ -112,7 +80,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
@@ -120,7 +88,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.getBackingStore().get("notes");
     }
     /**
      * Gets the phone property value. The customer's phone number.
@@ -128,7 +96,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
-        return this.phone;
+        return this.getBackingStore().get("phone");
     }
     /**
      * Gets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -136,7 +104,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
-        return this.timeZone;
+        return this.getBackingStore().get("timeZone");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customerId property.
      */
     public void setCustomerId(@jakarta.annotation.Nullable final String value) {
-        this.customerId = value;
+        this.getBackingStore().set("customerId", value);
     }
     /**
      * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      * @param value Value to set for the customQuestionAnswers property.
      */
     public void setCustomQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
-        this.customQuestionAnswers = value;
+        this.getBackingStore().set("customQuestionAnswers", value);
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.getBackingStore().set("emailAddress", value);
     }
     /**
      * Sets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
-        this.location = value;
+        this.getBackingStore().set("location", value);
     }
     /**
      * Sets the name property value. The customer's name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.getBackingStore().set("notes", value);
     }
     /**
      * Sets the phone property value. The customer's phone number.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
-        this.phone = value;
+        this.getBackingStore().set("phone", value);
     }
     /**
      * Sets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.timeZone = value;
+        this.getBackingStore().set("timeZone", value);
     }
 }

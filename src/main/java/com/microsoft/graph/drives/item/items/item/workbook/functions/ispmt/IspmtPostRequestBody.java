@@ -1,39 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.ispmt;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
+public class IspmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The nper property
-     */
-    private Json nper;
-    /**
-     * The per property
-     */
-    private Json per;
-    /**
-     * The pv property
-     */
-    private Json pv;
-    /**
-     * The rate property
-     */
-    private Json rate;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new IspmtPostRequestBody and sets the default values.
      */
     public IspmtPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +39,20 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +73,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNper() {
-        return this.nper;
+        return this.getBackingStore().get("nper");
     }
     /**
      * Gets the per property value. The per property
@@ -81,7 +81,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPer() {
-        return this.per;
+        return this.getBackingStore().get("per");
     }
     /**
      * Gets the pv property value. The pv property
@@ -89,7 +89,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPv() {
-        return this.pv;
+        return this.getBackingStore().get("pv");
     }
     /**
      * Gets the rate property value. The rate property
@@ -97,7 +97,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.getBackingStore().get("rate");
     }
     /**
      * Serializes information the current object
@@ -109,41 +109,47 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("per", this.getPer());
         writer.writeObjectValue("pv", this.getPv());
         writer.writeObjectValue("rate", this.getRate());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
      */
     public void setNper(@jakarta.annotation.Nullable final Json value) {
-        this.nper = value;
+        this.getBackingStore().set("nper", value);
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
      */
     public void setPer(@jakarta.annotation.Nullable final Json value) {
-        this.per = value;
+        this.getBackingStore().set("per", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
     public void setPv(@jakarta.annotation.Nullable final Json value) {
-        this.pv = value;
+        this.getBackingStore().set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.getBackingStore().set("rate", value);
     }
 }

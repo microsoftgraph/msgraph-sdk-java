@@ -1,46 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RubricQuality implements AdditionalDataHolder, Parsable {
+public class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The collection of criteria for this rubric quality.
-     */
-    private java.util.List<RubricCriterion> criteria;
-    /**
-     * The description of this rubric quality.
-     */
-    private EducationItemBody description;
-    /**
-     * The name of this rubric quality.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of this resource.
-     */
-    private String qualityId;
-    /**
-     * If present, a numerical weight for this quality.  Weights must add up to 100.
-     */
-    private Float weight;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new RubricQuality and sets the default values.
      */
     public RubricQuality() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +38,20 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the criteria property value. The collection of criteria for this rubric quality.
@@ -67,7 +59,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricCriterion> getCriteria() {
-        return this.criteria;
+        return this.getBackingStore().get("criteria");
     }
     /**
      * Gets the description property value. The description of this rubric quality.
@@ -75,7 +67,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The name of this rubric quality.
@@ -83,7 +75,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +98,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the qualityId property value. The ID of this resource.
@@ -114,7 +106,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getQualityId() {
-        return this.qualityId;
+        return this.getBackingStore().get("qualityId");
     }
     /**
      * Gets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
@@ -122,7 +114,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getWeight() {
-        return this.weight;
+        return this.getBackingStore().get("weight");
     }
     /**
      * Serializes information the current object
@@ -136,55 +128,61 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
         writer.writeFloatValue("weight", this.getWeight());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the criteria property value. The collection of criteria for this rubric quality.
      * @param value Value to set for the criteria property.
      */
     public void setCriteria(@jakarta.annotation.Nullable final java.util.List<RubricCriterion> value) {
-        this.criteria = value;
+        this.getBackingStore().set("criteria", value);
     }
     /**
      * Sets the description property value. The description of this rubric quality.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The name of this rubric quality.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the qualityId property value. The ID of this resource.
      * @param value Value to set for the qualityId property.
      */
     public void setQualityId(@jakarta.annotation.Nullable final String value) {
-        this.qualityId = value;
+        this.getBackingStore().set("qualityId", value);
     }
     /**
      * Sets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
      * @param value Value to set for the weight property.
      */
     public void setWeight(@jakarta.annotation.Nullable final Float value) {
-        this.weight = value;
+        this.getBackingStore().set("weight", value);
     }
 }

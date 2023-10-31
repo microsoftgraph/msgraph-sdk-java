@@ -1,35 +1,26 @@
 package com.microsoft.graph.users.item.joinedteams.item.schedule.share;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
+public class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The endDateTime property
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The notifyTeam property
-     */
-    private Boolean notifyTeam;
-    /**
-     * The startDateTime property
-     */
-    private OffsetDateTime startDateTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SharePostRequestBody and sets the default values.
      */
     public SharePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +39,20 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -56,7 +60,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +80,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getNotifyTeam() {
-        return this.notifyTeam;
+        return this.getBackingStore().get("notifyTeam");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -84,7 +88,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -95,34 +99,40 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeBooleanValue("notifyTeam", this.getNotifyTeam());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the notifyTeam property value. The notifyTeam property
      * @param value Value to set for the notifyTeam property.
      */
     public void setNotifyTeam(@jakarta.annotation.Nullable final Boolean value) {
-        this.notifyTeam = value;
+        this.getBackingStore().set("notifyTeam", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
 }

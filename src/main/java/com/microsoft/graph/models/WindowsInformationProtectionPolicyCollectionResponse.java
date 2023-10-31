@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsInformationProtectionPolicy> value;
-    /**
      * Instantiates a new WindowsInformationProtectionPolicyCollectionResponse and sets the default values.
      */
     public WindowsInformationProtectionPolicyCollectionResponse() {
@@ -44,7 +40,7 @@ public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ShiftAvailability implements AdditionalDataHolder, Parsable {
+public class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the pattern for recurrence
-     */
-    private PatternedRecurrence recurrence;
-    /**
-     * The time slot(s) preferred by the user.
-     */
-    private java.util.List<TimeRange> timeSlots;
-    /**
-     * Specifies the time zone for the indicated time.
-     */
-    private String timeZone;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ShiftAvailability and sets the default values.
      */
     public ShiftAvailability() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,20 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +72,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the recurrence property value. Specifies the pattern for recurrence
@@ -80,7 +80,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.getBackingStore().get("recurrence");
     }
     /**
      * Gets the timeSlots property value. The time slot(s) preferred by the user.
@@ -88,7 +88,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeRange> getTimeSlots() {
-        return this.timeSlots;
+        return this.getBackingStore().get("timeSlots");
     }
     /**
      * Gets the timeZone property value. Specifies the time zone for the indicated time.
@@ -96,7 +96,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
-        return this.timeZone;
+        return this.getBackingStore().get("timeZone");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeCollectionOfObjectValues("timeSlots", this.getTimeSlots());
         writer.writeStringValue("timeZone", this.getTimeZone());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the recurrence property value. Specifies the pattern for recurrence
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
-        this.recurrence = value;
+        this.getBackingStore().set("recurrence", value);
     }
     /**
      * Sets the timeSlots property value. The time slot(s) preferred by the user.
      * @param value Value to set for the timeSlots property.
      */
     public void setTimeSlots(@jakarta.annotation.Nullable final java.util.List<TimeRange> value) {
-        this.timeSlots = value;
+        this.getBackingStore().set("timeSlots", value);
     }
     /**
      * Sets the timeZone property value. Specifies the time zone for the indicated time.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.timeZone = value;
+        this.getBackingStore().set("timeZone", value);
     }
 }

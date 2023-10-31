@@ -1,51 +1,26 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.identitygovernance.LifecycleWorkflowsContainer;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IdentityGovernance implements AdditionalDataHolder, Parsable {
+public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The accessReviews property
+     * Stores model information.
      */
-    private AccessReviewSet accessReviews;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The appConsent property
-     */
-    private AppConsentApprovalRoute appConsent;
-    /**
-     * The entitlementManagement property
-     */
-    private EntitlementManagement entitlementManagement;
-    /**
-     * The lifecycleWorkflows property
-     */
-    private LifecycleWorkflowsContainer lifecycleWorkflows;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The privilegedAccess property
-     */
-    private PrivilegedAccessRoot privilegedAccess;
-    /**
-     * The termsOfUse property
-     */
-    private TermsOfUseContainer termsOfUse;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new IdentityGovernance and sets the default values.
      */
     public IdentityGovernance() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -64,7 +39,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessReviewSet getAccessReviews() {
-        return this.accessReviews;
+        return this.getBackingStore().get("accessReviews");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -72,7 +47,12 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appConsent property value. The appConsent property
@@ -80,7 +60,15 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AppConsentApprovalRoute getAppConsent() {
-        return this.appConsent;
+        return this.getBackingStore().get("appConsent");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the entitlementManagement property value. The entitlementManagement property
@@ -88,7 +76,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EntitlementManagement getEntitlementManagement() {
-        return this.entitlementManagement;
+        return this.getBackingStore().get("entitlementManagement");
     }
     /**
      * The deserialization information for the current model
@@ -112,7 +100,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowsContainer getLifecycleWorkflows() {
-        return this.lifecycleWorkflows;
+        return this.getBackingStore().get("lifecycleWorkflows");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -120,7 +108,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the privilegedAccess property value. The privilegedAccess property
@@ -128,7 +116,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessRoot getPrivilegedAccess() {
-        return this.privilegedAccess;
+        return this.getBackingStore().get("privilegedAccess");
     }
     /**
      * Gets the termsOfUse property value. The termsOfUse property
@@ -136,7 +124,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TermsOfUseContainer getTermsOfUse() {
-        return this.termsOfUse;
+        return this.getBackingStore().get("termsOfUse");
     }
     /**
      * Serializes information the current object
@@ -151,62 +139,68 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("privilegedAccess", this.getPrivilegedAccess());
         writer.writeObjectValue("termsOfUse", this.getTermsOfUse());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the accessReviews property value. The accessReviews property
      * @param value Value to set for the accessReviews property.
      */
     public void setAccessReviews(@jakarta.annotation.Nullable final AccessReviewSet value) {
-        this.accessReviews = value;
+        this.getBackingStore().set("accessReviews", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the appConsent property value. The appConsent property
      * @param value Value to set for the appConsent property.
      */
     public void setAppConsent(@jakarta.annotation.Nullable final AppConsentApprovalRoute value) {
-        this.appConsent = value;
+        this.getBackingStore().set("appConsent", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property
      * @param value Value to set for the entitlementManagement property.
      */
     public void setEntitlementManagement(@jakarta.annotation.Nullable final EntitlementManagement value) {
-        this.entitlementManagement = value;
+        this.getBackingStore().set("entitlementManagement", value);
     }
     /**
      * Sets the lifecycleWorkflows property value. The lifecycleWorkflows property
      * @param value Value to set for the lifecycleWorkflows property.
      */
     public void setLifecycleWorkflows(@jakarta.annotation.Nullable final LifecycleWorkflowsContainer value) {
-        this.lifecycleWorkflows = value;
+        this.getBackingStore().set("lifecycleWorkflows", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the privilegedAccess property value. The privilegedAccess property
      * @param value Value to set for the privilegedAccess property.
      */
     public void setPrivilegedAccess(@jakarta.annotation.Nullable final PrivilegedAccessRoot value) {
-        this.privilegedAccess = value;
+        this.getBackingStore().set("privilegedAccess", value);
     }
     /**
      * Sets the termsOfUse property value. The termsOfUse property
      * @param value Value to set for the termsOfUse property.
      */
     public void setTermsOfUse(@jakarta.annotation.Nullable final TermsOfUseContainer value) {
-        this.termsOfUse = value;
+        this.getBackingStore().set("termsOfUse", value);
     }
 }

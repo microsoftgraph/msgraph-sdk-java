@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationRubric extends Entity implements Parsable {
     /**
-     * The user who created this resource.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of this rubric.
-     */
-    private EducationItemBody description;
-    /**
-     * The name of this rubric.
-     */
-    private String displayName;
-    /**
-     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
-     */
-    private EducationAssignmentGradeType grading;
-    /**
-     * The last user to modify the resource.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The collection of levels making up this rubric.
-     */
-    private java.util.List<RubricLevel> levels;
-    /**
-     * The collection of qualities making up this rubric.
-     */
-    private java.util.List<RubricQuality> qualities;
-    /**
      * Instantiates a new EducationRubric and sets the default values.
      */
     public EducationRubric() {
@@ -67,7 +31,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.getBackingStore().get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -75,7 +39,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of this rubric.
@@ -83,7 +47,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The name of this rubric.
@@ -91,7 +55,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -117,7 +81,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
-        return this.grading;
+        return this.getBackingStore().get("grading");
     }
     /**
      * Gets the lastModifiedBy property value. The last user to modify the resource.
@@ -125,7 +89,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.getBackingStore().get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -133,7 +97,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the levels property value. The collection of levels making up this rubric.
@@ -141,7 +105,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricLevel> getLevels() {
-        return this.levels;
+        return this.getBackingStore().get("levels");
     }
     /**
      * Gets the qualities property value. The collection of qualities making up this rubric.
@@ -149,7 +113,7 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RubricQuality> getQualities() {
-        return this.qualities;
+        return this.getBackingStore().get("qualities");
     }
     /**
      * Serializes information the current object
@@ -169,62 +133,62 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.getBackingStore().set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of this rubric.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The name of this rubric.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
      * @param value Value to set for the grading property.
      */
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
-        this.grading = value;
+        this.getBackingStore().set("grading", value);
     }
     /**
      * Sets the lastModifiedBy property value. The last user to modify the resource.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.getBackingStore().set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the levels property value. The collection of levels making up this rubric.
      * @param value Value to set for the levels property.
      */
     public void setLevels(@jakarta.annotation.Nullable final java.util.List<RubricLevel> value) {
-        this.levels = value;
+        this.getBackingStore().set("levels", value);
     }
     /**
      * Sets the qualities property value. The collection of qualities making up this rubric.
      * @param value Value to set for the qualities property.
      */
     public void setQualities(@jakarta.annotation.Nullable final java.util.List<RubricQuality> value) {
-        this.qualities = value;
+        this.getBackingStore().set("qualities", value);
     }
 }

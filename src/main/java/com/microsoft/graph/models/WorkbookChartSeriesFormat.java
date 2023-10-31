@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /**
-     * Represents the fill format of a chart series, which includes background formatting information. Read-only.
-     */
-    private WorkbookChartFill fill;
-    /**
-     * Represents line formatting. Read-only.
-     */
-    private WorkbookChartLineFormat line;
-    /**
      * Instantiates a new WorkbookChartSeriesFormat and sets the default values.
      */
     public WorkbookChartSeriesFormat() {
@@ -49,7 +41,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this.fill;
+        return this.getBackingStore().get("fill");
     }
     /**
      * Gets the line property value. Represents line formatting. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this.line;
+        return this.getBackingStore().get("line");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      */
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
-        this.fill = value;
+        this.getBackingStore().set("fill", value);
     }
     /**
      * Sets the line property value. Represents line formatting. Read-only.
      * @param value Value to set for the line property.
      */
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
-        this.line = value;
+        this.getBackingStore().set("line", value);
     }
 }

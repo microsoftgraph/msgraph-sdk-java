@@ -1,59 +1,26 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.PeriodAndDuration;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable {
+public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of days that a request can be pending a response before it is automatically denied.
-     */
-    private PeriodAndDuration durationBeforeAutomaticDenial;
-    /**
-     * If escalation is required, the time a request can be pending a response from a primary approver.
-     */
-    private PeriodAndDuration durationBeforeEscalation;
-    /**
-     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
-     */
-    private java.util.List<SubjectSet> escalationApprovers;
-    /**
-     * The subjects, typically users, who are the fallback escalation approvers.
-     */
-    private java.util.List<SubjectSet> fallbackEscalationApprovers;
-    /**
-     * The subjects, typically users, who are the fallback primary approvers.
-     */
-    private java.util.List<SubjectSet> fallbackPrimaryApprovers;
-    /**
-     * Indicates whether the approver is required to provide a justification for approving a request.
-     */
-    private Boolean isApproverJustificationRequired;
-    /**
-     * If true, then one or more escalationApprovers are configured in this approval stage.
-     */
-    private Boolean isEscalationEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
-     */
-    private java.util.List<SubjectSet> primaryApprovers;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AccessPackageApprovalStage and sets the default values.
      */
     public AccessPackageApprovalStage() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -72,7 +39,20 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
@@ -80,7 +60,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeAutomaticDenial() {
-        return this.durationBeforeAutomaticDenial;
+        return this.getBackingStore().get("durationBeforeAutomaticDenial");
     }
     /**
      * Gets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
@@ -88,7 +68,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeEscalation() {
-        return this.durationBeforeEscalation;
+        return this.getBackingStore().get("durationBeforeEscalation");
     }
     /**
      * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
@@ -96,7 +76,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getEscalationApprovers() {
-        return this.escalationApprovers;
+        return this.getBackingStore().get("escalationApprovers");
     }
     /**
      * Gets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
@@ -104,7 +84,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackEscalationApprovers() {
-        return this.fallbackEscalationApprovers;
+        return this.getBackingStore().get("fallbackEscalationApprovers");
     }
     /**
      * Gets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
@@ -112,7 +92,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackPrimaryApprovers() {
-        return this.fallbackPrimaryApprovers;
+        return this.getBackingStore().get("fallbackPrimaryApprovers");
     }
     /**
      * The deserialization information for the current model
@@ -138,7 +118,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
-        return this.isApproverJustificationRequired;
+        return this.getBackingStore().get("isApproverJustificationRequired");
     }
     /**
      * Gets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
@@ -146,7 +126,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
-        return this.isEscalationEnabled;
+        return this.getBackingStore().get("isEscalationEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -154,7 +134,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
@@ -162,7 +142,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryApprovers() {
-        return this.primaryApprovers;
+        return this.getBackingStore().get("primaryApprovers");
     }
     /**
      * Serializes information the current object
@@ -179,76 +159,82 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
         writer.writeBooleanValue("isEscalationEnabled", this.getIsEscalationEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("primaryApprovers", this.getPrimaryApprovers());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
      * @param value Value to set for the durationBeforeAutomaticDenial property.
      */
     public void setDurationBeforeAutomaticDenial(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationBeforeAutomaticDenial = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("durationBeforeAutomaticDenial", value);
     }
     /**
      * Sets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
      * @param value Value to set for the durationBeforeEscalation property.
      */
     public void setDurationBeforeEscalation(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationBeforeEscalation = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("durationBeforeEscalation", value);
     }
     /**
      * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.escalationApprovers = value;
+        this.getBackingStore().set("escalationApprovers", value);
     }
     /**
      * Sets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
      * @param value Value to set for the fallbackEscalationApprovers property.
      */
     public void setFallbackEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.fallbackEscalationApprovers = value;
+        this.getBackingStore().set("fallbackEscalationApprovers", value);
     }
     /**
      * Sets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
      * @param value Value to set for the fallbackPrimaryApprovers property.
      */
     public void setFallbackPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.fallbackPrimaryApprovers = value;
+        this.getBackingStore().set("fallbackPrimaryApprovers", value);
     }
     /**
      * Sets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
      * @param value Value to set for the isApproverJustificationRequired property.
      */
     public void setIsApproverJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApproverJustificationRequired = value;
+        this.getBackingStore().set("isApproverJustificationRequired", value);
     }
     /**
      * Sets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
      * @param value Value to set for the isEscalationEnabled property.
      */
     public void setIsEscalationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEscalationEnabled = value;
+        this.getBackingStore().set("isEscalationEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
      * @param value Value to set for the primaryApprovers property.
      */
     public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.primaryApprovers = value;
+        this.getBackingStore().set("primaryApprovers", value);
     }
 }

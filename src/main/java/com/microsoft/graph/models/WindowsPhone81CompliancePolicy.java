@@ -12,50 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Maximum Windows Phone version.
-     */
-    private String osMaximumVersion;
-    /**
-     * Minimum Windows Phone version.
-     */
-    private String osMinimumVersion;
-    /**
-     * Whether or not to block syncing the calendar.
-     */
-    private Boolean passwordBlockSimple;
-    /**
-     * Number of days before the password expires.
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * The number of character sets required in the password.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * Minimum length of passwords.
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before a password is required.
-     */
-    private Integer passwordMinutesOfInactivityBeforeLock;
-    /**
-     * Number of previous passwords to block. Valid values 0 to 24
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Whether or not to require a password.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * Require encryption on windows phone devices.
-     */
-    private Boolean storageRequireEncryption;
-    /**
      * Instantiates a new WindowsPhone81CompliancePolicy and sets the default values.
      */
     public WindowsPhone81CompliancePolicy() {
@@ -98,7 +54,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.getBackingStore().get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows Phone version.
@@ -106,7 +62,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.getBackingStore().get("osMinimumVersion");
     }
     /**
      * Gets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
@@ -114,7 +70,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this.passwordBlockSimple;
+        return this.getBackingStore().get("passwordBlockSimple");
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
@@ -122,7 +78,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.getBackingStore().get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -130,7 +86,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.getBackingStore().get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
@@ -138,7 +94,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.getBackingStore().get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -146,7 +102,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this.passwordMinutesOfInactivityBeforeLock;
+        return this.getBackingStore().get("passwordMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
@@ -154,7 +110,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.getBackingStore().get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
@@ -162,7 +118,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.getBackingStore().get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -170,7 +126,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.getBackingStore().get("passwordRequiredType");
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows phone devices.
@@ -178,7 +134,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.getBackingStore().get("storageRequireEncryption");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.getBackingStore().set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.getBackingStore().set("osMinimumVersion", value);
     }
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockSimple = value;
+        this.getBackingStore().set("passwordBlockSimple", value);
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.getBackingStore().set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.getBackingStore().set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.getBackingStore().set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      */
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeLock = value;
+        this.getBackingStore().set("passwordMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.getBackingStore().set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.getBackingStore().set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.getBackingStore().set("passwordRequiredType", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows phone devices.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.getBackingStore().set("storageRequireEncryption", value);
     }
 }

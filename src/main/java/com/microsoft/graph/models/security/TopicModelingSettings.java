@@ -1,42 +1,25 @@
 package com.microsoft.graph.models.security;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
+public class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
-     */
-    private Boolean dynamicallyAdjustTopicCount;
-    /**
-     * Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
-     */
-    private Boolean ignoreNumbers;
-    /**
-     * Indicates whether themes model is enabled for the case.
-     */
-    private Boolean isEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
-     */
-    private Integer topicCount;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TopicModelingSettings and sets the default values.
      */
     public TopicModelingSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
@@ -63,7 +59,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getDynamicallyAdjustTopicCount() {
-        return this.dynamicallyAdjustTopicCount;
+        return this.getBackingStore().get("dynamicallyAdjustTopicCount");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +81,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreNumbers() {
-        return this.ignoreNumbers;
+        return this.getBackingStore().get("ignoreNumbers");
     }
     /**
      * Gets the isEnabled property value. Indicates whether themes model is enabled for the case.
@@ -93,7 +89,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +97,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
@@ -109,7 +105,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTopicCount() {
-        return this.topicCount;
+        return this.getBackingStore().get("topicCount");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("topicCount", this.getTopicCount());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      * @param value Value to set for the dynamicallyAdjustTopicCount property.
      */
     public void setDynamicallyAdjustTopicCount(@jakarta.annotation.Nullable final Boolean value) {
-        this.dynamicallyAdjustTopicCount = value;
+        this.getBackingStore().set("dynamicallyAdjustTopicCount", value);
     }
     /**
      * Sets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      * @param value Value to set for the ignoreNumbers property.
      */
     public void setIgnoreNumbers(@jakarta.annotation.Nullable final Boolean value) {
-        this.ignoreNumbers = value;
+        this.getBackingStore().set("ignoreNumbers", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether themes model is enabled for the case.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      * @param value Value to set for the topicCount property.
      */
     public void setTopicCount(@jakarta.annotation.Nullable final Integer value) {
-        this.topicCount = value;
+        this.getBackingStore().set("topicCount", value);
     }
 }

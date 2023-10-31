@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyBase extends DirectoryObject implements Parsable {
     /**
-     * Description for this policy. Required.
-     */
-    private String description;
-    /**
-     * Display name for this policy. Required.
-     */
-    private String displayName;
-    /**
      * Instantiates a new PolicyBase and sets the default values.
      */
     public PolicyBase() {
@@ -57,7 +49,7 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Display name for this policy. Required.
@@ -65,7 +57,7 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -93,13 +85,13 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for this policy. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
 }

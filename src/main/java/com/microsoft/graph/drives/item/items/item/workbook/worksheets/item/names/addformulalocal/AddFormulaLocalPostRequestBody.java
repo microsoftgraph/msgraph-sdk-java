@@ -1,34 +1,25 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.names.addformulalocal;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The comment property
-     */
-    private String comment;
-    /**
-     * The formula property
-     */
-    private String formula;
-    /**
-     * The name property
-     */
-    private String name;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AddFormulaLocalPostRequestBody and sets the default values.
      */
     public AddFormulaLocalPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,20 @@ public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comment property value. The comment property
@@ -55,7 +59,7 @@ public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.getBackingStore().get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +79,7 @@ public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getFormula() {
-        return this.formula;
+        return this.getBackingStore().get("formula");
     }
     /**
      * Gets the name property value. The name property
@@ -83,7 +87,7 @@ public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, Par
         writer.writeStringValue("comment", this.getComment());
         writer.writeStringValue("formula", this.getFormula());
         writer.writeStringValue("name", this.getName());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.getBackingStore().set("comment", value);
     }
     /**
      * Sets the formula property value. The formula property
      * @param value Value to set for the formula property.
      */
     public void setFormula(@jakarta.annotation.Nullable final String value) {
-        this.formula = value;
+        this.getBackingStore().set("formula", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
 }

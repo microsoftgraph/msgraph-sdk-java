@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalDomainFederation extends IdentitySource implements Parsable {
     /**
-     * The name of the identity source, typically also the domain name. Read only.
-     */
-    private String displayName;
-    /**
-     * The domain name. Read only.
-     */
-    private String domainName;
-    /**
-     * The issuerURI of the incoming federation. Read only.
-     */
-    private String issuerUri;
-    /**
      * Instantiates a new ExternalDomainFederation and sets the default values.
      */
     public ExternalDomainFederation() {
@@ -43,7 +31,7 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the domainName property value. The domain name. Read only.
@@ -51,7 +39,7 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.getBackingStore().get("domainName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getIssuerUri() {
-        return this.issuerUri;
+        return this.getBackingStore().get("issuerUri");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the domainName property value. The domain name. Read only.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.getBackingStore().set("domainName", value);
     }
     /**
      * Sets the issuerUri property value. The issuerURI of the incoming federation. Read only.
      * @param value Value to set for the issuerUri property.
      */
     public void setIssuerUri(@jakarta.annotation.Nullable final String value) {
-        this.issuerUri = value;
+        this.getBackingStore().set("issuerUri", value);
     }
 }

@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
-     * Description for the policy.
-     */
-    private String description;
-    /**
-     * Display name for the policy.
-     */
-    private String displayName;
-    /**
-     * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
-     */
-    private java.util.List<UnifiedRoleManagementPolicyRule> effectiveRules;
-    /**
-     * This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
-     */
-    private Boolean isOrganizationDefault;
-    /**
-     * The identity who last modified the role setting.
-     */
-    private Identity lastModifiedBy;
-    /**
-     * The time when the role setting was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The collection of rules like approval rules and expiration rules. Supports $expand.
-     */
-    private java.util.List<UnifiedRoleManagementPolicyRule> rules;
-    /**
-     * The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
-     */
-    private String scopeId;
-    /**
-     * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
-     */
-    private String scopeType;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
      */
     public UnifiedRoleManagementPolicy() {
@@ -67,7 +31,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Display name for the policy.
@@ -75,7 +39,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
@@ -83,7 +47,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getEffectiveRules() {
-        return this.effectiveRules;
+        return this.getBackingStore().get("effectiveRules");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +73,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
-        return this.isOrganizationDefault;
+        return this.getBackingStore().get("isOrganizationDefault");
     }
     /**
      * Gets the lastModifiedBy property value. The identity who last modified the role setting.
@@ -117,7 +81,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.getBackingStore().get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The time when the role setting was last modified.
@@ -125,7 +89,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
@@ -133,7 +97,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getRules() {
-        return this.rules;
+        return this.getBackingStore().get("rules");
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
@@ -141,7 +105,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
-        return this.scopeId;
+        return this.getBackingStore().get("scopeId");
     }
     /**
      * Gets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
@@ -149,7 +113,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
-        return this.scopeType;
+        return this.getBackingStore().get("scopeType");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @param value Value to set for the effectiveRules property.
      */
     public void setEffectiveRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
-        this.effectiveRules = value;
+        this.getBackingStore().set("effectiveRules", value);
     }
     /**
      * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
      * @param value Value to set for the isOrganizationDefault property.
      */
     public void setIsOrganizationDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOrganizationDefault = value;
+        this.getBackingStore().set("isOrganizationDefault", value);
     }
     /**
      * Sets the lastModifiedBy property value. The identity who last modified the role setting.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final Identity value) {
-        this.lastModifiedBy = value;
+        this.getBackingStore().set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The time when the role setting was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
-        this.rules = value;
+        this.getBackingStore().set("rules", value);
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
-        this.scopeId = value;
+        this.getBackingStore().set("scopeId", value);
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole, Group. Required.
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
-        this.scopeType = value;
+        this.getBackingStore().set("scopeType", value);
     }
 }

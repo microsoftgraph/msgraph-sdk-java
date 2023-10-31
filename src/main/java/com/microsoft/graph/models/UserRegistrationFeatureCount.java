@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsable {
+public class UserRegistrationFeatureCount implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The feature property
-     */
-    private AuthenticationMethodFeature feature;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of users.
-     */
-    private Long userCount;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserRegistrationFeatureCount and sets the default values.
      */
     public UserRegistrationFeatureCount() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,20 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the feature property value. The feature property
@@ -55,7 +59,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodFeature getFeature() {
-        return this.feature;
+        return this.getBackingStore().get("feature");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +79,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the userCount property value. Number of users.
@@ -83,7 +87,7 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Long getUserCount() {
-        return this.userCount;
+        return this.getBackingStore().get("userCount");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class UserRegistrationFeatureCount implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("feature", this.getFeature());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("userCount", this.getUserCount());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final AuthenticationMethodFeature value) {
-        this.feature = value;
+        this.getBackingStore().set("feature", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the userCount property value. Number of users.
      * @param value Value to set for the userCount property.
      */
     public void setUserCount(@jakarta.annotation.Nullable final Long value) {
-        this.userCount = value;
+        this.getBackingStore().set("userCount", value);
     }
 }

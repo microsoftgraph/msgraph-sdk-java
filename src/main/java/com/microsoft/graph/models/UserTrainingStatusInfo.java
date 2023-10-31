@@ -1,43 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
+public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Date and time of assignment of the training to the user.
-     */
-    private OffsetDateTime assignedDateTime;
-    /**
-     * Date and time of completion of the training by the user.
-     */
-    private OffsetDateTime completionDateTime;
-    /**
-     * Display name of the assigned training.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     */
-    private TrainingStatus trainingStatus;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserTrainingStatusInfo and sets the default values.
      */
     public UserTrainingStatusInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +39,12 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedDateTime property value. Date and time of assignment of the training to the user.
@@ -64,7 +52,15 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
-        return this.assignedDateTime;
+        return this.getBackingStore().get("assignedDateTime");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the completionDateTime property value. Date and time of completion of the training by the user.
@@ -72,7 +68,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
-        return this.completionDateTime;
+        return this.getBackingStore().get("completionDateTime");
     }
     /**
      * Gets the displayName property value. Display name of the assigned training.
@@ -80,7 +76,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -102,7 +98,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
@@ -110,7 +106,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TrainingStatus getTrainingStatus() {
-        return this.trainingStatus;
+        return this.getBackingStore().get("trainingStatus");
     }
     /**
      * Serializes information the current object
@@ -123,48 +119,54 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("trainingStatus", this.getTrainingStatus());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the assignedDateTime property value. Date and time of assignment of the training to the user.
      * @param value Value to set for the assignedDateTime property.
      */
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.assignedDateTime = value;
+        this.getBackingStore().set("assignedDateTime", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the completionDateTime property value. Date and time of completion of the training by the user.
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completionDateTime = value;
+        this.getBackingStore().set("completionDateTime", value);
     }
     /**
      * Sets the displayName property value. Display name of the assigned training.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
      */
     public void setTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {
-        this.trainingStatus = value;
+        this.getBackingStore().set("trainingStatus", value);
     }
 }

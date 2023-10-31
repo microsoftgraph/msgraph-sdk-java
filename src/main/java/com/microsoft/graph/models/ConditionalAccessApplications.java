@@ -1,46 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessApplications implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The applicationFilter property
-     */
-    private ConditionalAccessFilter applicationFilter;
-    /**
-     * Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
-     */
-    private java.util.List<String> excludeApplications;
-    /**
-     * Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
-     */
-    private java.util.List<String> includeApplications;
-    /**
-     * The includeAuthenticationContextClassReferences property
-     */
-    private java.util.List<String> includeAuthenticationContextClassReferences;
-    /**
-     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
-     */
-    private java.util.List<String> includeUserActions;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConditionalAccessApplications and sets the default values.
      */
     public ConditionalAccessApplications() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +38,12 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationFilter property value. The applicationFilter property
@@ -67,7 +51,15 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessFilter getApplicationFilter() {
-        return this.applicationFilter;
+        return this.getBackingStore().get("applicationFilter");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
@@ -75,7 +67,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeApplications() {
-        return this.excludeApplications;
+        return this.getBackingStore().get("excludeApplications");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +90,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeApplications() {
-        return this.includeApplications;
+        return this.getBackingStore().get("includeApplications");
     }
     /**
      * Gets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
@@ -106,7 +98,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeAuthenticationContextClassReferences() {
-        return this.includeAuthenticationContextClassReferences;
+        return this.getBackingStore().get("includeAuthenticationContextClassReferences");
     }
     /**
      * Gets the includeUserActions property value. User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
@@ -114,7 +106,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeUserActions() {
-        return this.includeUserActions;
+        return this.getBackingStore().get("includeUserActions");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -122,7 +114,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -136,55 +128,61 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         writer.writeCollectionOfPrimitiveValues("includeAuthenticationContextClassReferences", this.getIncludeAuthenticationContextClassReferences());
         writer.writeCollectionOfPrimitiveValues("includeUserActions", this.getIncludeUserActions());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the applicationFilter property value. The applicationFilter property
      * @param value Value to set for the applicationFilter property.
      */
     public void setApplicationFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
-        this.applicationFilter = value;
+        this.getBackingStore().set("applicationFilter", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      * @param value Value to set for the excludeApplications property.
      */
     public void setExcludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeApplications = value;
+        this.getBackingStore().set("excludeApplications", value);
     }
     /**
      * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      * @param value Value to set for the includeApplications property.
      */
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeApplications = value;
+        this.getBackingStore().set("includeApplications", value);
     }
     /**
      * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @param value Value to set for the includeAuthenticationContextClassReferences property.
      */
     public void setIncludeAuthenticationContextClassReferences(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeAuthenticationContextClassReferences = value;
+        this.getBackingStore().set("includeAuthenticationContextClassReferences", value);
     }
     /**
      * Sets the includeUserActions property value. User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
      * @param value Value to set for the includeUserActions property.
      */
     public void setIncludeUserActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeUserActions = value;
+        this.getBackingStore().set("includeUserActions", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

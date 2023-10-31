@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalItem extends Entity implements Parsable {
     /**
-     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
-     */
-    private java.util.List<Acl> acl;
-    /**
-     * Returns a list of activities performed on the item. Write-only.
-     */
-    private java.util.List<ExternalActivity> activities;
-    /**
-     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
-     */
-    private ExternalItemContent content;
-    /**
-     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
-     */
-    private Properties properties;
-    /**
      * Instantiates a new ExternalItem and sets the default values.
      */
     public ExternalItem() {
@@ -47,7 +31,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acl> getAcl() {
-        return this.acl;
+        return this.getBackingStore().get("acl");
     }
     /**
      * Gets the activities property value. Returns a list of activities performed on the item. Write-only.
@@ -55,7 +39,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalActivity> getActivities() {
-        return this.activities;
+        return this.getBackingStore().get("activities");
     }
     /**
      * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -63,7 +47,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ExternalItemContent getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +68,7 @@ public class ExternalItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Properties getProperties() {
-        return this.properties;
+        return this.getBackingStore().get("properties");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ExternalItem extends Entity implements Parsable {
      * @param value Value to set for the acl property.
      */
     public void setAcl(@jakarta.annotation.Nullable final java.util.List<Acl> value) {
-        this.acl = value;
+        this.getBackingStore().set("acl", value);
     }
     /**
      * Sets the activities property value. Returns a list of activities performed on the item. Write-only.
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ExternalActivity> value) {
-        this.activities = value;
+        this.getBackingStore().set("activities", value);
     }
     /**
      * Sets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final ExternalItemContent value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final Properties value) {
-        this.properties = value;
+        this.getBackingStore().set("properties", value);
     }
 }

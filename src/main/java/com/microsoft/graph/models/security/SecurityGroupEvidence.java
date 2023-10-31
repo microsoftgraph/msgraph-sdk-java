@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
-     * The name of the security group.
-     */
-    private String displayName;
-    /**
-     * Unique identifier of the security group.
-     */
-    private String securityGroupId;
-    /**
      * Instantiates a new SecurityGroupEvidence and sets the default values.
      */
     public SecurityGroupEvidence() {
@@ -39,7 +31,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSecurityGroupId() {
-        return this.securityGroupId;
+        return this.getBackingStore().get("securityGroupId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the securityGroupId property value. Unique identifier of the security group.
      * @param value Value to set for the securityGroupId property.
      */
     public void setSecurityGroupId(@jakarta.annotation.Nullable final String value) {
-        this.securityGroupId = value;
+        this.getBackingStore().set("securityGroupId", value);
     }
 }

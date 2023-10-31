@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable {
     /**
-     * Not yet documented
-     */
-    private String domainName;
-    /**
-     * Not yet documented
-     */
-    private String userName;
-    /**
      * Instantiates a new WindowsDeviceADAccount and sets the default values.
      */
     public WindowsDeviceADAccount() {
@@ -39,7 +31,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.getBackingStore().get("domainName");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.getBackingStore().get("userName");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.getBackingStore().set("domainName", value);
     }
     /**
      * Sets the userName property value. Not yet documented
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.getBackingStore().set("userName", value);
     }
 }

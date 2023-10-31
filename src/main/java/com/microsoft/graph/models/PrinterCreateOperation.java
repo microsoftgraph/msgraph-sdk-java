@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
-     * The signed certificate created during the registration process. Read-only.
-     */
-    private String certificate;
-    /**
-     * The created printer entity. Read-only.
-     */
-    private Printer printer;
-    /**
      * Instantiates a new PrinterCreateOperation and sets the default values.
      */
     public PrinterCreateOperation() {
@@ -39,7 +31,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCertificate() {
-        return this.certificate;
+        return this.getBackingStore().get("certificate");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Printer getPrinter() {
-        return this.printer;
+        return this.getBackingStore().get("printer");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final String value) {
-        this.certificate = value;
+        this.getBackingStore().set("certificate", value);
     }
     /**
      * Sets the printer property value. The created printer entity. Read-only.
      * @param value Value to set for the printer property.
      */
     public void setPrinter(@jakarta.annotation.Nullable final Printer value) {
-        this.printer = value;
+        this.getBackingStore().set("printer", value);
     }
 }

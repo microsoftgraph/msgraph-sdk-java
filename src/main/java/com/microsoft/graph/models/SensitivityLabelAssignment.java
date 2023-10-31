@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsable {
+public class SensitivityLabelAssignment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The assignmentMethod property
-     */
-    private SensitivityLabelAssignmentMethod assignmentMethod;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier for the sensitivity label assigned to the file.
-     */
-    private String sensitivityLabelId;
-    /**
-     * The unique identifier for the tenant that hosts the file when this label is applied.
-     */
-    private String tenantId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SensitivityLabelAssignment and sets the default values.
      */
     public SensitivityLabelAssignment() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,12 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
@@ -59,7 +51,15 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {
-        return this.assignmentMethod;
+        return this.getBackingStore().get("assignmentMethod");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +80,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.
@@ -88,7 +88,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
-        return this.sensitivityLabelId;
+        return this.getBackingStore().get("sensitivityLabelId");
     }
     /**
      * Gets the tenantId property value. The unique identifier for the tenant that hosts the file when this label is applied.
@@ -96,7 +96,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
         writer.writeStringValue("tenantId", this.getTenantId());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      */
     public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
-        this.assignmentMethod = value;
+        this.getBackingStore().set("assignmentMethod", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.
      * @param value Value to set for the sensitivityLabelId property.
      */
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
-        this.sensitivityLabelId = value;
+        this.getBackingStore().set("sensitivityLabelId", value);
     }
     /**
      * Sets the tenantId property value. The unique identifier for the tenant that hosts the file when this label is applied.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
 }

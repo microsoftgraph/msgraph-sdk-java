@@ -1,43 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Parsable {
+public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Information about why the updateAllowedCombinations action was successful or failed.
-     */
-    private String additionalInformation;
-    /**
-     * References to existing Conditional Access policies that use this authentication strength.
-     */
-    private java.util.List<String> conditionalAccessReferences;
-    /**
-     * The list of current authentication method combinations allowed by the authentication strength.
-     */
-    private java.util.List<AuthenticationMethodModes> currentCombinations;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
-     */
-    private java.util.List<AuthenticationMethodModes> previousCombinations;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UpdateAllowedCombinationsResult and sets the default values.
      */
     public UpdateAllowedCombinationsResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +38,12 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
@@ -64,7 +51,15 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
-        return this.additionalInformation;
+        return this.getBackingStore().get("additionalInformation");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
@@ -72,7 +67,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getConditionalAccessReferences() {
-        return this.conditionalAccessReferences;
+        return this.getBackingStore().get("conditionalAccessReferences");
     }
     /**
      * Gets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
@@ -80,7 +75,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCurrentCombinations() {
-        return this.currentCombinations;
+        return this.getBackingStore().get("currentCombinations");
     }
     /**
      * The deserialization information for the current model
@@ -102,7 +97,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
@@ -110,7 +105,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getPreviousCombinations() {
-        return this.previousCombinations;
+        return this.getBackingStore().get("previousCombinations");
     }
     /**
      * Serializes information the current object
@@ -123,48 +118,54 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
         writer.writeCollectionOfEnumValues("currentCombinations", this.getCurrentCombinations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfEnumValues("previousCombinations", this.getPreviousCombinations());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
-        this.additionalInformation = value;
+        this.getBackingStore().set("additionalInformation", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
      * @param value Value to set for the conditionalAccessReferences property.
      */
     public void setConditionalAccessReferences(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.conditionalAccessReferences = value;
+        this.getBackingStore().set("conditionalAccessReferences", value);
     }
     /**
      * Sets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
      * @param value Value to set for the currentCombinations property.
      */
     public void setCurrentCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.currentCombinations = value;
+        this.getBackingStore().set("currentCombinations", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      * @param value Value to set for the previousCombinations property.
      */
     public void setPreviousCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.previousCombinations = value;
+        this.getBackingStore().set("previousCombinations", value);
     }
 }

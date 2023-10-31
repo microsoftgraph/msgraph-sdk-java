@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
+public class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Number of users who were assigned the training in an attack simulation and training campaign.
-     */
-    private Integer assignedUserCount;
-    /**
-     * Number of users who completed the training in an attack simulation and training campaign.
-     */
-    private Integer completedUserCount;
-    /**
-     * Display name of the training in an attack simulation and training campaign.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AssignedTrainingInfo and sets the default values.
      */
     public AssignedTrainingInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,12 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
@@ -59,7 +51,15 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedUserCount() {
-        return this.assignedUserCount;
+        return this.getBackingStore().get("assignedUserCount");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
@@ -67,7 +67,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCompletedUserCount() {
-        return this.completedUserCount;
+        return this.getBackingStore().get("completedUserCount");
     }
     /**
      * Gets the displayName property value. Display name of the training in an attack simulation and training campaign.
@@ -75,7 +75,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +96,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("completedUserCount", this.getCompletedUserCount());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
      * @param value Value to set for the assignedUserCount property.
      */
     public void setAssignedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.assignedUserCount = value;
+        this.getBackingStore().set("assignedUserCount", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
      * @param value Value to set for the completedUserCount property.
      */
     public void setCompletedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.completedUserCount = value;
+        this.getBackingStore().set("completedUserCount", value);
     }
     /**
      * Sets the displayName property value. Display name of the training in an attack simulation and training campaign.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

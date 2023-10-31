@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileProperties extends Entity implements Parsable {
     /**
-     * The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
-     */
-    private String displayName;
-    /**
-     * Data that represents the terms of use PDF document. Read-only.
-     */
-    private AgreementFileData fileData;
-    /**
-     * Name of the agreement file (for example, TOU.pdf). Read-only.
-     */
-    private String fileName;
-    /**
-     * If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
-     */
-    private Boolean isDefault;
-    /**
-     * Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
-     */
-    private Boolean isMajorVersion;
-    /**
-     * The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
-     */
-    private String language;
-    /**
      * Instantiates a new AgreementFileProperties and sets the default values.
      */
     public AgreementFileProperties() {
@@ -68,7 +40,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
@@ -76,7 +48,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +72,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AgreementFileData getFileData() {
-        return this.fileData;
+        return this.getBackingStore().get("fileData");
     }
     /**
      * Gets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
@@ -108,7 +80,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.getBackingStore().get("fileName");
     }
     /**
      * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
@@ -116,7 +88,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.getBackingStore().get("isDefault");
     }
     /**
      * Gets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
@@ -124,7 +96,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMajorVersion() {
-        return this.isMajorVersion;
+        return this.getBackingStore().get("isMajorVersion");
     }
     /**
      * Gets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
@@ -132,7 +104,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.getBackingStore().get("language");
     }
     /**
      * Serializes information the current object
@@ -154,48 +126,48 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the fileData property value. Data that represents the terms of use PDF document. Read-only.
      * @param value Value to set for the fileData property.
      */
     public void setFileData(@jakarta.annotation.Nullable final AgreementFileData value) {
-        this.fileData = value;
+        this.getBackingStore().set("fileData", value);
     }
     /**
      * Sets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.getBackingStore().set("fileName", value);
     }
     /**
      * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.getBackingStore().set("isDefault", value);
     }
     /**
      * Sets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
      * @param value Value to set for the isMajorVersion property.
      */
     public void setIsMajorVersion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMajorVersion = value;
+        this.getBackingStore().set("isMajorVersion", value);
     }
     /**
      * Sets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.getBackingStore().set("language", value);
     }
 }

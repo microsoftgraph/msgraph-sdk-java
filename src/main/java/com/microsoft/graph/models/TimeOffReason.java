@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /**
-     * The name of the timeOffReason. Required.
-     */
-    private String displayName;
-    /**
-     * Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
-     */
-    private TimeOffReasonIconType iconType;
-    /**
-     * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
-     */
-    private Boolean isActive;
-    /**
      * Instantiates a new TimeOffReason and sets the default values.
      */
     public TimeOffReason() {
@@ -43,7 +31,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TimeOffReasonIconType getIconType() {
-        return this.iconType;
+        return this.getBackingStore().get("iconType");
     }
     /**
      * Gets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
@@ -71,7 +59,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.getBackingStore().get("isActive");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @param value Value to set for the iconType property.
      */
     public void setIconType(@jakarta.annotation.Nullable final TimeOffReasonIconType value) {
-        this.iconType = value;
+        this.getBackingStore().set("iconType", value);
     }
     /**
      * Sets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.getBackingStore().set("isActive", value);
     }
 }

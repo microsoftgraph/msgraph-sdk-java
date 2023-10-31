@@ -11,46 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
-     * The user who closed the case.
-     */
-    private IdentitySet closedBy;
-    /**
-     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime closedDateTime;
-    /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
-     */
-    private java.util.List<EdiscoveryCustodian> custodians;
-    /**
-     * The external case number for customer reference.
-     */
-    private String externalId;
-    /**
-     * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
-     */
-    private java.util.List<EdiscoveryNoncustodialDataSource> noncustodialDataSources;
-    /**
-     * Returns a list of case caseOperation objects for this case.
-     */
-    private java.util.List<CaseOperation> operations;
-    /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
-     */
-    private java.util.List<EdiscoveryReviewSet> reviewSets;
-    /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
-     */
-    private java.util.List<EdiscoverySearch> searches;
-    /**
-     * Returns a list of eDIscoverySettings objects in the case.
-     */
-    private EdiscoveryCaseSettings settings;
-    /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
-     */
-    private java.util.List<EdiscoveryReviewTag> tags;
-    /**
      * Instantiates a new EdiscoveryCase and sets the default values.
      */
     public EdiscoveryCase() {
@@ -73,7 +33,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
-        return this.closedBy;
+        return this.getBackingStore().get("closedBy");
     }
     /**
      * Gets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -81,7 +41,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
-        return this.closedDateTime;
+        return this.getBackingStore().get("closedDateTime");
     }
     /**
      * Gets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
@@ -89,7 +49,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryCustodian> getCustodians() {
-        return this.custodians;
+        return this.getBackingStore().get("custodians");
     }
     /**
      * Gets the externalId property value. The external case number for customer reference.
@@ -97,7 +57,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.getBackingStore().get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -124,7 +84,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryNoncustodialDataSource> getNoncustodialDataSources() {
-        return this.noncustodialDataSources;
+        return this.getBackingStore().get("noncustodialDataSources");
     }
     /**
      * Gets the operations property value. Returns a list of case caseOperation objects for this case.
@@ -132,7 +92,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
-        return this.operations;
+        return this.getBackingStore().get("operations");
     }
     /**
      * Gets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
@@ -140,7 +100,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewSet> getReviewSets() {
-        return this.reviewSets;
+        return this.getBackingStore().get("reviewSets");
     }
     /**
      * Gets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
@@ -148,7 +108,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoverySearch> getSearches() {
-        return this.searches;
+        return this.getBackingStore().get("searches");
     }
     /**
      * Gets the settings property value. Returns a list of eDIscoverySettings objects in the case.
@@ -156,7 +116,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCaseSettings getSettings() {
-        return this.settings;
+        return this.getBackingStore().get("settings");
     }
     /**
      * Gets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
@@ -164,7 +124,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTags() {
-        return this.tags;
+        return this.getBackingStore().get("tags");
     }
     /**
      * Serializes information the current object
@@ -189,69 +149,69 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * @param value Value to set for the closedBy property.
      */
     public void setClosedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.closedBy = value;
+        this.getBackingStore().set("closedBy", value);
     }
     /**
      * Sets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the closedDateTime property.
      */
     public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.closedDateTime = value;
+        this.getBackingStore().set("closedDateTime", value);
     }
     /**
      * Sets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
      * @param value Value to set for the custodians property.
      */
     public void setCustodians(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCustodian> value) {
-        this.custodians = value;
+        this.getBackingStore().set("custodians", value);
     }
     /**
      * Sets the externalId property value. The external case number for customer reference.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.getBackingStore().set("externalId", value);
     }
     /**
      * Sets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @param value Value to set for the noncustodialDataSources property.
      */
     public void setNoncustodialDataSources(@jakarta.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
-        this.noncustodialDataSources = value;
+        this.getBackingStore().set("noncustodialDataSources", value);
     }
     /**
      * Sets the operations property value. Returns a list of case caseOperation objects for this case.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<CaseOperation> value) {
-        this.operations = value;
+        this.getBackingStore().set("operations", value);
     }
     /**
      * Sets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
      * @param value Value to set for the reviewSets property.
      */
     public void setReviewSets(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewSet> value) {
-        this.reviewSets = value;
+        this.getBackingStore().set("reviewSets", value);
     }
     /**
      * Sets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
      * @param value Value to set for the searches property.
      */
     public void setSearches(@jakarta.annotation.Nullable final java.util.List<EdiscoverySearch> value) {
-        this.searches = value;
+        this.getBackingStore().set("searches", value);
     }
     /**
      * Sets the settings property value. Returns a list of eDIscoverySettings objects in the case.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final EdiscoveryCaseSettings value) {
-        this.settings = value;
+        this.getBackingStore().set("settings", value);
     }
     /**
      * Sets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this.tags = value;
+        this.getBackingStore().set("tags", value);
     }
 }

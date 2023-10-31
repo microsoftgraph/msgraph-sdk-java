@@ -1,31 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.chisq_inv;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChiSqInvPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ChiSqInvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The degFreedom property
-     */
-    private Json degFreedom;
-    /**
-     * The probability property
-     */
-    private Json probability;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ChiSqInvPostRequestBody and sets the default values.
      */
     public ChiSqInvPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +39,20 @@ public class ChiSqInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the degFreedom property value. The degFreedom property
@@ -52,7 +60,7 @@ public class ChiSqInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDegFreedom() {
-        return this.degFreedom;
+        return this.getBackingStore().get("degFreedom");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +79,7 @@ public class ChiSqInvPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getProbability() {
-        return this.probability;
+        return this.getBackingStore().get("probability");
     }
     /**
      * Serializes information the current object
@@ -81,27 +89,33 @@ public class ChiSqInvPostRequestBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("degFreedom", this.getDegFreedom());
         writer.writeObjectValue("probability", this.getProbability());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the degFreedom property value. The degFreedom property
      * @param value Value to set for the degFreedom property.
      */
     public void setDegFreedom(@jakarta.annotation.Nullable final Json value) {
-        this.degFreedom = value;
+        this.getBackingStore().set("degFreedom", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
     public void setProbability(@jakarta.annotation.Nullable final Json value) {
-        this.probability = value;
+        this.getBackingStore().set("probability", value);
     }
 }

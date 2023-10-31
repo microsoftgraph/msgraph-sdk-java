@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
     /**
-     * If present, represents a conversation (for example, team or channel) @mentioned in a message.
-     */
-    private TeamworkConversationIdentity conversation;
-    /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
      */
     public ChatMessageMentionedIdentitySet() {
@@ -35,7 +31,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     @jakarta.annotation.Nullable
     public TeamworkConversationIdentity getConversation() {
-        return this.conversation;
+        return this.getBackingStore().get("conversation");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param value Value to set for the conversation property.
      */
     public void setConversation(@jakarta.annotation.Nullable final TeamworkConversationIdentity value) {
-        this.conversation = value;
+        this.getBackingStore().set("conversation", value);
     }
 }

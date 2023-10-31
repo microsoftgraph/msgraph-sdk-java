@@ -3,16 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationCombinationConfiguration extends Entity implements Parsable {
-    /**
-     * Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
-     */
-    private java.util.List<AuthenticationMethodModes> appliesToCombinations;
     /**
      * Instantiates a new AuthenticationCombinationConfiguration and sets the default values.
      */
@@ -42,7 +37,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAppliesToCombinations() {
-        return this.appliesToCombinations;
+        return this.getBackingStore().get("appliesToCombinations");
     }
     /**
      * The deserialization information for the current model
@@ -68,6 +63,6 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
      * @param value Value to set for the appliesToCombinations property.
      */
     public void setAppliesToCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.appliesToCombinations = value;
+        this.getBackingStore().set("appliesToCombinations", value);
     }
 }

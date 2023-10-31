@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationOperation extends LongRunningOperation implements Parsable {
     /**
-     * The percentageCompleted property
-     */
-    private Integer percentageCompleted;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The type property
-     */
-    private AttackSimulationOperationType type;
-    /**
      * Instantiates a new AttackSimulationOperation and sets the default values.
      */
     public AttackSimulationOperation() {
@@ -49,28 +37,28 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
         return deserializerMap;
     }
     /**
-     * Gets the percentageCompleted property value. The percentageCompleted property
+     * Gets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageCompleted() {
-        return this.percentageCompleted;
+        return this.getBackingStore().get("percentageCompleted");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Tenant identifier.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @return a AttackSimulationOperationType
      */
     @jakarta.annotation.Nullable
     public AttackSimulationOperationType getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -84,24 +72,24 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the percentageCompleted property value. The percentageCompleted property
+     * Sets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @param value Value to set for the percentageCompleted property.
      */
     public void setPercentageCompleted(@jakarta.annotation.Nullable final Integer value) {
-        this.percentageCompleted = value;
+        this.getBackingStore().set("percentageCompleted", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Tenant identifier.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttackSimulationOperationType value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

@@ -1,31 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.rept;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReptPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The numberTimes property
-     */
-    private Json numberTimes;
-    /**
-     * The text property
-     */
-    private Json text;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ReptPostRequestBody and sets the default values.
      */
     public ReptPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +39,20 @@ public class ReptPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +71,7 @@ public class ReptPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumberTimes() {
-        return this.numberTimes;
+        return this.getBackingStore().get("numberTimes");
     }
     /**
      * Gets the text property value. The text property
@@ -71,7 +79,7 @@ public class ReptPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getText() {
-        return this.text;
+        return this.getBackingStore().get("text");
     }
     /**
      * Serializes information the current object
@@ -81,27 +89,33 @@ public class ReptPostRequestBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("numberTimes", this.getNumberTimes());
         writer.writeObjectValue("text", this.getText());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the numberTimes property value. The numberTimes property
      * @param value Value to set for the numberTimes property.
      */
     public void setNumberTimes(@jakarta.annotation.Nullable final Json value) {
-        this.numberTimes = value;
+        this.getBackingStore().set("numberTimes", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final Json value) {
-        this.text = value;
+        this.getBackingStore().set("text", value);
     }
 }

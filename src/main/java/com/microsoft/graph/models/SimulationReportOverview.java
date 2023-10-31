@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SimulationReportOverview implements AdditionalDataHolder, Parsable {
+public class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
-     */
-    private java.util.List<RecommendedAction> recommendedActions;
-    /**
-     * Number of valid users in the attack simulation and training campaign.
-     */
-    private Integer resolvedTargetsCount;
-    /**
-     * Summary of simulation events in the attack simulation and training campaign.
-     */
-    private SimulationEventsContent simulationEventsContent;
-    /**
-     * Summary of assigned trainings in the attack simulation and training campaign.
-     */
-    private TrainingEventsContent trainingEventsContent;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SimulationReportOverview and sets the default values.
      */
     public SimulationReportOverview() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +73,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
@@ -85,7 +81,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecommendedAction> getRecommendedActions() {
-        return this.recommendedActions;
+        return this.getBackingStore().get("recommendedActions");
     }
     /**
      * Gets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
@@ -93,7 +89,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Integer getResolvedTargetsCount() {
-        return this.resolvedTargetsCount;
+        return this.getBackingStore().get("resolvedTargetsCount");
     }
     /**
      * Gets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
@@ -101,7 +97,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public SimulationEventsContent getSimulationEventsContent() {
-        return this.simulationEventsContent;
+        return this.getBackingStore().get("simulationEventsContent");
     }
     /**
      * Gets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
@@ -109,7 +105,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public TrainingEventsContent getTrainingEventsContent() {
-        return this.trainingEventsContent;
+        return this.getBackingStore().get("trainingEventsContent");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
         writer.writeIntegerValue("resolvedTargetsCount", this.getResolvedTargetsCount());
         writer.writeObjectValue("simulationEventsContent", this.getSimulationEventsContent());
         writer.writeObjectValue("trainingEventsContent", this.getTrainingEventsContent());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
      * @param value Value to set for the recommendedActions property.
      */
     public void setRecommendedActions(@jakarta.annotation.Nullable final java.util.List<RecommendedAction> value) {
-        this.recommendedActions = value;
+        this.getBackingStore().set("recommendedActions", value);
     }
     /**
      * Sets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
      * @param value Value to set for the resolvedTargetsCount property.
      */
     public void setResolvedTargetsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.resolvedTargetsCount = value;
+        this.getBackingStore().set("resolvedTargetsCount", value);
     }
     /**
      * Sets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
      * @param value Value to set for the simulationEventsContent property.
      */
     public void setSimulationEventsContent(@jakarta.annotation.Nullable final SimulationEventsContent value) {
-        this.simulationEventsContent = value;
+        this.getBackingStore().set("simulationEventsContent", value);
     }
     /**
      * Sets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
      * @param value Value to set for the trainingEventsContent property.
      */
     public void setTrainingEventsContent(@jakarta.annotation.Nullable final TrainingEventsContent value) {
-        this.trainingEventsContent = value;
+        this.getBackingStore().set("trainingEventsContent", value);
     }
 }

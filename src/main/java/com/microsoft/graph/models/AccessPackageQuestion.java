@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageQuestion extends Entity implements Parsable {
     /**
-     * Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
-     */
-    private Boolean isAnswerEditable;
-    /**
-     * Whether the requestor is required to supply an answer or not.
-     */
-    private Boolean isRequired;
-    /**
-     * The text of the question represented in a format for a specific locale.
-     */
-    private java.util.List<AccessPackageLocalizedText> localizations;
-    /**
-     * Relative position of this question when displaying a list of questions to the requestor.
-     */
-    private Integer sequence;
-    /**
-     * The text of the question to show to the requestor.
-     */
-    private String text;
-    /**
      * Instantiates a new AccessPackageQuestion and sets the default values.
      */
     public AccessPackageQuestion() {
@@ -72,7 +52,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
-        return this.isAnswerEditable;
+        return this.getBackingStore().get("isAnswerEditable");
     }
     /**
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
@@ -80,7 +60,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
-        return this.isRequired;
+        return this.getBackingStore().get("isRequired");
     }
     /**
      * Gets the localizations property value. The text of the question represented in a format for a specific locale.
@@ -88,7 +68,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageLocalizedText> getLocalizations() {
-        return this.localizations;
+        return this.getBackingStore().get("localizations");
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
@@ -96,7 +76,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
-        return this.sequence;
+        return this.getBackingStore().get("sequence");
     }
     /**
      * Gets the text property value. The text of the question to show to the requestor.
@@ -104,7 +84,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.getBackingStore().get("text");
     }
     /**
      * Serializes information the current object
@@ -124,34 +104,34 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the isAnswerEditable property.
      */
     public void setIsAnswerEditable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAnswerEditable = value;
+        this.getBackingStore().set("isAnswerEditable", value);
     }
     /**
      * Sets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRequired = value;
+        this.getBackingStore().set("isRequired", value);
     }
     /**
      * Sets the localizations property value. The text of the question represented in a format for a specific locale.
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
-        this.localizations = value;
+        this.getBackingStore().set("localizations", value);
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
      */
     public void setSequence(@jakarta.annotation.Nullable final Integer value) {
-        this.sequence = value;
+        this.getBackingStore().set("sequence", value);
     }
     /**
      * Sets the text property value. The text of the question to show to the requestor.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.getBackingStore().set("text", value);
     }
 }

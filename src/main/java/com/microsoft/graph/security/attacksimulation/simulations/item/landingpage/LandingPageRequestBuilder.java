@@ -37,7 +37,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}/landingPage{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LandingPage
      */
@@ -58,7 +58,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LandingPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -83,7 +83,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -97,7 +97,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return new LandingPageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

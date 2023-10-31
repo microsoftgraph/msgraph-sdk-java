@@ -9,86 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationClass extends Entity implements Parsable {
     /**
-     * All categories associated with this class. Nullable.
-     */
-    private java.util.List<EducationCategory> assignmentCategories;
-    /**
-     * Specifies class-level defaults respected by new assignments created in the class.
-     */
-    private EducationAssignmentDefaults assignmentDefaults;
-    /**
-     * All assignments associated with this class. Nullable.
-     */
-    private java.util.List<EducationAssignment> assignments;
-    /**
-     * Specifies class-level assignments settings.
-     */
-    private EducationAssignmentSettings assignmentSettings;
-    /**
-     * Class code used by the school to identify the class.
-     */
-    private String classCode;
-    /**
-     * The course property
-     */
-    private EducationCourse course;
-    /**
-     * Entity who created the class
-     */
-    private IdentitySet createdBy;
-    /**
-     * Description of the class.
-     */
-    private String description;
-    /**
-     * Name of the class.
-     */
-    private String displayName;
-    /**
-     * ID of the class from the syncing system.
-     */
-    private String externalId;
-    /**
-     * Name of the class in the syncing system.
-     */
-    private String externalName;
-    /**
-     * How this class was created. Possible values are: sis, manual.
-     */
-    private EducationExternalSource externalSource;
-    /**
-     * The name of the external source this resources was generated from.
-     */
-    private String externalSourceDetail;
-    /**
-     * Grade level of the class.
-     */
-    private String grade;
-    /**
-     * The underlying Microsoft 365 group object.
-     */
-    private Group group;
-    /**
-     * Mail name for sending email to all members, if this is enabled.
-     */
-    private String mailNickname;
-    /**
-     * All users in the class. Nullable.
-     */
-    private java.util.List<EducationUser> members;
-    /**
-     * All schools that this class is associated with. Nullable.
-     */
-    private java.util.List<EducationSchool> schools;
-    /**
-     * All teachers in the class. Nullable.
-     */
-    private java.util.List<EducationUser> teachers;
-    /**
-     * Term for this class.
-     */
-    private EducationTerm term;
-    /**
      * Instantiates a new EducationClass and sets the default values.
      */
     public EducationClass() {
@@ -110,7 +30,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getAssignmentCategories() {
-        return this.assignmentCategories;
+        return this.getBackingStore().get("assignmentCategories");
     }
     /**
      * Gets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
@@ -118,7 +38,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentDefaults getAssignmentDefaults() {
-        return this.assignmentDefaults;
+        return this.getBackingStore().get("assignmentDefaults");
     }
     /**
      * Gets the assignments property value. All assignments associated with this class. Nullable.
@@ -126,7 +46,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
-        return this.assignments;
+        return this.getBackingStore().get("assignments");
     }
     /**
      * Gets the assignmentSettings property value. Specifies class-level assignments settings.
@@ -134,7 +54,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentSettings getAssignmentSettings() {
-        return this.assignmentSettings;
+        return this.getBackingStore().get("assignmentSettings");
     }
     /**
      * Gets the classCode property value. Class code used by the school to identify the class.
@@ -142,7 +62,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClassCode() {
-        return this.classCode;
+        return this.getBackingStore().get("classCode");
     }
     /**
      * Gets the course property value. The course property
@@ -150,7 +70,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationCourse getCourse() {
-        return this.course;
+        return this.getBackingStore().get("course");
     }
     /**
      * Gets the createdBy property value. Entity who created the class
@@ -158,7 +78,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.getBackingStore().get("createdBy");
     }
     /**
      * Gets the description property value. Description of the class.
@@ -166,7 +86,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Name of the class.
@@ -174,7 +94,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the externalId property value. ID of the class from the syncing system.
@@ -182,7 +102,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.getBackingStore().get("externalId");
     }
     /**
      * Gets the externalName property value. Name of the class in the syncing system.
@@ -190,7 +110,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalName() {
-        return this.externalName;
+        return this.getBackingStore().get("externalName");
     }
     /**
      * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
@@ -198,7 +118,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
-        return this.externalSource;
+        return this.getBackingStore().get("externalSource");
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
@@ -206,7 +126,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
-        return this.externalSourceDetail;
+        return this.getBackingStore().get("externalSourceDetail");
     }
     /**
      * The deserialization information for the current model
@@ -243,7 +163,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getGrade() {
-        return this.grade;
+        return this.getBackingStore().get("grade");
     }
     /**
      * Gets the group property value. The underlying Microsoft 365 group object.
@@ -251,7 +171,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
-        return this.group;
+        return this.getBackingStore().get("group");
     }
     /**
      * Gets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
@@ -259,7 +179,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
-        return this.mailNickname;
+        return this.getBackingStore().get("mailNickname");
     }
     /**
      * Gets the members property value. All users in the class. Nullable.
@@ -267,7 +187,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getMembers() {
-        return this.members;
+        return this.getBackingStore().get("members");
     }
     /**
      * Gets the schools property value. All schools that this class is associated with. Nullable.
@@ -275,7 +195,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
-        return this.schools;
+        return this.getBackingStore().get("schools");
     }
     /**
      * Gets the teachers property value. All teachers in the class. Nullable.
@@ -283,7 +203,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getTeachers() {
-        return this.teachers;
+        return this.getBackingStore().get("teachers");
     }
     /**
      * Gets the term property value. Term for this class.
@@ -291,7 +211,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationTerm getTerm() {
-        return this.term;
+        return this.getBackingStore().get("term");
     }
     /**
      * Serializes information the current object
@@ -326,139 +246,139 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentCategories property.
      */
     public void setAssignmentCategories(@jakarta.annotation.Nullable final java.util.List<EducationCategory> value) {
-        this.assignmentCategories = value;
+        this.getBackingStore().set("assignmentCategories", value);
     }
     /**
      * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      * @param value Value to set for the assignmentDefaults property.
      */
     public void setAssignmentDefaults(@jakarta.annotation.Nullable final EducationAssignmentDefaults value) {
-        this.assignmentDefaults = value;
+        this.getBackingStore().set("assignmentDefaults", value);
     }
     /**
      * Sets the assignments property value. All assignments associated with this class. Nullable.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EducationAssignment> value) {
-        this.assignments = value;
+        this.getBackingStore().set("assignments", value);
     }
     /**
      * Sets the assignmentSettings property value. Specifies class-level assignments settings.
      * @param value Value to set for the assignmentSettings property.
      */
     public void setAssignmentSettings(@jakarta.annotation.Nullable final EducationAssignmentSettings value) {
-        this.assignmentSettings = value;
+        this.getBackingStore().set("assignmentSettings", value);
     }
     /**
      * Sets the classCode property value. Class code used by the school to identify the class.
      * @param value Value to set for the classCode property.
      */
     public void setClassCode(@jakarta.annotation.Nullable final String value) {
-        this.classCode = value;
+        this.getBackingStore().set("classCode", value);
     }
     /**
      * Sets the course property value. The course property
      * @param value Value to set for the course property.
      */
     public void setCourse(@jakarta.annotation.Nullable final EducationCourse value) {
-        this.course = value;
+        this.getBackingStore().set("course", value);
     }
     /**
      * Sets the createdBy property value. Entity who created the class
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.getBackingStore().set("createdBy", value);
     }
     /**
      * Sets the description property value. Description of the class.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the class.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the externalId property value. ID of the class from the syncing system.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.getBackingStore().set("externalId", value);
     }
     /**
      * Sets the externalName property value. Name of the class in the syncing system.
      * @param value Value to set for the externalName property.
      */
     public void setExternalName(@jakarta.annotation.Nullable final String value) {
-        this.externalName = value;
+        this.getBackingStore().set("externalName", value);
     }
     /**
      * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      */
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
-        this.externalSource = value;
+        this.getBackingStore().set("externalSource", value);
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @param value Value to set for the externalSourceDetail property.
      */
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
-        this.externalSourceDetail = value;
+        this.getBackingStore().set("externalSourceDetail", value);
     }
     /**
      * Sets the grade property value. Grade level of the class.
      * @param value Value to set for the grade property.
      */
     public void setGrade(@jakarta.annotation.Nullable final String value) {
-        this.grade = value;
+        this.getBackingStore().set("grade", value);
     }
     /**
      * Sets the group property value. The underlying Microsoft 365 group object.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
-        this.group = value;
+        this.getBackingStore().set("group", value);
     }
     /**
      * Sets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
-        this.mailNickname = value;
+        this.getBackingStore().set("mailNickname", value);
     }
     /**
      * Sets the members property value. All users in the class. Nullable.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
-        this.members = value;
+        this.getBackingStore().set("members", value);
     }
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.
      * @param value Value to set for the schools property.
      */
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
-        this.schools = value;
+        this.getBackingStore().set("schools", value);
     }
     /**
      * Sets the teachers property value. All teachers in the class. Nullable.
      * @param value Value to set for the teachers property.
      */
     public void setTeachers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
-        this.teachers = value;
+        this.getBackingStore().set("teachers", value);
     }
     /**
      * Sets the term property value. Term for this class.
      * @param value Value to set for the term property.
      */
     public void setTerm(@jakarta.annotation.Nullable final EducationTerm value) {
-        this.term = value;
+        this.getBackingStore().set("term", value);
     }
 }

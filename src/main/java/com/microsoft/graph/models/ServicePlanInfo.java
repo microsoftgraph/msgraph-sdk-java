@@ -1,43 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
+public class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
-     */
-    private String appliesTo;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
-     */
-    private String provisioningStatus;
-    /**
-     * The unique identifier of the service plan.
-     */
-    private UUID servicePlanId;
-    /**
-     * The name of the service plan.
-     */
-    private String servicePlanName;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ServicePlanInfo and sets the default values.
      */
     public ServicePlanInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +39,12 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
@@ -64,7 +52,15 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppliesTo() {
-        return this.appliesTo;
+        return this.getBackingStore().get("appliesTo");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +82,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
@@ -94,7 +90,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProvisioningStatus() {
-        return this.provisioningStatus;
+        return this.getBackingStore().get("provisioningStatus");
     }
     /**
      * Gets the servicePlanId property value. The unique identifier of the service plan.
@@ -102,7 +98,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getServicePlanId() {
-        return this.servicePlanId;
+        return this.getBackingStore().get("servicePlanId");
     }
     /**
      * Gets the servicePlanName property value. The name of the service plan.
@@ -110,7 +106,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePlanName() {
-        return this.servicePlanName;
+        return this.getBackingStore().get("servicePlanName");
     }
     /**
      * Serializes information the current object
@@ -123,48 +119,54 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("provisioningStatus", this.getProvisioningStatus());
         writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final String value) {
-        this.appliesTo = value;
+        this.getBackingStore().set("appliesTo", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
      * @param value Value to set for the provisioningStatus property.
      */
     public void setProvisioningStatus(@jakarta.annotation.Nullable final String value) {
-        this.provisioningStatus = value;
+        this.getBackingStore().set("provisioningStatus", value);
     }
     /**
      * Sets the servicePlanId property value. The unique identifier of the service plan.
      * @param value Value to set for the servicePlanId property.
      */
     public void setServicePlanId(@jakarta.annotation.Nullable final UUID value) {
-        this.servicePlanId = value;
+        this.getBackingStore().set("servicePlanId", value);
     }
     /**
      * Sets the servicePlanName property value. The name of the service plan.
      * @param value Value to set for the servicePlanName property.
      */
     public void setServicePlanName(@jakarta.annotation.Nullable final String value) {
-        this.servicePlanName = value;
+        this.getBackingStore().set("servicePlanName", value);
     }
 }

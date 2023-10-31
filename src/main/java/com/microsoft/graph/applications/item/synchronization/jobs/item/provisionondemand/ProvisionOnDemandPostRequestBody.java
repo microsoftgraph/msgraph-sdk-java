@@ -1,27 +1,26 @@
 package com.microsoft.graph.applications.item.synchronization.jobs.item.provisionondemand;
 
 import com.microsoft.graph.models.SynchronizationJobApplicationParameters;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The parameters property
-     */
-    private java.util.List<SynchronizationJobApplicationParameters> parameters;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ProvisionOnDemandPostRequestBody and sets the default values.
      */
     public ProvisionOnDemandPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -40,7 +39,20 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +70,7 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJobApplicationParameters> getParameters() {
-        return this.parameters;
+        return this.getBackingStore().get("parameters");
     }
     /**
      * Serializes information the current object
@@ -67,20 +79,26 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("parameters", this.getParameters());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the parameters property value. The parameters property
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<SynchronizationJobApplicationParameters> value) {
-        this.parameters = value;
+        this.getBackingStore().set("parameters", value);
     }
 }

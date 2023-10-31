@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessClientApplications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Service principal IDs excluded from the policy scope.
-     */
-    private java.util.List<String> excludeServicePrincipals;
-    /**
-     * Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-     */
-    private java.util.List<String> includeServicePrincipals;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The servicePrincipalFilter property
-     */
-    private ConditionalAccessFilter servicePrincipalFilter;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConditionalAccessClientApplications and sets the default values.
      */
     public ConditionalAccessClientApplications() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,20 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
@@ -59,7 +59,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeServicePrincipals() {
-        return this.excludeServicePrincipals;
+        return this.getBackingStore().get("excludeServicePrincipals");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +80,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeServicePrincipals() {
-        return this.includeServicePrincipals;
+        return this.getBackingStore().get("includeServicePrincipals");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +88,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
@@ -96,7 +96,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessFilter getServicePrincipalFilter() {
-        return this.servicePrincipalFilter;
+        return this.getBackingStore().get("servicePrincipalFilter");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         writer.writeCollectionOfPrimitiveValues("includeServicePrincipals", this.getIncludeServicePrincipals());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("servicePrincipalFilter", this.getServicePrincipalFilter());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
      * @param value Value to set for the excludeServicePrincipals property.
      */
     public void setExcludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludeServicePrincipals = value;
+        this.getBackingStore().set("excludeServicePrincipals", value);
     }
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
      * @param value Value to set for the includeServicePrincipals property.
      */
     public void setIncludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.includeServicePrincipals = value;
+        this.getBackingStore().set("includeServicePrincipals", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
      * @param value Value to set for the servicePrincipalFilter property.
      */
     public void setServicePrincipalFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
-        this.servicePrincipalFilter = value;
+        this.getBackingStore().set("servicePrincipalFilter", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     /**
-     * The printerId property
-     */
-    private String printerId;
-    /**
-     * The name of the printer represented by these statistics.
-     */
-    private String printerName;
-    /**
      * Instantiates a new PrintUsageByPrinter and sets the default values.
      */
     public PrintUsageByPrinter() {
@@ -50,7 +42,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrinterId() {
-        return this.printerId;
+        return this.getBackingStore().get("printerId");
     }
     /**
      * Gets the printerName property value. The name of the printer represented by these statistics.
@@ -58,7 +50,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrinterName() {
-        return this.printerName;
+        return this.getBackingStore().get("printerName");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      * @param value Value to set for the printerId property.
      */
     public void setPrinterId(@jakarta.annotation.Nullable final String value) {
-        this.printerId = value;
+        this.getBackingStore().set("printerId", value);
     }
     /**
      * Sets the printerName property value. The name of the printer represented by these statistics.
      * @param value Value to set for the printerName property.
      */
     public void setPrinterName(@jakarta.annotation.Nullable final String value) {
-        this.printerName = value;
+        this.getBackingStore().set("printerName", value);
     }
 }

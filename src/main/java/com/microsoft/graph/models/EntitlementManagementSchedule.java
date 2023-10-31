@@ -1,39 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EntitlementManagementSchedule implements AdditionalDataHolder, Parsable {
+public class EntitlementManagementSchedule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * When the access should expire.
-     */
-    private ExpirationPattern expiration;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * For recurring access reviews.  Not used in access requests.
-     */
-    private PatternedRecurrence recurrence;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime startDateTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new EntitlementManagementSchedule and sets the default values.
      */
     public EntitlementManagementSchedule() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +39,20 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the expiration property value. When the access should expire.
@@ -60,7 +60,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public ExpirationPattern getExpiration() {
-        return this.expiration;
+        return this.getBackingStore().get("expiration");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +81,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the recurrence property value. For recurring access reviews.  Not used in access requests.
@@ -89,7 +89,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.getBackingStore().get("recurrence");
     }
     /**
      * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -97,7 +97,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -109,41 +109,47 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the expiration property value. When the access should expire.
      * @param value Value to set for the expiration property.
      */
     public void setExpiration(@jakarta.annotation.Nullable final ExpirationPattern value) {
-        this.expiration = value;
+        this.getBackingStore().set("expiration", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the recurrence property value. For recurring access reviews.  Not used in access requests.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
-        this.recurrence = value;
+        this.getBackingStore().set("recurrence", value);
     }
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsUserIdentity extends Identity implements Parsable {
     /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
      * Instantiates a new CommunicationsUserIdentity and sets the default values.
      */
     public CommunicationsUserIdentity() {
@@ -45,7 +41,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
 }

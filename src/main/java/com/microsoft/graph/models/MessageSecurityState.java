@@ -1,63 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MessageSecurityState implements AdditionalDataHolder, Parsable {
+public class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The connectingIP property
-     */
-    private String connectingIP;
-    /**
-     * The deliveryAction property
-     */
-    private String deliveryAction;
-    /**
-     * The deliveryLocation property
-     */
-    private String deliveryLocation;
-    /**
-     * The directionality property
-     */
-    private String directionality;
-    /**
-     * The internetMessageId property
-     */
-    private String internetMessageId;
-    /**
-     * The messageFingerprint property
-     */
-    private String messageFingerprint;
-    /**
-     * The messageReceivedDateTime property
-     */
-    private OffsetDateTime messageReceivedDateTime;
-    /**
-     * The messageSubject property
-     */
-    private String messageSubject;
-    /**
-     * The networkMessageId property
-     */
-    private String networkMessageId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MessageSecurityState and sets the default values.
      */
     public MessageSecurityState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -76,7 +39,20 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the connectingIP property value. The connectingIP property
@@ -84,7 +60,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConnectingIP() {
-        return this.connectingIP;
+        return this.getBackingStore().get("connectingIP");
     }
     /**
      * Gets the deliveryAction property value. The deliveryAction property
@@ -92,7 +68,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeliveryAction() {
-        return this.deliveryAction;
+        return this.getBackingStore().get("deliveryAction");
     }
     /**
      * Gets the deliveryLocation property value. The deliveryLocation property
@@ -100,7 +76,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeliveryLocation() {
-        return this.deliveryLocation;
+        return this.getBackingStore().get("deliveryLocation");
     }
     /**
      * Gets the directionality property value. The directionality property
@@ -108,7 +84,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDirectionality() {
-        return this.directionality;
+        return this.getBackingStore().get("directionality");
     }
     /**
      * The deserialization information for the current model
@@ -135,7 +111,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
-        return this.internetMessageId;
+        return this.getBackingStore().get("internetMessageId");
     }
     /**
      * Gets the messageFingerprint property value. The messageFingerprint property
@@ -143,7 +119,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessageFingerprint() {
-        return this.messageFingerprint;
+        return this.getBackingStore().get("messageFingerprint");
     }
     /**
      * Gets the messageReceivedDateTime property value. The messageReceivedDateTime property
@@ -151,7 +127,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMessageReceivedDateTime() {
-        return this.messageReceivedDateTime;
+        return this.getBackingStore().get("messageReceivedDateTime");
     }
     /**
      * Gets the messageSubject property value. The messageSubject property
@@ -159,7 +135,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessageSubject() {
-        return this.messageSubject;
+        return this.getBackingStore().get("messageSubject");
     }
     /**
      * Gets the networkMessageId property value. The networkMessageId property
@@ -167,7 +143,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNetworkMessageId() {
-        return this.networkMessageId;
+        return this.getBackingStore().get("networkMessageId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -175,7 +151,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -193,83 +169,89 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("messageSubject", this.getMessageSubject());
         writer.writeStringValue("networkMessageId", this.getNetworkMessageId());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the connectingIP property value. The connectingIP property
      * @param value Value to set for the connectingIP property.
      */
     public void setConnectingIP(@jakarta.annotation.Nullable final String value) {
-        this.connectingIP = value;
+        this.getBackingStore().set("connectingIP", value);
     }
     /**
      * Sets the deliveryAction property value. The deliveryAction property
      * @param value Value to set for the deliveryAction property.
      */
     public void setDeliveryAction(@jakarta.annotation.Nullable final String value) {
-        this.deliveryAction = value;
+        this.getBackingStore().set("deliveryAction", value);
     }
     /**
      * Sets the deliveryLocation property value. The deliveryLocation property
      * @param value Value to set for the deliveryLocation property.
      */
     public void setDeliveryLocation(@jakarta.annotation.Nullable final String value) {
-        this.deliveryLocation = value;
+        this.getBackingStore().set("deliveryLocation", value);
     }
     /**
      * Sets the directionality property value. The directionality property
      * @param value Value to set for the directionality property.
      */
     public void setDirectionality(@jakarta.annotation.Nullable final String value) {
-        this.directionality = value;
+        this.getBackingStore().set("directionality", value);
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
      */
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
-        this.internetMessageId = value;
+        this.getBackingStore().set("internetMessageId", value);
     }
     /**
      * Sets the messageFingerprint property value. The messageFingerprint property
      * @param value Value to set for the messageFingerprint property.
      */
     public void setMessageFingerprint(@jakarta.annotation.Nullable final String value) {
-        this.messageFingerprint = value;
+        this.getBackingStore().set("messageFingerprint", value);
     }
     /**
      * Sets the messageReceivedDateTime property value. The messageReceivedDateTime property
      * @param value Value to set for the messageReceivedDateTime property.
      */
     public void setMessageReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.messageReceivedDateTime = value;
+        this.getBackingStore().set("messageReceivedDateTime", value);
     }
     /**
      * Sets the messageSubject property value. The messageSubject property
      * @param value Value to set for the messageSubject property.
      */
     public void setMessageSubject(@jakarta.annotation.Nullable final String value) {
-        this.messageSubject = value;
+        this.getBackingStore().set("messageSubject", value);
     }
     /**
      * Sets the networkMessageId property value. The networkMessageId property
      * @param value Value to set for the networkMessageId property.
      */
     public void setNetworkMessageId(@jakarta.annotation.Nullable final String value) {
-        this.networkMessageId = value;
+        this.getBackingStore().set("networkMessageId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

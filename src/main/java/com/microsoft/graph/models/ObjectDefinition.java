@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ObjectDefinition implements AdditionalDataHolder, Parsable {
+public class ObjectDefinition implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Defines attributes of the object.
-     */
-    private java.util.List<AttributeDefinition> attributes;
-    /**
-     * Metadata for the given object.
-     */
-    private java.util.List<ObjectDefinitionMetadataEntry> metadata;
-    /**
-     * Name of the object. Must be unique within a directory definition. Not nullable.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The API that the provisioning service queries to retrieve data for synchronization.
-     */
-    private java.util.List<String> supportedApis;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ObjectDefinition and sets the default values.
      */
     public ObjectDefinition() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,12 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attributes property value. Defines attributes of the object.
@@ -63,7 +51,15 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeDefinition> getAttributes() {
-        return this.attributes;
+        return this.getBackingStore().get("attributes");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +81,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectDefinitionMetadataEntry> getMetadata() {
-        return this.metadata;
+        return this.getBackingStore().get("metadata");
     }
     /**
      * Gets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
@@ -93,7 +89,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +97,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
@@ -109,7 +105,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedApis() {
-        return this.supportedApis;
+        return this.getBackingStore().get("supportedApis");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("supportedApis", this.getSupportedApis());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the attributes property value. Defines attributes of the object.
      * @param value Value to set for the attributes property.
      */
     public void setAttributes(@jakarta.annotation.Nullable final java.util.List<AttributeDefinition> value) {
-        this.attributes = value;
+        this.getBackingStore().set("attributes", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<ObjectDefinitionMetadataEntry> value) {
-        this.metadata = value;
+        this.getBackingStore().set("metadata", value);
     }
     /**
      * Sets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
      * @param value Value to set for the supportedApis property.
      */
     public void setSupportedApis(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedApis = value;
+        this.getBackingStore().set("supportedApis", value);
     }
 }

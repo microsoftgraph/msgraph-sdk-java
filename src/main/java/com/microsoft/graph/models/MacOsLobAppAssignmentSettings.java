@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
-     */
-    private Boolean uninstallOnDeviceRemoval;
-    /**
      * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.
      */
     public MacOsLobAppAssignmentSettings() {
@@ -48,7 +44,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this.uninstallOnDeviceRemoval;
+        return this.getBackingStore().get("uninstallOnDeviceRemoval");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      */
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.uninstallOnDeviceRemoval = value;
+        this.getBackingStore().set("uninstallOnDeviceRemoval", value);
     }
 }

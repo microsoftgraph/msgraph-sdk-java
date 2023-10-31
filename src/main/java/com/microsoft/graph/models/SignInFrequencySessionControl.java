@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     */
-    private SignInFrequencyAuthenticationType authenticationType;
-    /**
-     * The possible values are timeBased, everyTime, unknownFutureValue.
-     */
-    private SignInFrequencyInterval frequencyInterval;
-    /**
-     * Possible values are: days, hours.
-     */
-    private SigninFrequencyType type;
-    /**
-     * The number of days or hours.
-     */
-    private Integer value;
-    /**
      * Instantiates a new SignInFrequencySessionControl and sets the default values.
      */
     public SignInFrequencySessionControl() {
@@ -47,7 +31,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @jakarta.annotation.Nullable
     public SignInFrequencyAuthenticationType getAuthenticationType() {
-        return this.authenticationType;
+        return this.getBackingStore().get("authenticationType");
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +52,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @jakarta.annotation.Nullable
     public SignInFrequencyInterval getFrequencyInterval() {
-        return this.frequencyInterval;
+        return this.getBackingStore().get("frequencyInterval");
     }
     /**
      * Gets the type property value. Possible values are: days, hours.
@@ -76,7 +60,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @jakarta.annotation.Nullable
     public SigninFrequencyType getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Gets the value property value. The number of days or hours.
@@ -84,7 +68,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {
-        this.authenticationType = value;
+        this.getBackingStore().set("authenticationType", value);
     }
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
      * @param value Value to set for the frequencyInterval property.
      */
     public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencyInterval value) {
-        this.frequencyInterval = value;
+        this.getBackingStore().set("frequencyInterval", value);
     }
     /**
      * Sets the type property value. Possible values are: days, hours.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final SigninFrequencyType value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
     /**
      * Sets the value property value. The number of days or hours.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Integer value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

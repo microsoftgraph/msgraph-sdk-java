@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TermsAndConditionsAcceptanceStatus> value;
-    /**
      * Instantiates a new TermsAndConditionsAcceptanceStatusCollectionResponse and sets the default values.
      */
     public TermsAndConditionsAcceptanceStatusCollectionResponse() {
@@ -44,7 +40,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

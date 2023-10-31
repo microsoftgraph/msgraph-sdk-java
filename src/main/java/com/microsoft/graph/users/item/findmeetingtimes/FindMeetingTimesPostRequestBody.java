@@ -4,55 +4,26 @@ import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;
 import com.microsoft.graph.models.TimeConstraint;
 import com.microsoft.kiota.PeriodAndDuration;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable {
+public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The attendees property
-     */
-    private java.util.List<AttendeeBase> attendees;
-    /**
-     * The isOrganizerOptional property
-     */
-    private Boolean isOrganizerOptional;
-    /**
-     * The locationConstraint property
-     */
-    private LocationConstraint locationConstraint;
-    /**
-     * The maxCandidates property
-     */
-    private Integer maxCandidates;
-    /**
-     * The meetingDuration property
-     */
-    private PeriodAndDuration meetingDuration;
-    /**
-     * The minimumAttendeePercentage property
-     */
-    private Double minimumAttendeePercentage;
-    /**
-     * The returnSuggestionReasons property
-     */
-    private Boolean returnSuggestionReasons;
-    /**
-     * The timeConstraint property
-     */
-    private TimeConstraint timeConstraint;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new FindMeetingTimesPostRequestBody and sets the default values.
      */
     public FindMeetingTimesPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +42,12 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attendees property value. The attendees property
@@ -79,7 +55,15 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendeeBase> getAttendees() {
-        return this.attendees;
+        return this.getBackingStore().get("attendees");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -104,7 +88,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizerOptional() {
-        return this.isOrganizerOptional;
+        return this.getBackingStore().get("isOrganizerOptional");
     }
     /**
      * Gets the locationConstraint property value. The locationConstraint property
@@ -112,7 +96,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public LocationConstraint getLocationConstraint() {
-        return this.locationConstraint;
+        return this.getBackingStore().get("locationConstraint");
     }
     /**
      * Gets the maxCandidates property value. The maxCandidates property
@@ -120,7 +104,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Integer getMaxCandidates() {
-        return this.maxCandidates;
+        return this.getBackingStore().get("maxCandidates");
     }
     /**
      * Gets the meetingDuration property value. The meetingDuration property
@@ -128,7 +112,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMeetingDuration() {
-        return this.meetingDuration;
+        return this.getBackingStore().get("meetingDuration");
     }
     /**
      * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
@@ -136,7 +120,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Double getMinimumAttendeePercentage() {
-        return this.minimumAttendeePercentage;
+        return this.getBackingStore().get("minimumAttendeePercentage");
     }
     /**
      * Gets the returnSuggestionReasons property value. The returnSuggestionReasons property
@@ -144,7 +128,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getReturnSuggestionReasons() {
-        return this.returnSuggestionReasons;
+        return this.getBackingStore().get("returnSuggestionReasons");
     }
     /**
      * Gets the timeConstraint property value. The timeConstraint property
@@ -152,7 +136,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public TimeConstraint getTimeConstraint() {
-        return this.timeConstraint;
+        return this.getBackingStore().get("timeConstraint");
     }
     /**
      * Serializes information the current object
@@ -168,69 +152,75 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
         writer.writeDoubleValue("minimumAttendeePercentage", this.getMinimumAttendeePercentage());
         writer.writeBooleanValue("returnSuggestionReasons", this.getReturnSuggestionReasons());
         writer.writeObjectValue("timeConstraint", this.getTimeConstraint());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the attendees property value. The attendees property
      * @param value Value to set for the attendees property.
      */
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<AttendeeBase> value) {
-        this.attendees = value;
+        this.getBackingStore().set("attendees", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the isOrganizerOptional property value. The isOrganizerOptional property
      * @param value Value to set for the isOrganizerOptional property.
      */
     public void setIsOrganizerOptional(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOrganizerOptional = value;
+        this.getBackingStore().set("isOrganizerOptional", value);
     }
     /**
      * Sets the locationConstraint property value. The locationConstraint property
      * @param value Value to set for the locationConstraint property.
      */
     public void setLocationConstraint(@jakarta.annotation.Nullable final LocationConstraint value) {
-        this.locationConstraint = value;
+        this.getBackingStore().set("locationConstraint", value);
     }
     /**
      * Sets the maxCandidates property value. The maxCandidates property
      * @param value Value to set for the maxCandidates property.
      */
     public void setMaxCandidates(@jakarta.annotation.Nullable final Integer value) {
-        this.maxCandidates = value;
+        this.getBackingStore().set("maxCandidates", value);
     }
     /**
      * Sets the meetingDuration property value. The meetingDuration property
      * @param value Value to set for the meetingDuration property.
      */
     public void setMeetingDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.meetingDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("meetingDuration", value);
     }
     /**
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @param value Value to set for the minimumAttendeePercentage property.
      */
     public void setMinimumAttendeePercentage(@jakarta.annotation.Nullable final Double value) {
-        this.minimumAttendeePercentage = value;
+        this.getBackingStore().set("minimumAttendeePercentage", value);
     }
     /**
      * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
      * @param value Value to set for the returnSuggestionReasons property.
      */
     public void setReturnSuggestionReasons(@jakarta.annotation.Nullable final Boolean value) {
-        this.returnSuggestionReasons = value;
+        this.getBackingStore().set("returnSuggestionReasons", value);
     }
     /**
      * Sets the timeConstraint property value. The timeConstraint property
      * @param value Value to set for the timeConstraint property.
      */
     public void setTimeConstraint(@jakarta.annotation.Nullable final TimeConstraint value) {
-        this.timeConstraint = value;
+        this.getBackingStore().set("timeConstraint", value);
     }
 }

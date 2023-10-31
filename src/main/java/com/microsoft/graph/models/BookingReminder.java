@@ -1,10 +1,12 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.PeriodAndDuration;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,31 +14,16 @@ import java.util.Objects;
  * This type represents when and to whom to send an e-mail reminder.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BookingReminder implements AdditionalDataHolder, Parsable {
+public class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The message in the reminder.
-     */
-    private String message;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
-     */
-    private PeriodAndDuration offset;
-    /**
-     * The recipients property
-     */
-    private BookingReminderRecipients recipients;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BookingReminder and sets the default values.
      */
     public BookingReminder() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +42,20 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +76,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.getBackingStore().get("message");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -84,7 +84,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
@@ -92,7 +92,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getOffset() {
-        return this.offset;
+        return this.getBackingStore().get("offset");
     }
     /**
      * Gets the recipients property value. The recipients property
@@ -100,7 +100,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public BookingReminderRecipients getRecipients() {
-        return this.recipients;
+        return this.getBackingStore().get("recipients");
     }
     /**
      * Serializes information the current object
@@ -112,41 +112,47 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodAndDurationValue("offset", this.getOffset());
         writer.writeEnumValue("recipients", this.getRecipients());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the message property value. The message in the reminder.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.getBackingStore().set("message", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
      * @param value Value to set for the offset property.
      */
     public void setOffset(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.offset = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("offset", value);
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final BookingReminderRecipients value) {
-        this.recipients = value;
+        this.getBackingStore().set("recipients", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProviderCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<IdentityProvider> value;
-    /**
      * Instantiates a new IdentityProviderCollectionResponse and sets the default values.
      */
     public IdentityProviderCollectionResponse() {
@@ -44,7 +40,7 @@ public class IdentityProviderCollectionResponse extends BaseCollectionPagination
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class IdentityProviderCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

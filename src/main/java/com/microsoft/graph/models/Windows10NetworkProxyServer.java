@@ -1,9 +1,11 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +13,16 @@ import java.util.Objects;
  * Network Proxy Server Policy.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable {
+public class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Address to the proxy server. Specify an address in the format [':']
-     */
-    private String address;
-    /**
-     * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
-     */
-    private java.util.List<String> exceptions;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies whether the proxy server should be used for local (intranet) addresses.
-     */
-    private Boolean useForLocalAddresses;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Windows10NetworkProxyServer and sets the default values.
      */
     public Windows10NetworkProxyServer() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +41,12 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
@@ -62,7 +54,15 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.getBackingStore().get("address");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
@@ -70,7 +70,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExceptions() {
-        return this.exceptions;
+        return this.getBackingStore().get("exceptions");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +91,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
@@ -99,7 +99,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getUseForLocalAddresses() {
-        return this.useForLocalAddresses;
+        return this.getBackingStore().get("useForLocalAddresses");
     }
     /**
      * Serializes information the current object
@@ -111,41 +111,47 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         writer.writeCollectionOfPrimitiveValues("exceptions", this.getExceptions());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("useForLocalAddresses", this.getUseForLocalAddresses());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.getBackingStore().set("address", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
      * @param value Value to set for the exceptions property.
      */
     public void setExceptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.exceptions = value;
+        this.getBackingStore().set("exceptions", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
      * @param value Value to set for the useForLocalAddresses property.
      */
     public void setUseForLocalAddresses(@jakarta.annotation.Nullable final Boolean value) {
-        this.useForLocalAddresses = value;
+        this.getBackingStore().set("useForLocalAddresses", value);
     }
 }

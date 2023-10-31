@@ -1,9 +1,11 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,31 +14,16 @@ import java.util.Objects;
  * Contains properties used to determine when to offer an app to devices and when to install the app on devices.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable {
+public class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The time at which the app should be installed.
-     */
-    private OffsetDateTime deadlineDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The time at which the app should be available for installation.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Whether the local device time or UTC time should be used when determining the available and deadline times.
-     */
-    private Boolean useLocalTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MobileAppInstallTimeSettings and sets the default values.
      */
     public MobileAppInstallTimeSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +42,20 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deadlineDateTime property value. The time at which the app should be installed.
@@ -63,7 +63,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeadlineDateTime() {
-        return this.deadlineDateTime;
+        return this.getBackingStore().get("deadlineDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +84,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the startDateTime property value. The time at which the app should be available for installation.
@@ -92,7 +92,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the useLocalTime property value. Whether the local device time or UTC time should be used when determining the available and deadline times.
@@ -100,7 +100,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getUseLocalTime() {
-        return this.useLocalTime;
+        return this.getBackingStore().get("useLocalTime");
     }
     /**
      * Serializes information the current object
@@ -112,41 +112,47 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeBooleanValue("useLocalTime", this.getUseLocalTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the deadlineDateTime property value. The time at which the app should be installed.
      * @param value Value to set for the deadlineDateTime property.
      */
     public void setDeadlineDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.deadlineDateTime = value;
+        this.getBackingStore().set("deadlineDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. The time at which the app should be available for installation.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the useLocalTime property value. Whether the local device time or UTC time should be used when determining the available and deadline times.
      * @param value Value to set for the useLocalTime property.
      */
     public void setUseLocalTime(@jakarta.annotation.Nullable final Boolean value) {
-        this.useLocalTime = value;
+        this.getBackingStore().set("useLocalTime", value);
     }
 }

@@ -13,14 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /**
-     * Id used for tracing the failure in the service.
-     */
-    private String correlationId;
-    /**
-     * Time when the event occurred .
-     */
-    private OffsetDateTime eventDateTime;
-    /**
      * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
      */
     public DeviceManagementTroubleshootingEvent() {
@@ -49,7 +41,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
-        return this.correlationId;
+        return this.getBackingStore().get("correlationId");
     }
     /**
      * Gets the eventDateTime property value. Time when the event occurred .
@@ -57,7 +49,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.getBackingStore().get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,13 +77,13 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
-        this.correlationId = value;
+        this.getBackingStore().set("correlationId", value);
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.getBackingStore().set("eventDateTime", value);
     }
 }

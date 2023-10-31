@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchResponse implements AdditionalDataHolder, Parsable {
+public class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A collection of search results.
-     */
-    private java.util.List<SearchHitsContainer> hitsContainers;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Provides information related to spelling corrections in the alteration response.
-     */
-    private AlterationResponse queryAlterationResponse;
-    /**
-     * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
-     */
-    private ResultTemplateDictionary resultTemplates;
-    /**
-     * Contains the search terms sent in the initial search query.
-     */
-    private java.util.List<String> searchTerms;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SearchResponse and sets the default values.
      */
     public SearchResponse() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +73,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchHitsContainer> getHitsContainers() {
-        return this.hitsContainers;
+        return this.getBackingStore().get("hitsContainers");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,7 +81,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
@@ -93,7 +89,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AlterationResponse getQueryAlterationResponse() {
-        return this.queryAlterationResponse;
+        return this.getBackingStore().get("queryAlterationResponse");
     }
     /**
      * Gets the resultTemplates property value. A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
@@ -101,7 +97,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ResultTemplateDictionary getResultTemplates() {
-        return this.resultTemplates;
+        return this.getBackingStore().get("resultTemplates");
     }
     /**
      * Gets the searchTerms property value. Contains the search terms sent in the initial search query.
@@ -109,7 +105,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSearchTerms() {
-        return this.searchTerms;
+        return this.getBackingStore().get("searchTerms");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("queryAlterationResponse", this.getQueryAlterationResponse());
         writer.writeObjectValue("resultTemplates", this.getResultTemplates());
         writer.writeCollectionOfPrimitiveValues("searchTerms", this.getSearchTerms());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the hitsContainers property value. A collection of search results.
      * @param value Value to set for the hitsContainers property.
      */
     public void setHitsContainers(@jakarta.annotation.Nullable final java.util.List<SearchHitsContainer> value) {
-        this.hitsContainers = value;
+        this.getBackingStore().set("hitsContainers", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
      * @param value Value to set for the queryAlterationResponse property.
      */
     public void setQueryAlterationResponse(@jakarta.annotation.Nullable final AlterationResponse value) {
-        this.queryAlterationResponse = value;
+        this.getBackingStore().set("queryAlterationResponse", value);
     }
     /**
      * Sets the resultTemplates property value. A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
      * @param value Value to set for the resultTemplates property.
      */
     public void setResultTemplates(@jakarta.annotation.Nullable final ResultTemplateDictionary value) {
-        this.resultTemplates = value;
+        this.getBackingStore().set("resultTemplates", value);
     }
     /**
      * Sets the searchTerms property value. Contains the search terms sent in the initial search query.
      * @param value Value to set for the searchTerms property.
      */
     public void setSearchTerms(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.searchTerms = value;
+        this.getBackingStore().set("searchTerms", value);
     }
 }

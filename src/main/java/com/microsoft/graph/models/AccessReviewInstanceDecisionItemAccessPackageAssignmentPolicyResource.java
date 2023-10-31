@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
-     * Display name of the access package to which access has been granted.
-     */
-    private String accessPackageDisplayName;
-    /**
-     * Identifier of the access package to which access has been granted.
-     */
-    private String accessPackageId;
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
      */
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
@@ -39,7 +31,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageDisplayName() {
-        return this.accessPackageDisplayName;
+        return this.getBackingStore().get("accessPackageDisplayName");
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package to which access has been granted.
@@ -47,7 +39,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
-        return this.accessPackageId;
+        return this.getBackingStore().get("accessPackageId");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * @param value Value to set for the accessPackageDisplayName property.
      */
     public void setAccessPackageDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.accessPackageDisplayName = value;
+        this.getBackingStore().set("accessPackageDisplayName", value);
     }
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
      * @param value Value to set for the accessPackageId property.
      */
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
-        this.accessPackageId = value;
+        this.getBackingStore().set("accessPackageId", value);
     }
 }

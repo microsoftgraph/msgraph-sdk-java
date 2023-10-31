@@ -10,46 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubscribedSku extends Entity implements Parsable {
     /**
-     * The unique ID of the account this SKU belongs to.
-     */
-    private String accountId;
-    /**
-     * The name of the account this SKU belongs to.
-     */
-    private String accountName;
-    /**
-     * The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
-     */
-    private String appliesTo;
-    /**
-     * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
-     */
-    private String capabilityStatus;
-    /**
-     * The number of licenses that have been assigned.
-     */
-    private Integer consumedUnits;
-    /**
-     * Information about the number and status of prepaid licenses.
-     */
-    private LicenseUnitsDetail prepaidUnits;
-    /**
-     * Information about the service plans that are available with the SKU. Not nullable.
-     */
-    private java.util.List<ServicePlanInfo> servicePlans;
-    /**
-     * The unique identifier (GUID) for the service SKU.
-     */
-    private UUID skuId;
-    /**
-     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
-     */
-    private String skuPartNumber;
-    /**
-     * The subscriptionIds property
-     */
-    private java.util.List<String> subscriptionIds;
-    /**
      * Instantiates a new SubscribedSku and sets the default values.
      */
     public SubscribedSku() {
@@ -71,7 +31,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
-        return this.accountId;
+        return this.getBackingStore().get("accountId");
     }
     /**
      * Gets the accountName property value. The name of the account this SKU belongs to.
@@ -79,7 +39,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.getBackingStore().get("accountName");
     }
     /**
      * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
@@ -87,7 +47,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppliesTo() {
-        return this.appliesTo;
+        return this.getBackingStore().get("appliesTo");
     }
     /**
      * Gets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
@@ -95,7 +55,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCapabilityStatus() {
-        return this.capabilityStatus;
+        return this.getBackingStore().get("capabilityStatus");
     }
     /**
      * Gets the consumedUnits property value. The number of licenses that have been assigned.
@@ -103,7 +63,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getConsumedUnits() {
-        return this.consumedUnits;
+        return this.getBackingStore().get("consumedUnits");
     }
     /**
      * The deserialization information for the current model
@@ -130,7 +90,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LicenseUnitsDetail getPrepaidUnits() {
-        return this.prepaidUnits;
+        return this.getBackingStore().get("prepaidUnits");
     }
     /**
      * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
@@ -138,7 +98,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {
-        return this.servicePlans;
+        return this.getBackingStore().get("servicePlans");
     }
     /**
      * Gets the skuId property value. The unique identifier (GUID) for the service SKU.
@@ -146,7 +106,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
-        return this.skuId;
+        return this.getBackingStore().get("skuId");
     }
     /**
      * Gets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
@@ -154,7 +114,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSkuPartNumber() {
-        return this.skuPartNumber;
+        return this.getBackingStore().get("skuPartNumber");
     }
     /**
      * Gets the subscriptionIds property value. The subscriptionIds property
@@ -162,7 +122,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubscriptionIds() {
-        return this.subscriptionIds;
+        return this.getBackingStore().get("subscriptionIds");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class SubscribedSku extends Entity implements Parsable {
      * @param value Value to set for the accountId property.
      */
     public void setAccountId(@jakarta.annotation.Nullable final String value) {
-        this.accountId = value;
+        this.getBackingStore().set("accountId", value);
     }
     /**
      * Sets the accountName property value. The name of the account this SKU belongs to.
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.getBackingStore().set("accountName", value);
     }
     /**
      * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final String value) {
-        this.appliesTo = value;
+        this.getBackingStore().set("appliesTo", value);
     }
     /**
      * Sets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer canceled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @param value Value to set for the capabilityStatus property.
      */
     public void setCapabilityStatus(@jakarta.annotation.Nullable final String value) {
-        this.capabilityStatus = value;
+        this.getBackingStore().set("capabilityStatus", value);
     }
     /**
      * Sets the consumedUnits property value. The number of licenses that have been assigned.
      * @param value Value to set for the consumedUnits property.
      */
     public void setConsumedUnits(@jakarta.annotation.Nullable final Integer value) {
-        this.consumedUnits = value;
+        this.getBackingStore().set("consumedUnits", value);
     }
     /**
      * Sets the prepaidUnits property value. Information about the number and status of prepaid licenses.
      * @param value Value to set for the prepaidUnits property.
      */
     public void setPrepaidUnits(@jakarta.annotation.Nullable final LicenseUnitsDetail value) {
-        this.prepaidUnits = value;
+        this.getBackingStore().set("prepaidUnits", value);
     }
     /**
      * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
      * @param value Value to set for the servicePlans property.
      */
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
-        this.servicePlans = value;
+        this.getBackingStore().set("servicePlans", value);
     }
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
-        this.skuId = value;
+        this.getBackingStore().set("skuId", value);
     }
     /**
      * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @param value Value to set for the skuPartNumber property.
      */
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {
-        this.skuPartNumber = value;
+        this.getBackingStore().set("skuPartNumber", value);
     }
     /**
      * Sets the subscriptionIds property value. The subscriptionIds property
      * @param value Value to set for the subscriptionIds property.
      */
     public void setSubscriptionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.subscriptionIds = value;
+        this.getBackingStore().set("subscriptionIds", value);
     }
 }

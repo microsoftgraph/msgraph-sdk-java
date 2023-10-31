@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ArticleIndicatorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ArticleIndicator> value;
-    /**
      * Instantiates a new ArticleIndicatorCollectionResponse and sets the default values.
      */
     public ArticleIndicatorCollectionResponse() {
@@ -45,7 +41,7 @@ public class ArticleIndicatorCollectionResponse extends BaseCollectionPagination
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ArticleIndicatorCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

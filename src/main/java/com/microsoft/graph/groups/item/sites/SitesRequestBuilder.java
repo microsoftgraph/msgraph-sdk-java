@@ -2,6 +2,7 @@ package com.microsoft.graph.groups.item.sites;
 
 import com.microsoft.graph.groups.item.sites.add.AddRequestBuilder;
 import com.microsoft.graph.groups.item.sites.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.delta.DeltaRequestBuilder;
 import com.microsoft.graph.groups.item.sites.getallsites.GetAllSitesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.remove.RemoveRequestBuilder;
@@ -38,6 +39,13 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllSites method.
@@ -128,7 +136,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**

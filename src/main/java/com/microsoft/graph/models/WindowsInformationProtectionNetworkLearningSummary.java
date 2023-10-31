@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable {
     /**
-     * Device Count
-     */
-    private Integer deviceCount;
-    /**
-     * Website url
-     */
-    private String url;
-    /**
      * Instantiates a new WindowsInformationProtectionNetworkLearningSummary and sets the default values.
      */
     public WindowsInformationProtectionNetworkLearningSummary() {
@@ -41,7 +33,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
-        return this.deviceCount;
+        return this.getBackingStore().get("deviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -60,7 +52,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.getBackingStore().get("url");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCount = value;
+        this.getBackingStore().set("deviceCount", value);
     }
     /**
      * Sets the url property value. Website url
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.getBackingStore().set("url", value);
     }
 }

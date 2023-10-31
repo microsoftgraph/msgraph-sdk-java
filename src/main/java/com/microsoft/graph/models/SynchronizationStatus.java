@@ -1,75 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
+public class SynchronizationStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The code property
-     */
-    private SynchronizationStatusCode code;
-    /**
-     * Number of consecutive times this job failed.
-     */
-    private Long countSuccessiveCompleteFailures;
-    /**
-     * true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
-     */
-    private Boolean escrowsPruned;
-    /**
-     * Details of the last execution of the job.
-     */
-    private SynchronizationTaskExecution lastExecution;
-    /**
-     * Details of the last execution of this job, which didn't have any errors.
-     */
-    private SynchronizationTaskExecution lastSuccessfulExecution;
-    /**
-     * Details of the last execution of the job, which exported objects into the target directory.
-     */
-    private SynchronizationTaskExecution lastSuccessfulExecutionWithExports;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Details of the progress of a job toward completion.
-     */
-    private java.util.List<SynchronizationProgress> progress;
-    /**
-     * If job is in quarantine, quarantine details.
-     */
-    private SynchronizationQuarantine quarantine;
-    /**
-     * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime steadyStateFirstAchievedTime;
-    /**
-     * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime steadyStateLastAchievedTime;
-    /**
-     * Count of synchronized objects, listed by object type.
-     */
-    private java.util.List<StringKeyLongValuePair> synchronizedEntryCountByType;
-    /**
-     * In the event of an error, the URL with the troubleshooting steps for the issue.
-     */
-    private String troubleshootingUrl;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SynchronizationStatus and sets the default values.
      */
     public SynchronizationStatus() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -88,7 +39,20 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the code property value. The code property
@@ -96,7 +60,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatusCode getCode() {
-        return this.code;
+        return this.getBackingStore().get("code");
     }
     /**
      * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
@@ -104,7 +68,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getCountSuccessiveCompleteFailures() {
-        return this.countSuccessiveCompleteFailures;
+        return this.getBackingStore().get("countSuccessiveCompleteFailures");
     }
     /**
      * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
@@ -112,7 +76,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getEscrowsPruned() {
-        return this.escrowsPruned;
+        return this.getBackingStore().get("escrowsPruned");
     }
     /**
      * The deserialization information for the current model
@@ -142,7 +106,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastExecution() {
-        return this.lastExecution;
+        return this.getBackingStore().get("lastExecution");
     }
     /**
      * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
@@ -150,7 +114,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecution() {
-        return this.lastSuccessfulExecution;
+        return this.getBackingStore().get("lastSuccessfulExecution");
     }
     /**
      * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
@@ -158,7 +122,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
-        return this.lastSuccessfulExecutionWithExports;
+        return this.getBackingStore().get("lastSuccessfulExecutionWithExports");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -166,7 +130,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the progress property value. Details of the progress of a job toward completion.
@@ -174,7 +138,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationProgress> getProgress() {
-        return this.progress;
+        return this.getBackingStore().get("progress");
     }
     /**
      * Gets the quarantine property value. If job is in quarantine, quarantine details.
@@ -182,7 +146,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationQuarantine getQuarantine() {
-        return this.quarantine;
+        return this.getBackingStore().get("quarantine");
     }
     /**
      * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -190,7 +154,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateFirstAchievedTime() {
-        return this.steadyStateFirstAchievedTime;
+        return this.getBackingStore().get("steadyStateFirstAchievedTime");
     }
     /**
      * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -198,7 +162,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateLastAchievedTime() {
-        return this.steadyStateLastAchievedTime;
+        return this.getBackingStore().get("steadyStateLastAchievedTime");
     }
     /**
      * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
@@ -206,7 +170,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<StringKeyLongValuePair> getSynchronizedEntryCountByType() {
-        return this.synchronizedEntryCountByType;
+        return this.getBackingStore().get("synchronizedEntryCountByType");
     }
     /**
      * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
@@ -214,7 +178,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTroubleshootingUrl() {
-        return this.troubleshootingUrl;
+        return this.getBackingStore().get("troubleshootingUrl");
     }
     /**
      * Serializes information the current object
@@ -235,104 +199,110 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("steadyStateLastAchievedTime", this.getSteadyStateLastAchievedTime());
         writer.writeCollectionOfObjectValues("synchronizedEntryCountByType", this.getSynchronizedEntryCountByType());
         writer.writeStringValue("troubleshootingUrl", this.getTroubleshootingUrl());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final SynchronizationStatusCode value) {
-        this.code = value;
+        this.getBackingStore().set("code", value);
     }
     /**
      * Sets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @param value Value to set for the countSuccessiveCompleteFailures property.
      */
     public void setCountSuccessiveCompleteFailures(@jakarta.annotation.Nullable final Long value) {
-        this.countSuccessiveCompleteFailures = value;
+        this.getBackingStore().set("countSuccessiveCompleteFailures", value);
     }
     /**
      * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param value Value to set for the escrowsPruned property.
      */
     public void setEscrowsPruned(@jakarta.annotation.Nullable final Boolean value) {
-        this.escrowsPruned = value;
+        this.getBackingStore().set("escrowsPruned", value);
     }
     /**
      * Sets the lastExecution property value. Details of the last execution of the job.
      * @param value Value to set for the lastExecution property.
      */
     public void setLastExecution(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
-        this.lastExecution = value;
+        this.getBackingStore().set("lastExecution", value);
     }
     /**
      * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @param value Value to set for the lastSuccessfulExecution property.
      */
     public void setLastSuccessfulExecution(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
-        this.lastSuccessfulExecution = value;
+        this.getBackingStore().set("lastSuccessfulExecution", value);
     }
     /**
      * Sets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
      */
     public void setLastSuccessfulExecutionWithExports(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
-        this.lastSuccessfulExecutionWithExports = value;
+        this.getBackingStore().set("lastSuccessfulExecutionWithExports", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the progress property value. Details of the progress of a job toward completion.
      * @param value Value to set for the progress property.
      */
     public void setProgress(@jakarta.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
-        this.progress = value;
+        this.getBackingStore().set("progress", value);
     }
     /**
      * Sets the quarantine property value. If job is in quarantine, quarantine details.
      * @param value Value to set for the quarantine property.
      */
     public void setQuarantine(@jakarta.annotation.Nullable final SynchronizationQuarantine value) {
-        this.quarantine = value;
+        this.getBackingStore().set("quarantine", value);
     }
     /**
      * Sets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateFirstAchievedTime property.
      */
     public void setSteadyStateFirstAchievedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.steadyStateFirstAchievedTime = value;
+        this.getBackingStore().set("steadyStateFirstAchievedTime", value);
     }
     /**
      * Sets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateLastAchievedTime property.
      */
     public void setSteadyStateLastAchievedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.steadyStateLastAchievedTime = value;
+        this.getBackingStore().set("steadyStateLastAchievedTime", value);
     }
     /**
      * Sets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @param value Value to set for the synchronizedEntryCountByType property.
      */
     public void setSynchronizedEntryCountByType(@jakarta.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
-        this.synchronizedEntryCountByType = value;
+        this.getBackingStore().set("synchronizedEntryCountByType", value);
     }
     /**
      * Sets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @param value Value to set for the troubleshootingUrl property.
      */
     public void setTroubleshootingUrl(@jakarta.annotation.Nullable final String value) {
-        this.troubleshootingUrl = value;
+        this.getBackingStore().set("troubleshootingUrl", value);
     }
 }

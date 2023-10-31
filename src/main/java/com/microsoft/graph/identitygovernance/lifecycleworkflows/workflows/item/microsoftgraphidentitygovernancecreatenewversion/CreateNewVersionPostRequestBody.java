@@ -1,27 +1,26 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecreatenewversion;
 
 import com.microsoft.graph.models.identitygovernance.Workflow;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The workflow property
-     */
-    private Workflow workflow;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CreateNewVersionPostRequestBody and sets the default values.
      */
     public CreateNewVersionPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -40,7 +39,20 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +70,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Workflow getWorkflow() {
-        return this.workflow;
+        return this.getBackingStore().get("workflow");
     }
     /**
      * Serializes information the current object
@@ -67,20 +79,26 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("workflow", this.getWorkflow());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
      */
     public void setWorkflow(@jakarta.annotation.Nullable final Workflow value) {
-        this.workflow = value;
+        this.getBackingStore().set("workflow", value);
     }
 }

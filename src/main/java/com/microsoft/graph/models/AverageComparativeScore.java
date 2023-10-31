@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
+public class AverageComparativeScore implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Average score within specified basis.
-     */
-    private Double averageScore;
-    /**
-     * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
-     */
-    private String basis;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AverageComparativeScore and sets the default values.
      */
     public AverageComparativeScore() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,12 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the averageScore property value. Average score within specified basis.
@@ -55,7 +51,15 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getAverageScore() {
-        return this.averageScore;
+        return this.getBackingStore().get("averageScore");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the basis property value. Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
@@ -63,7 +67,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBasis() {
-        return this.basis;
+        return this.getBackingStore().get("basis");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +87,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("averageScore", this.getAverageScore());
         writer.writeStringValue("basis", this.getBasis());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the averageScore property value. Average score within specified basis.
      * @param value Value to set for the averageScore property.
      */
     public void setAverageScore(@jakarta.annotation.Nullable final Double value) {
-        this.averageScore = value;
+        this.getBackingStore().set("averageScore", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the basis property value. Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
      * @param value Value to set for the basis property.
      */
     public void setBasis(@jakarta.annotation.Nullable final String value) {
-        this.basis = value;
+        this.getBackingStore().set("basis", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserConsentRequest extends Request implements Parsable {
     /**
-     * Approval decisions associated with a request.
-     */
-    private Approval approval;
-    /**
-     * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
-     */
-    private String reason;
-    /**
      * Instantiates a new UserConsentRequest and sets the default values.
      */
     public UserConsentRequest() {
@@ -38,7 +30,7 @@ public class UserConsentRequest extends Request implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Approval getApproval() {
-        return this.approval;
+        return this.getBackingStore().get("approval");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class UserConsentRequest extends Request implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getReason() {
-        return this.reason;
+        return this.getBackingStore().get("reason");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UserConsentRequest extends Request implements Parsable {
      * @param value Value to set for the approval property.
      */
     public void setApproval(@jakarta.annotation.Nullable final Approval value) {
-        this.approval = value;
+        this.getBackingStore().set("approval", value);
     }
     /**
      * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
-        this.reason = value;
+        this.getBackingStore().set("reason", value);
     }
 }

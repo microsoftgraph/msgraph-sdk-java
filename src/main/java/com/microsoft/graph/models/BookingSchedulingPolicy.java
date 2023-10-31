@@ -1,10 +1,12 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.PeriodAndDuration;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,39 +14,16 @@ import java.util.Objects;
  * This type represents the set of policies that dictate how bookings can be created in a Booking Calendar.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
+public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * True if to allow customers to choose a specific person for the booking.
-     */
-    private Boolean allowStaffSelection;
-    /**
-     * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
-     */
-    private PeriodAndDuration maximumAdvance;
-    /**
-     * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
-     */
-    private PeriodAndDuration minimumLeadTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
-     */
-    private Boolean sendConfirmationsToOwner;
-    /**
-     * Duration of each time slot, denoted in ISO 8601 format.
-     */
-    private PeriodAndDuration timeSlotInterval;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BookingSchedulingPolicy and sets the default values.
      */
     public BookingSchedulingPolicy() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +42,12 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
@@ -71,7 +55,15 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowStaffSelection() {
-        return this.allowStaffSelection;
+        return this.getBackingStore().get("allowStaffSelection");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -94,7 +86,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaximumAdvance() {
-        return this.maximumAdvance;
+        return this.getBackingStore().get("maximumAdvance");
     }
     /**
      * Gets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
@@ -102,7 +94,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMinimumLeadTime() {
-        return this.minimumLeadTime;
+        return this.getBackingStore().get("minimumLeadTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,7 +102,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
@@ -118,7 +110,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSendConfirmationsToOwner() {
-        return this.sendConfirmationsToOwner;
+        return this.getBackingStore().get("sendConfirmationsToOwner");
     }
     /**
      * Gets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
@@ -126,7 +118,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getTimeSlotInterval() {
-        return this.timeSlotInterval;
+        return this.getBackingStore().get("timeSlotInterval");
     }
     /**
      * Serializes information the current object
@@ -140,55 +132,61 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("sendConfirmationsToOwner", this.getSendConfirmationsToOwner());
         writer.writePeriodAndDurationValue("timeSlotInterval", this.getTimeSlotInterval());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
      * @param value Value to set for the allowStaffSelection property.
      */
     public void setAllowStaffSelection(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowStaffSelection = value;
+        this.getBackingStore().set("allowStaffSelection", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
      * @param value Value to set for the maximumAdvance property.
      */
     public void setMaximumAdvance(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumAdvance = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("maximumAdvance", value);
     }
     /**
      * Sets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
      * @param value Value to set for the minimumLeadTime property.
      */
     public void setMinimumLeadTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.minimumLeadTime = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("minimumLeadTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
      * @param value Value to set for the sendConfirmationsToOwner property.
      */
     public void setSendConfirmationsToOwner(@jakarta.annotation.Nullable final Boolean value) {
-        this.sendConfirmationsToOwner = value;
+        this.getBackingStore().set("sendConfirmationsToOwner", value);
     }
     /**
      * Sets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
      * @param value Value to set for the timeSlotInterval property.
      */
     public void setTimeSlotInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.timeSlotInterval = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("timeSlotInterval", value);
     }
 }

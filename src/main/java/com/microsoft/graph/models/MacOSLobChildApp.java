@@ -1,9 +1,11 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +13,16 @@ import java.util.Objects;
  * Contains properties of a macOS .app in the package
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
+public class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The build number of the app.
-     */
-    private String buildNumber;
-    /**
-     * The bundleId of the app.
-     */
-    private String bundleId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The version number of the app.
-     */
-    private String versionNumber;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MacOSLobChildApp and sets the default values.
      */
     public MacOSLobChildApp() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +41,20 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the buildNumber property value. The build number of the app.
@@ -62,7 +62,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBuildNumber() {
-        return this.buildNumber;
+        return this.getBackingStore().get("buildNumber");
     }
     /**
      * Gets the bundleId property value. The bundleId of the app.
@@ -70,7 +70,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.getBackingStore().get("bundleId");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +91,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the versionNumber property value. The version number of the app.
@@ -99,7 +99,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersionNumber() {
-        return this.versionNumber;
+        return this.getBackingStore().get("versionNumber");
     }
     /**
      * Serializes information the current object
@@ -111,41 +111,47 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("bundleId", this.getBundleId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("versionNumber", this.getVersionNumber());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the buildNumber property value. The build number of the app.
      * @param value Value to set for the buildNumber property.
      */
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
-        this.buildNumber = value;
+        this.getBackingStore().set("buildNumber", value);
     }
     /**
      * Sets the bundleId property value. The bundleId of the app.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.getBackingStore().set("bundleId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the versionNumber property value. The version number of the app.
      * @param value Value to set for the versionNumber property.
      */
     public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
-        this.versionNumber = value;
+        this.getBackingStore().set("versionNumber", value);
     }
 }

@@ -2,32 +2,26 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.
 
 import com.microsoft.graph.models.security.AdditionalDataOptions;
 import com.microsoft.graph.models.security.EdiscoverySearch;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The additionalDataOptions property
-     */
-    private EnumSet<AdditionalDataOptions> additionalDataOptions;
-    /**
-     * The search property
-     */
-    private EdiscoverySearch search;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AddToReviewSetPostRequestBody and sets the default values.
      */
     public AddToReviewSetPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -46,7 +40,12 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the additionalDataOptions property value. The additionalDataOptions property
@@ -54,7 +53,15 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public EnumSet<AdditionalDataOptions> getAdditionalDataOptions() {
-        return this.additionalDataOptions;
+        return this.getBackingStore().get("additionalDataOptions");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +80,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {
-        return this.search;
+        return this.getBackingStore().get("search");
     }
     /**
      * Serializes information the current object
@@ -83,27 +90,33 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("additionalDataOptions", this.getAdditionalDataOptions());
         writer.writeObjectValue("search", this.getSearch());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the additionalDataOptions property value. The additionalDataOptions property
      * @param value Value to set for the additionalDataOptions property.
      */
     public void setAdditionalDataOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalDataOptions> value) {
-        this.additionalDataOptions = value;
+        this.getBackingStore().set("additionalDataOptions", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the search property value. The search property
      * @param value Value to set for the search property.
      */
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
-        this.search = value;
+        this.getBackingStore().set("search", value);
     }
 }

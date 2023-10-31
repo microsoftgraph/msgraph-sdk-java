@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DirectoryObject> value;
-    /**
      * Instantiates a new DeltaGetResponse and sets the default values.
      */
     public DeltaGetResponse() {
@@ -46,7 +42,7 @@ public class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

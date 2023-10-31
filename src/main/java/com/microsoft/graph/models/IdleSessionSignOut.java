@@ -1,38 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
+public class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether the idle session sign-out policy is enabled.
-     */
-    private Boolean isEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Number of seconds of inactivity after which a user is signed out.
-     */
-    private Long signOutAfterInSeconds;
-    /**
-     * Number of seconds of inactivity after which a user is notified that they'll be signed out.
-     */
-    private Long warnAfterInSeconds;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new IdleSessionSignOut and sets the default values.
      */
     public IdleSessionSignOut() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +38,20 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +72,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -80,7 +80,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
@@ -88,7 +88,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSignOutAfterInSeconds() {
-        return this.signOutAfterInSeconds;
+        return this.getBackingStore().get("signOutAfterInSeconds");
     }
     /**
      * Gets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
@@ -96,7 +96,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getWarnAfterInSeconds() {
-        return this.warnAfterInSeconds;
+        return this.getBackingStore().get("warnAfterInSeconds");
     }
     /**
      * Serializes information the current object
@@ -108,41 +108,47 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("signOutAfterInSeconds", this.getSignOutAfterInSeconds());
         writer.writeLongValue("warnAfterInSeconds", this.getWarnAfterInSeconds());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
      * @param value Value to set for the signOutAfterInSeconds property.
      */
     public void setSignOutAfterInSeconds(@jakarta.annotation.Nullable final Long value) {
-        this.signOutAfterInSeconds = value;
+        this.getBackingStore().set("signOutAfterInSeconds", value);
     }
     /**
      * Sets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
      * @param value Value to set for the warnAfterInSeconds property.
      */
     public void setWarnAfterInSeconds(@jakarta.annotation.Nullable final Long value) {
-        this.warnAfterInSeconds = value;
+        this.getBackingStore().set("warnAfterInSeconds", value);
     }
 }

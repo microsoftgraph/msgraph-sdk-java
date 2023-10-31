@@ -1,54 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
+public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * An array that shows the availability status of each attendee for this meeting suggestion.
-     */
-    private java.util.List<AttendeeAvailability> attendeeAvailability;
-    /**
-     * A percentage that represents the likelhood of all the attendees attending.
-     */
-    private Double confidence;
-    /**
-     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
-     */
-    private java.util.List<Location> locations;
-    /**
-     * A time period suggested for the meeting.
-     */
-    private TimeSlot meetingTimeSlot;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
-     */
-    private Integer order;
-    /**
-     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     */
-    private FreeBusyStatus organizerAvailability;
-    /**
-     * Reason for suggesting the meeting time.
-     */
-    private String suggestionReason;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MeetingTimeSuggestion and sets the default values.
      */
     public MeetingTimeSuggestion() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +38,12 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attendeeAvailability property value. An array that shows the availability status of each attendee for this meeting suggestion.
@@ -75,7 +51,15 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendeeAvailability> getAttendeeAvailability() {
-        return this.attendeeAvailability;
+        return this.getBackingStore().get("attendeeAvailability");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
@@ -83,7 +67,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getConfidence() {
-        return this.confidence;
+        return this.getBackingStore().get("confidence");
     }
     /**
      * The deserialization information for the current model
@@ -108,7 +92,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Location> getLocations() {
-        return this.locations;
+        return this.getBackingStore().get("locations");
     }
     /**
      * Gets the meetingTimeSlot property value. A time period suggested for the meeting.
@@ -116,7 +100,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TimeSlot getMeetingTimeSlot() {
-        return this.meetingTimeSlot;
+        return this.getBackingStore().get("meetingTimeSlot");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -124,7 +108,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
@@ -132,7 +116,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getOrder() {
-        return this.order;
+        return this.getBackingStore().get("order");
     }
     /**
      * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
@@ -140,7 +124,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getOrganizerAvailability() {
-        return this.organizerAvailability;
+        return this.getBackingStore().get("organizerAvailability");
     }
     /**
      * Gets the suggestionReason property value. Reason for suggesting the meeting time.
@@ -148,7 +132,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSuggestionReason() {
-        return this.suggestionReason;
+        return this.getBackingStore().get("suggestionReason");
     }
     /**
      * Serializes information the current object
@@ -164,69 +148,75 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("order", this.getOrder());
         writer.writeEnumValue("organizerAvailability", this.getOrganizerAvailability());
         writer.writeStringValue("suggestionReason", this.getSuggestionReason());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the attendeeAvailability property value. An array that shows the availability status of each attendee for this meeting suggestion.
      * @param value Value to set for the attendeeAvailability property.
      */
     public void setAttendeeAvailability(@jakarta.annotation.Nullable final java.util.List<AttendeeAvailability> value) {
-        this.attendeeAvailability = value;
+        this.getBackingStore().set("attendeeAvailability", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
      * @param value Value to set for the confidence property.
      */
     public void setConfidence(@jakarta.annotation.Nullable final Double value) {
-        this.confidence = value;
+        this.getBackingStore().set("confidence", value);
     }
     /**
      * Sets the locations property value. An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
      * @param value Value to set for the locations property.
      */
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<Location> value) {
-        this.locations = value;
+        this.getBackingStore().set("locations", value);
     }
     /**
      * Sets the meetingTimeSlot property value. A time period suggested for the meeting.
      * @param value Value to set for the meetingTimeSlot property.
      */
     public void setMeetingTimeSlot(@jakarta.annotation.Nullable final TimeSlot value) {
-        this.meetingTimeSlot = value;
+        this.getBackingStore().set("meetingTimeSlot", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
      * @param value Value to set for the order property.
      */
     public void setOrder(@jakarta.annotation.Nullable final Integer value) {
-        this.order = value;
+        this.getBackingStore().set("order", value);
     }
     /**
      * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the organizerAvailability property.
      */
     public void setOrganizerAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
-        this.organizerAvailability = value;
+        this.getBackingStore().set("organizerAvailability", value);
     }
     /**
      * Sets the suggestionReason property value. Reason for suggesting the meeting time.
      * @param value Value to set for the suggestionReason property.
      */
     public void setSuggestionReason(@jakarta.annotation.Nullable final String value) {
-        this.suggestionReason = value;
+        this.getBackingStore().set("suggestionReason", value);
     }
 }

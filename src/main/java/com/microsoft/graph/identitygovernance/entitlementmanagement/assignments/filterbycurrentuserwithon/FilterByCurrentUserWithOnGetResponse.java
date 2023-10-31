@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilterByCurrentUserWithOnGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessPackageAssignment> value;
-    /**
      * Instantiates a new FilterByCurrentUserWithOnGetResponse and sets the default values.
      */
     public FilterByCurrentUserWithOnGetResponse() {
@@ -46,7 +42,7 @@ public class FilterByCurrentUserWithOnGetResponse extends BaseCollectionPaginati
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class FilterByCurrentUserWithOnGetResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

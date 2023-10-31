@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EmployeeExperience implements AdditionalDataHolder, Parsable {
+public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The learningCourseActivities property
-     */
-    private java.util.List<LearningCourseActivity> learningCourseActivities;
-    /**
-     * A collection of learning providers.
-     */
-    private java.util.List<LearningProvider> learningProviders;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new EmployeeExperience and sets the default values.
      */
     public EmployeeExperience() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,20 @@ public class EmployeeExperience implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +71,7 @@ public class EmployeeExperience implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningCourseActivity> getLearningCourseActivities() {
-        return this.learningCourseActivities;
+        return this.getBackingStore().get("learningCourseActivities");
     }
     /**
      * Gets the learningProviders property value. A collection of learning providers.
@@ -75,7 +79,7 @@ public class EmployeeExperience implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningProvider> getLearningProviders() {
-        return this.learningProviders;
+        return this.getBackingStore().get("learningProviders");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -83,7 +87,7 @@ public class EmployeeExperience implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class EmployeeExperience implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeCollectionOfObjectValues("learningProviders", this.getLearningProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the learningCourseActivities property value. The learningCourseActivities property
      * @param value Value to set for the learningCourseActivities property.
      */
     public void setLearningCourseActivities(@jakarta.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
-        this.learningCourseActivities = value;
+        this.getBackingStore().set("learningCourseActivities", value);
     }
     /**
      * Sets the learningProviders property value. A collection of learning providers.
      * @param value Value to set for the learningProviders property.
      */
     public void setLearningProviders(@jakarta.annotation.Nullable final java.util.List<LearningProvider> value) {
-        this.learningProviders = value;
+        this.getBackingStore().set("learningProviders", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

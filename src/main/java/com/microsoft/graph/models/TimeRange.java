@@ -1,35 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimeRange implements AdditionalDataHolder, Parsable {
+public class TimeRange implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * End time for the time range.
-     */
-    private LocalTime endTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Start time for the time range.
-     */
-    private LocalTime startTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TimeRange and sets the default values.
      */
     public TimeRange() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +39,20 @@ public class TimeRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the endTime property value. End time for the time range.
@@ -56,7 +60,7 @@ public class TimeRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getEndTime() {
-        return this.endTime;
+        return this.getBackingStore().get("endTime");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +80,7 @@ public class TimeRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the startTime property value. Start time for the time range.
@@ -84,7 +88,7 @@ public class TimeRange implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getStartTime() {
-        return this.startTime;
+        return this.getBackingStore().get("startTime");
     }
     /**
      * Serializes information the current object
@@ -95,34 +99,40 @@ public class TimeRange implements AdditionalDataHolder, Parsable {
         writer.writeLocalTimeValue("endTime", this.getEndTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the endTime property value. End time for the time range.
      * @param value Value to set for the endTime property.
      */
     public void setEndTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.endTime = value;
+        this.getBackingStore().set("endTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the startTime property value. Start time for the time range.
      * @param value Value to set for the startTime property.
      */
     public void setStartTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.startTime = value;
+        this.getBackingStore().set("startTime", value);
     }
 }

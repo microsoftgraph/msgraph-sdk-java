@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedAuthConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CertificateBasedAuthConfiguration> value;
-    /**
      * Instantiates a new CertificateBasedAuthConfigurationCollectionResponse and sets the default values.
      */
     public CertificateBasedAuthConfigurationCollectionResponse() {
@@ -44,7 +40,7 @@ public class CertificateBasedAuthConfigurationCollectionResponse extends BaseCol
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateBasedAuthConfiguration> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CertificateBasedAuthConfigurationCollectionResponse extends BaseCol
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

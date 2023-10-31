@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RoleManagement implements AdditionalDataHolder, Parsable {
+public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The directory property
-     */
-    private RbacApplication directory;
-    /**
-     * Container for roles and assignments for entitlement management resources.
-     */
-    private RbacApplication entitlementManagement;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new RoleManagement and sets the default values.
      */
     public RoleManagement() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,20 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the directory property value. The directory property
@@ -55,7 +59,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RbacApplication getDirectory() {
-        return this.directory;
+        return this.getBackingStore().get("directory");
     }
     /**
      * Gets the entitlementManagement property value. Container for roles and assignments for entitlement management resources.
@@ -63,7 +67,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RbacApplication getEntitlementManagement() {
-        return this.entitlementManagement;
+        return this.getBackingStore().get("entitlementManagement");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +87,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("directory", this.getDirectory());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the directory property value. The directory property
      * @param value Value to set for the directory property.
      */
     public void setDirectory(@jakarta.annotation.Nullable final RbacApplication value) {
-        this.directory = value;
+        this.getBackingStore().set("directory", value);
     }
     /**
      * Sets the entitlementManagement property value. Container for roles and assignments for entitlement management resources.
      * @param value Value to set for the entitlementManagement property.
      */
     public void setEntitlementManagement(@jakarta.annotation.Nullable final RbacApplication value) {
-        this.entitlementManagement = value;
+        this.getBackingStore().set("entitlementManagement", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

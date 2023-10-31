@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CallOptions implements AdditionalDataHolder, Parsable {
+public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether to hide the app after the call is escalated.
-     */
-    private Boolean hideBotAfterEscalation;
-    /**
-     * Indicates whether content sharing notifications should be enabled for the call.
-     */
-    private Boolean isContentSharingNotificationEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CallOptions and sets the default values.
      */
     public CallOptions() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +46,20 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +79,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHideBotAfterEscalation() {
-        return this.hideBotAfterEscalation;
+        return this.getBackingStore().get("hideBotAfterEscalation");
     }
     /**
      * Gets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
@@ -83,7 +87,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentSharingNotificationEnabled() {
-        return this.isContentSharingNotificationEnabled;
+        return this.getBackingStore().get("isContentSharingNotificationEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +95,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -102,34 +106,40 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
         writer.writeBooleanValue("isContentSharingNotificationEnabled", this.getIsContentSharingNotificationEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
      * @param value Value to set for the hideBotAfterEscalation property.
      */
     public void setHideBotAfterEscalation(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideBotAfterEscalation = value;
+        this.getBackingStore().set("hideBotAfterEscalation", value);
     }
     /**
      * Sets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
      * @param value Value to set for the isContentSharingNotificationEnabled property.
      */
     public void setIsContentSharingNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isContentSharingNotificationEnabled = value;
+        this.getBackingStore().set("isContentSharingNotificationEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

@@ -1,39 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EducationFeedback implements AdditionalDataHolder, Parsable {
+public class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * User who created the feedback.
-     */
-    private IdentitySet feedbackBy;
-    /**
-     * Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime feedbackDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Feedback.
-     */
-    private EducationItemBody text;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new EducationFeedback and sets the default values.
      */
     public EducationFeedback() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +39,20 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the feedbackBy property value. User who created the feedback.
@@ -60,7 +60,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getFeedbackBy() {
-        return this.feedbackBy;
+        return this.getBackingStore().get("feedbackBy");
     }
     /**
      * Gets the feedbackDateTime property value. Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -68,7 +68,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFeedbackDateTime() {
-        return this.feedbackDateTime;
+        return this.getBackingStore().get("feedbackDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -89,7 +89,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the text property value. Feedback.
@@ -97,7 +97,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getText() {
-        return this.text;
+        return this.getBackingStore().get("text");
     }
     /**
      * Serializes information the current object
@@ -109,41 +109,47 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("feedbackDateTime", this.getFeedbackDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("text", this.getText());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the feedbackBy property value. User who created the feedback.
      * @param value Value to set for the feedbackBy property.
      */
     public void setFeedbackBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.feedbackBy = value;
+        this.getBackingStore().set("feedbackBy", value);
     }
     /**
      * Sets the feedbackDateTime property value. Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the feedbackDateTime property.
      */
     public void setFeedbackDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.feedbackDateTime = value;
+        this.getBackingStore().set("feedbackDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the text property value. Feedback.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final EducationItemBody value) {
-        this.text = value;
+        this.getBackingStore().set("text", value);
     }
 }

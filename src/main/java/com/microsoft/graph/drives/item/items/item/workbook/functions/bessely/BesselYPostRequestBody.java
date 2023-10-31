@@ -1,31 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.bessely;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BesselYPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BesselYPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The n property
-     */
-    private Json n;
-    /**
-     * The x property
-     */
-    private Json x;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BesselYPostRequestBody and sets the default values.
      */
     public BesselYPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +39,20 @@ public class BesselYPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +71,7 @@ public class BesselYPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getN() {
-        return this.n;
+        return this.getBackingStore().get("n");
     }
     /**
      * Gets the x property value. The x property
@@ -71,7 +79,7 @@ public class BesselYPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getX() {
-        return this.x;
+        return this.getBackingStore().get("x");
     }
     /**
      * Serializes information the current object
@@ -81,27 +89,33 @@ public class BesselYPostRequestBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("n", this.getN());
         writer.writeObjectValue("x", this.getX());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the n property value. The n property
      * @param value Value to set for the n property.
      */
     public void setN(@jakarta.annotation.Nullable final Json value) {
-        this.n = value;
+        this.getBackingStore().set("n", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
     public void setX(@jakarta.annotation.Nullable final Json value) {
-        this.x = value;
+        this.getBackingStore().set("x", value);
     }
 }

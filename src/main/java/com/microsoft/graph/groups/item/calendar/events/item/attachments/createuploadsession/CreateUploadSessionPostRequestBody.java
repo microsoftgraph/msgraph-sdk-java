@@ -1,27 +1,26 @@
 package com.microsoft.graph.groups.item.calendar.events.item.attachments.createuploadsession;
 
 import com.microsoft.graph.models.AttachmentItem;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The AttachmentItem property
-     */
-    private AttachmentItem attachmentItem;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CreateUploadSessionPostRequestBody and sets the default values.
      */
     public CreateUploadSessionPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -40,7 +39,12 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the AttachmentItem property value. The AttachmentItem property
@@ -48,7 +52,15 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public AttachmentItem getAttachmentItem() {
-        return this.attachmentItem;
+        return this.getBackingStore().get("attachmentItem");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,20 +79,26 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("AttachmentItem", this.getAttachmentItem());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the AttachmentItem property value. The AttachmentItem property
      * @param value Value to set for the AttachmentItem property.
      */
     public void setAttachmentItem(@jakarta.annotation.Nullable final AttachmentItem value) {
-        this.attachmentItem = value;
+        this.getBackingStore().set("attachmentItem", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
 }

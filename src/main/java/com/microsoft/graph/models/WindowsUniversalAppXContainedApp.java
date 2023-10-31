@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppXContainedApp extends MobileContainedApp implements Parsable {
     /**
-     * The app user model ID of the contained app of a WindowsUniversalAppX app.
-     */
-    private String appUserModelId;
-    /**
      * Instantiates a new WindowsUniversalAppXContainedApp and sets the default values.
      */
     public WindowsUniversalAppXContainedApp() {
@@ -38,7 +34,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
      */
     @jakarta.annotation.Nullable
     public String getAppUserModelId() {
-        return this.appUserModelId;
+        return this.getBackingStore().get("appUserModelId");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
      * @param value Value to set for the appUserModelId property.
      */
     public void setAppUserModelId(@jakarta.annotation.Nullable final String value) {
-        this.appUserModelId = value;
+        this.getBackingStore().set("appUserModelId", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionGrantConditionSetCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PermissionGrantConditionSet> value;
-    /**
      * Instantiates a new PermissionGrantConditionSetCollectionResponse and sets the default values.
      */
     public PermissionGrantConditionSetCollectionResponse() {
@@ -44,7 +40,7 @@ public class PermissionGrantConditionSetCollectionResponse extends BaseCollectio
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PermissionGrantConditionSetCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

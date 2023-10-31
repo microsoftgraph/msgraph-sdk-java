@@ -1,35 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.fixed;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
+public class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The decimals property
-     */
-    private Json decimals;
-    /**
-     * The noCommas property
-     */
-    private Json noCommas;
-    /**
-     * The number property
-     */
-    private Json number;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new FixedPostRequestBody and sets the default values.
      */
     public FixedPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +39,20 @@ public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the decimals property value. The decimals property
@@ -56,7 +60,7 @@ public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDecimals() {
-        return this.decimals;
+        return this.getBackingStore().get("decimals");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +80,7 @@ public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNoCommas() {
-        return this.noCommas;
+        return this.getBackingStore().get("noCommas");
     }
     /**
      * Gets the number property value. The number property
@@ -84,7 +88,7 @@ public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumber() {
-        return this.number;
+        return this.getBackingStore().get("number");
     }
     /**
      * Serializes information the current object
@@ -95,34 +99,40 @@ public class FixedPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("decimals", this.getDecimals());
         writer.writeObjectValue("noCommas", this.getNoCommas());
         writer.writeObjectValue("number", this.getNumber());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the decimals property value. The decimals property
      * @param value Value to set for the decimals property.
      */
     public void setDecimals(@jakarta.annotation.Nullable final Json value) {
-        this.decimals = value;
+        this.getBackingStore().set("decimals", value);
     }
     /**
      * Sets the noCommas property value. The noCommas property
      * @param value Value to set for the noCommas property.
      */
     public void setNoCommas(@jakarta.annotation.Nullable final Json value) {
-        this.noCommas = value;
+        this.getBackingStore().set("noCommas", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final Json value) {
-        this.number = value;
+        this.getBackingStore().set("number", value);
     }
 }

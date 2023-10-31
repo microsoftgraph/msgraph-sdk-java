@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SupportedTimeZonesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TimeZoneInformation> value;
-    /**
      * Instantiates a new SupportedTimeZonesGetResponse and sets the default values.
      */
     public SupportedTimeZonesGetResponse() {
@@ -46,7 +42,7 @@ public class SupportedTimeZonesGetResponse extends BaseCollectionPaginationCount
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeZoneInformation> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class SupportedTimeZonesGetResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TimeZoneInformation> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

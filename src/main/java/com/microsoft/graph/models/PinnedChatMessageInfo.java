@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
-     * Represents details about the chat message that is pinned.
-     */
-    private ChatMessage message;
-    /**
      * Instantiates a new PinnedChatMessageInfo and sets the default values.
      */
     public PinnedChatMessageInfo() {
@@ -44,7 +40,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessage getMessage() {
-        return this.message;
+        return this.getBackingStore().get("message");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final ChatMessage value) {
-        this.message = value;
+        this.getBackingStore().set("message", value);
     }
 }

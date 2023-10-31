@@ -1,47 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable {
+public class SecureScoreControlStateUpdate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Assigns the control to the user who will take the action.
-     */
-    private String assignedTo;
-    /**
-     * Provides optional comment about the control.
-     */
-    private String comment;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
-     */
-    private String state;
-    /**
-     * ID of the user who updated tenant state.
-     */
-    private String updatedBy;
-    /**
-     * Time at which the control state was updated.
-     */
-    private OffsetDateTime updatedDateTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SecureScoreControlStateUpdate and sets the default values.
      */
     public SecureScoreControlStateUpdate() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +39,12 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignedTo property value. Assigns the control to the user who will take the action.
@@ -68,7 +52,15 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.getBackingStore().get("assignedTo");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comment property value. Provides optional comment about the control.
@@ -76,7 +68,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.getBackingStore().get("comment");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +91,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
@@ -107,7 +99,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.getBackingStore().get("state");
     }
     /**
      * Gets the updatedBy property value. ID of the user who updated tenant state.
@@ -115,7 +107,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public String getUpdatedBy() {
-        return this.updatedBy;
+        return this.getBackingStore().get("updatedBy");
     }
     /**
      * Gets the updatedDateTime property value. Time at which the control state was updated.
@@ -123,7 +115,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this.updatedDateTime;
+        return this.getBackingStore().get("updatedDateTime");
     }
     /**
      * Serializes information the current object
@@ -137,55 +129,61 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("updatedBy", this.getUpdatedBy());
         writer.writeOffsetDateTimeValue("updatedDateTime", this.getUpdatedDateTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the assignedTo property value. Assigns the control to the user who will take the action.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.getBackingStore().set("assignedTo", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the comment property value. Provides optional comment about the control.
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.getBackingStore().set("comment", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.getBackingStore().set("state", value);
     }
     /**
      * Sets the updatedBy property value. ID of the user who updated tenant state.
      * @param value Value to set for the updatedBy property.
      */
     public void setUpdatedBy(@jakarta.annotation.Nullable final String value) {
-        this.updatedBy = value;
+        this.getBackingStore().set("updatedBy", value);
     }
     /**
      * Sets the updatedDateTime property value. Time at which the control state was updated.
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.updatedDateTime = value;
+        this.getBackingStore().set("updatedDateTime", value);
     }
 }

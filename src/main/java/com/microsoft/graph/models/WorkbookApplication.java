@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookApplication extends Entity implements Parsable {
     /**
-     * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
-     */
-    private String calculationMode;
-    /**
      * Instantiates a new WorkbookApplication and sets the default values.
      */
     public WorkbookApplication() {
@@ -34,7 +30,7 @@ public class WorkbookApplication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCalculationMode() {
-        return this.calculationMode;
+        return this.getBackingStore().get("calculationMode");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class WorkbookApplication extends Entity implements Parsable {
      * @param value Value to set for the calculationMode property.
      */
     public void setCalculationMode(@jakarta.annotation.Nullable final String value) {
-        this.calculationMode = value;
+        this.getBackingStore().set("calculationMode", value);
     }
 }

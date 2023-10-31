@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /**
-     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     */
-    private InferenceClassificationType classifyAs;
-    /**
-     * The email address information of the sender for whom the override is created.
-     */
-    private EmailAddress senderEmailAddress;
-    /**
      * Instantiates a new InferenceClassificationOverride and sets the default values.
      */
     public InferenceClassificationOverride() {
@@ -38,7 +30,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public InferenceClassificationType getClassifyAs() {
-        return this.classifyAs;
+        return this.getBackingStore().get("classifyAs");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public EmailAddress getSenderEmailAddress() {
-        return this.senderEmailAddress;
+        return this.getBackingStore().get("senderEmailAddress");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * @param value Value to set for the classifyAs property.
      */
     public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationType value) {
-        this.classifyAs = value;
+        this.getBackingStore().set("classifyAs", value);
     }
     /**
      * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
      * @param value Value to set for the senderEmailAddress property.
      */
     public void setSenderEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
-        this.senderEmailAddress = value;
+        this.getBackingStore().set("senderEmailAddress", value);
     }
 }

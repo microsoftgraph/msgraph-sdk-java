@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The reason for the time off.
-     */
-    private String timeOffReasonId;
-    /**
      * Instantiates a new TimeOffRequest and sets the default values.
      */
     public TimeOffRequest() {
@@ -44,7 +32,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -64,7 +52,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the timeOffReasonId property value. The reason for the time off.
@@ -72,7 +60,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTimeOffReasonId() {
-        return this.timeOffReasonId;
+        return this.getBackingStore().get("timeOffReasonId");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the timeOffReasonId property value. The reason for the time off.
      * @param value Value to set for the timeOffReasonId property.
      */
     public void setTimeOffReasonId(@jakarta.annotation.Nullable final String value) {
-        this.timeOffReasonId = value;
+        this.getBackingStore().set("timeOffReasonId", value);
     }
 }

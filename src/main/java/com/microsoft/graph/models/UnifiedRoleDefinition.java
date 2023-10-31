@@ -9,42 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
-     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
-     */
-    private String description;
-    /**
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
-     */
-    private String displayName;
-    /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     */
-    private java.util.List<UnifiedRoleDefinition> inheritsPermissionsFrom;
-    /**
-     * Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
-     */
-    private Boolean isBuiltIn;
-    /**
-     * Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
-     */
-    private Boolean isEnabled;
-    /**
-     * List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
-     */
-    private java.util.List<String> resourceScopes;
-    /**
-     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     */
-    private java.util.List<UnifiedRolePermission> rolePermissions;
-    /**
-     * Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
-     */
-    private String templateId;
-    /**
-     * Indicates version of the role definition. Read-only when isBuiltIn is true.
-     */
-    private String version;
-    /**
      * Instantiates a new UnifiedRoleDefinition and sets the default values.
      */
     public UnifiedRoleDefinition() {
@@ -66,7 +30,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
@@ -74,7 +38,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +64,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getInheritsPermissionsFrom() {
-        return this.inheritsPermissionsFrom;
+        return this.getBackingStore().get("inheritsPermissionsFrom");
     }
     /**
      * Gets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
@@ -108,7 +72,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.getBackingStore().get("isBuiltIn");
     }
     /**
      * Gets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
@@ -116,7 +80,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
@@ -124,7 +88,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResourceScopes() {
-        return this.resourceScopes;
+        return this.getBackingStore().get("resourceScopes");
     }
     /**
      * Gets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
@@ -132,7 +96,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRolePermission> getRolePermissions() {
-        return this.rolePermissions;
+        return this.getBackingStore().get("rolePermissions");
     }
     /**
      * Gets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
@@ -140,7 +104,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.getBackingStore().get("templateId");
     }
     /**
      * Gets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
@@ -148,7 +112,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.getBackingStore().get("version");
     }
     /**
      * Serializes information the current object
@@ -172,62 +136,62 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param value Value to set for the inheritsPermissionsFrom property.
      */
     public void setInheritsPermissionsFrom(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
-        this.inheritsPermissionsFrom = value;
+        this.getBackingStore().set("inheritsPermissionsFrom", value);
     }
     /**
      * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Microsoft Entra or a custom definition. Read-only. Supports $filter (eq, in).
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.getBackingStore().set("isBuiltIn", value);
     }
     /**
      * Sets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      * @param value Value to set for the resourceScopes property.
      */
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.resourceScopes = value;
+        this.getBackingStore().set("resourceScopes", value);
     }
     /**
      * Sets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      * @param value Value to set for the rolePermissions property.
      */
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<UnifiedRolePermission> value) {
-        this.rolePermissions = value;
+        this.getBackingStore().set("rolePermissions", value);
     }
     /**
      * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.getBackingStore().set("templateId", value);
     }
     /**
      * Sets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.getBackingStore().set("version", value);
     }
 }

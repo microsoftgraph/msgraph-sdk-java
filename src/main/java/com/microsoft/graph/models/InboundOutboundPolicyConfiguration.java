@@ -1,34 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Parsable {
+public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Defines whether external users coming inbound are allowed.
-     */
-    private Boolean inboundAllowed;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Defines whether internal users are allowed to go outbound.
-     */
-    private Boolean outboundAllowed;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new InboundOutboundPolicyConfiguration and sets the default values.
      */
     public InboundOutboundPolicyConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +38,20 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +71,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getInboundAllowed() {
-        return this.inboundAllowed;
+        return this.getBackingStore().get("inboundAllowed");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +79,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
@@ -83,7 +87,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getOutboundAllowed() {
-        return this.outboundAllowed;
+        return this.getBackingStore().get("outboundAllowed");
     }
     /**
      * Serializes information the current object
@@ -94,34 +98,40 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
         writer.writeBooleanValue("inboundAllowed", this.getInboundAllowed());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("outboundAllowed", this.getOutboundAllowed());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the inboundAllowed property value. Defines whether external users coming inbound are allowed.
      * @param value Value to set for the inboundAllowed property.
      */
     public void setInboundAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.inboundAllowed = value;
+        this.getBackingStore().set("inboundAllowed", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
      * @param value Value to set for the outboundAllowed property.
      */
     public void setOutboundAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.outboundAllowed = value;
+        this.getBackingStore().set("outboundAllowed", value);
     }
 }

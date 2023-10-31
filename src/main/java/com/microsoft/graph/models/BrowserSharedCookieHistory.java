@@ -1,59 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsable {
+public class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The comment for the shared cookie.
-     */
-    private String comment;
-    /**
-     * The name of the cookie.
-     */
-    private String displayName;
-    /**
-     * Controls whether a cookie is a host-only or domain cookie.
-     */
-    private Boolean hostOnly;
-    /**
-     * The URL of the cookie.
-     */
-    private String hostOrDomain;
-    /**
-     * The lastModifiedBy property
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The path of the cookie.
-     */
-    private String path;
-    /**
-     * The date and time when the cookie was last published.
-     */
-    private OffsetDateTime publishedDateTime;
-    /**
-     * Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
-     */
-    private BrowserSharedCookieSourceEnvironment sourceEnvironment;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BrowserSharedCookieHistory and sets the default values.
      */
     public BrowserSharedCookieHistory() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -72,7 +39,20 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the comment property value. The comment for the shared cookie.
@@ -80,7 +60,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getComment() {
-        return this.comment;
+        return this.getBackingStore().get("comment");
     }
     /**
      * Gets the displayName property value. The name of the cookie.
@@ -88,7 +68,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -114,7 +94,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
-        return this.hostOnly;
+        return this.getBackingStore().get("hostOnly");
     }
     /**
      * Gets the hostOrDomain property value. The URL of the cookie.
@@ -122,7 +102,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getHostOrDomain() {
-        return this.hostOrDomain;
+        return this.getBackingStore().get("hostOrDomain");
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
@@ -130,7 +110,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.getBackingStore().get("lastModifiedBy");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -138,7 +118,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the path property value. The path of the cookie.
@@ -146,7 +126,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getPath() {
-        return this.path;
+        return this.getBackingStore().get("path");
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the cookie was last published.
@@ -154,7 +134,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
-        return this.publishedDateTime;
+        return this.getBackingStore().get("publishedDateTime");
     }
     /**
      * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
@@ -162,7 +142,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
-        return this.sourceEnvironment;
+        return this.getBackingStore().get("sourceEnvironment");
     }
     /**
      * Serializes information the current object
@@ -179,76 +159,82 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
         writer.writeStringValue("path", this.getPath());
         writer.writeOffsetDateTimeValue("publishedDateTime", this.getPublishedDateTime());
         writer.writeEnumValue("sourceEnvironment", this.getSourceEnvironment());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the comment property value. The comment for the shared cookie.
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
-        this.comment = value;
+        this.getBackingStore().set("comment", value);
     }
     /**
      * Sets the displayName property value. The name of the cookie.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param value Value to set for the hostOnly property.
      */
     public void setHostOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.hostOnly = value;
+        this.getBackingStore().set("hostOnly", value);
     }
     /**
      * Sets the hostOrDomain property value. The URL of the cookie.
      * @param value Value to set for the hostOrDomain property.
      */
     public void setHostOrDomain(@jakarta.annotation.Nullable final String value) {
-        this.hostOrDomain = value;
+        this.getBackingStore().set("hostOrDomain", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.getBackingStore().set("lastModifiedBy", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the path property value. The path of the cookie.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
-        this.path = value;
+        this.getBackingStore().set("path", value);
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the cookie was last published.
      * @param value Value to set for the publishedDateTime property.
      */
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.publishedDateTime = value;
+        this.getBackingStore().set("publishedDateTime", value);
     }
     /**
      * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @param value Value to set for the sourceEnvironment property.
      */
     public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
-        this.sourceEnvironment = value;
+        this.getBackingStore().set("sourceEnvironment", value);
     }
 }

@@ -12,38 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends Entity implements Parsable {
     /**
-     * The number of crashes for the app. Valid values -2147483648 to 2147483647
-     */
-    private Integer appCrashCount;
-    /**
-     * The friendly name of the application.
-     */
-    private String appDisplayName;
-    /**
-     * The name of the application.
-     */
-    private String appName;
-    /**
-     * The publisher of the application.
-     */
-    private String appPublisher;
-    /**
-     * The version of the application.
-     */
-    private String appVersion;
-    /**
-     * The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer deviceCountWithCrashes;
-    /**
-     * When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
-     */
-    private Boolean isLatestUsedVersion;
-    /**
-     * When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean isMostUsedVersion;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails() {
@@ -65,7 +33,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this.appCrashCount;
+        return this.getBackingStore().get("appCrashCount");
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application.
@@ -73,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.getBackingStore().get("appDisplayName");
     }
     /**
      * Gets the appName property value. The name of the application.
@@ -81,7 +49,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.getBackingStore().get("appName");
     }
     /**
      * Gets the appPublisher property value. The publisher of the application.
@@ -89,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.getBackingStore().get("appPublisher");
     }
     /**
      * Gets the appVersion property value. The version of the application.
@@ -97,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
-        return this.appVersion;
+        return this.getBackingStore().get("appVersion");
     }
     /**
      * Gets the deviceCountWithCrashes property value. The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -105,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCountWithCrashes() {
-        return this.deviceCountWithCrashes;
+        return this.getBackingStore().get("deviceCountWithCrashes");
     }
     /**
      * The deserialization information for the current model
@@ -130,7 +98,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLatestUsedVersion() {
-        return this.isLatestUsedVersion;
+        return this.getBackingStore().get("isLatestUsedVersion");
     }
     /**
      * Gets the isMostUsedVersion property value. When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
@@ -138,7 +106,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMostUsedVersion() {
-        return this.isMostUsedVersion;
+        return this.getBackingStore().get("isMostUsedVersion");
     }
     /**
      * Serializes information the current object
@@ -161,55 +129,55 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appCrashCount property.
      */
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appCrashCount = value;
+        this.getBackingStore().set("appCrashCount", value);
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.getBackingStore().set("appDisplayName", value);
     }
     /**
      * Sets the appName property value. The name of the application.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.getBackingStore().set("appName", value);
     }
     /**
      * Sets the appPublisher property value. The publisher of the application.
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.getBackingStore().set("appPublisher", value);
     }
     /**
      * Sets the appVersion property value. The version of the application.
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.appVersion = value;
+        this.getBackingStore().set("appVersion", value);
     }
     /**
      * Sets the deviceCountWithCrashes property value. The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the deviceCountWithCrashes property.
      */
     public void setDeviceCountWithCrashes(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCountWithCrashes = value;
+        this.getBackingStore().set("deviceCountWithCrashes", value);
     }
     /**
      * Sets the isLatestUsedVersion property value. When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
      * @param value Value to set for the isLatestUsedVersion property.
      */
     public void setIsLatestUsedVersion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLatestUsedVersion = value;
+        this.getBackingStore().set("isLatestUsedVersion", value);
     }
     /**
      * Sets the isMostUsedVersion property value. When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isMostUsedVersion property.
      */
     public void setIsMostUsedVersion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMostUsedVersion = value;
+        this.getBackingStore().set("isMostUsedVersion", value);
     }
 }

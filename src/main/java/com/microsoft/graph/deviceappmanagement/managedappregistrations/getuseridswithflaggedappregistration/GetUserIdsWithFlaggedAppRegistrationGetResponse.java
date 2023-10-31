@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetUserIdsWithFlaggedAppRegistrationGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<String> value;
-    /**
      * Instantiates a new GetUserIdsWithFlaggedAppRegistrationGetResponse and sets the default values.
      */
     public GetUserIdsWithFlaggedAppRegistrationGetResponse() {
@@ -45,7 +41,7 @@ public class GetUserIdsWithFlaggedAppRegistrationGetResponse extends BaseCollect
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class GetUserIdsWithFlaggedAppRegistrationGetResponse extends BaseCollect
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

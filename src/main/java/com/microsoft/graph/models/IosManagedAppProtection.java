@@ -12,34 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
-     * Represents the level to which app data is encrypted for managed apps
-     */
-    private ManagedAppDataEncryptionType appDataEncryptionType;
-    /**
-     * List of apps to which the policy is deployed.
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     */
-    private String customBrowserProtocol;
-    /**
-     * Count of apps to which the current policy is deployed.
-     */
-    private Integer deployedAppCount;
-    /**
-     * Navigation property to deployment summary of the configuration.
-     */
-    private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /**
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     */
-    private Boolean faceIdBlocked;
-    /**
-     * Versions less than the specified version will block the managed app from accessing company data.
-     */
-    private String minimumRequiredSdkVersion;
-    /**
      * Instantiates a new IosManagedAppProtection and sets the default values.
      */
     public IosManagedAppProtection() {
@@ -62,7 +34,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
-        return this.appDataEncryptionType;
+        return this.getBackingStore().get("appDataEncryptionType");
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
@@ -70,7 +42,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.getBackingStore().get("apps");
     }
     /**
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -78,7 +50,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserProtocol() {
-        return this.customBrowserProtocol;
+        return this.getBackingStore().get("customBrowserProtocol");
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -86,7 +58,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this.deployedAppCount;
+        return this.getBackingStore().get("deployedAppCount");
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -94,7 +66,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this.deploymentSummary;
+        return this.getBackingStore().get("deploymentSummary");
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
@@ -102,7 +74,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
-        return this.faceIdBlocked;
+        return this.getBackingStore().get("faceIdBlocked");
     }
     /**
      * The deserialization information for the current model
@@ -126,7 +98,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
-        return this.minimumRequiredSdkVersion;
+        return this.getBackingStore().get("minimumRequiredSdkVersion");
     }
     /**
      * Serializes information the current object
@@ -148,48 +120,48 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the appDataEncryptionType property.
      */
     public void setAppDataEncryptionType(@jakarta.annotation.Nullable final ManagedAppDataEncryptionType value) {
-        this.appDataEncryptionType = value;
+        this.getBackingStore().set("appDataEncryptionType", value);
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.getBackingStore().set("apps", value);
     }
     /**
      * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserProtocol property.
      */
     public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {
-        this.customBrowserProtocol = value;
+        this.getBackingStore().set("customBrowserProtocol", value);
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deployedAppCount = value;
+        this.getBackingStore().set("deployedAppCount", value);
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      */
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this.deploymentSummary = value;
+        this.getBackingStore().set("deploymentSummary", value);
     }
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      * @param value Value to set for the faceIdBlocked property.
      */
     public void setFaceIdBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.faceIdBlocked = value;
+        this.getBackingStore().set("faceIdBlocked", value);
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumRequiredSdkVersion property.
      */
     public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredSdkVersion = value;
+        this.getBackingStore().set("minimumRequiredSdkVersion", value);
     }
 }

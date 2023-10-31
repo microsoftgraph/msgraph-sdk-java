@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TodoTaskList extends Entity implements Parsable {
     /**
-     * The name of the task list.
-     */
-    private String displayName;
-    /**
-     * The collection of open extensions defined for the task list. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * True if the user is owner of the given task list.
-     */
-    private Boolean isOwner;
-    /**
-     * True if the task list is shared with other users
-     */
-    private Boolean isShared;
-    /**
-     * The tasks in this task list. Read-only. Nullable.
-     */
-    private java.util.List<TodoTask> tasks;
-    /**
-     * The wellknownListName property
-     */
-    private WellknownListName wellknownListName;
-    /**
      * Instantiates a new TodoTaskList and sets the default values.
      */
     public TodoTaskList() {
@@ -54,7 +30,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the task list. Nullable.
@@ -62,7 +38,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.getBackingStore().get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +61,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOwner() {
-        return this.isOwner;
+        return this.getBackingStore().get("isOwner");
     }
     /**
      * Gets the isShared property value. True if the task list is shared with other users
@@ -93,7 +69,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
-        return this.isShared;
+        return this.getBackingStore().get("isShared");
     }
     /**
      * Gets the tasks property value. The tasks in this task list. Read-only. Nullable.
@@ -101,7 +77,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TodoTask> getTasks() {
-        return this.tasks;
+        return this.getBackingStore().get("tasks");
     }
     /**
      * Gets the wellknownListName property value. The wellknownListName property
@@ -109,7 +85,7 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WellknownListName getWellknownListName() {
-        return this.wellknownListName;
+        return this.getBackingStore().get("wellknownListName");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the task list. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.getBackingStore().set("extensions", value);
     }
     /**
      * Sets the isOwner property value. True if the user is owner of the given task list.
      * @param value Value to set for the isOwner property.
      */
     public void setIsOwner(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOwner = value;
+        this.getBackingStore().set("isOwner", value);
     }
     /**
      * Sets the isShared property value. True if the task list is shared with other users
      * @param value Value to set for the isShared property.
      */
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
-        this.isShared = value;
+        this.getBackingStore().set("isShared", value);
     }
     /**
      * Sets the tasks property value. The tasks in this task list. Read-only. Nullable.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<TodoTask> value) {
-        this.tasks = value;
+        this.getBackingStore().set("tasks", value);
     }
     /**
      * Sets the wellknownListName property value. The wellknownListName property
      * @param value Value to set for the wellknownListName property.
      */
     public void setWellknownListName(@jakarta.annotation.Nullable final WellknownListName value) {
-        this.wellknownListName = value;
+        this.getBackingStore().set("wellknownListName", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * Azure AD user identifier. Use the List users method to get this ID.
-     */
-    private String userId;
-    /**
      * Instantiates a new AadUserNotificationRecipient and sets the default values.
      */
     public AadUserNotificationRecipient() {
@@ -40,12 +36,12 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
         return deserializerMap;
     }
     /**
-     * Gets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
+     * Gets the userId property value. Microsoft Entra user identifier. Use the List users method to get this ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.getBackingStore().get("userId");
     }
     /**
      * Serializes information the current object
@@ -57,10 +53,10 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
+     * Sets the userId property value. Microsoft Entra user identifier. Use the List users method to get this ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.getBackingStore().set("userId", value);
     }
 }

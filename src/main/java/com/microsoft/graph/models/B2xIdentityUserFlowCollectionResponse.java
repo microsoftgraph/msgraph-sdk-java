@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<B2xIdentityUserFlow> value;
-    /**
      * Instantiates a new B2xIdentityUserFlowCollectionResponse and sets the default values.
      */
     public B2xIdentityUserFlowCollectionResponse() {
@@ -44,7 +40,7 @@ public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

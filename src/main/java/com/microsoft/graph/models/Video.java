@@ -1,66 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Video implements AdditionalDataHolder, Parsable {
+public class Video implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Number of audio bits per sample.
-     */
-    private Integer audioBitsPerSample;
-    /**
-     * Number of audio channels.
-     */
-    private Integer audioChannels;
-    /**
-     * Name of the audio format (AAC, MP3, etc.).
-     */
-    private String audioFormat;
-    /**
-     * Number of audio samples per second.
-     */
-    private Integer audioSamplesPerSecond;
-    /**
-     * Bit rate of the video in bits per second.
-     */
-    private Integer bitrate;
-    /**
-     * Duration of the file in milliseconds.
-     */
-    private Long duration;
-    /**
-     * 'Four character code' name of the video format.
-     */
-    private String fourCC;
-    /**
-     * Frame rate of the video.
-     */
-    private Double frameRate;
-    /**
-     * Height of the video, in pixels.
-     */
-    private Integer height;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Width of the video, in pixels.
-     */
-    private Integer width;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Video and sets the default values.
      */
     public Video() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -79,7 +38,12 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the audioBitsPerSample property value. Number of audio bits per sample.
@@ -87,7 +51,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getAudioBitsPerSample() {
-        return this.audioBitsPerSample;
+        return this.getBackingStore().get("audioBitsPerSample");
     }
     /**
      * Gets the audioChannels property value. Number of audio channels.
@@ -95,7 +59,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getAudioChannels() {
-        return this.audioChannels;
+        return this.getBackingStore().get("audioChannels");
     }
     /**
      * Gets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
@@ -103,7 +67,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAudioFormat() {
-        return this.audioFormat;
+        return this.getBackingStore().get("audioFormat");
     }
     /**
      * Gets the audioSamplesPerSecond property value. Number of audio samples per second.
@@ -111,7 +75,15 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getAudioSamplesPerSecond() {
-        return this.audioSamplesPerSecond;
+        return this.getBackingStore().get("audioSamplesPerSecond");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the bitrate property value. Bit rate of the video in bits per second.
@@ -119,7 +91,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getBitrate() {
-        return this.bitrate;
+        return this.getBackingStore().get("bitrate");
     }
     /**
      * Gets the duration property value. Duration of the file in milliseconds.
@@ -127,7 +99,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getDuration() {
-        return this.duration;
+        return this.getBackingStore().get("duration");
     }
     /**
      * The deserialization information for the current model
@@ -155,7 +127,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFourCC() {
-        return this.fourCC;
+        return this.getBackingStore().get("fourCC");
     }
     /**
      * Gets the frameRate property value. Frame rate of the video.
@@ -163,7 +135,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getFrameRate() {
-        return this.frameRate;
+        return this.getBackingStore().get("frameRate");
     }
     /**
      * Gets the height property value. Height of the video, in pixels.
@@ -171,7 +143,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
-        return this.height;
+        return this.getBackingStore().get("height");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -179,7 +151,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the width property value. Width of the video, in pixels.
@@ -187,7 +159,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
-        return this.width;
+        return this.getBackingStore().get("width");
     }
     /**
      * Serializes information the current object
@@ -206,90 +178,96 @@ public class Video implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("height", this.getHeight());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("width", this.getWidth());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the audioBitsPerSample property value. Number of audio bits per sample.
      * @param value Value to set for the audioBitsPerSample property.
      */
     public void setAudioBitsPerSample(@jakarta.annotation.Nullable final Integer value) {
-        this.audioBitsPerSample = value;
+        this.getBackingStore().set("audioBitsPerSample", value);
     }
     /**
      * Sets the audioChannels property value. Number of audio channels.
      * @param value Value to set for the audioChannels property.
      */
     public void setAudioChannels(@jakarta.annotation.Nullable final Integer value) {
-        this.audioChannels = value;
+        this.getBackingStore().set("audioChannels", value);
     }
     /**
      * Sets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
      * @param value Value to set for the audioFormat property.
      */
     public void setAudioFormat(@jakarta.annotation.Nullable final String value) {
-        this.audioFormat = value;
+        this.getBackingStore().set("audioFormat", value);
     }
     /**
      * Sets the audioSamplesPerSecond property value. Number of audio samples per second.
      * @param value Value to set for the audioSamplesPerSecond property.
      */
     public void setAudioSamplesPerSecond(@jakarta.annotation.Nullable final Integer value) {
-        this.audioSamplesPerSecond = value;
+        this.getBackingStore().set("audioSamplesPerSecond", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the bitrate property value. Bit rate of the video in bits per second.
      * @param value Value to set for the bitrate property.
      */
     public void setBitrate(@jakarta.annotation.Nullable final Integer value) {
-        this.bitrate = value;
+        this.getBackingStore().set("bitrate", value);
     }
     /**
      * Sets the duration property value. Duration of the file in milliseconds.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Long value) {
-        this.duration = value;
+        this.getBackingStore().set("duration", value);
     }
     /**
      * Sets the fourCC property value. 'Four character code' name of the video format.
      * @param value Value to set for the fourCC property.
      */
     public void setFourCC(@jakarta.annotation.Nullable final String value) {
-        this.fourCC = value;
+        this.getBackingStore().set("fourCC", value);
     }
     /**
      * Sets the frameRate property value. Frame rate of the video.
      * @param value Value to set for the frameRate property.
      */
     public void setFrameRate(@jakarta.annotation.Nullable final Double value) {
-        this.frameRate = value;
+        this.getBackingStore().set("frameRate", value);
     }
     /**
      * Sets the height property value. Height of the video, in pixels.
      * @param value Value to set for the height property.
      */
     public void setHeight(@jakarta.annotation.Nullable final Integer value) {
-        this.height = value;
+        this.getBackingStore().set("height", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the width property value. Width of the video, in pixels.
      * @param value Value to set for the width property.
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
-        this.width = value;
+        this.getBackingStore().set("width", value);
     }
 }

@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomCalloutExtension extends Entity implements Parsable {
     /**
-     * Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
-     */
-    private CustomExtensionAuthenticationConfiguration authenticationConfiguration;
-    /**
-     * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
-     */
-    private CustomExtensionClientConfiguration clientConfiguration;
-    /**
-     * Description for the customCalloutExtension object.
-     */
-    private String description;
-    /**
-     * Display name for the customCalloutExtension object.
-     */
-    private String displayName;
-    /**
-     * The type and details for configuring the endpoint to call the logic app's workflow.
-     */
-    private CustomExtensionEndpointConfiguration endpointConfiguration;
-    /**
      * Instantiates a new CustomCalloutExtension and sets the default values.
      */
     public CustomCalloutExtension() {
@@ -60,15 +40,15 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CustomExtensionAuthenticationConfiguration getAuthenticationConfiguration() {
-        return this.authenticationConfiguration;
+        return this.getBackingStore().get("authenticationConfiguration");
     }
     /**
-     * Gets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Gets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @return a CustomExtensionClientConfiguration
      */
     @jakarta.annotation.Nullable
     public CustomExtensionClientConfiguration getClientConfiguration() {
-        return this.clientConfiguration;
+        return this.getBackingStore().get("clientConfiguration");
     }
     /**
      * Gets the description property value. Description for the customCalloutExtension object.
@@ -76,7 +56,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Display name for the customCalloutExtension object.
@@ -84,7 +64,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
@@ -92,7 +72,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CustomExtensionEndpointConfiguration getEndpointConfiguration() {
-        return this.endpointConfiguration;
+        return this.getBackingStore().get("endpointConfiguration");
     }
     /**
      * The deserialization information for the current model
@@ -126,34 +106,34 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the authenticationConfiguration property.
      */
     public void setAuthenticationConfiguration(@jakarta.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
-        this.authenticationConfiguration = value;
+        this.getBackingStore().set("authenticationConfiguration", value);
     }
     /**
-     * Sets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Sets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @param value Value to set for the clientConfiguration property.
      */
     public void setClientConfiguration(@jakarta.annotation.Nullable final CustomExtensionClientConfiguration value) {
-        this.clientConfiguration = value;
+        this.getBackingStore().set("clientConfiguration", value);
     }
     /**
      * Sets the description property value. Description for the customCalloutExtension object.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the customCalloutExtension object.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
      * @param value Value to set for the endpointConfiguration property.
      */
     public void setEndpointConfiguration(@jakarta.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
-        this.endpointConfiguration = value;
+        this.getBackingStore().set("endpointConfiguration", value);
     }
 }

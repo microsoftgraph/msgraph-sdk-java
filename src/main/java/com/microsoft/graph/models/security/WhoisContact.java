@@ -1,51 +1,26 @@
 package com.microsoft.graph.models.security;
 
 import com.microsoft.graph.models.PhysicalAddress;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WhoisContact implements AdditionalDataHolder, Parsable {
+public class WhoisContact implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The physical address of the entity.
-     */
-    private PhysicalAddress address;
-    /**
-     * The email of this WHOIS contact.
-     */
-    private String email;
-    /**
-     * The fax of this WHOIS contact. No format is guaranteed.
-     */
-    private String fax;
-    /**
-     * The name of this WHOIS contact.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The organization of this WHOIS contact.
-     */
-    private String organization;
-    /**
-     * The telephone of this WHOIS contact. No format is guaranteed.
-     */
-    private String telephone;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new WhoisContact and sets the default values.
      */
     public WhoisContact() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -64,7 +39,12 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The physical address of the entity.
@@ -72,7 +52,15 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this.address;
+        return this.getBackingStore().get("address");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the email property value. The email of this WHOIS contact.
@@ -80,7 +68,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.getBackingStore().get("email");
     }
     /**
      * Gets the fax property value. The fax of this WHOIS contact. No format is guaranteed.
@@ -88,7 +76,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFax() {
-        return this.fax;
+        return this.getBackingStore().get("fax");
     }
     /**
      * The deserialization information for the current model
@@ -112,7 +100,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -120,7 +108,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the organization property value. The organization of this WHOIS contact.
@@ -128,7 +116,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOrganization() {
-        return this.organization;
+        return this.getBackingStore().get("organization");
     }
     /**
      * Gets the telephone property value. The telephone of this WHOIS contact. No format is guaranteed.
@@ -136,7 +124,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTelephone() {
-        return this.telephone;
+        return this.getBackingStore().get("telephone");
     }
     /**
      * Serializes information the current object
@@ -151,62 +139,68 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("organization", this.getOrganization());
         writer.writeStringValue("telephone", this.getTelephone());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the address property value. The physical address of the entity.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.address = value;
+        this.getBackingStore().set("address", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the email property value. The email of this WHOIS contact.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.getBackingStore().set("email", value);
     }
     /**
      * Sets the fax property value. The fax of this WHOIS contact. No format is guaranteed.
      * @param value Value to set for the fax property.
      */
     public void setFax(@jakarta.annotation.Nullable final String value) {
-        this.fax = value;
+        this.getBackingStore().set("fax", value);
     }
     /**
      * Sets the name property value. The name of this WHOIS contact.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the organization property value. The organization of this WHOIS contact.
      * @param value Value to set for the organization property.
      */
     public void setOrganization(@jakarta.annotation.Nullable final String value) {
-        this.organization = value;
+        this.getBackingStore().set("organization", value);
     }
     /**
      * Sets the telephone property value. The telephone of this WHOIS contact. No format is guaranteed.
      * @param value Value to set for the telephone property.
      */
     public void setTelephone(@jakarta.annotation.Nullable final String value) {
-        this.telephone = value;
+        this.getBackingStore().set("telephone", value);
     }
 }

@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewReviewer extends Entity implements Parsable {
     /**
-     * The date when the reviewer was added for the access review.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Name of reviewer.
-     */
-    private String displayName;
-    /**
-     * User principal name of the reviewer.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new AccessReviewReviewer and sets the default values.
      */
     public AccessReviewReviewer() {
@@ -43,7 +31,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Name of reviewer.
@@ -51,7 +39,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.getBackingStore().get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AccessReviewReviewer extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Name of reviewer.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the reviewer.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.getBackingStore().set("userPrincipalName", value);
     }
 }

@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DataSubject implements AdditionalDataHolder, Parsable {
+public class DataSubject implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Email of the data subject.
-     */
-    private String email;
-    /**
-     * First name of the data subject.
-     */
-    private String firstName;
-    /**
-     * Last Name of the data subject.
-     */
-    private String lastName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
-     */
-    private String residency;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DataSubject and sets the default values.
      */
     public DataSubject() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the email property value. Email of the data subject.
@@ -63,7 +59,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.getBackingStore().get("email");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +81,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFirstName() {
-        return this.firstName;
+        return this.getBackingStore().get("firstName");
     }
     /**
      * Gets the lastName property value. Last Name of the data subject.
@@ -93,7 +89,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLastName() {
-        return this.lastName;
+        return this.getBackingStore().get("lastName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +97,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
@@ -109,7 +105,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResidency() {
-        return this.residency;
+        return this.getBackingStore().get("residency");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("lastName", this.getLastName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("residency", this.getResidency());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the email property value. Email of the data subject.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.getBackingStore().set("email", value);
     }
     /**
      * Sets the firstName property value. First name of the data subject.
      * @param value Value to set for the firstName property.
      */
     public void setFirstName(@jakarta.annotation.Nullable final String value) {
-        this.firstName = value;
+        this.getBackingStore().set("firstName", value);
     }
     /**
      * Sets the lastName property value. Last Name of the data subject.
      * @param value Value to set for the lastName property.
      */
     public void setLastName(@jakarta.annotation.Nullable final String value) {
-        this.lastName = value;
+        this.getBackingStore().set("lastName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
      * @param value Value to set for the residency property.
      */
     public void setResidency(@jakarta.annotation.Nullable final String value) {
-        this.residency = value;
+        this.getBackingStore().set("residency", value);
     }
 }

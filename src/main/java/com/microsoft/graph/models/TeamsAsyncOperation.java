@@ -10,38 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
-     * Number of times the operation was attempted before being marked successful or failed.
-     */
-    private Integer attemptsCount;
-    /**
-     * Time when the operation was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Any error that causes the async operation to fail.
-     */
-    private OperationError error;
-    /**
-     * Time when the async operation was last updated.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The operationType property
-     */
-    private TeamsAsyncOperationType operationType;
-    /**
-     * The status property
-     */
-    private TeamsAsyncOperationStatus status;
-    /**
-     * The ID of the object that's created or modified as result of this async operation, typically a team.
-     */
-    private String targetResourceId;
-    /**
-     * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
-     */
-    private String targetResourceLocation;
-    /**
      * Instantiates a new TeamsAsyncOperation and sets the default values.
      */
     public TeamsAsyncOperation() {
@@ -63,7 +31,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getAttemptsCount() {
-        return this.attemptsCount;
+        return this.getBackingStore().get("attemptsCount");
     }
     /**
      * Gets the createdDateTime property value. Time when the operation was created.
@@ -71,7 +39,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the error property value. Any error that causes the async operation to fail.
@@ -79,7 +47,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OperationError getError() {
-        return this.error;
+        return this.getBackingStore().get("error");
     }
     /**
      * The deserialization information for the current model
@@ -104,7 +72,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.getBackingStore().get("lastActionDateTime");
     }
     /**
      * Gets the operationType property value. The operationType property
@@ -112,7 +80,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationType getOperationType() {
-        return this.operationType;
+        return this.getBackingStore().get("operationType");
     }
     /**
      * Gets the status property value. The status property
@@ -120,7 +88,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Gets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
@@ -128,7 +96,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTargetResourceId() {
-        return this.targetResourceId;
+        return this.getBackingStore().get("targetResourceId");
     }
     /**
      * Gets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
@@ -136,7 +104,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTargetResourceLocation() {
-        return this.targetResourceLocation;
+        return this.getBackingStore().get("targetResourceLocation");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      * @param value Value to set for the attemptsCount property.
      */
     public void setAttemptsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.attemptsCount = value;
+        this.getBackingStore().set("attemptsCount", value);
     }
     /**
      * Sets the createdDateTime property value. Time when the operation was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the error property value. Any error that causes the async operation to fail.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final OperationError value) {
-        this.error = value;
+        this.getBackingStore().set("error", value);
     }
     /**
      * Sets the lastActionDateTime property value. Time when the async operation was last updated.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.getBackingStore().set("lastActionDateTime", value);
     }
     /**
      * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final TeamsAsyncOperationType value) {
-        this.operationType = value;
+        this.getBackingStore().set("operationType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final TeamsAsyncOperationStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
     /**
      * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
      * @param value Value to set for the targetResourceId property.
      */
     public void setTargetResourceId(@jakarta.annotation.Nullable final String value) {
-        this.targetResourceId = value;
+        this.getBackingStore().set("targetResourceId", value);
     }
     /**
      * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      * @param value Value to set for the targetResourceLocation property.
      */
     public void setTargetResourceLocation(@jakarta.annotation.Nullable final String value) {
-        this.targetResourceLocation = value;
+        this.getBackingStore().set("targetResourceLocation", value);
     }
 }

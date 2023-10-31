@@ -1,39 +1,26 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.replace;
 
 import com.microsoft.graph.models.Json;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ReplacePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The newText property
-     */
-    private Json newText;
-    /**
-     * The numChars property
-     */
-    private Json numChars;
-    /**
-     * The oldText property
-     */
-    private Json oldText;
-    /**
-     * The startNum property
-     */
-    private Json startNum;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ReplacePostRequestBody and sets the default values.
      */
     public ReplacePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +39,20 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +73,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNewText() {
-        return this.newText;
+        return this.getBackingStore().get("newText");
     }
     /**
      * Gets the numChars property value. The numChars property
@@ -81,7 +81,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumChars() {
-        return this.numChars;
+        return this.getBackingStore().get("numChars");
     }
     /**
      * Gets the oldText property value. The oldText property
@@ -89,7 +89,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getOldText() {
-        return this.oldText;
+        return this.getBackingStore().get("oldText");
     }
     /**
      * Gets the startNum property value. The startNum property
@@ -97,7 +97,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getStartNum() {
-        return this.startNum;
+        return this.getBackingStore().get("startNum");
     }
     /**
      * Serializes information the current object
@@ -109,41 +109,47 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("numChars", this.getNumChars());
         writer.writeObjectValue("oldText", this.getOldText());
         writer.writeObjectValue("startNum", this.getStartNum());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the newText property value. The newText property
      * @param value Value to set for the newText property.
      */
     public void setNewText(@jakarta.annotation.Nullable final Json value) {
-        this.newText = value;
+        this.getBackingStore().set("newText", value);
     }
     /**
      * Sets the numChars property value. The numChars property
      * @param value Value to set for the numChars property.
      */
     public void setNumChars(@jakarta.annotation.Nullable final Json value) {
-        this.numChars = value;
+        this.getBackingStore().set("numChars", value);
     }
     /**
      * Sets the oldText property value. The oldText property
      * @param value Value to set for the oldText property.
      */
     public void setOldText(@jakarta.annotation.Nullable final Json value) {
-        this.oldText = value;
+        this.getBackingStore().set("oldText", value);
     }
     /**
      * Sets the startNum property value. The startNum property
      * @param value Value to set for the startNum property.
      */
     public void setStartNum(@jakarta.annotation.Nullable final Json value) {
-        this.startNum = value;
+        this.getBackingStore().set("startNum", value);
     }
 }

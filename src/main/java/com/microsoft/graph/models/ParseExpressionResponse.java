@@ -1,46 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
+public class ParseExpressionResponse implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Error details, if expression evaluation resulted in an error.
-     */
-    private PublicError error;
-    /**
-     * A collection of values produced by the evaluation of the expression.
-     */
-    private java.util.List<String> evaluationResult;
-    /**
-     * true if the evaluation was successful.
-     */
-    private Boolean evaluationSucceeded;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * An attributeMappingSource object representing the parsed expression.
-     */
-    private AttributeMappingSource parsedExpression;
-    /**
-     * true if the expression was parsed successfully.
-     */
-    private Boolean parsingSucceeded;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ParseExpressionResponse and sets the default values.
      */
     public ParseExpressionResponse() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +38,20 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the error property value. Error details, if expression evaluation resulted in an error.
@@ -67,7 +59,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
-        return this.error;
+        return this.getBackingStore().get("error");
     }
     /**
      * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
@@ -75,7 +67,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEvaluationResult() {
-        return this.evaluationResult;
+        return this.getBackingStore().get("evaluationResult");
     }
     /**
      * Gets the evaluationSucceeded property value. true if the evaluation was successful.
@@ -83,7 +75,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getEvaluationSucceeded() {
-        return this.evaluationSucceeded;
+        return this.getBackingStore().get("evaluationSucceeded");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +98,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
@@ -114,7 +106,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSource getParsedExpression() {
-        return this.parsedExpression;
+        return this.getBackingStore().get("parsedExpression");
     }
     /**
      * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
@@ -122,7 +114,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getParsingSucceeded() {
-        return this.parsingSucceeded;
+        return this.getBackingStore().get("parsingSucceeded");
     }
     /**
      * Serializes information the current object
@@ -136,55 +128,61 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("parsedExpression", this.getParsedExpression());
         writer.writeBooleanValue("parsingSucceeded", this.getParsingSucceeded());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the error property value. Error details, if expression evaluation resulted in an error.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
-        this.error = value;
+        this.getBackingStore().set("error", value);
     }
     /**
      * Sets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @param value Value to set for the evaluationResult property.
      */
     public void setEvaluationResult(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.evaluationResult = value;
+        this.getBackingStore().set("evaluationResult", value);
     }
     /**
      * Sets the evaluationSucceeded property value. true if the evaluation was successful.
      * @param value Value to set for the evaluationSucceeded property.
      */
     public void setEvaluationSucceeded(@jakarta.annotation.Nullable final Boolean value) {
-        this.evaluationSucceeded = value;
+        this.getBackingStore().set("evaluationSucceeded", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @param value Value to set for the parsedExpression property.
      */
     public void setParsedExpression(@jakarta.annotation.Nullable final AttributeMappingSource value) {
-        this.parsedExpression = value;
+        this.getBackingStore().set("parsedExpression", value);
     }
     /**
      * Sets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @param value Value to set for the parsingSucceeded property.
      */
     public void setParsingSucceeded(@jakarta.annotation.Nullable final Boolean value) {
-        this.parsingSucceeded = value;
+        this.getBackingStore().set("parsingSucceeded", value);
     }
 }

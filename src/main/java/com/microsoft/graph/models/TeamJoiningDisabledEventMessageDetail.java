@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamJoiningDisabledEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Unique identifier of the team.
-     */
-    private String teamId;
-    /**
      * Instantiates a new TeamJoiningDisabledEventMessageDetail and sets the default values.
      */
     public TeamJoiningDisabledEventMessageDetail() {
@@ -50,7 +42,7 @@ public class TeamJoiningDisabledEventMessageDetail extends EventMessageDetail im
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.getBackingStore().get("initiator");
     }
     /**
      * Gets the teamId property value. Unique identifier of the team.
@@ -58,7 +50,7 @@ public class TeamJoiningDisabledEventMessageDetail extends EventMessageDetail im
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {
-        return this.teamId;
+        return this.getBackingStore().get("teamId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TeamJoiningDisabledEventMessageDetail extends EventMessageDetail im
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.getBackingStore().set("initiator", value);
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.teamId = value;
+        this.getBackingStore().set("teamId", value);
     }
 }

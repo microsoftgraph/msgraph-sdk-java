@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
-     * The call property
-     */
-    private Call call;
-    /**
-     * ID of the participant under the policy who has left the meeting.
-     */
-    private String participantId;
-    /**
      * Instantiates a new ParticipantLeftNotification and sets the default values.
      */
     public ParticipantLeftNotification() {
@@ -38,7 +30,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Call getCall() {
-        return this.call;
+        return this.getBackingStore().get("call");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
-        return this.participantId;
+        return this.getBackingStore().get("participantId");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      * @param value Value to set for the call property.
      */
     public void setCall(@jakarta.annotation.Nullable final Call value) {
-        this.call = value;
+        this.getBackingStore().set("call", value);
     }
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
      * @param value Value to set for the participantId property.
      */
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
-        this.participantId = value;
+        this.getBackingStore().set("participantId", value);
     }
 }

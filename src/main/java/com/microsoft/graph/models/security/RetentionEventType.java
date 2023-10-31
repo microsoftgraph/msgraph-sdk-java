@@ -12,30 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RetentionEventType extends Entity implements Parsable {
     /**
-     * The user who created the retentionEventType.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The date time when the retentionEventType was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Optional information about the event type.
-     */
-    private String description;
-    /**
-     * Name of the event type.
-     */
-    private String displayName;
-    /**
-     * The user who last modified the retentionEventType.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The latest date time when the retentionEventType was modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
      * Instantiates a new RetentionEventType and sets the default values.
      */
     public RetentionEventType() {
@@ -57,7 +33,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.getBackingStore().get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date time when the retentionEventType was created.
@@ -65,7 +41,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. Optional information about the event type.
@@ -73,7 +49,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Name of the event type.
@@ -81,7 +57,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -104,7 +80,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.getBackingStore().get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The latest date time when the retentionEventType was modified.
@@ -112,7 +88,7 @@ public class RetentionEventType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class RetentionEventType extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.getBackingStore().set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date time when the retentionEventType was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Optional information about the event type.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Name of the event type.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the retentionEventType.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.getBackingStore().set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The latest date time when the retentionEventType was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
 }

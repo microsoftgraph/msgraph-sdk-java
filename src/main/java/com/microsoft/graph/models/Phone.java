@@ -1,42 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Phone implements AdditionalDataHolder, Parsable {
+public class Phone implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The language property
-     */
-    private String language;
-    /**
-     * The phone number.
-     */
-    private String number;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The region property
-     */
-    private String region;
-    /**
-     * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
-     */
-    private PhoneType type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Phone and sets the default values.
      */
     public Phone() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +38,20 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +73,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.getBackingStore().get("language");
     }
     /**
      * Gets the number property value. The phone number.
@@ -85,7 +81,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.getBackingStore().get("number");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +89,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the region property value. The region property
@@ -101,7 +97,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
-        return this.region;
+        return this.getBackingStore().get("region");
     }
     /**
      * Gets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
@@ -109,7 +105,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PhoneType getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -122,48 +118,54 @@ public class Phone implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("region", this.getRegion());
         writer.writeEnumValue("type", this.getType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the language property value. The language property
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.getBackingStore().set("language", value);
     }
     /**
      * Sets the number property value. The phone number.
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.getBackingStore().set("number", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the region property value. The region property
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.region = value;
+        this.getBackingStore().set("region", value);
     }
     /**
      * Sets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PhoneType value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodModeDetail extends Entity implements Parsable {
     /**
-     * The authenticationMethod property
-     */
-    private BaseAuthenticationMethod authenticationMethod;
-    /**
-     * The display name of this mode
-     */
-    private String displayName;
-    /**
      * Instantiates a new AuthenticationMethodModeDetail and sets the default values.
      */
     public AuthenticationMethodModeDetail() {
@@ -38,7 +30,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BaseAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.getBackingStore().get("authenticationMethod");
     }
     /**
      * Gets the displayName property value. The display name of this mode
@@ -46,7 +38,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final BaseAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.getBackingStore().set("authenticationMethod", value);
     }
     /**
      * Sets the displayName property value. The display name of this mode
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
 }

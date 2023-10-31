@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CheckGrantedPermissionsForAppPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ResourceSpecificPermissionGrant> value;
-    /**
      * Instantiates a new CheckGrantedPermissionsForAppPostResponse and sets the default values.
      */
     public CheckGrantedPermissionsForAppPostResponse() {
@@ -46,7 +42,7 @@ public class CheckGrantedPermissionsForAppPostResponse extends BaseCollectionPag
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class CheckGrantedPermissionsForAppPostResponse extends BaseCollectionPag
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

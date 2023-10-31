@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityContainer extends Entity implements Parsable {
     /**
-     * Represents entry point for API connectors.
-     */
-    private java.util.List<IdentityApiConnector> apiConnectors;
-    /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
-     */
-    private java.util.List<B2xIdentityUserFlow> b2xUserFlows;
-    /**
-     * the entry point for the Conditional Access (CA) object model.
-     */
-    private ConditionalAccessRoot conditionalAccess;
-    /**
-     * The identityProviders property
-     */
-    private java.util.List<IdentityProviderBase> identityProviders;
-    /**
-     * Represents entry point for identity userflow attributes.
-     */
-    private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
-    /**
      * Instantiates a new IdentityContainer and sets the default values.
      */
     public IdentityContainer() {
@@ -50,7 +30,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getApiConnectors() {
-        return this.apiConnectors;
+        return this.getBackingStore().get("apiConnectors");
     }
     /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
@@ -58,7 +38,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getB2xUserFlows() {
-        return this.b2xUserFlows;
+        return this.getBackingStore().get("b2xUserFlows");
     }
     /**
      * Gets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
@@ -66,7 +46,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessRoot getConditionalAccess() {
-        return this.conditionalAccess;
+        return this.getBackingStore().get("conditionalAccess");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +68,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
-        return this.identityProviders;
+        return this.getBackingStore().get("identityProviders");
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -96,7 +76,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getUserFlowAttributes() {
-        return this.userFlowAttributes;
+        return this.getBackingStore().get("userFlowAttributes");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the apiConnectors property.
      */
     public void setApiConnectors(@jakarta.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
-        this.apiConnectors = value;
+        this.getBackingStore().set("apiConnectors", value);
     }
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @param value Value to set for the b2xUserFlows property.
      */
     public void setB2xUserFlows(@jakarta.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
-        this.b2xUserFlows = value;
+        this.getBackingStore().set("b2xUserFlows", value);
     }
     /**
      * Sets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
      * @param value Value to set for the conditionalAccess property.
      */
     public void setConditionalAccess(@jakarta.annotation.Nullable final ConditionalAccessRoot value) {
-        this.conditionalAccess = value;
+        this.getBackingStore().set("conditionalAccess", value);
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.identityProviders = value;
+        this.getBackingStore().set("identityProviders", value);
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
      * @param value Value to set for the userFlowAttributes property.
      */
     public void setUserFlowAttributes(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
-        this.userFlowAttributes = value;
+        this.getBackingStore().set("userFlowAttributes", value);
     }
 }

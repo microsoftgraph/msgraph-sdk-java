@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * The settings for approval of the role assignment.
-     */
-    private ApprovalSettings setting;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyApprovalRule() {
@@ -45,7 +41,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      */
     @jakarta.annotation.Nullable
     public ApprovalSettings getSetting() {
-        return this.setting;
+        return this.getBackingStore().get("setting");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final ApprovalSettings value) {
-        this.setting = value;
+        this.getBackingStore().set("setting", value);
     }
 }
