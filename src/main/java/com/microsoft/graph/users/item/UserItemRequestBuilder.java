@@ -632,19 +632,19 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(pathParameters, requestAdapter, skip, top);
     }
     /**
-     * Read properties and relationships of the user object.
+     * Retrieve the properties and relationships of user object. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the user object.
+     * Retrieve the properties and relationships of user object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of User
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -717,10 +717,11 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the user object.
+     * Retrieve the properties and relationships of user object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -728,7 +729,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the user object.
+     * Retrieve the properties and relationships of user object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -745,7 +746,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -776,7 +777,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -797,7 +798,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the user object.
+     * Retrieve the properties and relationships of user object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

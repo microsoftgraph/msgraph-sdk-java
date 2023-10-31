@@ -159,7 +159,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceAppManagement object.
      * @return a CompletableFuture of DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAppManagement> get() {
@@ -169,7 +169,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceAppManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAppManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -231,7 +231,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -262,7 +262,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

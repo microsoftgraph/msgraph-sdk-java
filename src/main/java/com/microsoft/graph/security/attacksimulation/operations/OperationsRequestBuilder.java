@@ -59,7 +59,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a CompletableFuture of AttackSimulationOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttackSimulationOperationCollectionResponse
      */
@@ -104,7 +104,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AttackSimulationOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,7 +129,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -160,7 +160,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -175,7 +175,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

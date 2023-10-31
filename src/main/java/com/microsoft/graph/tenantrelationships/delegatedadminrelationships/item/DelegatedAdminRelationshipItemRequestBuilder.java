@@ -105,7 +105,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminRelationship::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
@@ -115,7 +115,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminRelationship
@@ -155,6 +155,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -183,11 +184,11 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -196,7 +197,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status. This API is available in the following national cloud deployments.
+     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -214,7 +215,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

@@ -9,6 +9,7 @@ import com.microsoft.graph.security.threatintelligence.hosts.item.hostpairs.Host
 import com.microsoft.graph.security.threatintelligence.hosts.item.parenthostpairs.ParentHostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivedns.PassiveDnsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivednsreverse.PassiveDnsReverseRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.ports.PortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.reputation.ReputationRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.sslcertificates.SslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.subdomains.SubdomainsRequestBuilder;
@@ -80,6 +81,13 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PassiveDnsReverseRequestBuilder passiveDnsReverse() {
         return new PassiveDnsReverseRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ports property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PortsRequestBuilder ports() {
+        return new PortsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reputation property of the microsoft.graph.security.host entity.
@@ -223,6 +231,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -251,7 +260,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -282,7 +291,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

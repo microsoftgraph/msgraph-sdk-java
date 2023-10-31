@@ -67,19 +67,19 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a message. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve a list of attachment objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a message. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,21 +90,21 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AttachmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. This API is available in the following national cloud deployments.
+     * Use this API to add an attachment to a message. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. You can add an attachment to an existing message by posting to its attachments collection, or you canadd an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of Attachment
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> post(@jakarta.annotation.Nonnull final Attachment body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. This API is available in the following national cloud deployments.
+     * Use this API to add an attachment to a message. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. You can add an attachment to an existing message by posting to its attachments collection, or you canadd an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Attachment
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> post(@jakarta.annotation.Nonnull final Attachment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Attachment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of attachment objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a message. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a message. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,11 +141,11 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. This API is available in the following national cloud deployments.
+     * Use this API to add an attachment to a message. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. You can add an attachment to an existing message by posting to its attachments collection, or you canadd an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. This API is available in the following national cloud deployments.
+     * Use this API to add an attachment to a message. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. You can add an attachment to an existing message by posting to its attachments collection, or you canadd an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -172,7 +172,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -187,7 +187,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of attachment objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of attachment objects attached to a message. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -1,6 +1,7 @@
-package com.microsoft.graph.groups.item.photos.count;
+package com.microsoft.graph.security.threatintelligence.hostports.item.mostrecentsslcertificate;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.SslCertificate;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -15,49 +16,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to count the resources in the collection.
+ * Provides operations to manage the mostRecentSslCertificate property of the microsoft.graph.security.hostPort entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CountRequestBuilder extends BaseRequestBuilder {
+public class MostRecentSslCertificateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new MostRecentSslCertificateRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos/$count{?%24filter}", pathParameters);
+    public MostRecentSslCertificateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/mostRecentSslCertificate{?%24select,%24expand}", pathParameters);
     }
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new MostRecentSslCertificateRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos/$count{?%24filter}", rawUrl);
+    public MostRecentSslCertificateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPorts/{hostPort%2Did}/mostRecentSslCertificate{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the number of the resource
-     * @return a CompletableFuture of Integer
+     * The most recent sslCertificate used to communicate on the port.
+     * @return a CompletableFuture of SslCertificate
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get() {
+    public java.util.concurrent.CompletableFuture<SslCertificate> get() {
         return get(null);
     }
     /**
-     * Get the number of the resource
+     * The most recent sslCertificate used to communicate on the port.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Integer
+     * @return a CompletableFuture of SslCertificate
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SslCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Integer.class, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, SslCertificate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the number of the resource
+     * The most recent sslCertificate used to communicate on the port.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +66,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the number of the resource
+     * The most recent sslCertificate used to communicate on the port.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,30 +83,36 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "text/plain");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CountRequestBuilder
+     * @return a MostRecentSslCertificateRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public MostRecentSslCertificateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new CountRequestBuilder(rawUrl, requestAdapter);
+        return new MostRecentSslCertificateRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the number of the resource
+     * The most recent sslCertificate used to communicate on the port.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
-         * Filter items by property values
+         * Expand related entities
          */
-        @QueryParameter(name = "%24filter")
+        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
-        public String filter;
+        public String[] expand;
+        /**
+         * Select properties to be returned
+         */
+        @QueryParameter(name = "%24select")
+        @jakarta.annotation.Nullable
+        public String[] select;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

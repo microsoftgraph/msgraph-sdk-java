@@ -118,7 +118,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> transitiveMemberOf;
     /**
-     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      */
     private String trustType;
     /**
@@ -392,7 +392,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.transitiveMemberOf;
     }
     /**
-     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -625,7 +625,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.transitiveMemberOf = value;
     }
     /**
-     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {

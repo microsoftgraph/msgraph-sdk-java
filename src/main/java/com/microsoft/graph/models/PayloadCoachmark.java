@@ -14,23 +14,23 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The coachmarkLocation property
+     * The coachmark location.
      */
     private CoachmarkLocation coachmarkLocation;
     /**
-     * The description property
+     * The description about the coachmark.
      */
     private String description;
     /**
-     * The indicator property
+     * The coachmark indicator.
      */
     private String indicator;
     /**
-     * The isValid property
+     * Indicates whether the coachmark is valid or not.
      */
     private Boolean isValid;
     /**
-     * The language property
+     * The coachmark language.
      */
     private String language;
     /**
@@ -38,7 +38,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The order property
+     * The coachmark order.
      */
     private String order;
     /**
@@ -66,7 +66,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the coachmarkLocation property value. The coachmarkLocation property
+     * Gets the coachmarkLocation property value. The coachmark location.
      * @return a CoachmarkLocation
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return this.coachmarkLocation;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description about the coachmark.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the indicator property value. The indicator property
+     * Gets the indicator property value. The coachmark indicator.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return this.indicator;
     }
     /**
-     * Gets the isValid property value. The isValid property
+     * Gets the isValid property value. Indicates whether the coachmark is valid or not.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return this.isValid;
     }
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The coachmark language.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the order property value. The order property
+     * Gets the order property value. The coachmark order.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -160,35 +160,35 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the coachmarkLocation property value. The coachmarkLocation property
+     * Sets the coachmarkLocation property value. The coachmark location.
      * @param value Value to set for the coachmarkLocation property.
      */
     public void setCoachmarkLocation(@jakarta.annotation.Nullable final CoachmarkLocation value) {
         this.coachmarkLocation = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description about the coachmark.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the indicator property value. The indicator property
+     * Sets the indicator property value. The coachmark indicator.
      * @param value Value to set for the indicator property.
      */
     public void setIndicator(@jakarta.annotation.Nullable final String value) {
         this.indicator = value;
     }
     /**
-     * Sets the isValid property value. The isValid property
+     * Sets the isValid property value. Indicates whether the coachmark is valid or not.
      * @param value Value to set for the isValid property.
      */
     public void setIsValid(@jakarta.annotation.Nullable final Boolean value) {
         this.isValid = value;
     }
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The coachmark language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
@@ -202,7 +202,7 @@ public class PayloadCoachmark implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the order property value. The order property
+     * Sets the order property value. The coachmark order.
      * @param value Value to set for the order property.
      */
     public void setOrder(@jakarta.annotation.Nullable final String value) {

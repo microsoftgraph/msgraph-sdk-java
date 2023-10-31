@@ -85,21 +85,21 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ActivityHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of ActivityHistoryItem
-     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patch(@jakarta.annotation.Nonnull final ActivityHistoryItem body) {
         return patch(body, null);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ActivityHistoryItem
-     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patch(@jakarta.annotation.Nonnull final ActivityHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,6 +135,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -163,11 +164,11 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +177,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Delete an existing history item for an existing user activity. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -194,7 +195,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

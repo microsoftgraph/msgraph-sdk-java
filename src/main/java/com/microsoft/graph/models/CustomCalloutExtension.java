@@ -14,7 +14,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      */
     private CustomExtensionAuthenticationConfiguration authenticationConfiguration;
     /**
-     * HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      */
     private CustomExtensionClientConfiguration clientConfiguration;
     /**
@@ -63,7 +63,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         return this.authenticationConfiguration;
     }
     /**
-     * Gets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Gets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @return a CustomExtensionClientConfiguration
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         this.authenticationConfiguration = value;
     }
     /**
-     * Sets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
+     * Sets the clientConfiguration property value. HTTP connection settings that define how long Microsoft Entra ID can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @param value Value to set for the clientConfiguration property.
      */
     public void setClientConfiguration(@jakarta.annotation.Nullable final CustomExtensionClientConfiguration value) {

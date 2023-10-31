@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupMembers extends SubjectSet implements Parsable {
     /**
-     * The name of the group in Azure AD. Read only.
+     * The name of the group in Microsoft Entra ID. Read only.
      */
     private String description;
     /**
-     * The ID of the group in Azure AD.
+     * The ID of the group in Microsoft Entra ID.
      */
     private String groupId;
     /**
@@ -34,7 +34,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
         return new GroupMembers();
     }
     /**
-     * Gets the description property value. The name of the group in Azure AD. Read only.
+     * Gets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groupId property value. The ID of the group in Azure AD.
+     * Gets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class GroupMembers extends SubjectSet implements Parsable {
         writer.writeStringValue("groupId", this.getGroupId());
     }
     /**
-     * Sets the description property value. The name of the group in Azure AD. Read only.
+     * Sets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the groupId property value. The ID of the group in Azure AD.
+     * Sets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {

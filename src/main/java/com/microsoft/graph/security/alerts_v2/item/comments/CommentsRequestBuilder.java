@@ -95,7 +95,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body.toArray(new AlertComment[0]));
         return requestInfo;
     }

@@ -82,7 +82,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**

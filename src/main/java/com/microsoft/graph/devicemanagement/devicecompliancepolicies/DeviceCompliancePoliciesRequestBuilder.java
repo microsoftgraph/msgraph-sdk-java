@@ -59,19 +59,19 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsPhone81CompliancePolicy objects.
+     * List properties and relationships of the iosCompliancePolicy objects.
      * @return a CompletableFuture of DeviceCompliancePolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the windowsPhone81CompliancePolicy objects.
+     * List properties and relationships of the iosCompliancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceCompliancePolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +82,21 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new windows10MobileCompliancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of DeviceCompliancePolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body) {
         return post(body, null);
     }
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new windows10MobileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceCompliancePolicy
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscompliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -108,7 +108,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the windowsPhone81CompliancePolicy objects.
+     * List properties and relationships of the iosCompliancePolicy objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsPhone81CompliancePolicy objects.
+     * List properties and relationships of the iosCompliancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,11 +133,11 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new windows10MobileCompliancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new iosCompliancePolicy object.
+     * Create a new windows10MobileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -164,7 +164,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -179,7 +179,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return new DeviceCompliancePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the windowsPhone81CompliancePolicy objects.
+     * List properties and relationships of the iosCompliancePolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

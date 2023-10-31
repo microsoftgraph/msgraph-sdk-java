@@ -10,59 +10,59 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Training extends Entity implements Parsable {
     /**
-     * The availabilityStatus property
+     * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      */
     private TrainingAvailabilityStatus availabilityStatus;
     /**
-     * The createdBy property
+     * Identity of the user who created the training.
      */
     private EmailIdentity createdBy;
     /**
-     * The createdDateTime property
+     * Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The description property
+     * The description for the training.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name for the training.
      */
     private String displayName;
     /**
-     * The durationInMinutes property
+     * Training duration.
      */
     private Integer durationInMinutes;
     /**
-     * The hasEvaluation property
+     * Indicates whether the training has any evaluation.
      */
     private Boolean hasEvaluation;
     /**
-     * The languageDetails property
+     * Language specific details on a training.
      */
     private java.util.List<TrainingLanguageDetail> languageDetails;
     /**
-     * The lastModifiedBy property
+     * Identity of the user who last modified the training.
      */
     private EmailIdentity lastModifiedBy;
     /**
-     * The lastModifiedDateTime property
+     * Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The source property
+     * Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     private SimulationContentSource source;
     /**
-     * The supportedLocales property
+     * Supported locales for content for the associated training.
      */
     private java.util.List<String> supportedLocales;
     /**
-     * The tags property
+     * Training tags.
      */
     private java.util.List<String> tags;
     /**
-     * The type property
+     * The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      */
     private TrainingType type;
     /**
@@ -82,7 +82,7 @@ public class Training extends Entity implements Parsable {
         return new Training();
     }
     /**
-     * Gets the availabilityStatus property value. The availabilityStatus property
+     * Gets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @return a TrainingAvailabilityStatus
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class Training extends Entity implements Parsable {
         return this.availabilityStatus;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the training.
      * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class Training extends Entity implements Parsable {
         return this.createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class Training extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description for the training.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class Training extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for the training.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class Training extends Entity implements Parsable {
         return this.displayName;
     }
     /**
-     * Gets the durationInMinutes property value. The durationInMinutes property
+     * Gets the durationInMinutes property value. Training duration.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class Training extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hasEvaluation property value. The hasEvaluation property
+     * Gets the hasEvaluation property value. Indicates whether the training has any evaluation.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -161,7 +161,7 @@ public class Training extends Entity implements Parsable {
         return this.hasEvaluation;
     }
     /**
-     * Gets the languageDetails property value. The languageDetails property
+     * Gets the languageDetails property value. Language specific details on a training.
      * @return a java.util.List<TrainingLanguageDetail>
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class Training extends Entity implements Parsable {
         return this.languageDetails;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the training.
      * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class Training extends Entity implements Parsable {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class Training extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @return a SimulationContentSource
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class Training extends Entity implements Parsable {
         return this.source;
     }
     /**
-     * Gets the supportedLocales property value. The supportedLocales property
+     * Gets the supportedLocales property value. Supported locales for content for the associated training.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -201,7 +201,7 @@ public class Training extends Entity implements Parsable {
         return this.supportedLocales;
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Training tags.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class Training extends Entity implements Parsable {
         return this.tags;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      * @return a TrainingType
      */
     @jakarta.annotation.Nullable
@@ -239,98 +239,98 @@ public class Training extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the availabilityStatus property value. The availabilityStatus property
+     * Sets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @param value Value to set for the availabilityStatus property.
      */
     public void setAvailabilityStatus(@jakarta.annotation.Nullable final TrainingAvailabilityStatus value) {
         this.availabilityStatus = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the training.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description for the training.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the training.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the durationInMinutes property value. The durationInMinutes property
+     * Sets the durationInMinutes property value. Training duration.
      * @param value Value to set for the durationInMinutes property.
      */
     public void setDurationInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.durationInMinutes = value;
     }
     /**
-     * Sets the hasEvaluation property value. The hasEvaluation property
+     * Sets the hasEvaluation property value. Indicates whether the training has any evaluation.
      * @param value Value to set for the hasEvaluation property.
      */
     public void setHasEvaluation(@jakarta.annotation.Nullable final Boolean value) {
         this.hasEvaluation = value;
     }
     /**
-     * Sets the languageDetails property value. The languageDetails property
+     * Sets the languageDetails property value. Language specific details on a training.
      * @param value Value to set for the languageDetails property.
      */
     public void setLanguageDetails(@jakarta.annotation.Nullable final java.util.List<TrainingLanguageDetail> value) {
         this.languageDetails = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the training.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.source = value;
     }
     /**
-     * Sets the supportedLocales property value. The supportedLocales property
+     * Sets the supportedLocales property value. Supported locales for content for the associated training.
      * @param value Value to set for the supportedLocales property.
      */
     public void setSupportedLocales(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedLocales = value;
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Training tags.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final TrainingType value) {

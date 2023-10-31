@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
-     * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+     * The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
      */
     private String displayName;
     /**
@@ -17,7 +17,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      */
     private java.util.List<DelegatedAdminServiceManagementDetail> serviceManagementDetails;
     /**
-     * The Azure AD-assigned tenant ID of the customer. Read-only.
+     * The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      */
     private String tenantId;
     /**
@@ -37,7 +37,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         return new DelegatedAdminCustomer();
     }
     /**
-     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+     * Gets the displayName property value. The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         return this.serviceManagementDetails;
     }
     /**
-     * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
+     * Gets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
+     * Sets the displayName property value. The Microsoft Entra ID display name of the customer tenant. Read-only. Supports $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -98,7 +98,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         this.serviceManagementDetails = value;
     }
     /**
-     * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

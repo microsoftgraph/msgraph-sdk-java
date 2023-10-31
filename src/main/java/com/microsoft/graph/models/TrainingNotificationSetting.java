@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * The trainingAssignment property
+     * Training assignment details.
      */
     private BaseEndUserNotification trainingAssignment;
     /**
-     * The trainingReminder property
+     * Training reminder details.
      */
     private TrainingReminderNotification trainingReminder;
     /**
@@ -45,7 +45,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
         return deserializerMap;
     }
     /**
-     * Gets the trainingAssignment property value. The trainingAssignment property
+     * Gets the trainingAssignment property value. Training assignment details.
      * @return a BaseEndUserNotification
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
         return this.trainingAssignment;
     }
     /**
-     * Gets the trainingReminder property value. The trainingReminder property
+     * Gets the trainingReminder property value. Training reminder details.
      * @return a TrainingReminderNotification
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
         writer.writeObjectValue("trainingReminder", this.getTrainingReminder());
     }
     /**
-     * Sets the trainingAssignment property value. The trainingAssignment property
+     * Sets the trainingAssignment property value. Training assignment details.
      * @param value Value to set for the trainingAssignment property.
      */
     public void setTrainingAssignment(@jakarta.annotation.Nullable final BaseEndUserNotification value) {
         this.trainingAssignment = value;
     }
     /**
-     * Sets the trainingReminder property value. The trainingReminder property
+     * Sets the trainingReminder property value. Training reminder details.
      * @param value Value to set for the trainingReminder property.
      */
     public void setTrainingReminder(@jakarta.annotation.Nullable final TrainingReminderNotification value) {

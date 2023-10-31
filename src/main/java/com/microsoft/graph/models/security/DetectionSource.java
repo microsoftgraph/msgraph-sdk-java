@@ -23,7 +23,23 @@ public enum DetectionSource implements ValuedEnum {
     AppGovernancePolicy("appGovernancePolicy"),
     AppGovernanceDetection("appGovernanceDetection"),
     UnknownFutureValue("unknownFutureValue"),
-    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud"),
+    MicrosoftDefenderForIoT("microsoftDefenderForIoT"),
+    MicrosoftDefenderForServers("microsoftDefenderForServers"),
+    MicrosoftDefenderForStorage("microsoftDefenderForStorage"),
+    MicrosoftDefenderForDNS("microsoftDefenderForDNS"),
+    MicrosoftDefenderForDatabases("microsoftDefenderForDatabases"),
+    MicrosoftDefenderForContainers("microsoftDefenderForContainers"),
+    MicrosoftDefenderForNetwork("microsoftDefenderForNetwork"),
+    MicrosoftDefenderForAppService("microsoftDefenderForAppService"),
+    MicrosoftDefenderForKeyVault("microsoftDefenderForKeyVault"),
+    MicrosoftDefenderForResourceManager("microsoftDefenderForResourceManager"),
+    MicrosoftDefenderForApiManagement("microsoftDefenderForApiManagement"),
+    NrtAlerts("nrtAlerts"),
+    ScheduledAlerts("scheduledAlerts"),
+    MicrosoftDefenderThreatIntelligenceAnalytics("microsoftDefenderThreatIntelligenceAnalytics"),
+    BuiltInMl("builtInMl"),
+    MicrosoftSentinel("microsoftSentinel");
     public final String value;
     DetectionSource(final String value) {
         this.value = value;
@@ -53,6 +69,22 @@ public enum DetectionSource implements ValuedEnum {
             case "appGovernanceDetection": return AppGovernanceDetection;
             case "unknownFutureValue": return UnknownFutureValue;
             case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
+            case "microsoftDefenderForIoT": return MicrosoftDefenderForIoT;
+            case "microsoftDefenderForServers": return MicrosoftDefenderForServers;
+            case "microsoftDefenderForStorage": return MicrosoftDefenderForStorage;
+            case "microsoftDefenderForDNS": return MicrosoftDefenderForDNS;
+            case "microsoftDefenderForDatabases": return MicrosoftDefenderForDatabases;
+            case "microsoftDefenderForContainers": return MicrosoftDefenderForContainers;
+            case "microsoftDefenderForNetwork": return MicrosoftDefenderForNetwork;
+            case "microsoftDefenderForAppService": return MicrosoftDefenderForAppService;
+            case "microsoftDefenderForKeyVault": return MicrosoftDefenderForKeyVault;
+            case "microsoftDefenderForResourceManager": return MicrosoftDefenderForResourceManager;
+            case "microsoftDefenderForApiManagement": return MicrosoftDefenderForApiManagement;
+            case "nrtAlerts": return NrtAlerts;
+            case "scheduledAlerts": return ScheduledAlerts;
+            case "microsoftDefenderThreatIntelligenceAnalytics": return MicrosoftDefenderThreatIntelligenceAnalytics;
+            case "builtInMl": return BuiltInMl;
+            case "microsoftSentinel": return MicrosoftSentinel;
             default: return null;
         }
     }

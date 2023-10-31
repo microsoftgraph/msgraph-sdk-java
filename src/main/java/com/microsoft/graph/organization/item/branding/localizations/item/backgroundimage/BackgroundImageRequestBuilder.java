@@ -64,7 +64,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body) {
+    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, final String contentType) {
         return put(body, null);
     }
     /**
@@ -74,8 +74,9 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, final String contentType, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
+        Objects.requireNonNull(contentType);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
@@ -107,6 +108,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "image/bmp, image/jpg, image/jpeg, image/gif, image/vnd.microsoft.icon, image/png, image/tiff, application/json, application/json");
         return requestInfo;
     }
     /**
@@ -115,7 +117,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, final String contentType) {
         return toPutRequestInformation(body, null);
     }
     /**
@@ -125,8 +127,9 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, final String contentType, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
+        Objects.requireNonNull(contentType);
         final RequestInformation requestInfo = new RequestInformation();
         if (requestConfiguration != null) {
             final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
@@ -137,7 +140,8 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PUT;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
+        requestInfo.setStreamContent(body, contentType);
         return requestInfo;
     }
     /**

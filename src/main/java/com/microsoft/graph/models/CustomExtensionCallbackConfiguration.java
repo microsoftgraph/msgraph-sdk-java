@@ -20,7 +20,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
      */
     private String odataType;
     /**
-     * The maximum duration in ISO 8601 format that Azure AD will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
+     * The maximum duration in ISO 8601 format that Microsoft Entra ID will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
      */
     private PeriodAndDuration timeoutDuration;
     /**
@@ -74,7 +74,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         return this.odataType;
     }
     /**
-     * Gets the timeoutDuration property value. The maximum duration in ISO 8601 format that Azure AD will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
+     * Gets the timeoutDuration property value. The maximum duration in ISO 8601 format that Microsoft Entra ID will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         this.odataType = value;
     }
     /**
-     * Sets the timeoutDuration property value. The maximum duration in ISO 8601 format that Azure AD will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
+     * Sets the timeoutDuration property value. The maximum duration in ISO 8601 format that Microsoft Entra ID will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
      * @param value Value to set for the timeoutDuration property.
      */
     public void setTimeoutDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

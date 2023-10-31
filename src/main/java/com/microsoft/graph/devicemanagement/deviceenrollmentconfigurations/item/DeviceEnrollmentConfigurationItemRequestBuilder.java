@@ -105,21 +105,21 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of DeviceEnrollmentConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceEnrollmentConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,6 +155,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -183,11 +184,11 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -196,7 +197,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -214,7 +215,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

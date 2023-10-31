@@ -22,7 +22,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      */
     private String displayName;
     /**
-     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
+     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
      */
     private Boolean isDefaultEnvironment;
     /**
@@ -99,7 +99,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
+     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.displayName = value;
     }
     /**
-     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
+     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
      * @param value Value to set for the isDefaultEnvironment property.
      */
     public void setIsDefaultEnvironment(@jakarta.annotation.Nullable final Boolean value) {
