@@ -27,7 +27,7 @@ public class LandingPageDetail extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * Landing page detail content.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -36,7 +36,7 @@ public class LandingPageDetail extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default Langauge.
-     * 
+     * Indicates whether this language detail is default for the landing page.
      */
     @SerializedName(value = "isDefaultLangauge", alternate = {"IsDefaultLangauge"})
     @Expose
@@ -45,7 +45,7 @@ public class LandingPageDetail extends Entity implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * The content language for the landing page.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose

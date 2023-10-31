@@ -30,7 +30,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
 
     /**
      * The Assigned To.
-     * 
+     * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose

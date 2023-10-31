@@ -28,7 +28,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Content.
-     * 
+     * Language specific content for the training.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -37,7 +37,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the language details.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the language details were created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Description.
-     * 
+     * Description as defined by the user.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -64,7 +64,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * 
+     * Display name as defined by the user.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -73,7 +73,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Is Default Langauge.
-     * 
+     * Indicates whether the training has a default language.
      */
     @SerializedName(value = "isDefaultLangauge", alternate = {"IsDefaultLangauge"})
     @Expose
@@ -82,7 +82,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the details.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -91,7 +91,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -100,7 +100,7 @@ public class TrainingLanguageDetail extends Entity implements IJsonBackedObject 
 
     /**
      * The Locale.
-     * 
+     * Content locale for the training detail.
      */
     @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose

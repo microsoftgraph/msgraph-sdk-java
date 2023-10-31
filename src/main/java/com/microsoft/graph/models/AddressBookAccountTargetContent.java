@@ -28,7 +28,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
 
     /**
      * The Account Target Emails.
-     * 
+     * List of user emails targeted for an attack simulation training campaign.
      */
     @SerializedName(value = "accountTargetEmails", alternate = {"AccountTargetEmails"})
     @Expose

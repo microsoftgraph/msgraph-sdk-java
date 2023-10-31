@@ -590,6 +590,16 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     public com.microsoft.graph.requests.UserRequestBuilder ownersAsUser(@Nonnull final String id) {
         return new com.microsoft.graph.requests.UserRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
+
+    /**
+     * Gets the request builder for RemoteDesktopSecurityConfiguration
+     *
+     * @return the RemoteDesktopSecurityConfigurationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RemoteDesktopSecurityConfigurationRequestBuilder remoteDesktopSecurityConfiguration() {
+        return new com.microsoft.graph.requests.RemoteDesktopSecurityConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("remoteDesktopSecurityConfiguration"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection
      *

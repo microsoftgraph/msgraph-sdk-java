@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChannelMembershipType;
+import com.microsoft.graph.models.ChannelSummary;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
@@ -87,8 +88,17 @@ public class Channel extends Entity implements IJsonBackedObject {
     public ChannelMembershipType membershipType;
 
     /**
+     * The Summary.
+     * Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     */
+    @SerializedName(value = "summary", alternate = {"Summary"})
+    @Expose
+	@Nullable
+    public ChannelSummary summary;
+
+    /**
      * The Tenant Id.
-     * The ID of the Azure Active Directory tenant.
+     * The ID of the Microsoft Entra tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

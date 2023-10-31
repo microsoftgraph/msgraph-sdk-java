@@ -38,7 +38,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+     * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose

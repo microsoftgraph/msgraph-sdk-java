@@ -40,7 +40,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Duration Source.
-     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
+     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      */
     @SerializedName(value = "callDurationSource", alternate = {"CallDurationSource"})
     @Expose
@@ -76,7 +76,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Type.
-     * Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     * Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
      */
     @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
@@ -121,7 +121,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Context.
-     * Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     * Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
      */
     @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
@@ -184,7 +184,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Operator.
-     * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
@@ -229,7 +229,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -238,7 +238,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

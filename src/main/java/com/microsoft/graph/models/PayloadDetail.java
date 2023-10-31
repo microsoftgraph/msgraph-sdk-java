@@ -41,7 +41,7 @@ public class PayloadDetail implements IJsonBackedObject {
 
     /**
      * The Coachmarks.
-     * 
+     * Payload coachmark details.
      */
     @SerializedName(value = "coachmarks", alternate = {"Coachmarks"})
     @Expose
@@ -50,7 +50,7 @@ public class PayloadDetail implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * Payload content details.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -59,7 +59,7 @@ public class PayloadDetail implements IJsonBackedObject {
 
     /**
      * The Phishing Url.
-     * 
+     * The phishing URL used to target a user.
      */
     @SerializedName(value = "phishingUrl", alternate = {"PhishingUrl"})
     @Expose

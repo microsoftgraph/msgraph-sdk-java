@@ -39,7 +39,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Brand.
-     * 
+     * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      */
     @SerializedName(value = "brand", alternate = {"Brand"})
     @Expose
@@ -48,7 +48,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Complexity.
-     * 
+     * The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
      */
     @SerializedName(value = "complexity", alternate = {"Complexity"})
     @Expose
@@ -57,7 +57,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the attack simulation and training campaign payload.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -66,7 +66,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -75,7 +75,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the attack simulation and training campaign payload.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -84,7 +84,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * 
+     * Additional details about the payload.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -93,7 +93,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -102,7 +102,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Industry.
-     * 
+     * Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      */
     @SerializedName(value = "industry", alternate = {"Industry"})
     @Expose
@@ -111,7 +111,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Automated.
-     * 
+     * Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
      */
     @SerializedName(value = "isAutomated", alternate = {"IsAutomated"})
     @Expose
@@ -120,7 +120,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Controversial.
-     * 
+     * Indicates whether the payload is controversial.
      */
     @SerializedName(value = "isControversial", alternate = {"IsControversial"})
     @Expose
@@ -129,7 +129,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Current Event.
-     * 
+     * Indicates whether the payload is from any recent event.
      */
     @SerializedName(value = "isCurrentEvent", alternate = {"IsCurrentEvent"})
     @Expose
@@ -138,7 +138,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * Payload language.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose
@@ -147,7 +147,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who most recently modified the attack simulation and training campaign payload.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -156,7 +156,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -165,7 +165,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Payload Tags.
-     * 
+     * Free text tags for a payload.
      */
     @SerializedName(value = "payloadTags", alternate = {"PayloadTags"})
     @Expose
@@ -174,7 +174,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Platform.
-     * 
+     * The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -183,7 +183,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Predicted Compromise Rate.
-     * 
+     * Predicted probability for a payload to phish a targeted user.
      */
     @SerializedName(value = "predictedCompromiseRate", alternate = {"PredictedCompromiseRate"})
     @Expose
@@ -192,7 +192,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Simulation Attack Type.
-     * 
+     * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      */
     @SerializedName(value = "simulationAttackType", alternate = {"SimulationAttackType"})
     @Expose
@@ -201,7 +201,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -210,7 +210,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -219,7 +219,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Technique.
-     * 
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      */
     @SerializedName(value = "technique", alternate = {"Technique"})
     @Expose
@@ -228,7 +228,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Theme.
-     * 
+     * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose

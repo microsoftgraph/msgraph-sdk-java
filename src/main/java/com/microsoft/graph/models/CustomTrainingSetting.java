@@ -29,7 +29,7 @@ public class CustomTrainingSetting extends TrainingSetting implements IJsonBacke
 
     /**
      * The Assigned To.
-     * 
+     * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
@@ -38,7 +38,7 @@ public class CustomTrainingSetting extends TrainingSetting implements IJsonBacke
 
     /**
      * The Description.
-     * 
+     * The description of the custom training setting.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -47,7 +47,7 @@ public class CustomTrainingSetting extends TrainingSetting implements IJsonBacke
 
     /**
      * The Display Name.
-     * 
+     * The display name of the custom training setting.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class CustomTrainingSetting extends TrainingSetting implements IJsonBacke
 
     /**
      * The Duration In Minutes.
-     * 
+     * Training duration.
      */
     @SerializedName(value = "durationInMinutes", alternate = {"DurationInMinutes"})
     @Expose
@@ -65,7 +65,7 @@ public class CustomTrainingSetting extends TrainingSetting implements IJsonBacke
 
     /**
      * The Url.
-     * 
+     * The training URL.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

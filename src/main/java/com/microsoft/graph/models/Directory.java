@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionPage;
 import com.microsoft.graph.requests.AttributeSetCollectionPage;
 import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
@@ -30,6 +31,15 @@ import javax.annotation.Nonnull;
  */
 public class Directory extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Device Local Credentials.
+     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     */
+    @SerializedName(value = "deviceLocalCredentials", alternate = {"DeviceLocalCredentials"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionPage deviceLocalCredentials;
 
     /**
      * The Administrative Units.
@@ -92,6 +102,10 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("deviceLocalCredentials")) {
+            deviceLocalCredentials = serializer.deserializeObject(json.get("deviceLocalCredentials"), com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionPage.class);
+        }
 
         if (json.has("administrativeUnits")) {
             administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), com.microsoft.graph.requests.AdministrativeUnitCollectionPage.class);

@@ -40,7 +40,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Attack Technique.
-     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      */
     @SerializedName(value = "attackTechnique", alternate = {"AttackTechnique"})
     @Expose
@@ -112,7 +112,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Duration In Days.
-     * 
+     * Simulation duration in days.
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -121,7 +121,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The End User Notification Setting.
-     * 
+     * Details about the end user notification setting.
      */
     @SerializedName(value = "endUserNotificationSetting", alternate = {"EndUserNotificationSetting"})
     @Expose
@@ -130,7 +130,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Excluded Account Target.
-     * 
+     * Users excluded from the simulation.
      */
     @SerializedName(value = "excludedAccountTarget", alternate = {"ExcludedAccountTarget"})
     @Expose
@@ -139,7 +139,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Included Account Target.
-     * 
+     * Users targeted in the simulation.
      */
     @SerializedName(value = "includedAccountTarget", alternate = {"IncludedAccountTarget"})
     @Expose
@@ -184,7 +184,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The OAuth Consent App Detail.
-     * 
+     * OAuth app details for the OAuth technique.
      */
     @SerializedName(value = "oAuthConsentAppDetail", alternate = {"OAuthConsentAppDetail"})
     @Expose
@@ -220,7 +220,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Training Setting.
-     * 
+     * Details about the training settings for a simulation.
      */
     @SerializedName(value = "trainingSetting", alternate = {"TrainingSetting"})
     @Expose
@@ -229,7 +229,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Landing Page.
-     * 
+     * The landing page associated with a simulation during its creation.
      */
     @SerializedName(value = "landingPage", alternate = {"LandingPage"})
     @Expose
@@ -238,7 +238,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Login Page.
-     * 
+     * The login page associated with a simulation during its creation.
      */
     @SerializedName(value = "loginPage", alternate = {"LoginPage"})
     @Expose
@@ -247,7 +247,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Payload.
-     * 
+     * The payload associated with a simulation during its creation.
      */
     @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose

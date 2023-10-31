@@ -39,7 +39,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements IJsonBackedOb
 
     /**
      * The Default.
-     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      */
     @SerializedName(value = "default", alternate = {"Default"})
     @Expose
@@ -48,7 +48,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements IJsonBackedOb
 
     /**
      * The Partners.
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      */
     @SerializedName(value = "partners", alternate = {"Partners"})
     @Expose

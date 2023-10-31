@@ -40,7 +40,7 @@ public class BaseEndUserNotification implements IJsonBackedObject {
 
     /**
      * The Default Language.
-     * 
+     * The default language for the end user notification.
      */
     @SerializedName(value = "defaultLanguage", alternate = {"DefaultLanguage"})
     @Expose

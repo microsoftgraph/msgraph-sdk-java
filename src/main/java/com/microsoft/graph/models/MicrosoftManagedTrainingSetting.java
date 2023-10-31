@@ -28,7 +28,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
 
     /**
      * The Completion Date Time.
-     * 
+     * The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
 
     /**
      * The Training Completion Duration.
-     * 
+     * The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      */
     @SerializedName(value = "trainingCompletionDuration", alternate = {"TrainingCompletionDuration"})
     @Expose

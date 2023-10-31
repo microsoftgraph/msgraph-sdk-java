@@ -28,7 +28,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Email Content.
-     * 
+     * Email HTML content.
      */
     @SerializedName(value = "emailContent", alternate = {"EmailContent"})
     @Expose
@@ -37,7 +37,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Is Default Langauge.
-     * 
+     * Indicates whether this language is default.
      */
     @SerializedName(value = "isDefaultLangauge", alternate = {"IsDefaultLangauge"})
     @Expose
@@ -46,7 +46,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Language.
-     * 
+     * Notification language.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose
@@ -55,7 +55,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Locale.
-     * 
+     * Notification locale.
      */
     @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose
@@ -64,7 +64,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Sent From.
-     * 
+     * Email details of the sender.
      */
     @SerializedName(value = "sentFrom", alternate = {"SentFrom"})
     @Expose
@@ -73,7 +73,7 @@ public class EndUserNotificationDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Subject.
-     * 
+     * Mail subject.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

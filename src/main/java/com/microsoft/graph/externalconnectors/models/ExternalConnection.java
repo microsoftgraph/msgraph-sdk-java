@@ -53,6 +53,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public Configuration configuration;
 
     /**
+     * The Connector Id.
+     * The Teams app ID. Optional.
+     */
+    @SerializedName(value = "connectorId", alternate = {"ConnectorId"})
+    @Expose
+	@Nullable
+    public String connectorId;
+
+    /**
      * The Description.
      * Description of the connection displayed in the Microsoft 365 admin center. Optional.
      */

@@ -39,7 +39,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements IJsonBacke
 
     /**
      * The Display Name.
-     * The display name of the customer tenant as set by Azure AD. Read-only
+     * The display name of the customer tenant as set by Microsoft Entra ID. Read-only
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements IJsonBacke
 
     /**
      * The Tenant Id.
-     * The Azure AD-assigned tenant ID of the customer tenant.
+     * The Microsoft Entra ID-assigned tenant ID of the customer tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

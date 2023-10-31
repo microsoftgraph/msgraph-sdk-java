@@ -28,7 +28,7 @@ public class SimulationNotification extends BaseEndUserNotification implements I
 
     /**
      * The Targetted User Type.
-     * 
+     * Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
      */
     @SerializedName(value = "targettedUserType", alternate = {"TargettedUserType"})
     @Expose
