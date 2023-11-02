@@ -4,80 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserSecurityState implements AdditionalDataHolder, Parsable {
+public class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * AAD User object identifier (GUID) - represents the physical/multi-account user entity.
+     * Stores model information.
      */
-    private String aadUserId;
-    /**
-     * Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
-     */
-    private String accountName;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * NetBIOS/Active Directory domain of user account (that is, domain/account format).
-     */
-    private String domainName;
-    /**
-     * For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     */
-    private EmailRole emailRole;
-    /**
-     * Indicates whether the user logged on through a VPN.
-     */
-    private Boolean isVpn;
-    /**
-     * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime logonDateTime;
-    /**
-     * User sign-in ID.
-     */
-    private String logonId;
-    /**
-     * IP Address the sign-in request originated from.
-     */
-    private String logonIp;
-    /**
-     * Location (by IP address mapping) associated with a user sign-in event by this user.
-     */
-    private String logonLocation;
-    /**
-     * Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     */
-    private LogonType logonType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Active Directory (on-premises) Security Identifier (SID) of the user.
-     */
-    private String onPremisesSecurityIdentifier;
-    /**
-     * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
-     */
-    private String riskScore;
-    /**
-     * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     */
-    private UserAccountSecurityType userAccountType;
-    /**
-     * User sign-in name - internet format: (user account name)@(user account DNS domain name).
-     */
-    private String userPrincipalName;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserSecurityState and sets the default values.
      */
     public UserSecurityState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -96,7 +40,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAadUserId() {
-        return this.aadUserId;
+        return this.getBackingStore().get("aadUserId");
     }
     /**
      * Gets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
@@ -104,7 +48,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.getBackingStore().get("accountName");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -112,7 +56,20 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
@@ -120,7 +77,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.getBackingStore().get("domainName");
     }
     /**
      * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
@@ -128,7 +85,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailRole getEmailRole() {
-        return this.emailRole;
+        return this.getBackingStore().get("emailRole");
     }
     /**
      * The deserialization information for the current model
@@ -160,7 +117,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVpn() {
-        return this.isVpn;
+        return this.getBackingStore().get("isVpn");
     }
     /**
      * Gets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -168,7 +125,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLogonDateTime() {
-        return this.logonDateTime;
+        return this.getBackingStore().get("logonDateTime");
     }
     /**
      * Gets the logonId property value. User sign-in ID.
@@ -176,7 +133,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLogonId() {
-        return this.logonId;
+        return this.getBackingStore().get("logonId");
     }
     /**
      * Gets the logonIp property value. IP Address the sign-in request originated from.
@@ -184,7 +141,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLogonIp() {
-        return this.logonIp;
+        return this.getBackingStore().get("logonIp");
     }
     /**
      * Gets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
@@ -192,7 +149,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLogonLocation() {
-        return this.logonLocation;
+        return this.getBackingStore().get("logonLocation");
     }
     /**
      * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
@@ -200,7 +157,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LogonType getLogonType() {
-        return this.logonType;
+        return this.getBackingStore().get("logonType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -208,7 +165,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
@@ -216,7 +173,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
-        return this.onPremisesSecurityIdentifier;
+        return this.getBackingStore().get("onPremisesSecurityIdentifier");
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
@@ -224,7 +181,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
-        return this.riskScore;
+        return this.getBackingStore().get("riskScore");
     }
     /**
      * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
@@ -232,7 +189,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UserAccountSecurityType getUserAccountType() {
-        return this.userAccountType;
+        return this.getBackingStore().get("userAccountType");
     }
     /**
      * Gets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
@@ -240,7 +197,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.getBackingStore().get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -270,111 +227,119 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aadUserId property.
      */
     public void setAadUserId(@jakarta.annotation.Nullable final String value) {
-        this.aadUserId = value;
+        this.getBackingStore().set("aadUserId", value);
     }
     /**
      * Sets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.getBackingStore().set("accountName", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.getBackingStore().set("domainName", value);
     }
     /**
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
      * @param value Value to set for the emailRole property.
      */
     public void setEmailRole(@jakarta.annotation.Nullable final EmailRole value) {
-        this.emailRole = value;
+        this.getBackingStore().set("emailRole", value);
     }
     /**
      * Sets the isVpn property value. Indicates whether the user logged on through a VPN.
      * @param value Value to set for the isVpn property.
      */
     public void setIsVpn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isVpn = value;
+        this.getBackingStore().set("isVpn", value);
     }
     /**
      * Sets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the logonDateTime property.
      */
     public void setLogonDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.logonDateTime = value;
+        this.getBackingStore().set("logonDateTime", value);
     }
     /**
      * Sets the logonId property value. User sign-in ID.
      * @param value Value to set for the logonId property.
      */
     public void setLogonId(@jakarta.annotation.Nullable final String value) {
-        this.logonId = value;
+        this.getBackingStore().set("logonId", value);
     }
     /**
      * Sets the logonIp property value. IP Address the sign-in request originated from.
      * @param value Value to set for the logonIp property.
      */
     public void setLogonIp(@jakarta.annotation.Nullable final String value) {
-        this.logonIp = value;
+        this.getBackingStore().set("logonIp", value);
     }
     /**
      * Sets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
      * @param value Value to set for the logonLocation property.
      */
     public void setLogonLocation(@jakarta.annotation.Nullable final String value) {
-        this.logonLocation = value;
+        this.getBackingStore().set("logonLocation", value);
     }
     /**
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonType property.
      */
     public void setLogonType(@jakarta.annotation.Nullable final LogonType value) {
-        this.logonType = value;
+        this.getBackingStore().set("logonType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.onPremisesSecurityIdentifier = value;
+        this.getBackingStore().set("onPremisesSecurityIdentifier", value);
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
      */
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
-        this.riskScore = value;
+        this.getBackingStore().set("riskScore", value);
     }
     /**
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the userAccountType property.
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {
-        this.userAccountType = value;
+        this.getBackingStore().set("userAccountType", value);
     }
     /**
      * Sets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.getBackingStore().set("userPrincipalName", value);
     }
 }

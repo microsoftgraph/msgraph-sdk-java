@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TokenMeetingInfo extends MeetingInfo implements Parsable {
     /**
-     * The token used to join the call.
-     */
-    private String token;
-    /**
      * Instantiates a new TokenMeetingInfo and sets the default values.
      */
     public TokenMeetingInfo() {
@@ -45,7 +41,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getToken() {
-        return this.token;
+        return this.getBackingStore().get("token");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the token property.
      */
     public void setToken(@jakarta.annotation.Nullable final String value) {
-        this.token = value;
+        this.getBackingStore().set("token", value);
     }
 }

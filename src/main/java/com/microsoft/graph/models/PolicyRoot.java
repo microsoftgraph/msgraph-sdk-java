@@ -9,82 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyRoot extends Entity implements Parsable {
     /**
-     * The policy that controls the idle time out for web sessions for applications.
-     */
-    private java.util.List<ActivityBasedTimeoutPolicy> activityBasedTimeoutPolicies;
-    /**
-     * The policy by which consent requests are created and managed for the entire tenant.
-     */
-    private AdminConsentRequestPolicy adminConsentRequestPolicy;
-    /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     */
-    private java.util.List<AppManagementPolicy> appManagementPolicies;
-    /**
-     * The policy configuration of the self-service sign-up experience of external users.
-     */
-    private AuthenticationFlowsPolicy authenticationFlowsPolicy;
-    /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
-     */
-    private AuthenticationMethodsPolicy authenticationMethodsPolicy;
-    /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
-     */
-    private java.util.List<AuthenticationStrengthPolicy> authenticationStrengthPolicies;
-    /**
-     * The policy that controls Microsoft Entra authorization settings.
-     */
-    private AuthorizationPolicy authorizationPolicy;
-    /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
-     */
-    private java.util.List<ClaimsMappingPolicy> claimsMappingPolicies;
-    /**
-     * The custom rules that define an access scenario.
-     */
-    private java.util.List<ConditionalAccessPolicy> conditionalAccessPolicies;
-    /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
-     */
-    private CrossTenantAccessPolicy crossTenantAccessPolicy;
-    /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
-     */
-    private TenantAppManagementPolicy defaultAppManagementPolicy;
-    /**
-     * The feature rollout policy associated with a directory object.
-     */
-    private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
-    /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
-     */
-    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
-    /**
-     * The policy that represents the security defaults that protect against common attacks.
-     */
-    private IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
-    /**
-     * The policy that specifies the conditions under which consent can be granted.
-     */
-    private java.util.List<PermissionGrantPolicy> permissionGrantPolicies;
-    /**
-     * Specifies the various policies associated with scopes and roles.
-     */
-    private java.util.List<UnifiedRoleManagementPolicy> roleManagementPolicies;
-    /**
-     * The assignment of a role management policy to a role definition object.
-     */
-    private java.util.List<UnifiedRoleManagementPolicyAssignment> roleManagementPolicyAssignments;
-    /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
-     */
-    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
-    /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
-     */
-    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
-    /**
      * Instantiates a new PolicyRoot and sets the default values.
      */
     public PolicyRoot() {
@@ -106,7 +30,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getActivityBasedTimeoutPolicies() {
-        return this.activityBasedTimeoutPolicies;
+        return this.getBackingStore().get("activityBasedTimeoutPolicies");
     }
     /**
      * Gets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
@@ -114,7 +38,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy getAdminConsentRequestPolicy() {
-        return this.adminConsentRequestPolicy;
+        return this.getBackingStore().get("adminConsentRequestPolicy");
     }
     /**
      * Gets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
@@ -122,7 +46,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
-        return this.appManagementPolicies;
+        return this.getBackingStore().get("appManagementPolicies");
     }
     /**
      * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
@@ -130,7 +54,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthenticationFlowsPolicy getAuthenticationFlowsPolicy() {
-        return this.authenticationFlowsPolicy;
+        return this.getBackingStore().get("authenticationFlowsPolicy");
     }
     /**
      * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
@@ -138,7 +62,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy getAuthenticationMethodsPolicy() {
-        return this.authenticationMethodsPolicy;
+        return this.getBackingStore().get("authenticationMethodsPolicy");
     }
     /**
      * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
@@ -146,7 +70,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
-        return this.authenticationStrengthPolicies;
+        return this.getBackingStore().get("authenticationStrengthPolicies");
     }
     /**
      * Gets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
@@ -154,7 +78,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthorizationPolicy getAuthorizationPolicy() {
-        return this.authorizationPolicy;
+        return this.getBackingStore().get("authorizationPolicy");
     }
     /**
      * Gets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
@@ -162,7 +86,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
-        return this.claimsMappingPolicies;
+        return this.getBackingStore().get("claimsMappingPolicies");
     }
     /**
      * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
@@ -170,7 +94,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
-        return this.conditionalAccessPolicies;
+        return this.getBackingStore().get("conditionalAccessPolicies");
     }
     /**
      * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
@@ -178,7 +102,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy getCrossTenantAccessPolicy() {
-        return this.crossTenantAccessPolicy;
+        return this.getBackingStore().get("crossTenantAccessPolicy");
     }
     /**
      * Gets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
@@ -186,7 +110,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy getDefaultAppManagementPolicy() {
-        return this.defaultAppManagementPolicy;
+        return this.getBackingStore().get("defaultAppManagementPolicy");
     }
     /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
@@ -194,7 +118,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
-        return this.featureRolloutPolicies;
+        return this.getBackingStore().get("featureRolloutPolicies");
     }
     /**
      * The deserialization information for the current model
@@ -230,7 +154,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this.homeRealmDiscoveryPolicies;
+        return this.getBackingStore().get("homeRealmDiscoveryPolicies");
     }
     /**
      * Gets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
@@ -238,7 +162,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy getIdentitySecurityDefaultsEnforcementPolicy() {
-        return this.identitySecurityDefaultsEnforcementPolicy;
+        return this.getBackingStore().get("identitySecurityDefaultsEnforcementPolicy");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -246,7 +170,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantPolicy> getPermissionGrantPolicies() {
-        return this.permissionGrantPolicies;
+        return this.getBackingStore().get("permissionGrantPolicies");
     }
     /**
      * Gets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
@@ -254,7 +178,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicy> getRoleManagementPolicies() {
-        return this.roleManagementPolicies;
+        return this.getBackingStore().get("roleManagementPolicies");
     }
     /**
      * Gets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
@@ -262,7 +186,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyAssignment> getRoleManagementPolicyAssignments() {
-        return this.roleManagementPolicyAssignments;
+        return this.getBackingStore().get("roleManagementPolicyAssignments");
     }
     /**
      * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
@@ -270,7 +194,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this.tokenIssuancePolicies;
+        return this.getBackingStore().get("tokenIssuancePolicies");
     }
     /**
      * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
@@ -278,7 +202,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this.tokenLifetimePolicies;
+        return this.getBackingStore().get("tokenLifetimePolicies");
     }
     /**
      * Serializes information the current object
@@ -312,132 +236,132 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the activityBasedTimeoutPolicies property.
      */
     public void setActivityBasedTimeoutPolicies(@jakarta.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
-        this.activityBasedTimeoutPolicies = value;
+        this.getBackingStore().set("activityBasedTimeoutPolicies", value);
     }
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
      * @param value Value to set for the adminConsentRequestPolicy property.
      */
     public void setAdminConsentRequestPolicy(@jakarta.annotation.Nullable final AdminConsentRequestPolicy value) {
-        this.adminConsentRequestPolicy = value;
+        this.getBackingStore().set("adminConsentRequestPolicy", value);
     }
     /**
      * Sets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param value Value to set for the appManagementPolicies property.
      */
     public void setAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
-        this.appManagementPolicies = value;
+        this.getBackingStore().set("appManagementPolicies", value);
     }
     /**
      * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
      * @param value Value to set for the authenticationFlowsPolicy property.
      */
     public void setAuthenticationFlowsPolicy(@jakarta.annotation.Nullable final AuthenticationFlowsPolicy value) {
-        this.authenticationFlowsPolicy = value;
+        this.getBackingStore().set("authenticationFlowsPolicy", value);
     }
     /**
      * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @param value Value to set for the authenticationMethodsPolicy property.
      */
     public void setAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final AuthenticationMethodsPolicy value) {
-        this.authenticationMethodsPolicy = value;
+        this.getBackingStore().set("authenticationMethodsPolicy", value);
     }
     /**
      * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param value Value to set for the authenticationStrengthPolicies property.
      */
     public void setAuthenticationStrengthPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
-        this.authenticationStrengthPolicies = value;
+        this.getBackingStore().set("authenticationStrengthPolicies", value);
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @param value Value to set for the authorizationPolicy property.
      */
     public void setAuthorizationPolicy(@jakarta.annotation.Nullable final AuthorizationPolicy value) {
-        this.authorizationPolicy = value;
+        this.getBackingStore().set("authorizationPolicy", value);
     }
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @param value Value to set for the claimsMappingPolicies property.
      */
     public void setClaimsMappingPolicies(@jakarta.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
-        this.claimsMappingPolicies = value;
+        this.getBackingStore().set("claimsMappingPolicies", value);
     }
     /**
      * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
      * @param value Value to set for the conditionalAccessPolicies property.
      */
     public void setConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this.conditionalAccessPolicies = value;
+        this.getBackingStore().set("conditionalAccessPolicies", value);
     }
     /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @param value Value to set for the crossTenantAccessPolicy property.
      */
     public void setCrossTenantAccessPolicy(@jakarta.annotation.Nullable final CrossTenantAccessPolicy value) {
-        this.crossTenantAccessPolicy = value;
+        this.getBackingStore().set("crossTenantAccessPolicy", value);
     }
     /**
      * Sets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param value Value to set for the defaultAppManagementPolicy property.
      */
     public void setDefaultAppManagementPolicy(@jakarta.annotation.Nullable final TenantAppManagementPolicy value) {
-        this.defaultAppManagementPolicy = value;
+        this.getBackingStore().set("defaultAppManagementPolicy", value);
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @param value Value to set for the featureRolloutPolicies property.
      */
     public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
-        this.featureRolloutPolicies = value;
+        this.getBackingStore().set("featureRolloutPolicies", value);
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      */
     public void setHomeRealmDiscoveryPolicies(@jakarta.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this.homeRealmDiscoveryPolicies = value;
+        this.getBackingStore().set("homeRealmDiscoveryPolicies", value);
     }
     /**
      * Sets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
      * @param value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
      */
     public void setIdentitySecurityDefaultsEnforcementPolicy(@jakarta.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
-        this.identitySecurityDefaultsEnforcementPolicy = value;
+        this.getBackingStore().set("identitySecurityDefaultsEnforcementPolicy", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
      * @param value Value to set for the permissionGrantPolicies property.
      */
     public void setPermissionGrantPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
-        this.permissionGrantPolicies = value;
+        this.getBackingStore().set("permissionGrantPolicies", value);
     }
     /**
      * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      * @param value Value to set for the roleManagementPolicies property.
      */
     public void setRoleManagementPolicies(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
-        this.roleManagementPolicies = value;
+        this.getBackingStore().set("roleManagementPolicies", value);
     }
     /**
      * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      * @param value Value to set for the roleManagementPolicyAssignments property.
      */
     public void setRoleManagementPolicyAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
-        this.roleManagementPolicyAssignments = value;
+        this.getBackingStore().set("roleManagementPolicyAssignments", value);
     }
     /**
      * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param value Value to set for the tokenIssuancePolicies property.
      */
     public void setTokenIssuancePolicies(@jakarta.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this.tokenIssuancePolicies = value;
+        this.getBackingStore().set("tokenIssuancePolicies", value);
     }
     /**
      * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param value Value to set for the tokenLifetimePolicies property.
      */
     public void setTokenLifetimePolicies(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this.tokenLifetimePolicies = value;
+        this.getBackingStore().set("tokenLifetimePolicies", value);
     }
 }

@@ -1,4 +1,4 @@
-package com.microsoft.graph.users.item.photos.count;
+package com.microsoft.graph.serviceprincipals.item.remotedesktopsecurityconfiguration.targetdevicegroups.count;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos/$count{?%24filter}", pathParameters);
+        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/remoteDesktopSecurityConfiguration/targetDeviceGroups/$count{?%24search,%24filter}", pathParameters);
     }
     /**
      * Instantiates a new CountRequestBuilder and sets the default values.
@@ -33,7 +33,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos/$count{?%24filter}", rawUrl);
+        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/remoteDesktopSecurityConfiguration/targetDeviceGroups/$count{?%24search,%24filter}", rawUrl);
     }
     /**
      * Get the number of the resource
@@ -82,7 +82,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "text/plain");
+        requestInfo.headers.tryAdd("Accept", "text/plain;q=0.9");
         return requestInfo;
     }
     /**
@@ -106,6 +106,12 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24filter")
         @jakarta.annotation.Nullable
         public String filter;
+        /**
+         * Search items by search phrases
+         */
+        @QueryParameter(name = "%24search")
+        @jakarta.annotation.Nullable
+        public String search;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

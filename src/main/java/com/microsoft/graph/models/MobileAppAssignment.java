@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppAssignment extends Entity implements Parsable {
     /**
-     * Possible values for the install intent chosen by the admin.
-     */
-    private InstallIntent intent;
-    /**
-     * The settings for target assignment defined by the admin.
-     */
-    private MobileAppAssignmentSettings settings;
-    /**
-     * The target group assignment defined by the admin.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
      * Instantiates a new MobileAppAssignment and sets the default values.
      */
     public MobileAppAssignment() {
@@ -57,7 +45,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public InstallIntent getIntent() {
-        return this.intent;
+        return this.getBackingStore().get("intent");
     }
     /**
      * Gets the settings property value. The settings for target assignment defined by the admin.
@@ -65,7 +53,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MobileAppAssignmentSettings getSettings() {
-        return this.settings;
+        return this.getBackingStore().get("settings");
     }
     /**
      * Gets the target property value. The target group assignment defined by the admin.
@@ -73,7 +61,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.getBackingStore().get("target");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class MobileAppAssignment extends Entity implements Parsable {
      * @param value Value to set for the intent property.
      */
     public void setIntent(@jakarta.annotation.Nullable final InstallIntent value) {
-        this.intent = value;
+        this.getBackingStore().set("intent", value);
     }
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final MobileAppAssignmentSettings value) {
-        this.settings = value;
+        this.getBackingStore().set("settings", value);
     }
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.getBackingStore().set("target", value);
     }
 }

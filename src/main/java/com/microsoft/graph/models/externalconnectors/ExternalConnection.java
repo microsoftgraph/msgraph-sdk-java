@@ -10,46 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalConnection extends Entity implements Parsable {
     /**
-     * Collects configurable settings related to activities involving connector content.
-     */
-    private ActivitySettings activitySettings;
-    /**
-     * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
-     */
-    private Configuration configuration;
-    /**
-     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
-     */
-    private String description;
-    /**
-     * The groups property
-     */
-    private java.util.List<ExternalGroup> groups;
-    /**
-     * The items property
-     */
-    private java.util.List<ExternalItem> items;
-    /**
-     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
-     */
-    private String name;
-    /**
-     * The operations property
-     */
-    private java.util.List<ConnectionOperation> operations;
-    /**
-     * The schema property
-     */
-    private Schema schema;
-    /**
-     * The settings configuring the search experience for content in this connection, such as the display templates for search results.
-     */
-    private SearchSettings searchSettings;
-    /**
-     * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     */
-    private ConnectionState state;
-    /**
      * Instantiates a new ExternalConnection and sets the default values.
      */
     public ExternalConnection() {
@@ -71,7 +31,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ActivitySettings getActivitySettings() {
-        return this.activitySettings;
+        return this.getBackingStore().get("activitySettings");
     }
     /**
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -79,7 +39,15 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Configuration getConfiguration() {
-        return this.configuration;
+        return this.getBackingStore().get("configuration");
+    }
+    /**
+     * Gets the connectorId property value. The Teams app ID. Optional.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getConnectorId() {
+        return this.getBackingStore().get("connectorId");
     }
     /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
@@ -87,7 +55,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * The deserialization information for the current model
@@ -98,6 +66,7 @@ public class ExternalConnection extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activitySettings", (n) -> { this.setActivitySettings(n.getObjectValue(ActivitySettings::createFromDiscriminatorValue)); });
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(ExternalItem::createFromDiscriminatorValue)); });
@@ -114,7 +83,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
-        return this.groups;
+        return this.getBackingStore().get("groups");
     }
     /**
      * Gets the items property value. The items property
@@ -122,7 +91,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
-        return this.items;
+        return this.getBackingStore().get("items");
     }
     /**
      * Gets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
@@ -130,7 +99,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the operations property value. The operations property
@@ -138,7 +107,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
-        return this.operations;
+        return this.getBackingStore().get("operations");
     }
     /**
      * Gets the schema property value. The schema property
@@ -146,7 +115,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Schema getSchema() {
-        return this.schema;
+        return this.getBackingStore().get("schema");
     }
     /**
      * Gets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
@@ -154,7 +123,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SearchSettings getSearchSettings() {
-        return this.searchSettings;
+        return this.getBackingStore().get("searchSettings");
     }
     /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
@@ -162,7 +131,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConnectionState getState() {
-        return this.state;
+        return this.getBackingStore().get("state");
     }
     /**
      * Serializes information the current object
@@ -173,6 +142,7 @@ public class ExternalConnection extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("activitySettings", this.getActivitySettings());
         writer.writeObjectValue("configuration", this.getConfiguration());
+        writer.writeStringValue("connectorId", this.getConnectorId());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
         writer.writeCollectionOfObjectValues("items", this.getItems());
@@ -186,69 +156,76 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the activitySettings property.
      */
     public void setActivitySettings(@jakarta.annotation.Nullable final ActivitySettings value) {
-        this.activitySettings = value;
+        this.getBackingStore().set("activitySettings", value);
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final Configuration value) {
-        this.configuration = value;
+        this.getBackingStore().set("configuration", value);
+    }
+    /**
+     * Sets the connectorId property value. The Teams app ID. Optional.
+     * @param value Value to set for the connectorId property.
+     */
+    public void setConnectorId(@jakarta.annotation.Nullable final String value) {
+        this.getBackingStore().set("connectorId", value);
     }
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the groups property value. The groups property
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<ExternalGroup> value) {
-        this.groups = value;
+        this.getBackingStore().set("groups", value);
     }
     /**
      * Sets the items property value. The items property
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<ExternalItem> value) {
-        this.items = value;
+        this.getBackingStore().set("items", value);
     }
     /**
      * Sets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<ConnectionOperation> value) {
-        this.operations = value;
+        this.getBackingStore().set("operations", value);
     }
     /**
      * Sets the schema property value. The schema property
      * @param value Value to set for the schema property.
      */
     public void setSchema(@jakarta.annotation.Nullable final Schema value) {
-        this.schema = value;
+        this.getBackingStore().set("schema", value);
     }
     /**
      * Sets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
      * @param value Value to set for the searchSettings property.
      */
     public void setSearchSettings(@jakarta.annotation.Nullable final SearchSettings value) {
-        this.searchSettings = value;
+        this.getBackingStore().set("searchSettings", value);
     }
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConnectionState value) {
-        this.state = value;
+        this.getBackingStore().set("state", value);
     }
 }

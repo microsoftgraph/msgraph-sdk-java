@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
-     */
-    private X509CertificateAuthenticationModeConfiguration authenticationModeConfiguration;
-    /**
-     * Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
-     */
-    private java.util.List<X509CertificateUserBinding> certificateUserBindings;
-    /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
      * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
      */
     public X509CertificateAuthenticationMethodConfiguration() {
@@ -43,7 +31,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration getAuthenticationModeConfiguration() {
-        return this.authenticationModeConfiguration;
+        return this.getBackingStore().get("authenticationModeConfiguration");
     }
     /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
@@ -51,7 +39,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @jakarta.annotation.Nullable
     public java.util.List<X509CertificateUserBinding> getCertificateUserBindings() {
-        return this.certificateUserBindings;
+        return this.getBackingStore().get("certificateUserBindings");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.getBackingStore().get("includeTargets");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * @param value Value to set for the authenticationModeConfiguration property.
      */
     public void setAuthenticationModeConfiguration(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
-        this.authenticationModeConfiguration = value;
+        this.getBackingStore().set("authenticationModeConfiguration", value);
     }
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @param value Value to set for the certificateUserBindings property.
      */
     public void setCertificateUserBindings(@jakarta.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
-        this.certificateUserBindings = value;
+        this.getBackingStore().set("certificateUserBindings", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.getBackingStore().set("includeTargets", value);
     }
 }

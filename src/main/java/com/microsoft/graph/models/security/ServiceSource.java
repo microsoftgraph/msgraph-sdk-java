@@ -15,7 +15,8 @@ public enum ServiceSource implements ValuedEnum {
     MicrosoftAppGovernance("microsoftAppGovernance"),
     DataLossPrevention("dataLossPrevention"),
     UnknownFutureValue("unknownFutureValue"),
-    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud"),
+    MicrosoftSentinel("microsoftSentinel");
     public final String value;
     ServiceSource(final String value) {
         this.value = value;
@@ -37,6 +38,7 @@ public enum ServiceSource implements ValuedEnum {
             case "dataLossPrevention": return DataLossPrevention;
             case "unknownFutureValue": return UnknownFutureValue;
             case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
+            case "microsoftSentinel": return MicrosoftSentinel;
             default: return null;
         }
     }

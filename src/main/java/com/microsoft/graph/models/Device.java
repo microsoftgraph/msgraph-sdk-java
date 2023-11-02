@@ -10,118 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Device extends DirectoryObject implements Parsable {
     /**
-     * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
-     */
-    private Boolean accountEnabled;
-    /**
-     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
-     */
-    private java.util.List<AlternativeSecurityId> alternativeSecurityIds;
-    /**
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
-     */
-    private OffsetDateTime approximateLastSignInDateTime;
-    /**
-     * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime complianceExpirationDateTime;
-    /**
-     * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
-     */
-    private String deviceCategory;
-    /**
-     * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
-     */
-    private String deviceId;
-    /**
-     * For internal use only. Set to null.
-     */
-    private String deviceMetadata;
-    /**
-     * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
-     */
-    private String deviceOwnership;
-    /**
-     * For internal use only.
-     */
-    private Integer deviceVersion;
-    /**
-     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     */
-    private String displayName;
-    /**
-     * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
-     */
-    private String enrollmentProfileName;
-    /**
-     * The collection of open extensions defined for the device. Read-only. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
-     */
-    private Boolean isCompliant;
-    /**
-     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
-     */
-    private Boolean isManaged;
-    /**
-     * Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
-     */
-    private String mdmAppId;
-    /**
-     * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> memberOf;
-    /**
-     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
-     */
-    private OffsetDateTime onPremisesLastSyncDateTime;
-    /**
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
-     */
-    private Boolean onPremisesSyncEnabled;
-    /**
-     * The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
-     */
-    private String operatingSystem;
-    /**
-     * The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
-     */
-    private String operatingSystemVersion;
-    /**
-     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
-     */
-    private java.util.List<String> physicalIds;
-    /**
-     * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
-     */
-    private String profileType;
-    /**
-     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> registeredOwners;
-    /**
-     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> registeredUsers;
-    /**
-     * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime registrationDateTime;
-    /**
-     * List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
-     */
-    private java.util.List<String> systemLabels;
-    /**
-     * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
-     */
-    private java.util.List<DirectoryObject> transitiveMemberOf;
-    /**
-     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
-     */
-    private String trustType;
-    /**
      * Instantiates a new Device and sets the default values.
      */
     public Device() {
@@ -144,7 +32,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
-        return this.accountEnabled;
+        return this.getBackingStore().get("accountEnabled");
     }
     /**
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
@@ -152,7 +40,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlternativeSecurityId> getAlternativeSecurityIds() {
-        return this.alternativeSecurityIds;
+        return this.getBackingStore().get("alternativeSecurityIds");
     }
     /**
      * Gets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
@@ -160,7 +48,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getApproximateLastSignInDateTime() {
-        return this.approximateLastSignInDateTime;
+        return this.getBackingStore().get("approximateLastSignInDateTime");
     }
     /**
      * Gets the complianceExpirationDateTime property value. The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -168,7 +56,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceExpirationDateTime() {
-        return this.complianceExpirationDateTime;
+        return this.getBackingStore().get("complianceExpirationDateTime");
     }
     /**
      * Gets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
@@ -176,7 +64,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceCategory() {
-        return this.deviceCategory;
+        return this.getBackingStore().get("deviceCategory");
     }
     /**
      * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
@@ -184,7 +72,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.getBackingStore().get("deviceId");
     }
     /**
      * Gets the deviceMetadata property value. For internal use only. Set to null.
@@ -192,7 +80,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceMetadata() {
-        return this.deviceMetadata;
+        return this.getBackingStore().get("deviceMetadata");
     }
     /**
      * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
@@ -200,7 +88,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceOwnership() {
-        return this.deviceOwnership;
+        return this.getBackingStore().get("deviceOwnership");
     }
     /**
      * Gets the deviceVersion property value. For internal use only.
@@ -208,7 +96,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceVersion() {
-        return this.deviceVersion;
+        return this.getBackingStore().get("deviceVersion");
     }
     /**
      * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
@@ -216,7 +104,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
@@ -224,7 +112,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentProfileName() {
-        return this.enrollmentProfileName;
+        return this.getBackingStore().get("enrollmentProfileName");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
@@ -232,7 +120,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.getBackingStore().get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -277,7 +165,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
-        return this.isCompliant;
+        return this.getBackingStore().get("isCompliant");
     }
     /**
      * Gets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
@@ -285,7 +173,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
-        return this.isManaged;
+        return this.getBackingStore().get("isManaged");
     }
     /**
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
@@ -293,7 +181,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMdmAppId() {
-        return this.mdmAppId;
+        return this.getBackingStore().get("mdmAppId");
     }
     /**
      * Gets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
@@ -301,7 +189,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
-        return this.memberOf;
+        return this.getBackingStore().get("memberOf");
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -309,7 +197,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
-        return this.onPremisesLastSyncDateTime;
+        return this.getBackingStore().get("onPremisesLastSyncDateTime");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -317,7 +205,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
-        return this.onPremisesSyncEnabled;
+        return this.getBackingStore().get("onPremisesSyncEnabled");
     }
     /**
      * Gets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -325,7 +213,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
-        return this.operatingSystem;
+        return this.getBackingStore().get("operatingSystem");
     }
     /**
      * Gets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
@@ -333,7 +221,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
-        return this.operatingSystemVersion;
+        return this.getBackingStore().get("operatingSystemVersion");
     }
     /**
      * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
@@ -341,7 +229,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPhysicalIds() {
-        return this.physicalIds;
+        return this.getBackingStore().get("physicalIds");
     }
     /**
      * Gets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
@@ -349,7 +237,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProfileType() {
-        return this.profileType;
+        return this.getBackingStore().get("profileType");
     }
     /**
      * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
@@ -357,7 +245,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredOwners() {
-        return this.registeredOwners;
+        return this.getBackingStore().get("registeredOwners");
     }
     /**
      * Gets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
@@ -365,7 +253,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredUsers() {
-        return this.registeredUsers;
+        return this.getBackingStore().get("registeredUsers");
     }
     /**
      * Gets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -373,7 +261,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegistrationDateTime() {
-        return this.registrationDateTime;
+        return this.getBackingStore().get("registrationDateTime");
     }
     /**
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
@@ -381,7 +269,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSystemLabels() {
-        return this.systemLabels;
+        return this.getBackingStore().get("systemLabels");
     }
     /**
      * Gets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
@@ -389,15 +277,15 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
-        return this.transitiveMemberOf;
+        return this.getBackingStore().get("transitiveMemberOf");
     }
     /**
-     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTrustType() {
-        return this.trustType;
+        return this.getBackingStore().get("trustType");
     }
     /**
      * Serializes information the current object
@@ -440,195 +328,195 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      */
     public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.accountEnabled = value;
+        this.getBackingStore().set("accountEnabled", value);
     }
     /**
      * Sets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the alternativeSecurityIds property.
      */
     public void setAlternativeSecurityIds(@jakarta.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
-        this.alternativeSecurityIds = value;
+        this.getBackingStore().set("alternativeSecurityIds", value);
     }
     /**
      * Sets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
      * @param value Value to set for the approximateLastSignInDateTime property.
      */
     public void setApproximateLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.approximateLastSignInDateTime = value;
+        this.getBackingStore().set("approximateLastSignInDateTime", value);
     }
     /**
      * Sets the complianceExpirationDateTime property value. The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the complianceExpirationDateTime property.
      */
     public void setComplianceExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.complianceExpirationDateTime = value;
+        this.getBackingStore().set("complianceExpirationDateTime", value);
     }
     /**
      * Sets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
      * @param value Value to set for the deviceCategory property.
      */
     public void setDeviceCategory(@jakarta.annotation.Nullable final String value) {
-        this.deviceCategory = value;
+        this.getBackingStore().set("deviceCategory", value);
     }
     /**
      * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.getBackingStore().set("deviceId", value);
     }
     /**
      * Sets the deviceMetadata property value. For internal use only. Set to null.
      * @param value Value to set for the deviceMetadata property.
      */
     public void setDeviceMetadata(@jakarta.annotation.Nullable final String value) {
-        this.deviceMetadata = value;
+        this.getBackingStore().set("deviceMetadata", value);
     }
     /**
      * Sets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
      * @param value Value to set for the deviceOwnership property.
      */
     public void setDeviceOwnership(@jakarta.annotation.Nullable final String value) {
-        this.deviceOwnership = value;
+        this.getBackingStore().set("deviceOwnership", value);
     }
     /**
      * Sets the deviceVersion property value. For internal use only.
      * @param value Value to set for the deviceVersion property.
      */
     public void setDeviceVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceVersion = value;
+        this.getBackingStore().set("deviceVersion", value);
     }
     /**
      * Sets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
      * @param value Value to set for the enrollmentProfileName property.
      */
     public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
-        this.enrollmentProfileName = value;
+        this.getBackingStore().set("enrollmentProfileName", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.getBackingStore().set("extensions", value);
     }
     /**
      * Sets the isCompliant property value. true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
      * @param value Value to set for the isCompliant property.
      */
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCompliant = value;
+        this.getBackingStore().set("isCompliant", value);
     }
     /**
      * Sets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
      * @param value Value to set for the isManaged property.
      */
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
-        this.isManaged = value;
+        this.getBackingStore().set("isManaged", value);
     }
     /**
      * Sets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the mdmAppId property.
      */
     public void setMdmAppId(@jakarta.annotation.Nullable final String value) {
-        this.mdmAppId = value;
+        this.getBackingStore().set("mdmAppId", value);
     }
     /**
      * Sets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the memberOf property.
      */
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.memberOf = value;
+        this.getBackingStore().set("memberOf", value);
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      */
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.onPremisesLastSyncDateTime = value;
+        this.getBackingStore().set("onPremisesLastSyncDateTime", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.onPremisesSyncEnabled = value;
+        this.getBackingStore().set("onPremisesSyncEnabled", value);
     }
     /**
      * Sets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystem = value;
+        this.getBackingStore().set("operatingSystem", value);
     }
     /**
      * Sets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @param value Value to set for the operatingSystemVersion property.
      */
     public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemVersion = value;
+        this.getBackingStore().set("operatingSystemVersion", value);
     }
     /**
      * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
      * @param value Value to set for the physicalIds property.
      */
     public void setPhysicalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.physicalIds = value;
+        this.getBackingStore().set("physicalIds", value);
     }
     /**
      * Sets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
      * @param value Value to set for the profileType property.
      */
     public void setProfileType(@jakarta.annotation.Nullable final String value) {
-        this.profileType = value;
+        this.getBackingStore().set("profileType", value);
     }
     /**
      * Sets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the registeredOwners property.
      */
     public void setRegisteredOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.registeredOwners = value;
+        this.getBackingStore().set("registeredOwners", value);
     }
     /**
      * Sets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the registeredUsers property.
      */
     public void setRegisteredUsers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.registeredUsers = value;
+        this.getBackingStore().set("registeredUsers", value);
     }
     /**
      * Sets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the registrationDateTime property.
      */
     public void setRegistrationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.registrationDateTime = value;
+        this.getBackingStore().set("registrationDateTime", value);
     }
     /**
      * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the systemLabels property.
      */
     public void setSystemLabels(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.systemLabels = value;
+        this.getBackingStore().set("systemLabels", value);
     }
     /**
      * Sets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @param value Value to set for the transitiveMemberOf property.
      */
     public void setTransitiveMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.transitiveMemberOf = value;
+        this.getBackingStore().set("transitiveMemberOf", value);
     }
     /**
-     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory.
+     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {
-        this.trustType = value;
+        this.getBackingStore().set("trustType", value);
     }
 }

@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentConfigurationAssignment extends Entity implements Parsable {
     /**
-     * Represents an assignment to managed devices in the tenant
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
      * Instantiates a new EnrollmentConfigurationAssignment and sets the default values.
      */
     public EnrollmentConfigurationAssignment() {
@@ -47,7 +43,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.getBackingStore().get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.getBackingStore().set("target", value);
     }
 }

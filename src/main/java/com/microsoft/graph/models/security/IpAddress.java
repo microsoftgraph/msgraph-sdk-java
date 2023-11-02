@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpAddress extends Host implements Parsable {
     /**
-     * The details about the autonomous system to which this IP address belongs.
-     */
-    private AutonomousSystem autonomousSystem;
-    /**
-     * The country/region for this IP address.
-     */
-    private String countryOrRegion;
-    /**
-     * The hosting company listed for this host.
-     */
-    private String hostingProvider;
-    /**
-     * The block of IP addresses this IP address belongs to.
-     */
-    private String netblock;
-    /**
      * Instantiates a new IpAddress and sets the default values.
      */
     public IpAddress() {
@@ -47,7 +31,7 @@ public class IpAddress extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AutonomousSystem getAutonomousSystem() {
-        return this.autonomousSystem;
+        return this.getBackingStore().get("autonomousSystem");
     }
     /**
      * Gets the countryOrRegion property value. The country/region for this IP address.
@@ -55,7 +39,7 @@ public class IpAddress extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
-        return this.countryOrRegion;
+        return this.getBackingStore().get("countryOrRegion");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class IpAddress extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getHostingProvider() {
-        return this.hostingProvider;
+        return this.getBackingStore().get("hostingProvider");
     }
     /**
      * Gets the netblock property value. The block of IP addresses this IP address belongs to.
@@ -84,7 +68,7 @@ public class IpAddress extends Host implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNetblock() {
-        return this.netblock;
+        return this.getBackingStore().get("netblock");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class IpAddress extends Host implements Parsable {
      * @param value Value to set for the autonomousSystem property.
      */
     public void setAutonomousSystem(@jakarta.annotation.Nullable final AutonomousSystem value) {
-        this.autonomousSystem = value;
+        this.getBackingStore().set("autonomousSystem", value);
     }
     /**
      * Sets the countryOrRegion property value. The country/region for this IP address.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
-        this.countryOrRegion = value;
+        this.getBackingStore().set("countryOrRegion", value);
     }
     /**
      * Sets the hostingProvider property value. The hosting company listed for this host.
      * @param value Value to set for the hostingProvider property.
      */
     public void setHostingProvider(@jakarta.annotation.Nullable final String value) {
-        this.hostingProvider = value;
+        this.getBackingStore().set("hostingProvider", value);
     }
     /**
      * Sets the netblock property value. The block of IP addresses this IP address belongs to.
      * @param value Value to set for the netblock property.
      */
     public void setNetblock(@jakarta.annotation.Nullable final String value) {
-        this.netblock = value;
+        this.getBackingStore().set("netblock", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResource extends Entity implements Parsable {
     /**
-     * Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     */
-    private Boolean distributeForStudentWork;
-    /**
-     * Resource object that has been associated with this assignment.
-     */
-    private EducationResource resource;
-    /**
      * Instantiates a new EducationAssignmentResource and sets the default values.
      */
     public EducationAssignmentResource() {
@@ -38,7 +30,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getDistributeForStudentWork() {
-        return this.distributeForStudentWork;
+        return this.getBackingStore().get("distributeForStudentWork");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {
-        return this.resource;
+        return this.getBackingStore().get("resource");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      * @param value Value to set for the distributeForStudentWork property.
      */
     public void setDistributeForStudentWork(@jakarta.annotation.Nullable final Boolean value) {
-        this.distributeForStudentWork = value;
+        this.getBackingStore().set("distributeForStudentWork", value);
     }
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.resource = value;
+        this.getBackingStore().set("resource", value);
     }
 }

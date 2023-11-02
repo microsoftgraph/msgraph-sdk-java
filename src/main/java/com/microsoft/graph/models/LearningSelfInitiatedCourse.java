@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningSelfInitiatedCourse extends LearningCourseActivity implements Parsable {
     /**
-     * The date and time on which the self-initiated course was started by the learner. Optional.
-     */
-    private OffsetDateTime startedDateTime;
-    /**
      * Instantiates a new LearningSelfInitiatedCourse and sets the default values.
      */
     public LearningSelfInitiatedCourse() {
@@ -45,7 +41,7 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.getBackingStore().get("startedDateTime");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class LearningSelfInitiatedCourse extends LearningCourseActivity implemen
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.getBackingStore().set("startedDateTime", value);
     }
 }

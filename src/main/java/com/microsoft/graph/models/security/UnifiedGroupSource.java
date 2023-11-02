@@ -11,14 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
-     * The group property
-     */
-    private Group group;
-    /**
-     * Specifies which sources are included in this group. Possible values are: mailbox, site.
-     */
-    private EnumSet<SourceType> includedSources;
-    /**
      * Instantiates a new UnifiedGroupSource and sets the default values.
      */
     public UnifiedGroupSource() {
@@ -52,7 +44,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
-        return this.group;
+        return this.getBackingStore().get("group");
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -60,7 +52,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getIncludedSources() {
-        return this.includedSources;
+        return this.getBackingStore().get("includedSources");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
-        this.group = value;
+        this.getBackingStore().set("group", value);
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
     public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
-        this.includedSources = value;
+        this.getBackingStore().set("includedSources", value);
     }
 }

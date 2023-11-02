@@ -9,86 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRange extends Entity implements Parsable {
     /**
-     * Represents the range reference in A1-style. Address value contains the Sheet reference (for example, Sheet1!A1:B4). Read-only.
-     */
-    private String address;
-    /**
-     * Represents range reference for the specified range in the language of the user. Read-only.
-     */
-    private String addressLocal;
-    /**
-     * Number of cells in the range. Read-only.
-     */
-    private Integer cellCount;
-    /**
-     * Represents the total number of columns in the range. Read-only.
-     */
-    private Integer columnCount;
-    /**
-     * Represents if all columns of the current range are hidden.
-     */
-    private Boolean columnHidden;
-    /**
-     * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
-     */
-    private Integer columnIndex;
-    /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
-     */
-    private WorkbookRangeFormat format;
-    /**
-     * Represents the formula in A1-style notation.
-     */
-    private Json formulas;
-    /**
-     * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     */
-    private Json formulasLocal;
-    /**
-     * Represents the formula in R1C1-style notation.
-     */
-    private Json formulasR1C1;
-    /**
-     * Represents if all cells of the current range are hidden. Read-only.
-     */
-    private Boolean hidden;
-    /**
-     * Represents Excel's number format code for the given cell.
-     */
-    private Json numberFormat;
-    /**
-     * Returns the total number of rows in the range. Read-only.
-     */
-    private Integer rowCount;
-    /**
-     * Represents if all rows of the current range are hidden.
-     */
-    private Boolean rowHidden;
-    /**
-     * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
-     */
-    private Integer rowIndex;
-    /**
-     * The worksheet containing the current range. Read-only.
-     */
-    private WorkbookRangeSort sort;
-    /**
-     * Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
-     */
-    private Json text;
-    /**
-     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
-     */
-    private Json values;
-    /**
-     * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
-     */
-    private Json valueTypes;
-    /**
-     * The worksheet containing the current range. Read-only.
-     */
-    private WorkbookWorksheet worksheet;
-    /**
      * Instantiates a new WorkbookRange and sets the default values.
      */
     public WorkbookRange() {
@@ -110,7 +30,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.getBackingStore().get("address");
     }
     /**
      * Gets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
@@ -118,7 +38,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAddressLocal() {
-        return this.addressLocal;
+        return this.getBackingStore().get("addressLocal");
     }
     /**
      * Gets the cellCount property value. Number of cells in the range. Read-only.
@@ -126,7 +46,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCellCount() {
-        return this.cellCount;
+        return this.getBackingStore().get("cellCount");
     }
     /**
      * Gets the columnCount property value. Represents the total number of columns in the range. Read-only.
@@ -134,7 +54,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getColumnCount() {
-        return this.columnCount;
+        return this.getBackingStore().get("columnCount");
     }
     /**
      * Gets the columnHidden property value. Represents if all columns of the current range are hidden.
@@ -142,7 +62,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getColumnHidden() {
-        return this.columnHidden;
+        return this.getBackingStore().get("columnHidden");
     }
     /**
      * Gets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
@@ -150,7 +70,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getColumnIndex() {
-        return this.columnIndex;
+        return this.getBackingStore().get("columnIndex");
     }
     /**
      * The deserialization information for the current model
@@ -187,7 +107,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookRangeFormat getFormat() {
-        return this.format;
+        return this.getBackingStore().get("format");
     }
     /**
      * Gets the formulas property value. Represents the formula in A1-style notation.
@@ -195,7 +115,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getFormulas() {
-        return this.formulas;
+        return this.getBackingStore().get("formulas");
     }
     /**
      * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
@@ -203,7 +123,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getFormulasLocal() {
-        return this.formulasLocal;
+        return this.getBackingStore().get("formulasLocal");
     }
     /**
      * Gets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
@@ -211,7 +131,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getFormulasR1C1() {
-        return this.formulasR1C1;
+        return this.getBackingStore().get("formulasR1C1");
     }
     /**
      * Gets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
@@ -219,7 +139,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.getBackingStore().get("hidden");
     }
     /**
      * Gets the numberFormat property value. Represents Excel's number format code for the given cell.
@@ -227,7 +147,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNumberFormat() {
-        return this.numberFormat;
+        return this.getBackingStore().get("numberFormat");
     }
     /**
      * Gets the rowCount property value. Returns the total number of rows in the range. Read-only.
@@ -235,7 +155,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRowCount() {
-        return this.rowCount;
+        return this.getBackingStore().get("rowCount");
     }
     /**
      * Gets the rowHidden property value. Represents if all rows of the current range are hidden.
@@ -243,7 +163,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getRowHidden() {
-        return this.rowHidden;
+        return this.getBackingStore().get("rowHidden");
     }
     /**
      * Gets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
@@ -251,7 +171,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRowIndex() {
-        return this.rowIndex;
+        return this.getBackingStore().get("rowIndex");
     }
     /**
      * Gets the sort property value. The worksheet containing the current range. Read-only.
@@ -259,7 +179,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookRangeSort getSort() {
-        return this.sort;
+        return this.getBackingStore().get("sort");
     }
     /**
      * Gets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
@@ -267,7 +187,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getText() {
-        return this.text;
+        return this.getBackingStore().get("text");
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
@@ -275,7 +195,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.getBackingStore().get("values");
     }
     /**
      * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
@@ -283,7 +203,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValueTypes() {
-        return this.valueTypes;
+        return this.getBackingStore().get("valueTypes");
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current range. Read-only.
@@ -291,7 +211,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this.worksheet;
+        return this.getBackingStore().get("worksheet");
     }
     /**
      * Serializes information the current object
@@ -326,139 +246,139 @@ public class WorkbookRange extends Entity implements Parsable {
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.getBackingStore().set("address", value);
     }
     /**
      * Sets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
      * @param value Value to set for the addressLocal property.
      */
     public void setAddressLocal(@jakarta.annotation.Nullable final String value) {
-        this.addressLocal = value;
+        this.getBackingStore().set("addressLocal", value);
     }
     /**
      * Sets the cellCount property value. Number of cells in the range. Read-only.
      * @param value Value to set for the cellCount property.
      */
     public void setCellCount(@jakarta.annotation.Nullable final Integer value) {
-        this.cellCount = value;
+        this.getBackingStore().set("cellCount", value);
     }
     /**
      * Sets the columnCount property value. Represents the total number of columns in the range. Read-only.
      * @param value Value to set for the columnCount property.
      */
     public void setColumnCount(@jakarta.annotation.Nullable final Integer value) {
-        this.columnCount = value;
+        this.getBackingStore().set("columnCount", value);
     }
     /**
      * Sets the columnHidden property value. Represents if all columns of the current range are hidden.
      * @param value Value to set for the columnHidden property.
      */
     public void setColumnHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.columnHidden = value;
+        this.getBackingStore().set("columnHidden", value);
     }
     /**
      * Sets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
      * @param value Value to set for the columnIndex property.
      */
     public void setColumnIndex(@jakarta.annotation.Nullable final Integer value) {
-        this.columnIndex = value;
+        this.getBackingStore().set("columnIndex", value);
     }
     /**
      * Sets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookRangeFormat value) {
-        this.format = value;
+        this.getBackingStore().set("format", value);
     }
     /**
      * Sets the formulas property value. Represents the formula in A1-style notation.
      * @param value Value to set for the formulas property.
      */
     public void setFormulas(@jakarta.annotation.Nullable final Json value) {
-        this.formulas = value;
+        this.getBackingStore().set("formulas", value);
     }
     /**
      * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      * @param value Value to set for the formulasLocal property.
      */
     public void setFormulasLocal(@jakarta.annotation.Nullable final Json value) {
-        this.formulasLocal = value;
+        this.getBackingStore().set("formulasLocal", value);
     }
     /**
      * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
      * @param value Value to set for the formulasR1C1 property.
      */
     public void setFormulasR1C1(@jakarta.annotation.Nullable final Json value) {
-        this.formulasR1C1 = value;
+        this.getBackingStore().set("formulasR1C1", value);
     }
     /**
      * Sets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.getBackingStore().set("hidden", value);
     }
     /**
      * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
      * @param value Value to set for the numberFormat property.
      */
     public void setNumberFormat(@jakarta.annotation.Nullable final Json value) {
-        this.numberFormat = value;
+        this.getBackingStore().set("numberFormat", value);
     }
     /**
      * Sets the rowCount property value. Returns the total number of rows in the range. Read-only.
      * @param value Value to set for the rowCount property.
      */
     public void setRowCount(@jakarta.annotation.Nullable final Integer value) {
-        this.rowCount = value;
+        this.getBackingStore().set("rowCount", value);
     }
     /**
      * Sets the rowHidden property value. Represents if all rows of the current range are hidden.
      * @param value Value to set for the rowHidden property.
      */
     public void setRowHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.rowHidden = value;
+        this.getBackingStore().set("rowHidden", value);
     }
     /**
      * Sets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
      * @param value Value to set for the rowIndex property.
      */
     public void setRowIndex(@jakarta.annotation.Nullable final Integer value) {
-        this.rowIndex = value;
+        this.getBackingStore().set("rowIndex", value);
     }
     /**
      * Sets the sort property value. The worksheet containing the current range. Read-only.
      * @param value Value to set for the sort property.
      */
     public void setSort(@jakarta.annotation.Nullable final WorkbookRangeSort value) {
-        this.sort = value;
+        this.getBackingStore().set("sort", value);
     }
     /**
      * Sets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final Json value) {
-        this.text = value;
+        this.getBackingStore().set("text", value);
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.getBackingStore().set("values", value);
     }
     /**
      * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      * @param value Value to set for the valueTypes property.
      */
     public void setValueTypes(@jakarta.annotation.Nullable final Json value) {
-        this.valueTypes = value;
+        this.getBackingStore().set("valueTypes", value);
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current range. Read-only.
      * @param value Value to set for the worksheet property.
      */
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
-        this.worksheet = value;
+        this.getBackingStore().set("worksheet", value);
     }
 }

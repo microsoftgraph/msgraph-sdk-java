@@ -7,39 +7,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, Parsable {
+public class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The activityType property
+     * Stores model information.
      */
-    private String activityType;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The chainId property
-     */
-    private Long chainId;
-    /**
-     * The previewText property
-     */
-    private ItemBody previewText;
-    /**
-     * The templateParameters property
-     */
-    private java.util.List<KeyValuePair> templateParameters;
-    /**
-     * The topic property
-     */
-    private TeamworkActivityTopic topic;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SendActivityNotificationPostRequestBody and sets the default values.
      */
     public SendActivityNotificationPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +42,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
-        return this.activityType;
+        return this.getBackingStore().get("activityType");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -66,7 +50,20 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the chainId property value. The chainId property
@@ -74,7 +71,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public Long getChainId() {
-        return this.chainId;
+        return this.getBackingStore().get("chainId");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +93,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
-        return this.previewText;
+        return this.getBackingStore().get("previewText");
     }
     /**
      * Gets the templateParameters property value. The templateParameters property
@@ -104,7 +101,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
-        return this.templateParameters;
+        return this.getBackingStore().get("templateParameters");
     }
     /**
      * Gets the topic property value. The topic property
@@ -112,7 +109,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {
-        return this.topic;
+        return this.getBackingStore().get("topic");
     }
     /**
      * Serializes information the current object
@@ -132,41 +129,49 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the activityType property.
      */
     public void setActivityType(@jakarta.annotation.Nullable final String value) {
-        this.activityType = value;
+        this.getBackingStore().set("activityType", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the chainId property value. The chainId property
      * @param value Value to set for the chainId property.
      */
     public void setChainId(@jakarta.annotation.Nullable final Long value) {
-        this.chainId = value;
+        this.getBackingStore().set("chainId", value);
     }
     /**
      * Sets the previewText property value. The previewText property
      * @param value Value to set for the previewText property.
      */
     public void setPreviewText(@jakarta.annotation.Nullable final ItemBody value) {
-        this.previewText = value;
+        this.getBackingStore().set("previewText", value);
     }
     /**
      * Sets the templateParameters property value. The templateParameters property
      * @param value Value to set for the templateParameters property.
      */
     public void setTemplateParameters(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.templateParameters = value;
+        this.getBackingStore().set("templateParameters", value);
     }
     /**
      * Sets the topic property value. The topic property
      * @param value Value to set for the topic property.
      */
     public void setTopic(@jakarta.annotation.Nullable final TeamworkActivityTopic value) {
-        this.topic = value;
+        this.getBackingStore().set("topic", value);
     }
 }

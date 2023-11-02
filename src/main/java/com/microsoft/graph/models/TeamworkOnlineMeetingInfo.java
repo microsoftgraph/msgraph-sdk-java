@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable {
+public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The identifier of the calendar event associated with the meeting.
-     */
-    private String calendarEventId;
-    /**
-     * The URL that users click to join or uniquely identify the meeting.
-     */
-    private String joinWebUrl;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The organizer of the meeting.
-     */
-    private TeamworkUserIdentity organizer;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TeamworkOnlineMeetingInfo and sets the default values.
      */
     public TeamworkOnlineMeetingInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the calendarEventId property value. The identifier of the calendar event associated with the meeting.
@@ -59,7 +60,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getCalendarEventId() {
-        return this.calendarEventId;
+        return this.getBackingStore().get("calendarEventId");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +81,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
-        return this.joinWebUrl;
+        return this.getBackingStore().get("joinWebUrl");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +89,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the organizer property value. The organizer of the meeting.
@@ -96,7 +97,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentity getOrganizer() {
-        return this.organizer;
+        return this.getBackingStore().get("organizer");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the calendarEventId property value. The identifier of the calendar event associated with the meeting.
      * @param value Value to set for the calendarEventId property.
      */
     public void setCalendarEventId(@jakarta.annotation.Nullable final String value) {
-        this.calendarEventId = value;
+        this.getBackingStore().set("calendarEventId", value);
     }
     /**
      * Sets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      * @param value Value to set for the joinWebUrl property.
      */
     public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.joinWebUrl = value;
+        this.getBackingStore().set("joinWebUrl", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the organizer property value. The organizer of the meeting.
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
-        this.organizer = value;
+        this.getBackingStore().set("organizer", value);
     }
 }

@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
+public class SlnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The cost property
-     */
-    private Json cost;
-    /**
-     * The life property
-     */
-    private Json life;
-    /**
-     * The salvage property
-     */
-    private Json salvage;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SlnPostRequestBody and sets the default values.
      */
     public SlnPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cost property value. The cost property
@@ -56,7 +61,7 @@ public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCost() {
-        return this.cost;
+        return this.getBackingStore().get("cost");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLife() {
-        return this.life;
+        return this.getBackingStore().get("life");
     }
     /**
      * Gets the salvage property value. The salvage property
@@ -84,7 +89,7 @@ public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getSalvage() {
-        return this.salvage;
+        return this.getBackingStore().get("salvage");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class SlnPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
     public void setCost(@jakarta.annotation.Nullable final Json value) {
-        this.cost = value;
+        this.getBackingStore().set("cost", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
     public void setLife(@jakarta.annotation.Nullable final Json value) {
-        this.life = value;
+        this.getBackingStore().set("life", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
-        this.salvage = value;
+        this.getBackingStore().set("salvage", value);
     }
 }

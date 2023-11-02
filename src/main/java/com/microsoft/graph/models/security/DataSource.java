@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSource extends Entity implements Parsable {
     /**
-     * The user who created the dataSource.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The date and time the dataSource was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The display name of the dataSource and is the name of the SharePoint site.
-     */
-    private String displayName;
-    /**
-     * The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-     */
-    private DataSourceHoldStatus holdStatus;
-    /**
      * Instantiates a new DataSource and sets the default values.
      */
     public DataSource() {
@@ -58,7 +42,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.getBackingStore().get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The date and time the dataSource was created.
@@ -66,7 +50,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
@@ -74,7 +58,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +79,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
-        return this.holdStatus;
+        return this.getBackingStore().get("holdStatus");
     }
     /**
      * Serializes information the current object
@@ -114,27 +98,27 @@ public class DataSource extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.getBackingStore().set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the dataSource was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The display name of the dataSource and is the name of the SharePoint site.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      */
     public void setHoldStatus(@jakarta.annotation.Nullable final DataSourceHoldStatus value) {
-        this.holdStatus = value;
+        this.getBackingStore().set("holdStatus", value);
     }
 }

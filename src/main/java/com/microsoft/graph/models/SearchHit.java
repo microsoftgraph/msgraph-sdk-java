@@ -4,51 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchHit implements AdditionalDataHolder, Parsable {
+public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The name of the content source that the externalItem is part of.
-     */
-    private String contentSource;
-    /**
-     * The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
-     */
-    private String hitId;
-    /**
-     * Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
-     */
-    private Boolean isCollapsed;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The rank or the order of the result.
-     */
-    private Integer rank;
-    /**
-     * The resource property
-     */
-    private Entity resource;
-    /**
-     * ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
-     */
-    private String resultTemplateId;
-    /**
-     * A summary of the result, if a summary is available.
-     */
-    private String summary;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SearchHit and sets the default values.
      */
     public SearchHit() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +39,20 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the contentSource property value. The name of the content source that the externalItem is part of.
@@ -75,7 +60,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentSource() {
-        return this.contentSource;
+        return this.getBackingStore().get("contentSource");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +85,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getHitId() {
-        return this.hitId;
+        return this.getBackingStore().get("hitId");
     }
     /**
      * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
@@ -108,7 +93,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCollapsed() {
-        return this.isCollapsed;
+        return this.getBackingStore().get("isCollapsed");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -116,7 +101,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the rank property value. The rank or the order of the result.
@@ -124,7 +109,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
-        return this.rank;
+        return this.getBackingStore().get("rank");
     }
     /**
      * Gets the resource property value. The resource property
@@ -132,7 +117,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Entity getResource() {
-        return this.resource;
+        return this.getBackingStore().get("resource");
     }
     /**
      * Gets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
@@ -140,7 +125,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResultTemplateId() {
-        return this.resultTemplateId;
+        return this.getBackingStore().get("resultTemplateId");
     }
     /**
      * Gets the summary property value. A summary of the result, if a summary is available.
@@ -148,7 +133,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
-        return this.summary;
+        return this.getBackingStore().get("summary");
     }
     /**
      * Serializes information the current object
@@ -171,62 +156,70 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the contentSource property value. The name of the content source that the externalItem is part of.
      * @param value Value to set for the contentSource property.
      */
     public void setContentSource(@jakarta.annotation.Nullable final String value) {
-        this.contentSource = value;
+        this.getBackingStore().set("contentSource", value);
     }
     /**
      * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @param value Value to set for the hitId property.
      */
     public void setHitId(@jakarta.annotation.Nullable final String value) {
-        this.hitId = value;
+        this.getBackingStore().set("hitId", value);
     }
     /**
      * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @param value Value to set for the isCollapsed property.
      */
     public void setIsCollapsed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCollapsed = value;
+        this.getBackingStore().set("isCollapsed", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the rank property value. The rank or the order of the result.
      * @param value Value to set for the rank property.
      */
     public void setRank(@jakarta.annotation.Nullable final Integer value) {
-        this.rank = value;
+        this.getBackingStore().set("rank", value);
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
-        this.resource = value;
+        this.getBackingStore().set("resource", value);
     }
     /**
      * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      * @param value Value to set for the resultTemplateId property.
      */
     public void setResultTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.resultTemplateId = value;
+        this.getBackingStore().set("resultTemplateId", value);
     }
     /**
      * Sets the summary property value. A summary of the result, if a summary is available.
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final String value) {
-        this.summary = value;
+        this.getBackingStore().set("summary", value);
     }
 }

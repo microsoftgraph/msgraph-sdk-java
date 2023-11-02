@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable {
+public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
-     */
-    private String caller;
-    /**
-     * The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
-     */
-    private java.util.List<String> enforcedSettings;
-    /**
-     * The list of role settings that can be inherited by child scopes. Use All for all settings.
-     */
-    private java.util.List<String> inheritableSettings;
-    /**
-     * The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
-     */
-    private String level;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     */
-    private java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> operations;
-    /**
-     * The targetObjects property
-     */
-    private java.util.List<DirectoryObject> targetObjects;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyRuleTarget and sets the default values.
      */
     public UnifiedRoleManagementPolicyRuleTarget() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,20 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
@@ -71,7 +60,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getCaller() {
-        return this.caller;
+        return this.getBackingStore().get("caller");
     }
     /**
      * Gets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
@@ -79,7 +68,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSettings() {
-        return this.enforcedSettings;
+        return this.getBackingStore().get("enforcedSettings");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +92,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInheritableSettings() {
-        return this.inheritableSettings;
+        return this.getBackingStore().get("inheritableSettings");
     }
     /**
      * Gets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
@@ -111,7 +100,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getLevel() {
-        return this.level;
+        return this.getBackingStore().get("level");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -119,7 +108,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
@@ -127,7 +116,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> getOperations() {
-        return this.operations;
+        return this.getBackingStore().get("operations");
     }
     /**
      * Gets the targetObjects property value. The targetObjects property
@@ -135,7 +124,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTargetObjects() {
-        return this.targetObjects;
+        return this.getBackingStore().get("targetObjects");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
      */
     public void setCaller(@jakarta.annotation.Nullable final String value) {
-        this.caller = value;
+        this.getBackingStore().set("caller", value);
     }
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @param value Value to set for the enforcedSettings property.
      */
     public void setEnforcedSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enforcedSettings = value;
+        this.getBackingStore().set("enforcedSettings", value);
     }
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @param value Value to set for the inheritableSettings property.
      */
     public void setInheritableSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.inheritableSettings = value;
+        this.getBackingStore().set("inheritableSettings", value);
     }
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
      */
     public void setLevel(@jakarta.annotation.Nullable final String value) {
-        this.level = value;
+        this.getBackingStore().set("level", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> value) {
-        this.operations = value;
+        this.getBackingStore().set("operations", value);
     }
     /**
      * Sets the targetObjects property value. The targetObjects property
      * @param value Value to set for the targetObjects property.
      */
     public void setTargetObjects(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.targetObjects = value;
+        this.getBackingStore().set("targetObjects", value);
     }
 }

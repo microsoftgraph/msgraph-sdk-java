@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
-     * Possible values for a weekly schedule.
-     */
-    private WeeklySchedule scheduledInstallDay;
-    /**
-     * Scheduled Install Time during day
-     */
-    private LocalTime scheduledInstallTime;
-    /**
      * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
      */
     public WindowsUpdateScheduledInstall() {
@@ -51,7 +43,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {
-        return this.scheduledInstallDay;
+        return this.getBackingStore().get("scheduledInstallDay");
     }
     /**
      * Gets the scheduledInstallTime property value. Scheduled Install Time during day
@@ -59,7 +51,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @jakarta.annotation.Nullable
     public LocalTime getScheduledInstallTime() {
-        return this.scheduledInstallTime;
+        return this.getBackingStore().get("scheduledInstallTime");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param value Value to set for the scheduledInstallDay property.
      */
     public void setScheduledInstallDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
-        this.scheduledInstallDay = value;
+        this.getBackingStore().set("scheduledInstallDay", value);
     }
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
      * @param value Value to set for the scheduledInstallTime property.
      */
     public void setScheduledInstallTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.scheduledInstallTime = value;
+        this.getBackingStore().set("scheduledInstallTime", value);
     }
 }

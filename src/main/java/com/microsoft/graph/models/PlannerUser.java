@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerUser extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
-     */
-    private java.util.List<PlannerPlan> plans;
-    /**
-     * Read-only. Nullable. Returns the plannerPlans shared with the user.
-     */
-    private java.util.List<PlannerTask> tasks;
-    /**
      * Instantiates a new PlannerUser and sets the default values.
      */
     public PlannerUser() {
@@ -49,7 +41,7 @@ public class PlannerUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this.plans;
+        return this.getBackingStore().get("plans");
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
@@ -57,7 +49,7 @@ public class PlannerUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
-        return this.tasks;
+        return this.getBackingStore().get("tasks");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PlannerUser extends Entity implements Parsable {
      * @param value Value to set for the plans property.
      */
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this.plans = value;
+        this.getBackingStore().set("plans", value);
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
-        this.tasks = value;
+        this.getBackingStore().set("tasks", value);
     }
 }

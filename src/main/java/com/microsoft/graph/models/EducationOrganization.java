@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationOrganization extends Entity implements Parsable {
     /**
-     * Organization description.
-     */
-    private String description;
-    /**
-     * Organization display name.
-     */
-    private String displayName;
-    /**
-     * Source where this organization was created from. Possible values are: sis, manual.
-     */
-    private EducationExternalSource externalSource;
-    /**
-     * The name of the external source this resource was generated from.
-     */
-    private String externalSourceDetail;
-    /**
      * Instantiates a new EducationOrganization and sets the default values.
      */
     public EducationOrganization() {
@@ -53,7 +37,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Organization display name.
@@ -61,7 +45,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
@@ -69,7 +53,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
-        return this.externalSource;
+        return this.getBackingStore().get("externalSource");
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
@@ -77,7 +61,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
-        return this.externalSourceDetail;
+        return this.getBackingStore().get("externalSourceDetail");
     }
     /**
      * The deserialization information for the current model
@@ -109,27 +93,27 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Organization display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      */
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
-        this.externalSource = value;
+        this.getBackingStore().set("externalSource", value);
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @param value Value to set for the externalSourceDetail property.
      */
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
-        this.externalSourceDetail = value;
+        this.getBackingStore().set("externalSourceDetail", value);
     }
 }

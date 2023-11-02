@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConvertIdResult implements AdditionalDataHolder, Parsable {
+public class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
-     */
-    private GenericError errorDetails;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The identifier that was converted. This value is the original, un-converted identifier.
-     */
-    private String sourceId;
-    /**
-     * The converted identifier. This value isn't present if the conversion failed.
-     */
-    private String targetId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConvertIdResult and sets the default values.
      */
     public ConvertIdResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
@@ -59,7 +60,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public GenericError getErrorDetails() {
-        return this.errorDetails;
+        return this.getBackingStore().get("errorDetails");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +81,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
@@ -88,7 +89,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
-        return this.sourceId;
+        return this.getBackingStore().get("sourceId");
     }
     /**
      * Gets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
@@ -96,7 +97,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTargetId() {
-        return this.targetId;
+        return this.getBackingStore().get("targetId");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final GenericError value) {
-        this.errorDetails = value;
+        this.getBackingStore().set("errorDetails", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
-        this.sourceId = value;
+        this.getBackingStore().set("sourceId", value);
     }
     /**
      * Sets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {
-        this.targetId = value;
+        this.getBackingStore().set("targetId", value);
     }
 }

@@ -11,30 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSourceContainer extends Entity implements Parsable {
     /**
-     * Created date and time of the dataSourceContainer entity.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Display name of the dataSourceContainer entity.
-     */
-    private String displayName;
-    /**
-     * The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     */
-    private DataSourceHoldStatus holdStatus;
-    /**
-     * Last modified date and time of the dataSourceContainer.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Date and time that the dataSourceContainer was released from the case.
-     */
-    private OffsetDateTime releasedDateTime;
-    /**
-     * Latest status of the dataSourceContainer. Possible values are: Active, Released.
-     */
-    private DataSourceContainerStatus status;
-    /**
      * Instantiates a new DataSourceContainer and sets the default values.
      */
     public DataSourceContainer() {
@@ -64,7 +40,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Display name of the dataSourceContainer entity.
@@ -72,7 +48,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +71,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
-        return this.holdStatus;
+        return this.getBackingStore().get("holdStatus");
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date and time of the dataSourceContainer.
@@ -103,7 +79,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the releasedDateTime property value. Date and time that the dataSourceContainer was released from the case.
@@ -111,7 +87,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleasedDateTime() {
-        return this.releasedDateTime;
+        return this.getBackingStore().get("releasedDateTime");
     }
     /**
      * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
@@ -119,7 +95,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DataSourceContainerStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -140,41 +116,41 @@ public class DataSourceContainer extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Display name of the dataSourceContainer entity.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      */
     public void setHoldStatus(@jakarta.annotation.Nullable final DataSourceHoldStatus value) {
-        this.holdStatus = value;
+        this.getBackingStore().set("holdStatus", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date and time of the dataSourceContainer.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the releasedDateTime property value. Date and time that the dataSourceContainer was released from the case.
      * @param value Value to set for the releasedDateTime property.
      */
     public void setReleasedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.releasedDateTime = value;
+        this.getBackingStore().set("releasedDateTime", value);
     }
     /**
      * Sets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DataSourceContainerStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

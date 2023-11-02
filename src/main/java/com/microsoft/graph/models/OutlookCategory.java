@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookCategory extends Entity implements Parsable {
     /**
-     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
-     */
-    private CategoryColor color;
-    /**
-     * A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
-     */
-    private String displayName;
-    /**
      * Instantiates a new OutlookCategory and sets the default values.
      */
     public OutlookCategory() {
@@ -38,7 +30,7 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CategoryColor getColor() {
-        return this.color;
+        return this.getBackingStore().get("color");
     }
     /**
      * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
@@ -46,7 +38,7 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class OutlookCategory extends Entity implements Parsable {
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final CategoryColor value) {
-        this.color = value;
+        this.getBackingStore().set("color", value);
     }
     /**
      * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
 }

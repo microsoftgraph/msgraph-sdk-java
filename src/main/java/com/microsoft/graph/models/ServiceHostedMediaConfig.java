@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     /**
-     * The list of media to pre-fetch.
-     */
-    private java.util.List<MediaInfo> preFetchMedia;
-    /**
      * Instantiates a new ServiceHostedMediaConfig and sets the default values.
      */
     public ServiceHostedMediaConfig() {
@@ -45,7 +41,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MediaInfo> getPreFetchMedia() {
-        return this.preFetchMedia;
+        return this.getBackingStore().get("preFetchMedia");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param value Value to set for the preFetchMedia property.
      */
     public void setPreFetchMedia(@jakarta.annotation.Nullable final java.util.List<MediaInfo> value) {
-        this.preFetchMedia = value;
+        this.getBackingStore().set("preFetchMedia", value);
     }
 }

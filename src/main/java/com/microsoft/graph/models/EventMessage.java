@@ -9,46 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessage extends Message implements Parsable {
     /**
-     * The endDateTime property
-     */
-    private DateTimeTimeZone endDateTime;
-    /**
-     * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
-     */
-    private Event event;
-    /**
-     * The isAllDay property
-     */
-    private Boolean isAllDay;
-    /**
-     * The isDelegated property
-     */
-    private Boolean isDelegated;
-    /**
-     * The isOutOfDate property
-     */
-    private Boolean isOutOfDate;
-    /**
-     * The location property
-     */
-    private Location location;
-    /**
-     * The meetingMessageType property
-     */
-    private MeetingMessageType meetingMessageType;
-    /**
-     * The recurrence property
-     */
-    private PatternedRecurrence recurrence;
-    /**
-     * The startDateTime property
-     */
-    private DateTimeTimeZone startDateTime;
-    /**
-     * The type property
-     */
-    private EventType type;
-    /**
      * Instantiates a new EventMessage and sets the default values.
      */
     public EventMessage() {
@@ -79,7 +39,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
@@ -87,7 +47,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Event getEvent() {
-        return this.event;
+        return this.getBackingStore().get("event");
     }
     /**
      * The deserialization information for the current model
@@ -114,7 +74,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAllDay() {
-        return this.isAllDay;
+        return this.getBackingStore().get("isAllDay");
     }
     /**
      * Gets the isDelegated property value. The isDelegated property
@@ -122,7 +82,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDelegated() {
-        return this.isDelegated;
+        return this.getBackingStore().get("isDelegated");
     }
     /**
      * Gets the isOutOfDate property value. The isOutOfDate property
@@ -130,7 +90,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOutOfDate() {
-        return this.isOutOfDate;
+        return this.getBackingStore().get("isOutOfDate");
     }
     /**
      * Gets the location property value. The location property
@@ -138,7 +98,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
-        return this.location;
+        return this.getBackingStore().get("location");
     }
     /**
      * Gets the meetingMessageType property value. The meetingMessageType property
@@ -146,7 +106,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MeetingMessageType getMeetingMessageType() {
-        return this.meetingMessageType;
+        return this.getBackingStore().get("meetingMessageType");
     }
     /**
      * Gets the recurrence property value. The recurrence property
@@ -154,7 +114,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.getBackingStore().get("recurrence");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -162,7 +122,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the type property value. The type property
@@ -170,7 +130,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EventType getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -195,69 +155,69 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      * @param value Value to set for the event property.
      */
     public void setEvent(@jakarta.annotation.Nullable final Event value) {
-        this.event = value;
+        this.getBackingStore().set("event", value);
     }
     /**
      * Sets the isAllDay property value. The isAllDay property
      * @param value Value to set for the isAllDay property.
      */
     public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAllDay = value;
+        this.getBackingStore().set("isAllDay", value);
     }
     /**
      * Sets the isDelegated property value. The isDelegated property
      * @param value Value to set for the isDelegated property.
      */
     public void setIsDelegated(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDelegated = value;
+        this.getBackingStore().set("isDelegated", value);
     }
     /**
      * Sets the isOutOfDate property value. The isOutOfDate property
      * @param value Value to set for the isOutOfDate property.
      */
     public void setIsOutOfDate(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOutOfDate = value;
+        this.getBackingStore().set("isOutOfDate", value);
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
-        this.location = value;
+        this.getBackingStore().set("location", value);
     }
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
      * @param value Value to set for the meetingMessageType property.
      */
     public void setMeetingMessageType(@jakarta.annotation.Nullable final MeetingMessageType value) {
-        this.meetingMessageType = value;
+        this.getBackingStore().set("meetingMessageType", value);
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
-        this.recurrence = value;
+        this.getBackingStore().set("recurrence", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final EventType value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WhoisRecord> value;
-    /**
      * Instantiates a new WhoisRecordCollectionResponse and sets the default values.
      */
     public WhoisRecordCollectionResponse() {
@@ -45,7 +41,7 @@ public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCount
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisRecord> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WhoisRecord> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

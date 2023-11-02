@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UsedInsight extends Entity implements Parsable {
     /**
-     * Information about when the item was last viewed or modified by the user. Read only.
-     */
-    private UsageDetails lastUsed;
-    /**
-     * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-     */
-    private Entity resource;
-    /**
-     * Reference properties of the used document, such as the url and type of the document. Read-only
-     */
-    private ResourceReference resourceReference;
-    /**
-     * Properties that you can use to visualize the document in your experience. Read-only
-     */
-    private ResourceVisualization resourceVisualization;
-    /**
      * Instantiates a new UsedInsight and sets the default values.
      */
     public UsedInsight() {
@@ -59,7 +43,7 @@ public class UsedInsight extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UsageDetails getLastUsed() {
-        return this.lastUsed;
+        return this.getBackingStore().get("lastUsed");
     }
     /**
      * Gets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
@@ -67,7 +51,7 @@ public class UsedInsight extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Entity getResource() {
-        return this.resource;
+        return this.getBackingStore().get("resource");
     }
     /**
      * Gets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
@@ -75,7 +59,7 @@ public class UsedInsight extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResourceReference getResourceReference() {
-        return this.resourceReference;
+        return this.getBackingStore().get("resourceReference");
     }
     /**
      * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
@@ -83,7 +67,7 @@ public class UsedInsight extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResourceVisualization getResourceVisualization() {
-        return this.resourceVisualization;
+        return this.getBackingStore().get("resourceVisualization");
     }
     /**
      * Serializes information the current object
@@ -100,27 +84,27 @@ public class UsedInsight extends Entity implements Parsable {
      * @param value Value to set for the lastUsed property.
      */
     public void setLastUsed(@jakarta.annotation.Nullable final UsageDetails value) {
-        this.lastUsed = value;
+        this.getBackingStore().set("lastUsed", value);
     }
     /**
      * Sets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
-        this.resource = value;
+        this.getBackingStore().set("resource", value);
     }
     /**
      * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
      * @param value Value to set for the resourceReference property.
      */
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
-        this.resourceReference = value;
+        this.getBackingStore().set("resourceReference", value);
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      * @param value Value to set for the resourceVisualization property.
      */
     public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
-        this.resourceVisualization = value;
+        this.getBackingStore().set("resourceVisualization", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,35 +14,16 @@ import java.util.Objects;
  * A class containing the properties for Audit Resource.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuditResource implements AdditionalDataHolder, Parsable {
+public class AuditResource implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Audit resource's type.
-     */
-    private String auditResourceType;
-    /**
-     * Display name.
-     */
-    private String displayName;
-    /**
-     * List of modified properties.
-     */
-    private java.util.List<AuditProperty> modifiedProperties;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Audit resource's Id.
-     */
-    private String resourceId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AuditResource and sets the default values.
      */
     public AuditResource() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +42,12 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the auditResourceType property value. Audit resource's type.
@@ -66,7 +55,15 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAuditResourceType() {
-        return this.auditResourceType;
+        return this.getBackingStore().get("auditResourceType");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the displayName property value. Display name.
@@ -74,7 +71,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +93,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditProperty> getModifiedProperties() {
-        return this.modifiedProperties;
+        return this.getBackingStore().get("modifiedProperties");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -104,7 +101,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the resourceId property value. Audit resource's Id.
@@ -112,7 +109,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.getBackingStore().get("resourceId");
     }
     /**
      * Serializes information the current object
@@ -132,41 +129,49 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the auditResourceType property value. Audit resource's type.
      * @param value Value to set for the auditResourceType property.
      */
     public void setAuditResourceType(@jakarta.annotation.Nullable final String value) {
-        this.auditResourceType = value;
+        this.getBackingStore().set("auditResourceType", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the displayName property value. Display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the modifiedProperties property value. List of modified properties.
      * @param value Value to set for the modifiedProperties property.
      */
     public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<AuditProperty> value) {
-        this.modifiedProperties = value;
+        this.getBackingStore().set("modifiedProperties", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the resourceId property value. Audit resource's Id.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.getBackingStore().set("resourceId", value);
     }
 }

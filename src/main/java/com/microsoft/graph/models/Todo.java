@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Todo extends Entity implements Parsable {
     /**
-     * The task lists in the users mailbox.
-     */
-    private java.util.List<TodoTaskList> lists;
-    /**
      * Instantiates a new Todo and sets the default values.
      */
     public Todo() {
@@ -44,7 +40,7 @@ public class Todo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TodoTaskList> getLists() {
-        return this.lists;
+        return this.getBackingStore().get("lists");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Todo extends Entity implements Parsable {
      * @param value Value to set for the lists property.
      */
     public void setLists(@jakarta.annotation.Nullable final java.util.List<TodoTaskList> value) {
-        this.lists = value;
+        this.getBackingStore().set("lists", value);
     }
 }

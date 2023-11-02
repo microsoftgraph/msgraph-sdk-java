@@ -12,46 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
-     * List of apps to which the policy is deployed.
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     */
-    private String customBrowserDisplayName;
-    /**
-     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     */
-    private String customBrowserPackageId;
-    /**
-     * Count of apps to which the current policy is deployed.
-     */
-    private Integer deployedAppCount;
-    /**
-     * Navigation property to deployment summary of the configuration.
-     */
-    private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /**
-     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
-     */
-    private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
-    /**
-     * Indicates whether application data for managed apps should be encrypted
-     */
-    private Boolean encryptAppData;
-    /**
-     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
-     */
-    private String minimumRequiredPatchVersion;
-    /**
-     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
-     */
-    private String minimumWarningPatchVersion;
-    /**
-     * Indicates whether a managed user can take screen captures of managed apps
-     */
-    private Boolean screenCaptureBlocked;
-    /**
      * Instantiates a new AndroidManagedAppProtection and sets the default values.
      */
     public AndroidManagedAppProtection() {
@@ -74,7 +34,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.getBackingStore().get("apps");
     }
     /**
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -82,7 +42,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserDisplayName() {
-        return this.customBrowserDisplayName;
+        return this.getBackingStore().get("customBrowserDisplayName");
     }
     /**
      * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
@@ -90,7 +50,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserPackageId() {
-        return this.customBrowserPackageId;
+        return this.getBackingStore().get("customBrowserPackageId");
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -98,7 +58,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this.deployedAppCount;
+        return this.getBackingStore().get("deployedAppCount");
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -106,7 +66,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this.deploymentSummary;
+        return this.getBackingStore().get("deploymentSummary");
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
@@ -114,7 +74,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
-        return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return this.getBackingStore().get("disableAppEncryptionIfDeviceEncryptionIsEnabled");
     }
     /**
      * Gets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
@@ -122,7 +82,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
-        return this.encryptAppData;
+        return this.getBackingStore().get("encryptAppData");
     }
     /**
      * The deserialization information for the current model
@@ -149,7 +109,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
-        return this.minimumRequiredPatchVersion;
+        return this.getBackingStore().get("minimumRequiredPatchVersion");
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
@@ -157,7 +117,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
-        return this.minimumWarningPatchVersion;
+        return this.getBackingStore().get("minimumWarningPatchVersion");
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
@@ -165,7 +125,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this.screenCaptureBlocked;
+        return this.getBackingStore().get("screenCaptureBlocked");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.getBackingStore().set("apps", value);
     }
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserDisplayName property.
      */
     public void setCustomBrowserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.customBrowserDisplayName = value;
+        this.getBackingStore().set("customBrowserDisplayName", value);
     }
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserPackageId property.
      */
     public void setCustomBrowserPackageId(@jakarta.annotation.Nullable final String value) {
-        this.customBrowserPackageId = value;
+        this.getBackingStore().set("customBrowserPackageId", value);
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deployedAppCount = value;
+        this.getBackingStore().set("deployedAppCount", value);
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      */
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this.deploymentSummary = value;
+        this.getBackingStore().set("deploymentSummary", value);
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      */
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
+        this.getBackingStore().set("disableAppEncryptionIfDeviceEncryptionIsEnabled", value);
     }
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
      * @param value Value to set for the encryptAppData property.
      */
     public void setEncryptAppData(@jakarta.annotation.Nullable final Boolean value) {
-        this.encryptAppData = value;
+        this.getBackingStore().set("encryptAppData", value);
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
      * @param value Value to set for the minimumRequiredPatchVersion property.
      */
     public void setMinimumRequiredPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredPatchVersion = value;
+        this.getBackingStore().set("minimumRequiredPatchVersion", value);
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
      * @param value Value to set for the minimumWarningPatchVersion property.
      */
     public void setMinimumWarningPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWarningPatchVersion = value;
+        this.getBackingStore().set("minimumWarningPatchVersion", value);
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
      * @param value Value to set for the screenCaptureBlocked property.
      */
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.screenCaptureBlocked = value;
+        this.getBackingStore().set("screenCaptureBlocked", value);
     }
 }

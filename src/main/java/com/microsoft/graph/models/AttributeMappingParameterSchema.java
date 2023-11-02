@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttributeMappingParameterSchema implements AdditionalDataHolder, Parsable {
+public class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
-     */
-    private Boolean allowMultipleOccurrences;
-    /**
-     * Parameter name.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * true if the parameter is required; otherwise false.
-     */
-    private Boolean required;
-    /**
-     * The type property
-     */
-    private AttributeType type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AttributeMappingParameterSchema and sets the default values.
      */
     public AttributeMappingParameterSchema() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,12 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
@@ -63,7 +52,15 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMultipleOccurrences() {
-        return this.allowMultipleOccurrences;
+        return this.getBackingStore().get("allowMultipleOccurrences");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +90,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the required property value. true if the parameter is required; otherwise false.
@@ -101,7 +98,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.getBackingStore().get("required");
     }
     /**
      * Gets the type property value. The type property
@@ -109,7 +106,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public AttributeType getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @param value Value to set for the allowMultipleOccurrences property.
      */
     public void setAllowMultipleOccurrences(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowMultipleOccurrences = value;
+        this.getBackingStore().set("allowMultipleOccurrences", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the name property value. Parameter name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the required property value. true if the parameter is required; otherwise false.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.getBackingStore().set("required", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttributeType value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

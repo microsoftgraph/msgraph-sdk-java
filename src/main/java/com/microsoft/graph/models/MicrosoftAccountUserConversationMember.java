@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAccountUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * Microsoft Account ID of the user.
-     */
-    private String userId;
-    /**
      * Instantiates a new MicrosoftAccountUserConversationMember and sets the default values.
      */
     public MicrosoftAccountUserConversationMember() {
@@ -45,7 +41,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.getBackingStore().get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.getBackingStore().set("userId", value);
     }
 }

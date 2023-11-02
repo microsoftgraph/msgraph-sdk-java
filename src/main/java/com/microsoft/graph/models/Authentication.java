@@ -9,46 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Authentication extends Entity implements Parsable {
     /**
-     * The email address registered to a user for authentication.
-     */
-    private java.util.List<EmailAuthenticationMethod> emailMethods;
-    /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
-     */
-    private java.util.List<Fido2AuthenticationMethod> fido2Methods;
-    /**
-     * Represents all authentication methods registered to a user.
-     */
-    private java.util.List<AuthenticationMethod> methods;
-    /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
-     */
-    private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> microsoftAuthenticatorMethods;
-    /**
-     * Represents the status of a long-running operation.
-     */
-    private java.util.List<LongRunningOperation> operations;
-    /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
-     */
-    private java.util.List<PasswordAuthenticationMethod> passwordMethods;
-    /**
-     * The phone numbers registered to a user for authentication.
-     */
-    private java.util.List<PhoneAuthenticationMethod> phoneMethods;
-    /**
-     * The software OATH TOTP applications registered to a user for authentication.
-     */
-    private java.util.List<SoftwareOathAuthenticationMethod> softwareOathMethods;
-    /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
-     */
-    private java.util.List<TemporaryAccessPassAuthenticationMethod> temporaryAccessPassMethods;
-    /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
-     */
-    private java.util.List<WindowsHelloForBusinessAuthenticationMethod> windowsHelloForBusinessMethods;
-    /**
      * Instantiates a new Authentication and sets the default values.
      */
     public Authentication() {
@@ -70,7 +30,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAuthenticationMethod> getEmailMethods() {
-        return this.emailMethods;
+        return this.getBackingStore().get("emailMethods");
     }
     /**
      * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
@@ -78,7 +38,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Fido2AuthenticationMethod> getFido2Methods() {
-        return this.fido2Methods;
+        return this.getBackingStore().get("fido2Methods");
     }
     /**
      * The deserialization information for the current model
@@ -105,7 +65,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethod> getMethods() {
-        return this.methods;
+        return this.getBackingStore().get("methods");
     }
     /**
      * Gets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
@@ -113,7 +73,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethod> getMicrosoftAuthenticatorMethods() {
-        return this.microsoftAuthenticatorMethods;
+        return this.getBackingStore().get("microsoftAuthenticatorMethods");
     }
     /**
      * Gets the operations property value. Represents the status of a long-running operation.
@@ -121,7 +81,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
-        return this.operations;
+        return this.getBackingStore().get("operations");
     }
     /**
      * Gets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
@@ -129,7 +89,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordAuthenticationMethod> getPasswordMethods() {
-        return this.passwordMethods;
+        return this.getBackingStore().get("passwordMethods");
     }
     /**
      * Gets the phoneMethods property value. The phone numbers registered to a user for authentication.
@@ -137,7 +97,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhoneAuthenticationMethod> getPhoneMethods() {
-        return this.phoneMethods;
+        return this.getBackingStore().get("phoneMethods");
     }
     /**
      * Gets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
@@ -145,7 +105,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SoftwareOathAuthenticationMethod> getSoftwareOathMethods() {
-        return this.softwareOathMethods;
+        return this.getBackingStore().get("softwareOathMethods");
     }
     /**
      * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
@@ -153,7 +113,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemporaryAccessPassAuthenticationMethod> getTemporaryAccessPassMethods() {
-        return this.temporaryAccessPassMethods;
+        return this.getBackingStore().get("temporaryAccessPassMethods");
     }
     /**
      * Gets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
@@ -161,7 +121,7 @@ public class Authentication extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsHelloForBusinessAuthenticationMethod> getWindowsHelloForBusinessMethods() {
-        return this.windowsHelloForBusinessMethods;
+        return this.getBackingStore().get("windowsHelloForBusinessMethods");
     }
     /**
      * Serializes information the current object
@@ -186,69 +146,69 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the emailMethods property.
      */
     public void setEmailMethods(@jakarta.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
-        this.emailMethods = value;
+        this.getBackingStore().set("emailMethods", value);
     }
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      * @param value Value to set for the fido2Methods property.
      */
     public void setFido2Methods(@jakarta.annotation.Nullable final java.util.List<Fido2AuthenticationMethod> value) {
-        this.fido2Methods = value;
+        this.getBackingStore().set("fido2Methods", value);
     }
     /**
      * Sets the methods property value. Represents all authentication methods registered to a user.
      * @param value Value to set for the methods property.
      */
     public void setMethods(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethod> value) {
-        this.methods = value;
+        this.getBackingStore().set("methods", value);
     }
     /**
      * Sets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param value Value to set for the microsoftAuthenticatorMethods property.
      */
     public void setMicrosoftAuthenticatorMethods(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
-        this.microsoftAuthenticatorMethods = value;
+        this.getBackingStore().set("microsoftAuthenticatorMethods", value);
     }
     /**
      * Sets the operations property value. Represents the status of a long-running operation.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
-        this.operations = value;
+        this.getBackingStore().set("operations", value);
     }
     /**
      * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param value Value to set for the passwordMethods property.
      */
     public void setPasswordMethods(@jakarta.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
-        this.passwordMethods = value;
+        this.getBackingStore().set("passwordMethods", value);
     }
     /**
      * Sets the phoneMethods property value. The phone numbers registered to a user for authentication.
      * @param value Value to set for the phoneMethods property.
      */
     public void setPhoneMethods(@jakarta.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
-        this.phoneMethods = value;
+        this.getBackingStore().set("phoneMethods", value);
     }
     /**
      * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      * @param value Value to set for the softwareOathMethods property.
      */
     public void setSoftwareOathMethods(@jakarta.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
-        this.softwareOathMethods = value;
+        this.getBackingStore().set("softwareOathMethods", value);
     }
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param value Value to set for the temporaryAccessPassMethods property.
      */
     public void setTemporaryAccessPassMethods(@jakarta.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
-        this.temporaryAccessPassMethods = value;
+        this.getBackingStore().set("temporaryAccessPassMethods", value);
     }
     /**
      * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @param value Value to set for the windowsHelloForBusinessMethods property.
      */
     public void setWindowsHelloForBusinessMethods(@jakarta.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
-        this.windowsHelloForBusinessMethods = value;
+        this.getBackingStore().set("windowsHelloForBusinessMethods", value);
     }
 }

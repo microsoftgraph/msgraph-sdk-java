@@ -14,30 +14,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
-     * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     */
-    private EnumSet<NotificationTemplateBrandingOptions> brandingOptions;
-    /**
-     * The default locale to fallback onto when the requested locale is not available.
-     */
-    private String defaultLocale;
-    /**
-     * Display name for the Notification Message Template.
-     */
-    private String displayName;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The list of localized messages for this Notification Message Template.
-     */
-    private java.util.List<LocalizedNotificationMessage> localizedNotificationMessages;
-    /**
-     * List of Scope Tags for this Entity instance.
-     */
-    private java.util.List<String> roleScopeTagIds;
-    /**
      * Instantiates a new NotificationMessageTemplate and sets the default values.
      */
     public NotificationMessageTemplate() {
@@ -59,7 +35,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<NotificationTemplateBrandingOptions> getBrandingOptions() {
-        return this.brandingOptions;
+        return this.getBackingStore().get("brandingOptions");
     }
     /**
      * Gets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
@@ -67,7 +43,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDefaultLocale() {
-        return this.defaultLocale;
+        return this.getBackingStore().get("defaultLocale");
     }
     /**
      * Gets the displayName property value. Display name for the Notification Message Template.
@@ -75,7 +51,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +74,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
@@ -106,7 +82,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedNotificationMessage> getLocalizedNotificationMessages() {
-        return this.localizedNotificationMessages;
+        return this.getBackingStore().get("localizedNotificationMessages");
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -114,7 +90,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this.roleScopeTagIds;
+        return this.getBackingStore().get("roleScopeTagIds");
     }
     /**
      * Serializes information the current object
@@ -135,41 +111,41 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the brandingOptions property.
      */
     public void setBrandingOptions(@jakarta.annotation.Nullable final EnumSet<NotificationTemplateBrandingOptions> value) {
-        this.brandingOptions = value;
+        this.getBackingStore().set("brandingOptions", value);
     }
     /**
      * Sets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
      * @param value Value to set for the defaultLocale property.
      */
     public void setDefaultLocale(@jakarta.annotation.Nullable final String value) {
-        this.defaultLocale = value;
+        this.getBackingStore().set("defaultLocale", value);
     }
     /**
      * Sets the displayName property value. Display name for the Notification Message Template.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
      * @param value Value to set for the localizedNotificationMessages property.
      */
     public void setLocalizedNotificationMessages(@jakarta.annotation.Nullable final java.util.List<LocalizedNotificationMessage> value) {
-        this.localizedNotificationMessages = value;
+        this.getBackingStore().set("localizedNotificationMessages", value);
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.roleScopeTagIds = value;
+        this.getBackingStore().set("roleScopeTagIds", value);
     }
 }

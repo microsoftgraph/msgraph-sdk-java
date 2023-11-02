@@ -10,50 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsage extends Entity implements Parsable {
     /**
-     * The blackAndWhitePageCount property
-     */
-    private Long blackAndWhitePageCount;
-    /**
-     * The colorPageCount property
-     */
-    private Long colorPageCount;
-    /**
-     * The completedBlackAndWhiteJobCount property
-     */
-    private Long completedBlackAndWhiteJobCount;
-    /**
-     * The completedColorJobCount property
-     */
-    private Long completedColorJobCount;
-    /**
-     * The completedJobCount property
-     */
-    private Long completedJobCount;
-    /**
-     * The doubleSidedSheetCount property
-     */
-    private Long doubleSidedSheetCount;
-    /**
-     * The incompleteJobCount property
-     */
-    private Long incompleteJobCount;
-    /**
-     * The mediaSheetCount property
-     */
-    private Long mediaSheetCount;
-    /**
-     * The pageCount property
-     */
-    private Long pageCount;
-    /**
-     * The singleSidedSheetCount property
-     */
-    private Long singleSidedSheetCount;
-    /**
-     * The usageDate property
-     */
-    private LocalDate usageDate;
-    /**
      * Instantiates a new PrintUsage and sets the default values.
      */
     public PrintUsage() {
@@ -83,7 +39,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getBlackAndWhitePageCount() {
-        return this.blackAndWhitePageCount;
+        return this.getBackingStore().get("blackAndWhitePageCount");
     }
     /**
      * Gets the colorPageCount property value. The colorPageCount property
@@ -91,7 +47,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getColorPageCount() {
-        return this.colorPageCount;
+        return this.getBackingStore().get("colorPageCount");
     }
     /**
      * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
@@ -99,7 +55,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getCompletedBlackAndWhiteJobCount() {
-        return this.completedBlackAndWhiteJobCount;
+        return this.getBackingStore().get("completedBlackAndWhiteJobCount");
     }
     /**
      * Gets the completedColorJobCount property value. The completedColorJobCount property
@@ -107,7 +63,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getCompletedColorJobCount() {
-        return this.completedColorJobCount;
+        return this.getBackingStore().get("completedColorJobCount");
     }
     /**
      * Gets the completedJobCount property value. The completedJobCount property
@@ -115,7 +71,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getCompletedJobCount() {
-        return this.completedJobCount;
+        return this.getBackingStore().get("completedJobCount");
     }
     /**
      * Gets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
@@ -123,7 +79,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getDoubleSidedSheetCount() {
-        return this.doubleSidedSheetCount;
+        return this.getBackingStore().get("doubleSidedSheetCount");
     }
     /**
      * The deserialization information for the current model
@@ -151,7 +107,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getIncompleteJobCount() {
-        return this.incompleteJobCount;
+        return this.getBackingStore().get("incompleteJobCount");
     }
     /**
      * Gets the mediaSheetCount property value. The mediaSheetCount property
@@ -159,7 +115,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getMediaSheetCount() {
-        return this.mediaSheetCount;
+        return this.getBackingStore().get("mediaSheetCount");
     }
     /**
      * Gets the pageCount property value. The pageCount property
@@ -167,7 +123,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getPageCount() {
-        return this.pageCount;
+        return this.getBackingStore().get("pageCount");
     }
     /**
      * Gets the singleSidedSheetCount property value. The singleSidedSheetCount property
@@ -175,7 +131,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSingleSidedSheetCount() {
-        return this.singleSidedSheetCount;
+        return this.getBackingStore().get("singleSidedSheetCount");
     }
     /**
      * Gets the usageDate property value. The usageDate property
@@ -183,7 +139,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getUsageDate() {
-        return this.usageDate;
+        return this.getBackingStore().get("usageDate");
     }
     /**
      * Serializes information the current object
@@ -209,76 +165,76 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the blackAndWhitePageCount property.
      */
     public void setBlackAndWhitePageCount(@jakarta.annotation.Nullable final Long value) {
-        this.blackAndWhitePageCount = value;
+        this.getBackingStore().set("blackAndWhitePageCount", value);
     }
     /**
      * Sets the colorPageCount property value. The colorPageCount property
      * @param value Value to set for the colorPageCount property.
      */
     public void setColorPageCount(@jakarta.annotation.Nullable final Long value) {
-        this.colorPageCount = value;
+        this.getBackingStore().set("colorPageCount", value);
     }
     /**
      * Sets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @param value Value to set for the completedBlackAndWhiteJobCount property.
      */
     public void setCompletedBlackAndWhiteJobCount(@jakarta.annotation.Nullable final Long value) {
-        this.completedBlackAndWhiteJobCount = value;
+        this.getBackingStore().set("completedBlackAndWhiteJobCount", value);
     }
     /**
      * Sets the completedColorJobCount property value. The completedColorJobCount property
      * @param value Value to set for the completedColorJobCount property.
      */
     public void setCompletedColorJobCount(@jakarta.annotation.Nullable final Long value) {
-        this.completedColorJobCount = value;
+        this.getBackingStore().set("completedColorJobCount", value);
     }
     /**
      * Sets the completedJobCount property value. The completedJobCount property
      * @param value Value to set for the completedJobCount property.
      */
     public void setCompletedJobCount(@jakarta.annotation.Nullable final Long value) {
-        this.completedJobCount = value;
+        this.getBackingStore().set("completedJobCount", value);
     }
     /**
      * Sets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
      * @param value Value to set for the doubleSidedSheetCount property.
      */
     public void setDoubleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
-        this.doubleSidedSheetCount = value;
+        this.getBackingStore().set("doubleSidedSheetCount", value);
     }
     /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
      * @param value Value to set for the incompleteJobCount property.
      */
     public void setIncompleteJobCount(@jakarta.annotation.Nullable final Long value) {
-        this.incompleteJobCount = value;
+        this.getBackingStore().set("incompleteJobCount", value);
     }
     /**
      * Sets the mediaSheetCount property value. The mediaSheetCount property
      * @param value Value to set for the mediaSheetCount property.
      */
     public void setMediaSheetCount(@jakarta.annotation.Nullable final Long value) {
-        this.mediaSheetCount = value;
+        this.getBackingStore().set("mediaSheetCount", value);
     }
     /**
      * Sets the pageCount property value. The pageCount property
      * @param value Value to set for the pageCount property.
      */
     public void setPageCount(@jakarta.annotation.Nullable final Long value) {
-        this.pageCount = value;
+        this.getBackingStore().set("pageCount", value);
     }
     /**
      * Sets the singleSidedSheetCount property value. The singleSidedSheetCount property
      * @param value Value to set for the singleSidedSheetCount property.
      */
     public void setSingleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
-        this.singleSidedSheetCount = value;
+        this.getBackingStore().set("singleSidedSheetCount", value);
     }
     /**
      * Sets the usageDate property value. The usageDate property
      * @param value Value to set for the usageDate property.
      */
     public void setUsageDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.usageDate = value;
+        this.getBackingStore().set("usageDate", value);
     }
 }

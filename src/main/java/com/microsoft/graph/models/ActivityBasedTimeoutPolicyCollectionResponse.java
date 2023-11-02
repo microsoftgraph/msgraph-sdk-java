@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ActivityBasedTimeoutPolicy> value;
-    /**
      * Instantiates a new ActivityBasedTimeoutPolicyCollectionResponse and sets the default values.
      */
     public ActivityBasedTimeoutPolicyCollectionResponse() {
@@ -44,7 +40,7 @@ public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollection
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollection
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

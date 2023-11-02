@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Operation extends Entity implements Parsable {
     /**
-     * The start time of the operation.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The time of the last action of the operation.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * The current status of the operation: notStarted, running, completed, failed
-     */
-    private OperationStatus status;
-    /**
      * Instantiates a new Operation and sets the default values.
      */
     public Operation() {
@@ -50,7 +38,7 @@ public class Operation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class Operation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.getBackingStore().get("lastActionDateTime");
     }
     /**
      * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
@@ -78,7 +66,7 @@ public class Operation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class Operation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the lastActionDateTime property value. The time of the last action of the operation.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.getBackingStore().set("lastActionDateTime", value);
     }
     /**
      * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

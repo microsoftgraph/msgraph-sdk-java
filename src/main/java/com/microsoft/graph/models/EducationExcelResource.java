@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationExcelResource extends EducationResource implements Parsable {
     /**
-     * Pointer to the Excel file object.
-     */
-    private String fileUrl;
-    /**
      * Instantiates a new EducationExcelResource and sets the default values.
      */
     public EducationExcelResource() {
@@ -45,7 +41,7 @@ public class EducationExcelResource extends EducationResource implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getFileUrl() {
-        return this.fileUrl;
+        return this.getBackingStore().get("fileUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationExcelResource extends EducationResource implements Parsabl
      * @param value Value to set for the fileUrl property.
      */
     public void setFileUrl(@jakarta.annotation.Nullable final String value) {
-        this.fileUrl = value;
+        this.getBackingStore().set("fileUrl", value);
     }
 }

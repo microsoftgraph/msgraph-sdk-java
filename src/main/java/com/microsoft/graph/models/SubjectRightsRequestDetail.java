@@ -4,51 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable {
+public class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Count of items that are excluded from the request.
-     */
-    private Long excludedItemCount;
-    /**
-     * Count of items per insight.
-     */
-    private java.util.List<KeyValuePair> insightCounts;
-    /**
-     * Count of items found.
-     */
-    private Long itemCount;
-    /**
-     * Count of item that need review.
-     */
-    private Long itemNeedReview;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
-     */
-    private java.util.List<KeyValuePair> productItemCounts;
-    /**
-     * Count of items signed off by the administrator.
-     */
-    private Long signedOffItemCount;
-    /**
-     * Total item size in bytes.
-     */
-    private Long totalItemSize;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SubjectRightsRequestDetail and sets the default values.
      */
     public SubjectRightsRequestDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +39,20 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the excludedItemCount property value. Count of items that are excluded from the request.
@@ -75,7 +60,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Long getExcludedItemCount() {
-        return this.excludedItemCount;
+        return this.getBackingStore().get("excludedItemCount");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +85,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getInsightCounts() {
-        return this.insightCounts;
+        return this.getBackingStore().get("insightCounts");
     }
     /**
      * Gets the itemCount property value. Count of items found.
@@ -108,7 +93,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Long getItemCount() {
-        return this.itemCount;
+        return this.getBackingStore().get("itemCount");
     }
     /**
      * Gets the itemNeedReview property value. Count of item that need review.
@@ -116,7 +101,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Long getItemNeedReview() {
-        return this.itemNeedReview;
+        return this.getBackingStore().get("itemNeedReview");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -124,7 +109,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
@@ -132,7 +117,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProductItemCounts() {
-        return this.productItemCounts;
+        return this.getBackingStore().get("productItemCounts");
     }
     /**
      * Gets the signedOffItemCount property value. Count of items signed off by the administrator.
@@ -140,7 +125,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Long getSignedOffItemCount() {
-        return this.signedOffItemCount;
+        return this.getBackingStore().get("signedOffItemCount");
     }
     /**
      * Gets the totalItemSize property value. Total item size in bytes.
@@ -148,7 +133,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Long getTotalItemSize() {
-        return this.totalItemSize;
+        return this.getBackingStore().get("totalItemSize");
     }
     /**
      * Serializes information the current object
@@ -171,62 +156,70 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the excludedItemCount property value. Count of items that are excluded from the request.
      * @param value Value to set for the excludedItemCount property.
      */
     public void setExcludedItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.excludedItemCount = value;
+        this.getBackingStore().set("excludedItemCount", value);
     }
     /**
      * Sets the insightCounts property value. Count of items per insight.
      * @param value Value to set for the insightCounts property.
      */
     public void setInsightCounts(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.insightCounts = value;
+        this.getBackingStore().set("insightCounts", value);
     }
     /**
      * Sets the itemCount property value. Count of items found.
      * @param value Value to set for the itemCount property.
      */
     public void setItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.itemCount = value;
+        this.getBackingStore().set("itemCount", value);
     }
     /**
      * Sets the itemNeedReview property value. Count of item that need review.
      * @param value Value to set for the itemNeedReview property.
      */
     public void setItemNeedReview(@jakarta.annotation.Nullable final Long value) {
-        this.itemNeedReview = value;
+        this.getBackingStore().set("itemNeedReview", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
      * @param value Value to set for the productItemCounts property.
      */
     public void setProductItemCounts(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.productItemCounts = value;
+        this.getBackingStore().set("productItemCounts", value);
     }
     /**
      * Sets the signedOffItemCount property value. Count of items signed off by the administrator.
      * @param value Value to set for the signedOffItemCount property.
      */
     public void setSignedOffItemCount(@jakarta.annotation.Nullable final Long value) {
-        this.signedOffItemCount = value;
+        this.getBackingStore().set("signedOffItemCount", value);
     }
     /**
      * Sets the totalItemSize property value. Total item size in bytes.
      * @param value Value to set for the totalItemSize property.
      */
     public void setTotalItemSize(@jakarta.annotation.Nullable final Long value) {
-        this.totalItemSize = value;
+        this.getBackingStore().set("totalItemSize", value);
     }
 }

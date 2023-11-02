@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SharingLink implements AdditionalDataHolder, Parsable {
+public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The app the link is associated with.
-     */
-    private Identity application;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
-     */
-    private Boolean preventsDownload;
-    /**
-     * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
-     */
-    private String scope;
-    /**
-     * The type of the link created.
-     */
-    private String type;
-    /**
-     * For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
-     */
-    private String webHtml;
-    /**
-     * A URL that opens the item in the browser on the OneDrive website.
-     */
-    private String webUrl;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SharingLink and sets the default values.
      */
     public SharingLink() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the application property value. The app the link is associated with.
@@ -71,7 +52,15 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getApplication() {
-        return this.application;
+        return this.getBackingStore().get("application");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +84,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
@@ -103,7 +92,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventsDownload() {
-        return this.preventsDownload;
+        return this.getBackingStore().get("preventsDownload");
     }
     /**
      * Gets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
@@ -111,7 +100,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScope() {
-        return this.scope;
+        return this.getBackingStore().get("scope");
     }
     /**
      * Gets the type property value. The type of the link created.
@@ -119,7 +108,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
@@ -127,7 +116,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebHtml() {
-        return this.webHtml;
+        return this.getBackingStore().get("webHtml");
     }
     /**
      * Gets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
@@ -135,7 +124,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.getBackingStore().get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the application property value. The app the link is associated with.
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final Identity value) {
-        this.application = value;
+        this.getBackingStore().set("application", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
      * @param value Value to set for the preventsDownload property.
      */
     public void setPreventsDownload(@jakarta.annotation.Nullable final Boolean value) {
-        this.preventsDownload = value;
+        this.getBackingStore().set("preventsDownload", value);
     }
     /**
      * Sets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {
-        this.scope = value;
+        this.getBackingStore().set("scope", value);
     }
     /**
      * Sets the type property value. The type of the link created.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
     /**
      * Sets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
      * @param value Value to set for the webHtml property.
      */
     public void setWebHtml(@jakarta.annotation.Nullable final String value) {
-        this.webHtml = value;
+        this.getBackingStore().set("webHtml", value);
     }
     /**
      * Sets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.getBackingStore().set("webUrl", value);
     }
 }

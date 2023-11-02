@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SiteSource extends DataSource implements Parsable {
     /**
-     * The site property
-     */
-    private Site site;
-    /**
      * Instantiates a new SiteSource and sets the default values.
      */
     public SiteSource() {
@@ -46,7 +42,7 @@ public class SiteSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Site getSite() {
-        return this.site;
+        return this.getBackingStore().get("site");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class SiteSource extends DataSource implements Parsable {
      * @param value Value to set for the site property.
      */
     public void setSite(@jakarta.annotation.Nullable final Site value) {
-        this.site = value;
+        this.getBackingStore().set("site", value);
     }
 }

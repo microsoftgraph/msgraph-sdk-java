@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfileCardProperty extends Entity implements Parsable {
     /**
-     * The annotations property
-     */
-    private java.util.List<ProfileCardAnnotation> annotations;
-    /**
-     * The directoryPropertyName property
-     */
-    private String directoryPropertyName;
-    /**
      * Instantiates a new ProfileCardProperty and sets the default values.
      */
     public ProfileCardProperty() {
@@ -38,7 +30,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardAnnotation> getAnnotations() {
-        return this.annotations;
+        return this.getBackingStore().get("annotations");
     }
     /**
      * Gets the directoryPropertyName property value. The directoryPropertyName property
@@ -46,7 +38,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDirectoryPropertyName() {
-        return this.directoryPropertyName;
+        return this.getBackingStore().get("directoryPropertyName");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * @param value Value to set for the annotations property.
      */
     public void setAnnotations(@jakarta.annotation.Nullable final java.util.List<ProfileCardAnnotation> value) {
-        this.annotations = value;
+        this.getBackingStore().set("annotations", value);
     }
     /**
      * Sets the directoryPropertyName property value. The directoryPropertyName property
      * @param value Value to set for the directoryPropertyName property.
      */
     public void setDirectoryPropertyName(@jakarta.annotation.Nullable final String value) {
-        this.directoryPropertyName = value;
+        this.getBackingStore().set("directoryPropertyName", value);
     }
 }

@@ -5,39 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DisplayTemplate implements AdditionalDataHolder, Parsable {
+public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
-     */
-    private String id;
-    /**
-     * The layout property
-     */
-    private Json layout;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
-     */
-    private Integer priority;
-    /**
-     * Specifies additional rules for selecting this display template based on the item schema. Optional.
-     */
-    private java.util.List<PropertyRule> rules;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DisplayTemplate and sets the default values.
      */
     public DisplayTemplate() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +40,20 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +75,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.getBackingStore().get("id");
     }
     /**
      * Gets the layout property value. The layout property
@@ -86,7 +83,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLayout() {
-        return this.layout;
+        return this.getBackingStore().get("layout");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -94,7 +91,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
@@ -102,7 +99,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.getBackingStore().get("priority");
     }
     /**
      * Gets the rules property value. Specifies additional rules for selecting this display template based on the item schema. Optional.
@@ -110,7 +107,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PropertyRule> getRules() {
-        return this.rules;
+        return this.getBackingStore().get("rules");
     }
     /**
      * Serializes information the current object
@@ -130,41 +127,49 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the id property value. The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.getBackingStore().set("id", value);
     }
     /**
      * Sets the layout property value. The layout property
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final Json value) {
-        this.layout = value;
+        this.getBackingStore().set("layout", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.getBackingStore().set("priority", value);
     }
     /**
      * Sets the rules property value. Specifies additional rules for selecting this display template based on the item schema. Optional.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<PropertyRule> value) {
-        this.rules = value;
+        this.getBackingStore().set("rules", value);
     }
 }

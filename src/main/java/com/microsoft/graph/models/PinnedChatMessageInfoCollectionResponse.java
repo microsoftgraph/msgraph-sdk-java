@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PinnedChatMessageInfoCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PinnedChatMessageInfo> value;
-    /**
      * Instantiates a new PinnedChatMessageInfoCollectionResponse and sets the default values.
      */
     public PinnedChatMessageInfoCollectionResponse() {
@@ -44,7 +40,7 @@ public class PinnedChatMessageInfoCollectionResponse extends BaseCollectionPagin
      */
     @jakarta.annotation.Nullable
     public java.util.List<PinnedChatMessageInfo> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PinnedChatMessageInfoCollectionResponse extends BaseCollectionPagin
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

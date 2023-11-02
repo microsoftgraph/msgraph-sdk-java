@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
-     * Status report content.
-     */
-    private Json content;
-    /**
      * Instantiates a new ManagedAppStatusRaw and sets the default values.
      */
     public ManagedAppStatusRaw() {
@@ -38,7 +34,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final Json value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
 }

@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Edition Upgrade License File Content.
-     */
-    private String license;
-    /**
-     * Edition Upgrade License type
-     */
-    private EditionUpgradeLicenseType licenseType;
-    /**
-     * Edition Upgrade Product Key.
-     */
-    private String productKey;
-    /**
-     * Windows 10 Edition type.
-     */
-    private Windows10EditionType targetEdition;
-    /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      */
     public EditionUpgradeConfiguration() {
@@ -63,7 +47,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @jakarta.annotation.Nullable
     public String getLicense() {
-        return this.license;
+        return this.getBackingStore().get("license");
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
@@ -71,7 +55,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @jakarta.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
-        return this.licenseType;
+        return this.getBackingStore().get("licenseType");
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
@@ -79,7 +63,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.getBackingStore().get("productKey");
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
@@ -87,7 +71,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @jakarta.annotation.Nullable
     public Windows10EditionType getTargetEdition() {
-        return this.targetEdition;
+        return this.getBackingStore().get("targetEdition");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the license property.
      */
     public void setLicense(@jakarta.annotation.Nullable final String value) {
-        this.license = value;
+        this.getBackingStore().set("license", value);
     }
     /**
      * Sets the licenseType property value. Edition Upgrade License type
      * @param value Value to set for the licenseType property.
      */
     public void setLicenseType(@jakarta.annotation.Nullable final EditionUpgradeLicenseType value) {
-        this.licenseType = value;
+        this.getBackingStore().set("licenseType", value);
     }
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.getBackingStore().set("productKey", value);
     }
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
      * @param value Value to set for the targetEdition property.
      */
     public void setTargetEdition(@jakarta.annotation.Nullable final Windows10EditionType value) {
-        this.targetEdition = value;
+        this.getBackingStore().set("targetEdition", value);
     }
 }

@@ -5,27 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The destinationFileName property
-     */
-    private String destinationFileName;
-    /**
-     * The sourceFile property
-     */
-    private ItemReference sourceFile;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CopyToDefaultContentLocationPostRequestBody and sets the default values.
      */
     public CopyToDefaultContentLocationPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +40,20 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the destinationFileName property value. The destinationFileName property
@@ -52,7 +61,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getDestinationFileName() {
-        return this.destinationFileName;
+        return this.getBackingStore().get("destinationFileName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +80,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public ItemReference getSourceFile() {
-        return this.sourceFile;
+        return this.getBackingStore().get("sourceFile");
     }
     /**
      * Serializes information the current object
@@ -88,20 +97,28 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the destinationFileName property value. The destinationFileName property
      * @param value Value to set for the destinationFileName property.
      */
     public void setDestinationFileName(@jakarta.annotation.Nullable final String value) {
-        this.destinationFileName = value;
+        this.getBackingStore().set("destinationFileName", value);
     }
     /**
      * Sets the sourceFile property value. The sourceFile property
      * @param value Value to set for the sourceFile property.
      */
     public void setSourceFile(@jakarta.annotation.Nullable final ItemReference value) {
-        this.sourceFile = value;
+        this.getBackingStore().set("sourceFile", value);
     }
 }

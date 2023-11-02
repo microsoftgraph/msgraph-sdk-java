@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementReports extends Entity implements Parsable {
     /**
-     * Entity representing a job to export a report
-     */
-    private java.util.List<DeviceManagementExportJob> exportJobs;
-    /**
      * Instantiates a new DeviceManagementReports and sets the default values.
      */
     public DeviceManagementReports() {
@@ -37,7 +33,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExportJob> getExportJobs() {
-        return this.exportJobs;
+        return this.getBackingStore().get("exportJobs");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class DeviceManagementReports extends Entity implements Parsable {
      * @param value Value to set for the exportJobs property.
      */
     public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
-        this.exportJobs = value;
+        this.getBackingStore().set("exportJobs", value);
     }
 }

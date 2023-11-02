@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SkypeUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * Skype ID of the user.
-     */
-    private String skypeId;
-    /**
      * Instantiates a new SkypeUserConversationMember and sets the default values.
      */
     public SkypeUserConversationMember() {
@@ -45,7 +41,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
      */
     @jakarta.annotation.Nullable
     public String getSkypeId() {
-        return this.skypeId;
+        return this.getBackingStore().get("skypeId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SkypeUserConversationMember extends ConversationMember implements P
      * @param value Value to set for the skypeId property.
      */
     public void setSkypeId(@jakarta.annotation.Nullable final String value) {
-        this.skypeId = value;
+        this.getBackingStore().set("skypeId", value);
     }
 }

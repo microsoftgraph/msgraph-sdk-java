@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
-     * The unique identifier for the Amazon account.
-     */
-    private String amazonAccountId;
-    /**
-     * The Amazon resource identifier (ARN) for the cloud resource.
-     */
-    private String amazonResourceId;
-    /**
-     * The name of the resource.
-     */
-    private String resourceName;
-    /**
-     * The type of the resource.
-     */
-    private String resourceType;
-    /**
      * Instantiates a new AmazonResourceEvidence and sets the default values.
      */
     public AmazonResourceEvidence() {
@@ -47,7 +31,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAmazonAccountId() {
-        return this.amazonAccountId;
+        return this.getBackingStore().get("amazonAccountId");
     }
     /**
      * Gets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
@@ -55,7 +39,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAmazonResourceId() {
-        return this.amazonResourceId;
+        return this.getBackingStore().get("amazonResourceId");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.getBackingStore().get("resourceName");
     }
     /**
      * Gets the resourceType property value. The type of the resource.
@@ -84,7 +68,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
-        return this.resourceType;
+        return this.getBackingStore().get("resourceType");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the amazonAccountId property.
      */
     public void setAmazonAccountId(@jakarta.annotation.Nullable final String value) {
-        this.amazonAccountId = value;
+        this.getBackingStore().set("amazonAccountId", value);
     }
     /**
      * Sets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
      * @param value Value to set for the amazonResourceId property.
      */
     public void setAmazonResourceId(@jakarta.annotation.Nullable final String value) {
-        this.amazonResourceId = value;
+        this.getBackingStore().set("amazonResourceId", value);
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.getBackingStore().set("resourceName", value);
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.resourceType = value;
+        this.getBackingStore().set("resourceType", value);
     }
 }

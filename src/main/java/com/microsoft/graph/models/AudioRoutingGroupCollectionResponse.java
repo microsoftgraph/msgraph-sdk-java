@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AudioRoutingGroup> value;
-    /**
      * Instantiates a new AudioRoutingGroupCollectionResponse and sets the default values.
      */
     public AudioRoutingGroupCollectionResponse() {
@@ -44,7 +40,7 @@ public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginatio
      */
     @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

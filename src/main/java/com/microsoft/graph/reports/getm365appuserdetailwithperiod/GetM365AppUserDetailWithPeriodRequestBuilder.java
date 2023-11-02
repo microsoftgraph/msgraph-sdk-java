@@ -83,6 +83,7 @@ public class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBui
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json, application/json");
         return requestInfo;
     }
     /**

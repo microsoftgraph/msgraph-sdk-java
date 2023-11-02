@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Whether or not to use device execution context for Microsoft Store for Business mobile app.
-     */
-    private Boolean useDeviceContext;
-    /**
      * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.
      */
     public MicrosoftStoreForBusinessAppAssignmentSettings() {
@@ -48,7 +44,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this.useDeviceContext;
+        return this.getBackingStore().get("useDeviceContext");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceContext = value;
+        this.getBackingStore().set("useDeviceContext", value);
     }
 }

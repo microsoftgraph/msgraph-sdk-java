@@ -4,55 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable {
+public class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     */
-    private AccessReviewExpirationBehavior expirationBehavior;
-    /**
-     * This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
-     */
-    private java.util.List<SubjectSet> fallbackReviewers;
-    /**
-     * If true, access reviews are required for assignments through this policy.
-     */
-    private Boolean isEnabled;
-    /**
-     * Specifies whether to display recommendations to the reviewer. The default value is true.
-     */
-    private Boolean isRecommendationEnabled;
-    /**
-     * Specifies whether the reviewer must provide justification for the approval. The default value is true.
-     */
-    private Boolean isReviewerJustificationRequired;
-    /**
-     * Specifies whether the principals can review their own assignments.
-     */
-    private Boolean isSelfReview;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * This collection specifies the users or group of users who will review the access package assignments.
-     */
-    private java.util.List<SubjectSet> primaryReviewers;
-    /**
-     * When the first review should start and how often it should recur.
-     */
-    private EntitlementManagementSchedule schedule;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AccessPackageAssignmentReviewSettings and sets the default values.
      */
     public AccessPackageAssignmentReviewSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +39,20 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
@@ -79,7 +60,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public AccessReviewExpirationBehavior getExpirationBehavior() {
-        return this.expirationBehavior;
+        return this.getBackingStore().get("expirationBehavior");
     }
     /**
      * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
@@ -87,7 +68,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackReviewers() {
-        return this.fallbackReviewers;
+        return this.getBackingStore().get("fallbackReviewers");
     }
     /**
      * The deserialization information for the current model
@@ -113,7 +94,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
@@ -121,7 +102,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecommendationEnabled() {
-        return this.isRecommendationEnabled;
+        return this.getBackingStore().get("isRecommendationEnabled");
     }
     /**
      * Gets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
@@ -129,7 +110,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReviewerJustificationRequired() {
-        return this.isReviewerJustificationRequired;
+        return this.getBackingStore().get("isReviewerJustificationRequired");
     }
     /**
      * Gets the isSelfReview property value. Specifies whether the principals can review their own assignments.
@@ -137,7 +118,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSelfReview() {
-        return this.isSelfReview;
+        return this.getBackingStore().get("isSelfReview");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -145,7 +126,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
@@ -153,7 +134,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryReviewers() {
-        return this.primaryReviewers;
+        return this.getBackingStore().get("primaryReviewers");
     }
     /**
      * Gets the schedule property value. When the first review should start and how often it should recur.
@@ -161,7 +142,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
-        return this.schedule;
+        return this.getBackingStore().get("schedule");
     }
     /**
      * Serializes information the current object
@@ -185,69 +166,77 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
      * @param value Value to set for the expirationBehavior property.
      */
     public void setExpirationBehavior(@jakarta.annotation.Nullable final AccessReviewExpirationBehavior value) {
-        this.expirationBehavior = value;
+        this.getBackingStore().set("expirationBehavior", value);
     }
     /**
      * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.fallbackReviewers = value;
+        this.getBackingStore().set("fallbackReviewers", value);
     }
     /**
      * Sets the isEnabled property value. If true, access reviews are required for assignments through this policy.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
      * @param value Value to set for the isRecommendationEnabled property.
      */
     public void setIsRecommendationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRecommendationEnabled = value;
+        this.getBackingStore().set("isRecommendationEnabled", value);
     }
     /**
      * Sets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
      * @param value Value to set for the isReviewerJustificationRequired property.
      */
     public void setIsReviewerJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReviewerJustificationRequired = value;
+        this.getBackingStore().set("isReviewerJustificationRequired", value);
     }
     /**
      * Sets the isSelfReview property value. Specifies whether the principals can review their own assignments.
      * @param value Value to set for the isSelfReview property.
      */
     public void setIsSelfReview(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSelfReview = value;
+        this.getBackingStore().set("isSelfReview", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
      * @param value Value to set for the primaryReviewers property.
      */
     public void setPrimaryReviewers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.primaryReviewers = value;
+        this.getBackingStore().set("primaryReviewers", value);
     }
     /**
      * Sets the schedule property value. When the first review should start and how often it should recur.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
-        this.schedule = value;
+        this.getBackingStore().set("schedule", value);
     }
 }

@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
+public class CloudAppSecurityState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Destination IP Address of the connection to the cloud application/service.
-     */
-    private String destinationServiceIp;
-    /**
-     * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
-     */
-    private String destinationServiceName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
-     */
-    private String riskScore;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CloudAppSecurityState and sets the default values.
      */
     public CloudAppSecurityState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the destinationServiceIp property value. Destination IP Address of the connection to the cloud application/service.
@@ -59,7 +60,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDestinationServiceIp() {
-        return this.destinationServiceIp;
+        return this.getBackingStore().get("destinationServiceIp");
     }
     /**
      * Gets the destinationServiceName property value. Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
@@ -67,7 +68,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDestinationServiceName() {
-        return this.destinationServiceName;
+        return this.getBackingStore().get("destinationServiceName");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +89,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
@@ -96,7 +97,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
-        return this.riskScore;
+        return this.getBackingStore().get("riskScore");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the destinationServiceIp property value. Destination IP Address of the connection to the cloud application/service.
      * @param value Value to set for the destinationServiceIp property.
      */
     public void setDestinationServiceIp(@jakarta.annotation.Nullable final String value) {
-        this.destinationServiceIp = value;
+        this.getBackingStore().set("destinationServiceIp", value);
     }
     /**
      * Sets the destinationServiceName property value. Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
      * @param value Value to set for the destinationServiceName property.
      */
     public void setDestinationServiceName(@jakarta.annotation.Nullable final String value) {
-        this.destinationServiceName = value;
+        this.getBackingStore().set("destinationServiceName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
      */
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
-        this.riskScore = value;
+        this.getBackingStore().set("riskScore", value);
     }
 }

@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     /**
-     * The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
-     */
-    private String unit;
-    /**
-     * The value of the user experience analytics metric.
-     */
-    private Double value;
-    /**
      * Instantiates a new UserExperienceAnalyticsMetric and sets the default values.
      */
     public UserExperienceAnalyticsMetric() {
@@ -52,7 +44,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUnit() {
-        return this.unit;
+        return this.getBackingStore().get("unit");
     }
     /**
      * Gets the value property value. The value of the user experience analytics metric.
@@ -60,7 +52,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
      * @param value Value to set for the unit property.
      */
     public void setUnit(@jakarta.annotation.Nullable final String value) {
-        this.unit = value;
+        this.getBackingStore().set("unit", value);
     }
     /**
      * Sets the value property value. The value of the user experience analytics metric.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Double value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

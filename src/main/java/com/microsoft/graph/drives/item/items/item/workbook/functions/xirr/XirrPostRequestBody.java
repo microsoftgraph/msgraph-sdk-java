@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
+public class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The dates property
-     */
-    private Json dates;
-    /**
-     * The guess property
-     */
-    private Json guess;
-    /**
-     * The values property
-     */
-    private Json values;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new XirrPostRequestBody and sets the default values.
      */
     public XirrPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dates property value. The dates property
@@ -56,7 +61,7 @@ public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getDates() {
-        return this.dates;
+        return this.getBackingStore().get("dates");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getGuess() {
-        return this.guess;
+        return this.getBackingStore().get("guess");
     }
     /**
      * Gets the values property value. The values property
@@ -84,7 +89,7 @@ public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.getBackingStore().get("values");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class XirrPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the dates property value. The dates property
      * @param value Value to set for the dates property.
      */
     public void setDates(@jakarta.annotation.Nullable final Json value) {
-        this.dates = value;
+        this.getBackingStore().set("dates", value);
     }
     /**
      * Sets the guess property value. The guess property
      * @param value Value to set for the guess property.
      */
     public void setGuess(@jakarta.annotation.Nullable final Json value) {
-        this.guess = value;
+        this.getBackingStore().set("guess", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.getBackingStore().set("values", value);
     }
 }

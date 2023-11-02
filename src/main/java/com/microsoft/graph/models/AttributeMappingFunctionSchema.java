@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeMappingFunctionSchema extends Entity implements Parsable {
     /**
-     * Collection of function parameters.
-     */
-    private java.util.List<AttributeMappingParameterSchema> parameters;
-    /**
      * Instantiates a new AttributeMappingFunctionSchema and sets the default values.
      */
     public AttributeMappingFunctionSchema() {
@@ -44,7 +40,7 @@ public class AttributeMappingFunctionSchema extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeMappingParameterSchema> getParameters() {
-        return this.parameters;
+        return this.getBackingStore().get("parameters");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AttributeMappingFunctionSchema extends Entity implements Parsable {
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<AttributeMappingParameterSchema> value) {
-        this.parameters = value;
+        this.getBackingStore().set("parameters", value);
     }
 }

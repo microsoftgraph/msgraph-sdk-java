@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryReviewSet extends DataSet implements Parsable {
     /**
-     * Represents queries within the review set.
-     */
-    private java.util.List<EdiscoveryReviewSetQuery> queries;
-    /**
      * Instantiates a new EdiscoveryReviewSet and sets the default values.
      */
     public EdiscoveryReviewSet() {
@@ -45,7 +41,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewSetQuery> getQueries() {
-        return this.queries;
+        return this.getBackingStore().get("queries");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * @param value Value to set for the queries property.
      */
     public void setQueries(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewSetQuery> value) {
-        this.queries = value;
+        this.getBackingStore().set("queries", value);
     }
 }

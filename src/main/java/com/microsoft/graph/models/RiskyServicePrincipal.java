@@ -10,46 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
-     * The globally unique identifier for the associated application (its appId property), if any.
-     */
-    private String appId;
-    /**
-     * The display name for the service principal.
-     */
-    private String displayName;
-    /**
-     * Represents the risk history of Microsoft Entra service principals.
-     */
-    private java.util.List<RiskyServicePrincipalHistoryItem> history;
-    /**
-     * true if the service principal account is enabled; otherwise, false.
-     */
-    private Boolean isEnabled;
-    /**
-     * Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
-     */
-    private Boolean isProcessing;
-    /**
-     * Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     */
-    private RiskDetail riskDetail;
-    /**
-     * The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
-     */
-    private OffsetDateTime riskLastUpdatedDateTime;
-    /**
-     * Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     */
-    private RiskLevel riskLevel;
-    /**
-     * State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     */
-    private RiskState riskState;
-    /**
-     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
-     */
-    private String servicePrincipalType;
-    /**
      * Instantiates a new RiskyServicePrincipal and sets the default values.
      */
     public RiskyServicePrincipal() {
@@ -78,7 +38,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.getBackingStore().get("appId");
     }
     /**
      * Gets the displayName property value. The display name for the service principal.
@@ -86,7 +46,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -113,7 +73,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipalHistoryItem> getHistory() {
-        return this.history;
+        return this.getBackingStore().get("history");
     }
     /**
      * Gets the isEnabled property value. true if the service principal account is enabled; otherwise, false.
@@ -121,7 +81,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
@@ -129,7 +89,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
-        return this.isProcessing;
+        return this.getBackingStore().get("isProcessing");
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
@@ -137,7 +97,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
-        return this.riskDetail;
+        return this.getBackingStore().get("riskDetail");
     }
     /**
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
@@ -145,7 +105,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
-        return this.riskLastUpdatedDateTime;
+        return this.getBackingStore().get("riskLastUpdatedDateTime");
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
@@ -153,7 +113,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
-        return this.riskLevel;
+        return this.getBackingStore().get("riskLevel");
     }
     /**
      * Gets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
@@ -161,7 +121,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
-        return this.riskState;
+        return this.getBackingStore().get("riskState");
     }
     /**
      * Gets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
@@ -169,7 +129,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalType() {
-        return this.servicePrincipalType;
+        return this.getBackingStore().get("servicePrincipalType");
     }
     /**
      * Serializes information the current object
@@ -194,69 +154,69 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.getBackingStore().set("appId", value);
     }
     /**
      * Sets the displayName property value. The display name for the service principal.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the history property value. Represents the risk history of Microsoft Entra service principals.
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipalHistoryItem> value) {
-        this.history = value;
+        this.getBackingStore().set("history", value);
     }
     /**
      * Sets the isEnabled property value. true if the service principal account is enabled; otherwise, false.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
-        this.isProcessing = value;
+        this.getBackingStore().set("isProcessing", value);
     }
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
-        this.riskDetail = value;
+        this.getBackingStore().set("riskDetail", value);
     }
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
      * @param value Value to set for the riskLastUpdatedDateTime property.
      */
     public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.riskLastUpdatedDateTime = value;
+        this.getBackingStore().set("riskLastUpdatedDateTime", value);
     }
     /**
      * Sets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
-        this.riskLevel = value;
+        this.getBackingStore().set("riskLevel", value);
     }
     /**
      * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
-        this.riskState = value;
+        this.getBackingStore().set("riskState", value);
     }
     /**
      * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Microsoft Entra ID internally and is inherited from servicePrincipal.
      * @param value Value to set for the servicePrincipalType property.
      */
     public void setServicePrincipalType(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalType = value;
+        this.getBackingStore().set("servicePrincipalType", value);
     }
 }

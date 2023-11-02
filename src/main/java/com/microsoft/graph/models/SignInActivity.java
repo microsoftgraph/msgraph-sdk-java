@@ -4,40 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SignInActivity implements AdditionalDataHolder, Parsable {
+public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
-     */
-    private OffsetDateTime lastNonInteractiveSignInDateTime;
-    /**
-     * Request identifier of the last non-interactive sign-in performed by this user.
-     */
-    private String lastNonInteractiveSignInRequestId;
-    /**
-     * The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
-     */
-    private OffsetDateTime lastSignInDateTime;
-    /**
-     * Request identifier of the last interactive sign-in performed by this user.
-     */
-    private String lastSignInRequestId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SignInActivity and sets the default values.
      */
     public SignInActivity() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +40,20 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +75,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastNonInteractiveSignInDateTime() {
-        return this.lastNonInteractiveSignInDateTime;
+        return this.getBackingStore().get("lastNonInteractiveSignInDateTime");
     }
     /**
      * Gets the lastNonInteractiveSignInRequestId property value. Request identifier of the last non-interactive sign-in performed by this user.
@@ -86,7 +83,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLastNonInteractiveSignInRequestId() {
-        return this.lastNonInteractiveSignInRequestId;
+        return this.getBackingStore().get("lastNonInteractiveSignInRequestId");
     }
     /**
      * Gets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
@@ -94,7 +91,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSignInDateTime() {
-        return this.lastSignInDateTime;
+        return this.getBackingStore().get("lastSignInDateTime");
     }
     /**
      * Gets the lastSignInRequestId property value. Request identifier of the last interactive sign-in performed by this user.
@@ -102,7 +99,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLastSignInRequestId() {
-        return this.lastSignInRequestId;
+        return this.getBackingStore().get("lastSignInRequestId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,7 +107,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -130,41 +127,49 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @param value Value to set for the lastNonInteractiveSignInDateTime property.
      */
     public void setLastNonInteractiveSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastNonInteractiveSignInDateTime = value;
+        this.getBackingStore().set("lastNonInteractiveSignInDateTime", value);
     }
     /**
      * Sets the lastNonInteractiveSignInRequestId property value. Request identifier of the last non-interactive sign-in performed by this user.
      * @param value Value to set for the lastNonInteractiveSignInRequestId property.
      */
     public void setLastNonInteractiveSignInRequestId(@jakarta.annotation.Nullable final String value) {
-        this.lastNonInteractiveSignInRequestId = value;
+        this.getBackingStore().set("lastNonInteractiveSignInRequestId", value);
     }
     /**
      * Sets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @param value Value to set for the lastSignInDateTime property.
      */
     public void setLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSignInDateTime = value;
+        this.getBackingStore().set("lastSignInDateTime", value);
     }
     /**
      * Sets the lastSignInRequestId property value. Request identifier of the last interactive sign-in performed by this user.
      * @param value Value to set for the lastSignInRequestId property.
      */
     public void setLastSignInRequestId(@jakarta.annotation.Nullable final String value) {
-        this.lastSignInRequestId = value;
+        this.getBackingStore().set("lastSignInRequestId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

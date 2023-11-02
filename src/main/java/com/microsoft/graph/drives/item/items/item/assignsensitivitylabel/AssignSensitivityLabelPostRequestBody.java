@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The assignmentMethod property
-     */
-    private SensitivityLabelAssignmentMethod assignmentMethod;
-    /**
-     * The justificationText property
-     */
-    private String justificationText;
-    /**
-     * The sensitivityLabelId property
-     */
-    private String sensitivityLabelId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new AssignSensitivityLabelPostRequestBody and sets the default values.
      */
     public AssignSensitivityLabelPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,12 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
@@ -56,7 +53,15 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {
-        return this.assignmentMethod;
+        return this.getBackingStore().get("assignmentMethod");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getJustificationText() {
-        return this.justificationText;
+        return this.getBackingStore().get("justificationText");
     }
     /**
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
@@ -84,7 +89,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
-        return this.sensitivityLabelId;
+        return this.getBackingStore().get("sensitivityLabelId");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
      */
     public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
-        this.assignmentMethod = value;
+        this.getBackingStore().set("assignmentMethod", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the justificationText property value. The justificationText property
      * @param value Value to set for the justificationText property.
      */
     public void setJustificationText(@jakarta.annotation.Nullable final String value) {
-        this.justificationText = value;
+        this.getBackingStore().set("justificationText", value);
     }
     /**
      * Sets the sensitivityLabelId property value. The sensitivityLabelId property
      * @param value Value to set for the sensitivityLabelId property.
      */
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
-        this.sensitivityLabelId = value;
+        this.getBackingStore().set("sensitivityLabelId", value);
     }
 }

@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetCompatibleHubContentTypesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ContentType> value;
-    /**
      * Instantiates a new GetCompatibleHubContentTypesGetResponse and sets the default values.
      */
     public GetCompatibleHubContentTypesGetResponse() {
@@ -46,7 +42,7 @@ public class GetCompatibleHubContentTypesGetResponse extends BaseCollectionPagin
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetCompatibleHubContentTypesGetResponse extends BaseCollectionPagin
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

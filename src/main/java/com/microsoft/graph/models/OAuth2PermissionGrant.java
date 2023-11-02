@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OAuth2PermissionGrant extends Entity implements Parsable {
     /**
-     * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
-     */
-    private String clientId;
-    /**
-     * Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
-     */
-    private String consentType;
-    /**
-     * The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
-     */
-    private String principalId;
-    /**
-     * The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
-     */
-    private String resourceId;
-    /**
-     * A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the oauth2PermissionScopes property of the resource service principal. Must not exceed 3850 characters in length.
-     */
-    private String scope;
-    /**
      * Instantiates a new OAuth2PermissionGrant and sets the default values.
      */
     public OAuth2PermissionGrant() {
@@ -50,7 +30,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
-        return this.clientId;
+        return this.getBackingStore().get("clientId");
     }
     /**
      * Gets the consentType property value. Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
@@ -58,7 +38,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConsentType() {
-        return this.consentType;
+        return this.getBackingStore().get("consentType");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +60,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.getBackingStore().get("principalId");
     }
     /**
      * Gets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
@@ -88,7 +68,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.getBackingStore().get("resourceId");
     }
     /**
      * Gets the scope property value. A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the oauth2PermissionScopes property of the resource service principal. Must not exceed 3850 characters in length.
@@ -96,7 +76,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScope() {
-        return this.scope;
+        return this.getBackingStore().get("scope");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
-        this.clientId = value;
+        this.getBackingStore().set("clientId", value);
     }
     /**
      * Sets the consentType property value. Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
      * @param value Value to set for the consentType property.
      */
     public void setConsentType(@jakarta.annotation.Nullable final String value) {
-        this.consentType = value;
+        this.getBackingStore().set("consentType", value);
     }
     /**
      * Sets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.getBackingStore().set("principalId", value);
     }
     /**
      * Sets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.getBackingStore().set("resourceId", value);
     }
     /**
      * Sets the scope property value. A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the oauth2PermissionScopes property of the resource service principal. Must not exceed 3850 characters in length.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {
-        this.scope = value;
+        this.getBackingStore().set("scope", value);
     }
 }

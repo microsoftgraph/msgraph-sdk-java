@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoomList extends Place implements Parsable {
     /**
-     * The email address of the room list.
-     */
-    private String emailAddress;
-    /**
-     * The rooms property
-     */
-    private java.util.List<Room> rooms;
-    /**
      * Instantiates a new RoomList and sets the default values.
      */
     public RoomList() {
@@ -39,7 +31,7 @@ public class RoomList extends Place implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.getBackingStore().get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class RoomList extends Place implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Room> getRooms() {
-        return this.rooms;
+        return this.getBackingStore().get("rooms");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class RoomList extends Place implements Parsable {
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.getBackingStore().set("emailAddress", value);
     }
     /**
      * Sets the rooms property value. The rooms property
      * @param value Value to set for the rooms property.
      */
     public void setRooms(@jakarta.annotation.Nullable final java.util.List<Room> value) {
-        this.rooms = value;
+        this.getBackingStore().set("rooms", value);
     }
 }

@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
-     */
-    private java.util.List<AuthenticationMethodModeDetail> authenticationMethodModes;
-    /**
-     * The combinations property
-     */
-    private java.util.List<AuthenticationMethodModes> combinations;
-    /**
-     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     */
-    private java.util.List<AuthenticationStrengthPolicy> policies;
-    /**
      * Instantiates a new AuthenticationStrengthRoot and sets the default values.
      */
     public AuthenticationStrengthRoot() {
@@ -43,7 +31,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModeDetail> getAuthenticationMethodModes() {
-        return this.authenticationMethodModes;
+        return this.getBackingStore().get("authenticationMethodModes");
     }
     /**
      * Gets the combinations property value. The combinations property
@@ -51,7 +39,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCombinations() {
-        return this.combinations;
+        return this.getBackingStore().get("combinations");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationStrengthPolicy> getPolicies() {
-        return this.policies;
+        return this.getBackingStore().get("policies");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodModes property.
      */
     public void setAuthenticationMethodModes(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModeDetail> value) {
-        this.authenticationMethodModes = value;
+        this.getBackingStore().set("authenticationMethodModes", value);
     }
     /**
      * Sets the combinations property value. The combinations property
      * @param value Value to set for the combinations property.
      */
     public void setCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
-        this.combinations = value;
+        this.getBackingStore().set("combinations", value);
     }
     /**
      * Sets the policies property value. A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param value Value to set for the policies property.
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
-        this.policies = value;
+        this.getBackingStore().set("policies", value);
     }
 }

@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ScheduleInformation implements AdditionalDataHolder, Parsable {
+public class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
-     */
-    private String availabilityView;
-    /**
-     * Error information from attempting to get the availability of the user, distribution list, or resource.
-     */
-    private FreeBusyError error;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-     */
-    private String scheduleId;
-    /**
-     * Contains the items that describe the availability of the user or resource.
-     */
-    private java.util.List<ScheduleItem> scheduleItems;
-    /**
-     * The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
-     */
-    private WorkingHours workingHours;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ScheduleInformation and sets the default values.
      */
     public ScheduleInformation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,12 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
@@ -67,7 +52,15 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAvailabilityView() {
-        return this.availabilityView;
+        return this.getBackingStore().get("availabilityView");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
@@ -75,7 +68,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FreeBusyError getError() {
-        return this.error;
+        return this.getBackingStore().get("error");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +91,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
@@ -106,7 +99,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getScheduleId() {
-        return this.scheduleId;
+        return this.getBackingStore().get("scheduleId");
     }
     /**
      * Gets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
@@ -114,7 +107,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScheduleItem> getScheduleItems() {
-        return this.scheduleItems;
+        return this.getBackingStore().get("scheduleItems");
     }
     /**
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
@@ -122,7 +115,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkingHours getWorkingHours() {
-        return this.workingHours;
+        return this.getBackingStore().get("workingHours");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
      * @param value Value to set for the availabilityView property.
      */
     public void setAvailabilityView(@jakarta.annotation.Nullable final String value) {
-        this.availabilityView = value;
+        this.getBackingStore().set("availabilityView", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final FreeBusyError value) {
-        this.error = value;
+        this.getBackingStore().set("error", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
      * @param value Value to set for the scheduleId property.
      */
     public void setScheduleId(@jakarta.annotation.Nullable final String value) {
-        this.scheduleId = value;
+        this.getBackingStore().set("scheduleId", value);
     }
     /**
      * Sets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
      * @param value Value to set for the scheduleItems property.
      */
     public void setScheduleItems(@jakarta.annotation.Nullable final java.util.List<ScheduleItem> value) {
-        this.scheduleItems = value;
+        this.getBackingStore().set("scheduleItems", value);
     }
     /**
      * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
      * @param value Value to set for the workingHours property.
      */
     public void setWorkingHours(@jakarta.annotation.Nullable final WorkingHours value) {
-        this.workingHours = value;
+        this.getBackingStore().set("workingHours", value);
     }
 }

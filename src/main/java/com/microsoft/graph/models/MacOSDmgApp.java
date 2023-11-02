@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDmgApp extends MobileLobApp implements Parsable {
     /**
-     * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
-     */
-    private Boolean ignoreVersionDetection;
-    /**
-     * The list of .apps expected to be installed by the DMG (Apple Disk Image)
-     */
-    private java.util.List<MacOSIncludedApp> includedApps;
-    /**
-     * ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
-     */
-    private MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
-     */
-    private String primaryBundleId;
-    /**
-     * The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
-     */
-    private String primaryBundleVersion;
-    /**
      * Instantiates a new MacOSDmgApp and sets the default values.
      */
     public MacOSDmgApp() {
@@ -68,7 +48,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
-        return this.ignoreVersionDetection;
+        return this.getBackingStore().get("ignoreVersionDetection");
     }
     /**
      * Gets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
@@ -76,7 +56,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSIncludedApp> getIncludedApps() {
-        return this.includedApps;
+        return this.getBackingStore().get("includedApps");
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
@@ -84,7 +64,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.getBackingStore().get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the primaryBundleId property value. The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
@@ -92,7 +72,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleId() {
-        return this.primaryBundleId;
+        return this.getBackingStore().get("primaryBundleId");
     }
     /**
      * Gets the primaryBundleVersion property value. The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
@@ -100,7 +80,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleVersion() {
-        return this.primaryBundleVersion;
+        return this.getBackingStore().get("primaryBundleVersion");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
-        this.ignoreVersionDetection = value;
+        this.getBackingStore().set("ignoreVersionDetection", value);
     }
     /**
      * Sets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
      * @param value Value to set for the includedApps property.
      */
     public void setIncludedApps(@jakarta.annotation.Nullable final java.util.List<MacOSIncludedApp> value) {
-        this.includedApps = value;
+        this.getBackingStore().set("includedApps", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final MacOSMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.getBackingStore().set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the primaryBundleId property value. The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
      * @param value Value to set for the primaryBundleId property.
      */
     public void setPrimaryBundleId(@jakarta.annotation.Nullable final String value) {
-        this.primaryBundleId = value;
+        this.getBackingStore().set("primaryBundleId", value);
     }
     /**
      * Sets the primaryBundleVersion property value. The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
      * @param value Value to set for the primaryBundleVersion property.
      */
     public void setPrimaryBundleVersion(@jakarta.annotation.Nullable final String value) {
-        this.primaryBundleVersion = value;
+        this.getBackingStore().set("primaryBundleVersion", value);
     }
 }

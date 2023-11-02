@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
-     * Collection of applications and service principals to which the policy is applied.
-     */
-    private java.util.List<DirectoryObject> appliesTo;
-    /**
-     * Denotes whether the policy is enabled.
-     */
-    private Boolean isEnabled;
-    /**
-     * Restrictions that apply to an application or service principal object.
-     */
-    private AppManagementConfiguration restrictions;
-    /**
      * Instantiates a new AppManagementPolicy and sets the default values.
      */
     public AppManagementPolicy() {
@@ -43,7 +31,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this.appliesTo;
+        return this.getBackingStore().get("appliesTo");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
@@ -71,7 +59,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {
-        return this.restrictions;
+        return this.getBackingStore().get("restrictions");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.appliesTo = value;
+        this.getBackingStore().set("appliesTo", value);
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
      */
     public void setRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
-        this.restrictions = value;
+        this.getBackingStore().set("restrictions", value);
     }
 }

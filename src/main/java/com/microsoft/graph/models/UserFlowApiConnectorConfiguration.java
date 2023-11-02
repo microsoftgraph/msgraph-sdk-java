@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsable {
+public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The postAttributeCollection property
-     */
-    private IdentityApiConnector postAttributeCollection;
-    /**
-     * The postFederationSignup property
-     */
-    private IdentityApiConnector postFederationSignup;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserFlowApiConnectorConfiguration and sets the default values.
      */
     public UserFlowApiConnectorConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +72,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the postAttributeCollection property value. The postAttributeCollection property
@@ -75,7 +80,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnector getPostAttributeCollection() {
-        return this.postAttributeCollection;
+        return this.getBackingStore().get("postAttributeCollection");
     }
     /**
      * Gets the postFederationSignup property value. The postFederationSignup property
@@ -83,7 +88,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnector getPostFederationSignup() {
-        return this.postFederationSignup;
+        return this.getBackingStore().get("postFederationSignup");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the postAttributeCollection property value. The postAttributeCollection property
      * @param value Value to set for the postAttributeCollection property.
      */
     public void setPostAttributeCollection(@jakarta.annotation.Nullable final IdentityApiConnector value) {
-        this.postAttributeCollection = value;
+        this.getBackingStore().set("postAttributeCollection", value);
     }
     /**
      * Sets the postFederationSignup property value. The postFederationSignup property
      * @param value Value to set for the postFederationSignup property.
      */
     public void setPostFederationSignup(@jakarta.annotation.Nullable final IdentityApiConnector value) {
-        this.postFederationSignup = value;
+        this.getBackingStore().set("postFederationSignup", value);
     }
 }

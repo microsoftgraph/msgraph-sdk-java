@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
-     * A description for the resource role.
-     */
-    private String description;
-    /**
-     * The display name of the resource role such as the role defined by the application.
-     */
-    private String displayName;
-    /**
-     * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
-     */
-    private String originId;
-    /**
-     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     */
-    private String originSystem;
-    /**
-     * The resource property
-     */
-    private AccessPackageResource resource;
-    /**
      * Instantiates a new AccessPackageResourceRole and sets the default values.
      */
     public AccessPackageResourceRole() {
@@ -50,7 +30,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
@@ -58,7 +38,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +60,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.getBackingStore().get("originId");
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
@@ -88,7 +68,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.getBackingStore().get("originSystem");
     }
     /**
      * Gets the resource property value. The resource property
@@ -96,7 +76,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {
-        return this.resource;
+        return this.getBackingStore().get("resource");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.getBackingStore().set("originId", value);
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.getBackingStore().set("originSystem", value);
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
-        this.resource = value;
+        this.getBackingStore().set("resource", value);
     }
 }

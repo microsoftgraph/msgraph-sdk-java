@@ -10,42 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResource extends Entity implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * A description for the resource.
-     */
-    private String description;
-    /**
-     * The display name of the resource, such as the application name, group name or site name.
-     */
-    private String displayName;
-    /**
-     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
-     */
-    private AccessPackageResourceEnvironment environment;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
-     */
-    private String originId;
-    /**
-     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
-     */
-    private String originSystem;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<AccessPackageResourceRole> roles;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<AccessPackageResourceScope> scopes;
-    /**
      * Instantiates a new AccessPackageResource and sets the default values.
      */
     public AccessPackageResource() {
@@ -67,7 +31,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. A description for the resource.
@@ -75,7 +39,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
@@ -83,7 +47,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
@@ -91,7 +55,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment getEnvironment() {
-        return this.environment;
+        return this.getBackingStore().get("environment");
     }
     /**
      * The deserialization information for the current model
@@ -117,15 +81,15 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.getBackingStore().get("modifiedDateTime");
     }
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
-        return this.originId;
+        return this.getBackingStore().get("originId");
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
@@ -133,7 +97,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
-        return this.originSystem;
+        return this.getBackingStore().get("originSystem");
     }
     /**
      * Gets the roles property value. Read-only. Nullable. Supports $expand.
@@ -141,7 +105,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getRoles() {
-        return this.roles;
+        return this.getBackingStore().get("roles");
     }
     /**
      * Gets the scopes property value. Read-only. Nullable. Supports $expand.
@@ -149,7 +113,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getScopes() {
-        return this.scopes;
+        return this.getBackingStore().get("scopes");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. A description for the resource.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param value Value to set for the environment property.
      */
     public void setEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {
-        this.environment = value;
+        this.getBackingStore().set("environment", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.getBackingStore().set("modifiedDateTime", value);
     }
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
-        this.originId = value;
+        this.getBackingStore().set("originId", value);
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
-        this.originSystem = value;
+        this.getBackingStore().set("originSystem", value);
     }
     /**
      * Sets the roles property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the roles property.
      */
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
-        this.roles = value;
+        this.getBackingStore().set("roles", value);
     }
     /**
      * Sets the scopes property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the scopes property.
      */
     public void setScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
-        this.scopes = value;
+        this.getBackingStore().set("scopes", value);
     }
 }

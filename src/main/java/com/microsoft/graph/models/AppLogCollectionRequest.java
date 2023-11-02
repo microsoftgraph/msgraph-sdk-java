@@ -13,22 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
-     * Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * List of log folders.
-     */
-    private java.util.List<String> customLogFolders;
-    /**
-     * Indicates error message if any during the upload process.
-     */
-    private String errorMessage;
-    /**
-     * AppLogUploadStatus
-     */
-    private AppLogUploadState status;
-    /**
      * Instantiates a new AppLogCollectionRequest and sets the default values.
      */
     public AppLogCollectionRequest() {
@@ -50,7 +34,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.getBackingStore().get("completedDateTime");
     }
     /**
      * Gets the customLogFolders property value. List of log folders.
@@ -58,7 +42,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCustomLogFolders() {
-        return this.customLogFolders;
+        return this.getBackingStore().get("customLogFolders");
     }
     /**
      * Gets the errorMessage property value. Indicates error message if any during the upload process.
@@ -66,7 +50,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
-        return this.errorMessage;
+        return this.getBackingStore().get("errorMessage");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +71,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.getBackingStore().set("completedDateTime", value);
     }
     /**
      * Sets the customLogFolders property value. List of log folders.
      * @param value Value to set for the customLogFolders property.
      */
     public void setCustomLogFolders(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.customLogFolders = value;
+        this.getBackingStore().set("customLogFolders", value);
     }
     /**
      * Sets the errorMessage property value. Indicates error message if any during the upload process.
      * @param value Value to set for the errorMessage property.
      */
     public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
-        this.errorMessage = value;
+        this.getBackingStore().set("errorMessage", value);
     }
     /**
      * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

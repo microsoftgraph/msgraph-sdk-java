@@ -13,14 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppCategory extends Entity implements Parsable {
     /**
-     * The name of the app category.
-     */
-    private String displayName;
-    /**
-     * The date and time the mobileAppCategory was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
      * Instantiates a new MobileAppCategory and sets the default values.
      */
     public MobileAppCategory() {
@@ -42,7 +34,7 @@ public class MobileAppCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -61,7 +53,7 @@ public class MobileAppCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class MobileAppCategory extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
 }

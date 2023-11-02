@@ -4,51 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceDetail implements AdditionalDataHolder, Parsable {
+public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates the browser information of the used for signing in.
-     */
-    private String browser;
-    /**
-     * Refers to the UniqueID of the device used for signing in.
-     */
-    private String deviceId;
-    /**
-     * Refers to the name of the device used for signing in.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the device is compliant.
-     */
-    private Boolean isCompliant;
-    /**
-     * Indicates whether the device is managed.
-     */
-    private Boolean isManaged;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the operating system name and version used for signing in.
-     */
-    private String operatingSystem;
-    /**
-     * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
-     */
-    private String trustType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DeviceDetail and sets the default values.
      */
     public DeviceDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +39,20 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the browser property value. Indicates the browser information of the used for signing in.
@@ -75,7 +60,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBrowser() {
-        return this.browser;
+        return this.getBackingStore().get("browser");
     }
     /**
      * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
@@ -83,7 +68,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.getBackingStore().get("deviceId");
     }
     /**
      * Gets the displayName property value. Refers to the name of the device used for signing in.
@@ -91,7 +76,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -116,7 +101,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
-        return this.isCompliant;
+        return this.getBackingStore().get("isCompliant");
     }
     /**
      * Gets the isManaged property value. Indicates whether the device is managed.
@@ -124,7 +109,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
-        return this.isManaged;
+        return this.getBackingStore().get("isManaged");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -132,7 +117,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
@@ -140,7 +125,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
-        return this.operatingSystem;
+        return this.getBackingStore().get("operatingSystem");
     }
     /**
      * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
@@ -148,7 +133,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTrustType() {
-        return this.trustType;
+        return this.getBackingStore().get("trustType");
     }
     /**
      * Serializes information the current object
@@ -171,62 +156,70 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the browser property value. Indicates the browser information of the used for signing in.
      * @param value Value to set for the browser property.
      */
     public void setBrowser(@jakarta.annotation.Nullable final String value) {
-        this.browser = value;
+        this.getBackingStore().set("browser", value);
     }
     /**
      * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.getBackingStore().set("deviceId", value);
     }
     /**
      * Sets the displayName property value. Refers to the name of the device used for signing in.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the isCompliant property value. Indicates whether the device is compliant.
      * @param value Value to set for the isCompliant property.
      */
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCompliant = value;
+        this.getBackingStore().set("isCompliant", value);
     }
     /**
      * Sets the isManaged property value. Indicates whether the device is managed.
      * @param value Value to set for the isManaged property.
      */
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
-        this.isManaged = value;
+        this.getBackingStore().set("isManaged", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystem = value;
+        this.getBackingStore().set("operatingSystem", value);
     }
     /**
      * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {
-        this.trustType = value;
+        this.getBackingStore().set("trustType", value);
     }
 }

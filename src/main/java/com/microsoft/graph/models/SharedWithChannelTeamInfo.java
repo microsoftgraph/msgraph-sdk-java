@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     /**
-     * A collection of team members who have access to the shared channel.
-     */
-    private java.util.List<ConversationMember> allowedMembers;
-    /**
-     * Indicates whether the team is the host of the channel.
-     */
-    private Boolean isHostTeam;
-    /**
      * Instantiates a new SharedWithChannelTeamInfo and sets the default values.
      */
     public SharedWithChannelTeamInfo() {
@@ -38,7 +30,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getAllowedMembers() {
-        return this.allowedMembers;
+        return this.getBackingStore().get("allowedMembers");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHostTeam() {
-        return this.isHostTeam;
+        return this.getBackingStore().get("isHostTeam");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the allowedMembers property.
      */
     public void setAllowedMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this.allowedMembers = value;
+        this.getBackingStore().set("allowedMembers", value);
     }
     /**
      * Sets the isHostTeam property value. Indicates whether the team is the host of the channel.
      * @param value Value to set for the isHostTeam property.
      */
     public void setIsHostTeam(@jakarta.annotation.Nullable final Boolean value) {
-        this.isHostTeam = value;
+        this.getBackingStore().set("isHostTeam", value);
     }
 }

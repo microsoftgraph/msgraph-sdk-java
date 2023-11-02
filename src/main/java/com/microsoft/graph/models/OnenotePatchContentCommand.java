@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable {
+public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The action property
+     * Stores model information.
      */
-    private OnenotePatchActionType action;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
-     */
-    private String content;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     */
-    private OnenotePatchInsertPosition position;
-    /**
-     * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
-     */
-    private String target;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new OnenotePatchContentCommand and sets the default values.
      */
     public OnenotePatchContentCommand() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public OnenotePatchActionType getAction() {
-        return this.action;
+        return this.getBackingStore().get("action");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -63,7 +47,20 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
@@ -71,7 +68,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +90,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
@@ -101,7 +98,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public OnenotePatchInsertPosition getPosition() {
-        return this.position;
+        return this.getBackingStore().get("position");
     }
     /**
      * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
@@ -109,7 +106,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
-        return this.target;
+        return this.getBackingStore().get("target");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final OnenotePatchActionType value) {
-        this.action = value;
+        this.getBackingStore().set("action", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @param value Value to set for the position property.
      */
     public void setPosition(@jakarta.annotation.Nullable final OnenotePatchInsertPosition value) {
-        this.position = value;
+        this.getBackingStore().set("position", value);
     }
     /**
      * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {
-        this.target = value;
+        this.getBackingStore().set("target", value);
     }
 }

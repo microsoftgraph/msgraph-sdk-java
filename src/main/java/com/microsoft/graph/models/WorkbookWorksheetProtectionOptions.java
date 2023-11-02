@@ -4,67 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable {
+public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Represents the worksheet protection option of allowing using auto filter feature.
-     */
-    private Boolean allowAutoFilter;
-    /**
-     * Represents the worksheet protection option of allowing deleting columns.
-     */
-    private Boolean allowDeleteColumns;
-    /**
-     * Represents the worksheet protection option of allowing deleting rows.
-     */
-    private Boolean allowDeleteRows;
-    /**
-     * Represents the worksheet protection option of allowing formatting cells.
-     */
-    private Boolean allowFormatCells;
-    /**
-     * Represents the worksheet protection option of allowing formatting columns.
-     */
-    private Boolean allowFormatColumns;
-    /**
-     * Represents the worksheet protection option of allowing formatting rows.
-     */
-    private Boolean allowFormatRows;
-    /**
-     * Represents the worksheet protection option of allowing inserting columns.
-     */
-    private Boolean allowInsertColumns;
-    /**
-     * Represents the worksheet protection option of allowing inserting hyperlinks.
-     */
-    private Boolean allowInsertHyperlinks;
-    /**
-     * Represents the worksheet protection option of allowing inserting rows.
-     */
-    private Boolean allowInsertRows;
-    /**
-     * Represents the worksheet protection option of allowing using pivot table feature.
-     */
-    private Boolean allowPivotTables;
-    /**
-     * Represents the worksheet protection option of allowing using sort feature.
-     */
-    private Boolean allowSort;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new WorkbookWorksheetProtectionOptions and sets the default values.
      */
     public WorkbookWorksheetProtectionOptions() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -83,7 +39,12 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
@@ -91,7 +52,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAutoFilter() {
-        return this.allowAutoFilter;
+        return this.getBackingStore().get("allowAutoFilter");
     }
     /**
      * Gets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
@@ -99,7 +60,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteColumns() {
-        return this.allowDeleteColumns;
+        return this.getBackingStore().get("allowDeleteColumns");
     }
     /**
      * Gets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
@@ -107,7 +68,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteRows() {
-        return this.allowDeleteRows;
+        return this.getBackingStore().get("allowDeleteRows");
     }
     /**
      * Gets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
@@ -115,7 +76,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatCells() {
-        return this.allowFormatCells;
+        return this.getBackingStore().get("allowFormatCells");
     }
     /**
      * Gets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
@@ -123,7 +84,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatColumns() {
-        return this.allowFormatColumns;
+        return this.getBackingStore().get("allowFormatColumns");
     }
     /**
      * Gets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
@@ -131,7 +92,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowFormatRows() {
-        return this.allowFormatRows;
+        return this.getBackingStore().get("allowFormatRows");
     }
     /**
      * Gets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
@@ -139,7 +100,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertColumns() {
-        return this.allowInsertColumns;
+        return this.getBackingStore().get("allowInsertColumns");
     }
     /**
      * Gets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
@@ -147,7 +108,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertHyperlinks() {
-        return this.allowInsertHyperlinks;
+        return this.getBackingStore().get("allowInsertHyperlinks");
     }
     /**
      * Gets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
@@ -155,7 +116,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowInsertRows() {
-        return this.allowInsertRows;
+        return this.getBackingStore().get("allowInsertRows");
     }
     /**
      * Gets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
@@ -163,7 +124,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPivotTables() {
-        return this.allowPivotTables;
+        return this.getBackingStore().get("allowPivotTables");
     }
     /**
      * Gets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
@@ -171,7 +132,15 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSort() {
-        return this.allowSort;
+        return this.getBackingStore().get("allowSort");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -200,7 +169,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -227,90 +196,98 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
      * @param value Value to set for the allowAutoFilter property.
      */
     public void setAllowAutoFilter(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAutoFilter = value;
+        this.getBackingStore().set("allowAutoFilter", value);
     }
     /**
      * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
      * @param value Value to set for the allowDeleteColumns property.
      */
     public void setAllowDeleteColumns(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDeleteColumns = value;
+        this.getBackingStore().set("allowDeleteColumns", value);
     }
     /**
      * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
      * @param value Value to set for the allowDeleteRows property.
      */
     public void setAllowDeleteRows(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDeleteRows = value;
+        this.getBackingStore().set("allowDeleteRows", value);
     }
     /**
      * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
      * @param value Value to set for the allowFormatCells property.
      */
     public void setAllowFormatCells(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowFormatCells = value;
+        this.getBackingStore().set("allowFormatCells", value);
     }
     /**
      * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
      * @param value Value to set for the allowFormatColumns property.
      */
     public void setAllowFormatColumns(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowFormatColumns = value;
+        this.getBackingStore().set("allowFormatColumns", value);
     }
     /**
      * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
      * @param value Value to set for the allowFormatRows property.
      */
     public void setAllowFormatRows(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowFormatRows = value;
+        this.getBackingStore().set("allowFormatRows", value);
     }
     /**
      * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
      * @param value Value to set for the allowInsertColumns property.
      */
     public void setAllowInsertColumns(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowInsertColumns = value;
+        this.getBackingStore().set("allowInsertColumns", value);
     }
     /**
      * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
      * @param value Value to set for the allowInsertHyperlinks property.
      */
     public void setAllowInsertHyperlinks(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowInsertHyperlinks = value;
+        this.getBackingStore().set("allowInsertHyperlinks", value);
     }
     /**
      * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
      * @param value Value to set for the allowInsertRows property.
      */
     public void setAllowInsertRows(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowInsertRows = value;
+        this.getBackingStore().set("allowInsertRows", value);
     }
     /**
      * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
      * @param value Value to set for the allowPivotTables property.
      */
     public void setAllowPivotTables(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowPivotTables = value;
+        this.getBackingStore().set("allowPivotTables", value);
     }
     /**
      * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
      * @param value Value to set for the allowSort property.
      */
     public void setAllowSort(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowSort = value;
+        this.getBackingStore().set("allowSort", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

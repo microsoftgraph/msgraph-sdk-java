@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppConsentRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AppConsentRequest> value;
-    /**
      * Instantiates a new AppConsentRequestCollectionResponse and sets the default values.
      */
     public AppConsentRequestCollectionResponse() {
@@ -44,7 +40,7 @@ public class AppConsentRequestCollectionResponse extends BaseCollectionPaginatio
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequest> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AppConsentRequestCollectionResponse extends BaseCollectionPaginatio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AppConsentRequest> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

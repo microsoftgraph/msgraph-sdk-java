@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
+public class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Set of tasks that can be performed on a resource. Required.
-     */
-    private java.util.List<String> allowedResourceActions;
-    /**
-     * Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
-     */
-    private String condition;
-    /**
-     * Set of tasks that may not be performed on a resource. Not yet supported.
-     */
-    private java.util.List<String> excludedResourceActions;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UnifiedRolePermission and sets the default values.
      */
     public UnifiedRolePermission() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,12 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
@@ -59,7 +52,15 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedResourceActions() {
-        return this.allowedResourceActions;
+        return this.getBackingStore().get("allowedResourceActions");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
@@ -67,7 +68,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCondition() {
-        return this.condition;
+        return this.getBackingStore().get("condition");
     }
     /**
      * Gets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
@@ -75,7 +76,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludedResourceActions() {
-        return this.excludedResourceActions;
+        return this.getBackingStore().get("excludedResourceActions");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +97,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      * @param value Value to set for the allowedResourceActions property.
      */
     public void setAllowedResourceActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedResourceActions = value;
+        this.getBackingStore().set("allowedResourceActions", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
      * @param value Value to set for the condition property.
      */
     public void setCondition(@jakarta.annotation.Nullable final String value) {
-        this.condition = value;
+        this.getBackingStore().set("condition", value);
     }
     /**
      * Sets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
      * @param value Value to set for the excludedResourceActions property.
      */
     public void setExcludedResourceActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.excludedResourceActions = value;
+        this.getBackingStore().set("excludedResourceActions", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

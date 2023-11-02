@@ -6,28 +6,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable {
+public class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The purgeAreas property
-     */
-    private EnumSet<PurgeAreas> purgeAreas;
-    /**
-     * The purgeType property
-     */
-    private PurgeType purgeType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new PurgeDataPostRequestBody and sets the default values.
      */
     public PurgeDataPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -46,7 +42,20 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -65,7 +74,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public EnumSet<PurgeAreas> getPurgeAreas() {
-        return this.purgeAreas;
+        return this.getBackingStore().get("purgeAreas");
     }
     /**
      * Gets the purgeType property value. The purgeType property
@@ -73,7 +82,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public PurgeType getPurgeType() {
-        return this.purgeType;
+        return this.getBackingStore().get("purgeType");
     }
     /**
      * Serializes information the current object
@@ -90,20 +99,28 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the purgeAreas property value. The purgeAreas property
      * @param value Value to set for the purgeAreas property.
      */
     public void setPurgeAreas(@jakarta.annotation.Nullable final EnumSet<PurgeAreas> value) {
-        this.purgeAreas = value;
+        this.getBackingStore().set("purgeAreas", value);
     }
     /**
      * Sets the purgeType property value. The purgeType property
      * @param value Value to set for the purgeType property.
      */
     public void setPurgeType(@jakarta.annotation.Nullable final PurgeType value) {
-        this.purgeType = value;
+        this.getBackingStore().set("purgeType", value);
     }
 }

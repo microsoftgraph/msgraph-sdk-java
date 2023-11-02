@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ColumnValidation implements AdditionalDataHolder, Parsable {
+public class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Default BCP 47 language tag for the description.
-     */
-    private String defaultLanguage;
-    /**
-     * Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
-     */
-    private java.util.List<DisplayNameLocalization> descriptions;
-    /**
-     * The formula to validate column value. For examples, see Examples of common formulas in lists.
-     */
-    private String formula;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ColumnValidation and sets the default values.
      */
     public ColumnValidation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the defaultLanguage property value. Default BCP 47 language tag for the description.
@@ -59,7 +60,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
-        return this.defaultLanguage;
+        return this.getBackingStore().get("defaultLanguage");
     }
     /**
      * Gets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
@@ -67,7 +68,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DisplayNameLocalization> getDescriptions() {
-        return this.descriptions;
+        return this.getBackingStore().get("descriptions");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +89,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFormula() {
-        return this.formula;
+        return this.getBackingStore().get("formula");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +97,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the defaultLanguage property value. Default BCP 47 language tag for the description.
      * @param value Value to set for the defaultLanguage property.
      */
     public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {
-        this.defaultLanguage = value;
+        this.getBackingStore().set("defaultLanguage", value);
     }
     /**
      * Sets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
      * @param value Value to set for the descriptions property.
      */
     public void setDescriptions(@jakarta.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
-        this.descriptions = value;
+        this.getBackingStore().set("descriptions", value);
     }
     /**
      * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      * @param value Value to set for the formula property.
      */
     public void setFormula(@jakarta.annotation.Nullable final String value) {
-        this.formula = value;
+        this.getBackingStore().set("formula", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookCommentReply extends Entity implements Parsable {
     /**
-     * The content of a comment reply.
-     */
-    private String content;
-    /**
-     * Indicates the type for the comment reply.
-     */
-    private String contentType;
-    /**
      * Instantiates a new WorkbookCommentReply and sets the default values.
      */
     public WorkbookCommentReply() {
@@ -38,7 +30,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * Gets the contentType property value. Indicates the type for the comment reply.
@@ -46,7 +38,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.getBackingStore().get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment reply.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.getBackingStore().set("contentType", value);
     }
 }

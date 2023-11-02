@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
-     */
-    private String password;
-    /**
-     * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
-     */
-    private String pkcs12Value;
-    /**
      * Instantiates a new Pkcs12Certificate and sets the default values.
      */
     public Pkcs12Certificate() {
@@ -50,7 +42,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.getBackingStore().get("password");
     }
     /**
      * Gets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
@@ -58,7 +50,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     @jakarta.annotation.Nullable
     public String getPkcs12Value() {
-        return this.pkcs12Value;
+        return this.getBackingStore().get("pkcs12Value");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.getBackingStore().set("password", value);
     }
     /**
      * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @param value Value to set for the pkcs12Value property.
      */
     public void setPkcs12Value(@jakarta.annotation.Nullable final String value) {
-        this.pkcs12Value = value;
+        this.getBackingStore().set("pkcs12Value", value);
     }
 }

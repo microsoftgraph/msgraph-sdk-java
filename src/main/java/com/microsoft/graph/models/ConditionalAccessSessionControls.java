@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
-     */
-    private ApplicationEnforcedRestrictionsSessionControl applicationEnforcedRestrictions;
-    /**
-     * Session control to apply cloud app security.
-     */
-    private CloudAppSecuritySessionControl cloudAppSecurity;
-    /**
-     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
-     */
-    private Boolean disableResilienceDefaults;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
-     */
-    private PersistentBrowserSessionControl persistentBrowser;
-    /**
-     * Session control to enforce signin frequency.
-     */
-    private SignInFrequencySessionControl signInFrequency;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConditionalAccessSessionControls and sets the default values.
      */
     public ConditionalAccessSessionControls() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,12 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
@@ -67,7 +52,15 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl getApplicationEnforcedRestrictions() {
-        return this.applicationEnforcedRestrictions;
+        return this.getBackingStore().get("applicationEnforcedRestrictions");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cloudAppSecurity property value. Session control to apply cloud app security.
@@ -75,15 +68,15 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControl getCloudAppSecurity() {
-        return this.cloudAppSecurity;
+        return this.getBackingStore().get("cloudAppSecurity");
     }
     /**
-     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableResilienceDefaults() {
-        return this.disableResilienceDefaults;
+        return this.getBackingStore().get("disableResilienceDefaults");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +99,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
@@ -114,7 +107,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public PersistentBrowserSessionControl getPersistentBrowser() {
-        return this.persistentBrowser;
+        return this.getBackingStore().get("persistentBrowser");
     }
     /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
@@ -122,7 +115,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public SignInFrequencySessionControl getSignInFrequency() {
-        return this.signInFrequency;
+        return this.getBackingStore().get("signInFrequency");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      * @param value Value to set for the applicationEnforcedRestrictions property.
      */
     public void setApplicationEnforcedRestrictions(@jakarta.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
-        this.applicationEnforcedRestrictions = value;
+        this.getBackingStore().set("applicationEnforcedRestrictions", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the cloudAppSecurity property value. Session control to apply cloud app security.
      * @param value Value to set for the cloudAppSecurity property.
      */
     public void setCloudAppSecurity(@jakarta.annotation.Nullable final CloudAppSecuritySessionControl value) {
-        this.cloudAppSecurity = value;
+        this.getBackingStore().set("cloudAppSecurity", value);
     }
     /**
-     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @param value Value to set for the disableResilienceDefaults property.
      */
     public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableResilienceDefaults = value;
+        this.getBackingStore().set("disableResilienceDefaults", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      * @param value Value to set for the persistentBrowser property.
      */
     public void setPersistentBrowser(@jakarta.annotation.Nullable final PersistentBrowserSessionControl value) {
-        this.persistentBrowser = value;
+        this.getBackingStore().set("persistentBrowser", value);
     }
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.
      * @param value Value to set for the signInFrequency property.
      */
     public void setSignInFrequency(@jakarta.annotation.Nullable final SignInFrequencySessionControl value) {
-        this.signInFrequency = value;
+        this.getBackingStore().set("signInFrequency", value);
     }
 }

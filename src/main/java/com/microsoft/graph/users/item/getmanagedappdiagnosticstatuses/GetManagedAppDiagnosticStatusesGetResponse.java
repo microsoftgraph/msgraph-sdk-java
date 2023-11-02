@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetManagedAppDiagnosticStatusesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ManagedAppDiagnosticStatus> value;
-    /**
      * Instantiates a new GetManagedAppDiagnosticStatusesGetResponse and sets the default values.
      */
     public GetManagedAppDiagnosticStatusesGetResponse() {
@@ -46,7 +42,7 @@ public class GetManagedAppDiagnosticStatusesGetResponse extends BaseCollectionPa
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppDiagnosticStatus> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetManagedAppDiagnosticStatusesGetResponse extends BaseCollectionPa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedAppDiagnosticStatus> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }
