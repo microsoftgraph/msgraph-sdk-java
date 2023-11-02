@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkTagMember extends Entity implements Parsable {
     /**
-     * The member's display name.
-     */
-    private String displayName;
-    /**
-     * The ID of the tenant that the tag member is a part of.
-     */
-    private String tenantId;
-    /**
-     * The user ID of the member.
-     */
-    private String userId;
-    /**
      * Instantiates a new TeamworkTagMember and sets the default values.
      */
     public TeamworkTagMember() {
@@ -42,7 +30,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Gets the userId property value. The user ID of the member.
@@ -70,7 +58,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.getBackingStore().get("userId");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class TeamworkTagMember extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
     /**
      * Sets the userId property value. The user ID of the member.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.getBackingStore().set("userId", value);
     }
 }

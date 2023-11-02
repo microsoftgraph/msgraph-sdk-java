@@ -10,22 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
     /**
-     * Description of the object returned. Read-only.
-     */
-    private String description;
-    /**
-     * Name of directory object being returned, like group or application. Read-only.
-     */
-    private String displayName;
-    /**
-     * The tenant identifier for the partner tenant. Read-only.
-     */
-    private UUID externalPartnerTenantId;
-    /**
-     * The type of the referenced object in the partner tenant. Read-only.
-     */
-    private String objectType;
-    /**
      * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
      */
     public DirectoryObjectPartnerReference() {
@@ -48,7 +32,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Name of directory object being returned, like group or application. Read-only.
@@ -56,7 +40,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
@@ -64,7 +48,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @jakarta.annotation.Nullable
     public UUID getExternalPartnerTenantId() {
-        return this.externalPartnerTenantId;
+        return this.getBackingStore().get("externalPartnerTenantId");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +69,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     @jakarta.annotation.Nullable
     public String getObjectType() {
-        return this.objectType;
+        return this.getBackingStore().get("objectType");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Name of directory object being returned, like group or application. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
      * @param value Value to set for the externalPartnerTenantId property.
      */
     public void setExternalPartnerTenantId(@jakarta.annotation.Nullable final UUID value) {
-        this.externalPartnerTenantId = value;
+        this.getBackingStore().set("externalPartnerTenantId", value);
     }
     /**
      * Sets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
      * @param value Value to set for the objectType property.
      */
     public void setObjectType(@jakarta.annotation.Nullable final String value) {
-        this.objectType = value;
+        this.getBackingStore().set("objectType", value);
     }
 }

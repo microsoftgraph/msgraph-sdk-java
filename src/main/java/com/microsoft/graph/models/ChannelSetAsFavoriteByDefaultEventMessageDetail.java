@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Unique identifier of the channel.
-     */
-    private String channelId;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
      * Instantiates a new ChannelSetAsFavoriteByDefaultEventMessageDetail and sets the default values.
      */
     public ChannelSetAsFavoriteByDefaultEventMessageDetail() {
@@ -39,7 +31,7 @@ public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessag
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
-        return this.channelId;
+        return this.getBackingStore().get("channelId");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessag
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.getBackingStore().get("initiator");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessag
      * @param value Value to set for the channelId property.
      */
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
-        this.channelId = value;
+        this.getBackingStore().set("channelId", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.getBackingStore().set("initiator", value);
     }
 }

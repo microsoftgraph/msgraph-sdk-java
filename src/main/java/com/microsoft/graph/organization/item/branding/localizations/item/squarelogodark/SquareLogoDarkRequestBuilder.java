@@ -64,8 +64,8 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body) {
-        return put(body, null);
+    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, final String contentType) {
+        return put(body, contentType, null);
     }
     /**
      * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
@@ -74,9 +74,10 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, final String contentType, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
+        Objects.requireNonNull(contentType);
+        final RequestInformation requestInfo = toPutRequestInformation(body, contentType, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -107,6 +108,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "image/bmp, image/jpg, image/jpeg, image/gif, image/vnd.microsoft.icon, image/png, image/tiff, application/json, application/json");
         return requestInfo;
     }
     /**
@@ -115,8 +117,8 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body) {
-        return toPutRequestInformation(body, null);
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, final String contentType) {
+        return toPutRequestInformation(body, contentType, null);
     }
     /**
      * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
@@ -125,8 +127,9 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, final String contentType, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
+        Objects.requireNonNull(contentType);
         final RequestInformation requestInfo = new RequestInformation();
         if (requestConfiguration != null) {
             final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
@@ -137,7 +140,8 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PUT;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
+        requestInfo.setStreamContent(body, contentType);
         return requestInfo;
     }
     /**

@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
+public class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of days that a request can be pending a response before it is automatically denied.
-     */
-    private Integer approvalStageTimeOutInDays;
-    /**
-     * The escalation approvers for this stage when the primary approvers don't respond.
-     */
-    private java.util.List<SubjectSet> escalationApprovers;
-    /**
-     * The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
-     */
-    private Integer escalationTimeInMinutes;
-    /**
-     * Indicates whether the approver must provide justification for their reponse.
-     */
-    private Boolean isApproverJustificationRequired;
-    /**
-     * Indicates whether escalation if enabled.
-     */
-    private Boolean isEscalationEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The primary approvers of this stage.
-     */
-    private java.util.List<SubjectSet> primaryApprovers;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UnifiedApprovalStage and sets the default values.
      */
     public UnifiedApprovalStage() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the approvalStageTimeOutInDays property value. The number of days that a request can be pending a response before it is automatically denied.
@@ -71,7 +52,15 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getApprovalStageTimeOutInDays() {
-        return this.approvalStageTimeOutInDays;
+        return this.getBackingStore().get("approvalStageTimeOutInDays");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don't respond.
@@ -79,7 +68,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getEscalationApprovers() {
-        return this.escalationApprovers;
+        return this.getBackingStore().get("escalationApprovers");
     }
     /**
      * Gets the escalationTimeInMinutes property value. The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
@@ -87,7 +76,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getEscalationTimeInMinutes() {
-        return this.escalationTimeInMinutes;
+        return this.getBackingStore().get("escalationTimeInMinutes");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +100,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
-        return this.isApproverJustificationRequired;
+        return this.getBackingStore().get("isApproverJustificationRequired");
     }
     /**
      * Gets the isEscalationEnabled property value. Indicates whether escalation if enabled.
@@ -119,7 +108,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
-        return this.isEscalationEnabled;
+        return this.getBackingStore().get("isEscalationEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -127,7 +116,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the primaryApprovers property value. The primary approvers of this stage.
@@ -135,7 +124,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryApprovers() {
-        return this.primaryApprovers;
+        return this.getBackingStore().get("primaryApprovers");
     }
     /**
      * Serializes information the current object
@@ -150,62 +139,68 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isEscalationEnabled", this.getIsEscalationEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("primaryApprovers", this.getPrimaryApprovers());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the approvalStageTimeOutInDays property value. The number of days that a request can be pending a response before it is automatically denied.
      * @param value Value to set for the approvalStageTimeOutInDays property.
      */
     public void setApprovalStageTimeOutInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.approvalStageTimeOutInDays = value;
+        this.getBackingStore().set("approvalStageTimeOutInDays", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don't respond.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.escalationApprovers = value;
+        this.getBackingStore().set("escalationApprovers", value);
     }
     /**
      * Sets the escalationTimeInMinutes property value. The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
      * @param value Value to set for the escalationTimeInMinutes property.
      */
     public void setEscalationTimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.escalationTimeInMinutes = value;
+        this.getBackingStore().set("escalationTimeInMinutes", value);
     }
     /**
      * Sets the isApproverJustificationRequired property value. Indicates whether the approver must provide justification for their reponse.
      * @param value Value to set for the isApproverJustificationRequired property.
      */
     public void setIsApproverJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isApproverJustificationRequired = value;
+        this.getBackingStore().set("isApproverJustificationRequired", value);
     }
     /**
      * Sets the isEscalationEnabled property value. Indicates whether escalation if enabled.
      * @param value Value to set for the isEscalationEnabled property.
      */
     public void setIsEscalationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEscalationEnabled = value;
+        this.getBackingStore().set("isEscalationEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the primaryApprovers property value. The primary approvers of this stage.
      * @param value Value to set for the primaryApprovers property.
      */
     public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
-        this.primaryApprovers = value;
+        this.getBackingStore().set("primaryApprovers", value);
     }
 }

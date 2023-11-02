@@ -4,7 +4,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -13,54 +12,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
-    /**
-     * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
-     */
-    private SharedPCAccountManagerPolicy accountManagerPolicy;
-    /**
-     * Type of accounts that are allowed to share the PC.
-     */
-    private EnumSet<SharedPCAllowedAccountType> allowedAccounts;
-    /**
-     * Specifies whether local storage is allowed on a shared PC.
-     */
-    private Boolean allowLocalStorage;
-    /**
-     * Disables the account manager for shared PC mode.
-     */
-    private Boolean disableAccountManager;
-    /**
-     * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
-     */
-    private Boolean disableEduPolicies;
-    /**
-     * Specifies whether the default shared PC power policies should be disabled.
-     */
-    private Boolean disablePowerPolicies;
-    /**
-     * Disables the requirement to sign in whenever the device wakes up from sleep mode.
-     */
-    private Boolean disableSignInOnResume;
-    /**
-     * Enables shared PC mode and applies the shared pc policies.
-     */
-    private Boolean enabled;
-    /**
-     * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
-     */
-    private Integer idleTimeBeforeSleepInSeconds;
-    /**
-     * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
-     */
-    private String kioskAppDisplayName;
-    /**
-     * Specifies the application user model ID of the app to use with assigned access.
-     */
-    private String kioskAppUserModelId;
-    /**
-     * Specifies the daily start time of maintenance hour.
-     */
-    private LocalTime maintenanceStartTime;
     /**
      * Instantiates a new SharedPCConfiguration and sets the default values.
      */
@@ -84,7 +35,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public SharedPCAccountManagerPolicy getAccountManagerPolicy() {
-        return this.accountManagerPolicy;
+        return this.getBackingStore().get("accountManagerPolicy");
     }
     /**
      * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
@@ -92,7 +43,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public EnumSet<SharedPCAllowedAccountType> getAllowedAccounts() {
-        return this.allowedAccounts;
+        return this.getBackingStore().get("allowedAccounts");
     }
     /**
      * Gets the allowLocalStorage property value. Specifies whether local storage is allowed on a shared PC.
@@ -100,7 +51,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowLocalStorage() {
-        return this.allowLocalStorage;
+        return this.getBackingStore().get("allowLocalStorage");
     }
     /**
      * Gets the disableAccountManager property value. Disables the account manager for shared PC mode.
@@ -108,7 +59,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAccountManager() {
-        return this.disableAccountManager;
+        return this.getBackingStore().get("disableAccountManager");
     }
     /**
      * Gets the disableEduPolicies property value. Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
@@ -116,7 +67,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableEduPolicies() {
-        return this.disableEduPolicies;
+        return this.getBackingStore().get("disableEduPolicies");
     }
     /**
      * Gets the disablePowerPolicies property value. Specifies whether the default shared PC power policies should be disabled.
@@ -124,7 +75,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getDisablePowerPolicies() {
-        return this.disablePowerPolicies;
+        return this.getBackingStore().get("disablePowerPolicies");
     }
     /**
      * Gets the disableSignInOnResume property value. Disables the requirement to sign in whenever the device wakes up from sleep mode.
@@ -132,7 +83,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableSignInOnResume() {
-        return this.disableSignInOnResume;
+        return this.getBackingStore().get("disableSignInOnResume");
     }
     /**
      * Gets the enabled property value. Enables shared PC mode and applies the shared pc policies.
@@ -140,7 +91,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
-        return this.enabled;
+        return this.getBackingStore().get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -169,7 +120,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public Integer getIdleTimeBeforeSleepInSeconds() {
-        return this.idleTimeBeforeSleepInSeconds;
+        return this.getBackingStore().get("idleTimeBeforeSleepInSeconds");
     }
     /**
      * Gets the kioskAppDisplayName property value. Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
@@ -177,7 +128,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getKioskAppDisplayName() {
-        return this.kioskAppDisplayName;
+        return this.getBackingStore().get("kioskAppDisplayName");
     }
     /**
      * Gets the kioskAppUserModelId property value. Specifies the application user model ID of the app to use with assigned access.
@@ -185,7 +136,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getKioskAppUserModelId() {
-        return this.kioskAppUserModelId;
+        return this.getBackingStore().get("kioskAppUserModelId");
     }
     /**
      * Gets the maintenanceStartTime property value. Specifies the daily start time of maintenance hour.
@@ -193,7 +144,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @jakarta.annotation.Nullable
     public LocalTime getMaintenanceStartTime() {
-        return this.maintenanceStartTime;
+        return this.getBackingStore().get("maintenanceStartTime");
     }
     /**
      * Serializes information the current object
@@ -220,83 +171,83 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the accountManagerPolicy property.
      */
     public void setAccountManagerPolicy(@jakarta.annotation.Nullable final SharedPCAccountManagerPolicy value) {
-        this.accountManagerPolicy = value;
+        this.getBackingStore().set("accountManagerPolicy", value);
     }
     /**
      * Sets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @param value Value to set for the allowedAccounts property.
      */
     public void setAllowedAccounts(@jakarta.annotation.Nullable final EnumSet<SharedPCAllowedAccountType> value) {
-        this.allowedAccounts = value;
+        this.getBackingStore().set("allowedAccounts", value);
     }
     /**
      * Sets the allowLocalStorage property value. Specifies whether local storage is allowed on a shared PC.
      * @param value Value to set for the allowLocalStorage property.
      */
     public void setAllowLocalStorage(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowLocalStorage = value;
+        this.getBackingStore().set("allowLocalStorage", value);
     }
     /**
      * Sets the disableAccountManager property value. Disables the account manager for shared PC mode.
      * @param value Value to set for the disableAccountManager property.
      */
     public void setDisableAccountManager(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableAccountManager = value;
+        this.getBackingStore().set("disableAccountManager", value);
     }
     /**
      * Sets the disableEduPolicies property value. Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
      * @param value Value to set for the disableEduPolicies property.
      */
     public void setDisableEduPolicies(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableEduPolicies = value;
+        this.getBackingStore().set("disableEduPolicies", value);
     }
     /**
      * Sets the disablePowerPolicies property value. Specifies whether the default shared PC power policies should be disabled.
      * @param value Value to set for the disablePowerPolicies property.
      */
     public void setDisablePowerPolicies(@jakarta.annotation.Nullable final Boolean value) {
-        this.disablePowerPolicies = value;
+        this.getBackingStore().set("disablePowerPolicies", value);
     }
     /**
      * Sets the disableSignInOnResume property value. Disables the requirement to sign in whenever the device wakes up from sleep mode.
      * @param value Value to set for the disableSignInOnResume property.
      */
     public void setDisableSignInOnResume(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableSignInOnResume = value;
+        this.getBackingStore().set("disableSignInOnResume", value);
     }
     /**
      * Sets the enabled property value. Enables shared PC mode and applies the shared pc policies.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.enabled = value;
+        this.getBackingStore().set("enabled", value);
     }
     /**
      * Sets the idleTimeBeforeSleepInSeconds property value. Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
      * @param value Value to set for the idleTimeBeforeSleepInSeconds property.
      */
     public void setIdleTimeBeforeSleepInSeconds(@jakarta.annotation.Nullable final Integer value) {
-        this.idleTimeBeforeSleepInSeconds = value;
+        this.getBackingStore().set("idleTimeBeforeSleepInSeconds", value);
     }
     /**
      * Sets the kioskAppDisplayName property value. Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
      * @param value Value to set for the kioskAppDisplayName property.
      */
     public void setKioskAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.kioskAppDisplayName = value;
+        this.getBackingStore().set("kioskAppDisplayName", value);
     }
     /**
      * Sets the kioskAppUserModelId property value. Specifies the application user model ID of the app to use with assigned access.
      * @param value Value to set for the kioskAppUserModelId property.
      */
     public void setKioskAppUserModelId(@jakarta.annotation.Nullable final String value) {
-        this.kioskAppUserModelId = value;
+        this.getBackingStore().set("kioskAppUserModelId", value);
     }
     /**
      * Sets the maintenanceStartTime property value. Specifies the daily start time of maintenance hour.
      * @param value Value to set for the maintenanceStartTime property.
      */
     public void setMaintenanceStartTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.maintenanceStartTime = value;
+        this.getBackingStore().set("maintenanceStartTime", value);
     }
 }

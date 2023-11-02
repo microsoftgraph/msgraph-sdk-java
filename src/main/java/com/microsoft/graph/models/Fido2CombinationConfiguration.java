@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
     /**
-     * A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
-     */
-    private java.util.List<String> allowedAAGUIDs;
-    /**
      * Instantiates a new Fido2CombinationConfiguration and sets the default values.
      */
     public Fido2CombinationConfiguration() {
@@ -35,7 +31,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAAGUIDs() {
-        return this.allowedAAGUIDs;
+        return this.getBackingStore().get("allowedAAGUIDs");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * @param value Value to set for the allowedAAGUIDs property.
      */
     public void setAllowedAAGUIDs(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedAAGUIDs = value;
+        this.getBackingStore().set("allowedAAGUIDs", value);
     }
 }

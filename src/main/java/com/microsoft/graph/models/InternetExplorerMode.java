@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InternetExplorerMode extends Entity implements Parsable {
     /**
-     * A collection of site lists to support Internet Explorer mode.
-     */
-    private java.util.List<BrowserSiteList> siteLists;
-    /**
      * Instantiates a new InternetExplorerMode and sets the default values.
      */
     public InternetExplorerMode() {
@@ -44,7 +40,7 @@ public class InternetExplorerMode extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteList> getSiteLists() {
-        return this.siteLists;
+        return this.getBackingStore().get("siteLists");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class InternetExplorerMode extends Entity implements Parsable {
      * @param value Value to set for the siteLists property.
      */
     public void setSiteLists(@jakarta.annotation.Nullable final java.util.List<BrowserSiteList> value) {
-        this.siteLists = value;
+        this.getBackingStore().set("siteLists", value);
     }
 }

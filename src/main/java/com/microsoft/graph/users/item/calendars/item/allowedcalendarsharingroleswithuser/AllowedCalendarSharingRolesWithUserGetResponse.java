@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedCalendarSharingRolesWithUserGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CalendarRoleType> value;
-    /**
      * Instantiates a new AllowedCalendarSharingRolesWithUserGetResponse and sets the default values.
      */
     public AllowedCalendarSharingRolesWithUserGetResponse() {
@@ -46,7 +42,7 @@ public class AllowedCalendarSharingRolesWithUserGetResponse extends BaseCollecti
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarRoleType> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class AllowedCalendarSharingRolesWithUserGetResponse extends BaseCollecti
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CalendarRoleType> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

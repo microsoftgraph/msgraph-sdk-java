@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessScheduleRequest extends Request implements Parsable {
     /**
-     * Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
-     */
-    private ScheduleRequestActions action;
-    /**
-     * Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
-     */
-    private Boolean isValidationOnly;
-    /**
-     * A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
-     */
-    private String justification;
-    /**
-     * The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
-     * Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
-     */
-    private TicketInfo ticketInfo;
-    /**
      * Instantiates a new PrivilegedAccessScheduleRequest and sets the default values.
      */
     public PrivilegedAccessScheduleRequest() {
@@ -58,7 +38,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      */
     @jakarta.annotation.Nullable
     public ScheduleRequestActions getAction() {
-        return this.action;
+        return this.getBackingStore().get("action");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +60,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
-        return this.isValidationOnly;
+        return this.getBackingStore().get("isValidationOnly");
     }
     /**
      * Gets the justification property value. A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
@@ -88,7 +68,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.getBackingStore().get("justification");
     }
     /**
      * Gets the scheduleInfo property value. The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
@@ -96,7 +76,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.getBackingStore().get("scheduleInfo");
     }
     /**
      * Gets the ticketInfo property value. Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
@@ -104,7 +84,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      */
     @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {
-        return this.ticketInfo;
+        return this.getBackingStore().get("ticketInfo");
     }
     /**
      * Serializes information the current object
@@ -124,34 +104,34 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final ScheduleRequestActions value) {
-        this.action = value;
+        this.getBackingStore().set("action", value);
     }
     /**
      * Sets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @param value Value to set for the isValidationOnly property.
      */
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.isValidationOnly = value;
+        this.getBackingStore().set("isValidationOnly", value);
     }
     /**
      * Sets the justification property value. A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.getBackingStore().set("justification", value);
     }
     /**
      * Sets the scheduleInfo property value. The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.getBackingStore().set("scheduleInfo", value);
     }
     /**
      * Sets the ticketInfo property value. Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
      * @param value Value to set for the ticketInfo property.
      */
     public void setTicketInfo(@jakarta.annotation.Nullable final TicketInfo value) {
-        this.ticketInfo = value;
+        this.getBackingStore().set("ticketInfo", value);
     }
 }

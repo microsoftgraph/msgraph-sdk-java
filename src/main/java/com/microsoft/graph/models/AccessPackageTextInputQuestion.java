@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable {
     /**
-     * Indicates whether the answer is in single or multiple line format.
-     */
-    private Boolean isSingleLineQuestion;
-    /**
-     * The regular expression pattern that any answer to this question must match.
-     */
-    private String regexPattern;
-    /**
      * Instantiates a new AccessPackageTextInputQuestion and sets the default values.
      */
     public AccessPackageTextInputQuestion() {
@@ -50,7 +42,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSingleLineQuestion() {
-        return this.isSingleLineQuestion;
+        return this.getBackingStore().get("isSingleLineQuestion");
     }
     /**
      * Gets the regexPattern property value. The regular expression pattern that any answer to this question must match.
@@ -58,7 +50,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      */
     @jakarta.annotation.Nullable
     public String getRegexPattern() {
-        return this.regexPattern;
+        return this.getBackingStore().get("regexPattern");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      * @param value Value to set for the isSingleLineQuestion property.
      */
     public void setIsSingleLineQuestion(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSingleLineQuestion = value;
+        this.getBackingStore().set("isSingleLineQuestion", value);
     }
     /**
      * Sets the regexPattern property value. The regular expression pattern that any answer to this question must match.
      * @param value Value to set for the regexPattern property.
      */
     public void setRegexPattern(@jakarta.annotation.Nullable final String value) {
-        this.regexPattern = value;
+        this.getBackingStore().set("regexPattern", value);
     }
 }

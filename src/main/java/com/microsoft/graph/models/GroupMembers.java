@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupMembers extends SubjectSet implements Parsable {
     /**
-     * The name of the group in Azure AD. Read only.
-     */
-    private String description;
-    /**
-     * The ID of the group in Azure AD.
-     */
-    private String groupId;
-    /**
      * Instantiates a new GroupMembers and sets the default values.
      */
     public GroupMembers() {
@@ -34,12 +26,12 @@ public class GroupMembers extends SubjectSet implements Parsable {
         return new GroupMembers();
     }
     /**
-     * Gets the description property value. The name of the group in Azure AD. Read only.
+     * Gets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * The deserialization information for the current model
@@ -53,12 +45,12 @@ public class GroupMembers extends SubjectSet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groupId property value. The ID of the group in Azure AD.
+     * Gets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.getBackingStore().get("groupId");
     }
     /**
      * Serializes information the current object
@@ -71,17 +63,17 @@ public class GroupMembers extends SubjectSet implements Parsable {
         writer.writeStringValue("groupId", this.getGroupId());
     }
     /**
-     * Sets the description property value. The name of the group in Azure AD. Read only.
+     * Sets the description property value. The name of the group in Microsoft Entra ID. Read only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
-     * Sets the groupId property value. The ID of the group in Azure AD.
+     * Sets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.getBackingStore().set("groupId", value);
     }
 }

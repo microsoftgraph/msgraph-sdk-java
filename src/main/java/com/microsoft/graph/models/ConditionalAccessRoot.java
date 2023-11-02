@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
-     */
-    private java.util.List<AuthenticationContextClassReference> authenticationContextClassReferences;
-    /**
-     * The authenticationStrength property
-     */
-    private AuthenticationStrengthRoot authenticationStrength;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
-     */
-    private java.util.List<NamedLocation> namedLocations;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
-     */
-    private java.util.List<ConditionalAccessPolicy> policies;
-    /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
-     */
-    private java.util.List<ConditionalAccessTemplate> templates;
-    /**
      * Instantiates a new ConditionalAccessRoot and sets the default values.
      */
     public ConditionalAccessRoot() {
@@ -50,7 +30,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationContextClassReference> getAuthenticationContextClassReferences() {
-        return this.authenticationContextClassReferences;
+        return this.getBackingStore().get("authenticationContextClassReferences");
     }
     /**
      * Gets the authenticationStrength property value. The authenticationStrength property
@@ -58,7 +38,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthRoot getAuthenticationStrength() {
-        return this.authenticationStrength;
+        return this.getBackingStore().get("authenticationStrength");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +60,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<NamedLocation> getNamedLocations() {
-        return this.namedLocations;
+        return this.getBackingStore().get("namedLocations");
     }
     /**
      * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
@@ -88,7 +68,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getPolicies() {
-        return this.policies;
+        return this.getBackingStore().get("policies");
     }
     /**
      * Gets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
@@ -96,7 +76,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessTemplate> getTemplates() {
-        return this.templates;
+        return this.getBackingStore().get("templates");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationContextClassReferences property.
      */
     public void setAuthenticationContextClassReferences(@jakarta.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
-        this.authenticationContextClassReferences = value;
+        this.getBackingStore().set("authenticationContextClassReferences", value);
     }
     /**
      * Sets the authenticationStrength property value. The authenticationStrength property
      * @param value Value to set for the authenticationStrength property.
      */
     public void setAuthenticationStrength(@jakarta.annotation.Nullable final AuthenticationStrengthRoot value) {
-        this.authenticationStrength = value;
+        this.getBackingStore().set("authenticationStrength", value);
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
      * @param value Value to set for the namedLocations property.
      */
     public void setNamedLocations(@jakarta.annotation.Nullable final java.util.List<NamedLocation> value) {
-        this.namedLocations = value;
+        this.getBackingStore().set("namedLocations", value);
     }
     /**
      * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param value Value to set for the policies property.
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this.policies = value;
+        this.getBackingStore().set("policies", value);
     }
     /**
      * Sets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param value Value to set for the templates property.
      */
     public void setTemplates(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessTemplate> value) {
-        this.templates = value;
+        this.getBackingStore().set("templates", value);
     }
 }

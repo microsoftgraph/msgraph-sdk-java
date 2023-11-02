@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /**
-     * The end date of the schedule instance.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     */
-    private String memberType;
-    /**
-     * The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
-     */
-    private String roleEligibilityScheduleId;
-    /**
-     * When this instance starts.
-     */
-    private OffsetDateTime startDateTime;
-    /**
      * Instantiates a new UnifiedRoleEligibilityScheduleInstance and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleInstance() {
@@ -47,7 +31,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +52,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
-        return this.memberType;
+        return this.getBackingStore().get("memberType");
     }
     /**
      * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
@@ -76,7 +60,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @jakarta.annotation.Nullable
     public String getRoleEligibilityScheduleId() {
-        return this.roleEligibilityScheduleId;
+        return this.getBackingStore().get("roleEligibilityScheduleId");
     }
     /**
      * Gets the startDateTime property value. When this instance starts.
@@ -84,7 +68,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.memberType = value;
+        this.getBackingStore().set("memberType", value);
     }
     /**
      * Sets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @param value Value to set for the roleEligibilityScheduleId property.
      */
     public void setRoleEligibilityScheduleId(@jakarta.annotation.Nullable final String value) {
-        this.roleEligibilityScheduleId = value;
+        this.getBackingStore().set("roleEligibilityScheduleId", value);
     }
     /**
      * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
 }

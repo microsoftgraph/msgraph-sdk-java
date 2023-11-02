@@ -13,46 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSiteList extends Entity implements Parsable {
     /**
-     * The description of the site list.
-     */
-    private String description;
-    /**
-     * The name of the site list.
-     */
-    private String displayName;
-    /**
-     * The user who last modified the site list.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time when the site list was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The user who published the site list.
-     */
-    private IdentitySet publishedBy;
-    /**
-     * The date and time when the site list was published.
-     */
-    private OffsetDateTime publishedDateTime;
-    /**
-     * The current revision of the site list.
-     */
-    private String revision;
-    /**
-     * A collection of shared cookies defined for the site list.
-     */
-    private java.util.List<BrowserSharedCookie> sharedCookies;
-    /**
-     * A collection of sites defined for the site list.
-     */
-    private java.util.List<BrowserSite> sites;
-    /**
-     * The status property
-     */
-    private BrowserSiteListStatus status;
-    /**
      * Instantiates a new BrowserSiteList and sets the default values.
      */
     public BrowserSiteList() {
@@ -74,7 +34,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The name of the site list.
@@ -82,7 +42,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +69,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.getBackingStore().get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the site list was last modified.
@@ -117,7 +77,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the publishedBy property value. The user who published the site list.
@@ -125,7 +85,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getPublishedBy() {
-        return this.publishedBy;
+        return this.getBackingStore().get("publishedBy");
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the site list was published.
@@ -133,7 +93,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
-        return this.publishedDateTime;
+        return this.getBackingStore().get("publishedDateTime");
     }
     /**
      * Gets the revision property value. The current revision of the site list.
@@ -141,7 +101,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRevision() {
-        return this.revision;
+        return this.getBackingStore().get("revision");
     }
     /**
      * Gets the sharedCookies property value. A collection of shared cookies defined for the site list.
@@ -149,7 +109,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookie> getSharedCookies() {
-        return this.sharedCookies;
+        return this.getBackingStore().get("sharedCookies");
     }
     /**
      * Gets the sites property value. A collection of sites defined for the site list.
@@ -157,7 +117,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<BrowserSite> getSites() {
-        return this.sites;
+        return this.getBackingStore().get("sites");
     }
     /**
      * Gets the status property value. The status property
@@ -165,7 +125,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BrowserSiteListStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The name of the site list.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the site list.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.getBackingStore().set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the publishedBy property value. The user who published the site list.
      * @param value Value to set for the publishedBy property.
      */
     public void setPublishedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.publishedBy = value;
+        this.getBackingStore().set("publishedBy", value);
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the site list was published.
      * @param value Value to set for the publishedDateTime property.
      */
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.publishedDateTime = value;
+        this.getBackingStore().set("publishedDateTime", value);
     }
     /**
      * Sets the revision property value. The current revision of the site list.
      * @param value Value to set for the revision property.
      */
     public void setRevision(@jakarta.annotation.Nullable final String value) {
-        this.revision = value;
+        this.getBackingStore().set("revision", value);
     }
     /**
      * Sets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @param value Value to set for the sharedCookies property.
      */
     public void setSharedCookies(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
-        this.sharedCookies = value;
+        this.getBackingStore().set("sharedCookies", value);
     }
     /**
      * Sets the sites property value. A collection of sites defined for the site list.
      * @param value Value to set for the sites property.
      */
     public void setSites(@jakarta.annotation.Nullable final java.util.List<BrowserSite> value) {
-        this.sites = value;
+        this.getBackingStore().set("sites", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final BrowserSiteListStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

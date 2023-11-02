@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
     /**
-     * The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     */
-    private java.util.List<String> members;
-    /**
      * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
      */
     public DeviceAndAppManagementRoleAssignment() {
@@ -47,7 +43,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMembers() {
-        return this.members;
+        return this.getBackingStore().get("members");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.members = value;
+        this.getBackingStore().set("members", value);
     }
 }

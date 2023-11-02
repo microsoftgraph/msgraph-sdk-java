@@ -13,38 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends Entity implements Parsable {
     /**
-     * The number of crashes for the app. Valid values -2147483648 to 2147483647
-     */
-    private Integer appCrashCount;
-    /**
-     * The friendly name of the application.
-     */
-    private String appDisplayName;
-    /**
-     * The name of the application.
-     */
-    private String appName;
-    /**
-     * The publisher of the application.
-     */
-    private String appPublisher;
-    /**
-     * The version of the application.
-     */
-    private String appVersion;
-    /**
-     * The name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceDisplayName;
-    /**
-     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceId;
-    /**
-     * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     */
-    private OffsetDateTime processedDateTime;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId() {
@@ -66,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this.appCrashCount;
+        return this.getBackingStore().get("appCrashCount");
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application.
@@ -74,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.getBackingStore().get("appDisplayName");
     }
     /**
      * Gets the appName property value. The name of the application.
@@ -82,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.getBackingStore().get("appName");
     }
     /**
      * Gets the appPublisher property value. The publisher of the application.
@@ -90,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.getBackingStore().get("appPublisher");
     }
     /**
      * Gets the appVersion property value. The version of the application.
@@ -98,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
-        return this.appVersion;
+        return this.getBackingStore().get("appVersion");
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
@@ -106,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.getBackingStore().get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
@@ -114,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.getBackingStore().get("deviceId");
     }
     /**
      * The deserialization information for the current model
@@ -139,7 +107,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {
-        return this.processedDateTime;
+        return this.getBackingStore().get("processedDateTime");
     }
     /**
      * Serializes information the current object
@@ -162,55 +130,55 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appCrashCount property.
      */
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appCrashCount = value;
+        this.getBackingStore().set("appCrashCount", value);
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.getBackingStore().set("appDisplayName", value);
     }
     /**
      * Sets the appName property value. The name of the application.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.getBackingStore().set("appName", value);
     }
     /**
      * Sets the appPublisher property value. The publisher of the application.
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.getBackingStore().set("appPublisher", value);
     }
     /**
      * Sets the appVersion property value. The version of the application.
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.appVersion = value;
+        this.getBackingStore().set("appVersion", value);
     }
     /**
      * Sets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.getBackingStore().set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.getBackingStore().set("deviceId", value);
     }
     /**
      * Sets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @param value Value to set for the processedDateTime property.
      */
     public void setProcessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.processedDateTime = value;
+        this.getBackingStore().set("processedDateTime", value);
     }
 }

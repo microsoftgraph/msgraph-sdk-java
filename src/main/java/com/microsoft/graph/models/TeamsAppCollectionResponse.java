@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TeamsApp> value;
-    /**
      * Instantiates a new TeamsAppCollectionResponse and sets the default values.
      */
     public TeamsAppCollectionResponse() {
@@ -44,7 +40,7 @@ public class TeamsAppCollectionResponse extends BaseCollectionPaginationCountRes
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsApp> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TeamsAppCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

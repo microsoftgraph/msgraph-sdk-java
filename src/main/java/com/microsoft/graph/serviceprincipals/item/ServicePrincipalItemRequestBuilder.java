@@ -22,6 +22,7 @@ import com.microsoft.graph.serviceprincipals.item.memberof.MemberOfRequestBuilde
 import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.remotedesktopsecurityconfiguration.RemoteDesktopSecurityConfigurationRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removekey.RemoveKeyRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removepassword.RemovePasswordRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.restore.RestoreRequestBuilder;
@@ -188,6 +189,13 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the remoteDesktopSecurityConfiguration property of the microsoft.graph.servicePrincipal entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RemoteDesktopSecurityConfigurationRequestBuilder remoteDesktopSecurityConfiguration() {
+        return new RemoteDesktopSecurityConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the removeKey method.
      */
     @jakarta.annotation.Nonnull
@@ -345,6 +353,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -373,7 +382,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -404,7 +413,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

@@ -10,18 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LicenseDetails extends Entity implements Parsable {
     /**
-     * Information about the service plans assigned with the license. Read-only, Not nullable
-     */
-    private java.util.List<ServicePlanInfo> servicePlans;
-    /**
-     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-     */
-    private UUID skuId;
-    /**
-     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
-     */
-    private String skuPartNumber;
-    /**
      * Instantiates a new LicenseDetails and sets the default values.
      */
     public LicenseDetails() {
@@ -55,7 +43,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {
-        return this.servicePlans;
+        return this.getBackingStore().get("servicePlans");
     }
     /**
      * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
@@ -63,7 +51,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getSkuId() {
-        return this.skuId;
+        return this.getBackingStore().get("skuId");
     }
     /**
      * Gets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
@@ -71,7 +59,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSkuPartNumber() {
-        return this.skuPartNumber;
+        return this.getBackingStore().get("skuPartNumber");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class LicenseDetails extends Entity implements Parsable {
      * @param value Value to set for the servicePlans property.
      */
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
-        this.servicePlans = value;
+        this.getBackingStore().set("servicePlans", value);
     }
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
-        this.skuId = value;
+        this.getBackingStore().set("skuId", value);
     }
     /**
      * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
      * @param value Value to set for the skuPartNumber property.
      */
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {
-        this.skuPartNumber = value;
+        this.getBackingStore().set("skuPartNumber", value);
     }
 }

@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
+public class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
-     */
-    private Boolean isDialInBypassEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-     */
-    private LobbyBypassScope scope;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new LobbyBypassSettings and sets the default values.
      */
     public LobbyBypassSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +72,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDialInBypassEnabled() {
-        return this.isDialInBypassEnabled;
+        return this.getBackingStore().get("isDialInBypassEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +80,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
@@ -83,7 +88,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LobbyBypassScope getScope() {
-        return this.scope;
+        return this.getBackingStore().get("scope");
     }
     /**
      * Serializes information the current object
@@ -94,34 +99,40 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isDialInBypassEnabled", this.getIsDialInBypassEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("scope", this.getScope());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
      * @param value Value to set for the isDialInBypassEnabled property.
      */
     public void setIsDialInBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDialInBypassEnabled = value;
+        this.getBackingStore().set("isDialInBypassEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final LobbyBypassScope value) {
-        this.scope = value;
+        this.getBackingStore().set("scope", value);
     }
 }

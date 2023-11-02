@@ -5,27 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NormSDistPostRequestBody implements AdditionalDataHolder, Parsable {
+public class NormSDistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The cumulative property
-     */
-    private Json cumulative;
-    /**
-     * The z property
-     */
-    private Json z;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new NormSDistPostRequestBody and sets the default values.
      */
     public NormSDistPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +40,20 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the cumulative property value. The cumulative property
@@ -52,7 +61,7 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getCumulative() {
-        return this.cumulative;
+        return this.getBackingStore().get("cumulative");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +80,7 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getZ() {
-        return this.z;
+        return this.getBackingStore().get("z");
     }
     /**
      * Serializes information the current object
@@ -81,27 +90,33 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cumulative", this.getCumulative());
         writer.writeObjectValue("z", this.getZ());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
-        this.cumulative = value;
+        this.getBackingStore().set("cumulative", value);
     }
     /**
      * Sets the z property value. The z property
      * @param value Value to set for the z property.
      */
     public void setZ(@jakarta.annotation.Nullable final Json value) {
-        this.z = value;
+        this.getBackingStore().set("z", value);
     }
 }

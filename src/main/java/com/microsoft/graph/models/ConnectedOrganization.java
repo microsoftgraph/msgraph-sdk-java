@@ -10,38 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectedOrganization extends Entity implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the connected organization.
-     */
-    private String description;
-    /**
-     * The display name of the connected organization. Supports $filter (eq).
-     */
-    private String displayName;
-    /**
-     * The externalSponsors property
-     */
-    private java.util.List<DirectoryObject> externalSponsors;
-    /**
-     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
-     */
-    private java.util.List<IdentitySource> identitySources;
-    /**
-     * The internalSponsors property
-     */
-    private java.util.List<DirectoryObject> internalSponsors;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
-     */
-    private ConnectedOrganizationState state;
-    /**
      * Instantiates a new ConnectedOrganization and sets the default values.
      */
     public ConnectedOrganization() {
@@ -63,7 +31,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the connected organization.
@@ -71,7 +39,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The display name of the connected organization. Supports $filter (eq).
@@ -79,7 +47,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the externalSponsors property value. The externalSponsors property
@@ -87,7 +55,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getExternalSponsors() {
-        return this.externalSponsors;
+        return this.getBackingStore().get("externalSponsors");
     }
     /**
      * The deserialization information for the current model
@@ -112,7 +80,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySource> getIdentitySources() {
-        return this.identitySources;
+        return this.getBackingStore().get("identitySources");
     }
     /**
      * Gets the internalSponsors property value. The internalSponsors property
@@ -120,7 +88,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getInternalSponsors() {
-        return this.internalSponsors;
+        return this.getBackingStore().get("internalSponsors");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -128,7 +96,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.getBackingStore().get("modifiedDateTime");
     }
     /**
      * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
@@ -136,7 +104,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganizationState getState() {
-        return this.state;
+        return this.getBackingStore().get("state");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class ConnectedOrganization extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the connected organization.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the connected organization. Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the externalSponsors property value. The externalSponsors property
      * @param value Value to set for the externalSponsors property.
      */
     public void setExternalSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.externalSponsors = value;
+        this.getBackingStore().set("externalSponsors", value);
     }
     /**
      * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
      * @param value Value to set for the identitySources property.
      */
     public void setIdentitySources(@jakarta.annotation.Nullable final java.util.List<IdentitySource> value) {
-        this.identitySources = value;
+        this.getBackingStore().set("identitySources", value);
     }
     /**
      * Sets the internalSponsors property value. The internalSponsors property
      * @param value Value to set for the internalSponsors property.
      */
     public void setInternalSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.internalSponsors = value;
+        this.getBackingStore().set("internalSponsors", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.getBackingStore().set("modifiedDateTime", value);
     }
     /**
      * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConnectedOrganizationState value) {
-        this.state = value;
+        this.getBackingStore().set("state", value);
     }
 }

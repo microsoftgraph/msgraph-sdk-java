@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFilter extends Entity implements Parsable {
     /**
-     * The currently applied filter on the given column. Read-only.
-     */
-    private WorkbookFilterCriteria criteria;
-    /**
      * Instantiates a new WorkbookFilter and sets the default values.
      */
     public WorkbookFilter() {
@@ -34,7 +30,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookFilterCriteria getCriteria() {
-        return this.criteria;
+        return this.getBackingStore().get("criteria");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class WorkbookFilter extends Entity implements Parsable {
      * @param value Value to set for the criteria property.
      */
     public void setCriteria(@jakarta.annotation.Nullable final WorkbookFilterCriteria value) {
-        this.criteria = value;
+        this.getBackingStore().set("criteria", value);
     }
 }

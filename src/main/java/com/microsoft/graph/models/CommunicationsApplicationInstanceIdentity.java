@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable {
     /**
-     * The hidden property
-     */
-    private Boolean hidden;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
      * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
      */
     public CommunicationsApplicationInstanceIdentity() {
@@ -50,7 +42,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.getBackingStore().get("hidden");
     }
     /**
      * Gets the tenantId property value. The tenantId property
@@ -58,7 +50,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.getBackingStore().set("hidden", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
 }

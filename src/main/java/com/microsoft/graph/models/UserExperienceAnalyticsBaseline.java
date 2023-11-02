@@ -13,46 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /**
-     * The scores and insights for the application health metrics.
-     */
-    private UserExperienceAnalyticsCategory appHealthMetrics;
-    /**
-     * The scores and insights for the battery health metrics.
-     */
-    private UserExperienceAnalyticsCategory batteryHealthMetrics;
-    /**
-     * The scores and insights for the best practices metrics.
-     */
-    private UserExperienceAnalyticsCategory bestPracticesMetrics;
-    /**
-     * The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The scores and insights for the device boot performance metrics.
-     */
-    private UserExperienceAnalyticsCategory deviceBootPerformanceMetrics;
-    /**
-     * The name of the baseline.
-     */
-    private String displayName;
-    /**
-     * When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * The scores and insights for the reboot analytics metrics.
-     */
-    private UserExperienceAnalyticsCategory rebootAnalyticsMetrics;
-    /**
-     * The scores and insights for the resource performance metrics.
-     */
-    private UserExperienceAnalyticsCategory resourcePerformanceMetrics;
-    /**
-     * The scores and insights for the work from anywhere metrics.
-     */
-    private UserExperienceAnalyticsCategory workFromAnywhereMetrics;
-    /**
      * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
      */
     public UserExperienceAnalyticsBaseline() {
@@ -74,7 +34,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getAppHealthMetrics() {
-        return this.appHealthMetrics;
+        return this.getBackingStore().get("appHealthMetrics");
     }
     /**
      * Gets the batteryHealthMetrics property value. The scores and insights for the battery health metrics.
@@ -82,7 +42,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBatteryHealthMetrics() {
-        return this.batteryHealthMetrics;
+        return this.getBackingStore().get("batteryHealthMetrics");
     }
     /**
      * Gets the bestPracticesMetrics property value. The scores and insights for the best practices metrics.
@@ -90,7 +50,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBestPracticesMetrics() {
-        return this.bestPracticesMetrics;
+        return this.getBackingStore().get("bestPracticesMetrics");
     }
     /**
      * Gets the createdDateTime property value. The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
@@ -98,7 +58,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the deviceBootPerformanceMetrics property value. The scores and insights for the device boot performance metrics.
@@ -106,7 +66,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getDeviceBootPerformanceMetrics() {
-        return this.deviceBootPerformanceMetrics;
+        return this.getBackingStore().get("deviceBootPerformanceMetrics");
     }
     /**
      * Gets the displayName property value. The name of the baseline.
@@ -114,7 +74,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -141,7 +101,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.getBackingStore().get("isBuiltIn");
     }
     /**
      * Gets the rebootAnalyticsMetrics property value. The scores and insights for the reboot analytics metrics.
@@ -149,7 +109,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getRebootAnalyticsMetrics() {
-        return this.rebootAnalyticsMetrics;
+        return this.getBackingStore().get("rebootAnalyticsMetrics");
     }
     /**
      * Gets the resourcePerformanceMetrics property value. The scores and insights for the resource performance metrics.
@@ -157,7 +117,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getResourcePerformanceMetrics() {
-        return this.resourcePerformanceMetrics;
+        return this.getBackingStore().get("resourcePerformanceMetrics");
     }
     /**
      * Gets the workFromAnywhereMetrics property value. The scores and insights for the work from anywhere metrics.
@@ -165,7 +125,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getWorkFromAnywhereMetrics() {
-        return this.workFromAnywhereMetrics;
+        return this.getBackingStore().get("workFromAnywhereMetrics");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the appHealthMetrics property.
      */
     public void setAppHealthMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.appHealthMetrics = value;
+        this.getBackingStore().set("appHealthMetrics", value);
     }
     /**
      * Sets the batteryHealthMetrics property value. The scores and insights for the battery health metrics.
      * @param value Value to set for the batteryHealthMetrics property.
      */
     public void setBatteryHealthMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.batteryHealthMetrics = value;
+        this.getBackingStore().set("batteryHealthMetrics", value);
     }
     /**
      * Sets the bestPracticesMetrics property value. The scores and insights for the best practices metrics.
      * @param value Value to set for the bestPracticesMetrics property.
      */
     public void setBestPracticesMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.bestPracticesMetrics = value;
+        this.getBackingStore().set("bestPracticesMetrics", value);
     }
     /**
      * Sets the createdDateTime property value. The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the deviceBootPerformanceMetrics property value. The scores and insights for the device boot performance metrics.
      * @param value Value to set for the deviceBootPerformanceMetrics property.
      */
     public void setDeviceBootPerformanceMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.deviceBootPerformanceMetrics = value;
+        this.getBackingStore().set("deviceBootPerformanceMetrics", value);
     }
     /**
      * Sets the displayName property value. The name of the baseline.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the isBuiltIn property value. When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.getBackingStore().set("isBuiltIn", value);
     }
     /**
      * Sets the rebootAnalyticsMetrics property value. The scores and insights for the reboot analytics metrics.
      * @param value Value to set for the rebootAnalyticsMetrics property.
      */
     public void setRebootAnalyticsMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.rebootAnalyticsMetrics = value;
+        this.getBackingStore().set("rebootAnalyticsMetrics", value);
     }
     /**
      * Sets the resourcePerformanceMetrics property value. The scores and insights for the resource performance metrics.
      * @param value Value to set for the resourcePerformanceMetrics property.
      */
     public void setResourcePerformanceMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.resourcePerformanceMetrics = value;
+        this.getBackingStore().set("resourcePerformanceMetrics", value);
     }
     /**
      * Sets the workFromAnywhereMetrics property value. The scores and insights for the work from anywhere metrics.
      * @param value Value to set for the workFromAnywhereMetrics property.
      */
     public void setWorkFromAnywhereMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this.workFromAnywhereMetrics = value;
+        this.getBackingStore().set("workFromAnywhereMetrics", value);
     }
 }

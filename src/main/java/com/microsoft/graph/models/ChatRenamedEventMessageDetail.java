@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * The updated name of the chat.
-     */
-    private String chatDisplayName;
-    /**
-     * Unique identifier of the chat.
-     */
-    private String chatId;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
      * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
      */
     public ChatRenamedEventMessageDetail() {
@@ -43,7 +31,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     @jakarta.annotation.Nullable
     public String getChatDisplayName() {
-        return this.chatDisplayName;
+        return this.getBackingStore().get("chatDisplayName");
     }
     /**
      * Gets the chatId property value. Unique identifier of the chat.
@@ -51,7 +39,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
-        return this.chatId;
+        return this.getBackingStore().get("chatId");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.getBackingStore().get("initiator");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatDisplayName property.
      */
     public void setChatDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.chatDisplayName = value;
+        this.getBackingStore().set("chatDisplayName", value);
     }
     /**
      * Sets the chatId property value. Unique identifier of the chat.
      * @param value Value to set for the chatId property.
      */
     public void setChatId(@jakarta.annotation.Nullable final String value) {
-        this.chatId = value;
+        this.getBackingStore().set("chatId", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.getBackingStore().set("initiator", value);
     }
 }

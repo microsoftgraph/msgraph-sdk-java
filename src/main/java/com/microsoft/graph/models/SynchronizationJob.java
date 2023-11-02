@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationJob extends Entity implements Parsable {
     /**
-     * Schedule used to run the job. Read-only.
-     */
-    private SynchronizationSchedule schedule;
-    /**
-     * The synchronization schema configured for the job.
-     */
-    private SynchronizationSchema schema;
-    /**
-     * Status of the job, which includes when the job was last run, current job state, and errors.
-     */
-    private SynchronizationStatus status;
-    /**
-     * Settings associated with the job. Some settings are inherited from the template.
-     */
-    private java.util.List<KeyValuePair> synchronizationJobSettings;
-    /**
-     * Identifier of the synchronization template this job is based on.
-     */
-    private String templateId;
-    /**
      * Instantiates a new SynchronizationJob and sets the default values.
      */
     public SynchronizationJob() {
@@ -64,7 +44,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchedule getSchedule() {
-        return this.schedule;
+        return this.getBackingStore().get("schedule");
     }
     /**
      * Gets the schema property value. The synchronization schema configured for the job.
@@ -72,7 +52,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {
-        return this.schema;
+        return this.getBackingStore().get("schema");
     }
     /**
      * Gets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
@@ -80,7 +60,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Gets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
@@ -88,7 +68,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getSynchronizationJobSettings() {
-        return this.synchronizationJobSettings;
+        return this.getBackingStore().get("synchronizationJobSettings");
     }
     /**
      * Gets the templateId property value. Identifier of the synchronization template this job is based on.
@@ -96,7 +76,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.getBackingStore().get("templateId");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final SynchronizationSchedule value) {
-        this.schedule = value;
+        this.getBackingStore().set("schedule", value);
     }
     /**
      * Sets the schema property value. The synchronization schema configured for the job.
      * @param value Value to set for the schema property.
      */
     public void setSchema(@jakarta.annotation.Nullable final SynchronizationSchema value) {
-        this.schema = value;
+        this.getBackingStore().set("schema", value);
     }
     /**
      * Sets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SynchronizationStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
     /**
      * Sets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @param value Value to set for the synchronizationJobSettings property.
      */
     public void setSynchronizationJobSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.synchronizationJobSettings = value;
+        this.getBackingStore().set("synchronizationJobSettings", value);
     }
     /**
      * Sets the templateId property value. Identifier of the synchronization template this job is based on.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.getBackingStore().set("templateId", value);
     }
 }

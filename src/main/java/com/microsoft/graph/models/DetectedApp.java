@@ -12,34 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DetectedApp extends Entity implements Parsable {
     /**
-     * The number of devices that have installed this application
-     */
-    private Integer deviceCount;
-    /**
-     * Name of the discovered application. Read-only
-     */
-    private String displayName;
-    /**
-     * The devices that have the discovered application installed
-     */
-    private java.util.List<ManagedDevice> managedDevices;
-    /**
-     * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
-     */
-    private DetectedAppPlatformType platform;
-    /**
-     * Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
-     */
-    private String publisher;
-    /**
-     * Discovered application size in bytes. Read-only
-     */
-    private Long sizeInByte;
-    /**
-     * Version of the discovered application. Read-only
-     */
-    private String version;
-    /**
      * Instantiates a new DetectedApp and sets the default values.
      */
     public DetectedApp() {
@@ -61,7 +33,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
-        return this.deviceCount;
+        return this.getBackingStore().get("deviceCount");
     }
     /**
      * Gets the displayName property value. Name of the discovered application. Read-only
@@ -69,7 +41,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +65,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
-        return this.managedDevices;
+        return this.getBackingStore().get("managedDevices");
     }
     /**
      * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
@@ -101,7 +73,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DetectedAppPlatformType getPlatform() {
-        return this.platform;
+        return this.getBackingStore().get("platform");
     }
     /**
      * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
@@ -109,7 +81,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.getBackingStore().get("publisher");
     }
     /**
      * Gets the sizeInByte property value. Discovered application size in bytes. Read-only
@@ -117,7 +89,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSizeInByte() {
-        return this.sizeInByte;
+        return this.getBackingStore().get("sizeInByte");
     }
     /**
      * Gets the version property value. Version of the discovered application. Read-only
@@ -125,7 +97,7 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.getBackingStore().get("version");
     }
     /**
      * Serializes information the current object
@@ -147,48 +119,48 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceCount = value;
+        this.getBackingStore().set("deviceCount", value);
     }
     /**
      * Sets the displayName property value. Name of the discovered application. Read-only
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the managedDevices property value. The devices that have the discovered application installed
      * @param value Value to set for the managedDevices property.
      */
     public void setManagedDevices(@jakarta.annotation.Nullable final java.util.List<ManagedDevice> value) {
-        this.managedDevices = value;
+        this.getBackingStore().set("managedDevices", value);
     }
     /**
      * Sets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DetectedAppPlatformType value) {
-        this.platform = value;
+        this.getBackingStore().set("platform", value);
     }
     /**
      * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.getBackingStore().set("publisher", value);
     }
     /**
      * Sets the sizeInByte property value. Discovered application size in bytes. Read-only
      * @param value Value to set for the sizeInByte property.
      */
     public void setSizeInByte(@jakarta.annotation.Nullable final Long value) {
-        this.sizeInByte = value;
+        this.getBackingStore().set("sizeInByte", value);
     }
     /**
      * Sets the version property value. Version of the discovered application. Read-only
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.getBackingStore().set("version", value);
     }
 }

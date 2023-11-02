@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
-     * The fromEmail property
-     */
-    private String fromEmail;
-    /**
-     * The fromName property
-     */
-    private String fromName;
-    /**
-     * The isExternalSender property
-     */
-    private Boolean isExternalSender;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
      * Instantiates a new EmailPayloadDetail and sets the default values.
      */
     public EmailPayloadDetail() {
@@ -55,36 +39,36 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fromEmail property value. The fromEmail property
+     * Gets the fromEmail property value. Email address of the user.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFromEmail() {
-        return this.fromEmail;
+        return this.getBackingStore().get("fromEmail");
     }
     /**
-     * Gets the fromName property value. The fromName property
+     * Gets the fromName property value. Display name of the user.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFromName() {
-        return this.fromName;
+        return this.getBackingStore().get("fromName");
     }
     /**
-     * Gets the isExternalSender property value. The isExternalSender property
+     * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSender() {
-        return this.isExternalSender;
+        return this.getBackingStore().get("isExternalSender");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the email address sent to the user.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.getBackingStore().get("subject");
     }
     /**
      * Serializes information the current object
@@ -99,31 +83,31 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
         writer.writeStringValue("subject", this.getSubject());
     }
     /**
-     * Sets the fromEmail property value. The fromEmail property
+     * Sets the fromEmail property value. Email address of the user.
      * @param value Value to set for the fromEmail property.
      */
     public void setFromEmail(@jakarta.annotation.Nullable final String value) {
-        this.fromEmail = value;
+        this.getBackingStore().set("fromEmail", value);
     }
     /**
-     * Sets the fromName property value. The fromName property
+     * Sets the fromName property value. Display name of the user.
      * @param value Value to set for the fromName property.
      */
     public void setFromName(@jakarta.annotation.Nullable final String value) {
-        this.fromName = value;
+        this.getBackingStore().set("fromName", value);
     }
     /**
-     * Sets the isExternalSender property value. The isExternalSender property
+     * Sets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
      * @param value Value to set for the isExternalSender property.
      */
     public void setIsExternalSender(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalSender = value;
+        this.getBackingStore().set("isExternalSender", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the email address sent to the user.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.getBackingStore().set("subject", value);
     }
 }

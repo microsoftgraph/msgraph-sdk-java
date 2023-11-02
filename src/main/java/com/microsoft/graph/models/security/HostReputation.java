@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostReputation extends Entity implements Parsable {
     /**
-     * The classification property
-     */
-    private HostReputationClassification classification;
-    /**
-     * A collection of rules that have been used to calculate the classification and score.
-     */
-    private java.util.List<HostReputationRule> rules;
-    /**
-     * The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
-     */
-    private Integer score;
-    /**
      * Instantiates a new HostReputation and sets the default values.
      */
     public HostReputation() {
@@ -43,7 +31,7 @@ public class HostReputation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public HostReputationClassification getClassification() {
-        return this.classification;
+        return this.getBackingStore().get("classification");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class HostReputation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostReputationRule> getRules() {
-        return this.rules;
+        return this.getBackingStore().get("rules");
     }
     /**
      * Gets the score property value. The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
@@ -71,7 +59,7 @@ public class HostReputation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getScore() {
-        return this.score;
+        return this.getBackingStore().get("score");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class HostReputation extends Entity implements Parsable {
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final HostReputationClassification value) {
-        this.classification = value;
+        this.getBackingStore().set("classification", value);
     }
     /**
      * Sets the rules property value. A collection of rules that have been used to calculate the classification and score.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<HostReputationRule> value) {
-        this.rules = value;
+        this.getBackingStore().set("rules", value);
     }
     /**
      * Sets the score property value. The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
      * @param value Value to set for the score property.
      */
     public void setScore(@jakarta.annotation.Nullable final Integer value) {
-        this.score = value;
+        this.getBackingStore().set("score", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TermsAndConditions> value;
-    /**
      * Instantiates a new TermsAndConditionsCollectionResponse and sets the default values.
      */
     public TermsAndConditionsCollectionResponse() {
@@ -44,7 +40,7 @@ public class TermsAndConditionsCollectionResponse extends BaseCollectionPaginati
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditions> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TermsAndConditionsCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TermsAndConditions> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

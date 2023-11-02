@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartPoint extends Entity implements Parsable {
     /**
-     * Encapsulates the format properties chart point. Read-only.
-     */
-    private WorkbookChartPointFormat format;
-    /**
-     * Returns the value of a chart point. Read-only.
-     */
-    private Json value;
-    /**
      * Instantiates a new WorkbookChartPoint and sets the default values.
      */
     public WorkbookChartPoint() {
@@ -49,7 +41,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPointFormat getFormat() {
-        return this.format;
+        return this.getBackingStore().get("format");
     }
     /**
      * Gets the value property value. Returns the value of a chart point. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartPointFormat value) {
-        this.format = value;
+        this.getBackingStore().set("format", value);
     }
     /**
      * Sets the value property value. Returns the value of a chart point. Read-only.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Json value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

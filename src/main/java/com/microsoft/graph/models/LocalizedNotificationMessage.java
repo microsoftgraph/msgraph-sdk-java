@@ -13,26 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
-     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-     */
-    private Boolean isDefault;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The Locale for which this message is destined.
-     */
-    private String locale;
-    /**
-     * The Message Template content.
-     */
-    private String messageTemplate;
-    /**
-     * The Message Template Subject.
-     */
-    private String subject;
-    /**
      * Instantiates a new LocalizedNotificationMessage and sets the default values.
      */
     public LocalizedNotificationMessage() {
@@ -68,7 +48,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.getBackingStore().get("isDefault");
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -76,7 +56,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the locale property value. The Locale for which this message is destined.
@@ -84,7 +64,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
-        return this.locale;
+        return this.getBackingStore().get("locale");
     }
     /**
      * Gets the messageTemplate property value. The Message Template content.
@@ -92,7 +72,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessageTemplate() {
-        return this.messageTemplate;
+        return this.getBackingStore().get("messageTemplate");
     }
     /**
      * Gets the subject property value. The Message Template Subject.
@@ -100,7 +80,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.getBackingStore().get("subject");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.getBackingStore().set("isDefault", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the locale property value. The Locale for which this message is destined.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
-        this.locale = value;
+        this.getBackingStore().set("locale", value);
     }
     /**
      * Sets the messageTemplate property value. The Message Template content.
      * @param value Value to set for the messageTemplate property.
      */
     public void setMessageTemplate(@jakarta.annotation.Nullable final String value) {
-        this.messageTemplate = value;
+        this.getBackingStore().set("messageTemplate", value);
     }
     /**
      * Sets the subject property value. The Message Template Subject.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.getBackingStore().set("subject", value);
     }
 }

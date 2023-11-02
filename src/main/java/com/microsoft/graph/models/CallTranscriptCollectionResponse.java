@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallTranscriptCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<CallTranscript> value;
-    /**
      * Instantiates a new CallTranscriptCollectionResponse and sets the default values.
      */
     public CallTranscriptCollectionResponse() {
@@ -44,7 +40,7 @@ public class CallTranscriptCollectionResponse extends BaseCollectionPaginationCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallTranscript> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class CallTranscriptCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<CallTranscript> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

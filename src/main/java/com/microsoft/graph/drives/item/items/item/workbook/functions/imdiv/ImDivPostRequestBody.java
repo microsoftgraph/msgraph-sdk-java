@@ -5,27 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ImDivPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The inumber1 property
-     */
-    private Json inumber1;
-    /**
-     * The inumber2 property
-     */
-    private Json inumber2;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ImDivPostRequestBody and sets the default values.
      */
     public ImDivPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +40,20 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +72,7 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getInumber1() {
-        return this.inumber1;
+        return this.getBackingStore().get("inumber1");
     }
     /**
      * Gets the inumber2 property value. The inumber2 property
@@ -71,7 +80,7 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getInumber2() {
-        return this.inumber2;
+        return this.getBackingStore().get("inumber2");
     }
     /**
      * Serializes information the current object
@@ -81,27 +90,33 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("inumber1", this.getInumber1());
         writer.writeObjectValue("inumber2", this.getInumber2());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the inumber1 property value. The inumber1 property
      * @param value Value to set for the inumber1 property.
      */
     public void setInumber1(@jakarta.annotation.Nullable final Json value) {
-        this.inumber1 = value;
+        this.getBackingStore().set("inumber1", value);
     }
     /**
      * Sets the inumber2 property value. The inumber2 property
      * @param value Value to set for the inumber2 property.
      */
     public void setInumber2(@jakarta.annotation.Nullable final Json value) {
-        this.inumber2 = value;
+        this.getBackingStore().set("inumber2", value);
     }
 }

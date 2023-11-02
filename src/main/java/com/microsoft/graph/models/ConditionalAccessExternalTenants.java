@@ -4,27 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessExternalTenants implements AdditionalDataHolder, Parsable {
+public class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
-     */
-    private ConditionalAccessExternalTenantsMembershipKind membershipKind;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConditionalAccessExternalTenants and sets the default values.
      */
     public ConditionalAccessExternalTenants() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +47,20 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +79,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessExternalTenantsMembershipKind getMembershipKind() {
-        return this.membershipKind;
+        return this.getBackingStore().get("membershipKind");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,7 +87,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -88,27 +97,33 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, P
         Objects.requireNonNull(writer);
         writer.writeEnumValue("membershipKind", this.getMembershipKind());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @param value Value to set for the membershipKind property.
      */
     public void setMembershipKind(@jakarta.annotation.Nullable final ConditionalAccessExternalTenantsMembershipKind value) {
-        this.membershipKind = value;
+        this.getBackingStore().set("membershipKind", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

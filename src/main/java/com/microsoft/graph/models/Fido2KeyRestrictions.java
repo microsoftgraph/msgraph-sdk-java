@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
+public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
+     * Stores model information.
      */
-    private java.util.List<String> aaGuids;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Enforcement type. Possible values are: allow, block.
-     */
-    private Fido2RestrictionEnforcementType enforcementType;
-    /**
-     * Determines if the configured key enforcement is enabled.
-     */
-    private Boolean isEnforced;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Fido2KeyRestrictions and sets the default values.
      */
     public Fido2KeyRestrictions() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAaGuids() {
-        return this.aaGuids;
+        return this.getBackingStore().get("aaGuids");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -59,7 +47,20 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
@@ -67,7 +68,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Fido2RestrictionEnforcementType getEnforcementType() {
-        return this.enforcementType;
+        return this.getBackingStore().get("enforcementType");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +89,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnforced() {
-        return this.isEnforced;
+        return this.getBackingStore().get("isEnforced");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +97,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -108,41 +109,47 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("enforcementType", this.getEnforcementType());
         writer.writeBooleanValue("isEnforced", this.getIsEnforced());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the aaGuids property value. A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
      * @param value Value to set for the aaGuids property.
      */
     public void setAaGuids(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.aaGuids = value;
+        this.getBackingStore().set("aaGuids", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
      * @param value Value to set for the enforcementType property.
      */
     public void setEnforcementType(@jakarta.annotation.Nullable final Fido2RestrictionEnforcementType value) {
-        this.enforcementType = value;
+        this.getBackingStore().set("enforcementType", value);
     }
     /**
      * Sets the isEnforced property value. Determines if the configured key enforcement is enabled.
      * @param value Value to set for the isEnforced property.
      */
     public void setIsEnforced(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnforced = value;
+        this.getBackingStore().set("isEnforced", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

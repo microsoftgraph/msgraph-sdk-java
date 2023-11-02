@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CvssSummary implements AdditionalDataHolder, Parsable {
+public class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The CVSS score about this vulnerability.
-     */
-    private Double score;
-    /**
-     * The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
-     */
-    private VulnerabilitySeverity severity;
-    /**
-     * The CVSS vector string for this vulnerability.
-     */
-    private String vectorString;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CvssSummary and sets the default values.
      */
     public CvssSummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +73,7 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the score property value. The CVSS score about this vulnerability.
@@ -80,7 +81,7 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getScore() {
-        return this.score;
+        return this.getBackingStore().get("score");
     }
     /**
      * Gets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
@@ -88,7 +89,7 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public VulnerabilitySeverity getSeverity() {
-        return this.severity;
+        return this.getBackingStore().get("severity");
     }
     /**
      * Gets the vectorString property value. The CVSS vector string for this vulnerability.
@@ -96,7 +97,7 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVectorString() {
-        return this.vectorString;
+        return this.getBackingStore().get("vectorString");
     }
     /**
      * Serializes information the current object
@@ -108,41 +109,47 @@ public class CvssSummary implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("score", this.getScore());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeStringValue("vectorString", this.getVectorString());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the score property value. The CVSS score about this vulnerability.
      * @param value Value to set for the score property.
      */
     public void setScore(@jakarta.annotation.Nullable final Double value) {
-        this.score = value;
+        this.getBackingStore().set("score", value);
     }
     /**
      * Sets the severity property value. The CVSS severity rating for this vulnerability. The possible values are: none, low, medium, high, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final VulnerabilitySeverity value) {
-        this.severity = value;
+        this.getBackingStore().set("severity", value);
     }
     /**
      * Sets the vectorString property value. The CVSS vector string for this vulnerability.
      * @param value Value to set for the vectorString property.
      */
     public void setVectorString(@jakarta.annotation.Nullable final String value) {
-        this.vectorString = value;
+        this.getBackingStore().set("vectorString", value);
     }
 }

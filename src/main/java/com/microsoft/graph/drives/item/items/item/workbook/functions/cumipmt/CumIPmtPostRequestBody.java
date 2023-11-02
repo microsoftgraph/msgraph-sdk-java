@@ -5,43 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CumIPmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The endPeriod property
-     */
-    private Json endPeriod;
-    /**
-     * The nper property
-     */
-    private Json nper;
-    /**
-     * The pv property
-     */
-    private Json pv;
-    /**
-     * The rate property
-     */
-    private Json rate;
-    /**
-     * The startPeriod property
-     */
-    private Json startPeriod;
-    /**
-     * The type property
-     */
-    private Json type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CumIPmtPostRequestBody and sets the default values.
      */
     public CumIPmtPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +40,20 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the endPeriod property value. The endPeriod property
@@ -68,7 +61,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getEndPeriod() {
-        return this.endPeriod;
+        return this.getBackingStore().get("endPeriod");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +84,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getNper() {
-        return this.nper;
+        return this.getBackingStore().get("nper");
     }
     /**
      * Gets the pv property value. The pv property
@@ -99,7 +92,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getPv() {
-        return this.pv;
+        return this.getBackingStore().get("pv");
     }
     /**
      * Gets the rate property value. The rate property
@@ -107,7 +100,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getRate() {
-        return this.rate;
+        return this.getBackingStore().get("rate");
     }
     /**
      * Gets the startPeriod property value. The startPeriod property
@@ -115,7 +108,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getStartPeriod() {
-        return this.startPeriod;
+        return this.getBackingStore().get("startPeriod");
     }
     /**
      * Gets the type property value. The type property
@@ -123,7 +116,7 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -137,55 +130,61 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("rate", this.getRate());
         writer.writeObjectValue("startPeriod", this.getStartPeriod());
         writer.writeObjectValue("type", this.getType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the endPeriod property value. The endPeriod property
      * @param value Value to set for the endPeriod property.
      */
     public void setEndPeriod(@jakarta.annotation.Nullable final Json value) {
-        this.endPeriod = value;
+        this.getBackingStore().set("endPeriod", value);
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
      */
     public void setNper(@jakarta.annotation.Nullable final Json value) {
-        this.nper = value;
+        this.getBackingStore().set("nper", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
     public void setPv(@jakarta.annotation.Nullable final Json value) {
-        this.pv = value;
+        this.getBackingStore().set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
     public void setRate(@jakarta.annotation.Nullable final Json value) {
-        this.rate = value;
+        this.getBackingStore().set("rate", value);
     }
     /**
      * Sets the startPeriod property value. The startPeriod property
      * @param value Value to set for the startPeriod property.
      */
     public void setStartPeriod(@jakarta.annotation.Nullable final Json value) {
-        this.startPeriod = value;
+        this.getBackingStore().set("startPeriod", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final Json value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

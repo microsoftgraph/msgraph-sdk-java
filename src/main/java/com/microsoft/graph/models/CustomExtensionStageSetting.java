@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
-     */
-    private CustomCalloutExtension customExtension;
-    /**
-     * The stage property
-     */
-    private AccessPackageCustomExtensionStage stage;
-    /**
      * Instantiates a new CustomExtensionStageSetting and sets the default values.
      */
     public CustomExtensionStageSetting() {
@@ -38,7 +30,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension getCustomExtension() {
-        return this.customExtension;
+        return this.getBackingStore().get("customExtension");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
-        return this.stage;
+        return this.getBackingStore().get("stage");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
      * @param value Value to set for the customExtension property.
      */
     public void setCustomExtension(@jakarta.annotation.Nullable final CustomCalloutExtension value) {
-        this.customExtension = value;
+        this.getBackingStore().set("customExtension", value);
     }
     /**
      * Sets the stage property value. The stage property
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
-        this.stage = value;
+        this.getBackingStore().set("stage", value);
     }
 }

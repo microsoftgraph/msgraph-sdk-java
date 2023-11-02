@@ -3,40 +3,11 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryExportOperation extends CaseOperation implements Parsable {
-    /**
-     * The description provided for the export.
-     */
-    private String description;
-    /**
-     * The exportFileMetadata property
-     */
-    private java.util.List<ExportFileMetadata> exportFileMetadata;
-    /**
-     * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
-     */
-    private EnumSet<ExportOptions> exportOptions;
-    /**
-     * The options that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
-     */
-    private ExportFileStructure exportStructure;
-    /**
-     * The name provided for the export.
-     */
-    private String outputName;
-    /**
-     * Review set from where documents are exported.
-     */
-    private EdiscoveryReviewSet reviewSet;
-    /**
-     * The review set query that is used to filter the documents for export.
-     */
-    private EdiscoveryReviewSetQuery reviewSetQuery;
     /**
      * Instantiates a new EdiscoveryExportOperation and sets the default values.
      */
@@ -59,7 +30,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the exportFileMetadata property value. The exportFileMetadata property
@@ -67,7 +38,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExportFileMetadata> getExportFileMetadata() {
-        return this.exportFileMetadata;
+        return this.getBackingStore().get("exportFileMetadata");
     }
     /**
      * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
@@ -75,7 +46,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportOptions> getExportOptions() {
-        return this.exportOptions;
+        return this.getBackingStore().get("exportOptions");
     }
     /**
      * Gets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
@@ -83,7 +54,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
-        return this.exportStructure;
+        return this.getBackingStore().get("exportStructure");
     }
     /**
      * The deserialization information for the current model
@@ -107,7 +78,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getOutputName() {
-        return this.outputName;
+        return this.getBackingStore().get("outputName");
     }
     /**
      * Gets the reviewSet property value. Review set from where documents are exported.
@@ -115,7 +86,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
-        return this.reviewSet;
+        return this.getBackingStore().get("reviewSet");
     }
     /**
      * Gets the reviewSetQuery property value. The review set query that is used to filter the documents for export.
@@ -123,7 +94,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery getReviewSetQuery() {
-        return this.reviewSetQuery;
+        return this.getBackingStore().get("reviewSetQuery");
     }
     /**
      * Serializes information the current object
@@ -145,48 +116,48 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the exportFileMetadata property value. The exportFileMetadata property
      * @param value Value to set for the exportFileMetadata property.
      */
     public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
-        this.exportFileMetadata = value;
+        this.getBackingStore().set("exportFileMetadata", value);
     }
     /**
      * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
      * @param value Value to set for the exportOptions property.
      */
     public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
-        this.exportOptions = value;
+        this.getBackingStore().set("exportOptions", value);
     }
     /**
      * Sets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      * @param value Value to set for the exportStructure property.
      */
     public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
-        this.exportStructure = value;
+        this.getBackingStore().set("exportStructure", value);
     }
     /**
      * Sets the outputName property value. The name provided for the export.
      * @param value Value to set for the outputName property.
      */
     public void setOutputName(@jakarta.annotation.Nullable final String value) {
-        this.outputName = value;
+        this.getBackingStore().set("outputName", value);
     }
     /**
      * Sets the reviewSet property value. Review set from where documents are exported.
      * @param value Value to set for the reviewSet property.
      */
     public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
-        this.reviewSet = value;
+        this.getBackingStore().set("reviewSet", value);
     }
     /**
      * Sets the reviewSetQuery property value. The review set query that is used to filter the documents for export.
      * @param value Value to set for the reviewSetQuery property.
      */
     public void setReviewSetQuery(@jakarta.annotation.Nullable final EdiscoveryReviewSetQuery value) {
-        this.reviewSetQuery = value;
+        this.getBackingStore().set("reviewSetQuery", value);
     }
 }

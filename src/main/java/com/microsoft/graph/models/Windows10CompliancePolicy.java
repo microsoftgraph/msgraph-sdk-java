@@ -12,82 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-     */
-    private Boolean bitLockerEnabled;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation.
-     */
-    private Boolean codeIntegrityEnabled;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     */
-    private Boolean earlyLaunchAntiMalwareDriverEnabled;
-    /**
-     * Maximum Windows Phone version.
-     */
-    private String mobileOsMaximumVersion;
-    /**
-     * Minimum Windows Phone version.
-     */
-    private String mobileOsMinimumVersion;
-    /**
-     * Maximum Windows 10 version.
-     */
-    private String osMaximumVersion;
-    /**
-     * Minimum Windows 10 version.
-     */
-    private String osMinimumVersion;
-    /**
-     * Indicates whether or not to block simple password.
-     */
-    private Boolean passwordBlockSimple;
-    /**
-     * The password expiration in days.
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * The number of character sets required in the password.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * The minimum password length.
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before a password is required.
-     */
-    private Integer passwordMinutesOfInactivityBeforeLock;
-    /**
-     * The number of previous passwords to prevent re-use of.
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Require a password to unlock Windows device.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Require a password to unlock an idle device.
-     */
-    private Boolean passwordRequiredToUnlockFromIdle;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation.
-     */
-    private Boolean requireHealthyDeviceReport;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     */
-    private Boolean secureBootEnabled;
-    /**
-     * Require encryption on windows devices.
-     */
-    private Boolean storageRequireEncryption;
-    /**
      * Instantiates a new Windows10CompliancePolicy and sets the default values.
      */
     public Windows10CompliancePolicy() {
@@ -110,7 +34,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEnabled() {
-        return this.bitLockerEnabled;
+        return this.getBackingStore().get("bitLockerEnabled");
     }
     /**
      * Gets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
@@ -118,7 +42,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getCodeIntegrityEnabled() {
-        return this.codeIntegrityEnabled;
+        return this.getBackingStore().get("codeIntegrityEnabled");
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
@@ -126,7 +50,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getEarlyLaunchAntiMalwareDriverEnabled() {
-        return this.earlyLaunchAntiMalwareDriverEnabled;
+        return this.getBackingStore().get("earlyLaunchAntiMalwareDriverEnabled");
     }
     /**
      * The deserialization information for the current model
@@ -162,7 +86,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public String getMobileOsMaximumVersion() {
-        return this.mobileOsMaximumVersion;
+        return this.getBackingStore().get("mobileOsMaximumVersion");
     }
     /**
      * Gets the mobileOsMinimumVersion property value. Minimum Windows Phone version.
@@ -170,7 +94,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public String getMobileOsMinimumVersion() {
-        return this.mobileOsMinimumVersion;
+        return this.getBackingStore().get("mobileOsMinimumVersion");
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Windows 10 version.
@@ -178,7 +102,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.getBackingStore().get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows 10 version.
@@ -186,7 +110,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.getBackingStore().get("osMinimumVersion");
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple password.
@@ -194,7 +118,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this.passwordBlockSimple;
+        return this.getBackingStore().get("passwordBlockSimple");
     }
     /**
      * Gets the passwordExpirationDays property value. The password expiration in days.
@@ -202,7 +126,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.getBackingStore().get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -210,7 +134,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.getBackingStore().get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length.
@@ -218,7 +142,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.getBackingStore().get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -226,7 +150,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this.passwordMinutesOfInactivityBeforeLock;
+        return this.getBackingStore().get("passwordMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
@@ -234,7 +158,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.getBackingStore().get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock Windows device.
@@ -242,7 +166,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.getBackingStore().get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredToUnlockFromIdle property value. Require a password to unlock an idle device.
@@ -250,7 +174,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequiredToUnlockFromIdle() {
-        return this.passwordRequiredToUnlockFromIdle;
+        return this.getBackingStore().get("passwordRequiredToUnlockFromIdle");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -258,7 +182,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.getBackingStore().get("passwordRequiredType");
     }
     /**
      * Gets the requireHealthyDeviceReport property value. Require devices to be reported as healthy by Windows Device Health Attestation.
@@ -266,7 +190,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireHealthyDeviceReport() {
-        return this.requireHealthyDeviceReport;
+        return this.getBackingStore().get("requireHealthyDeviceReport");
     }
     /**
      * Gets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
@@ -274,7 +198,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootEnabled() {
-        return this.secureBootEnabled;
+        return this.getBackingStore().get("secureBootEnabled");
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows devices.
@@ -282,7 +206,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.getBackingStore().get("storageRequireEncryption");
     }
     /**
      * Serializes information the current object
@@ -316,132 +240,132 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the bitLockerEnabled property.
      */
     public void setBitLockerEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.bitLockerEnabled = value;
+        this.getBackingStore().set("bitLockerEnabled", value);
     }
     /**
      * Sets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
      * @param value Value to set for the codeIntegrityEnabled property.
      */
     public void setCodeIntegrityEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.codeIntegrityEnabled = value;
+        this.getBackingStore().set("codeIntegrityEnabled", value);
     }
     /**
      * Sets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      * @param value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
      */
     public void setEarlyLaunchAntiMalwareDriverEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.earlyLaunchAntiMalwareDriverEnabled = value;
+        this.getBackingStore().set("earlyLaunchAntiMalwareDriverEnabled", value);
     }
     /**
      * Sets the mobileOsMaximumVersion property value. Maximum Windows Phone version.
      * @param value Value to set for the mobileOsMaximumVersion property.
      */
     public void setMobileOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.mobileOsMaximumVersion = value;
+        this.getBackingStore().set("mobileOsMaximumVersion", value);
     }
     /**
      * Sets the mobileOsMinimumVersion property value. Minimum Windows Phone version.
      * @param value Value to set for the mobileOsMinimumVersion property.
      */
     public void setMobileOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.mobileOsMinimumVersion = value;
+        this.getBackingStore().set("mobileOsMinimumVersion", value);
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Windows 10 version.
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.getBackingStore().set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Windows 10 version.
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.getBackingStore().set("osMinimumVersion", value);
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple password.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockSimple = value;
+        this.getBackingStore().set("passwordBlockSimple", value);
     }
     /**
      * Sets the passwordExpirationDays property value. The password expiration in days.
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.getBackingStore().set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.getBackingStore().set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.getBackingStore().set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      */
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeLock = value;
+        this.getBackingStore().set("passwordMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.getBackingStore().set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows device.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.getBackingStore().set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredToUnlockFromIdle property value. Require a password to unlock an idle device.
      * @param value Value to set for the passwordRequiredToUnlockFromIdle property.
      */
     public void setPasswordRequiredToUnlockFromIdle(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequiredToUnlockFromIdle = value;
+        this.getBackingStore().set("passwordRequiredToUnlockFromIdle", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.getBackingStore().set("passwordRequiredType", value);
     }
     /**
      * Sets the requireHealthyDeviceReport property value. Require devices to be reported as healthy by Windows Device Health Attestation.
      * @param value Value to set for the requireHealthyDeviceReport property.
      */
     public void setRequireHealthyDeviceReport(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireHealthyDeviceReport = value;
+        this.getBackingStore().set("requireHealthyDeviceReport", value);
     }
     /**
      * Sets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      * @param value Value to set for the secureBootEnabled property.
      */
     public void setSecureBootEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.secureBootEnabled = value;
+        this.getBackingStore().set("secureBootEnabled", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows devices.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.getBackingStore().set("storageRequireEncryption", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
-     * The content stream for this version of the item.
-     */
-    private byte[] content;
-    /**
-     * Indicates the size of the content stream for this version of the item.
-     */
-    private Long size;
-    /**
      * Instantiates a new DriveItemVersion and sets the default values.
      */
     public DriveItemVersion() {
@@ -39,7 +31,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.getBackingStore().get("size");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the size property value. Indicates the size of the content stream for this version of the item.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.getBackingStore().set("size", value);
     }
 }

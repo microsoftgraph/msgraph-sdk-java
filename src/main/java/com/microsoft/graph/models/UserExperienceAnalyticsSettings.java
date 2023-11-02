@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,23 +14,16 @@ import java.util.Objects;
  * The user experience analytics insight is the recomendation to improve the user experience analytics score.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Parsable {
+public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * When TRUE, indicates Tenant attach is configured properly and System Center Configuration Manager (SCCM) tenant attached devices will show up in endpoint analytics reporting. When FALSE, indicates Tenant attach is not configured. FALSE by default.
-     */
-    private Boolean configurationManagerDataConnectorConfigured;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserExperienceAnalyticsSettings and sets the default values.
      */
     public UserExperienceAnalyticsSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -46,7 +42,20 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the configurationManagerDataConnectorConfigured property value. When TRUE, indicates Tenant attach is configured properly and System Center Configuration Manager (SCCM) tenant attached devices will show up in endpoint analytics reporting. When FALSE, indicates Tenant attach is not configured. FALSE by default.
@@ -54,7 +63,7 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigurationManagerDataConnectorConfigured() {
-        return this.configurationManagerDataConnectorConfigured;
+        return this.getBackingStore().get("configurationManagerDataConnectorConfigured");
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +82,7 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -83,27 +92,33 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("configurationManagerDataConnectorConfigured", this.getConfigurationManagerDataConnectorConfigured());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the configurationManagerDataConnectorConfigured property value. When TRUE, indicates Tenant attach is configured properly and System Center Configuration Manager (SCCM) tenant attached devices will show up in endpoint analytics reporting. When FALSE, indicates Tenant attach is not configured. FALSE by default.
      * @param value Value to set for the configurationManagerDataConnectorConfigured property.
      */
     public void setConfigurationManagerDataConnectorConfigured(@jakarta.annotation.Nullable final Boolean value) {
-        this.configurationManagerDataConnectorConfigured = value;
+        this.getBackingStore().set("configurationManagerDataConnectorConfigured", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

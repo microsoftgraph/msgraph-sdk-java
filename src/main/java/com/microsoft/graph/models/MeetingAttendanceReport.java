@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingAttendanceReport extends Entity implements Parsable {
     /**
-     * List of attendance records of an attendance report. Read-only.
-     */
-    private java.util.List<AttendanceRecord> attendanceRecords;
-    /**
-     * UTC time when the meeting ended. Read-only.
-     */
-    private OffsetDateTime meetingEndDateTime;
-    /**
-     * UTC time when the meeting started. Read-only.
-     */
-    private OffsetDateTime meetingStartDateTime;
-    /**
-     * Total number of participants. Read-only.
-     */
-    private Integer totalParticipantCount;
-    /**
      * Instantiates a new MeetingAttendanceReport and sets the default values.
      */
     public MeetingAttendanceReport() {
@@ -47,7 +31,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttendanceRecord> getAttendanceRecords() {
-        return this.attendanceRecords;
+        return this.getBackingStore().get("attendanceRecords");
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +52,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMeetingEndDateTime() {
-        return this.meetingEndDateTime;
+        return this.getBackingStore().get("meetingEndDateTime");
     }
     /**
      * Gets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
@@ -76,7 +60,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMeetingStartDateTime() {
-        return this.meetingStartDateTime;
+        return this.getBackingStore().get("meetingStartDateTime");
     }
     /**
      * Gets the totalParticipantCount property value. Total number of participants. Read-only.
@@ -84,7 +68,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalParticipantCount() {
-        return this.totalParticipantCount;
+        return this.getBackingStore().get("totalParticipantCount");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the attendanceRecords property.
      */
     public void setAttendanceRecords(@jakarta.annotation.Nullable final java.util.List<AttendanceRecord> value) {
-        this.attendanceRecords = value;
+        this.getBackingStore().set("attendanceRecords", value);
     }
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
      * @param value Value to set for the meetingEndDateTime property.
      */
     public void setMeetingEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.meetingEndDateTime = value;
+        this.getBackingStore().set("meetingEndDateTime", value);
     }
     /**
      * Sets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
      * @param value Value to set for the meetingStartDateTime property.
      */
     public void setMeetingStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.meetingStartDateTime = value;
+        this.getBackingStore().set("meetingStartDateTime", value);
     }
     /**
      * Sets the totalParticipantCount property value. Total number of participants. Read-only.
      * @param value Value to set for the totalParticipantCount property.
      */
     public void setTotalParticipantCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalParticipantCount = value;
+        this.getBackingStore().set("totalParticipantCount", value);
     }
 }

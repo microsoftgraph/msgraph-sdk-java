@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Parsable {
+public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
-     */
-    private Integer alertThreshold;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
-     */
-    private OnPremisesDirectorySynchronizationDeletionPreventionType synchronizationPreventionType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new OnPremisesAccidentalDeletionPrevention and sets the default values.
      */
     public OnPremisesAccidentalDeletionPrevention() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,12 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alertThreshold property value. Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
@@ -55,7 +52,15 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public Integer getAlertThreshold() {
-        return this.alertThreshold;
+        return this.getBackingStore().get("alertThreshold");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +80,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
@@ -83,7 +88,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationDeletionPreventionType getSynchronizationPreventionType() {
-        return this.synchronizationPreventionType;
+        return this.getBackingStore().get("synchronizationPreventionType");
     }
     /**
      * Serializes information the current object
@@ -94,34 +99,40 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
         writer.writeIntegerValue("alertThreshold", this.getAlertThreshold());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("synchronizationPreventionType", this.getSynchronizationPreventionType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the alertThreshold property value. Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
      * @param value Value to set for the alertThreshold property.
      */
     public void setAlertThreshold(@jakarta.annotation.Nullable final Integer value) {
-        this.alertThreshold = value;
+        this.getBackingStore().set("alertThreshold", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
      * @param value Value to set for the synchronizationPreventionType property.
      */
     public void setSynchronizationPreventionType(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationDeletionPreventionType value) {
-        this.synchronizationPreventionType = value;
+        this.getBackingStore().set("synchronizationPreventionType", value);
     }
 }

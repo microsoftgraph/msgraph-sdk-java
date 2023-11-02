@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationIdentity extends Identity implements Parsable {
     /**
-     * The applicationType property
-     */
-    private String applicationType;
-    /**
-     * The hidden property
-     */
-    private Boolean hidden;
-    /**
      * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
      */
     public CommunicationsApplicationIdentity() {
@@ -39,7 +31,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getApplicationType() {
-        return this.applicationType;
+        return this.getBackingStore().get("applicationType");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.getBackingStore().get("hidden");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * @param value Value to set for the applicationType property.
      */
     public void setApplicationType(@jakarta.annotation.Nullable final String value) {
-        this.applicationType = value;
+        this.getBackingStore().set("applicationType", value);
     }
     /**
      * Sets the hidden property value. The hidden property
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.getBackingStore().set("hidden", value);
     }
 }

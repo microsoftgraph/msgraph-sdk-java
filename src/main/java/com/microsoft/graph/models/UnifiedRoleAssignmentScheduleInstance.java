@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /**
-     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     */
-    private UnifiedRoleEligibilityScheduleInstance activatedUsing;
-    /**
-     * Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     */
-    private String assignmentType;
-    /**
-     * The end date of the schedule instance.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     */
-    private String memberType;
-    /**
-     * The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
-     */
-    private String roleAssignmentOriginId;
-    /**
-     * The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
-     */
-    private String roleAssignmentScheduleId;
-    /**
-     * When this instance starts.
-     */
-    private OffsetDateTime startDateTime;
-    /**
      * Instantiates a new UnifiedRoleAssignmentScheduleInstance and sets the default values.
      */
     public UnifiedRoleAssignmentScheduleInstance() {
@@ -59,7 +31,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance getActivatedUsing() {
-        return this.activatedUsing;
+        return this.getBackingStore().get("activatedUsing");
     }
     /**
      * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
@@ -67,7 +39,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public String getAssignmentType() {
-        return this.assignmentType;
+        return this.getBackingStore().get("assignmentType");
     }
     /**
      * Gets the endDateTime property value. The end date of the schedule instance.
@@ -75,7 +47,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +71,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
-        return this.memberType;
+        return this.getBackingStore().get("memberType");
     }
     /**
      * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
@@ -107,7 +79,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public String getRoleAssignmentOriginId() {
-        return this.roleAssignmentOriginId;
+        return this.getBackingStore().get("roleAssignmentOriginId");
     }
     /**
      * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
@@ -115,7 +87,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public String getRoleAssignmentScheduleId() {
-        return this.roleAssignmentScheduleId;
+        return this.getBackingStore().get("roleAssignmentScheduleId");
     }
     /**
      * Gets the startDateTime property value. When this instance starts.
@@ -123,7 +95,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilityScheduleInstance value) {
-        this.activatedUsing = value;
+        this.getBackingStore().set("activatedUsing", value);
     }
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
      */
     public void setAssignmentType(@jakarta.annotation.Nullable final String value) {
-        this.assignmentType = value;
+        this.getBackingStore().set("assignmentType", value);
     }
     /**
      * Sets the endDateTime property value. The end date of the schedule instance.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.memberType = value;
+        this.getBackingStore().set("memberType", value);
     }
     /**
      * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Microsoft Entra. Supports $filter (eq, ne).
      * @param value Value to set for the roleAssignmentOriginId property.
      */
     public void setRoleAssignmentOriginId(@jakarta.annotation.Nullable final String value) {
-        this.roleAssignmentOriginId = value;
+        this.getBackingStore().set("roleAssignmentOriginId", value);
     }
     /**
      * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
      * @param value Value to set for the roleAssignmentScheduleId property.
      */
     public void setRoleAssignmentScheduleId(@jakarta.annotation.Nullable final String value) {
-        this.roleAssignmentScheduleId = value;
+        this.getBackingStore().set("roleAssignmentScheduleId", value);
     }
     /**
      * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
 }

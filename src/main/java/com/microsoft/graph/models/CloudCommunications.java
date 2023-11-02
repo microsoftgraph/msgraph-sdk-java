@@ -5,39 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudCommunications implements AdditionalDataHolder, Parsable {
+public class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The callRecords property
-     */
-    private java.util.List<CallRecord> callRecords;
-    /**
-     * The calls property
-     */
-    private java.util.List<Call> calls;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The onlineMeetings property
-     */
-    private java.util.List<OnlineMeeting> onlineMeetings;
-    /**
-     * The presences property
-     */
-    private java.util.List<Presence> presences;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CloudCommunications and sets the default values.
      */
     public CloudCommunications() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -56,7 +40,20 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the callRecords property value. The callRecords property
@@ -64,7 +61,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRecord> getCallRecords() {
-        return this.callRecords;
+        return this.getBackingStore().get("callRecords");
     }
     /**
      * Gets the calls property value. The calls property
@@ -72,7 +69,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Call> getCalls() {
-        return this.calls;
+        return this.getBackingStore().get("calls");
     }
     /**
      * The deserialization information for the current model
@@ -94,7 +91,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
@@ -102,7 +99,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
-        return this.onlineMeetings;
+        return this.getBackingStore().get("onlineMeetings");
     }
     /**
      * Gets the presences property value. The presences property
@@ -110,7 +107,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Presence> getPresences() {
-        return this.presences;
+        return this.getBackingStore().get("presences");
     }
     /**
      * Serializes information the current object
@@ -123,48 +120,54 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
         writer.writeCollectionOfObjectValues("presences", this.getPresences());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the callRecords property value. The callRecords property
      * @param value Value to set for the callRecords property.
      */
     public void setCallRecords(@jakarta.annotation.Nullable final java.util.List<CallRecord> value) {
-        this.callRecords = value;
+        this.getBackingStore().set("callRecords", value);
     }
     /**
      * Sets the calls property value. The calls property
      * @param value Value to set for the calls property.
      */
     public void setCalls(@jakarta.annotation.Nullable final java.util.List<Call> value) {
-        this.calls = value;
+        this.getBackingStore().set("calls", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
      * @param value Value to set for the onlineMeetings property.
      */
     public void setOnlineMeetings(@jakarta.annotation.Nullable final java.util.List<OnlineMeeting> value) {
-        this.onlineMeetings = value;
+        this.getBackingStore().set("onlineMeetings", value);
     }
     /**
      * Sets the presences property value. The presences property
      * @param value Value to set for the presences property.
      */
     public void setPresences(@jakarta.annotation.Nullable final java.util.List<Presence> value) {
-        this.presences = value;
+        this.getBackingStore().set("presences", value);
     }
 }

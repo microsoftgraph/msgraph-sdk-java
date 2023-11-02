@@ -56,7 +56,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TrainingLanguageDetail
      */
@@ -125,10 +125,11 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +137,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +154,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -184,7 +185,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -205,7 +206,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

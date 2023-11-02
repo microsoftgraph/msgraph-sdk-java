@@ -60,7 +60,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Schema::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new schema object.
+     * Create a new schema object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new schema object.
+     * Create a new schema object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Schema
@@ -111,11 +111,11 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Create a new schema object.
+     * Create a new schema object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -124,7 +124,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new schema object.
+     * Create a new schema object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -142,7 +142,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

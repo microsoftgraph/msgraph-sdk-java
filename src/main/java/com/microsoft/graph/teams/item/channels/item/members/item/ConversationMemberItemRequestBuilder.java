@@ -81,21 +81,21 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the role of a conversationMember in a team or channel. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body) {
         return patch(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,6 +131,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -159,11 +160,11 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Update the role of a conversationMember in a team or channel. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +173,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel. This API is available in the following national cloud deployments.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -190,7 +191,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

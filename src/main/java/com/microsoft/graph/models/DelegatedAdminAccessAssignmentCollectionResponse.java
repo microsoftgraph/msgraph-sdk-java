@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DelegatedAdminAccessAssignment> value;
-    /**
      * Instantiates a new DelegatedAdminAccessAssignmentCollectionResponse and sets the default values.
      */
     public DelegatedAdminAccessAssignmentCollectionResponse() {
@@ -44,7 +40,7 @@ public class DelegatedAdminAccessAssignmentCollectionResponse extends BaseCollec
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminAccessAssignment> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DelegatedAdminAccessAssignmentCollectionResponse extends BaseCollec
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminAccessAssignment> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

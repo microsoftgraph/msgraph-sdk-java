@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationJobCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<SynchronizationJob> value;
-    /**
      * Instantiates a new SynchronizationJobCollectionResponse and sets the default values.
      */
     public SynchronizationJobCollectionResponse() {
@@ -44,7 +40,7 @@ public class SynchronizationJobCollectionResponse extends BaseCollectionPaginati
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJob> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class SynchronizationJobCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<SynchronizationJob> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

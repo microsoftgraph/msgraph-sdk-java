@@ -5,35 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TraceRouteHop implements AdditionalDataHolder, Parsable {
+public class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The network path count of this hop that was used to compute the RTT.
-     */
-    private Integer hopCount;
-    /**
-     * IP address used for this hop in the network trace.
-     */
-    private String ipAddress;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
-     */
-    private PeriodAndDuration roundTripTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TraceRouteHop and sets the default values.
      */
     public TraceRouteHop() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +40,20 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +74,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getHopCount() {
-        return this.hopCount;
+        return this.getBackingStore().get("hopCount");
     }
     /**
      * Gets the ipAddress property value. IP address used for this hop in the network trace.
@@ -81,7 +82,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.getBackingStore().get("ipAddress");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,7 +90,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
@@ -97,7 +98,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRoundTripTime() {
-        return this.roundTripTime;
+        return this.getBackingStore().get("roundTripTime");
     }
     /**
      * Serializes information the current object
@@ -109,41 +110,47 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodAndDurationValue("roundTripTime", this.getRoundTripTime());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      * @param value Value to set for the hopCount property.
      */
     public void setHopCount(@jakarta.annotation.Nullable final Integer value) {
-        this.hopCount = value;
+        this.getBackingStore().set("hopCount", value);
     }
     /**
      * Sets the ipAddress property value. IP address used for this hop in the network trace.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.getBackingStore().set("ipAddress", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @param value Value to set for the roundTripTime property.
      */
     public void setRoundTripTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.roundTripTime = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.getBackingStore().set("roundTripTime", value);
     }
 }

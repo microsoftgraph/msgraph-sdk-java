@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAnalytics extends Entity implements Parsable {
     /**
-     * The allTime property
-     */
-    private ItemActivityStat allTime;
-    /**
-     * The itemActivityStats property
-     */
-    private java.util.List<ItemActivityStat> itemActivityStats;
-    /**
-     * The lastSevenDays property
-     */
-    private ItemActivityStat lastSevenDays;
-    /**
      * Instantiates a new ItemAnalytics and sets the default values.
      */
     public ItemAnalytics() {
@@ -42,7 +30,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActivityStat getAllTime() {
-        return this.allTime;
+        return this.getBackingStore().get("allTime");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getItemActivityStats() {
-        return this.itemActivityStats;
+        return this.getBackingStore().get("itemActivityStats");
     }
     /**
      * Gets the lastSevenDays property value. The lastSevenDays property
@@ -70,7 +58,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemActivityStat getLastSevenDays() {
-        return this.lastSevenDays;
+        return this.getBackingStore().get("lastSevenDays");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the allTime property.
      */
     public void setAllTime(@jakarta.annotation.Nullable final ItemActivityStat value) {
-        this.allTime = value;
+        this.getBackingStore().set("allTime", value);
     }
     /**
      * Sets the itemActivityStats property value. The itemActivityStats property
      * @param value Value to set for the itemActivityStats property.
      */
     public void setItemActivityStats(@jakarta.annotation.Nullable final java.util.List<ItemActivityStat> value) {
-        this.itemActivityStats = value;
+        this.getBackingStore().set("itemActivityStats", value);
     }
     /**
      * Sets the lastSevenDays property value. The lastSevenDays property
      * @param value Value to set for the lastSevenDays property.
      */
     public void setLastSevenDays(@jakarta.annotation.Nullable final ItemActivityStat value) {
-        this.lastSevenDays = value;
+        this.getBackingStore().set("lastSevenDays", value);
     }
 }

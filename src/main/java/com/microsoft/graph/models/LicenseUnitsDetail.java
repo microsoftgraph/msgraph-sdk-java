@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
+public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of units that are enabled for the active subscription of the service SKU.
-     */
-    private Integer enabled;
-    /**
-     * The number of units that are locked out because the customer canceled their subscription of the service SKU.
-     */
-    private Integer lockedOut;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
-     */
-    private Integer suspended;
-    /**
-     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
-     */
-    private Integer warning;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new LicenseUnitsDetail and sets the default values.
      */
     public LicenseUnitsDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
@@ -63,7 +60,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getEnabled() {
-        return this.enabled;
+        return this.getBackingStore().get("enabled");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getLockedOut() {
-        return this.lockedOut;
+        return this.getBackingStore().get("lockedOut");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +90,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
@@ -101,7 +98,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSuspended() {
-        return this.suspended;
+        return this.getBackingStore().get("suspended");
     }
     /**
      * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
@@ -109,7 +106,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWarning() {
-        return this.warning;
+        return this.getBackingStore().get("warning");
     }
     /**
      * Serializes information the current object
@@ -122,48 +119,54 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("suspended", this.getSuspended());
         writer.writeIntegerValue("warning", this.getWarning());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Integer value) {
-        this.enabled = value;
+        this.getBackingStore().set("enabled", value);
     }
     /**
      * Sets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      */
     public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
-        this.lockedOut = value;
+        this.getBackingStore().set("lockedOut", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @param value Value to set for the suspended property.
      */
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
-        this.suspended = value;
+        this.getBackingStore().set("suspended", value);
     }
     /**
      * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @param value Value to set for the warning property.
      */
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {
-        this.warning = value;
+        this.getBackingStore().set("warning", value);
     }
 }

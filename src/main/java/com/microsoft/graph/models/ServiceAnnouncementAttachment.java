@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /**
-     * The attachment content.
-     */
-    private byte[] content;
-    /**
-     * The contentType property
-     */
-    private String contentType;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The name property
-     */
-    private String name;
-    /**
-     * The size property
-     */
-    private Integer size;
-    /**
      * Instantiates a new ServiceAnnouncementAttachment and sets the default values.
      */
     public ServiceAnnouncementAttachment() {
@@ -51,7 +31,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * Gets the contentType property value. The contentType property
@@ -59,7 +39,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.getBackingStore().get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +61,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The name property
@@ -89,7 +69,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the size property value. The size property
@@ -97,7 +77,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.getBackingStore().get("size");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.getBackingStore().set("contentType", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.getBackingStore().set("size", value);
     }
 }

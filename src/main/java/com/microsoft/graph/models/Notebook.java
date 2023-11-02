@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /**
-     * Indicates whether this is the user's default notebook. Read-only.
-     */
-    private Boolean isDefault;
-    /**
-     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
-     */
-    private Boolean isShared;
-    /**
-     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
-     */
-    private NotebookLinks links;
-    /**
-     * The section groups in the notebook. Read-only. Nullable.
-     */
-    private java.util.List<SectionGroup> sectionGroups;
-    /**
-     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
-     */
-    private String sectionGroupsUrl;
-    /**
-     * The sections in the notebook. Read-only. Nullable.
-     */
-    private java.util.List<OnenoteSection> sections;
-    /**
-     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
-     */
-    private String sectionsUrl;
-    /**
-     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     */
-    private OnenoteUserRole userRole;
-    /**
      * Instantiates a new Notebook and sets the default values.
      */
     public Notebook() {
@@ -80,7 +48,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.getBackingStore().get("isDefault");
     }
     /**
      * Gets the isShared property value. Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
@@ -88,7 +56,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
-        return this.isShared;
+        return this.getBackingStore().get("isShared");
     }
     /**
      * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
@@ -96,7 +64,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public NotebookLinks getLinks() {
-        return this.links;
+        return this.getBackingStore().get("links");
     }
     /**
      * Gets the sectionGroups property value. The section groups in the notebook. Read-only. Nullable.
@@ -104,7 +72,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
-        return this.sectionGroups;
+        return this.getBackingStore().get("sectionGroups");
     }
     /**
      * Gets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
@@ -112,7 +80,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
-        return this.sectionGroupsUrl;
+        return this.getBackingStore().get("sectionGroupsUrl");
     }
     /**
      * Gets the sections property value. The sections in the notebook. Read-only. Nullable.
@@ -120,7 +88,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
-        return this.sections;
+        return this.getBackingStore().get("sections");
     }
     /**
      * Gets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
@@ -128,7 +96,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSectionsUrl() {
-        return this.sectionsUrl;
+        return this.getBackingStore().get("sectionsUrl");
     }
     /**
      * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
@@ -136,7 +104,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OnenoteUserRole getUserRole() {
-        return this.userRole;
+        return this.getBackingStore().get("userRole");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.getBackingStore().set("isDefault", value);
     }
     /**
      * Sets the isShared property value. Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
      * @param value Value to set for the isShared property.
      */
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
-        this.isShared = value;
+        this.getBackingStore().set("isShared", value);
     }
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {
-        this.links = value;
+        this.getBackingStore().set("links", value);
     }
     /**
      * Sets the sectionGroups property value. The section groups in the notebook. Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
      */
     public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
-        this.sectionGroups = value;
+        this.getBackingStore().set("sectionGroups", value);
     }
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
      * @param value Value to set for the sectionGroupsUrl property.
      */
     public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionGroupsUrl = value;
+        this.getBackingStore().set("sectionGroupsUrl", value);
     }
     /**
      * Sets the sections property value. The sections in the notebook. Read-only. Nullable.
      * @param value Value to set for the sections property.
      */
     public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
-        this.sections = value;
+        this.getBackingStore().set("sections", value);
     }
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
      * @param value Value to set for the sectionsUrl property.
      */
     public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionsUrl = value;
+        this.getBackingStore().set("sectionsUrl", value);
     }
     /**
      * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      * @param value Value to set for the userRole property.
      */
     public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
-        this.userRole = value;
+        this.getBackingStore().set("userRole", value);
     }
 }

@@ -6,44 +6,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The classification property
-     */
-    private String classification;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The mailNickname property
-     */
-    private String mailNickname;
-    /**
-     * The partsToClone property
-     */
-    private EnumSet<ClonableTeamParts> partsToClone;
-    /**
-     * The visibility property
-     */
-    private TeamVisibilityType visibility;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ClonePostRequestBody and sets the default values.
      */
     public ClonePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -62,7 +41,20 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the classification property value. The classification property
@@ -70,7 +62,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClassification() {
-        return this.classification;
+        return this.getBackingStore().get("classification");
     }
     /**
      * Gets the description property value. The description property
@@ -78,7 +70,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -86,7 +78,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +101,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
-        return this.mailNickname;
+        return this.getBackingStore().get("mailNickname");
     }
     /**
      * Gets the partsToClone property value. The partsToClone property
@@ -117,7 +109,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<ClonableTeamParts> getPartsToClone() {
-        return this.partsToClone;
+        return this.getBackingStore().get("partsToClone");
     }
     /**
      * Gets the visibility property value. The visibility property
@@ -125,7 +117,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamVisibilityType getVisibility() {
-        return this.visibility;
+        return this.getBackingStore().get("visibility");
     }
     /**
      * Serializes information the current object
@@ -139,55 +131,61 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("mailNickname", this.getMailNickname());
         writer.writeEnumSetValue("partsToClone", this.getPartsToClone());
         writer.writeEnumValue("visibility", this.getVisibility());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the classification property value. The classification property
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
-        this.classification = value;
+        this.getBackingStore().set("classification", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
-        this.mailNickname = value;
+        this.getBackingStore().set("mailNickname", value);
     }
     /**
      * Sets the partsToClone property value. The partsToClone property
      * @param value Value to set for the partsToClone property.
      */
     public void setPartsToClone(@jakarta.annotation.Nullable final EnumSet<ClonableTeamParts> value) {
-        this.partsToClone = value;
+        this.getBackingStore().set("partsToClone", value);
     }
     /**
      * Sets the visibility property value. The visibility property
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final TeamVisibilityType value) {
-        this.visibility = value;
+        this.getBackingStore().set("visibility", value);
     }
 }

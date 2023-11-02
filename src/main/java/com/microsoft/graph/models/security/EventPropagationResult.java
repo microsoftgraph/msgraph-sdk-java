@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EventPropagationResult implements AdditionalDataHolder, Parsable {
+public class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The name of the specific location in the workload associated with the event.
-     */
-    private String location;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The name of the workload associated with the event.
-     */
-    private String serviceName;
-    /**
-     * Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
-     */
-    private EventPropagationStatus status;
-    /**
-     * Additional information about the status of the event creation request.
-     */
-    private String statusInformation;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new EventPropagationResult and sets the default values.
      */
     public EventPropagationResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +74,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
-        return this.location;
+        return this.getBackingStore().get("location");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,7 +82,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the serviceName property value. The name of the workload associated with the event.
@@ -93,7 +90,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
-        return this.serviceName;
+        return this.getBackingStore().get("serviceName");
     }
     /**
      * Gets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
@@ -101,7 +98,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public EventPropagationStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Gets the statusInformation property value. Additional information about the status of the event creation request.
@@ -109,7 +106,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatusInformation() {
-        return this.statusInformation;
+        return this.getBackingStore().get("statusInformation");
     }
     /**
      * Serializes information the current object
@@ -122,48 +119,54 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("serviceName", this.getServiceName());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("statusInformation", this.getStatusInformation());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the location property value. The name of the specific location in the workload associated with the event.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {
-        this.location = value;
+        this.getBackingStore().set("location", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the serviceName property value. The name of the workload associated with the event.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
-        this.serviceName = value;
+        this.getBackingStore().set("serviceName", value);
     }
     /**
      * Sets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EventPropagationStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
     /**
      * Sets the statusInformation property value. Additional information about the status of the event creation request.
      * @param value Value to set for the statusInformation property.
      */
     public void setStatusInformation(@jakarta.annotation.Nullable final String value) {
-        this.statusInformation = value;
+        this.getBackingStore().set("statusInformation", value);
     }
 }

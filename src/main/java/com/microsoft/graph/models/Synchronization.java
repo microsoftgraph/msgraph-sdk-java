@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Synchronization extends Entity implements Parsable {
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
-     */
-    private java.util.List<SynchronizationJob> jobs;
-    /**
-     * Represents a collection of credentials to access provisioned cloud applications.
-     */
-    private java.util.List<SynchronizationSecretKeyStringValuePair> secrets;
-    /**
-     * Preconfigured synchronization settings for a particular application.
-     */
-    private java.util.List<SynchronizationTemplate> templates;
-    /**
      * Instantiates a new Synchronization and sets the default values.
      */
     public Synchronization() {
@@ -54,7 +42,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJob> getJobs() {
-        return this.jobs;
+        return this.getBackingStore().get("jobs");
     }
     /**
      * Gets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
@@ -62,7 +50,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getSecrets() {
-        return this.secrets;
+        return this.getBackingStore().get("secrets");
     }
     /**
      * Gets the templates property value. Preconfigured synchronization settings for a particular application.
@@ -70,7 +58,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationTemplate> getTemplates() {
-        return this.templates;
+        return this.getBackingStore().get("templates");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class Synchronization extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      */
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<SynchronizationJob> value) {
-        this.jobs = value;
+        this.getBackingStore().set("jobs", value);
     }
     /**
      * Sets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
      * @param value Value to set for the secrets property.
      */
     public void setSecrets(@jakarta.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
-        this.secrets = value;
+        this.getBackingStore().set("secrets", value);
     }
     /**
      * Sets the templates property value. Preconfigured synchronization settings for a particular application.
      * @param value Value to set for the templates property.
      */
     public void setTemplates(@jakarta.annotation.Nullable final java.util.List<SynchronizationTemplate> value) {
-        this.templates = value;
+        this.getBackingStore().set("templates", value);
     }
 }

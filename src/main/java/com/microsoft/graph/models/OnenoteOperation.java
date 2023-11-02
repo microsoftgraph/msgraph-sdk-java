@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteOperation extends Operation implements Parsable {
     /**
-     * The error returned by the operation.
-     */
-    private OnenoteOperationError error;
-    /**
-     * The operation percent complete if the operation is still in running status.
-     */
-    private String percentComplete;
-    /**
-     * The resource id.
-     */
-    private String resourceId;
-    /**
-     * The resource URI for the object. For example, the resource URI for a copied page or section.
-     */
-    private String resourceLocation;
-    /**
      * Instantiates a new OnenoteOperation and sets the default values.
      */
     public OnenoteOperation() {
@@ -46,7 +30,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OnenoteOperationError getError() {
-        return this.error;
+        return this.getBackingStore().get("error");
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +51,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPercentComplete() {
-        return this.percentComplete;
+        return this.getBackingStore().get("percentComplete");
     }
     /**
      * Gets the resourceId property value. The resource id.
@@ -75,7 +59,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.getBackingStore().get("resourceId");
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
@@ -83,7 +67,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {
-        return this.resourceLocation;
+        return this.getBackingStore().get("resourceLocation");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final OnenoteOperationError value) {
-        this.error = value;
+        this.getBackingStore().set("error", value);
     }
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final String value) {
-        this.percentComplete = value;
+        this.getBackingStore().set("percentComplete", value);
     }
     /**
      * Sets the resourceId property value. The resource id.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.getBackingStore().set("resourceId", value);
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
-        this.resourceLocation = value;
+        this.getBackingStore().set("resourceLocation", value);
     }
 }

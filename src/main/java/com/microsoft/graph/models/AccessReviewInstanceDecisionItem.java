@@ -10,62 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /**
-     * The identifier of the accessReviewInstance parent. Supports $select. Read-only.
-     */
-    private String accessReviewId;
-    /**
-     * The identifier of the user who applied the decision. Read-only.
-     */
-    private UserIdentity appliedBy;
-    /**
-     * The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
-     */
-    private OffsetDateTime appliedDateTime;
-    /**
-     * The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
-     */
-    private String applyResult;
-    /**
-     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
-     */
-    private String decision;
-    /**
-     * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
-     */
-    private java.util.List<GovernanceInsight> insights;
-    /**
-     * Justification left by the reviewer when they made the decision.
-     */
-    private String justification;
-    /**
-     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
-     */
-    private Identity principal;
-    /**
-     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
-     */
-    private String principalLink;
-    /**
-     * A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
-     */
-    private String recommendation;
-    /**
-     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
-     */
-    private AccessReviewInstanceDecisionItemResource resource;
-    /**
-     * A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
-     */
-    private String resourceLink;
-    /**
-     * The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
-     */
-    private UserIdentity reviewedBy;
-    /**
-     * The timestamp when the review decision occurred. Supports $select. Read-only.
-     */
-    private OffsetDateTime reviewedDateTime;
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItem and sets the default values.
      */
     public AccessReviewInstanceDecisionItem() {
@@ -87,7 +31,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getAccessReviewId() {
-        return this.accessReviewId;
+        return this.getBackingStore().get("accessReviewId");
     }
     /**
      * Gets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
@@ -95,7 +39,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public UserIdentity getAppliedBy() {
-        return this.appliedBy;
+        return this.getBackingStore().get("appliedBy");
     }
     /**
      * Gets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
@@ -103,7 +47,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAppliedDateTime() {
-        return this.appliedDateTime;
+        return this.getBackingStore().get("appliedDateTime");
     }
     /**
      * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -111,7 +55,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getApplyResult() {
-        return this.applyResult;
+        return this.getBackingStore().get("applyResult");
     }
     /**
      * Gets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
@@ -119,7 +63,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getDecision() {
-        return this.decision;
+        return this.getBackingStore().get("decision");
     }
     /**
      * The deserialization information for the current model
@@ -150,7 +94,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceInsight> getInsights() {
-        return this.insights;
+        return this.getBackingStore().get("insights");
     }
     /**
      * Gets the justification property value. Justification left by the reviewer when they made the decision.
@@ -158,7 +102,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.getBackingStore().get("justification");
     }
     /**
      * Gets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -166,7 +110,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public Identity getPrincipal() {
-        return this.principal;
+        return this.getBackingStore().get("principal");
     }
     /**
      * Gets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
@@ -174,7 +118,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getPrincipalLink() {
-        return this.principalLink;
+        return this.getBackingStore().get("principalLink");
     }
     /**
      * Gets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -182,7 +126,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getRecommendation() {
-        return this.recommendation;
+        return this.getBackingStore().get("recommendation");
     }
     /**
      * Gets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
@@ -190,7 +134,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource getResource() {
-        return this.resource;
+        return this.getBackingStore().get("resource");
     }
     /**
      * Gets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
@@ -198,7 +142,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getResourceLink() {
-        return this.resourceLink;
+        return this.getBackingStore().get("resourceLink");
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
@@ -206,7 +150,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public UserIdentity getReviewedBy() {
-        return this.reviewedBy;
+        return this.getBackingStore().get("reviewedBy");
     }
     /**
      * Gets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
@@ -214,7 +158,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
-        return this.reviewedDateTime;
+        return this.getBackingStore().get("reviewedDateTime");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the accessReviewId property.
      */
     public void setAccessReviewId(@jakarta.annotation.Nullable final String value) {
-        this.accessReviewId = value;
+        this.getBackingStore().set("accessReviewId", value);
     }
     /**
      * Sets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
      * @param value Value to set for the appliedBy property.
      */
     public void setAppliedBy(@jakarta.annotation.Nullable final UserIdentity value) {
-        this.appliedBy = value;
+        this.getBackingStore().set("appliedBy", value);
     }
     /**
      * Sets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
      * @param value Value to set for the appliedDateTime property.
      */
     public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.appliedDateTime = value;
+        this.getBackingStore().set("appliedDateTime", value);
     }
     /**
      * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the applyResult property.
      */
     public void setApplyResult(@jakarta.annotation.Nullable final String value) {
-        this.applyResult = value;
+        this.getBackingStore().set("applyResult", value);
     }
     /**
      * Sets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
      * @param value Value to set for the decision property.
      */
     public void setDecision(@jakarta.annotation.Nullable final String value) {
-        this.decision = value;
+        this.getBackingStore().set("decision", value);
     }
     /**
      * Sets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<GovernanceInsight> value) {
-        this.insights = value;
+        this.getBackingStore().set("insights", value);
     }
     /**
      * Sets the justification property value. Justification left by the reviewer when they made the decision.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.getBackingStore().set("justification", value);
     }
     /**
      * Sets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final Identity value) {
-        this.principal = value;
+        this.getBackingStore().set("principal", value);
     }
     /**
      * Sets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      * @param value Value to set for the principalLink property.
      */
     public void setPrincipalLink(@jakarta.annotation.Nullable final String value) {
-        this.principalLink = value;
+        this.getBackingStore().set("principalLink", value);
     }
     /**
      * Sets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the recommendation property.
      */
     public void setRecommendation(@jakarta.annotation.Nullable final String value) {
-        this.recommendation = value;
+        this.getBackingStore().set("recommendation", value);
     }
     /**
      * Sets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
-        this.resource = value;
+        this.getBackingStore().set("resource", value);
     }
     /**
      * Sets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
      * @param value Value to set for the resourceLink property.
      */
     public void setResourceLink(@jakarta.annotation.Nullable final String value) {
-        this.resourceLink = value;
+        this.getBackingStore().set("resourceLink", value);
     }
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      * @param value Value to set for the reviewedBy property.
      */
     public void setReviewedBy(@jakarta.annotation.Nullable final UserIdentity value) {
-        this.reviewedBy = value;
+        this.getBackingStore().set("reviewedBy", value);
     }
     /**
      * Sets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
      * @param value Value to set for the reviewedDateTime property.
      */
     public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.reviewedDateTime = value;
+        this.getBackingStore().set("reviewedDateTime", value);
     }
 }

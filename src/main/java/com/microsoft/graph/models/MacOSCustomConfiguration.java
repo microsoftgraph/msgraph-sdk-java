@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Payload. (UTF8 encoded byte array)
-     */
-    private byte[] payload;
-    /**
-     * Payload file name (.mobileconfig
-     */
-    private String payloadFileName;
-    /**
-     * Name that is displayed to the user.
-     */
-    private String payloadName;
-    /**
      * Instantiates a new MacOSCustomConfiguration and sets the default values.
      */
     public MacOSCustomConfiguration() {
@@ -58,7 +46,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
-        return this.payload;
+        return this.getBackingStore().get("payload");
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
@@ -66,7 +54,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
-        return this.payloadFileName;
+        return this.getBackingStore().get("payloadFileName");
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
@@ -74,7 +62,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {
-        return this.payloadName;
+        return this.getBackingStore().get("payloadName");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
-        this.payload = value;
+        this.getBackingStore().set("payload", value);
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      * @param value Value to set for the payloadFileName property.
      */
     public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
-        this.payloadFileName = value;
+        this.getBackingStore().set("payloadFileName", value);
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      * @param value Value to set for the payloadName property.
      */
     public void setPayloadName(@jakarta.annotation.Nullable final String value) {
-        this.payloadName = value;
+        this.getBackingStore().set("payloadName", value);
     }
 }

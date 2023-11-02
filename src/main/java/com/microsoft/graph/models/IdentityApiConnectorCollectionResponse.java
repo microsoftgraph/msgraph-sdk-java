@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityApiConnectorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<IdentityApiConnector> value;
-    /**
      * Instantiates a new IdentityApiConnectorCollectionResponse and sets the default values.
      */
     public IdentityApiConnectorCollectionResponse() {
@@ -44,7 +40,7 @@ public class IdentityApiConnectorCollectionResponse extends BaseCollectionPagina
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class IdentityApiConnectorCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

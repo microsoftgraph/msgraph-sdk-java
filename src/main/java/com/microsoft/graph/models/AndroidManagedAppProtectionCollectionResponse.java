@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AndroidManagedAppProtection> value;
-    /**
      * Instantiates a new AndroidManagedAppProtectionCollectionResponse and sets the default values.
      */
     public AndroidManagedAppProtectionCollectionResponse() {
@@ -44,7 +40,7 @@ public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectio
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

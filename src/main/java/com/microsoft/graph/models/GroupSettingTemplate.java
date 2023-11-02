@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
-     * Description of the template.
-     */
-    private String description;
-    /**
-     * Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
-     */
-    private String displayName;
-    /**
-     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
-     */
-    private java.util.List<SettingTemplateValue> values;
-    /**
      * Instantiates a new GroupSettingTemplate and sets the default values.
      */
     public GroupSettingTemplate() {
@@ -43,7 +31,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
@@ -51,7 +39,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {
-        return this.values;
+        return this.getBackingStore().get("values");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
-        this.values = value;
+        this.getBackingStore().set("values", value);
     }
 }

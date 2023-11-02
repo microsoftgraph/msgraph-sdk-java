@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReportRoot implements AdditionalDataHolder, Parsable {
+public class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Container for navigation properties for Microsoft Entra authentication methods resources.
-     */
-    private AuthenticationMethodsRoot authenticationMethods;
-    /**
-     * Retrieve a list of daily print usage summaries, grouped by printer.
-     */
-    private java.util.List<PrintUsageByPrinter> dailyPrintUsageByPrinter;
-    /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
-     */
-    private java.util.List<PrintUsageByUser> dailyPrintUsageByUser;
-    /**
-     * Retrieve a list of monthly print usage summaries, grouped by printer.
-     */
-    private java.util.List<PrintUsageByPrinter> monthlyPrintUsageByPrinter;
-    /**
-     * Retrieve a list of monthly print usage summaries, grouped by user.
-     */
-    private java.util.List<PrintUsageByUser> monthlyPrintUsageByUser;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents an abstract type that contains resources for attack simulation and training reports.
-     */
-    private SecurityReportsRoot security;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ReportRoot and sets the default values.
      */
     public ReportRoot() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the authenticationMethods property value. Container for navigation properties for Microsoft Entra authentication methods resources.
@@ -71,7 +52,15 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot getAuthenticationMethods() {
-        return this.authenticationMethods;
+        return this.getBackingStore().get("authenticationMethods");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
@@ -79,7 +68,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getDailyPrintUsageByPrinter() {
-        return this.dailyPrintUsageByPrinter;
+        return this.getBackingStore().get("dailyPrintUsageByPrinter");
     }
     /**
      * Gets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
@@ -87,7 +76,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getDailyPrintUsageByUser() {
-        return this.dailyPrintUsageByUser;
+        return this.getBackingStore().get("dailyPrintUsageByUser");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +100,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getMonthlyPrintUsageByPrinter() {
-        return this.monthlyPrintUsageByPrinter;
+        return this.getBackingStore().get("monthlyPrintUsageByPrinter");
     }
     /**
      * Gets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
@@ -119,7 +108,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getMonthlyPrintUsageByUser() {
-        return this.monthlyPrintUsageByUser;
+        return this.getBackingStore().get("monthlyPrintUsageByUser");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -127,7 +116,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
@@ -135,7 +124,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SecurityReportsRoot getSecurity() {
-        return this.security;
+        return this.getBackingStore().get("security");
     }
     /**
      * Serializes information the current object
@@ -150,62 +139,68 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("security", this.getSecurity());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the authenticationMethods property value. Container for navigation properties for Microsoft Entra authentication methods resources.
      * @param value Value to set for the authenticationMethods property.
      */
     public void setAuthenticationMethods(@jakarta.annotation.Nullable final AuthenticationMethodsRoot value) {
-        this.authenticationMethods = value;
+        this.getBackingStore().set("authenticationMethods", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @param value Value to set for the dailyPrintUsageByPrinter property.
      */
     public void setDailyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
-        this.dailyPrintUsageByPrinter = value;
+        this.getBackingStore().set("dailyPrintUsageByPrinter", value);
     }
     /**
      * Sets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @param value Value to set for the dailyPrintUsageByUser property.
      */
     public void setDailyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
-        this.dailyPrintUsageByUser = value;
+        this.getBackingStore().set("dailyPrintUsageByUser", value);
     }
     /**
      * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
      */
     public void setMonthlyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
-        this.monthlyPrintUsageByPrinter = value;
+        this.getBackingStore().set("monthlyPrintUsageByPrinter", value);
     }
     /**
      * Sets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @param value Value to set for the monthlyPrintUsageByUser property.
      */
     public void setMonthlyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
-        this.monthlyPrintUsageByUser = value;
+        this.getBackingStore().set("monthlyPrintUsageByUser", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @param value Value to set for the security property.
      */
     public void setSecurity(@jakarta.annotation.Nullable final SecurityReportsRoot value) {
-        this.security = value;
+        this.getBackingStore().set("security", value);
     }
 }

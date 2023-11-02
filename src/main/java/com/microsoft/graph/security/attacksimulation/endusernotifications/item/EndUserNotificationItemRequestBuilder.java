@@ -64,7 +64,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EndUserNotification
      */
@@ -133,10 +133,11 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +145,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +162,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -192,7 +193,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -213,7 +214,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

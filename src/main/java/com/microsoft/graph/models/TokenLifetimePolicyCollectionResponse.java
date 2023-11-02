@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TokenLifetimePolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TokenLifetimePolicy> value;
-    /**
      * Instantiates a new TokenLifetimePolicyCollectionResponse and sets the default values.
      */
     public TokenLifetimePolicyCollectionResponse() {
@@ -44,7 +40,7 @@ public class TokenLifetimePolicyCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TokenLifetimePolicyCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

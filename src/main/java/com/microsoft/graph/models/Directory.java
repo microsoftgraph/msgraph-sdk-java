@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Directory extends Entity implements Parsable {
     /**
-     * Conceptual container for user and group directory objects.
-     */
-    private java.util.List<AdministrativeUnit> administrativeUnits;
-    /**
-     * Group of related custom security attribute definitions.
-     */
-    private java.util.List<AttributeSet> attributeSets;
-    /**
-     * Schema of a custom security attributes (key-value pairs).
-     */
-    private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
-    /**
-     * Recently deleted items. Read-only. Nullable.
-     */
-    private java.util.List<DirectoryObject> deletedItems;
-    /**
-     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     */
-    private java.util.List<IdentityProviderBase> federationConfigurations;
-    /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
-     */
-    private java.util.List<OnPremisesDirectorySynchronization> onPremisesSynchronization;
-    /**
      * Instantiates a new Directory and sets the default values.
      */
     public Directory() {
@@ -54,7 +30,7 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
-        return this.administrativeUnits;
+        return this.getBackingStore().get("administrativeUnits");
     }
     /**
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
@@ -62,7 +38,7 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
-        return this.attributeSets;
+        return this.getBackingStore().get("attributeSets");
     }
     /**
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
@@ -70,7 +46,7 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
-        return this.customSecurityAttributeDefinitions;
+        return this.getBackingStore().get("customSecurityAttributeDefinitions");
     }
     /**
      * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
@@ -78,7 +54,15 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
-        return this.deletedItems;
+        return this.getBackingStore().get("deletedItems");
+    }
+    /**
+     * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @return a java.util.List<DeviceLocalCredentialInfo>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceLocalCredentialInfo> getDeviceLocalCredentials() {
+        return this.getBackingStore().get("deviceLocalCredentials");
     }
     /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
@@ -86,7 +70,7 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
-        return this.federationConfigurations;
+        return this.getBackingStore().get("federationConfigurations");
     }
     /**
      * The deserialization information for the current model
@@ -99,6 +83,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("attributeSets", (n) -> { this.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -109,7 +94,7 @@ public class Directory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
-        return this.onPremisesSynchronization;
+        return this.getBackingStore().get("onPremisesSynchronization");
     }
     /**
      * Serializes information the current object
@@ -122,6 +107,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("attributeSets", this.getAttributeSets());
         writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
+        writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
     }
@@ -130,41 +116,48 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      */
     public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
-        this.administrativeUnits = value;
+        this.getBackingStore().set("administrativeUnits", value);
     }
     /**
      * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param value Value to set for the attributeSets property.
      */
     public void setAttributeSets(@jakarta.annotation.Nullable final java.util.List<AttributeSet> value) {
-        this.attributeSets = value;
+        this.getBackingStore().set("attributeSets", value);
     }
     /**
      * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      */
     public void setCustomSecurityAttributeDefinitions(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
-        this.customSecurityAttributeDefinitions = value;
+        this.getBackingStore().set("customSecurityAttributeDefinitions", value);
     }
     /**
      * Sets the deletedItems property value. Recently deleted items. Read-only. Nullable.
      * @param value Value to set for the deletedItems property.
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.deletedItems = value;
+        this.getBackingStore().set("deletedItems", value);
+    }
+    /**
+     * Sets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @param value Value to set for the deviceLocalCredentials property.
+     */
+    public void setDeviceLocalCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredentialInfo> value) {
+        this.getBackingStore().set("deviceLocalCredentials", value);
     }
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param value Value to set for the federationConfigurations property.
      */
     public void setFederationConfigurations(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this.federationConfigurations = value;
+        this.getBackingStore().set("federationConfigurations", value);
     }
     /**
      * Sets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
      * @param value Value to set for the onPremisesSynchronization property.
      */
     public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
-        this.onPremisesSynchronization = value;
+        this.getBackingStore().set("onPremisesSynchronization", value);
     }
 }

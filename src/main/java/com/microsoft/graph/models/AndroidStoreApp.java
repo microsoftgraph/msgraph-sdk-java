@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidStoreApp extends MobileApp implements Parsable {
     /**
-     * The Android app store URL.
-     */
-    private String appStoreUrl;
-    /**
-     * The value for the minimum applicable operating system.
-     */
-    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The package identifier.
-     */
-    private String packageId;
-    /**
      * Instantiates a new AndroidStoreApp and sets the default values.
      */
     public AndroidStoreApp() {
@@ -46,7 +34,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
-        return this.appStoreUrl;
+        return this.getBackingStore().get("appStoreUrl");
     }
     /**
      * The deserialization information for the current model
@@ -66,7 +54,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.getBackingStore().get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -74,7 +62,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
-        return this.packageId;
+        return this.getBackingStore().get("packageId");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.appStoreUrl = value;
+        this.getBackingStore().set("appStoreUrl", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.getBackingStore().set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
-        this.packageId = value;
+        this.getBackingStore().set("packageId", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,39 +14,16 @@ import java.util.Objects;
  * Device Exchange Access State summary
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable {
+public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Total count of devices with Exchange Access State: Allowed.
-     */
-    private Integer allowedDeviceCount;
-    /**
-     * Total count of devices with Exchange Access State: Blocked.
-     */
-    private Integer blockedDeviceCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Total count of devices with Exchange Access State: Quarantined.
-     */
-    private Integer quarantinedDeviceCount;
-    /**
-     * Total count of devices for which no Exchange Access State could be found.
-     */
-    private Integer unavailableDeviceCount;
-    /**
-     * Total count of devices with Exchange Access State: Unknown.
-     */
-    private Integer unknownDeviceCount;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DeviceExchangeAccessStateSummary and sets the default values.
      */
     public DeviceExchangeAccessStateSummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -62,7 +42,12 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowedDeviceCount property value. Total count of devices with Exchange Access State: Allowed.
@@ -70,7 +55,15 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public Integer getAllowedDeviceCount() {
-        return this.allowedDeviceCount;
+        return this.getBackingStore().get("allowedDeviceCount");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the blockedDeviceCount property value. Total count of devices with Exchange Access State: Blocked.
@@ -78,7 +71,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public Integer getBlockedDeviceCount() {
-        return this.blockedDeviceCount;
+        return this.getBackingStore().get("blockedDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +94,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
@@ -109,7 +102,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public Integer getQuarantinedDeviceCount() {
-        return this.quarantinedDeviceCount;
+        return this.getBackingStore().get("quarantinedDeviceCount");
     }
     /**
      * Gets the unavailableDeviceCount property value. Total count of devices for which no Exchange Access State could be found.
@@ -117,7 +110,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public Integer getUnavailableDeviceCount() {
-        return this.unavailableDeviceCount;
+        return this.getBackingStore().get("unavailableDeviceCount");
     }
     /**
      * Gets the unknownDeviceCount property value. Total count of devices with Exchange Access State: Unknown.
@@ -125,7 +118,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this.unknownDeviceCount;
+        return this.getBackingStore().get("unknownDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -139,55 +132,61 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
         writer.writeIntegerValue("quarantinedDeviceCount", this.getQuarantinedDeviceCount());
         writer.writeIntegerValue("unavailableDeviceCount", this.getUnavailableDeviceCount());
         writer.writeIntegerValue("unknownDeviceCount", this.getUnknownDeviceCount());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowedDeviceCount property value. Total count of devices with Exchange Access State: Allowed.
      * @param value Value to set for the allowedDeviceCount property.
      */
     public void setAllowedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.allowedDeviceCount = value;
+        this.getBackingStore().set("allowedDeviceCount", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the blockedDeviceCount property value. Total count of devices with Exchange Access State: Blocked.
      * @param value Value to set for the blockedDeviceCount property.
      */
     public void setBlockedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.blockedDeviceCount = value;
+        this.getBackingStore().set("blockedDeviceCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
      * @param value Value to set for the quarantinedDeviceCount property.
      */
     public void setQuarantinedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.quarantinedDeviceCount = value;
+        this.getBackingStore().set("quarantinedDeviceCount", value);
     }
     /**
      * Sets the unavailableDeviceCount property value. Total count of devices for which no Exchange Access State could be found.
      * @param value Value to set for the unavailableDeviceCount property.
      */
     public void setUnavailableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unavailableDeviceCount = value;
+        this.getBackingStore().set("unavailableDeviceCount", value);
     }
     /**
      * Sets the unknownDeviceCount property value. Total count of devices with Exchange Access State: Unknown.
      * @param value Value to set for the unknownDeviceCount property.
      */
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.unknownDeviceCount = value;
+        this.getBackingStore().set("unknownDeviceCount", value);
     }
 }

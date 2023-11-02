@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable {
     /**
-     * How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
-     */
-    private Integer offsetInDays;
-    /**
-     * The timeBasedAttribute property
-     */
-    private WorkflowTriggerTimeBasedAttribute timeBasedAttribute;
-    /**
      * Instantiates a new TimeBasedAttributeTrigger and sets the default values.
      */
     public TimeBasedAttributeTrigger() {
@@ -50,7 +42,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
      */
     @jakarta.annotation.Nullable
     public Integer getOffsetInDays() {
-        return this.offsetInDays;
+        return this.getBackingStore().get("offsetInDays");
     }
     /**
      * Gets the timeBasedAttribute property value. The timeBasedAttribute property
@@ -58,7 +50,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
      */
     @jakarta.annotation.Nullable
     public WorkflowTriggerTimeBasedAttribute getTimeBasedAttribute() {
-        return this.timeBasedAttribute;
+        return this.getBackingStore().get("timeBasedAttribute");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
      * @param value Value to set for the offsetInDays property.
      */
     public void setOffsetInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.offsetInDays = value;
+        this.getBackingStore().set("offsetInDays", value);
     }
     /**
      * Sets the timeBasedAttribute property value. The timeBasedAttribute property
      * @param value Value to set for the timeBasedAttribute property.
      */
     public void setTimeBasedAttribute(@jakarta.annotation.Nullable final WorkflowTriggerTimeBasedAttribute value) {
-        this.timeBasedAttribute = value;
+        this.getBackingStore().set("timeBasedAttribute", value);
     }
 }

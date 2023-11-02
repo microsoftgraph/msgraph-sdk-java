@@ -13,38 +13,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
-     * The Apple ID associated with Vpp token.
-     */
-    private String appleId;
-    /**
-     * Genres.
-     */
-    private java.util.List<String> genres;
-    /**
-     * Language.
-     */
-    private String language;
-    /**
-     * Seller.
-     */
-    private String seller;
-    /**
-     * Total license count.
-     */
-    private Integer totalLicenseCount;
-    /**
-     * Used license count.
-     */
-    private Integer usedLicenseCount;
-    /**
-     * The Vpp token's organization name.
-     */
-    private String vppOrganizationName;
-    /**
-     * The Vpp token ID.
-     */
-    private UUID vppTokenId;
-    /**
      * Instantiates a new IosVppEBook and sets the default values.
      */
     public IosVppEBook() {
@@ -67,7 +35,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
-        return this.appleId;
+        return this.getBackingStore().get("appleId");
     }
     /**
      * The deserialization information for the current model
@@ -92,7 +60,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGenres() {
-        return this.genres;
+        return this.getBackingStore().get("genres");
     }
     /**
      * Gets the language property value. Language.
@@ -100,7 +68,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.getBackingStore().get("language");
     }
     /**
      * Gets the seller property value. Seller.
@@ -108,7 +76,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSeller() {
-        return this.seller;
+        return this.getBackingStore().get("seller");
     }
     /**
      * Gets the totalLicenseCount property value. Total license count.
@@ -116,7 +84,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this.totalLicenseCount;
+        return this.getBackingStore().get("totalLicenseCount");
     }
     /**
      * Gets the usedLicenseCount property value. Used license count.
@@ -124,7 +92,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this.usedLicenseCount;
+        return this.getBackingStore().get("usedLicenseCount");
     }
     /**
      * Gets the vppOrganizationName property value. The Vpp token's organization name.
@@ -132,7 +100,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVppOrganizationName() {
-        return this.vppOrganizationName;
+        return this.getBackingStore().get("vppOrganizationName");
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
@@ -140,7 +108,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getVppTokenId() {
-        return this.vppTokenId;
+        return this.getBackingStore().get("vppTokenId");
     }
     /**
      * Serializes information the current object
@@ -163,55 +131,55 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      * @param value Value to set for the appleId property.
      */
     public void setAppleId(@jakarta.annotation.Nullable final String value) {
-        this.appleId = value;
+        this.getBackingStore().set("appleId", value);
     }
     /**
      * Sets the genres property value. Genres.
      * @param value Value to set for the genres property.
      */
     public void setGenres(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.genres = value;
+        this.getBackingStore().set("genres", value);
     }
     /**
      * Sets the language property value. Language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.getBackingStore().set("language", value);
     }
     /**
      * Sets the seller property value. Seller.
      * @param value Value to set for the seller property.
      */
     public void setSeller(@jakarta.annotation.Nullable final String value) {
-        this.seller = value;
+        this.getBackingStore().set("seller", value);
     }
     /**
      * Sets the totalLicenseCount property value. Total license count.
      * @param value Value to set for the totalLicenseCount property.
      */
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicenseCount = value;
+        this.getBackingStore().set("totalLicenseCount", value);
     }
     /**
      * Sets the usedLicenseCount property value. Used license count.
      * @param value Value to set for the usedLicenseCount property.
      */
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.usedLicenseCount = value;
+        this.getBackingStore().set("usedLicenseCount", value);
     }
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
      * @param value Value to set for the vppOrganizationName property.
      */
     public void setVppOrganizationName(@jakarta.annotation.Nullable final String value) {
-        this.vppOrganizationName = value;
+        this.getBackingStore().set("vppOrganizationName", value);
     }
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
      * @param value Value to set for the vppTokenId property.
      */
     public void setVppTokenId(@jakarta.annotation.Nullable final UUID value) {
-        this.vppTokenId = value;
+        this.getBackingStore().set("vppTokenId", value);
     }
 }

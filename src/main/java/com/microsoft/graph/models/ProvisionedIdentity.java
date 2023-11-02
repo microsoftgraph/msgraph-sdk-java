@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisionedIdentity extends Identity implements Parsable {
     /**
-     * Details of the identity.
-     */
-    private DetailsInfo details;
-    /**
-     * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
-     */
-    private String identityType;
-    /**
      * Instantiates a new ProvisionedIdentity and sets the default values.
      */
     public ProvisionedIdentity() {
@@ -39,7 +31,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DetailsInfo getDetails() {
-        return this.details;
+        return this.getBackingStore().get("details");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIdentityType() {
-        return this.identityType;
+        return this.getBackingStore().get("identityType");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final DetailsInfo value) {
-        this.details = value;
+        this.getBackingStore().set("details", value);
     }
     /**
      * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      * @param value Value to set for the identityType property.
      */
     public void setIdentityType(@jakarta.annotation.Nullable final String value) {
-        this.identityType = value;
+        this.getBackingStore().set("identityType", value);
     }
 }

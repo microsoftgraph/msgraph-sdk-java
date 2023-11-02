@@ -13,66 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileApp extends Entity implements Parsable {
     /**
-     * The list of group assignments for this mobile app.
-     */
-    private java.util.List<MobileAppAssignment> assignments;
-    /**
-     * The list of categories for this app.
-     */
-    private java.util.List<MobileAppCategory> categories;
-    /**
-     * The date and time the app was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the app.
-     */
-    private String description;
-    /**
-     * The developer of the app.
-     */
-    private String developer;
-    /**
-     * The admin provided or imported title of the app.
-     */
-    private String displayName;
-    /**
-     * The more information Url.
-     */
-    private String informationUrl;
-    /**
-     * The value indicating whether the app is marked as featured by the admin.
-     */
-    private Boolean isFeatured;
-    /**
-     * The large icon, to be displayed in the app details and used for upload of the icon.
-     */
-    private MimeContent largeIcon;
-    /**
-     * The date and time the app was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Notes for the app.
-     */
-    private String notes;
-    /**
-     * The owner of the app.
-     */
-    private String owner;
-    /**
-     * The privacy statement Url.
-     */
-    private String privacyInformationUrl;
-    /**
-     * The publisher of the app.
-     */
-    private String publisher;
-    /**
-     * Indicates the publishing state of an app.
-     */
-    private MobileAppPublishingState publishingState;
-    /**
      * Instantiates a new MobileApp and sets the default values.
      */
     public MobileApp() {
@@ -126,7 +66,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppAssignment> getAssignments() {
-        return this.assignments;
+        return this.getBackingStore().get("assignments");
     }
     /**
      * Gets the categories property value. The list of categories for this app.
@@ -134,7 +74,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppCategory> getCategories() {
-        return this.categories;
+        return this.getBackingStore().get("categories");
     }
     /**
      * Gets the createdDateTime property value. The date and time the app was created.
@@ -142,7 +82,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the app.
@@ -150,7 +90,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the developer property value. The developer of the app.
@@ -158,7 +98,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDeveloper() {
-        return this.developer;
+        return this.getBackingStore().get("developer");
     }
     /**
      * Gets the displayName property value. The admin provided or imported title of the app.
@@ -166,7 +106,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -198,7 +138,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getInformationUrl() {
-        return this.informationUrl;
+        return this.getBackingStore().get("informationUrl");
     }
     /**
      * Gets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
@@ -206,7 +146,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
-        return this.isFeatured;
+        return this.getBackingStore().get("isFeatured");
     }
     /**
      * Gets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
@@ -214,7 +154,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MimeContent getLargeIcon() {
-        return this.largeIcon;
+        return this.getBackingStore().get("largeIcon");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
@@ -222,7 +162,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the notes property value. Notes for the app.
@@ -230,7 +170,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.getBackingStore().get("notes");
     }
     /**
      * Gets the owner property value. The owner of the app.
@@ -238,7 +178,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
-        return this.owner;
+        return this.getBackingStore().get("owner");
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
@@ -246,7 +186,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrivacyInformationUrl() {
-        return this.privacyInformationUrl;
+        return this.getBackingStore().get("privacyInformationUrl");
     }
     /**
      * Gets the publisher property value. The publisher of the app.
@@ -254,7 +194,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.getBackingStore().get("publisher");
     }
     /**
      * Gets the publishingState property value. Indicates the publishing state of an app.
@@ -262,7 +202,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MobileAppPublishingState getPublishingState() {
-        return this.publishingState;
+        return this.getBackingStore().get("publishingState");
     }
     /**
      * Serializes information the current object
@@ -292,104 +232,104 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
-        this.assignments = value;
+        this.getBackingStore().set("assignments", value);
     }
     /**
      * Sets the categories property value. The list of categories for this app.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<MobileAppCategory> value) {
-        this.categories = value;
+        this.getBackingStore().set("categories", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the app was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the app.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the developer property value. The developer of the app.
      * @param value Value to set for the developer property.
      */
     public void setDeveloper(@jakarta.annotation.Nullable final String value) {
-        this.developer = value;
+        this.getBackingStore().set("developer", value);
     }
     /**
      * Sets the displayName property value. The admin provided or imported title of the app.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the informationUrl property value. The more information Url.
      * @param value Value to set for the informationUrl property.
      */
     public void setInformationUrl(@jakarta.annotation.Nullable final String value) {
-        this.informationUrl = value;
+        this.getBackingStore().set("informationUrl", value);
     }
     /**
      * Sets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
      * @param value Value to set for the isFeatured property.
      */
     public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFeatured = value;
+        this.getBackingStore().set("isFeatured", value);
     }
     /**
      * Sets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
      * @param value Value to set for the largeIcon property.
      */
     public void setLargeIcon(@jakarta.annotation.Nullable final MimeContent value) {
-        this.largeIcon = value;
+        this.getBackingStore().set("largeIcon", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the app was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the notes property value. Notes for the app.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.getBackingStore().set("notes", value);
     }
     /**
      * Sets the owner property value. The owner of the app.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {
-        this.owner = value;
+        this.getBackingStore().set("owner", value);
     }
     /**
      * Sets the privacyInformationUrl property value. The privacy statement Url.
      * @param value Value to set for the privacyInformationUrl property.
      */
     public void setPrivacyInformationUrl(@jakarta.annotation.Nullable final String value) {
-        this.privacyInformationUrl = value;
+        this.getBackingStore().set("privacyInformationUrl", value);
     }
     /**
      * Sets the publisher property value. The publisher of the app.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.getBackingStore().set("publisher", value);
     }
     /**
      * Sets the publishingState property value. Indicates the publishing state of an app.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final MobileAppPublishingState value) {
-        this.publishingState = value;
+        this.getBackingStore().set("publishingState", value);
     }
 }

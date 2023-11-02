@@ -59,17 +59,19 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of InternalDomainFederationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InternalDomainFederationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +108,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InternalDomainFederation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +116,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +133,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -162,7 +164,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -177,7 +179,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return new FederationConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an internalDomainFederation object. This API is available in the following national cloud deployments.
+     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceUser extends Entity implements Parsable {
     /**
-     * The learningCourseActivities property
-     */
-    private java.util.List<LearningCourseActivity> learningCourseActivities;
-    /**
      * Instantiates a new EmployeeExperienceUser and sets the default values.
      */
     public EmployeeExperienceUser() {
@@ -44,7 +40,7 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningCourseActivity> getLearningCourseActivities() {
-        return this.learningCourseActivities;
+        return this.getBackingStore().get("learningCourseActivities");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
      * @param value Value to set for the learningCourseActivities property.
      */
     public void setLearningCourseActivities(@jakarta.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
-        this.learningCourseActivities = value;
+        this.getBackingStore().set("learningCourseActivities", value);
     }
 }

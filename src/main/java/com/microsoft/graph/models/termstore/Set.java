@@ -12,38 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Set extends Entity implements Parsable {
     /**
-     * Children terms of set in term [store].
-     */
-    private java.util.List<Term> children;
-    /**
-     * Date and time of set creation. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description that gives details on the term usage.
-     */
-    private String description;
-    /**
-     * Name of the set for each languageTag.
-     */
-    private java.util.List<LocalizedName> localizedNames;
-    /**
-     * The parentGroup property
-     */
-    private Group parentGroup;
-    /**
-     * Custom properties for the set.
-     */
-    private java.util.List<KeyValue> properties;
-    /**
-     * Indicates which terms have been pinned or reused directly under the set.
-     */
-    private java.util.List<Relation> relations;
-    /**
-     * All the terms under the set.
-     */
-    private java.util.List<Term> terms;
-    /**
      * Instantiates a new Set and sets the default values.
      */
     public Set() {
@@ -65,7 +33,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getChildren() {
-        return this.children;
+        return this.getBackingStore().get("children");
     }
     /**
      * Gets the createdDateTime property value. Date and time of set creation. Read-only.
@@ -73,7 +41,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the description property value. Description that gives details on the term usage.
@@ -81,7 +49,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +74,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedName> getLocalizedNames() {
-        return this.localizedNames;
+        return this.getBackingStore().get("localizedNames");
     }
     /**
      * Gets the parentGroup property value. The parentGroup property
@@ -114,7 +82,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Group getParentGroup() {
-        return this.parentGroup;
+        return this.getBackingStore().get("parentGroup");
     }
     /**
      * Gets the properties property value. Custom properties for the set.
@@ -122,7 +90,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getProperties() {
-        return this.properties;
+        return this.getBackingStore().get("properties");
     }
     /**
      * Gets the relations property value. Indicates which terms have been pinned or reused directly under the set.
@@ -130,7 +98,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
-        return this.relations;
+        return this.getBackingStore().get("relations");
     }
     /**
      * Gets the terms property value. All the terms under the set.
@@ -138,7 +106,7 @@ public class Set extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getTerms() {
-        return this.terms;
+        return this.getBackingStore().get("terms");
     }
     /**
      * Serializes information the current object
@@ -161,55 +129,55 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<Term> value) {
-        this.children = value;
+        this.getBackingStore().set("children", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time of set creation. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description that gives details on the term usage.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the localizedNames property value. Name of the set for each languageTag.
      * @param value Value to set for the localizedNames property.
      */
     public void setLocalizedNames(@jakarta.annotation.Nullable final java.util.List<LocalizedName> value) {
-        this.localizedNames = value;
+        this.getBackingStore().set("localizedNames", value);
     }
     /**
      * Sets the parentGroup property value. The parentGroup property
      * @param value Value to set for the parentGroup property.
      */
     public void setParentGroup(@jakarta.annotation.Nullable final Group value) {
-        this.parentGroup = value;
+        this.getBackingStore().set("parentGroup", value);
     }
     /**
      * Sets the properties property value. Custom properties for the set.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.properties = value;
+        this.getBackingStore().set("properties", value);
     }
     /**
      * Sets the relations property value. Indicates which terms have been pinned or reused directly under the set.
      * @param value Value to set for the relations property.
      */
     public void setRelations(@jakarta.annotation.Nullable final java.util.List<Relation> value) {
-        this.relations = value;
+        this.getBackingStore().set("relations", value);
     }
     /**
      * Sets the terms property value. All the terms under the set.
      * @param value Value to set for the terms property.
      */
     public void setTerms(@jakarta.annotation.Nullable final java.util.List<Term> value) {
-        this.terms = value;
+        this.getBackingStore().set("terms", value);
     }
 }

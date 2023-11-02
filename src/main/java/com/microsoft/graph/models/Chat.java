@@ -10,66 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Chat extends Entity implements Parsable {
     /**
-     * The chatType property
-     */
-    private ChatType chatType;
-    /**
-     * Date and time at which the chat was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * A collection of all the apps in the chat. Nullable.
-     */
-    private java.util.List<TeamsAppInstallation> installedApps;
-    /**
-     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
-     */
-    private ChatMessageInfo lastMessagePreview;
-    /**
-     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * A collection of all the members in the chat. Nullable.
-     */
-    private java.util.List<ConversationMember> members;
-    /**
-     * A collection of all the messages in the chat. Nullable.
-     */
-    private java.util.List<ChatMessage> messages;
-    /**
-     * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
-     */
-    private TeamworkOnlineMeetingInfo onlineMeetingInfo;
-    /**
-     * A collection of permissions granted to apps for the chat.
-     */
-    private java.util.List<ResourceSpecificPermissionGrant> permissionGrants;
-    /**
-     * A collection of all the pinned messages in the chat. Nullable.
-     */
-    private java.util.List<PinnedChatMessageInfo> pinnedMessages;
-    /**
-     * A collection of all the tabs in the chat. Nullable.
-     */
-    private java.util.List<TeamsTab> tabs;
-    /**
-     * The identifier of the tenant in which the chat was created. Read-only.
-     */
-    private String tenantId;
-    /**
-     * (Optional) Subject or topic for the chat. Only available for group chats.
-     */
-    private String topic;
-    /**
-     * Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
-     */
-    private ChatViewpoint viewpoint;
-    /**
-     * The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
-     */
-    private String webUrl;
-    /**
      * Instantiates a new Chat and sets the default values.
      */
     public Chat() {
@@ -91,7 +31,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatType getChatType() {
-        return this.chatType;
+        return this.getBackingStore().get("chatType");
     }
     /**
      * Gets the createdDateTime property value. Date and time at which the chat was created. Read-only.
@@ -99,7 +39,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -131,7 +71,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
-        return this.installedApps;
+        return this.getBackingStore().get("installedApps");
     }
     /**
      * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
@@ -139,7 +79,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessageInfo getLastMessagePreview() {
-        return this.lastMessagePreview;
+        return this.getBackingStore().get("lastMessagePreview");
     }
     /**
      * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
@@ -147,7 +87,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.getBackingStore().get("lastUpdatedDateTime");
     }
     /**
      * Gets the members property value. A collection of all the members in the chat. Nullable.
@@ -155,7 +95,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
-        return this.members;
+        return this.getBackingStore().get("members");
     }
     /**
      * Gets the messages property value. A collection of all the messages in the chat. Nullable.
@@ -163,7 +103,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
-        return this.messages;
+        return this.getBackingStore().get("messages");
     }
     /**
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
@@ -171,7 +111,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamworkOnlineMeetingInfo getOnlineMeetingInfo() {
-        return this.onlineMeetingInfo;
+        return this.getBackingStore().get("onlineMeetingInfo");
     }
     /**
      * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
@@ -179,7 +119,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
-        return this.permissionGrants;
+        return this.getBackingStore().get("permissionGrants");
     }
     /**
      * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
@@ -187,7 +127,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
-        return this.pinnedMessages;
+        return this.getBackingStore().get("pinnedMessages");
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
@@ -195,7 +135,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
-        return this.tabs;
+        return this.getBackingStore().get("tabs");
     }
     /**
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
@@ -203,7 +143,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Gets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
@@ -211,7 +151,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTopic() {
-        return this.topic;
+        return this.getBackingStore().get("topic");
     }
     /**
      * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
@@ -219,7 +159,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatViewpoint getViewpoint() {
-        return this.viewpoint;
+        return this.getBackingStore().get("viewpoint");
     }
     /**
      * Gets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -227,7 +167,7 @@ public class Chat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.getBackingStore().get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -257,104 +197,104 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the chatType property.
      */
     public void setChatType(@jakarta.annotation.Nullable final ChatType value) {
-        this.chatType = value;
+        this.getBackingStore().set("chatType", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time at which the chat was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the installedApps property value. A collection of all the apps in the chat. Nullable.
      * @param value Value to set for the installedApps property.
      */
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
-        this.installedApps = value;
+        this.getBackingStore().set("installedApps", value);
     }
     /**
      * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
      * @param value Value to set for the lastMessagePreview property.
      */
     public void setLastMessagePreview(@jakarta.annotation.Nullable final ChatMessageInfo value) {
-        this.lastMessagePreview = value;
+        this.getBackingStore().set("lastMessagePreview", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.getBackingStore().set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the members property value. A collection of all the members in the chat. Nullable.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this.members = value;
+        this.getBackingStore().set("members", value);
     }
     /**
      * Sets the messages property value. A collection of all the messages in the chat. Nullable.
      * @param value Value to set for the messages property.
      */
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
-        this.messages = value;
+        this.getBackingStore().set("messages", value);
     }
     /**
      * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      * @param value Value to set for the onlineMeetingInfo property.
      */
     public void setOnlineMeetingInfo(@jakarta.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
-        this.onlineMeetingInfo = value;
+        this.getBackingStore().set("onlineMeetingInfo", value);
     }
     /**
      * Sets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @param value Value to set for the permissionGrants property.
      */
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
-        this.permissionGrants = value;
+        this.getBackingStore().set("permissionGrants", value);
     }
     /**
      * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @param value Value to set for the pinnedMessages property.
      */
     public void setPinnedMessages(@jakarta.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
-        this.pinnedMessages = value;
+        this.getBackingStore().set("pinnedMessages", value);
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the chat. Nullable.
      * @param value Value to set for the tabs property.
      */
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
-        this.tabs = value;
+        this.getBackingStore().set("tabs", value);
     }
     /**
      * Sets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
     /**
      * Sets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
      * @param value Value to set for the topic property.
      */
     public void setTopic(@jakarta.annotation.Nullable final String value) {
-        this.topic = value;
+        this.getBackingStore().set("topic", value);
     }
     /**
      * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
      * @param value Value to set for the viewpoint property.
      */
     public void setViewpoint(@jakarta.annotation.Nullable final ChatViewpoint value) {
-        this.viewpoint = value;
+        this.getBackingStore().set("viewpoint", value);
     }
     /**
      * Sets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.getBackingStore().set("webUrl", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable {
     /**
-     * If set to true, Microsoft Entra security defaults are enabled for the tenant.
-     */
-    private Boolean isEnabled;
-    /**
      * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
      */
     public IdentitySecurityDefaultsEnforcementPolicy() {
@@ -45,7 +41,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
 }
