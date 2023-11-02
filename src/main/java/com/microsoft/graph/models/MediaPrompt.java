@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MediaPrompt extends Prompt implements Parsable {
     /**
-     * The mediaInfo property
-     */
-    private MediaInfo mediaInfo;
-    /**
      * Instantiates a new MediaPrompt and sets the default values.
      */
     public MediaPrompt() {
@@ -45,7 +41,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MediaInfo getMediaInfo() {
-        return this.mediaInfo;
+        return this.getBackingStore().get("mediaInfo");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the mediaInfo property.
      */
     public void setMediaInfo(@jakarta.annotation.Nullable final MediaInfo value) {
-        this.mediaInfo = value;
+        this.getBackingStore().set("mediaInfo", value);
     }
 }

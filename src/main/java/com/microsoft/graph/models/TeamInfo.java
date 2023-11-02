@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamInfo extends Entity implements Parsable {
     /**
-     * The name of the team.
-     */
-    private String displayName;
-    /**
-     * The team property
-     */
-    private Team team;
-    /**
-     * The ID of the Microsoft Entra tenant.
-     */
-    private String tenantId;
-    /**
      * Instantiates a new TeamInfo and sets the default values.
      */
     public TeamInfo() {
@@ -50,7 +38,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Team getTeam() {
-        return this.team;
+        return this.getBackingStore().get("team");
     }
     /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
@@ -78,7 +66,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.getBackingStore().get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -96,20 +84,20 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the team property value. The team property
      * @param value Value to set for the team property.
      */
     public void setTeam(@jakarta.annotation.Nullable final Team value) {
-        this.team = value;
+        this.getBackingStore().set("team", value);
     }
     /**
      * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.getBackingStore().set("tenantId", value);
     }
 }

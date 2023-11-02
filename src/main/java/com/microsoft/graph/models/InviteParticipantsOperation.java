@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InviteParticipantsOperation extends CommsOperation implements Parsable {
     /**
-     * The participants to invite.
-     */
-    private java.util.List<InvitationParticipantInfo> participants;
-    /**
      * Instantiates a new InviteParticipantsOperation and sets the default values.
      */
     public InviteParticipantsOperation() {
@@ -44,7 +40,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
-        return this.participants;
+        return this.getBackingStore().get("participants");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.participants = value;
+        this.getBackingStore().set("participants", value);
     }
 }

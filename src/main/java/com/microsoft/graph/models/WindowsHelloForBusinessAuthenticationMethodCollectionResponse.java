@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsHelloForBusinessAuthenticationMethod> value;
-    /**
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethodCollectionResponse and sets the default values.
      */
     public WindowsHelloForBusinessAuthenticationMethodCollectionResponse() {
@@ -44,7 +40,7 @@ public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse exten
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsHelloForBusinessAuthenticationMethod> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse exten
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

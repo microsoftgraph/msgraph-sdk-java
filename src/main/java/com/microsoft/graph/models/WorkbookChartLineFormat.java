@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartLineFormat extends Entity implements Parsable {
     /**
-     * HTML color code representing the color of lines in the chart.
-     */
-    private String color;
-    /**
      * Instantiates a new WorkbookChartLineFormat and sets the default values.
      */
     public WorkbookChartLineFormat() {
@@ -34,7 +30,7 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColor() {
-        return this.color;
+        return this.getBackingStore().get("color");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
-        this.color = value;
+        this.getBackingStore().set("color", value);
     }
 }

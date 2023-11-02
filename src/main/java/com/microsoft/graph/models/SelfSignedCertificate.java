@@ -4,61 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
+public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The customKeyIdentifier property
-     */
-    private byte[] customKeyIdentifier;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The endDateTime property
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * The key property
-     */
-    private byte[] key;
-    /**
-     * The keyId property
-     */
-    private UUID keyId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The startDateTime property
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The thumbprint property
-     */
-    private String thumbprint;
-    /**
-     * The type property
-     */
-    private String type;
-    /**
-     * The usage property
-     */
-    private String usage;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SelfSignedCertificate and sets the default values.
      */
     public SelfSignedCertificate() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -77,7 +41,20 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the customKeyIdentifier property value. The customKeyIdentifier property
@@ -85,7 +62,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomKeyIdentifier() {
-        return this.customKeyIdentifier;
+        return this.getBackingStore().get("customKeyIdentifier");
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -93,7 +70,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
@@ -101,7 +78,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.getBackingStore().get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -128,7 +105,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getKey() {
-        return this.key;
+        return this.getBackingStore().get("key");
     }
     /**
      * Gets the keyId property value. The keyId property
@@ -136,7 +113,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getKeyId() {
-        return this.keyId;
+        return this.getBackingStore().get("keyId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -144,7 +121,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -152,7 +129,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the thumbprint property value. The thumbprint property
@@ -160,7 +137,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
-        return this.thumbprint;
+        return this.getBackingStore().get("thumbprint");
     }
     /**
      * Gets the type property value. The type property
@@ -168,7 +145,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Gets the usage property value. The usage property
@@ -176,7 +153,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUsage() {
-        return this.usage;
+        return this.getBackingStore().get("usage");
     }
     /**
      * Serializes information the current object
@@ -194,83 +171,89 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("thumbprint", this.getThumbprint());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("usage", this.getUsage());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the customKeyIdentifier property value. The customKeyIdentifier property
      * @param value Value to set for the customKeyIdentifier property.
      */
     public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
-        this.customKeyIdentifier = value;
+        this.getBackingStore().set("customKeyIdentifier", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.getBackingStore().set("endDateTime", value);
     }
     /**
      * Sets the key property value. The key property
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
-        this.key = value;
+        this.getBackingStore().set("key", value);
     }
     /**
      * Sets the keyId property value. The keyId property
      * @param value Value to set for the keyId property.
      */
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
-        this.keyId = value;
+        this.getBackingStore().set("keyId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the thumbprint property value. The thumbprint property
      * @param value Value to set for the thumbprint property.
      */
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
-        this.thumbprint = value;
+        this.getBackingStore().set("thumbprint", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
     /**
      * Sets the usage property value. The usage property
      * @param value Value to set for the usage property.
      */
     public void setUsage(@jakarta.annotation.Nullable final String value) {
-        this.usage = value;
+        this.getBackingStore().set("usage", value);
     }
 }

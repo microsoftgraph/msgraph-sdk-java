@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, Parsable {
+public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Device error code reported by Device Directory Service(DDS).
-     */
-    private Integer deviceErrorCode;
-    /**
-     * Device error name reported by Device Directory Service(DDS).
-     */
-    private String deviceErrorName;
-    /**
-     * The deviceImportStatus property
-     */
-    private ImportedWindowsAutopilotDeviceIdentityImportStatus deviceImportStatus;
-    /**
-     * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
-     */
-    private String deviceRegistrationId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentityState and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentityState() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
@@ -63,7 +60,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceErrorCode() {
-        return this.deviceErrorCode;
+        return this.getBackingStore().get("deviceErrorCode");
     }
     /**
      * Gets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
@@ -71,7 +68,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getDeviceErrorName() {
-        return this.deviceErrorName;
+        return this.getBackingStore().get("deviceErrorName");
     }
     /**
      * Gets the deviceImportStatus property value. The deviceImportStatus property
@@ -79,7 +76,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityImportStatus getDeviceImportStatus() {
-        return this.deviceImportStatus;
+        return this.getBackingStore().get("deviceImportStatus");
     }
     /**
      * Gets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
@@ -87,7 +84,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
-        return this.deviceRegistrationId;
+        return this.getBackingStore().get("deviceRegistrationId");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +106,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -122,48 +119,54 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         writer.writeEnumValue("deviceImportStatus", this.getDeviceImportStatus());
         writer.writeStringValue("deviceRegistrationId", this.getDeviceRegistrationId());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorCode property.
      */
     public void setDeviceErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.deviceErrorCode = value;
+        this.getBackingStore().set("deviceErrorCode", value);
     }
     /**
      * Sets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorName property.
      */
     public void setDeviceErrorName(@jakarta.annotation.Nullable final String value) {
-        this.deviceErrorName = value;
+        this.getBackingStore().set("deviceErrorName", value);
     }
     /**
      * Sets the deviceImportStatus property value. The deviceImportStatus property
      * @param value Value to set for the deviceImportStatus property.
      */
     public void setDeviceImportStatus(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityImportStatus value) {
-        this.deviceImportStatus = value;
+        this.getBackingStore().set("deviceImportStatus", value);
     }
     /**
      * Sets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceRegistrationId property.
      */
     public void setDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
-        this.deviceRegistrationId = value;
+        this.getBackingStore().set("deviceRegistrationId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

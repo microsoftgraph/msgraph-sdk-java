@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
-     * The enum to specify the channels for Microsoft Edge apps.
-     */
-    private MicrosoftEdgeChannel channel;
-    /**
-     * The language locale to use when the Edge app displays text to the user.
-     */
-    private String displayLanguageLocale;
-    /**
      * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.
      */
     public WindowsMicrosoftEdgeApp() {
@@ -42,7 +34,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MicrosoftEdgeChannel getChannel() {
-        return this.channel;
+        return this.getBackingStore().get("channel");
     }
     /**
      * Gets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
@@ -50,7 +42,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayLanguageLocale() {
-        return this.displayLanguageLocale;
+        return this.getBackingStore().get("displayLanguageLocale");
     }
     /**
      * The deserialization information for the current model
@@ -78,13 +70,13 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the channel property.
      */
     public void setChannel(@jakarta.annotation.Nullable final MicrosoftEdgeChannel value) {
-        this.channel = value;
+        this.getBackingStore().set("channel", value);
     }
     /**
      * Sets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
      * @param value Value to set for the displayLanguageLocale property.
      */
     public void setDisplayLanguageLocale(@jakarta.annotation.Nullable final String value) {
-        this.displayLanguageLocale = value;
+        this.getBackingStore().set("displayLanguageLocale", value);
     }
 }

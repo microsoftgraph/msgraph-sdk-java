@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewSet extends Entity implements Parsable {
     /**
-     * Represents the template and scheduling for an access review.
-     */
-    private java.util.List<AccessReviewScheduleDefinition> definitions;
-    /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
-     */
-    private java.util.List<AccessReviewHistoryDefinition> historyDefinitions;
-    /**
      * Instantiates a new AccessReviewSet and sets the default values.
      */
     public AccessReviewSet() {
@@ -38,7 +30,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getDefinitions() {
-        return this.definitions;
+        return this.getBackingStore().get("definitions");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDefinition> getHistoryDefinitions() {
-        return this.historyDefinitions;
+        return this.getBackingStore().get("historyDefinitions");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      */
     public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
-        this.definitions = value;
+        this.getBackingStore().set("definitions", value);
     }
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
      * @param value Value to set for the historyDefinitions property.
      */
     public void setHistoryDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
-        this.historyDefinitions = value;
+        this.getBackingStore().set("historyDefinitions", value);
     }
 }

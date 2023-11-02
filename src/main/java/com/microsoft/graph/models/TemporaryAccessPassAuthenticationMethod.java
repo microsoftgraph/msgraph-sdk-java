@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The date and time when the Temporary Access Pass was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The state of the authentication method that indicates whether it's currently usable by the user.
-     */
-    private Boolean isUsable;
-    /**
-     * Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
-     */
-    private Boolean isUsableOnce;
-    /**
-     * The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
-     */
-    private Integer lifetimeInMinutes;
-    /**
-     * Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
-     */
-    private String methodUsabilityReason;
-    /**
-     * The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
-     */
-    private String temporaryAccessPass;
-    /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
      */
     public TemporaryAccessPassAuthenticationMethod() {
@@ -60,7 +32,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +56,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsable() {
-        return this.isUsable;
+        return this.getBackingStore().get("isUsable");
     }
     /**
      * Gets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
@@ -92,7 +64,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableOnce() {
-        return this.isUsableOnce;
+        return this.getBackingStore().get("isUsableOnce");
     }
     /**
      * Gets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
@@ -100,7 +72,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public Integer getLifetimeInMinutes() {
-        return this.lifetimeInMinutes;
+        return this.getBackingStore().get("lifetimeInMinutes");
     }
     /**
      * Gets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
@@ -108,7 +80,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public String getMethodUsabilityReason() {
-        return this.methodUsabilityReason;
+        return this.getBackingStore().get("methodUsabilityReason");
     }
     /**
      * Gets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
@@ -116,7 +88,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.getBackingStore().get("startDateTime");
     }
     /**
      * Gets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
@@ -124,7 +96,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     @jakarta.annotation.Nullable
     public String getTemporaryAccessPass() {
-        return this.temporaryAccessPass;
+        return this.getBackingStore().get("temporaryAccessPass");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
      * @param value Value to set for the isUsable property.
      */
     public void setIsUsable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isUsable = value;
+        this.getBackingStore().set("isUsable", value);
     }
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      * @param value Value to set for the isUsableOnce property.
      */
     public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
-        this.isUsableOnce = value;
+        this.getBackingStore().set("isUsableOnce", value);
     }
     /**
      * Sets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
      * @param value Value to set for the lifetimeInMinutes property.
      */
     public void setLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.lifetimeInMinutes = value;
+        this.getBackingStore().set("lifetimeInMinutes", value);
     }
     /**
      * Sets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
      * @param value Value to set for the methodUsabilityReason property.
      */
     public void setMethodUsabilityReason(@jakarta.annotation.Nullable final String value) {
-        this.methodUsabilityReason = value;
+        this.getBackingStore().set("methodUsabilityReason", value);
     }
     /**
      * Sets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.getBackingStore().set("startDateTime", value);
     }
     /**
      * Sets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
      * @param value Value to set for the temporaryAccessPass property.
      */
     public void setTemporaryAccessPass(@jakarta.annotation.Nullable final String value) {
-        this.temporaryAccessPass = value;
+        this.getBackingStore().set("temporaryAccessPass", value);
     }
 }

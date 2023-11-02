@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
     /**
-     * Groups of users that are excluded from a policy.
-     */
-    private java.util.List<ExcludeTarget> excludeTargets;
-    /**
-     * The state of the policy. Possible values are: enabled, disabled.
-     */
-    private AuthenticationMethodState state;
-    /**
      * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
      */
     public AuthenticationMethodConfiguration() {
@@ -52,7 +44,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
-        return this.excludeTargets;
+        return this.getBackingStore().get("excludeTargets");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +63,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodState getState() {
-        return this.state;
+        return this.getBackingStore().get("state");
     }
     /**
      * Serializes information the current object
@@ -88,13 +80,13 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * @param value Value to set for the excludeTargets property.
      */
     public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
-        this.excludeTargets = value;
+        this.getBackingStore().set("excludeTargets", value);
     }
     /**
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AuthenticationMethodState value) {
-        this.state = value;
+        this.getBackingStore().set("state", value);
     }
 }

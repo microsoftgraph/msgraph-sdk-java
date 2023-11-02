@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsable {
+public class RubricQualityFeedbackModel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Specific feedback for one quality of this rubric.
-     */
-    private EducationItemBody feedback;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of the rubricQuality that this feedback is related to.
-     */
-    private String qualityId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new RubricQualityFeedbackModel and sets the default values.
      */
     public RubricQualityFeedbackModel() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the feedback property value. Specific feedback for one quality of this rubric.
@@ -55,7 +60,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public EducationItemBody getFeedback() {
-        return this.feedback;
+        return this.getBackingStore().get("feedback");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +80,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the qualityId property value. The ID of the rubricQuality that this feedback is related to.
@@ -83,7 +88,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getQualityId() {
-        return this.qualityId;
+        return this.getBackingStore().get("qualityId");
     }
     /**
      * Serializes information the current object
@@ -94,34 +99,40 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
         writer.writeObjectValue("feedback", this.getFeedback());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the feedback property value. Specific feedback for one quality of this rubric.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final EducationItemBody value) {
-        this.feedback = value;
+        this.getBackingStore().set("feedback", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the qualityId property value. The ID of the rubricQuality that this feedback is related to.
      * @param value Value to set for the qualityId property.
      */
     public void setQualityId(@jakarta.annotation.Nullable final String value) {
-        this.qualityId = value;
+        this.getBackingStore().set("qualityId", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndpointCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Endpoint> value;
-    /**
      * Instantiates a new EndpointCollectionResponse and sets the default values.
      */
     public EndpointCollectionResponse() {
@@ -44,7 +40,7 @@ public class EndpointCollectionResponse extends BaseCollectionPaginationCountRes
      */
     @jakarta.annotation.Nullable
     public java.util.List<Endpoint> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EndpointCollectionResponse extends BaseCollectionPaginationCountRes
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Endpoint> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

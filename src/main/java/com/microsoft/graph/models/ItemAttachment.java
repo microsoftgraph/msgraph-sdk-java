@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAttachment extends Attachment implements Parsable {
     /**
-     * The attached message or event. Navigation property.
-     */
-    private OutlookItem item;
-    /**
      * Instantiates a new ItemAttachment and sets the default values.
      */
     public ItemAttachment() {
@@ -45,7 +41,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OutlookItem getItem() {
-        return this.item;
+        return this.getBackingStore().get("item");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ItemAttachment extends Attachment implements Parsable {
      * @param value Value to set for the item property.
      */
     public void setItem(@jakarta.annotation.Nullable final OutlookItem value) {
-        this.item = value;
+        this.getBackingStore().set("item", value);
     }
 }

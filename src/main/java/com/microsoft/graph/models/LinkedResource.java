@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LinkedResource extends Entity implements Parsable {
     /**
-     * The app name of the source that sends the linkedResource.
-     */
-    private String applicationName;
-    /**
-     * The title of the linkedResource.
-     */
-    private String displayName;
-    /**
-     * ID of the object that is associated with this task on the third-party/partner system.
-     */
-    private String externalId;
-    /**
-     * Deep link to the linkedResource.
-     */
-    private String webUrl;
-    /**
      * Instantiates a new LinkedResource and sets the default values.
      */
     public LinkedResource() {
@@ -46,7 +30,7 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getApplicationName() {
-        return this.applicationName;
+        return this.getBackingStore().get("applicationName");
     }
     /**
      * Gets the displayName property value. The title of the linkedResource.
@@ -54,7 +38,7 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * Gets the externalId property value. ID of the object that is associated with this task on the third-party/partner system.
@@ -62,7 +46,7 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.getBackingStore().get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +67,7 @@ public class LinkedResource extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.getBackingStore().get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class LinkedResource extends Entity implements Parsable {
      * @param value Value to set for the applicationName property.
      */
     public void setApplicationName(@jakarta.annotation.Nullable final String value) {
-        this.applicationName = value;
+        this.getBackingStore().set("applicationName", value);
     }
     /**
      * Sets the displayName property value. The title of the linkedResource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the externalId property value. ID of the object that is associated with this task on the third-party/partner system.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.getBackingStore().set("externalId", value);
     }
     /**
      * Sets the webUrl property value. Deep link to the linkedResource.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.getBackingStore().set("webUrl", value);
     }
 }

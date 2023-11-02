@@ -4,44 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
+public class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
-     */
-    private Integer dayOccurrence;
-    /**
-     * Represents the day of the week when the transition from daylight saving time to standard time.
-     */
-    private DayOfWeek dayOfWeek;
-    /**
-     * Represents the month of the year when the transition from daylight saving time to standard time occurs.
-     */
-    private Integer month;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Represents the time of day when the transition from daylight saving time to standard time occurs.
-     */
-    private LocalTime time;
-    /**
-     * Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
-     */
-    private Integer year;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new StandardTimeZoneOffset and sets the default values.
      */
     public StandardTimeZoneOffset() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +47,20 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
@@ -75,7 +68,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDayOccurrence() {
-        return this.dayOccurrence;
+        return this.getBackingStore().get("dayOccurrence");
     }
     /**
      * Gets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
@@ -83,7 +76,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public DayOfWeek getDayOfWeek() {
-        return this.dayOfWeek;
+        return this.getBackingStore().get("dayOfWeek");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +99,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMonth() {
-        return this.month;
+        return this.getBackingStore().get("month");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,7 +107,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
@@ -122,7 +115,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalTime getTime() {
-        return this.time;
+        return this.getBackingStore().get("time");
     }
     /**
      * Gets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
@@ -130,7 +123,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getYear() {
-        return this.year;
+        return this.getBackingStore().get("year");
     }
     /**
      * Serializes information the current object
@@ -144,55 +137,61 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("time", this.getTime());
         writer.writeIntegerValue("year", this.getYear());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the dayOccurrence property.
      */
     public void setDayOccurrence(@jakarta.annotation.Nullable final Integer value) {
-        this.dayOccurrence = value;
+        this.getBackingStore().set("dayOccurrence", value);
     }
     /**
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
      * @param value Value to set for the dayOfWeek property.
      */
     public void setDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
-        this.dayOfWeek = value;
+        this.getBackingStore().set("dayOfWeek", value);
     }
     /**
      * Sets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the month property.
      */
     public void setMonth(@jakarta.annotation.Nullable final Integer value) {
-        this.month = value;
+        this.getBackingStore().set("month", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the time property.
      */
     public void setTime(@jakarta.annotation.Nullable final LocalTime value) {
-        this.time = value;
+        this.getBackingStore().set("time", value);
     }
     /**
      * Sets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
      * @param value Value to set for the year property.
      */
     public void setYear(@jakarta.annotation.Nullable final Integer value) {
-        this.year = value;
+        this.getBackingStore().set("year", value);
     }
 }

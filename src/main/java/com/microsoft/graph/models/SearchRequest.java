@@ -4,83 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchRequest implements AdditionalDataHolder, Parsable {
+public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
-     */
-    private java.util.List<String> aggregationFilters;
-    /**
-     * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
-     */
-    private java.util.List<AggregationOption> aggregations;
-    /**
-     * Contains the ordered collection of fields and limit to collapse results. Optional.
-     */
-    private java.util.List<CollapseProperty> collapseProperties;
-    /**
-     * Contains the connection to be targeted.
-     */
-    private java.util.List<String> contentSources;
-    /**
-     * This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
-     */
-    private Boolean enableTopResults;
-    /**
-     * One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum:chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     */
-    private java.util.List<EntityType> entityTypes;
-    /**
-     * Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default; otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from the content that Microsoft Graph connectors bring in. The fields property can use the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax: label_title. Optional.
-     */
-    private java.util.List<String> fields;
-    /**
-     * Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
-     */
-    private Integer from;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The query property
-     */
-    private SearchQuery query;
-    /**
-     * Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
-     */
-    private SearchAlterationOptions queryAlterationOptions;
-    /**
-     * The geographic location for the search. Required for searches that use application permissions. For details, see Get the region value.
-     */
-    private String region;
-    /**
-     * Provides the search result template options to render search results from connectors.
-     */
-    private ResultTemplateOption resultTemplateOptions;
-    /**
-     * Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
-     */
-    private SharePointOneDriveOptions sharePointOneDriveOptions;
-    /**
-     * The size of the page to be retrieved. The maximum value is 500. Optional.
-     */
-    private Integer size;
-    /**
-     * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
-     */
-    private java.util.List<SortProperty> sortProperties;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SearchRequest and sets the default values.
      */
     public SearchRequest() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -99,7 +39,12 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
@@ -107,7 +52,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAggregationFilters() {
-        return this.aggregationFilters;
+        return this.getBackingStore().get("aggregationFilters");
     }
     /**
      * Gets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
@@ -115,7 +60,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AggregationOption> getAggregations() {
-        return this.aggregations;
+        return this.getBackingStore().get("aggregations");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
@@ -123,7 +76,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CollapseProperty> getCollapseProperties() {
-        return this.collapseProperties;
+        return this.getBackingStore().get("collapseProperties");
     }
     /**
      * Gets the contentSources property value. Contains the connection to be targeted.
@@ -131,7 +84,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentSources() {
-        return this.contentSources;
+        return this.getBackingStore().get("contentSources");
     }
     /**
      * Gets the enableTopResults property value. This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
@@ -139,7 +92,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableTopResults() {
-        return this.enableTopResults;
+        return this.getBackingStore().get("enableTopResults");
     }
     /**
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum:chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
@@ -147,7 +100,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EntityType> getEntityTypes() {
-        return this.entityTypes;
+        return this.getBackingStore().get("entityTypes");
     }
     /**
      * The deserialization information for the current model
@@ -180,7 +133,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
-        return this.fields;
+        return this.getBackingStore().get("fields");
     }
     /**
      * Gets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
@@ -188,7 +141,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFrom() {
-        return this.from;
+        return this.getBackingStore().get("from");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -196,7 +149,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the query property value. The query property
@@ -204,7 +157,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SearchQuery getQuery() {
-        return this.query;
+        return this.getBackingStore().get("query");
     }
     /**
      * Gets the queryAlterationOptions property value. Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
@@ -212,7 +165,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SearchAlterationOptions getQueryAlterationOptions() {
-        return this.queryAlterationOptions;
+        return this.getBackingStore().get("queryAlterationOptions");
     }
     /**
      * Gets the region property value. The geographic location for the search. Required for searches that use application permissions. For details, see Get the region value.
@@ -220,7 +173,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
-        return this.region;
+        return this.getBackingStore().get("region");
     }
     /**
      * Gets the resultTemplateOptions property value. Provides the search result template options to render search results from connectors.
@@ -228,7 +181,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ResultTemplateOption getResultTemplateOptions() {
-        return this.resultTemplateOptions;
+        return this.getBackingStore().get("resultTemplateOptions");
     }
     /**
      * Gets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
@@ -236,7 +189,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SharePointOneDriveOptions getSharePointOneDriveOptions() {
-        return this.sharePointOneDriveOptions;
+        return this.getBackingStore().get("sharePointOneDriveOptions");
     }
     /**
      * Gets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
@@ -244,7 +197,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.getBackingStore().get("size");
     }
     /**
      * Gets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
@@ -252,7 +205,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SortProperty> getSortProperties() {
-        return this.sortProperties;
+        return this.getBackingStore().get("sortProperties");
     }
     /**
      * Serializes information the current object
@@ -276,125 +229,131 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("sharePointOneDriveOptions", this.getSharePointOneDriveOptions());
         writer.writeIntegerValue("size", this.getSize());
         writer.writeCollectionOfObjectValues("sortProperties", this.getSortProperties());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
      * @param value Value to set for the aggregationFilters property.
      */
     public void setAggregationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.aggregationFilters = value;
+        this.getBackingStore().set("aggregationFilters", value);
     }
     /**
      * Sets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
      * @param value Value to set for the aggregations property.
      */
     public void setAggregations(@jakarta.annotation.Nullable final java.util.List<AggregationOption> value) {
-        this.aggregations = value;
+        this.getBackingStore().set("aggregations", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
      * @param value Value to set for the collapseProperties property.
      */
     public void setCollapseProperties(@jakarta.annotation.Nullable final java.util.List<CollapseProperty> value) {
-        this.collapseProperties = value;
+        this.getBackingStore().set("collapseProperties", value);
     }
     /**
      * Sets the contentSources property value. Contains the connection to be targeted.
      * @param value Value to set for the contentSources property.
      */
     public void setContentSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.contentSources = value;
+        this.getBackingStore().set("contentSources", value);
     }
     /**
      * Sets the enableTopResults property value. This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
      * @param value Value to set for the enableTopResults property.
      */
     public void setEnableTopResults(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableTopResults = value;
+        this.getBackingStore().set("enableTopResults", value);
     }
     /**
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum:chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @param value Value to set for the entityTypes property.
      */
     public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
-        this.entityTypes = value;
+        this.getBackingStore().set("entityTypes", value);
     }
     /**
      * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default; otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from the content that Microsoft Graph connectors bring in. The fields property can use the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax: label_title. Optional.
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.fields = value;
+        this.getBackingStore().set("fields", value);
     }
     /**
      * Sets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
      * @param value Value to set for the from property.
      */
     public void setFrom(@jakarta.annotation.Nullable final Integer value) {
-        this.from = value;
+        this.getBackingStore().set("from", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the query property value. The query property
      * @param value Value to set for the query property.
      */
     public void setQuery(@jakarta.annotation.Nullable final SearchQuery value) {
-        this.query = value;
+        this.getBackingStore().set("query", value);
     }
     /**
      * Sets the queryAlterationOptions property value. Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
      * @param value Value to set for the queryAlterationOptions property.
      */
     public void setQueryAlterationOptions(@jakarta.annotation.Nullable final SearchAlterationOptions value) {
-        this.queryAlterationOptions = value;
+        this.getBackingStore().set("queryAlterationOptions", value);
     }
     /**
      * Sets the region property value. The geographic location for the search. Required for searches that use application permissions. For details, see Get the region value.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.region = value;
+        this.getBackingStore().set("region", value);
     }
     /**
      * Sets the resultTemplateOptions property value. Provides the search result template options to render search results from connectors.
      * @param value Value to set for the resultTemplateOptions property.
      */
     public void setResultTemplateOptions(@jakarta.annotation.Nullable final ResultTemplateOption value) {
-        this.resultTemplateOptions = value;
+        this.getBackingStore().set("resultTemplateOptions", value);
     }
     /**
      * Sets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
      * @param value Value to set for the sharePointOneDriveOptions property.
      */
     public void setSharePointOneDriveOptions(@jakarta.annotation.Nullable final SharePointOneDriveOptions value) {
-        this.sharePointOneDriveOptions = value;
+        this.getBackingStore().set("sharePointOneDriveOptions", value);
     }
     /**
      * Sets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.getBackingStore().set("size", value);
     }
     /**
      * Sets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
      * @param value Value to set for the sortProperties property.
      */
     public void setSortProperties(@jakarta.annotation.Nullable final java.util.List<SortProperty> value) {
-        this.sortProperties = value;
+        this.getBackingStore().set("sortProperties", value);
     }
 }

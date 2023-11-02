@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ResumePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The data property
-     */
-    private CustomTaskExtensionCallbackData data;
-    /**
-     * The source property
-     */
-    private String source;
-    /**
-     * The type property
-     */
-    private String type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ResumePostRequestBody and sets the default values.
      */
     public ResumePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the data property value. The data property
@@ -56,7 +61,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public CustomTaskExtensionCallbackData getData() {
-        return this.data;
+        return this.getBackingStore().get("data");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +81,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSource() {
-        return this.source;
+        return this.getBackingStore().get("source");
     }
     /**
      * Gets the type property value. The type property
@@ -84,7 +89,7 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.getBackingStore().get("type");
     }
     /**
      * Serializes information the current object
@@ -95,34 +100,40 @@ public class ResumePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("data", this.getData());
         writer.writeStringValue("source", this.getSource());
         writer.writeStringValue("type", this.getType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the data property value. The data property
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final CustomTaskExtensionCallbackData value) {
-        this.data = value;
+        this.getBackingStore().set("data", value);
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final String value) {
-        this.source = value;
+        this.getBackingStore().set("source", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.getBackingStore().set("type", value);
     }
 }

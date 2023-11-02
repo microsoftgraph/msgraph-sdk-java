@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Contains value for delivery optimization priority.
-     */
-    private Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
-    /**
-     * The install time settings to apply for this app assignment.
-     */
-    private MobileAppInstallTimeSettings installTimeSettings;
-    /**
-     * Contains value for notification status.
-     */
-    private Win32LobAppNotification notifications;
-    /**
-     * The reboot settings to apply for this app assignment.
-     */
-    private Win32LobAppRestartSettings restartSettings;
-    /**
      * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
      */
     public Win32LobAppAssignmentSettings() {
@@ -50,7 +34,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
-        return this.deliveryOptimizationPriority;
+        return this.getBackingStore().get("deliveryOptimizationPriority");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +55,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
-        return this.installTimeSettings;
+        return this.getBackingStore().get("installTimeSettings");
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
@@ -79,7 +63,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Win32LobAppNotification getNotifications() {
-        return this.notifications;
+        return this.getBackingStore().get("notifications");
     }
     /**
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
@@ -87,7 +71,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartSettings getRestartSettings() {
-        return this.restartSettings;
+        return this.getBackingStore().get("restartSettings");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the deliveryOptimizationPriority property.
      */
     public void setDeliveryOptimizationPriority(@jakarta.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
-        this.deliveryOptimizationPriority = value;
+        this.getBackingStore().set("deliveryOptimizationPriority", value);
     }
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
      * @param value Value to set for the installTimeSettings property.
      */
     public void setInstallTimeSettings(@jakarta.annotation.Nullable final MobileAppInstallTimeSettings value) {
-        this.installTimeSettings = value;
+        this.getBackingStore().set("installTimeSettings", value);
     }
     /**
      * Sets the notifications property value. Contains value for notification status.
      * @param value Value to set for the notifications property.
      */
     public void setNotifications(@jakarta.annotation.Nullable final Win32LobAppNotification value) {
-        this.notifications = value;
+        this.getBackingStore().set("notifications", value);
     }
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
      * @param value Value to set for the restartSettings property.
      */
     public void setRestartSettings(@jakarta.annotation.Nullable final Win32LobAppRestartSettings value) {
-        this.restartSettings = value;
+        this.getBackingStore().set("restartSettings", value);
     }
 }

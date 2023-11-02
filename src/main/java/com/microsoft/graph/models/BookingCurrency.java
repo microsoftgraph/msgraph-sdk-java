@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCurrency extends Entity implements Parsable {
     /**
-     * The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
-     */
-    private String symbol;
-    /**
      * Instantiates a new BookingCurrency and sets the default values.
      */
     public BookingCurrency() {
@@ -44,7 +40,7 @@ public class BookingCurrency extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSymbol() {
-        return this.symbol;
+        return this.getBackingStore().get("symbol");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BookingCurrency extends Entity implements Parsable {
      * @param value Value to set for the symbol property.
      */
     public void setSymbol(@jakarta.annotation.Nullable final String value) {
-        this.symbol = value;
+        this.getBackingStore().set("symbol", value);
     }
 }

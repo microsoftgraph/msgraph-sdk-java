@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The email address registered to this user.
-     */
-    private String emailAddress;
-    /**
      * Instantiates a new EmailAuthenticationMethod and sets the default values.
      */
     public EmailAuthenticationMethod() {
@@ -35,7 +31,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.getBackingStore().get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.getBackingStore().set("emailAddress", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserTeamwork extends Entity implements Parsable {
     /**
-     * The list of associatedTeamInfo objects that a user is associated with.
-     */
-    private java.util.List<AssociatedTeamInfo> associatedTeams;
-    /**
-     * The apps installed in the personal scope of this user.
-     */
-    private java.util.List<UserScopeTeamsAppInstallation> installedApps;
-    /**
      * Instantiates a new UserTeamwork and sets the default values.
      */
     public UserTeamwork() {
@@ -38,7 +30,7 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssociatedTeamInfo> getAssociatedTeams() {
-        return this.associatedTeams;
+        return this.getBackingStore().get("associatedTeams");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getInstalledApps() {
-        return this.installedApps;
+        return this.getBackingStore().get("installedApps");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the associatedTeams property.
      */
     public void setAssociatedTeams(@jakarta.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
-        this.associatedTeams = value;
+        this.getBackingStore().set("associatedTeams", value);
     }
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.
      * @param value Value to set for the installedApps property.
      */
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
-        this.installedApps = value;
+        this.getBackingStore().set("installedApps", value);
     }
 }

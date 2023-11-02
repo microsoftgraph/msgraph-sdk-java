@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
-     * Availability of the user to be scheduled for work and its recurrence pattern.
-     */
-    private java.util.List<ShiftAvailability> availability;
-    /**
      * Instantiates a new ShiftPreferences and sets the default values.
      */
     public ShiftPreferences() {
@@ -35,7 +31,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShiftAvailability> getAvailability() {
-        return this.availability;
+        return this.getBackingStore().get("availability");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final java.util.List<ShiftAvailability> value) {
-        this.availability = value;
+        this.getBackingStore().set("availability", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * The unique identifier for the chat whose members should receive the notifications.
-     */
-    private String chatId;
-    /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
      */
     public ChatMembersNotificationRecipient() {
@@ -35,7 +31,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
-        return this.chatId;
+        return this.getBackingStore().get("chatId");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
      * @param value Value to set for the chatId property.
      */
     public void setChatId(@jakarta.annotation.Nullable final String value) {
-        this.chatId = value;
+        this.getBackingStore().set("chatId", value);
     }
 }

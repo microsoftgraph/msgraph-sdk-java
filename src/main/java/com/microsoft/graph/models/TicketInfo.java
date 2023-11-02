@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TicketInfo implements AdditionalDataHolder, Parsable {
+public class TicketInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ticket number.
-     */
-    private String ticketNumber;
-    /**
-     * The description of the ticket system.
-     */
-    private String ticketSystem;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TicketInfo and sets the default values.
      */
     public TicketInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +72,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the ticketNumber property value. The ticket number.
@@ -75,7 +80,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTicketNumber() {
-        return this.ticketNumber;
+        return this.getBackingStore().get("ticketNumber");
     }
     /**
      * Gets the ticketSystem property value. The description of the ticket system.
@@ -83,7 +88,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTicketSystem() {
-        return this.ticketSystem;
+        return this.getBackingStore().get("ticketSystem");
     }
     /**
      * Serializes information the current object
@@ -94,34 +99,40 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("ticketNumber", this.getTicketNumber());
         writer.writeStringValue("ticketSystem", this.getTicketSystem());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the ticketNumber property value. The ticket number.
      * @param value Value to set for the ticketNumber property.
      */
     public void setTicketNumber(@jakarta.annotation.Nullable final String value) {
-        this.ticketNumber = value;
+        this.getBackingStore().set("ticketNumber", value);
     }
     /**
      * Sets the ticketSystem property value. The description of the ticket system.
      * @param value Value to set for the ticketSystem property.
      */
     public void setTicketSystem(@jakarta.annotation.Nullable final String value) {
-        this.ticketSystem = value;
+        this.getBackingStore().set("ticketSystem", value);
     }
 }

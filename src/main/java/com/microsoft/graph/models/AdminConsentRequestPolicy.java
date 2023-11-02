@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminConsentRequestPolicy extends Entity implements Parsable {
     /**
-     * Specifies whether the admin consent request feature is enabled or disabled. Required.
-     */
-    private Boolean isEnabled;
-    /**
-     * Specifies whether reviewers will receive notifications. Required.
-     */
-    private Boolean notifyReviewers;
-    /**
-     * Specifies whether reviewers will receive reminder emails. Required.
-     */
-    private Boolean remindersEnabled;
-    /**
-     * Specifies the duration the request is active before it automatically expires if no decision is applied.
-     */
-    private Integer requestDurationInDays;
-    /**
-     * The list of reviewers for the admin consent. Required.
-     */
-    private java.util.List<AccessReviewReviewerScope> reviewers;
-    /**
-     * Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
-     */
-    private Integer version;
-    /**
      * Instantiates a new AdminConsentRequestPolicy and sets the default values.
      */
     public AdminConsentRequestPolicy() {
@@ -69,7 +45,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.getBackingStore().get("isEnabled");
     }
     /**
      * Gets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
@@ -77,7 +53,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getNotifyReviewers() {
-        return this.notifyReviewers;
+        return this.getBackingStore().get("notifyReviewers");
     }
     /**
      * Gets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
@@ -85,7 +61,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getRemindersEnabled() {
-        return this.remindersEnabled;
+        return this.getBackingStore().get("remindersEnabled");
     }
     /**
      * Gets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
@@ -93,7 +69,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRequestDurationInDays() {
-        return this.requestDurationInDays;
+        return this.getBackingStore().get("requestDurationInDays");
     }
     /**
      * Gets the reviewers property value. The list of reviewers for the admin consent. Required.
@@ -101,7 +77,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
-        return this.reviewers;
+        return this.getBackingStore().get("reviewers");
     }
     /**
      * Gets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
@@ -109,7 +85,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.getBackingStore().get("version");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.getBackingStore().set("isEnabled", value);
     }
     /**
      * Sets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
      * @param value Value to set for the notifyReviewers property.
      */
     public void setNotifyReviewers(@jakarta.annotation.Nullable final Boolean value) {
-        this.notifyReviewers = value;
+        this.getBackingStore().set("notifyReviewers", value);
     }
     /**
      * Sets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
      * @param value Value to set for the remindersEnabled property.
      */
     public void setRemindersEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.remindersEnabled = value;
+        this.getBackingStore().set("remindersEnabled", value);
     }
     /**
      * Sets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
      * @param value Value to set for the requestDurationInDays property.
      */
     public void setRequestDurationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.requestDurationInDays = value;
+        this.getBackingStore().set("requestDurationInDays", value);
     }
     /**
      * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
      * @param value Value to set for the reviewers property.
      */
     public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this.reviewers = value;
+        this.getBackingStore().set("reviewers", value);
     }
     /**
      * Sets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.getBackingStore().set("version", value);
     }
 }

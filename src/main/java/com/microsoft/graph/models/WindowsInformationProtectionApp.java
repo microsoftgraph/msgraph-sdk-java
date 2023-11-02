@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,39 +14,16 @@ import java.util.Objects;
  * App for Windows information protection
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable {
+public class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If true, app is denied protection or exemption.
-     */
-    private Boolean denied;
-    /**
-     * The app's description.
-     */
-    private String description;
-    /**
-     * App display name.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The product name.
-     */
-    private String productName;
-    /**
-     * The publisher name
-     */
-    private String publisherName;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new WindowsInformationProtectionApp and sets the default values.
      */
     public WindowsInformationProtectionApp() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -70,7 +50,20 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the denied property value. If true, app is denied protection or exemption.
@@ -78,7 +71,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public Boolean getDenied() {
-        return this.denied;
+        return this.getBackingStore().get("denied");
     }
     /**
      * Gets the description property value. The app's description.
@@ -86,7 +79,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. App display name.
@@ -94,7 +87,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -117,7 +110,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the productName property value. The product name.
@@ -125,7 +118,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.getBackingStore().get("productName");
     }
     /**
      * Gets the publisherName property value. The publisher name
@@ -133,7 +126,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
-        return this.publisherName;
+        return this.getBackingStore().get("publisherName");
     }
     /**
      * Serializes information the current object
@@ -147,55 +140,61 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("productName", this.getProductName());
         writer.writeStringValue("publisherName", this.getPublisherName());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the denied property value. If true, app is denied protection or exemption.
      * @param value Value to set for the denied property.
      */
     public void setDenied(@jakarta.annotation.Nullable final Boolean value) {
-        this.denied = value;
+        this.getBackingStore().set("denied", value);
     }
     /**
      * Sets the description property value. The app's description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. App display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the productName property value. The product name.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.getBackingStore().set("productName", value);
     }
     /**
      * Sets the publisherName property value. The publisher name
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {
-        this.publisherName = value;
+        this.getBackingStore().set("publisherName", value);
     }
 }

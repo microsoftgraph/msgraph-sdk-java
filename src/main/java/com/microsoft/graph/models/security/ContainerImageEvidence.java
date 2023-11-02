@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
-     * The digest image entity, in case this is a tag image.
-     */
-    private ContainerImageEvidence digestImage;
-    /**
-     * The unique identifier for the container image entity.
-     */
-    private String imageId;
-    /**
-     * The container registry for this image.
-     */
-    private ContainerRegistryEvidence registry;
-    /**
      * Instantiates a new ContainerImageEvidence and sets the default values.
      */
     public ContainerImageEvidence() {
@@ -43,7 +31,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContainerImageEvidence getDigestImage() {
-        return this.digestImage;
+        return this.getBackingStore().get("digestImage");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getImageId() {
-        return this.imageId;
+        return this.getBackingStore().get("imageId");
     }
     /**
      * Gets the registry property value. The container registry for this image.
@@ -71,7 +59,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContainerRegistryEvidence getRegistry() {
-        return this.registry;
+        return this.getBackingStore().get("registry");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the digestImage property.
      */
     public void setDigestImage(@jakarta.annotation.Nullable final ContainerImageEvidence value) {
-        this.digestImage = value;
+        this.getBackingStore().set("digestImage", value);
     }
     /**
      * Sets the imageId property value. The unique identifier for the container image entity.
      * @param value Value to set for the imageId property.
      */
     public void setImageId(@jakarta.annotation.Nullable final String value) {
-        this.imageId = value;
+        this.getBackingStore().set("imageId", value);
     }
     /**
      * Sets the registry property value. The container registry for this image.
      * @param value Value to set for the registry property.
      */
     public void setRegistry(@jakarta.annotation.Nullable final ContainerRegistryEvidence value) {
-        this.registry = value;
+        this.getBackingStore().set("registry", value);
     }
 }

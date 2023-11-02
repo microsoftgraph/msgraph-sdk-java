@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AudioRoutingGroup extends Entity implements Parsable {
     /**
-     * List of receiving participant ids.
-     */
-    private java.util.List<String> receivers;
-    /**
-     * The routingMode property
-     */
-    private RoutingMode routingMode;
-    /**
-     * List of source participant ids.
-     */
-    private java.util.List<String> sources;
-    /**
      * Instantiates a new AudioRoutingGroup and sets the default values.
      */
     public AudioRoutingGroup() {
@@ -54,7 +42,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReceivers() {
-        return this.receivers;
+        return this.getBackingStore().get("receivers");
     }
     /**
      * Gets the routingMode property value. The routingMode property
@@ -62,7 +50,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RoutingMode getRoutingMode() {
-        return this.routingMode;
+        return this.getBackingStore().get("routingMode");
     }
     /**
      * Gets the sources property value. List of source participant ids.
@@ -70,7 +58,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSources() {
-        return this.sources;
+        return this.getBackingStore().get("sources");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the receivers property.
      */
     public void setReceivers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.receivers = value;
+        this.getBackingStore().set("receivers", value);
     }
     /**
      * Sets the routingMode property value. The routingMode property
      * @param value Value to set for the routingMode property.
      */
     public void setRoutingMode(@jakarta.annotation.Nullable final RoutingMode value) {
-        this.routingMode = value;
+        this.getBackingStore().set("routingMode", value);
     }
     /**
      * Sets the sources property value. List of source participant ids.
      * @param value Value to set for the sources property.
      */
     public void setSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.sources = value;
+        this.getBackingStore().set("sources", value);
     }
 }

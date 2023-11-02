@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     /**
-     * Represents the fill format of the current chart data label. Read-only.
-     */
-    private WorkbookChartFill fill;
-    /**
-     * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
-     */
-    private WorkbookChartFont font;
-    /**
      * Instantiates a new WorkbookChartDataLabelFormat and sets the default values.
      */
     public WorkbookChartDataLabelFormat() {
@@ -49,7 +41,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this.fill;
+        return this.getBackingStore().get("fill");
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this.font;
+        return this.getBackingStore().get("font");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      */
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
-        this.fill = value;
+        this.getBackingStore().set("fill", value);
     }
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
      * @param value Value to set for the font property.
      */
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.font = value;
+        this.getBackingStore().set("font", value);
     }
 }

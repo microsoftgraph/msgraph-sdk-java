@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,31 +14,16 @@ import java.util.Objects;
  * Color in RGB.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RgbColor implements AdditionalDataHolder, Parsable {
+public class RgbColor implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Blue value
-     */
-    private Byte b;
-    /**
-     * Green value
-     */
-    private Byte g;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Red value
-     */
-    private Byte r;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new RgbColor and sets the default values.
      */
     public RgbColor() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -54,7 +42,12 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the b property value. Blue value
@@ -62,7 +55,15 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Byte getB() {
-        return this.b;
+        return this.getBackingStore().get("b");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +84,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Byte getG() {
-        return this.g;
+        return this.getBackingStore().get("g");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +92,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the r property value. Red value
@@ -99,7 +100,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Byte getR() {
-        return this.r;
+        return this.getBackingStore().get("r");
     }
     /**
      * Serializes information the current object
@@ -111,41 +112,47 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         writer.writeByteValue("g", this.getG());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeByteValue("r", this.getR());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the b property value. Blue value
      * @param value Value to set for the b property.
      */
     public void setB(@jakarta.annotation.Nullable final Byte value) {
-        this.b = value;
+        this.getBackingStore().set("b", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the g property value. Green value
      * @param value Value to set for the g property.
      */
     public void setG(@jakarta.annotation.Nullable final Byte value) {
-        this.g = value;
+        this.getBackingStore().set("g", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the r property value. Red value
      * @param value Value to set for the r property.
      */
     public void setR(@jakarta.annotation.Nullable final Byte value) {
-        this.r = value;
+        this.getBackingStore().set("r", value);
     }
 }

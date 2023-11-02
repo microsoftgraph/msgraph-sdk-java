@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TaskReportSummary implements AdditionalDataHolder, Parsable {
+public class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The number of failed tasks in a report.
-     */
-    private Integer failedTasks;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The total number of successful tasks in a report.
-     */
-    private Integer successfulTasks;
-    /**
-     * The total number of tasks in a report.
-     */
-    private Integer totalTasks;
-    /**
-     * The number of unprocessed tasks in a report.
-     */
-    private Integer unprocessedTasks;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TaskReportSummary and sets the default values.
      */
     public TaskReportSummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the failedTasks property value. The number of failed tasks in a report.
@@ -63,7 +60,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
-        return this.failedTasks;
+        return this.getBackingStore().get("failedTasks");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the successfulTasks property value. The total number of successful tasks in a report.
@@ -93,7 +90,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulTasks() {
-        return this.successfulTasks;
+        return this.getBackingStore().get("successfulTasks");
     }
     /**
      * Gets the totalTasks property value. The total number of tasks in a report.
@@ -101,7 +98,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
-        return this.totalTasks;
+        return this.getBackingStore().get("totalTasks");
     }
     /**
      * Gets the unprocessedTasks property value. The number of unprocessed tasks in a report.
@@ -109,7 +106,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getUnprocessedTasks() {
-        return this.unprocessedTasks;
+        return this.getBackingStore().get("unprocessedTasks");
     }
     /**
      * Serializes information the current object
@@ -122,48 +119,54 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("successfulTasks", this.getSuccessfulTasks());
         writer.writeIntegerValue("totalTasks", this.getTotalTasks());
         writer.writeIntegerValue("unprocessedTasks", this.getUnprocessedTasks());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks in a report.
      * @param value Value to set for the failedTasks property.
      */
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.failedTasks = value;
+        this.getBackingStore().set("failedTasks", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the successfulTasks property value. The total number of successful tasks in a report.
      * @param value Value to set for the successfulTasks property.
      */
     public void setSuccessfulTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.successfulTasks = value;
+        this.getBackingStore().set("successfulTasks", value);
     }
     /**
      * Sets the totalTasks property value. The total number of tasks in a report.
      * @param value Value to set for the totalTasks property.
      */
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.totalTasks = value;
+        this.getBackingStore().set("totalTasks", value);
     }
     /**
      * Sets the unprocessedTasks property value. The number of unprocessed tasks in a report.
      * @param value Value to set for the unprocessedTasks property.
      */
     public void setUnprocessedTasks(@jakarta.annotation.Nullable final Integer value) {
-        this.unprocessedTasks = value;
+        this.getBackingStore().set("unprocessedTasks", value);
     }
 }

@@ -12,54 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * Possible values of a property
-     */
-    private Enablement enhancedBiometricsState;
-    /**
-     * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
-     */
-    private Integer pinExpirationInDays;
-    /**
-     * Windows Hello for Business pin usage options
-     */
-    private WindowsHelloForBusinessPinUsage pinLowercaseCharactersUsage;
-    /**
-     * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
-     */
-    private Integer pinMaximumLength;
-    /**
-     * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
-     */
-    private Integer pinMinimumLength;
-    /**
-     * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
-     */
-    private Integer pinPreviousBlockCount;
-    /**
-     * Windows Hello for Business pin usage options
-     */
-    private WindowsHelloForBusinessPinUsage pinSpecialCharactersUsage;
-    /**
-     * Windows Hello for Business pin usage options
-     */
-    private WindowsHelloForBusinessPinUsage pinUppercaseCharactersUsage;
-    /**
-     * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
-     */
-    private Boolean remotePassportEnabled;
-    /**
-     * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
-     */
-    private Boolean securityDeviceRequired;
-    /**
-     * Possible values of a property
-     */
-    private Enablement state;
-    /**
-     * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
-     */
-    private Boolean unlockWithBiometricsEnabled;
-    /**
      * Instantiates a new DeviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
      */
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration() {
@@ -82,7 +34,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Enablement getEnhancedBiometricsState() {
-        return this.enhancedBiometricsState;
+        return this.getBackingStore().get("enhancedBiometricsState");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +63,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Integer getPinExpirationInDays() {
-        return this.pinExpirationInDays;
+        return this.getBackingStore().get("pinExpirationInDays");
     }
     /**
      * Gets the pinLowercaseCharactersUsage property value. Windows Hello for Business pin usage options
@@ -119,7 +71,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinLowercaseCharactersUsage() {
-        return this.pinLowercaseCharactersUsage;
+        return this.getBackingStore().get("pinLowercaseCharactersUsage");
     }
     /**
      * Gets the pinMaximumLength property value. Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
@@ -127,7 +79,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Integer getPinMaximumLength() {
-        return this.pinMaximumLength;
+        return this.getBackingStore().get("pinMaximumLength");
     }
     /**
      * Gets the pinMinimumLength property value. Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
@@ -135,7 +87,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Integer getPinMinimumLength() {
-        return this.pinMinimumLength;
+        return this.getBackingStore().get("pinMinimumLength");
     }
     /**
      * Gets the pinPreviousBlockCount property value. Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
@@ -143,7 +95,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Integer getPinPreviousBlockCount() {
-        return this.pinPreviousBlockCount;
+        return this.getBackingStore().get("pinPreviousBlockCount");
     }
     /**
      * Gets the pinSpecialCharactersUsage property value. Windows Hello for Business pin usage options
@@ -151,7 +103,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinSpecialCharactersUsage() {
-        return this.pinSpecialCharactersUsage;
+        return this.getBackingStore().get("pinSpecialCharactersUsage");
     }
     /**
      * Gets the pinUppercaseCharactersUsage property value. Windows Hello for Business pin usage options
@@ -159,7 +111,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinUppercaseCharactersUsage() {
-        return this.pinUppercaseCharactersUsage;
+        return this.getBackingStore().get("pinUppercaseCharactersUsage");
     }
     /**
      * Gets the remotePassportEnabled property value. Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
@@ -167,7 +119,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Boolean getRemotePassportEnabled() {
-        return this.remotePassportEnabled;
+        return this.getBackingStore().get("remotePassportEnabled");
     }
     /**
      * Gets the securityDeviceRequired property value. Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
@@ -175,7 +127,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDeviceRequired() {
-        return this.securityDeviceRequired;
+        return this.getBackingStore().get("securityDeviceRequired");
     }
     /**
      * Gets the state property value. Possible values of a property
@@ -183,7 +135,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Enablement getState() {
-        return this.state;
+        return this.getBackingStore().get("state");
     }
     /**
      * Gets the unlockWithBiometricsEnabled property value. Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
@@ -191,7 +143,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Boolean getUnlockWithBiometricsEnabled() {
-        return this.unlockWithBiometricsEnabled;
+        return this.getBackingStore().get("unlockWithBiometricsEnabled");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the enhancedBiometricsState property.
      */
     public void setEnhancedBiometricsState(@jakarta.annotation.Nullable final Enablement value) {
-        this.enhancedBiometricsState = value;
+        this.getBackingStore().set("enhancedBiometricsState", value);
     }
     /**
      * Sets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
      * @param value Value to set for the pinExpirationInDays property.
      */
     public void setPinExpirationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.pinExpirationInDays = value;
+        this.getBackingStore().set("pinExpirationInDays", value);
     }
     /**
      * Sets the pinLowercaseCharactersUsage property value. Windows Hello for Business pin usage options
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      */
     public void setPinLowercaseCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
-        this.pinLowercaseCharactersUsage = value;
+        this.getBackingStore().set("pinLowercaseCharactersUsage", value);
     }
     /**
      * Sets the pinMaximumLength property value. Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
      * @param value Value to set for the pinMaximumLength property.
      */
     public void setPinMaximumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.pinMaximumLength = value;
+        this.getBackingStore().set("pinMaximumLength", value);
     }
     /**
      * Sets the pinMinimumLength property value. Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
      * @param value Value to set for the pinMinimumLength property.
      */
     public void setPinMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.pinMinimumLength = value;
+        this.getBackingStore().set("pinMinimumLength", value);
     }
     /**
      * Sets the pinPreviousBlockCount property value. Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
      * @param value Value to set for the pinPreviousBlockCount property.
      */
     public void setPinPreviousBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.pinPreviousBlockCount = value;
+        this.getBackingStore().set("pinPreviousBlockCount", value);
     }
     /**
      * Sets the pinSpecialCharactersUsage property value. Windows Hello for Business pin usage options
      * @param value Value to set for the pinSpecialCharactersUsage property.
      */
     public void setPinSpecialCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
-        this.pinSpecialCharactersUsage = value;
+        this.getBackingStore().set("pinSpecialCharactersUsage", value);
     }
     /**
      * Sets the pinUppercaseCharactersUsage property value. Windows Hello for Business pin usage options
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      */
     public void setPinUppercaseCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
-        this.pinUppercaseCharactersUsage = value;
+        this.getBackingStore().set("pinUppercaseCharactersUsage", value);
     }
     /**
      * Sets the remotePassportEnabled property value. Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
      * @param value Value to set for the remotePassportEnabled property.
      */
     public void setRemotePassportEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.remotePassportEnabled = value;
+        this.getBackingStore().set("remotePassportEnabled", value);
     }
     /**
      * Sets the securityDeviceRequired property value. Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
      * @param value Value to set for the securityDeviceRequired property.
      */
     public void setSecurityDeviceRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.securityDeviceRequired = value;
+        this.getBackingStore().set("securityDeviceRequired", value);
     }
     /**
      * Sets the state property value. Possible values of a property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final Enablement value) {
-        this.state = value;
+        this.getBackingStore().set("state", value);
     }
     /**
      * Sets the unlockWithBiometricsEnabled property value. Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
      * @param value Value to set for the unlockWithBiometricsEnabled property.
      */
     public void setUnlockWithBiometricsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.unlockWithBiometricsEnabled = value;
+        this.getBackingStore().set("unlockWithBiometricsEnabled", value);
     }
 }

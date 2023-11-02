@@ -13,26 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
     /**
-     * DateTime when the terms were last accepted by the user.
-     */
-    private OffsetDateTime acceptedDateTime;
-    /**
-     * Most recent version number of the T&C accepted by the user.
-     */
-    private Integer acceptedVersion;
-    /**
-     * Navigation link to the terms and conditions that are assigned.
-     */
-    private TermsAndConditions termsAndConditions;
-    /**
-     * Display name of the user whose acceptance the entity represents.
-     */
-    private String userDisplayName;
-    /**
-     * The userPrincipalName of the User that accepted the term.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new TermsAndConditionsAcceptanceStatus and sets the default values.
      */
     public TermsAndConditionsAcceptanceStatus() {
@@ -54,7 +34,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAcceptedDateTime() {
-        return this.acceptedDateTime;
+        return this.getBackingStore().get("acceptedDateTime");
     }
     /**
      * Gets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
@@ -62,7 +42,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public Integer getAcceptedVersion() {
-        return this.acceptedVersion;
+        return this.getBackingStore().get("acceptedVersion");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +64,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions getTermsAndConditions() {
-        return this.termsAndConditions;
+        return this.getBackingStore().get("termsAndConditions");
     }
     /**
      * Gets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
@@ -92,7 +72,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.getBackingStore().get("userDisplayName");
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
@@ -100,7 +80,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.getBackingStore().get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * @param value Value to set for the acceptedDateTime property.
      */
     public void setAcceptedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.acceptedDateTime = value;
+        this.getBackingStore().set("acceptedDateTime", value);
     }
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
      * @param value Value to set for the acceptedVersion property.
      */
     public void setAcceptedVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.acceptedVersion = value;
+        this.getBackingStore().set("acceptedVersion", value);
     }
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      * @param value Value to set for the termsAndConditions property.
      */
     public void setTermsAndConditions(@jakarta.annotation.Nullable final TermsAndConditions value) {
-        this.termsAndConditions = value;
+        this.getBackingStore().set("termsAndConditions", value);
     }
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.getBackingStore().set("userDisplayName", value);
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.getBackingStore().set("userPrincipalName", value);
     }
 }

@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsable {
+public class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
-     */
-    private Boolean allowedToCreateApps;
-    /**
-     * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
-     */
-    private Boolean allowedToCreateSecurityGroups;
-    /**
-     * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
-     */
-    private Boolean allowedToCreateTenants;
-    /**
-     * Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
-     */
-    private Boolean allowedToReadBitlockerKeysForOwnedDevice;
-    /**
-     * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
-     */
-    private Boolean allowedToReadOtherUsers;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     */
-    private java.util.List<String> permissionGrantPoliciesAssigned;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DefaultUserRolePermissions and sets the default values.
      */
     public DefaultUserRolePermissions() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
@@ -71,7 +52,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateApps() {
-        return this.allowedToCreateApps;
+        return this.getBackingStore().get("allowedToCreateApps");
     }
     /**
      * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
@@ -79,7 +60,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateSecurityGroups() {
-        return this.allowedToCreateSecurityGroups;
+        return this.getBackingStore().get("allowedToCreateSecurityGroups");
     }
     /**
      * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
@@ -87,7 +68,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateTenants() {
-        return this.allowedToCreateTenants;
+        return this.getBackingStore().get("allowedToCreateTenants");
     }
     /**
      * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
@@ -95,7 +76,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToReadBitlockerKeysForOwnedDevice() {
-        return this.allowedToReadBitlockerKeysForOwnedDevice;
+        return this.getBackingStore().get("allowedToReadBitlockerKeysForOwnedDevice");
     }
     /**
      * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
@@ -103,7 +84,15 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToReadOtherUsers() {
-        return this.allowedToReadOtherUsers;
+        return this.getBackingStore().get("allowedToReadOtherUsers");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -127,7 +116,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
@@ -135,7 +124,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissionGrantPoliciesAssigned() {
-        return this.permissionGrantPoliciesAssigned;
+        return this.getBackingStore().get("permissionGrantPoliciesAssigned");
     }
     /**
      * Serializes information the current object
@@ -150,62 +139,68 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         writer.writeBooleanValue("allowedToReadOtherUsers", this.getAllowedToReadOtherUsers());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("permissionGrantPoliciesAssigned", this.getPermissionGrantPoliciesAssigned());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
      * @param value Value to set for the allowedToCreateApps property.
      */
     public void setAllowedToCreateApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToCreateApps = value;
+        this.getBackingStore().set("allowedToCreateApps", value);
     }
     /**
      * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      * @param value Value to set for the allowedToCreateSecurityGroups property.
      */
     public void setAllowedToCreateSecurityGroups(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToCreateSecurityGroups = value;
+        this.getBackingStore().set("allowedToCreateSecurityGroups", value);
     }
     /**
      * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      * @param value Value to set for the allowedToCreateTenants property.
      */
     public void setAllowedToCreateTenants(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToCreateTenants = value;
+        this.getBackingStore().set("allowedToCreateTenants", value);
     }
     /**
      * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @param value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
      */
     public void setAllowedToReadBitlockerKeysForOwnedDevice(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToReadBitlockerKeysForOwnedDevice = value;
+        this.getBackingStore().set("allowedToReadBitlockerKeysForOwnedDevice", value);
     }
     /**
      * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @param value Value to set for the allowedToReadOtherUsers property.
      */
     public void setAllowedToReadOtherUsers(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToReadOtherUsers = value;
+        this.getBackingStore().set("allowedToReadOtherUsers", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
      * @param value Value to set for the permissionGrantPoliciesAssigned property.
      */
     public void setPermissionGrantPoliciesAssigned(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.permissionGrantPoliciesAssigned = value;
+        this.getBackingStore().set("permissionGrantPoliciesAssigned", value);
     }
 }

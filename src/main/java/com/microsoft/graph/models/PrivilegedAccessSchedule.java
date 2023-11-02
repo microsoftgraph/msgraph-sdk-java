@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessSchedule extends Entity implements Parsable {
     /**
-     * When the schedule was created. Optional.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The identifier of the access assignment or eligibility request that created this schedule. Optional.
-     */
-    private String createdUsing;
-    /**
-     * When the schedule was last modified. Optional.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
-     * The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
-     */
-    private String status;
-    /**
      * Instantiates a new PrivilegedAccessSchedule and sets the default values.
      */
     public PrivilegedAccessSchedule() {
@@ -59,7 +39,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * Gets the createdUsing property value. The identifier of the access assignment or eligibility request that created this schedule. Optional.
@@ -67,7 +47,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCreatedUsing() {
-        return this.createdUsing;
+        return this.getBackingStore().get("createdUsing");
     }
     /**
      * The deserialization information for the current model
@@ -89,7 +69,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.getBackingStore().get("modifiedDateTime");
     }
     /**
      * Gets the scheduleInfo property value. Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
@@ -97,7 +77,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.getBackingStore().get("scheduleInfo");
     }
     /**
      * Gets the status property value. The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
@@ -105,7 +85,7 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -125,34 +105,34 @@ public class PrivilegedAccessSchedule extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
     /**
      * Sets the createdUsing property value. The identifier of the access assignment or eligibility request that created this schedule. Optional.
      * @param value Value to set for the createdUsing property.
      */
     public void setCreatedUsing(@jakarta.annotation.Nullable final String value) {
-        this.createdUsing = value;
+        this.getBackingStore().set("createdUsing", value);
     }
     /**
      * Sets the modifiedDateTime property value. When the schedule was last modified. Optional.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.getBackingStore().set("modifiedDateTime", value);
     }
     /**
      * Sets the scheduleInfo property value. Represents the period of the access assignment or eligibility. The scheduleInfo can represent a single occurrence or multiple recurring instances. Required.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.getBackingStore().set("scheduleInfo", value);
     }
     /**
      * Sets the status property value. The status of the access assignment or eligibility request. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. Optional.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

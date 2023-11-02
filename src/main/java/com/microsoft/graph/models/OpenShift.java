@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
-     * An unpublished open shift.
-     */
-    private OpenShiftItem draftOpenShift;
-    /**
-     * ID for the scheduling group that the open shift belongs to.
-     */
-    private String schedulingGroupId;
-    /**
-     * A published open shift.
-     */
-    private OpenShiftItem sharedOpenShift;
-    /**
      * Instantiates a new OpenShift and sets the default values.
      */
     public OpenShift() {
@@ -43,7 +31,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getDraftOpenShift() {
-        return this.draftOpenShift;
+        return this.getBackingStore().get("draftOpenShift");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
-        return this.schedulingGroupId;
+        return this.getBackingStore().get("schedulingGroupId");
     }
     /**
      * Gets the sharedOpenShift property value. A published open shift.
@@ -71,7 +59,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {
-        return this.sharedOpenShift;
+        return this.getBackingStore().get("sharedOpenShift");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftOpenShift property.
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
-        this.draftOpenShift = value;
+        this.getBackingStore().set("draftOpenShift", value);
     }
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
      * @param value Value to set for the schedulingGroupId property.
      */
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
-        this.schedulingGroupId = value;
+        this.getBackingStore().set("schedulingGroupId", value);
     }
     /**
      * Sets the sharedOpenShift property value. A published open shift.
      * @param value Value to set for the sharedOpenShift property.
      */
     public void setSharedOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
-        this.sharedOpenShift = value;
+        this.getBackingStore().set("sharedOpenShift", value);
     }
 }

@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
     /**
-     * The notebook that contains the section group. Read-only.
-     */
-    private Notebook parentNotebook;
-    /**
-     * The section group that contains the section group. Read-only.
-     */
-    private SectionGroup parentSectionGroup;
-    /**
-     * The section groups in the section. Read-only. Nullable.
-     */
-    private java.util.List<SectionGroup> sectionGroups;
-    /**
-     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
-     */
-    private String sectionGroupsUrl;
-    /**
-     * The sections in the section group. Read-only. Nullable.
-     */
-    private java.util.List<OnenoteSection> sections;
-    /**
-     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-     */
-    private String sectionsUrl;
-    /**
      * Instantiates a new SectionGroup and sets the default values.
      */
     public SectionGroup() {
@@ -70,7 +46,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
-        return this.parentNotebook;
+        return this.getBackingStore().get("parentNotebook");
     }
     /**
      * Gets the parentSectionGroup property value. The section group that contains the section group. Read-only.
@@ -78,7 +54,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public SectionGroup getParentSectionGroup() {
-        return this.parentSectionGroup;
+        return this.getBackingStore().get("parentSectionGroup");
     }
     /**
      * Gets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
@@ -86,7 +62,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
-        return this.sectionGroups;
+        return this.getBackingStore().get("sectionGroups");
     }
     /**
      * Gets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
@@ -94,7 +70,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
-        return this.sectionGroupsUrl;
+        return this.getBackingStore().get("sectionGroupsUrl");
     }
     /**
      * Gets the sections property value. The sections in the section group. Read-only. Nullable.
@@ -102,7 +78,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
-        return this.sections;
+        return this.getBackingStore().get("sections");
     }
     /**
      * Gets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
@@ -110,7 +86,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getSectionsUrl() {
-        return this.sectionsUrl;
+        return this.getBackingStore().get("sectionsUrl");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the parentNotebook property.
      */
     public void setParentNotebook(@jakarta.annotation.Nullable final Notebook value) {
-        this.parentNotebook = value;
+        this.getBackingStore().set("parentNotebook", value);
     }
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section group. Read-only.
      * @param value Value to set for the parentSectionGroup property.
      */
     public void setParentSectionGroup(@jakarta.annotation.Nullable final SectionGroup value) {
-        this.parentSectionGroup = value;
+        this.getBackingStore().set("parentSectionGroup", value);
     }
     /**
      * Sets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
      */
     public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
-        this.sectionGroups = value;
+        this.getBackingStore().set("sectionGroups", value);
     }
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      * @param value Value to set for the sectionGroupsUrl property.
      */
     public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionGroupsUrl = value;
+        this.getBackingStore().set("sectionGroupsUrl", value);
     }
     /**
      * Sets the sections property value. The sections in the section group. Read-only. Nullable.
      * @param value Value to set for the sections property.
      */
     public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
-        this.sections = value;
+        this.getBackingStore().set("sections", value);
     }
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
      * @param value Value to set for the sectionsUrl property.
      */
     public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
-        this.sectionsUrl = value;
+        this.getBackingStore().set("sectionsUrl", value);
     }
 }

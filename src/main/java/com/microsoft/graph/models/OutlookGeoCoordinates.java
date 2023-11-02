@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
+public class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+     * Stores model information.
      */
-    private Double accuracy;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The altitude of the location.
-     */
-    private Double altitude;
-    /**
-     * The accuracy of the altitude.
-     */
-    private Double altitudeAccuracy;
-    /**
-     * The latitude of the location.
-     */
-    private Double latitude;
-    /**
-     * The longitude of the location.
-     */
-    private Double longitude;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new OutlookGeoCoordinates and sets the default values.
      */
     public OutlookGeoCoordinates() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getAccuracy() {
-        return this.accuracy;
+        return this.getBackingStore().get("accuracy");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -67,7 +47,12 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the altitude property value. The altitude of the location.
@@ -75,7 +60,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
-        return this.altitude;
+        return this.getBackingStore().get("altitude");
     }
     /**
      * Gets the altitudeAccuracy property value. The accuracy of the altitude.
@@ -83,7 +68,15 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getAltitudeAccuracy() {
-        return this.altitudeAccuracy;
+        return this.getBackingStore().get("altitudeAccuracy");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +99,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
-        return this.latitude;
+        return this.getBackingStore().get("latitude");
     }
     /**
      * Gets the longitude property value. The longitude of the location.
@@ -114,7 +107,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
-        return this.longitude;
+        return this.getBackingStore().get("longitude");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -122,7 +115,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -136,55 +129,61 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("latitude", this.getLatitude());
         writer.writeDoubleValue("longitude", this.getLongitude());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
      * @param value Value to set for the accuracy property.
      */
     public void setAccuracy(@jakarta.annotation.Nullable final Double value) {
-        this.accuracy = value;
+        this.getBackingStore().set("accuracy", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the altitude property value. The altitude of the location.
      * @param value Value to set for the altitude property.
      */
     public void setAltitude(@jakarta.annotation.Nullable final Double value) {
-        this.altitude = value;
+        this.getBackingStore().set("altitude", value);
     }
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
      * @param value Value to set for the altitudeAccuracy property.
      */
     public void setAltitudeAccuracy(@jakarta.annotation.Nullable final Double value) {
-        this.altitudeAccuracy = value;
+        this.getBackingStore().set("altitudeAccuracy", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the latitude property value. The latitude of the location.
      * @param value Value to set for the latitude property.
      */
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
-        this.latitude = value;
+        this.getBackingStore().set("latitude", value);
     }
     /**
      * Sets the longitude property value. The longitude of the location.
      * @param value Value to set for the longitude property.
      */
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
-        this.longitude = value;
+        this.getBackingStore().set("longitude", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

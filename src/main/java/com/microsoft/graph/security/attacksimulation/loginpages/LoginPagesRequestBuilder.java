@@ -59,17 +59,19 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/loginPages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @return a CompletableFuture of LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,7 +131,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -160,7 +162,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -175,7 +177,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return new LoginPagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

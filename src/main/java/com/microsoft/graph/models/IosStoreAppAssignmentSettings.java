@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
-     */
-    private Boolean isRemovable;
-    /**
-     * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
-     */
-    private Boolean uninstallOnDeviceRemoval;
-    /**
-     * This is the unique identifier (Id) of the VPN Configuration to apply to the app.
-     */
-    private String vpnConfigurationId;
-    /**
      * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
      */
     public IosStoreAppAssignmentSettings() {
@@ -58,7 +46,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemovable() {
-        return this.isRemovable;
+        return this.getBackingStore().get("isRemovable");
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
@@ -66,7 +54,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this.uninstallOnDeviceRemoval;
+        return this.getBackingStore().get("uninstallOnDeviceRemoval");
     }
     /**
      * Gets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
@@ -74,7 +62,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @jakarta.annotation.Nullable
     public String getVpnConfigurationId() {
-        return this.vpnConfigurationId;
+        return this.getBackingStore().get("vpnConfigurationId");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the isRemovable property.
      */
     public void setIsRemovable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRemovable = value;
+        this.getBackingStore().set("isRemovable", value);
     }
     /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      */
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
-        this.uninstallOnDeviceRemoval = value;
+        this.getBackingStore().set("uninstallOnDeviceRemoval", value);
     }
     /**
      * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @param value Value to set for the vpnConfigurationId property.
      */
     public void setVpnConfigurationId(@jakarta.annotation.Nullable final String value) {
-        this.vpnConfigurationId = value;
+        this.getBackingStore().set("vpnConfigurationId", value);
     }
 }

@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivity extends Entity implements Parsable {
     /**
-     * An item was accessed.
-     */
-    private AccessAction access;
-    /**
-     * Details about when the activity took place. Read-only.
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * Identity of who performed the action. Read-only.
-     */
-    private IdentitySet actor;
-    /**
-     * Exposes the driveItem that was the target of this activity.
-     */
-    private DriveItem driveItem;
-    /**
      * Instantiates a new ItemActivity and sets the default values.
      */
     public ItemActivity() {
@@ -47,7 +31,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessAction getAccess() {
-        return this.access;
+        return this.getBackingStore().get("access");
     }
     /**
      * Gets the activityDateTime property value. Details about when the activity took place. Read-only.
@@ -55,7 +39,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.getBackingStore().get("activityDateTime");
     }
     /**
      * Gets the actor property value. Identity of who performed the action. Read-only.
@@ -63,7 +47,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getActor() {
-        return this.actor;
+        return this.getBackingStore().get("actor");
     }
     /**
      * Gets the driveItem property value. Exposes the driveItem that was the target of this activity.
@@ -71,7 +55,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this.driveItem;
+        return this.getBackingStore().get("driveItem");
     }
     /**
      * The deserialization information for the current model
@@ -103,27 +87,27 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the access property.
      */
     public void setAccess(@jakarta.annotation.Nullable final AccessAction value) {
-        this.access = value;
+        this.getBackingStore().set("access", value);
     }
     /**
      * Sets the activityDateTime property value. Details about when the activity took place. Read-only.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.getBackingStore().set("activityDateTime", value);
     }
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.actor = value;
+        this.getBackingStore().set("actor", value);
     }
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
-        this.driveItem = value;
+        this.getBackingStore().set("driveItem", value);
     }
 }

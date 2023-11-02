@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable {
     /**
-     * Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
-     */
-    private AppScope appScope;
-    /**
-     * Identifier of the app-specific scope when the assignment or role eligibility is scoped to an app. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
-     */
-    private String appScopeId;
-    /**
-     * The directory object that is the scope of the assignment or role eligibility. Read-only.
-     */
-    private DirectoryObject directoryScope;
-    /**
-     * Identifier of the directory object representing the scope of the assignment or role eligibility. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
-     */
-    private String directoryScopeId;
-    /**
-     * The principal that's getting a role assignment or role eligibility through the request.
-     */
-    private DirectoryObject principal;
-    /**
-     * Identifier of the principal that has been granted the role assignment or that's eligible for a role.
-     */
-    private String principalId;
-    /**
-     * Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
-     */
-    private UnifiedRoleDefinition roleDefinition;
-    /**
-     * Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that the principal is eligible for.
-     */
-    private String roleDefinitionId;
-    /**
      * Instantiates a new UnifiedRoleScheduleInstanceBase and sets the default values.
      */
     public UnifiedRoleScheduleInstanceBase() {
@@ -70,7 +38,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public AppScope getAppScope() {
-        return this.appScope;
+        return this.getBackingStore().get("appScope");
     }
     /**
      * Gets the appScopeId property value. Identifier of the app-specific scope when the assignment or role eligibility is scoped to an app. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
@@ -78,7 +46,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getAppScopeId() {
-        return this.appScopeId;
+        return this.getBackingStore().get("appScopeId");
     }
     /**
      * Gets the directoryScope property value. The directory object that is the scope of the assignment or role eligibility. Read-only.
@@ -86,7 +54,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
-        return this.directoryScope;
+        return this.getBackingStore().get("directoryScope");
     }
     /**
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or role eligibility. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
@@ -94,7 +62,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
-        return this.directoryScopeId;
+        return this.getBackingStore().get("directoryScopeId");
     }
     /**
      * The deserialization information for the current model
@@ -119,7 +87,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
-        return this.principal;
+        return this.getBackingStore().get("principal");
     }
     /**
      * Gets the principalId property value. Identifier of the principal that has been granted the role assignment or that's eligible for a role.
@@ -127,7 +95,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.getBackingStore().get("principalId");
     }
     /**
      * Gets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
@@ -135,7 +103,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
-        return this.roleDefinition;
+        return this.getBackingStore().get("roleDefinition");
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that the principal is eligible for.
@@ -143,7 +111,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this.roleDefinitionId;
+        return this.getBackingStore().get("roleDefinitionId");
     }
     /**
      * Serializes information the current object
@@ -166,55 +134,55 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
-        this.appScope = value;
+        this.getBackingStore().set("appScope", value);
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment or role eligibility is scoped to an app. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
      * @param value Value to set for the appScopeId property.
      */
     public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
-        this.appScopeId = value;
+        this.getBackingStore().set("appScopeId", value);
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the assignment or role eligibility. Read-only.
      * @param value Value to set for the directoryScope property.
      */
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.directoryScope = value;
+        this.getBackingStore().set("directoryScope", value);
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or role eligibility. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      * @param value Value to set for the directoryScopeId property.
      */
     public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
-        this.directoryScopeId = value;
+        this.getBackingStore().set("directoryScopeId", value);
     }
     /**
      * Sets the principal property value. The principal that's getting a role assignment or role eligibility through the request.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.principal = value;
+        this.getBackingStore().set("principal", value);
     }
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or that's eligible for a role.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.getBackingStore().set("principalId", value);
     }
     /**
      * Sets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
-        this.roleDefinition = value;
+        this.getBackingStore().set("roleDefinition", value);
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that the principal is eligible for.
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.roleDefinitionId = value;
+        this.getBackingStore().set("roleDefinitionId", value);
     }
 }

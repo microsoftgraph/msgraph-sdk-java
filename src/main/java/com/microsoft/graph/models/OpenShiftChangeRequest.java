@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable {
     /**
-     * ID for the open shift.
-     */
-    private String openShiftId;
-    /**
      * Instantiates a new OpenShiftChangeRequest and sets the default values.
      */
     public OpenShiftChangeRequest() {
@@ -45,7 +41,7 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
      */
     @jakarta.annotation.Nullable
     public String getOpenShiftId() {
-        return this.openShiftId;
+        return this.getBackingStore().get("openShiftId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
      * @param value Value to set for the openShiftId property.
      */
     public void setOpenShiftId(@jakarta.annotation.Nullable final String value) {
-        this.openShiftId = value;
+        this.getBackingStore().set("openShiftId", value);
     }
 }

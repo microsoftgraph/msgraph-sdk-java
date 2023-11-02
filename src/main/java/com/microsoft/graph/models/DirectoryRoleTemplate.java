@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
     /**
-     * The description to set for the directory role. Read-only.
-     */
-    private String description;
-    /**
-     * The display name to set for the directory role. Read-only.
-     */
-    private String displayName;
-    /**
      * Instantiates a new DirectoryRoleTemplate and sets the default values.
      */
     public DirectoryRoleTemplate() {
@@ -39,7 +31,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.getBackingStore().get("description");
     }
     /**
      * Gets the displayName property value. The display name to set for the directory role. Read-only.
@@ -47,7 +39,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.getBackingStore().set("description", value);
     }
     /**
      * Sets the displayName property value. The display name to set for the directory role. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
 }

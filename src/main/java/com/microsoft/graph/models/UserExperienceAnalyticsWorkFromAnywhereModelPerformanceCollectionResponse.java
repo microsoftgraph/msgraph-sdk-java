@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value;
-    /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRe
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRe
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

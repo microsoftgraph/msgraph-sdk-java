@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileLobApp extends MobileApp implements Parsable {
     /**
-     * The internal committed content version.
-     */
-    private String committedContentVersion;
-    /**
-     * The list of content versions for this app.
-     */
-    private java.util.List<MobileAppContent> contentVersions;
-    /**
-     * The name of the main Lob application file.
-     */
-    private String fileName;
-    /**
-     * The total size, including all uploaded files.
-     */
-    private Long size;
-    /**
      * Instantiates a new MobileLobApp and sets the default values.
      */
     public MobileLobApp() {
@@ -64,7 +48,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCommittedContentVersion() {
-        return this.committedContentVersion;
+        return this.getBackingStore().get("committedContentVersion");
     }
     /**
      * Gets the contentVersions property value. The list of content versions for this app.
@@ -72,7 +56,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppContent> getContentVersions() {
-        return this.contentVersions;
+        return this.getBackingStore().get("contentVersions");
     }
     /**
      * The deserialization information for the current model
@@ -93,7 +77,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.getBackingStore().get("fileName");
     }
     /**
      * Gets the size property value. The total size, including all uploaded files.
@@ -101,7 +85,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.getBackingStore().get("size");
     }
     /**
      * Serializes information the current object
@@ -120,27 +104,27 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the committedContentVersion property.
      */
     public void setCommittedContentVersion(@jakarta.annotation.Nullable final String value) {
-        this.committedContentVersion = value;
+        this.getBackingStore().set("committedContentVersion", value);
     }
     /**
      * Sets the contentVersions property value. The list of content versions for this app.
      * @param value Value to set for the contentVersions property.
      */
     public void setContentVersions(@jakarta.annotation.Nullable final java.util.List<MobileAppContent> value) {
-        this.contentVersions = value;
+        this.getBackingStore().set("contentVersions", value);
     }
     /**
      * Sets the fileName property value. The name of the main Lob application file.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.getBackingStore().set("fileName", value);
     }
     /**
      * Sets the size property value. The total size, including all uploaded files.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.getBackingStore().set("size", value);
     }
 }

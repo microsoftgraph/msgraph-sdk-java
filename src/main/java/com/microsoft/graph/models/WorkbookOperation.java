@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookOperation extends Entity implements Parsable {
     /**
-     * The error returned by the operation.
-     */
-    private WorkbookOperationError error;
-    /**
-     * The resource URI for the result.
-     */
-    private String resourceLocation;
-    /**
-     * The status property
-     */
-    private WorkbookOperationStatus status;
-    /**
      * Instantiates a new WorkbookOperation and sets the default values.
      */
     public WorkbookOperation() {
@@ -42,7 +30,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookOperationError getError() {
-        return this.error;
+        return this.getBackingStore().get("error");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceLocation() {
-        return this.resourceLocation;
+        return this.getBackingStore().get("resourceLocation");
     }
     /**
      * Gets the status property value. The status property
@@ -70,7 +58,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookOperationStatus getStatus() {
-        return this.status;
+        return this.getBackingStore().get("status");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final WorkbookOperationError value) {
-        this.error = value;
+        this.getBackingStore().set("error", value);
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the result.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
-        this.resourceLocation = value;
+        this.getBackingStore().set("resourceLocation", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final WorkbookOperationStatus value) {
-        this.status = value;
+        this.getBackingStore().set("status", value);
     }
 }

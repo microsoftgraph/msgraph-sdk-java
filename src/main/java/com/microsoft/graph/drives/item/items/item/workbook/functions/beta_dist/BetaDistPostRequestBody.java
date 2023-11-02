@@ -5,43 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BetaDistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The A property
+     * Stores model information.
      */
-    private Json a;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The alpha property
-     */
-    private Json alpha;
-    /**
-     * The B property
-     */
-    private Json b;
-    /**
-     * The beta property
-     */
-    private Json beta;
-    /**
-     * The cumulative property
-     */
-    private Json cumulative;
-    /**
-     * The x property
-     */
-    private Json x;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BetaDistPostRequestBody and sets the default values.
      */
     public BetaDistPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +40,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getA() {
-        return this.a;
+        return this.getBackingStore().get("a");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -68,7 +48,12 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alpha property value. The alpha property
@@ -76,7 +61,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getAlpha() {
-        return this.alpha;
+        return this.getBackingStore().get("alpha");
     }
     /**
      * Gets the B property value. The B property
@@ -84,7 +69,15 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getB() {
-        return this.b;
+        return this.getBackingStore().get("b");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the beta property value. The beta property
@@ -92,7 +85,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getBeta() {
-        return this.beta;
+        return this.getBackingStore().get("beta");
     }
     /**
      * Gets the cumulative property value. The cumulative property
@@ -100,7 +93,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getCumulative() {
-        return this.cumulative;
+        return this.getBackingStore().get("cumulative");
     }
     /**
      * The deserialization information for the current model
@@ -123,7 +116,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getX() {
-        return this.x;
+        return this.getBackingStore().get("x");
     }
     /**
      * Serializes information the current object
@@ -137,55 +130,61 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("beta", this.getBeta());
         writer.writeObjectValue("cumulative", this.getCumulative());
         writer.writeObjectValue("x", this.getX());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the A property value. The A property
      * @param value Value to set for the A property.
      */
     public void setA(@jakarta.annotation.Nullable final Json value) {
-        this.a = value;
+        this.getBackingStore().set("a", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
     public void setAlpha(@jakarta.annotation.Nullable final Json value) {
-        this.alpha = value;
+        this.getBackingStore().set("alpha", value);
     }
     /**
      * Sets the B property value. The B property
      * @param value Value to set for the B property.
      */
     public void setB(@jakarta.annotation.Nullable final Json value) {
-        this.b = value;
+        this.getBackingStore().set("b", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the beta property value. The beta property
      * @param value Value to set for the beta property.
      */
     public void setBeta(@jakarta.annotation.Nullable final Json value) {
-        this.beta = value;
+        this.getBackingStore().set("beta", value);
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
-        this.cumulative = value;
+        this.getBackingStore().set("cumulative", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
     public void setX(@jakarta.annotation.Nullable final Json value) {
-        this.x = value;
+        this.getBackingStore().set("x", value);
     }
 }

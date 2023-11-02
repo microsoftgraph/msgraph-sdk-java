@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
+public class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If set to true, @channel mentions are allowed.
-     */
-    private Boolean allowChannelMentions;
-    /**
-     * If set to true, owners can delete any message.
-     */
-    private Boolean allowOwnerDeleteMessages;
-    /**
-     * If set to true, @team mentions are allowed.
-     */
-    private Boolean allowTeamMentions;
-    /**
-     * If set to true, users can delete their messages.
-     */
-    private Boolean allowUserDeleteMessages;
-    /**
-     * If set to true, users can edit their messages.
-     */
-    private Boolean allowUserEditMessages;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TeamMessagingSettings and sets the default values.
      */
     public TeamMessagingSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,12 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
@@ -67,7 +52,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowChannelMentions() {
-        return this.allowChannelMentions;
+        return this.getBackingStore().get("allowChannelMentions");
     }
     /**
      * Gets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
@@ -75,7 +60,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowOwnerDeleteMessages() {
-        return this.allowOwnerDeleteMessages;
+        return this.getBackingStore().get("allowOwnerDeleteMessages");
     }
     /**
      * Gets the allowTeamMentions property value. If set to true, @team mentions are allowed.
@@ -83,7 +68,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeamMentions() {
-        return this.allowTeamMentions;
+        return this.getBackingStore().get("allowTeamMentions");
     }
     /**
      * Gets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
@@ -91,7 +76,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserDeleteMessages() {
-        return this.allowUserDeleteMessages;
+        return this.getBackingStore().get("allowUserDeleteMessages");
     }
     /**
      * Gets the allowUserEditMessages property value. If set to true, users can edit their messages.
@@ -99,7 +84,15 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserEditMessages() {
-        return this.allowUserEditMessages;
+        return this.getBackingStore().get("allowUserEditMessages");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -122,7 +115,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -136,55 +129,61 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowUserDeleteMessages", this.getAllowUserDeleteMessages());
         writer.writeBooleanValue("allowUserEditMessages", this.getAllowUserEditMessages());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
      * @param value Value to set for the allowChannelMentions property.
      */
     public void setAllowChannelMentions(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowChannelMentions = value;
+        this.getBackingStore().set("allowChannelMentions", value);
     }
     /**
      * Sets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
      * @param value Value to set for the allowOwnerDeleteMessages property.
      */
     public void setAllowOwnerDeleteMessages(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowOwnerDeleteMessages = value;
+        this.getBackingStore().set("allowOwnerDeleteMessages", value);
     }
     /**
      * Sets the allowTeamMentions property value. If set to true, @team mentions are allowed.
      * @param value Value to set for the allowTeamMentions property.
      */
     public void setAllowTeamMentions(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowTeamMentions = value;
+        this.getBackingStore().set("allowTeamMentions", value);
     }
     /**
      * Sets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
      * @param value Value to set for the allowUserDeleteMessages property.
      */
     public void setAllowUserDeleteMessages(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUserDeleteMessages = value;
+        this.getBackingStore().set("allowUserDeleteMessages", value);
     }
     /**
      * Sets the allowUserEditMessages property value. If set to true, users can edit their messages.
      * @param value Value to set for the allowUserEditMessages property.
      */
     public void setAllowUserEditMessages(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUserEditMessages = value;
+        this.getBackingStore().set("allowUserEditMessages", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
     /**
-     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-     */
-    private java.util.List<KeyValuePair> customSettings;
-    /**
      * Instantiates a new ManagedAppConfiguration and sets the default values.
      */
     public ManagedAppConfiguration() {
@@ -45,7 +41,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
-        return this.customSettings;
+        return this.getBackingStore().get("customSettings");
     }
     /**
      * The deserialization information for the current model
@@ -71,6 +67,6 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param value Value to set for the customSettings property.
      */
     public void setCustomSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.customSettings = value;
+        this.getBackingStore().set("customSettings", value);
     }
 }

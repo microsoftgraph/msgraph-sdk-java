@@ -11,14 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LifecycleManagementSettings extends Entity implements Parsable {
     /**
-     * The emailSettings property
-     */
-    private EmailSettings emailSettings;
-    /**
-     * The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
-     */
-    private Integer workflowScheduleIntervalInHours;
-    /**
      * Instantiates a new LifecycleManagementSettings and sets the default values.
      */
     public LifecycleManagementSettings() {
@@ -40,7 +32,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailSettings getEmailSettings() {
-        return this.emailSettings;
+        return this.getBackingStore().get("emailSettings");
     }
     /**
      * The deserialization information for the current model
@@ -59,7 +51,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getWorkflowScheduleIntervalInHours() {
-        return this.workflowScheduleIntervalInHours;
+        return this.getBackingStore().get("workflowScheduleIntervalInHours");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the emailSettings property.
      */
     public void setEmailSettings(@jakarta.annotation.Nullable final EmailSettings value) {
-        this.emailSettings = value;
+        this.getBackingStore().set("emailSettings", value);
     }
     /**
      * Sets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
      * @param value Value to set for the workflowScheduleIntervalInHours property.
      */
     public void setWorkflowScheduleIntervalInHours(@jakarta.annotation.Nullable final Integer value) {
-        this.workflowScheduleIntervalInHours = value;
+        this.getBackingStore().set("workflowScheduleIntervalInHours", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AttackSimulationOperation> value;
-    /**
      * Instantiates a new AttackSimulationOperationCollectionResponse and sets the default values.
      */
     public AttackSimulationOperationCollectionResponse() {
@@ -44,7 +40,7 @@ public class AttackSimulationOperationCollectionResponse extends BaseCollectionP
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationOperation> getValue() {
-        return this.value;
+        return this.getBackingStore().get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AttackSimulationOperationCollectionResponse extends BaseCollectionP
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AttackSimulationOperation> value) {
-        this.value = value;
+        this.getBackingStore().set("value", value);
     }
 }

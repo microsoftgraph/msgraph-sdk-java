@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityApiConnector extends Entity implements Parsable {
     /**
-     * The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
-     */
-    private ApiAuthenticationConfigurationBase authenticationConfiguration;
-    /**
-     * The name of the API connector.
-     */
-    private String displayName;
-    /**
-     * The URL of the API endpoint to call.
-     */
-    private String targetUrl;
-    /**
      * Instantiates a new IdentityApiConnector and sets the default values.
      */
     public IdentityApiConnector() {
@@ -42,7 +30,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ApiAuthenticationConfigurationBase getAuthenticationConfiguration() {
-        return this.authenticationConfiguration;
+        return this.getBackingStore().get("authenticationConfiguration");
     }
     /**
      * Gets the displayName property value. The name of the API connector.
@@ -50,7 +38,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.getBackingStore().get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTargetUrl() {
-        return this.targetUrl;
+        return this.getBackingStore().get("targetUrl");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * @param value Value to set for the authenticationConfiguration property.
      */
     public void setAuthenticationConfiguration(@jakarta.annotation.Nullable final ApiAuthenticationConfigurationBase value) {
-        this.authenticationConfiguration = value;
+        this.getBackingStore().set("authenticationConfiguration", value);
     }
     /**
      * Sets the displayName property value. The name of the API connector.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.getBackingStore().set("displayName", value);
     }
     /**
      * Sets the targetUrl property value. The URL of the API endpoint to call.
      * @param value Value to set for the targetUrl property.
      */
     public void setTargetUrl(@jakarta.annotation.Nullable final String value) {
-        this.targetUrl = value;
+        this.getBackingStore().set("targetUrl", value);
     }
 }

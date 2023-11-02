@@ -4,6 +4,7 @@ import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequ
 import com.microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
 import com.microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
 import com.microsoft.graph.models.Directory;
@@ -53,6 +54,13 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
+        return new DeviceLocalCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
@@ -155,7 +163,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -186,7 +194,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

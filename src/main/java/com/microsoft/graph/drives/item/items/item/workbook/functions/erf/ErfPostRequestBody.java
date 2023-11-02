@@ -5,27 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ErfPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The lowerLimit property
-     */
-    private Json lowerLimit;
-    /**
-     * The upperLimit property
-     */
-    private Json upperLimit;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ErfPostRequestBody and sets the default values.
      */
     public ErfPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -44,7 +40,20 @@ public class ErfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +72,7 @@ public class ErfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLowerLimit() {
-        return this.lowerLimit;
+        return this.getBackingStore().get("lowerLimit");
     }
     /**
      * Gets the upperLimit property value. The upperLimit property
@@ -71,7 +80,7 @@ public class ErfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getUpperLimit() {
-        return this.upperLimit;
+        return this.getBackingStore().get("upperLimit");
     }
     /**
      * Serializes information the current object
@@ -81,27 +90,33 @@ public class ErfPostRequestBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("lowerLimit", this.getLowerLimit());
         writer.writeObjectValue("upperLimit", this.getUpperLimit());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the lowerLimit property value. The lowerLimit property
      * @param value Value to set for the lowerLimit property.
      */
     public void setLowerLimit(@jakarta.annotation.Nullable final Json value) {
-        this.lowerLimit = value;
+        this.getBackingStore().set("lowerLimit", value);
     }
     /**
      * Sets the upperLimit property value. The upperLimit property
      * @param value Value to set for the upperLimit property.
      */
     public void setUpperLimit(@jakarta.annotation.Nullable final Json value) {
-        this.upperLimit = value;
+        this.getBackingStore().set("upperLimit", value);
     }
 }

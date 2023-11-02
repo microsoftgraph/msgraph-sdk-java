@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * A collection of groups that are enabled to use the authentication method. Expanded by default.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
-     * true if users can register office phones, otherwise, false.
-     */
-    private Boolean isOfficePhoneAllowed;
-    /**
      * Instantiates a new VoiceAuthenticationMethodConfiguration and sets the default values.
      */
     public VoiceAuthenticationMethodConfiguration() {
@@ -50,7 +42,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.getBackingStore().get("includeTargets");
     }
     /**
      * Gets the isOfficePhoneAllowed property value. true if users can register office phones, otherwise, false.
@@ -58,7 +50,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOfficePhoneAllowed() {
-        return this.isOfficePhoneAllowed;
+        return this.getBackingStore().get("isOfficePhoneAllowed");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.getBackingStore().set("includeTargets", value);
     }
     /**
      * Sets the isOfficePhoneAllowed property value. true if users can register office phones, otherwise, false.
      * @param value Value to set for the isOfficePhoneAllowed property.
      */
     public void setIsOfficePhoneAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOfficePhoneAllowed = value;
+        this.getBackingStore().set("isOfficePhoneAllowed", value);
     }
 }

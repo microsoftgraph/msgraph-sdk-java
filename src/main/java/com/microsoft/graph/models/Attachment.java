@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attachment extends Entity implements Parsable {
     /**
-     * The MIME type.
-     */
-    private String contentType;
-    /**
-     * true if the attachment is an inline attachment; otherwise, false.
-     */
-    private Boolean isInline;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The attachment's file name.
-     */
-    private String name;
-    /**
-     * The length of the attachment in bytes.
-     */
-    private Integer size;
-    /**
      * Instantiates a new Attachment and sets the default values.
      */
     public Attachment() {
@@ -60,7 +40,7 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.getBackingStore().get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +62,7 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
-        return this.isInline;
+        return this.getBackingStore().get("isInline");
     }
     /**
      * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -90,7 +70,7 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.getBackingStore().get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The attachment's file name.
@@ -98,7 +78,7 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.getBackingStore().get("name");
     }
     /**
      * Gets the size property value. The length of the attachment in bytes.
@@ -106,7 +86,7 @@ public class Attachment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.getBackingStore().get("size");
     }
     /**
      * Serializes information the current object
@@ -126,34 +106,34 @@ public class Attachment extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.getBackingStore().set("contentType", value);
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false.
      * @param value Value to set for the isInline property.
      */
     public void setIsInline(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInline = value;
+        this.getBackingStore().set("isInline", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.getBackingStore().set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The attachment's file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.getBackingStore().set("name", value);
     }
     /**
      * Sets the size property value. The length of the attachment in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.getBackingStore().set("size", value);
     }
 }

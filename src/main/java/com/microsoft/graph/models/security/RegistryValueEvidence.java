@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
-     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     */
-    private String mdeDeviceId;
-    /**
-     * Registry hive of the key that the recorded action was applied to.
-     */
-    private String registryHive;
-    /**
-     * Registry key that the recorded action was applied to.
-     */
-    private String registryKey;
-    /**
-     * Data of the registry value that the recorded action was applied to.
-     */
-    private String registryValue;
-    /**
-     * Name of the registry value that the recorded action was applied to.
-     */
-    private String registryValueName;
-    /**
-     * Data type, such as binary or string, of the registry value that the recorded action was applied to.
-     */
-    private String registryValueType;
-    /**
      * Instantiates a new RegistryValueEvidence and sets the default values.
      */
     public RegistryValueEvidence() {
@@ -70,7 +46,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
-        return this.mdeDeviceId;
+        return this.getBackingStore().get("mdeDeviceId");
     }
     /**
      * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
@@ -78,7 +54,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryHive() {
-        return this.registryHive;
+        return this.getBackingStore().get("registryHive");
     }
     /**
      * Gets the registryKey property value. Registry key that the recorded action was applied to.
@@ -86,7 +62,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryKey() {
-        return this.registryKey;
+        return this.getBackingStore().get("registryKey");
     }
     /**
      * Gets the registryValue property value. Data of the registry value that the recorded action was applied to.
@@ -94,7 +70,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryValue() {
-        return this.registryValue;
+        return this.getBackingStore().get("registryValue");
     }
     /**
      * Gets the registryValueName property value. Name of the registry value that the recorded action was applied to.
@@ -102,7 +78,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueName() {
-        return this.registryValueName;
+        return this.getBackingStore().get("registryValueName");
     }
     /**
      * Gets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
@@ -110,7 +86,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRegistryValueType() {
-        return this.registryValueType;
+        return this.getBackingStore().get("registryValueType");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      */
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.mdeDeviceId = value;
+        this.getBackingStore().set("mdeDeviceId", value);
     }
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @param value Value to set for the registryHive property.
      */
     public void setRegistryHive(@jakarta.annotation.Nullable final String value) {
-        this.registryHive = value;
+        this.getBackingStore().set("registryHive", value);
     }
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
      */
     public void setRegistryKey(@jakarta.annotation.Nullable final String value) {
-        this.registryKey = value;
+        this.getBackingStore().set("registryKey", value);
     }
     /**
      * Sets the registryValue property value. Data of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValue property.
      */
     public void setRegistryValue(@jakarta.annotation.Nullable final String value) {
-        this.registryValue = value;
+        this.getBackingStore().set("registryValue", value);
     }
     /**
      * Sets the registryValueName property value. Name of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueName property.
      */
     public void setRegistryValueName(@jakarta.annotation.Nullable final String value) {
-        this.registryValueName = value;
+        this.getBackingStore().set("registryValueName", value);
     }
     /**
      * Sets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
      * @param value Value to set for the registryValueType property.
      */
     public void setRegistryValueType(@jakarta.annotation.Nullable final String value) {
-        this.registryValueType = value;
+        this.getBackingStore().set("registryValueType", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppSettings extends Entity implements Parsable {
     /**
-     * Indicates whether users are allowed to request access to the unavailable Teams apps.
-     */
-    private Boolean allowUserRequestsForAppAccess;
-    /**
      * Instantiates a new TeamsAppSettings and sets the default values.
      */
     public TeamsAppSettings() {
@@ -34,7 +30,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserRequestsForAppAccess() {
-        return this.allowUserRequestsForAppAccess;
+        return this.getBackingStore().get("allowUserRequestsForAppAccess");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class TeamsAppSettings extends Entity implements Parsable {
      * @param value Value to set for the allowUserRequestsForAppAccess property.
      */
     public void setAllowUserRequestsForAppAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUserRequestsForAppAccess = value;
+        this.getBackingStore().set("allowUserRequestsForAppAccess", value);
     }
 }

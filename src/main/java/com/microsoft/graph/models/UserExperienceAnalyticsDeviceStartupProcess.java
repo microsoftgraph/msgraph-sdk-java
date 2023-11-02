@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implements Parsable {
     /**
-     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String managedDeviceId;
-    /**
-     * The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
-     */
-    private String processName;
-    /**
-     * The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
-     */
-    private String productName;
-    /**
-     * The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
-     */
-    private String publisher;
-    /**
-     * The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
-     */
-    private Integer startupImpactInMs;
-    /**
      * Instantiates a new UserExperienceAnalyticsDeviceStartupProcess and sets the default values.
      */
     public UserExperienceAnalyticsDeviceStartupProcess() {
@@ -67,7 +47,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.getBackingStore().get("managedDeviceId");
     }
     /**
      * Gets the processName property value. The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
@@ -75,7 +55,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
-        return this.processName;
+        return this.getBackingStore().get("processName");
     }
     /**
      * Gets the productName property value. The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
@@ -83,7 +63,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.getBackingStore().get("productName");
     }
     /**
      * Gets the publisher property value. The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
@@ -91,7 +71,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.getBackingStore().get("publisher");
     }
     /**
      * Gets the startupImpactInMs property value. The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
@@ -99,7 +79,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public Integer getStartupImpactInMs() {
-        return this.startupImpactInMs;
+        return this.getBackingStore().get("startupImpactInMs");
     }
     /**
      * Serializes information the current object
@@ -119,34 +99,34 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.getBackingStore().set("managedDeviceId", value);
     }
     /**
      * Sets the processName property value. The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processName property.
      */
     public void setProcessName(@jakarta.annotation.Nullable final String value) {
-        this.processName = value;
+        this.getBackingStore().set("processName", value);
     }
     /**
      * Sets the productName property value. The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.getBackingStore().set("productName", value);
     }
     /**
      * Sets the publisher property value. The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.getBackingStore().set("publisher", value);
     }
     /**
      * Sets the startupImpactInMs property value. The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the startupImpactInMs property.
      */
     public void setStartupImpactInMs(@jakarta.annotation.Nullable final Integer value) {
-        this.startupImpactInMs = value;
+        this.getBackingStore().set("startupImpactInMs", value);
     }
 }

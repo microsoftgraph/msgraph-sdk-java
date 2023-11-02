@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable {
+public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Defines who can join the Teams live event. Possible values are listed in the following table.
-     */
-    private BroadcastMeetingAudience allowedAudience;
-    /**
-     * Caption settings of a Teams live event.
-     */
-    private BroadcastMeetingCaptionSettings captions;
-    /**
-     * Indicates whether attendee report is enabled for this Teams live event. Default value is false.
-     */
-    private Boolean isAttendeeReportEnabled;
-    /**
-     * Indicates whether Q&A is enabled for this Teams live event. Default value is false.
-     */
-    private Boolean isQuestionAndAnswerEnabled;
-    /**
-     * Indicates whether recording is enabled for this Teams live event. Default value is false.
-     */
-    private Boolean isRecordingEnabled;
-    /**
-     * Indicates whether video on demand is enabled for this Teams live event. Default value is false.
-     */
-    private Boolean isVideoOnDemandEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BroadcastMeetingSettings and sets the default values.
      */
     public BroadcastMeetingSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
@@ -71,7 +52,15 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingAudience getAllowedAudience() {
-        return this.allowedAudience;
+        return this.getBackingStore().get("allowedAudience");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the captions property value. Caption settings of a Teams live event.
@@ -79,7 +68,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public BroadcastMeetingCaptionSettings getCaptions() {
-        return this.captions;
+        return this.getBackingStore().get("captions");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +92,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAttendeeReportEnabled() {
-        return this.isAttendeeReportEnabled;
+        return this.getBackingStore().get("isAttendeeReportEnabled");
     }
     /**
      * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
@@ -111,7 +100,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsQuestionAndAnswerEnabled() {
-        return this.isQuestionAndAnswerEnabled;
+        return this.getBackingStore().get("isQuestionAndAnswerEnabled");
     }
     /**
      * Gets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
@@ -119,7 +108,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordingEnabled() {
-        return this.isRecordingEnabled;
+        return this.getBackingStore().get("isRecordingEnabled");
     }
     /**
      * Gets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
@@ -127,7 +116,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Boolean getIsVideoOnDemandEnabled() {
-        return this.isVideoOnDemandEnabled;
+        return this.getBackingStore().get("isVideoOnDemandEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -135,7 +124,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Serializes information the current object
@@ -150,62 +139,68 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         writer.writeBooleanValue("isRecordingEnabled", this.getIsRecordingEnabled());
         writer.writeBooleanValue("isVideoOnDemandEnabled", this.getIsVideoOnDemandEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
      * @param value Value to set for the allowedAudience property.
      */
     public void setAllowedAudience(@jakarta.annotation.Nullable final BroadcastMeetingAudience value) {
-        this.allowedAudience = value;
+        this.getBackingStore().set("allowedAudience", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the captions property value. Caption settings of a Teams live event.
      * @param value Value to set for the captions property.
      */
     public void setCaptions(@jakarta.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
-        this.captions = value;
+        this.getBackingStore().set("captions", value);
     }
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isAttendeeReportEnabled property.
      */
     public void setIsAttendeeReportEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAttendeeReportEnabled = value;
+        this.getBackingStore().set("isAttendeeReportEnabled", value);
     }
     /**
      * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isQuestionAndAnswerEnabled property.
      */
     public void setIsQuestionAndAnswerEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isQuestionAndAnswerEnabled = value;
+        this.getBackingStore().set("isQuestionAndAnswerEnabled", value);
     }
     /**
      * Sets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isRecordingEnabled property.
      */
     public void setIsRecordingEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRecordingEnabled = value;
+        this.getBackingStore().set("isRecordingEnabled", value);
     }
     /**
      * Sets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isVideoOnDemandEnabled property.
      */
     public void setIsVideoOnDemandEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isVideoOnDemandEnabled = value;
+        this.getBackingStore().set("isVideoOnDemandEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv6CidrRange extends IpRange implements Parsable {
     /**
-     * IPv6 address in CIDR notation. Not nullable.
-     */
-    private String cidrAddress;
-    /**
      * Instantiates a new IPv6CidrRange and sets the default values.
      */
     public IPv6CidrRange() {
@@ -35,7 +31,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCidrAddress() {
-        return this.cidrAddress;
+        return this.getBackingStore().get("cidrAddress");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      * @param value Value to set for the cidrAddress property.
      */
     public void setCidrAddress(@jakarta.annotation.Nullable final String value) {
-        this.cidrAddress = value;
+        this.getBackingStore().set("cidrAddress", value);
     }
 }

@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
-     */
-    private Boolean useDeviceContext;
-    /**
      * Instantiates a new WindowsUniversalAppXAppAssignmentSettings and sets the default values.
      */
     public WindowsUniversalAppXAppAssignmentSettings() {
@@ -48,7 +44,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this.useDeviceContext;
+        return this.getBackingStore().get("useDeviceContext");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceContext = value;
+        this.getBackingStore().set("useDeviceContext", value);
     }
 }

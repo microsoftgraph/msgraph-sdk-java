@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthoredNote extends Entity implements Parsable {
     /**
-     * Identity information about the note's author.
-     */
-    private Identity author;
-    /**
-     * The content of the note.
-     */
-    private ItemBody content;
-    /**
-     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
      * Instantiates a new AuthoredNote and sets the default values.
      */
     public AuthoredNote() {
@@ -43,7 +31,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getAuthor() {
-        return this.author;
+        return this.getBackingStore().get("author");
     }
     /**
      * Gets the content property value. The content of the note.
@@ -51,7 +39,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getContent() {
-        return this.content;
+        return this.getBackingStore().get("content");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -59,7 +47,7 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.getBackingStore().get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the author property.
      */
     public void setAuthor(@jakarta.annotation.Nullable final Identity value) {
-        this.author = value;
+        this.getBackingStore().set("author", value);
     }
     /**
      * Sets the content property value. The content of the note.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final ItemBody value) {
-        this.content = value;
+        this.getBackingStore().set("content", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.getBackingStore().set("createdDateTime", value);
     }
 }

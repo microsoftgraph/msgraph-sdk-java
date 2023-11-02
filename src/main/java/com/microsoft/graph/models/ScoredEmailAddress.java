@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
+public class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The email address.
-     */
-    private String address;
-    /**
-     * The itemId property
-     */
-    private String itemId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
-     */
-    private Double relevanceScore;
-    /**
-     * The selectionLikelihood property
-     */
-    private SelectionLikelihoodInfo selectionLikelihood;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ScoredEmailAddress and sets the default values.
      */
     public ScoredEmailAddress() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,12 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The email address.
@@ -63,7 +52,15 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.getBackingStore().get("address");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
-        return this.itemId;
+        return this.getBackingStore().get("itemId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +90,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
@@ -101,7 +98,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getRelevanceScore() {
-        return this.relevanceScore;
+        return this.getBackingStore().get("relevanceScore");
     }
     /**
      * Gets the selectionLikelihood property value. The selectionLikelihood property
@@ -109,7 +106,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public SelectionLikelihoodInfo getSelectionLikelihood() {
-        return this.selectionLikelihood;
+        return this.getBackingStore().get("selectionLikelihood");
     }
     /**
      * Serializes information the current object
@@ -122,48 +119,54 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeDoubleValue("relevanceScore", this.getRelevanceScore());
         writer.writeEnumValue("selectionLikelihood", this.getSelectionLikelihood());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
     }
     /**
      * Sets the address property value. The email address.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.getBackingStore().set("address", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the itemId property value. The itemId property
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
-        this.itemId = value;
+        this.getBackingStore().set("itemId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
      * @param value Value to set for the relevanceScore property.
      */
     public void setRelevanceScore(@jakarta.annotation.Nullable final Double value) {
-        this.relevanceScore = value;
+        this.getBackingStore().set("relevanceScore", value);
     }
     /**
      * Sets the selectionLikelihood property value. The selectionLikelihood property
      * @param value Value to set for the selectionLikelihood property.
      */
     public void setSelectionLikelihood(@jakarta.annotation.Nullable final SelectionLikelihoodInfo value) {
-        this.selectionLikelihood = value;
+        this.getBackingStore().set("selectionLikelihood", value);
     }
 }

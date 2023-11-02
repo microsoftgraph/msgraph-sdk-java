@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder, Parsable {
+public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
+     * Stores model information.
      */
-    private CrossTenantAccessPolicyTargetConfigurationAccessType accessType;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies whether to target users, groups, or applications with this rule.
-     */
-    private java.util.List<CrossTenantAccessPolicyTarget> targets;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CrossTenantAccessPolicyTargetConfiguration and sets the default values.
      */
     public CrossTenantAccessPolicyTargetConfiguration() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfigurationAccessType getAccessType() {
-        return this.accessType;
+        return this.getBackingStore().get("accessType");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,7 +47,20 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +80,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the targets property value. Specifies whether to target users, groups, or applications with this rule.
@@ -83,7 +88,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyTarget> getTargets() {
-        return this.targets;
+        return this.getBackingStore().get("targets");
     }
     /**
      * Serializes information the current object
@@ -94,34 +99,40 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
         writer.writeEnumValue("accessType", this.getAccessType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("targets", this.getTargets());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the accessType property value. Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
      * @param value Value to set for the accessType property.
      */
     public void setAccessType(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetConfigurationAccessType value) {
-        this.accessType = value;
+        this.getBackingStore().set("accessType", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the targets property value. Specifies whether to target users, groups, or applications with this rule.
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyTarget> value) {
-        this.targets = value;
+        this.getBackingStore().set("targets", value);
     }
 }

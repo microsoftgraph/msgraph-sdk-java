@@ -12,42 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity implements Parsable {
     /**
-     * The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudIdentityScore;
-    /**
-     * The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudManagementScore;
-    /**
-     * The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudProvisioningScore;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String manufacturer;
-    /**
-     * The model name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String model;
-    /**
-     * The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer modelDeviceCount;
-    /**
-     * The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double windowsScore;
-    /**
-     * The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double workFromAnywhereScore;
-    /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformance and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
@@ -69,7 +33,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Double getCloudIdentityScore() {
-        return this.cloudIdentityScore;
+        return this.getBackingStore().get("cloudIdentityScore");
     }
     /**
      * Gets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -77,7 +41,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Double getCloudManagementScore() {
-        return this.cloudManagementScore;
+        return this.getBackingStore().get("cloudManagementScore");
     }
     /**
      * Gets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -85,7 +49,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Double getCloudProvisioningScore() {
-        return this.cloudProvisioningScore;
+        return this.getBackingStore().get("cloudProvisioningScore");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +75,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.getBackingStore().get("healthStatus");
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
@@ -119,7 +83,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.getBackingStore().get("manufacturer");
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
@@ -127,7 +91,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.getBackingStore().get("model");
     }
     /**
      * Gets the modelDeviceCount property value. The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -135,7 +99,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Integer getModelDeviceCount() {
-        return this.modelDeviceCount;
+        return this.getBackingStore().get("modelDeviceCount");
     }
     /**
      * Gets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -143,7 +107,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Double getWindowsScore() {
-        return this.windowsScore;
+        return this.getBackingStore().get("windowsScore");
     }
     /**
      * Gets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -151,7 +115,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
-        return this.workFromAnywhereScore;
+        return this.getBackingStore().get("workFromAnywhereScore");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the cloudIdentityScore property.
      */
     public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudIdentityScore = value;
+        this.getBackingStore().set("cloudIdentityScore", value);
     }
     /**
      * Sets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
      */
     public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudManagementScore = value;
+        this.getBackingStore().set("cloudManagementScore", value);
     }
     /**
      * Sets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
      */
     public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudProvisioningScore = value;
+        this.getBackingStore().set("cloudProvisioningScore", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.getBackingStore().set("healthStatus", value);
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.getBackingStore().set("manufacturer", value);
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.getBackingStore().set("model", value);
     }
     /**
      * Sets the modelDeviceCount property value. The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the modelDeviceCount property.
      */
     public void setModelDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.modelDeviceCount = value;
+        this.getBackingStore().set("modelDeviceCount", value);
     }
     /**
      * Sets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
      */
     public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
-        this.windowsScore = value;
+        this.getBackingStore().set("windowsScore", value);
     }
     /**
      * Sets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      */
     public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
-        this.workFromAnywhereScore = value;
+        this.getBackingStore().set("workFromAnywhereScore", value);
     }
 }

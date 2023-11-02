@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /**
-     * The authenticationMode property
-     */
-    private MicrosoftAuthenticatorAuthenticationMode authenticationMode;
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
@@ -34,7 +30,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMode getAuthenticationMode() {
-        return this.authenticationMode;
+        return this.getBackingStore().get("authenticationMode");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * @param value Value to set for the authenticationMode property.
      */
     public void setAuthenticationMode(@jakarta.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
-        this.authenticationMode = value;
+        this.getBackingStore().set("authenticationMode", value);
     }
 }

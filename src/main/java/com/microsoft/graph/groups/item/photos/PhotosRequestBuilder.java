@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.photos;
 
-import com.microsoft.graph.groups.item.photos.count.CountRequestBuilder;
 import com.microsoft.graph.groups.item.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProfilePhotoCollectionResponse;
@@ -23,13 +22,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to count the resources in the collection.
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the photos property of the microsoft.graph.group entity.
      * @param profilePhotoId The unique identifier of profilePhoto
      * @return a ProfilePhotoItemRequestBuilder
@@ -47,7 +39,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PhotosRequestBuilder and sets the default values.
@@ -55,7 +47,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", rawUrl);
     }
     /**
      * Retrieve a list of profilePhoto objects. This API is available in the following national cloud deployments.
@@ -106,7 +98,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -124,12 +116,6 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
-        /**
-         * Include count of items
-         */
-        @QueryParameter(name = "%24count")
-        @jakarta.annotation.Nullable
-        public Boolean count;
         /**
          * Filter items by property values
          */

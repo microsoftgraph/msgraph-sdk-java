@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implements Parsable {
     /**
-     * List of answer choices.
-     */
-    private java.util.List<AccessPackageAnswerChoice> choices;
-    /**
-     * Indicates whether requestor can select multiple choices as their answer.
-     */
-    private Boolean isMultipleSelectionAllowed;
-    /**
      * Instantiates a new AccessPackageMultipleChoiceQuestion and sets the default values.
      */
     public AccessPackageMultipleChoiceQuestion() {
@@ -39,7 +31,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswerChoice> getChoices() {
-        return this.choices;
+        return this.getBackingStore().get("choices");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMultipleSelectionAllowed() {
-        return this.isMultipleSelectionAllowed;
+        return this.getBackingStore().get("isMultipleSelectionAllowed");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param value Value to set for the choices property.
      */
     public void setChoices(@jakarta.annotation.Nullable final java.util.List<AccessPackageAnswerChoice> value) {
-        this.choices = value;
+        this.getBackingStore().set("choices", value);
     }
     /**
      * Sets the isMultipleSelectionAllowed property value. Indicates whether requestor can select multiple choices as their answer.
      * @param value Value to set for the isMultipleSelectionAllowed property.
      */
     public void setIsMultipleSelectionAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isMultipleSelectionAllowed = value;
+        this.getBackingStore().set("isMultipleSelectionAllowed", value);
     }
 }

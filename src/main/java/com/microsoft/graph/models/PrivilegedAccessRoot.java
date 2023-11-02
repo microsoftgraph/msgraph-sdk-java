@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessRoot extends Entity implements Parsable {
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
-     */
-    private PrivilegedAccessGroup group;
-    /**
      * Instantiates a new PrivilegedAccessRoot and sets the default values.
      */
     public PrivilegedAccessRoot() {
@@ -44,7 +40,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroup getGroup() {
-        return this.group;
+        return this.getBackingStore().get("group");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final PrivilegedAccessGroup value) {
-        this.group = value;
+        this.getBackingStore().set("group", value);
     }
 }

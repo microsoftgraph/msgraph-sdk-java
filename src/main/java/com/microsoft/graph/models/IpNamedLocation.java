@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
-     * List of IP address ranges in IPv4 CIDR format (for example, 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
-     */
-    private java.util.List<IpRange> ipRanges;
-    /**
-     * true if this location is explicitly trusted. Optional. Default value is false.
-     */
-    private Boolean isTrusted;
-    /**
      * Instantiates a new IpNamedLocation and sets the default values.
      */
     public IpNamedLocation() {
@@ -49,7 +41,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getIpRanges() {
-        return this.ipRanges;
+        return this.getBackingStore().get("ipRanges");
     }
     /**
      * Gets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
@@ -57,7 +49,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrusted() {
-        return this.isTrusted;
+        return this.getBackingStore().get("isTrusted");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the ipRanges property.
      */
     public void setIpRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
-        this.ipRanges = value;
+        this.getBackingStore().set("ipRanges", value);
     }
     /**
      * Sets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
      * @param value Value to set for the isTrusted property.
      */
     public void setIsTrusted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTrusted = value;
+        this.getBackingStore().set("isTrusted", value);
     }
 }

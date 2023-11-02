@@ -13,22 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Active Hours End (active hours mean the time window when updates install should not happen)
-     */
-    private LocalTime activeHoursEnd;
-    /**
-     * Active Hours Start (active hours mean the time window when updates install should not happen)
-     */
-    private LocalTime activeHoursStart;
-    /**
-     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     */
-    private java.util.List<DayOfWeek> scheduledInstallDays;
-    /**
-     * UTC Time Offset indicated in minutes
-     */
-    private Integer utcTimeOffsetInMinutes;
-    /**
      * Instantiates a new IosUpdateConfiguration and sets the default values.
      */
     public IosUpdateConfiguration() {
@@ -51,7 +35,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
-        return this.activeHoursEnd;
+        return this.getBackingStore().get("activeHoursEnd");
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
@@ -59,7 +43,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @jakarta.annotation.Nullable
     public LocalTime getActiveHoursStart() {
-        return this.activeHoursStart;
+        return this.getBackingStore().get("activeHoursStart");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +64,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<DayOfWeek> getScheduledInstallDays() {
-        return this.scheduledInstallDays;
+        return this.getBackingStore().get("scheduledInstallDays");
     }
     /**
      * Gets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
@@ -88,7 +72,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getUtcTimeOffsetInMinutes() {
-        return this.utcTimeOffsetInMinutes;
+        return this.getBackingStore().get("utcTimeOffsetInMinutes");
     }
     /**
      * Serializes information the current object
@@ -107,27 +91,27 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the activeHoursEnd property.
      */
     public void setActiveHoursEnd(@jakarta.annotation.Nullable final LocalTime value) {
-        this.activeHoursEnd = value;
+        this.getBackingStore().set("activeHoursEnd", value);
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
      * @param value Value to set for the activeHoursStart property.
      */
     public void setActiveHoursStart(@jakarta.annotation.Nullable final LocalTime value) {
-        this.activeHoursStart = value;
+        this.getBackingStore().set("activeHoursStart", value);
     }
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      * @param value Value to set for the scheduledInstallDays property.
      */
     public void setScheduledInstallDays(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
-        this.scheduledInstallDays = value;
+        this.getBackingStore().set("scheduledInstallDays", value);
     }
     /**
      * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
      * @param value Value to set for the utcTimeOffsetInMinutes property.
      */
     public void setUtcTimeOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.utcTimeOffsetInMinutes = value;
+        this.getBackingStore().set("utcTimeOffsetInMinutes", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,35 +14,16 @@ import java.util.Objects;
  * The user experience analytics insight is the recomendation to improve the user experience analytics score.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Parsable {
+public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The unique identifier of the user experience analytics insight.
-     */
-    private String insightId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
-     */
-    private UserExperienceAnalyticsInsightSeverity severity;
-    /**
-     * The unique identifier of the user experience analytics metric.
-     */
-    private String userExperienceAnalyticsMetricId;
-    /**
-     * The value of the user experience analytics insight.
-     */
-    private java.util.List<UserExperienceAnalyticsInsightValue> values;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserExperienceAnalyticsInsight and sets the default values.
      */
     public UserExperienceAnalyticsInsight() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +42,20 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +77,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getInsightId() {
-        return this.insightId;
+        return this.getBackingStore().get("insightId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +85,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.getBackingStore().get("odataType");
     }
     /**
      * Gets the severity property value. Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
@@ -96,7 +93,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsInsightSeverity getSeverity() {
-        return this.severity;
+        return this.getBackingStore().get("severity");
     }
     /**
      * Gets the userExperienceAnalyticsMetricId property value. The unique identifier of the user experience analytics metric.
@@ -104,7 +101,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public String getUserExperienceAnalyticsMetricId() {
-        return this.userExperienceAnalyticsMetricId;
+        return this.getBackingStore().get("userExperienceAnalyticsMetricId");
     }
     /**
      * Gets the values property value. The value of the user experience analytics insight.
@@ -112,7 +109,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsightValue> getValues() {
-        return this.values;
+        return this.getBackingStore().get("values");
     }
     /**
      * Serializes information the current object
@@ -125,48 +122,54 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeStringValue("userExperienceAnalyticsMetricId", this.getUserExperienceAnalyticsMetricId());
         writer.writeCollectionOfObjectValues("values", this.getValues());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.getBackingStore().set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(final BackingStore value) {
+        this.getBackingStore().set("BackingStore", value);
     }
     /**
      * Sets the insightId property value. The unique identifier of the user experience analytics insight.
      * @param value Value to set for the insightId property.
      */
     public void setInsightId(@jakarta.annotation.Nullable final String value) {
-        this.insightId = value;
+        this.getBackingStore().set("insightId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.getBackingStore().set("odataType", value);
     }
     /**
      * Sets the severity property value. Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final UserExperienceAnalyticsInsightSeverity value) {
-        this.severity = value;
+        this.getBackingStore().set("severity", value);
     }
     /**
      * Sets the userExperienceAnalyticsMetricId property value. The unique identifier of the user experience analytics metric.
      * @param value Value to set for the userExperienceAnalyticsMetricId property.
      */
     public void setUserExperienceAnalyticsMetricId(@jakarta.annotation.Nullable final String value) {
-        this.userExperienceAnalyticsMetricId = value;
+        this.getBackingStore().set("userExperienceAnalyticsMetricId", value);
     }
     /**
      * Sets the values property value. The value of the user experience analytics insight.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsightValue> value) {
-        this.values = value;
+        this.getBackingStore().set("values", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
-     * Sheet protection options. Read-only.
-     */
-    private WorkbookWorksheetProtectionOptions options;
-    /**
-     * Indicates if the worksheet is protected.  Read-only.
-     */
-    private Boolean protectedEscaped;
-    /**
      * Instantiates a new WorkbookWorksheetProtection and sets the default values.
      */
     public WorkbookWorksheetProtection() {
@@ -49,7 +41,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetProtectionOptions getOptions() {
-        return this.options;
+        return this.getBackingStore().get("options");
     }
     /**
      * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
@@ -57,7 +49,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getProtected() {
-        return this.protectedEscaped;
+        return this.getBackingStore().get("protected");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param value Value to set for the options property.
      */
     public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
-        this.options = value;
+        this.getBackingStore().set("options", value);
     }
     /**
      * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
      * @param value Value to set for the protected property.
      */
     public void setProtected(@jakarta.annotation.Nullable final Boolean value) {
-        this.protectedEscaped = value;
+        this.getBackingStore().set("protected", value);
     }
 }
