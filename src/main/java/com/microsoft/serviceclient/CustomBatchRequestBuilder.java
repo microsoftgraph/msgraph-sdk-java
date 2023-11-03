@@ -1,4 +1,4 @@
-package com.microsoft.serviceClient;
+package com.microsoft.serviceclient;
 
 import com.microsoft.graph.content.BatchRequestContent;
 import com.microsoft.graph.content.BatchRequestContentCollection;
