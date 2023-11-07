@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Parsable {
     /**
-     * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      */
     private String accessContainerId;
     /**
@@ -42,7 +42,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
         return new DelegatedAdminAccessContainer();
     }
     /**
-     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
+     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
      * @param value Value to set for the accessContainerId property.
      */
     public void setAccessContainerId(@jakarta.annotation.Nullable final String value) {

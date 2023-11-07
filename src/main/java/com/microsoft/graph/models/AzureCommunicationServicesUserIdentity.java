@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserIdentity extends Identity implements Parsable {
     /**
-     * The azureCommunicationServicesResourceId property
+     * The Azure Communication Services resource ID associated with the user.
      */
     private String azureCommunicationServicesResourceId;
     /**
@@ -30,7 +30,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
         return new AzureCommunicationServicesUserIdentity();
     }
     /**
-     * Gets the azureCommunicationServicesResourceId property value. The azureCommunicationServicesResourceId property
+     * Gets the azureCommunicationServicesResourceId property value. The Azure Communication Services resource ID associated with the user.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
         writer.writeStringValue("azureCommunicationServicesResourceId", this.getAzureCommunicationServicesResourceId());
     }
     /**
-     * Sets the azureCommunicationServicesResourceId property value. The azureCommunicationServicesResourceId property
+     * Sets the azureCommunicationServicesResourceId property value. The Azure Communication Services resource ID associated with the user.
      * @param value Value to set for the azureCommunicationServicesResourceId property.
      */
     public void setAzureCommunicationServicesResourceId(@jakarta.annotation.Nullable final String value) {

@@ -83,6 +83,7 @@ public class GetOneDriveUsageAccountDetailWithPeriodRequestBuilder extends BaseR
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json, application/json");
         return requestInfo;
     }
     /**

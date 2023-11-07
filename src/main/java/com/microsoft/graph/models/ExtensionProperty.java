@@ -17,7 +17,11 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     private String dataType;
     /**
-     * Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * The isMultiValued property
+     */
+    private Boolean isMultiValued;
+    /**
+     * Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      */
     private Boolean isSyncedFromOnPremises;
     /**
@@ -70,13 +74,22 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("dataType", (n) -> { this.setDataType(n.getStringValue()); });
+        deserializerMap.put("isMultiValued", (n) -> { this.setIsMultiValued(n.getBooleanValue()); });
         deserializerMap.put("isSyncedFromOnPremises", (n) -> { this.setIsSyncedFromOnPremises(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("targetObjects", (n) -> { this.setTargetObjects(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
-     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Gets the isMultiValued property value. The isMultiValued property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMultiValued() {
+        return this.isMultiValued;
+    }
+    /**
+     * Gets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -108,6 +121,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("dataType", this.getDataType());
+        writer.writeBooleanValue("isMultiValued", this.getIsMultiValued());
         writer.writeBooleanValue("isSyncedFromOnPremises", this.getIsSyncedFromOnPremises());
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfPrimitiveValues("targetObjects", this.getTargetObjects());
@@ -127,7 +141,14 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this.dataType = value;
     }
     /**
-     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
+     * Sets the isMultiValued property value. The isMultiValued property
+     * @param value Value to set for the isMultiValued property.
+     */
+    public void setIsMultiValued(@jakarta.annotation.Nullable final Boolean value) {
+        this.isMultiValued = value;
+    }
+    /**
+     * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Microsoft Entra Connect. Read-only.
      * @param value Value to set for the isSyncedFromOnPremises property.
      */
     public void setIsSyncedFromOnPremises(@jakarta.annotation.Nullable final Boolean value) {

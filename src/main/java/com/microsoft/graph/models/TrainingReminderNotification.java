@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingReminderNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * The deliveryFrequency property
+     * Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      */
     private NotificationDeliveryFrequency deliveryFrequency;
     /**
@@ -30,7 +30,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
         return new TrainingReminderNotification();
     }
     /**
-     * Gets the deliveryFrequency property value. The deliveryFrequency property
+     * Gets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      * @return a NotificationDeliveryFrequency
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
         writer.writeEnumValue("deliveryFrequency", this.getDeliveryFrequency());
     }
     /**
-     * Sets the deliveryFrequency property value. The deliveryFrequency property
+     * Sets the deliveryFrequency property value. Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      * @param value Value to set for the deliveryFrequency property.
      */
     public void setDeliveryFrequency(@jakarta.annotation.Nullable final NotificationDeliveryFrequency value) {

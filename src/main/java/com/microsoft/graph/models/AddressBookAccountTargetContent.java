@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddressBookAccountTargetContent extends AccountTargetContent implements Parsable {
     /**
-     * The accountTargetEmails property
+     * List of user emails targeted for an attack simulation training campaign.
      */
     private java.util.List<String> accountTargetEmails;
     /**
@@ -30,7 +30,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
         return new AddressBookAccountTargetContent();
     }
     /**
-     * Gets the accountTargetEmails property value. The accountTargetEmails property
+     * Gets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
         writer.writeCollectionOfPrimitiveValues("accountTargetEmails", this.getAccountTargetEmails());
     }
     /**
-     * Sets the accountTargetEmails property value. The accountTargetEmails property
+     * Sets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @param value Value to set for the accountTargetEmails property.
      */
     public void setAccountTargetEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {

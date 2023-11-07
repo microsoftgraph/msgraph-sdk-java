@@ -5,6 +5,7 @@ import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.recordings.RecordingsRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -44,6 +45,13 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RecordingsRequestBuilder recordings() {
+        return new RecordingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
@@ -163,6 +171,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -191,7 +200,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -222,7 +231,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

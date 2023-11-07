@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
     private java.util.List<HostPair> childHostPairs;
     /**
@@ -45,6 +45,10 @@ public class Host extends Artifact implements Parsable {
      * Reverse passive DNS retrieval about this host.
      */
     private java.util.List<PassiveDnsRecord> passiveDnsReverse;
+    /**
+     * The hostPorts associated with a host.
+     */
+    private java.util.List<HostPort> ports;
     /**
      * Represents a calculated reputation of this host.
      */
@@ -91,7 +95,7 @@ public class Host extends Artifact implements Parsable {
         return new Host();
     }
     /**
-     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
@@ -130,6 +134,7 @@ public class Host extends Artifact implements Parsable {
         deserializerMap.put("parentHostPairs", (n) -> { this.setParentHostPairs(n.getCollectionOfObjectValues(HostPair::createFromDiscriminatorValue)); });
         deserializerMap.put("passiveDns", (n) -> { this.setPassiveDns(n.getCollectionOfObjectValues(PassiveDnsRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("passiveDnsReverse", (n) -> { this.setPassiveDnsReverse(n.getCollectionOfObjectValues(PassiveDnsRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("ports", (n) -> { this.setPorts(n.getCollectionOfObjectValues(HostPort::createFromDiscriminatorValue)); });
         deserializerMap.put("reputation", (n) -> { this.setReputation(n.getObjectValue(HostReputation::createFromDiscriminatorValue)); });
         deserializerMap.put("sslCertificates", (n) -> { this.setSslCertificates(n.getCollectionOfObjectValues(HostSslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("subdomains", (n) -> { this.setSubdomains(n.getCollectionOfObjectValues(Subdomain::createFromDiscriminatorValue)); });
@@ -184,6 +189,14 @@ public class Host extends Artifact implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
         return this.passiveDnsReverse;
+    }
+    /**
+     * Gets the ports property value. The hostPorts associated with a host.
+     * @return a java.util.List<HostPort>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HostPort> getPorts() {
+        return this.ports;
     }
     /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
@@ -241,6 +254,7 @@ public class Host extends Artifact implements Parsable {
         writer.writeCollectionOfObjectValues("parentHostPairs", this.getParentHostPairs());
         writer.writeCollectionOfObjectValues("passiveDns", this.getPassiveDns());
         writer.writeCollectionOfObjectValues("passiveDnsReverse", this.getPassiveDnsReverse());
+        writer.writeCollectionOfObjectValues("ports", this.getPorts());
         writer.writeObjectValue("reputation", this.getReputation());
         writer.writeCollectionOfObjectValues("sslCertificates", this.getSslCertificates());
         writer.writeCollectionOfObjectValues("subdomains", this.getSubdomains());
@@ -248,7 +262,7 @@ public class Host extends Artifact implements Parsable {
         writer.writeObjectValue("whois", this.getWhois());
     }
     /**
-     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param value Value to set for the childHostPairs property.
      */
     public void setChildHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
@@ -309,6 +323,13 @@ public class Host extends Artifact implements Parsable {
      */
     public void setPassiveDnsReverse(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsReverse = value;
+    }
+    /**
+     * Sets the ports property value. The hostPorts associated with a host.
+     * @param value Value to set for the ports property.
+     */
+    public void setPorts(@jakarta.annotation.Nullable final java.util.List<HostPort> value) {
+        this.ports = value;
     }
     /**
      * Sets the reputation property value. Represents a calculated reputation of this host.

@@ -14,11 +14,11 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The coachmarks property
+     * Payload coachmark details.
      */
     private java.util.List<PayloadCoachmark> coachmarks;
     /**
-     * The content property
+     * Payload content details.
      */
     private String content;
     /**
@@ -26,7 +26,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The phishingUrl property
+     * The phishing URL used to target a user.
      */
     private String phishingUrl;
     /**
@@ -61,7 +61,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the coachmarks property value. The coachmarks property
+     * Gets the coachmarks property value. Payload coachmark details.
      * @return a java.util.List<PayloadCoachmark>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         return this.coachmarks;
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Payload content details.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the phishingUrl property value. The phishingUrl property
+     * Gets the phishingUrl property value. The phishing URL used to target a user.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the coachmarks property value. The coachmarks property
+     * Sets the coachmarks property value. Payload coachmark details.
      * @param value Value to set for the coachmarks property.
      */
     public void setCoachmarks(@jakarta.annotation.Nullable final java.util.List<PayloadCoachmark> value) {
         this.coachmarks = value;
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Payload content details.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
@@ -146,7 +146,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the phishingUrl property value. The phishingUrl property
+     * Sets the phishingUrl property value. The phishing URL used to target a user.
      * @param value Value to set for the phishingUrl property.
      */
     public void setPhishingUrl(@jakarta.annotation.Nullable final String value) {

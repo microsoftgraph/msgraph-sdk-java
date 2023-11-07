@@ -45,17 +45,19 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a CompletableFuture of PeopleAdminSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PeopleAdminSettings> get() {
         return get(null);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PeopleAdminSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PeopleAdminSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PeopleAdminSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +117,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -146,7 +148,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -161,7 +163,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return new PeopleRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

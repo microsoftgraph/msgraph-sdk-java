@@ -98,6 +98,10 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private Boolean recordAutomatically;
     /**
+     * The recordings property
+     */
+    private java.util.List<CallRecording> recordings;
+    /**
      * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
      */
     private MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
@@ -278,6 +282,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
         deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("recordings", (n) -> { this.setRecordings(n.getCollectionOfObjectValues(CallRecording::createFromDiscriminatorValue)); });
         deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode.class)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
@@ -349,6 +354,14 @@ public class OnlineMeeting extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getRecordAutomatically() {
         return this.recordAutomatically;
+    }
+    /**
+     * Gets the recordings property value. The recordings property
+     * @return a java.util.List<CallRecording>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CallRecording> getRecordings() {
+        return this.recordings;
     }
     /**
      * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
@@ -427,6 +440,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeObjectValue("lobbyBypassSettings", this.getLobbyBypassSettings());
         writer.writeObjectValue("participants", this.getParticipants());
         writer.writeBooleanValue("recordAutomatically", this.getRecordAutomatically());
+        writer.writeCollectionOfObjectValues("recordings", this.getRecordings());
         writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("subject", this.getSubject());
@@ -587,6 +601,13 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     public void setRecordAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.recordAutomatically = value;
+    }
+    /**
+     * Sets the recordings property value. The recordings property
+     * @param value Value to set for the recordings property.
+     */
+    public void setRecordings(@jakarta.annotation.Nullable final java.util.List<CallRecording> value) {
+        this.recordings = value;
     }
     /**
      * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.

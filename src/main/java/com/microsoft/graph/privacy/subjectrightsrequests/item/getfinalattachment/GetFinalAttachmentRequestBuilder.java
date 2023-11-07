@@ -93,6 +93,7 @@ public class GetFinalAttachmentRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json, application/json");
         return requestInfo;
     }
     /**

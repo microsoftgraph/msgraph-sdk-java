@@ -9,35 +9,35 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     /**
-     * The applicationInstance property
+     * The application instance associated with this action.
      */
     private Identity applicationInstance;
     /**
-     * The assertedIdentity property
+     * An identity the participant would like to present itself as to the other participants in the call.
      */
     private Identity assertedIdentity;
     /**
-     * The azureCommunicationServicesUser property
+     * The Azure Communication Services user associated with this action.
      */
     private Identity azureCommunicationServicesUser;
     /**
-     * The encrypted property
+     * The encrypted user associated with this action.
      */
     private Identity encrypted;
     /**
-     * The endpointType property
+     * Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      */
     private EndpointType endpointType;
     /**
-     * The guest property
+     * The guest user associated with this action.
      */
     private Identity guest;
     /**
-     * The onPremises property
+     * The Skype for Business on-premises user associated with this action.
      */
     private Identity onPremises;
     /**
-     * The phone property
+     * The phone user associated with this action.
      */
     private Identity phone;
     /**
@@ -58,7 +58,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return new CommunicationsIdentitySet();
     }
     /**
-     * Gets the applicationInstance property value. The applicationInstance property
+     * Gets the applicationInstance property value. The application instance associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.applicationInstance;
     }
     /**
-     * Gets the assertedIdentity property value. The assertedIdentity property
+     * Gets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.assertedIdentity;
     }
     /**
-     * Gets the azureCommunicationServicesUser property value. The azureCommunicationServicesUser property
+     * Gets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.azureCommunicationServicesUser;
     }
     /**
-     * Gets the encrypted property value. The encrypted property
+     * Gets the encrypted property value. The encrypted user associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.encrypted;
     }
     /**
-     * Gets the endpointType property value. The endpointType property
+     * Gets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      * @return a EndpointType
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the guest property value. The guest property
+     * Gets the guest property value. The guest user associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.guest;
     }
     /**
-     * Gets the onPremises property value. The onPremises property
+     * Gets the onPremises property value. The Skype for Business on-premises user associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.onPremises;
     }
     /**
-     * Gets the phone property value. The phone property
+     * Gets the phone property value. The phone user associated with this action.
      * @return a Identity
      */
     @jakarta.annotation.Nullable
@@ -155,56 +155,56 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         writer.writeObjectValue("phone", this.getPhone());
     }
     /**
-     * Sets the applicationInstance property value. The applicationInstance property
+     * Sets the applicationInstance property value. The application instance associated with this action.
      * @param value Value to set for the applicationInstance property.
      */
     public void setApplicationInstance(@jakarta.annotation.Nullable final Identity value) {
         this.applicationInstance = value;
     }
     /**
-     * Sets the assertedIdentity property value. The assertedIdentity property
+     * Sets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @param value Value to set for the assertedIdentity property.
      */
     public void setAssertedIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.assertedIdentity = value;
     }
     /**
-     * Sets the azureCommunicationServicesUser property value. The azureCommunicationServicesUser property
+     * Sets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @param value Value to set for the azureCommunicationServicesUser property.
      */
     public void setAzureCommunicationServicesUser(@jakarta.annotation.Nullable final Identity value) {
         this.azureCommunicationServicesUser = value;
     }
     /**
-     * Sets the encrypted property value. The encrypted property
+     * Sets the encrypted property value. The encrypted user associated with this action.
      * @param value Value to set for the encrypted property.
      */
     public void setEncrypted(@jakarta.annotation.Nullable final Identity value) {
         this.encrypted = value;
     }
     /**
-     * Sets the endpointType property value. The endpointType property
+     * Sets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      * @param value Value to set for the endpointType property.
      */
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
         this.endpointType = value;
     }
     /**
-     * Sets the guest property value. The guest property
+     * Sets the guest property value. The guest user associated with this action.
      * @param value Value to set for the guest property.
      */
     public void setGuest(@jakarta.annotation.Nullable final Identity value) {
         this.guest = value;
     }
     /**
-     * Sets the onPremises property value. The onPremises property
+     * Sets the onPremises property value. The Skype for Business on-premises user associated with this action.
      * @param value Value to set for the onPremises property.
      */
     public void setOnPremises(@jakarta.annotation.Nullable final Identity value) {
         this.onPremises = value;
     }
     /**
-     * Sets the phone property value. The phone property
+     * Sets the phone property value. The phone user associated with this action.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final Identity value) {

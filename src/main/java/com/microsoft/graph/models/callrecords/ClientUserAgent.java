@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientUserAgent extends UserAgent implements Parsable {
     /**
-     * The unique identifier of the Azure AD application used by this endpoint.
+     * The unique identifier of the Microsoft Entra application used by this endpoint.
      */
     private String azureADAppId;
     /**
@@ -42,7 +42,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         return new ClientUserAgent();
     }
     /**
-     * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     * Gets the azureADAppId property value. The unique identifier of the Microsoft Entra application used by this endpoint.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         writer.writeEnumValue("productFamily", this.getProductFamily());
     }
     /**
-     * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
+     * Sets the azureADAppId property value. The unique identifier of the Microsoft Entra application used by this endpoint.
      * @param value Value to set for the azureADAppId property.
      */
     public void setAzureADAppId(@jakarta.annotation.Nullable final String value) {

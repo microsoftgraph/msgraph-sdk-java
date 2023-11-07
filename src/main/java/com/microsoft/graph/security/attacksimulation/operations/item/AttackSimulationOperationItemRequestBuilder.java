@@ -56,17 +56,19 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a CompletableFuture of AttackSimulationOperation
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> get() {
         return get(null);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttackSimulationOperation
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -125,10 +127,11 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +139,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +156,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -184,7 +187,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -205,7 +208,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get operations from security
+     * Get an attack simulation operation to track a long-running operation request for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

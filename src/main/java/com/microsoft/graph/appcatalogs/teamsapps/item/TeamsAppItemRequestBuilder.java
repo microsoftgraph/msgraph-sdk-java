@@ -45,7 +45,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -111,7 +111,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * This API is available in the following national cloud deployments.
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -135,6 +135,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -163,7 +164,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -194,7 +195,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

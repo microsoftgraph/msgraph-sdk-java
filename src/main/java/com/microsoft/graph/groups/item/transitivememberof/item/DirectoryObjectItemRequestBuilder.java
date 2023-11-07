@@ -53,7 +53,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/transitiveMemberOf/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObject
      */
@@ -74,7 +74,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +82,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,7 +99,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -113,7 +113,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

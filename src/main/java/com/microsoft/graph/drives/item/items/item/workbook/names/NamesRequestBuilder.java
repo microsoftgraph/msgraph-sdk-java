@@ -77,7 +77,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get() {
@@ -87,7 +87,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of nameditem objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -147,7 +147,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -178,7 +178,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

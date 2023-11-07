@@ -82,7 +82,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private String officeLocation;
     /**
-     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      */
     private EducationOnPremisesInfo onPremisesInfo;
     /**
@@ -369,7 +369,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.officeLocation;
     }
     /**
-     * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Gets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      * @return a EducationOnPremisesInfo
      */
     @jakarta.annotation.Nullable
@@ -701,7 +701,7 @@ public class EducationUser extends Entity implements Parsable {
         this.officeLocation = value;
     }
     /**
-     * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Sets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      * @param value Value to set for the onPremisesInfo property.
      */
     public void setOnPremisesInfo(@jakarta.annotation.Nullable final EducationOnPremisesInfo value) {

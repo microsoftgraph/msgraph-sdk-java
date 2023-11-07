@@ -138,7 +138,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @return a CompletableFuture of Workbook
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Workbook
      */
@@ -227,10 +227,11 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -238,7 +239,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -255,7 +256,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -286,7 +287,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -307,7 +308,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

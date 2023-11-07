@@ -37,7 +37,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}/payload{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @return a CompletableFuture of Payload
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Payload
      */
@@ -58,7 +58,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -83,7 +83,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -97,7 +97,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return new PayloadRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

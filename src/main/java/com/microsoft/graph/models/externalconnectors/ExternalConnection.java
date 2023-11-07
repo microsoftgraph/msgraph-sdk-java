@@ -18,6 +18,10 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     private Configuration configuration;
     /**
+     * The Teams app ID. Optional.
+     */
+    private String connectorId;
+    /**
      * Description of the connection displayed in the Microsoft 365 admin center. Optional.
      */
     private String description;
@@ -82,6 +86,14 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.configuration;
     }
     /**
+     * Gets the connectorId property value. The Teams app ID. Optional.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getConnectorId() {
+        return this.connectorId;
+    }
+    /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @return a String
      */
@@ -98,6 +110,7 @@ public class ExternalConnection extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activitySettings", (n) -> { this.setActivitySettings(n.getObjectValue(ActivitySettings::createFromDiscriminatorValue)); });
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(ExternalItem::createFromDiscriminatorValue)); });
@@ -173,6 +186,7 @@ public class ExternalConnection extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("activitySettings", this.getActivitySettings());
         writer.writeObjectValue("configuration", this.getConfiguration());
+        writer.writeStringValue("connectorId", this.getConnectorId());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
         writer.writeCollectionOfObjectValues("items", this.getItems());
@@ -194,6 +208,13 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     public void setConfiguration(@jakarta.annotation.Nullable final Configuration value) {
         this.configuration = value;
+    }
+    /**
+     * Sets the connectorId property value. The Teams app ID. Optional.
+     * @param value Value to set for the connectorId property.
+     */
+    public void setConnectorId(@jakarta.annotation.Nullable final String value) {
+        this.connectorId = value;
     }
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.

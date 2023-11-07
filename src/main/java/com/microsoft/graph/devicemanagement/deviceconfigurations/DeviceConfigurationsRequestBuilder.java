@@ -59,19 +59,19 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsUpdateForBusinessConfiguration objects.
+     * List properties and relationships of the editionUpgradeConfiguration objects.
      * @return a CompletableFuture of DeviceConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the windowsUpdateForBusinessConfiguration objects.
+     * List properties and relationships of the editionUpgradeConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +82,21 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeviceConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new windows10EndpointProtectionConfiguration object.
+     * Create a new macOSDeviceFeaturesConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10endpointprotectionconfiguration-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosdevicefeaturesconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> post(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
         return post(body, null);
     }
     /**
-     * Create a new windows10EndpointProtectionConfiguration object.
+     * Create a new macOSDeviceFeaturesConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10endpointprotectionconfiguration-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosdevicefeaturesconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> post(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -108,7 +108,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the windowsUpdateForBusinessConfiguration objects.
+     * List properties and relationships of the editionUpgradeConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsUpdateForBusinessConfiguration objects.
+     * List properties and relationships of the editionUpgradeConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,11 +133,11 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Create a new windows10EndpointProtectionConfiguration object.
+     * Create a new macOSDeviceFeaturesConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windows10EndpointProtectionConfiguration object.
+     * Create a new macOSDeviceFeaturesConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -164,7 +164,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
@@ -179,7 +179,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new DeviceConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the windowsUpdateForBusinessConfiguration objects.
+     * List properties and relationships of the editionUpgradeConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

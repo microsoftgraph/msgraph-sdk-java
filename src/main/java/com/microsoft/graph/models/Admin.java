@@ -22,7 +22,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The people property
+     * Represents a setting to control people-related admin settings in the tenant.
      */
     private PeopleAdminSettings people;
     /**
@@ -88,7 +88,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the people property value. The people property
+     * Gets the people property value. Represents a setting to control people-related admin settings in the tenant.
      * @return a PeopleAdminSettings
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the people property value. The people property
+     * Sets the people property value. Represents a setting to control people-related admin settings in the tenant.
      * @param value Value to set for the people property.
      */
     public void setPeople(@jakarta.annotation.Nullable final PeopleAdminSettings value) {

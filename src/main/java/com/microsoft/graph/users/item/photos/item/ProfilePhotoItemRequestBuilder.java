@@ -45,7 +45,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos/{profilePhoto%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProfilePhoto
      */
@@ -66,7 +66,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +91,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -105,7 +105,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -25,6 +25,10 @@ public class Directory extends Entity implements Parsable {
      */
     private java.util.List<DirectoryObject> deletedItems;
     /**
+     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     */
+    private java.util.List<DeviceLocalCredentialInfo> deviceLocalCredentials;
+    /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      */
     private java.util.List<IdentityProviderBase> federationConfigurations;
@@ -81,6 +85,14 @@ public class Directory extends Entity implements Parsable {
         return this.deletedItems;
     }
     /**
+     * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @return a java.util.List<DeviceLocalCredentialInfo>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceLocalCredentialInfo> getDeviceLocalCredentials() {
+        return this.deviceLocalCredentials;
+    }
+    /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @return a java.util.List<IdentityProviderBase>
      */
@@ -99,6 +111,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("attributeSets", (n) -> { this.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -122,6 +135,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("attributeSets", this.getAttributeSets());
         writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
+        writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
     }
@@ -152,6 +166,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.deletedItems = value;
+    }
+    /**
+     * Sets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * @param value Value to set for the deviceLocalCredentials property.
+     */
+    public void setDeviceLocalCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredentialInfo> value) {
+        this.deviceLocalCredentials = value;
     }
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
