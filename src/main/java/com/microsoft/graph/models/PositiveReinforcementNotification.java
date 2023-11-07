@@ -28,7 +28,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
 
     /**
      * The Delivery Preference.
-     * 
+     * Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      */
     @SerializedName(value = "deliveryPreference", alternate = {"DeliveryPreference"})
     @Expose

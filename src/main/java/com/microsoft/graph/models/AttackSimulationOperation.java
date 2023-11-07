@@ -28,7 +28,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements I
 
     /**
      * The Percentage Completed.
-     * 
+     * Percentage of completion of the respective operation.
      */
     @SerializedName(value = "percentageCompleted", alternate = {"PercentageCompleted"})
     @Expose
@@ -37,7 +37,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements I
 
     /**
      * The Tenant Id.
-     * 
+     * Tenant identifier.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -46,7 +46,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements I
 
     /**
      * The Type.
-     * 
+     * The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

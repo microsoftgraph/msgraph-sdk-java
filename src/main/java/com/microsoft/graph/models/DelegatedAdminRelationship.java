@@ -51,6 +51,15 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
     public java.time.OffsetDateTime activatedDateTime;
 
     /**
+     * The Auto Extend Duration.
+     * The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. The default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it isn't automatically extended.
+     */
+    @SerializedName(value = "autoExtendDuration", alternate = {"AutoExtendDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration autoExtendDuration;
+
+    /**
      * The Created Date Time.
      * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      */

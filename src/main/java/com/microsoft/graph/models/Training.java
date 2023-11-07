@@ -33,7 +33,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Availability Status.
-     * 
+     * Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "availabilityStatus", alternate = {"AvailabilityStatus"})
     @Expose
@@ -42,7 +42,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the training.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -51,7 +51,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the training was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -60,7 +60,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the training.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -69,7 +69,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the training.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -78,7 +78,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Duration In Minutes.
-     * 
+     * Training duration.
      */
     @SerializedName(value = "durationInMinutes", alternate = {"DurationInMinutes"})
     @Expose
@@ -87,7 +87,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Evaluation.
-     * 
+     * Indicates whether the training has any evaluation.
      */
     @SerializedName(value = "hasEvaluation", alternate = {"HasEvaluation"})
     @Expose
@@ -96,7 +96,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the training.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -105,7 +105,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the training was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -114,7 +114,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -123,7 +123,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Locales.
-     * 
+     * Supported locales for content for the associated training.
      */
     @SerializedName(value = "supportedLocales", alternate = {"SupportedLocales"})
     @Expose
@@ -132,7 +132,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Training tags.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -141,7 +141,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of training. Possible values are: unknown, phishing, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -150,7 +150,7 @@ public class Training extends Entity implements IJsonBackedObject {
 
     /**
      * The Language Details.
-     * 
+     * Language specific details on a training.
      */
     @SerializedName(value = "languageDetails", alternate = {"LanguageDetails"})
     @Expose

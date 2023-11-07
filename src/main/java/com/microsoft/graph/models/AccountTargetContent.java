@@ -40,7 +40,7 @@ public class AccountTargetContent implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

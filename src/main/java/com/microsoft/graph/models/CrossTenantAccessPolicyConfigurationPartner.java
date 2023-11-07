@@ -52,7 +52,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Collaboration Inbound.
-     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
     @Expose
@@ -61,7 +61,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Collaboration Outbound.
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
     @Expose
@@ -79,7 +79,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Direct Connect Outbound.
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
     @Expose
@@ -88,7 +88,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Inbound Trust.
-     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      */
     @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
     @Expose
@@ -106,7 +106,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Tenant Id.
-     * The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

@@ -101,7 +101,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Timestamp of when the group is set to expire. It is null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -110,7 +110,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Types.
-     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
+     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or a distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
      */
     @SerializedName(value = "groupTypes", alternate = {"GroupTypes"})
     @Expose
@@ -128,7 +128,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Assignable To Role.
-     * Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsUsing this feature requires a Azure AD Premium P1 license. Returned by default. Supports $filter (eq, ne, not).
+     * Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
      */
     @SerializedName(value = "isAssignableToRole", alternate = {"IsAssignableToRole"})
     @Expose
@@ -137,7 +137,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Processing State.
-     * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     * Indicates the status of the group license assignment to all group members. The default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
      */
     @SerializedName(value = "licenseProcessingState", alternate = {"LicenseProcessingState"})
     @Expose
@@ -227,7 +227,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sam Account Name.
-     * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
+     * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith). Read-only.
      */
     @SerializedName(value = "onPremisesSamAccountName", alternate = {"OnPremisesSamAccountName"})
     @Expose
@@ -236,7 +236,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
@@ -254,7 +254,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Data Location.
-     * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo. Nullable. Returned by default.
+     * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling app must be granted the Directory.ReadWrite.All permission and the user be assigned one of the following Microsoft Entra roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo. Nullable. Returned by default.
      */
     @SerializedName(value = "preferredDataLocation", alternate = {"PreferredDataLocation"})
     @Expose
@@ -263,7 +263,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -281,7 +281,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Renewed Date Time.
-     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      */
     @SerializedName(value = "renewedDateTime", alternate = {"RenewedDateTime"})
     @Expose
@@ -326,7 +326,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
+     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -335,7 +335,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Allow External Senders.
-     * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Indicates if people external to the organization can send messages to the group. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "allowExternalSenders", alternate = {"AllowExternalSenders"})
     @Expose
@@ -362,7 +362,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hide From Outlook Clients.
-     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "hideFromOutlookClients", alternate = {"HideFromOutlookClients"})
     @Expose
@@ -371,7 +371,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Subscribed By Mail.
-     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "isSubscribedByMail", alternate = {"IsSubscribedByMail"})
     @Expose
@@ -389,7 +389,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Archived.
-     * When a group is associated with a team this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
+     * When a group is associated with a team, this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
      */
     @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
@@ -462,7 +462,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
@@ -476,7 +476,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Accepted Senders.
-     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
+     * The list of users or groups allowed to create posts or calendar events in this group. If this list is non-empty, then only users or groups listed here are allowed to post.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage acceptedSenders;
@@ -519,7 +519,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Rejected Senders.
-     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     * The list of users or groups not allowed to create posts or calendar events in this group. Nullable
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage rejectedSenders;

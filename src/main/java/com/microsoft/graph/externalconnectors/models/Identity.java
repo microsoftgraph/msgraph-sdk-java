@@ -28,7 +28,7 @@ public class Identity extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

@@ -40,7 +40,7 @@ public class TrainingSetting implements IJsonBackedObject {
 
     /**
      * The Setting Type.
-     * 
+     * Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      */
     @SerializedName(value = "settingType", alternate = {"SettingType"})
     @Expose

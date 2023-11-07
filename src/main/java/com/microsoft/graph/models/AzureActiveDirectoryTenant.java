@@ -27,7 +27,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements IJsonB
 
     /**
      * The Display Name.
-     * The name of the Azure Active Directory tenant. Read only.
+     * The name of the Microsoft Entra tenant. Read only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements IJsonB
 
     /**
      * The Tenant Id.
-     * The ID of the Azure Active Directory tenant. Read only.
+     * The ID of the Microsoft Entra tenant. Read only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

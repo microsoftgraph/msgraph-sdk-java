@@ -29,7 +29,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Application Instance.
-     * 
+     * The application instance associated with this action.
      */
     @SerializedName(value = "applicationInstance", alternate = {"ApplicationInstance"})
     @Expose
@@ -38,7 +38,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Asserted Identity.
-     * 
+     * An identity the participant would like to present itself as to the other participants in the call.
      */
     @SerializedName(value = "assertedIdentity", alternate = {"AssertedIdentity"})
     @Expose
@@ -47,7 +47,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Azure Communication Services User.
-     * 
+     * The Azure Communication Services user associated with this action.
      */
     @SerializedName(value = "azureCommunicationServicesUser", alternate = {"AzureCommunicationServicesUser"})
     @Expose
@@ -56,7 +56,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Encrypted.
-     * 
+     * The encrypted user associated with this action.
      */
     @SerializedName(value = "encrypted", alternate = {"Encrypted"})
     @Expose
@@ -65,7 +65,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Endpoint Type.
-     * 
+     * Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
@@ -74,7 +74,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Guest.
-     * 
+     * The guest user associated with this action.
      */
     @SerializedName(value = "guest", alternate = {"Guest"})
     @Expose
@@ -83,7 +83,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The On Premises.
-     * 
+     * The Skype for Business on-premises user associated with this action.
      */
     @SerializedName(value = "onPremises", alternate = {"OnPremises"})
     @Expose
@@ -92,7 +92,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Phone.
-     * 
+     * The phone user associated with this action.
      */
     @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose

@@ -27,7 +27,7 @@ public class EmailPayloadDetail extends PayloadDetail implements IJsonBackedObje
 
     /**
      * The From Email.
-     * 
+     * Email address of the user.
      */
     @SerializedName(value = "fromEmail", alternate = {"FromEmail"})
     @Expose
@@ -36,7 +36,7 @@ public class EmailPayloadDetail extends PayloadDetail implements IJsonBackedObje
 
     /**
      * The From Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "fromName", alternate = {"FromName"})
     @Expose
@@ -45,7 +45,7 @@ public class EmailPayloadDetail extends PayloadDetail implements IJsonBackedObje
 
     /**
      * The Is External Sender.
-     * 
+     * Indicates whether the sender isn't from the user's organization.
      */
     @SerializedName(value = "isExternalSender", alternate = {"IsExternalSender"})
     @Expose
@@ -54,7 +54,7 @@ public class EmailPayloadDetail extends PayloadDetail implements IJsonBackedObje
 
     /**
      * The Subject.
-     * 
+     * The subject of the email address sent to the user.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

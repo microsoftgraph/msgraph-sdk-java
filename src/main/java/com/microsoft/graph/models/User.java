@@ -1080,7 +1080,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photos.
-     * 
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose

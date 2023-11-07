@@ -56,7 +56,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Is Default Environment.
-     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
+     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
      */
     @SerializedName(value = "isDefaultEnvironment", alternate = {"IsDefaultEnvironment"})
     @Expose

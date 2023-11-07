@@ -70,7 +70,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The People.
-     * 
+     * Represents a setting to control people-related admin settings in the tenant.
      */
     @SerializedName(value = "people", alternate = {"People"})
     @Expose

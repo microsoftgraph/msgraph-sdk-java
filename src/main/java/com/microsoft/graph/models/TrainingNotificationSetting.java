@@ -29,7 +29,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
 
     /**
      * The Training Assignment.
-     * 
+     * Training assignment details.
      */
     @SerializedName(value = "trainingAssignment", alternate = {"TrainingAssignment"})
     @Expose
@@ -38,7 +38,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
 
     /**
      * The Training Reminder.
-     * 
+     * Training reminder details.
      */
     @SerializedName(value = "trainingReminder", alternate = {"TrainingReminder"})
     @Expose

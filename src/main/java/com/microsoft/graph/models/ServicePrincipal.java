@@ -19,6 +19,7 @@ import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.ResourceSpecificPermission;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.VerifiedPublisher;
+import com.microsoft.graph.models.RemoteDesktopSecurityConfiguration;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
@@ -451,6 +452,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
+
+    /**
+     * The Remote Desktop Security Configuration.
+     * The remoteDesktopSecurityConfiguration object applied to this service principal. Supports $filter (eq) for isRemoteDesktopProtocolEnabled property.
+     */
+    @SerializedName(value = "remoteDesktopSecurityConfiguration", alternate = {"RemoteDesktopSecurityConfiguration"})
+    @Expose
+	@Nullable
+    public RemoteDesktopSecurityConfiguration remoteDesktopSecurityConfiguration;
 
     /**
      * The Token Issuance Policies.

@@ -27,7 +27,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
 
     /**
      * The Azure Communication Services Resource Id.
-     * 
+     * The Azure Communication Services resource ID associated with the user.
      */
     @SerializedName(value = "azureCommunicationServicesResourceId", alternate = {"AzureCommunicationServicesResourceId"})
     @Expose

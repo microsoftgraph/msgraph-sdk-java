@@ -36,7 +36,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The End User Notifications.
-     * 
+     * Represents an end user's notification for an attack simulation training.
      */
     @SerializedName(value = "endUserNotifications", alternate = {"EndUserNotifications"})
     @Expose
@@ -45,7 +45,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Landing Pages.
-     * 
+     * Represents an attack simulation training landing page.
      */
     @SerializedName(value = "landingPages", alternate = {"LandingPages"})
     @Expose
@@ -54,7 +54,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Login Pages.
-     * 
+     * Represents an attack simulation training login page.
      */
     @SerializedName(value = "loginPages", alternate = {"LoginPages"})
     @Expose
@@ -63,7 +63,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * Represents an attack simulation training operation.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -72,7 +72,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Payloads.
-     * 
+     * Represents an attack simulation training campaign payload in a tenant.
      */
     @SerializedName(value = "payloads", alternate = {"Payloads"})
     @Expose
@@ -99,7 +99,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Trainings.
-     * 
+     * Represents details about attack simulation trainings.
      */
     @SerializedName(value = "trainings", alternate = {"Trainings"})
     @Expose
