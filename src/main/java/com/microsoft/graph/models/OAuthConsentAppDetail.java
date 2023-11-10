@@ -40,7 +40,7 @@ public class OAuthConsentAppDetail implements IJsonBackedObject {
 
     /**
      * The App Scope.
-     * 
+     * App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      */
     @SerializedName(value = "appScope", alternate = {"AppScope"})
     @Expose
@@ -49,7 +49,7 @@ public class OAuthConsentAppDetail implements IJsonBackedObject {
 
     /**
      * The Display Logo.
-     * 
+     * App display logo.
      */
     @SerializedName(value = "displayLogo", alternate = {"DisplayLogo"})
     @Expose
@@ -58,7 +58,7 @@ public class OAuthConsentAppDetail implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * App name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

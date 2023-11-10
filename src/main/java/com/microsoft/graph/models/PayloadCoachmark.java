@@ -40,7 +40,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Coachmark Location.
-     * 
+     * The coachmark location.
      */
     @SerializedName(value = "coachmarkLocation", alternate = {"CoachmarkLocation"})
     @Expose
@@ -49,7 +49,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description about the coachmark.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Indicator.
-     * 
+     * The coachmark indicator.
      */
     @SerializedName(value = "indicator", alternate = {"Indicator"})
     @Expose
@@ -67,7 +67,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Is Valid.
-     * 
+     * Indicates whether the coachmark is valid or not.
      */
     @SerializedName(value = "isValid", alternate = {"IsValid"})
     @Expose
@@ -76,7 +76,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * The coachmark language.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose
@@ -85,7 +85,7 @@ public class PayloadCoachmark implements IJsonBackedObject {
 
     /**
      * The Order.
-     * 
+     * The coachmark order.
      */
     @SerializedName(value = "order", alternate = {"Order"})
     @Expose

@@ -30,7 +30,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * The HTML content of the login page.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -39,7 +39,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the login page.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -48,7 +48,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the login page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description about the login page.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -66,7 +66,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the login page.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -75,7 +75,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Language.
-     * 
+     * The content language of the login page.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose
@@ -84,7 +84,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the login page.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -93,7 +93,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the login page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -102,7 +102,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -111,7 +111,7 @@ public class LoginPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The login page status. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

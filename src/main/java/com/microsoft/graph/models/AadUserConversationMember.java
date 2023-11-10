@@ -37,7 +37,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The Tenant Id.
-     * TenantId which the Azure AD user belongs to.
+     * TenantId which the Microsoft Entra user belongs to.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

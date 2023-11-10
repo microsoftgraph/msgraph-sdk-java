@@ -57,6 +57,26 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
 
 
     /**
+     *  Gets a request builder for the DeviceLocalCredentialInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder deviceLocalCredentials() {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceLocalCredentials"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceLocalCredentialInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder deviceLocalCredentials(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder(getRequestUrlWithAdditionalSegment("deviceLocalCredentials") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AdministrativeUnit collection
      *
      * @return the collection request builder

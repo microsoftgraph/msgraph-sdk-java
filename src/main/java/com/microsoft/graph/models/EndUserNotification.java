@@ -33,7 +33,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the notification.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -42,7 +42,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -51,7 +51,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the notification as defined by the user.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -60,7 +60,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the notification as defined by the user.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -69,7 +69,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user who last modified the notification.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -78,7 +78,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -87,7 +87,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Type.
-     * 
+     * Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      */
     @SerializedName(value = "notificationType", alternate = {"NotificationType"})
     @Expose
@@ -96,7 +96,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -105,7 +105,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -114,7 +114,7 @@ public class EndUserNotification extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Locales.
-     * 
+     * Supported locales for endUserNotification content.
      */
     @SerializedName(value = "supportedLocales", alternate = {"SupportedLocales"})
     @Expose

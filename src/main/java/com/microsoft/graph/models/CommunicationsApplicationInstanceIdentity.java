@@ -27,7 +27,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
 
     /**
      * The Hidden.
-     * 
+     * True if the participant shouldn't be shown in other participants' rosters.
      */
     @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose
@@ -36,7 +36,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
 
     /**
      * The Tenant Id.
-     * 
+     * The tenant ID of the application.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

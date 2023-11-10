@@ -40,7 +40,7 @@ public class CoachmarkLocation implements IJsonBackedObject {
 
     /**
      * The Length.
-     * 
+     * Length of coachmark.
      */
     @SerializedName(value = "length", alternate = {"Length"})
     @Expose
@@ -49,7 +49,7 @@ public class CoachmarkLocation implements IJsonBackedObject {
 
     /**
      * The Offset.
-     * 
+     * Offset of coachmark.
      */
     @SerializedName(value = "offset", alternate = {"Offset"})
     @Expose
@@ -58,7 +58,7 @@ public class CoachmarkLocation implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

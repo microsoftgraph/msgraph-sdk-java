@@ -40,7 +40,7 @@ public class Configuration implements IJsonBackedObject {
 
     /**
      * The Authorized App Ids.
-     * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
      */
     @SerializedName(value = "authorizedAppIds", alternate = {"AuthorizedAppIds"})
     @Expose

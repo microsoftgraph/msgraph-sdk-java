@@ -28,7 +28,7 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
 
     /**
      * The Simulation Notification.
-     * 
+     * The notification for the user who is part of the simulation.
      */
     @SerializedName(value = "simulationNotification", alternate = {"SimulationNotification"})
     @Expose

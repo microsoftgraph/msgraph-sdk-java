@@ -32,7 +32,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user who created the landing page.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -41,7 +41,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the landing page was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the landing page as defined by the user.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the landing page.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Email identity of the user who last modified the landing page.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -77,7 +77,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time when the landing page was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Locale.
-     * 
+     * Content locale.
      */
     @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose
@@ -95,7 +95,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -104,7 +104,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -113,7 +113,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Locales.
-     * 
+     * Supported locales.
      */
     @SerializedName(value = "supportedLocales", alternate = {"SupportedLocales"})
     @Expose
@@ -122,7 +122,7 @@ public class LandingPage extends Entity implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * The detail information for a landing page associated with a simulation during its creation.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose

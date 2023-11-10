@@ -27,7 +27,7 @@ public class CommunicationsUserIdentity extends Identity implements IJsonBackedO
 
     /**
      * The Tenant Id.
-     * 
+     * The user's tenant ID.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

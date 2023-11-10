@@ -15,6 +15,7 @@ import com.microsoft.graph.security.requests.ArticleCollectionPage;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
 import com.microsoft.graph.security.requests.HostPairCollectionPage;
+import com.microsoft.graph.security.requests.HostPortCollectionPage;
 import com.microsoft.graph.security.requests.HostCollectionPage;
 import com.microsoft.graph.security.requests.HostSslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
@@ -86,6 +87,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.security.requests.HostPairCollectionPage hostPairs;
+
+    /**
+     * The Host Ports.
+     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     */
+    @SerializedName(value = "hostPorts", alternate = {"HostPorts"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.HostPortCollectionPage hostPorts;
 
     /**
      * The Hosts.
@@ -214,6 +224,10 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
         if (json.has("hostPairs")) {
             hostPairs = serializer.deserializeObject(json.get("hostPairs"), com.microsoft.graph.security.requests.HostPairCollectionPage.class);
+        }
+
+        if (json.has("hostPorts")) {
+            hostPorts = serializer.deserializeObject(json.get("hostPorts"), com.microsoft.graph.security.requests.HostPortCollectionPage.class);
         }
 
         if (json.has("hosts")) {

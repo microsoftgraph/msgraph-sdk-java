@@ -42,7 +42,7 @@ public class EndUserNotificationSetting implements IJsonBackedObject {
 
     /**
      * The Notification Preference.
-     * 
+     * Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
      */
     @SerializedName(value = "notificationPreference", alternate = {"NotificationPreference"})
     @Expose
@@ -51,7 +51,7 @@ public class EndUserNotificationSetting implements IJsonBackedObject {
 
     /**
      * The Positive Reinforcement.
-     * 
+     * Positive reinforcement detail.
      */
     @SerializedName(value = "positiveReinforcement", alternate = {"PositiveReinforcement"})
     @Expose
@@ -60,7 +60,7 @@ public class EndUserNotificationSetting implements IJsonBackedObject {
 
     /**
      * The Setting Type.
-     * 
+     * End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      */
     @SerializedName(value = "settingType", alternate = {"SettingType"})
     @Expose

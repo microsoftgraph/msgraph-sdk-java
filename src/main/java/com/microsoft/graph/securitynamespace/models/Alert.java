@@ -216,6 +216,15 @@ public class Alert extends Entity implements IJsonBackedObject {
     public java.util.List<String> mitreTechniques;
 
     /**
+     * The Product Name.
+     * 
+     */
+    @SerializedName(value = "productName", alternate = {"ProductName"})
+    @Expose
+	@Nullable
+    public String productName;
+
+    /**
      * The Provider Alert Id.
      * The ID of the alert as it appears in the security provider product that generated the alert.
      */

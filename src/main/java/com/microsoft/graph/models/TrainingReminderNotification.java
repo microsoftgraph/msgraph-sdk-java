@@ -28,7 +28,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
 
     /**
      * The Delivery Frequency.
-     * 
+     * Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
      */
     @SerializedName(value = "deliveryFrequency", alternate = {"DeliveryFrequency"})
     @Expose

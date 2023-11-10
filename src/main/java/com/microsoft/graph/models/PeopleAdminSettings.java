@@ -29,7 +29,7 @@ public class PeopleAdminSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Profile Card Properties.
-     * 
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      */
     @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose
