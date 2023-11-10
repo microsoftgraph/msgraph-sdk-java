@@ -11,6 +11,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.76.0] - 2023-11-10
+
+### Added 
+
+- CallRecording model and derived requests.
+- ChannelSummary model.
+- DeviceLocalCredential and DeviceLocalCredentialInfo models and derived requests.
+- RemoteDesktopSecurityConfiguration model and derived requests.
+- SiteDeltaParameterSet model and derived requests.
+- TargetDeviceGroup model and derived requests.
+- HostPort, HostPortBanner, HostPortComponent, HostPortProtocol, and HostPortStatus models and derived requests.
+
+### Changed 
+
+- ExternalConnection model.
+- Channel model.
+- DelegatedAdminRelationship model.
+- Directory model and request builder.
+- ExtensionProperty model.
+- OnlineMeeting model and request builder.
+- ServicePrincipal model and request builder.
+- SiteCollection request builder.
+- Alert model.
+- DetectionSource model.
+- Host model and request builder.
+- ServiceSource model.
+- ThreatIntelligence model and request builder.
+- Hostname request builder.
+- IpAddress request builder.
+
 ## [5.75.0] - 2023-10-20
 
 ### Added 
