@@ -1,4 +1,4 @@
-package com.microsoft.serviceClient;
+package com.microsoft.serviceclient;
 
 import com.azure.core.credential.TokenCredential;
 import com.microsoft.graph.CoreConstants;

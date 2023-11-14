@@ -1,4 +1,4 @@
-package com.microsoft.serviceClient;
+package com.microsoft.serviceclient;
 
 import com.microsoft.graph.content.BatchRequestContent;
 import com.microsoft.graph.content.BatchRequestContentCollection;
@@ -13,9 +13,9 @@ import com.microsoft.kiota.serialization.ParsableFactory;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 
 /**
  * CustomBatchRequestBuilder extends BatchRequestBuilder to include graph specific default error mappings.
@@ -36,7 +36,7 @@ public class CustomBatchRequestBuilder extends BatchRequestBuilder {
      */
     @Nonnull
     @Override
-    public CompletableFuture<BatchResponseContent> post(@Nonnull BatchRequestContent requestContent, @Nullable Map<String, ParsableFactory<? extends Parsable>> errorMappings) {
+    public BatchResponseContent post(@Nonnull BatchRequestContent requestContent, @Nullable Map<String, ParsableFactory<? extends Parsable>> errorMappings) throws IOException {
         Map<String, ParsableFactory<? extends Parsable>> batchErrorMappings = errorMappings == null ? getDefaultErrorMappings() : errorMappings;
         return super.post(requestContent, batchErrorMappings);
     }
@@ -48,7 +48,7 @@ public class CustomBatchRequestBuilder extends BatchRequestBuilder {
      */
     @Nonnull
     @Override
-    public CompletableFuture<BatchResponseContentCollection> post(@Nonnull BatchRequestContentCollection requestContentCollection, @Nullable Map<String, ParsableFactory<? extends Parsable>> errorMappings) {
+    public BatchResponseContentCollection post(@Nonnull BatchRequestContentCollection requestContentCollection, @Nullable Map<String, ParsableFactory<? extends Parsable>> errorMappings) throws IOException {
         Map<String, ParsableFactory<? extends Parsable>> batchErrorMappings = errorMappings == null ? getDefaultErrorMappings() : errorMappings;
         return super.post(requestContentCollection, batchErrorMappings);
     }
