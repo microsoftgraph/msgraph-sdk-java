@@ -46,7 +46,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Is Multi Valued.
-     * 
+     * Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false. Supports $filter (eq).
      */
     @SerializedName(value = "isMultiValued", alternate = {"IsMultiValued"})
     @Expose

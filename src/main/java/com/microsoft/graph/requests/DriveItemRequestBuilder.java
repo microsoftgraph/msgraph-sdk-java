@@ -183,6 +183,16 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
     public com.microsoft.graph.requests.PermissionRequestBuilder permissions(@Nonnull final String id) {
         return new com.microsoft.graph.requests.PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for ItemRetentionLabel
+     *
+     * @return the ItemRetentionLabelRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ItemRetentionLabelRequestBuilder retentionLabel() {
+        return new com.microsoft.graph.requests.ItemRetentionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("retentionLabel"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Subscription collection
      *
