@@ -60,52 +60,52 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the browserSiteList objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @return a BrowserSiteListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public BrowserSiteListCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the browserSiteList objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @return a BrowserSiteListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BrowserSiteListCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BrowserSiteListCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BrowserSiteListCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new browserSiteList object to support Internet Explorer mode. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of BrowserSiteList
+     * @return a BrowserSiteList
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@jakarta.annotation.Nonnull final BrowserSiteList body) {
+    @jakarta.annotation.Nullable
+    public BrowserSiteList post(@jakarta.annotation.Nonnull final BrowserSiteList body) {
         return post(body, null);
     }
     /**
      * Create a new browserSiteList object to support Internet Explorer mode. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BrowserSiteList
+     * @return a BrowserSiteList
      * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@jakarta.annotation.Nonnull final BrowserSiteList body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BrowserSiteList post(@jakarta.annotation.Nonnull final BrowserSiteList body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BrowserSiteList::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BrowserSiteList::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the browserSiteList objects and their properties. This API is available in the following national cloud deployments.

@@ -47,66 +47,64 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property parentGroup for groups
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property parentGroup for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The parent [group] that contains the set.
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get() {
+    @jakarta.annotation.Nullable
+    public Group get() {
         return get(null);
     }
     /**
      * The parent [group] that contains the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property parentGroup in groups
      * @param body The request body
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body) {
+    @jakarta.annotation.Nullable
+    public Group patch(@jakarta.annotation.Nonnull final Group body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property parentGroup in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Group patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property parentGroup for groups
@@ -133,6 +131,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

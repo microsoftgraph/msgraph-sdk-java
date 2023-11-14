@@ -60,48 +60,48 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
-     * @return a CompletableFuture of GovernanceInsightCollectionResponse
+     * @return a GovernanceInsightCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GovernanceInsightCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GovernanceInsightCollectionResponse get() {
         return get(null);
     }
     /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GovernanceInsightCollectionResponse
+     * @return a GovernanceInsightCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GovernanceInsightCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GovernanceInsightCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GovernanceInsightCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GovernanceInsightCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to insights for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of GovernanceInsight
+     * @return a GovernanceInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GovernanceInsight> post(@jakarta.annotation.Nonnull final GovernanceInsight body) {
+    @jakarta.annotation.Nullable
+    public GovernanceInsight post(@jakarta.annotation.Nonnull final GovernanceInsight body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to insights for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GovernanceInsight
+     * @return a GovernanceInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GovernanceInsight> post(@jakarta.annotation.Nonnull final GovernanceInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GovernanceInsight post(@jakarta.annotation.Nonnull final GovernanceInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GovernanceInsight::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GovernanceInsight::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.

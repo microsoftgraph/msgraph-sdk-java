@@ -46,24 +46,24 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
-     * @return a CompletableFuture of RoomList
+     * @return a RoomList
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> get() {
+    @jakarta.annotation.Nullable
+    public RoomList get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoomList
+     * @return a RoomList
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoomList get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoomList::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoomList::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList

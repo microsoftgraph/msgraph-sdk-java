@@ -67,26 +67,26 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GroupCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare. This API is available in the following national cloud deployments.

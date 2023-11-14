@@ -38,26 +38,26 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the managedDeviceOverview object.
-     * @return a CompletableFuture of ManagedDeviceOverview
+     * @return a ManagedDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get() {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceOverview get() {
         return get(null);
     }
     /**
      * Read properties and relationships of the managedDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceOverview
+     * @return a ManagedDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceOverview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceOverview::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceOverview::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read properties and relationships of the managedDeviceOverview object.

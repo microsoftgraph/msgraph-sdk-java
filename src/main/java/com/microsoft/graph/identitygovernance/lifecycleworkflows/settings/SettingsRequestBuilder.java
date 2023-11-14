@@ -38,52 +38,52 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of LifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> get() {
+    @jakarta.annotation.Nullable
+    public LifecycleManagementSettings get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LifecycleManagementSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of LifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body) {
+    @jakarta.annotation.Nullable
+    public LifecycleManagementSettings patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LifecycleManagementSettings patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LifecycleManagementSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a lifecycleManagementSettings object. This API is available in the following national cloud deployments.

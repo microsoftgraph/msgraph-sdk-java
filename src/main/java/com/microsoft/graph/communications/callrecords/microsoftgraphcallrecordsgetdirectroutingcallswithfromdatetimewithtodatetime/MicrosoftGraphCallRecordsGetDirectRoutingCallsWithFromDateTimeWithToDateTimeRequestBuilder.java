@@ -42,24 +42,24 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
     }
     /**
      * Invoke function getDirectRoutingCalls
-     * @return a CompletableFuture of GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
+     * @return a GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getDirectRoutingCalls
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
+     * @return a GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getDirectRoutingCalls

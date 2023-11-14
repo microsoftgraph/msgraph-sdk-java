@@ -14,7 +14,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The defaultLanguage property
+     * The default language for the end user notification.
      */
     private String defaultLanguage;
     /**
@@ -59,7 +59,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the defaultLanguage property value. The defaultLanguage property
+     * Gets the defaultLanguage property value. The default language for the end user notification.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultLanguage property value. The defaultLanguage property
+     * Sets the defaultLanguage property value. The default language for the end user notification.
      * @param value Value to set for the defaultLanguage property.
      */
     public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {

@@ -187,56 +187,56 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the microsoftStoreForBusinessApp objects.
-     * @return a CompletableFuture of MobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-microsoftstoreforbusinessapp-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the windowsWebApp objects.
+     * @return a MobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowswebapp-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the microsoftStoreForBusinessApp objects.
+     * List properties and relationships of the windowsWebApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-microsoftstoreforbusinessapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a MobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowswebapp-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new iosVppApp object.
+     * Create a new macOSLobApp object.
      * @param body The request body
-     * @return a CompletableFuture of MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body) {
+    @jakarta.annotation.Nullable
+    public MobileApp post(@jakarta.annotation.Nonnull final MobileApp body) {
         return post(body, null);
     }
     /**
-     * Create a new iosVppApp object.
+     * Create a new macOSLobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a MobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileApp post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the microsoftStoreForBusinessApp objects.
+     * List properties and relationships of the windowsWebApp objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -244,7 +244,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the microsoftStoreForBusinessApp objects.
+     * List properties and relationships of the windowsWebApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -265,7 +265,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new iosVppApp object.
+     * Create a new macOSLobApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -274,7 +274,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new iosVppApp object.
+     * Create a new macOSLobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -307,7 +307,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the microsoftStoreForBusinessApp objects.
+     * List properties and relationships of the windowsWebApp objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

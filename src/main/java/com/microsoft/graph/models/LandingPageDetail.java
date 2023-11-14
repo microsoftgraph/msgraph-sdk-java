@@ -9,15 +9,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LandingPageDetail extends Entity implements Parsable {
     /**
-     * The content property
+     * Landing page detail content.
      */
     private String content;
     /**
-     * The isDefaultLangauge property
+     * Indicates whether this language detail is default for the landing page.
      */
     private Boolean isDefaultLangauge;
     /**
-     * The language property
+     * The content language for the landing page.
      */
     private String language;
     /**
@@ -37,7 +37,7 @@ public class LandingPageDetail extends Entity implements Parsable {
         return new LandingPageDetail();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Landing page detail content.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class LandingPageDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Gets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class LandingPageDetail extends Entity implements Parsable {
         return this.isDefaultLangauge;
     }
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The content language for the landing page.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -84,21 +84,21 @@ public class LandingPageDetail extends Entity implements Parsable {
         writer.writeStringValue("language", this.getLanguage());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Landing page detail content.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
      * @param value Value to set for the isDefaultLangauge property.
      */
     public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultLangauge = value;
     }
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The content language for the landing page.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {

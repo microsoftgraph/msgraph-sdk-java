@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PositiveReinforcementNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * The deliveryPreference property
+     * Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      */
     private NotificationDeliveryPreference deliveryPreference;
     /**
@@ -30,7 +30,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
         return new PositiveReinforcementNotification();
     }
     /**
-     * Gets the deliveryPreference property value. The deliveryPreference property
+     * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @return a NotificationDeliveryPreference
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
         writer.writeEnumValue("deliveryPreference", this.getDeliveryPreference());
     }
     /**
-     * Sets the deliveryPreference property value. The deliveryPreference property
+     * Sets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @param value Value to set for the deliveryPreference property.
      */
     public void setDeliveryPreference(@jakarta.annotation.Nullable final NotificationDeliveryPreference value) {

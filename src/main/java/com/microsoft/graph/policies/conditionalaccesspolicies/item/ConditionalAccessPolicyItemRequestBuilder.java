@@ -39,66 +39,64 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property conditionalAccessPolicies for policies
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property conditionalAccessPolicies for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The custom rules that define an access scenario.
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get() {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy get() {
         return get(null);
     }
     /**
      * The custom rules that define an access scenario.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property conditionalAccessPolicies in policies
      * @param body The request body
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property conditionalAccessPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property conditionalAccessPolicies for policies
@@ -125,6 +123,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

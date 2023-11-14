@@ -14,7 +14,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      */
     private Map<String, Object> additionalData;
     /**
-     * The display name of the customer tenant as set by Azure AD. Read-only
+     * The display name of the customer tenant as set by Microsoft Entra ID. Read-only
      */
     private String displayName;
     /**
@@ -22,7 +22,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      */
     private String odataType;
     /**
-     * The Azure AD-assigned tenant ID of the customer tenant.
+     * The Microsoft Entra ID-assigned tenant ID of the customer tenant.
      */
     private String tenantId;
     /**
@@ -50,7 +50,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The display name of the customer tenant as set by Azure AD. Read-only
+     * Gets the displayName property value. The display name of the customer tenant as set by Microsoft Entra ID. Read-only
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer tenant.
+     * Gets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The display name of the customer tenant as set by Azure AD. Read-only
+     * Sets the displayName property value. The display name of the customer tenant as set by Microsoft Entra ID. Read-only
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -118,7 +118,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer tenant.
+     * Sets the tenantId property value. The Microsoft Entra ID-assigned tenant ID of the customer tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

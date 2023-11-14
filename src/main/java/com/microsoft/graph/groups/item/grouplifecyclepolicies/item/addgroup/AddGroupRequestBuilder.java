@@ -37,28 +37,28 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the managedGroupTypes property of groupLifecyclePolicy is set to Selected. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of AddGroupPostResponse
+     * @return a AddGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AddGroupPostResponse> post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public AddGroupPostResponse post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the managedGroupTypes property of groupLifecyclePolicy is set to Selected. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AddGroupPostResponse
+     * @return a AddGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AddGroupPostResponse> post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AddGroupPostResponse post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AddGroupPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AddGroupPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the managedGroupTypes property of groupLifecyclePolicy is set to Selected. This API is available in the following national cloud deployments.

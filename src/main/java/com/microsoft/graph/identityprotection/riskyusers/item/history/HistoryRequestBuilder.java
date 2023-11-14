@@ -60,50 +60,50 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
+     * @return a RiskyUserHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyUserHistoryItemCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public RiskyUserHistoryItemCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
+     * @return a RiskyUserHistoryItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list-history?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyUserHistoryItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RiskyUserHistoryItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RiskyUserHistoryItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RiskyUserHistoryItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to history for identityProtection
      * @param body The request body
-     * @return a CompletableFuture of RiskyUserHistoryItem
+     * @return a RiskyUserHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> post(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body) {
+    @jakarta.annotation.Nullable
+    public RiskyUserHistoryItem post(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to history for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RiskyUserHistoryItem
+     * @return a RiskyUserHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> post(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RiskyUserHistoryItem post(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RiskyUserHistoryItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RiskyUserHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the riskyUserHistoryItems from the history navigation property. This API is available in the following national cloud deployments.

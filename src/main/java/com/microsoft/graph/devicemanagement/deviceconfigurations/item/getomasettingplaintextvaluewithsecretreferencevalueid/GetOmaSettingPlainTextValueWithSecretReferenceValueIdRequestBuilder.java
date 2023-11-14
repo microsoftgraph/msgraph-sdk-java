@@ -38,24 +38,24 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
     }
     /**
      * Invoke function getOmaSettingPlainTextValue
-     * @return a CompletableFuture of GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse
+     * @return a GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getOmaSettingPlainTextValue
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse
+     * @return a GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getOmaSettingPlainTextValue

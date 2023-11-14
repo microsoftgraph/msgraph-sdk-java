@@ -46,26 +46,26 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a CompletableFuture of java.util.List<SynchronizationSecretKeyStringValuePair>
+     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
+    @jakarta.annotation.Nullable
+    public java.util.List<SynchronizationSecretKeyStringValuePair> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
         return put(body, null);
     }
     /**
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of java.util.List<SynchronizationSecretKeyStringValuePair>
+     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public java.util.List<SynchronizationSecretKeyStringValuePair> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendCollectionAsync(requestInfo, SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendCollection(requestInfo, SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update property secrets value.

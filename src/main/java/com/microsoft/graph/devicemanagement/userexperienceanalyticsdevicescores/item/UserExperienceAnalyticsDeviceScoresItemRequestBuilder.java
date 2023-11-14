@@ -39,66 +39,64 @@ public class UserExperienceAnalyticsDeviceScoresItemRequestBuilder extends BaseR
     /**
      * Delete navigation property userExperienceAnalyticsDeviceScores for deviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property userExperienceAnalyticsDeviceScores for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * User experience analytics device scores
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScores> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScores get() {
         return get(null);
     }
     /**
      * User experience analytics device scores
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScores> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScores get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property userExperienceAnalyticsDeviceScores in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScores> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScores body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScores patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScores body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property userExperienceAnalyticsDeviceScores in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScores
+     * @return a UserExperienceAnalyticsDeviceScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScores> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceScores patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property userExperienceAnalyticsDeviceScores for deviceManagement
@@ -125,6 +123,7 @@ public class UserExperienceAnalyticsDeviceScoresItemRequestBuilder extends BaseR
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

@@ -38,24 +38,24 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicy
+     * @return a UnifiedRoleManagementPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicy get() {
         return get(null);
     }
     /**
      * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicy
+     * @return a UnifiedRoleManagementPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleManagementPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.

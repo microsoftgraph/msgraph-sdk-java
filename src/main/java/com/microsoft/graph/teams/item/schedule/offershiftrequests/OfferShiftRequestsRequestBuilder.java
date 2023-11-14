@@ -60,52 +60,52 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
+     * @return a OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequestCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public OfferShiftRequestCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
+     * @return a OfferShiftRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OfferShiftRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OfferShiftRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of OfferShiftRequest
+     * @return a OfferShiftRequest
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> post(@jakarta.annotation.Nonnull final OfferShiftRequest body) {
+    @jakarta.annotation.Nullable
+    public OfferShiftRequest post(@jakarta.annotation.Nonnull final OfferShiftRequest body) {
         return post(body, null);
     }
     /**
      * Create an instance of an offerShiftRequest. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OfferShiftRequest
+     * @return a OfferShiftRequest
      * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> post(@jakarta.annotation.Nonnull final OfferShiftRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OfferShiftRequest post(@jakarta.annotation.Nonnull final OfferShiftRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OfferShiftRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OfferShiftRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team. This API is available in the following national cloud deployments.

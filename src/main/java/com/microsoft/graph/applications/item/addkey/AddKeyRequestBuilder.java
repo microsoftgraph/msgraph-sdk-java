@@ -38,28 +38,28 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of KeyCredential
+     * @return a KeyCredential
      * @see <a href="https://learn.microsoft.com/graph/api/application-addkey?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<KeyCredential> post(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public KeyCredential post(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of KeyCredential
+     * @return a KeyCredential
      * @see <a href="https://learn.microsoft.com/graph/api/application-addkey?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<KeyCredential> post(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public KeyCredential post(@jakarta.annotation.Nonnull final AddKeyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, KeyCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, KeyCredential::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that dont have any existing valid certificates (no certificates have been added yet, or all certificates have expired), wont be able to use this service action. You can use the Update application operation to perform an update instead. This API is available in the following national cloud deployments.

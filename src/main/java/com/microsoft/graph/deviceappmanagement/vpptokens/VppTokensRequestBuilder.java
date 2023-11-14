@@ -60,52 +60,52 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the vppToken objects.
-     * @return a CompletableFuture of VppTokenCollectionResponse
+     * @return a VppTokenCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppTokenCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public VppTokenCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the vppToken objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of VppTokenCollectionResponse
+     * @return a VppTokenCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppTokenCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VppTokenCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VppTokenCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, VppTokenCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new vppToken object.
      * @param body The request body
-     * @return a CompletableFuture of VppToken
+     * @return a VppToken
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> post(@jakarta.annotation.Nonnull final VppToken body) {
+    @jakarta.annotation.Nullable
+    public VppToken post(@jakarta.annotation.Nonnull final VppToken body) {
         return post(body, null);
     }
     /**
      * Create a new vppToken object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of VppToken
+     * @return a VppToken
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> post(@jakarta.annotation.Nonnull final VppToken body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VppToken post(@jakarta.annotation.Nonnull final VppToken body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VppToken::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, VppToken::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the vppToken objects.

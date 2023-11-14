@@ -84,48 +84,48 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from permissionGrants
-     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @return a ResourceSpecificPermissionGrantCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ResourceSpecificPermissionGrantCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from permissionGrants
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @return a ResourceSpecificPermissionGrantCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ResourceSpecificPermissionGrantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ResourceSpecificPermissionGrantCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ResourceSpecificPermissionGrantCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to permissionGrants
      * @param body The request body
-     * @return a CompletableFuture of ResourceSpecificPermissionGrant
+     * @return a ResourceSpecificPermissionGrant
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
+    @jakarta.annotation.Nullable
+    public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
         return post(body, null);
     }
     /**
      * Add new entity to permissionGrants
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceSpecificPermissionGrant
+     * @return a ResourceSpecificPermissionGrant
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ResourceSpecificPermissionGrant::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ResourceSpecificPermissionGrant::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from permissionGrants

@@ -38,28 +38,28 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of CopyNotebookModel
+     * @return a CopyNotebookModel
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-getnotebookfromweburl?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@jakarta.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public CopyNotebookModel post(@jakarta.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CopyNotebookModel
+     * @return a CopyNotebookModel
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-getnotebookfromweburl?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@jakarta.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CopyNotebookModel post(@jakarta.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CopyNotebookModel::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CopyNotebookModel::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365. This API is available in the following national cloud deployments.

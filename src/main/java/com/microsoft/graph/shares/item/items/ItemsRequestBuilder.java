@@ -59,24 +59,24 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a DriveItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DriveItemCollectionResponse get() {
         return get(null);
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a DriveItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.

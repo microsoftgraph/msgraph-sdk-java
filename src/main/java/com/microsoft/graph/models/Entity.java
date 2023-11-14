@@ -51,6 +51,7 @@ import com.microsoft.graph.models.security.HostComponent;
 import com.microsoft.graph.models.security.HostCookie;
 import com.microsoft.graph.models.security.Hostname;
 import com.microsoft.graph.models.security.HostPair;
+import com.microsoft.graph.models.security.HostPort;
 import com.microsoft.graph.models.security.HostReputation;
 import com.microsoft.graph.models.security.HostSslCertificate;
 import com.microsoft.graph.models.security.HostTracker;
@@ -254,6 +255,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.calendarPermission": return new CalendarPermission();
             case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
             case "#microsoft.graph.call": return new Call();
+            case "#microsoft.graph.callRecording": return new CallRecording();
             case "#microsoft.graph.callRecords.callRecord": return new CallRecord();
             case "#microsoft.graph.callRecords.segment": return new Segment();
             case "#microsoft.graph.callRecords.session": return new Session();
@@ -332,6 +334,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration": return new DeviceEnrollmentPlatformRestrictionsConfiguration();
             case "#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration": return new DeviceEnrollmentWindowsHelloForBusinessConfiguration();
             case "#microsoft.graph.deviceInstallState": return new DeviceInstallState();
+            case "#microsoft.graph.deviceLocalCredentialInfo": return new DeviceLocalCredentialInfo();
             case "#microsoft.graph.deviceLogCollectionResponse": return new DeviceLogCollectionResponse();
             case "#microsoft.graph.deviceManagement": return new DeviceManagement();
             case "#microsoft.graph.deviceManagementExchangeConnector": return new DeviceManagementExchangeConnector();
@@ -469,6 +472,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.itemActivityStat": return new ItemActivityStat();
             case "#microsoft.graph.itemAnalytics": return new ItemAnalytics();
             case "#microsoft.graph.itemAttachment": return new ItemAttachment();
+            case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
             case "#microsoft.graph.landingPage": return new LandingPage();
             case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
             case "#microsoft.graph.learningAssignment": return new LearningAssignment();
@@ -558,6 +562,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.onenoteResource": return new OnenoteResource();
             case "#microsoft.graph.onenoteSection": return new OnenoteSection();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
+            case "#microsoft.graph.onlineMeetingBase": return new OnlineMeetingBase();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
             case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
             case "#microsoft.graph.openShift": return new OpenShift();
@@ -635,11 +640,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
-            case "#microsoft.graph.request": return new Request();
-            case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
-            case "#microsoft.graph.resourceOperation": return new ResourceOperation();
-            case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
-            case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
+            case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
         }
         return null;
     }
@@ -651,6 +652,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.request": return new Request();
+            case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
+            case "#microsoft.graph.resourceOperation": return new ResourceOperation();
+            case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
+            case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
             case "#microsoft.graph.riskDetection": return new RiskDetection();
             case "#microsoft.graph.riskyServicePrincipal": return new RiskyServicePrincipal();
             case "#microsoft.graph.riskyServicePrincipalHistoryItem": return new RiskyServicePrincipalHistoryItem();
@@ -702,6 +708,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.hostCookie": return new HostCookie();
             case "#microsoft.graph.security.hostname": return new Hostname();
             case "#microsoft.graph.security.hostPair": return new HostPair();
+            case "#microsoft.graph.security.hostPort": return new HostPort();
             case "#microsoft.graph.security.hostReputation": return new HostReputation();
             case "#microsoft.graph.security.hostSslCertificate": return new HostSslCertificate();
             case "#microsoft.graph.security.hostTracker": return new HostTracker();
@@ -773,6 +780,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.synchronizationJob": return new SynchronizationJob();
             case "#microsoft.graph.synchronizationSchema": return new SynchronizationSchema();
             case "#microsoft.graph.synchronizationTemplate": return new SynchronizationTemplate();
+            case "#microsoft.graph.targetDeviceGroup": return new TargetDeviceGroup();
             case "#microsoft.graph.targetedManagedAppConfiguration": return new TargetedManagedAppConfiguration();
             case "#microsoft.graph.targetedManagedAppPolicyAssignment": return new TargetedManagedAppPolicyAssignment();
             case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
@@ -877,6 +885,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userSettings": return new UserSettings();
             case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
+            case "#microsoft.graph.virtualEvent": return new VirtualEvent();
+            case "#microsoft.graph.virtualEventRegistration": return new VirtualEventRegistration();
+            case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
+            case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
+            case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();

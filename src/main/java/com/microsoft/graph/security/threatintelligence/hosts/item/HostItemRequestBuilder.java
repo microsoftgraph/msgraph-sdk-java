@@ -9,6 +9,7 @@ import com.microsoft.graph.security.threatintelligence.hosts.item.hostpairs.Host
 import com.microsoft.graph.security.threatintelligence.hosts.item.parenthostpairs.ParentHostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivedns.PassiveDnsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivednsreverse.PassiveDnsReverseRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.ports.PortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.reputation.ReputationRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.sslcertificates.SslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.subdomains.SubdomainsRequestBuilder;
@@ -82,6 +83,13 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsReverseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the ports property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PortsRequestBuilder ports() {
+        return new PortsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the reputation property of the microsoft.graph.security.host entity.
      */
     @jakarta.annotation.Nonnull
@@ -135,68 +143,66 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property hosts for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property hosts for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of Host
+     * @return a Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> get() {
+    @jakarta.annotation.Nullable
+    public Host get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Host
+     * @return a Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Host get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property hosts in security
      * @param body The request body
-     * @return a CompletableFuture of Host
+     * @return a Host
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body) {
+    @jakarta.annotation.Nullable
+    public Host patch(@jakarta.annotation.Nonnull final Host body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property hosts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Host
+     * @return a Host
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Host patch(@jakarta.annotation.Nonnull final Host body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property hosts for security
@@ -223,6 +229,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

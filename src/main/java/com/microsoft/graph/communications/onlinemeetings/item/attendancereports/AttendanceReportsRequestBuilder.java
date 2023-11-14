@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+ * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
@@ -31,7 +31,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
      * @param meetingAttendanceReportId The unique identifier of meetingAttendanceReport
      * @return a MeetingAttendanceReportItemRequestBuilder
      */
@@ -59,54 +59,52 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/attendanceReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
+     * Get attendanceReports from communications
+     * @return a MeetingAttendanceReportCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReportCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReportCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a MeetingAttendanceReportCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReportCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReportCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MeetingAttendanceReportCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MeetingAttendanceReportCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to attendanceReports for communications
      * @param body The request body
-     * @return a CompletableFuture of MeetingAttendanceReport
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> post(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport post(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to attendanceReports for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingAttendanceReport
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> post(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport post(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from communications
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +112,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +175,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return new AttendanceReportsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from communications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

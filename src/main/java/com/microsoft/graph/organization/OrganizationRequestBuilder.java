@@ -91,54 +91,54 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of OrganizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the organization objects.
+     * @return a OrganizationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OrganizationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public OrganizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OrganizationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a OrganizationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OrganizationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OrganizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OrganizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OrganizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to organization
      * @param body The request body
-     * @return a CompletableFuture of Organization
+     * @return a Organization
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body) {
+    @jakarta.annotation.Nullable
+    public Organization post(@jakarta.annotation.Nonnull final Organization body) {
         return post(body, null);
     }
     /**
      * Add new entity to organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Organization
+     * @return a Organization
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Organization post(@jakarta.annotation.Nonnull final Organization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Organization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Organization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
+     * List properties and relationships of the organization objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return new OrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection. This API is available in the following national cloud deployments.
+     * List properties and relationships of the organization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

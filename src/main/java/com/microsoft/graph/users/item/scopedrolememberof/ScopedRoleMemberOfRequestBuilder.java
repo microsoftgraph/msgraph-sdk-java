@@ -60,48 +60,48 @@ public class ScopedRoleMemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get scopedRoleMemberOf from users
-     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
+     * @return a ScopedRoleMembershipCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembershipCollectionResponse get() {
         return get(null);
     }
     /**
      * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
+     * @return a ScopedRoleMembershipCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembershipCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to scopedRoleMemberOf for users
      * @param body The request body
-     * @return a CompletableFuture of ScopedRoleMembership
+     * @return a ScopedRoleMembership
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to scopedRoleMemberOf for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ScopedRoleMembership
+     * @return a ScopedRoleMembership
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ScopedRoleMembership::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ScopedRoleMembership::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get scopedRoleMemberOf from users

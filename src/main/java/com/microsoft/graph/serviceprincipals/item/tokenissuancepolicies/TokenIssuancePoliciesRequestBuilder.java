@@ -59,24 +59,24 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The tokenIssuancePolicies assigned to this service principal.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a TokenIssuancePolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * The tokenIssuancePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a TokenIssuancePolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The tokenIssuancePolicies assigned to this service principal.

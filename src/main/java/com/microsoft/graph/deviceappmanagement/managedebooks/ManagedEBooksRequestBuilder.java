@@ -60,52 +60,52 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the managedEBook objects.
-     * @return a CompletableFuture of ManagedEBookCollectionResponse
+     * @return a ManagedEBookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedEBookCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the managedEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedEBookCollectionResponse
+     * @return a ManagedEBookCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedEBookCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedEBookCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedEBookCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new iosVppEBook object.
      * @param body The request body
-     * @return a CompletableFuture of ManagedEBook
+     * @return a ManagedEBook
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> post(@jakarta.annotation.Nonnull final ManagedEBook body) {
+    @jakarta.annotation.Nullable
+    public ManagedEBook post(@jakarta.annotation.Nonnull final ManagedEBook body) {
         return post(body, null);
     }
     /**
      * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedEBook
+     * @return a ManagedEBook
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> post(@jakarta.annotation.Nonnull final ManagedEBook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedEBook post(@jakarta.annotation.Nonnull final ManagedEBook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedEBook::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedEBook::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the managedEBook objects.

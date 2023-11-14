@@ -71,68 +71,66 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance get() {
         return get(null);
     }
     /**
      * Get the instance of a role eligibility. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
@@ -159,6 +157,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

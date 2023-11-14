@@ -59,54 +59,54 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the managedAppPolicy objects.
-     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the managedAppProtection objects.
+     * @return a ManagedAppPolicyCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the managedAppPolicy objects.
+     * List properties and relationships of the managedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedapppolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a ManagedAppPolicyCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of ManagedAppPolicy
+     * @return a ManagedAppPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicy post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppPolicy
+     * @return a ManagedAppPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicy post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the managedAppPolicy objects.
+     * List properties and relationships of the managedAppProtection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the managedAppPolicy objects.
+     * List properties and relationships of the managedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ManagedAppPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the managedAppPolicy objects.
+     * List properties and relationships of the managedAppProtection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

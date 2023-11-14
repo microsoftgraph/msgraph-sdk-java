@@ -38,24 +38,24 @@ public class ParentHostRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The parent host related to this passiveDnsRecord entry. Generally, this is the value that you can search to discover this passiveDnsRecord value.
-     * @return a CompletableFuture of Host
+     * @return a Host
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> get() {
+    @jakarta.annotation.Nullable
+    public Host get() {
         return get(null);
     }
     /**
      * The parent host related to this passiveDnsRecord entry. Generally, this is the value that you can search to discover this passiveDnsRecord value.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Host
+     * @return a Host
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Host get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The parent host related to this passiveDnsRecord entry. Generally, this is the value that you can search to discover this passiveDnsRecord value.

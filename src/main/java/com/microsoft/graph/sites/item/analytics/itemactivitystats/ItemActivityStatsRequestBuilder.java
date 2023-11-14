@@ -60,48 +60,48 @@ public class ItemActivityStatsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get itemActivityStats from sites
-     * @return a CompletableFuture of ItemActivityStatCollectionResponse
+     * @return a ItemActivityStatCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStatCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ItemActivityStatCollectionResponse get() {
         return get(null);
     }
     /**
      * Get itemActivityStats from sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivityStatCollectionResponse
+     * @return a ItemActivityStatCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStatCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivityStatCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivityStatCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivityStatCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to itemActivityStats for sites
      * @param body The request body
-     * @return a CompletableFuture of ItemActivityStat
+     * @return a ItemActivityStat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> post(@jakarta.annotation.Nonnull final ItemActivityStat body) {
+    @jakarta.annotation.Nullable
+    public ItemActivityStat post(@jakarta.annotation.Nonnull final ItemActivityStat body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to itemActivityStats for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivityStat
+     * @return a ItemActivityStat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> post(@jakarta.annotation.Nonnull final ItemActivityStat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivityStat post(@jakarta.annotation.Nonnull final ItemActivityStat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivityStat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivityStat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get itemActivityStats from sites

@@ -45,52 +45,54 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get people from admin
-     * @return a CompletableFuture of PeopleAdminSettings
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
+     * @return a PeopleAdminSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PeopleAdminSettings> get() {
+    @jakarta.annotation.Nullable
+    public PeopleAdminSettings get() {
         return get(null);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PeopleAdminSettings
+     * @return a PeopleAdminSettings
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PeopleAdminSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PeopleAdminSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PeopleAdminSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PeopleAdminSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property people in admin
      * @param body The request body
-     * @return a CompletableFuture of PeopleAdminSettings
+     * @return a PeopleAdminSettings
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PeopleAdminSettings> patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body) {
+    @jakarta.annotation.Nullable
+    public PeopleAdminSettings patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property people in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PeopleAdminSettings
+     * @return a PeopleAdminSettings
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PeopleAdminSettings> patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PeopleAdminSettings patch(@jakarta.annotation.Nonnull final PeopleAdminSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PeopleAdminSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PeopleAdminSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +163,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return new PeopleRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get people from admin
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -38,24 +38,24 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used to access the underlying listItem
-     * @return a CompletableFuture of ListItem
+     * @return a ListItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItem> get() {
+    @jakarta.annotation.Nullable
+    public ListItem get() {
         return get(null);
     }
     /**
      * Used to access the underlying listItem
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ListItem
+     * @return a ListItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ListItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ListItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ListItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Used to access the underlying listItem

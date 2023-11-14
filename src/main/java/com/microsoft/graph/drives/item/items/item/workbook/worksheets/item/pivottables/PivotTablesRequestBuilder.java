@@ -68,50 +68,50 @@ public class PivotTablesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookPivotTableCollectionResponse
+     * @return a WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTableCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookPivotTableCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookPivotTableCollectionResponse
+     * @return a WorkbookPivotTableCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workbookworksheet-list-pivottables?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTableCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookPivotTableCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookPivotTableCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookPivotTableCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to pivotTables for drives
      * @param body The request body
-     * @return a CompletableFuture of WorkbookPivotTable
+     * @return a WorkbookPivotTable
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> post(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
+    @jakarta.annotation.Nullable
+    public WorkbookPivotTable post(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to pivotTables for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookPivotTable
+     * @return a WorkbookPivotTable
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> post(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookPivotTable post(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookPivotTable::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookPivotTable::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of workbookpivottable objects. This API is available in the following national cloud deployments.

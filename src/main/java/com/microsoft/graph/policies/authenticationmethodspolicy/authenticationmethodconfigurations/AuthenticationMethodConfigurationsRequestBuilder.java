@@ -60,48 +60,48 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
+     * @return a AuthenticationMethodConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
+     * @return a AuthenticationMethodConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationMethodConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationMethodConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to authenticationMethodConfigurations for policies
      * @param body The request body
-     * @return a CompletableFuture of AuthenticationMethodConfiguration
+     * @return a AuthenticationMethodConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodConfiguration post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to authenticationMethodConfigurations for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationMethodConfiguration
+     * @return a AuthenticationMethodConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodConfiguration post(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationMethodConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationMethodConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.

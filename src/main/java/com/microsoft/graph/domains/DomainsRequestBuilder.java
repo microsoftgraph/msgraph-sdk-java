@@ -60,52 +60,52 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of DomainCollectionResponse
+     * @return a DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DomainCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of domain objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DomainCollectionResponse
+     * @return a DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DomainCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DomainCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DomainCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Domain
+     * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-domains?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> post(@jakarta.annotation.Nonnull final Domain body) {
+    @jakarta.annotation.Nullable
+    public Domain post(@jakarta.annotation.Nonnull final Domain body) {
         return post(body, null);
     }
     /**
      * Adds a domain to the tenant. Important: You cannot use an associated domain with your Microsoft Entra tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Domain
+     * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-domains?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> post(@jakarta.annotation.Nonnull final Domain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Domain post(@jakarta.annotation.Nonnull final Domain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Domain::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Domain::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of domain objects. This API is available in the following national cloud deployments.

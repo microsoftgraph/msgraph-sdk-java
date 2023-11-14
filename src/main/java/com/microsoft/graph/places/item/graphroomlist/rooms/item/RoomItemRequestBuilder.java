@@ -39,66 +39,64 @@ public class RoomItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property rooms for places
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property rooms for places
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get rooms from places
-     * @return a CompletableFuture of Room
+     * @return a Room
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Room> get() {
+    @jakarta.annotation.Nullable
+    public Room get() {
         return get(null);
     }
     /**
      * Get rooms from places
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Room
+     * @return a Room
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Room> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Room get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Room::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Room::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property rooms in places
      * @param body The request body
-     * @return a CompletableFuture of Room
+     * @return a Room
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Room> patch(@jakarta.annotation.Nonnull final Room body) {
+    @jakarta.annotation.Nullable
+    public Room patch(@jakarta.annotation.Nonnull final Room body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property rooms in places
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Room
+     * @return a Room
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Room> patch(@jakarta.annotation.Nonnull final Room body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Room patch(@jakarta.annotation.Nonnull final Room body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Room::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Room::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property rooms for places
@@ -125,6 +123,7 @@ public class RoomItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

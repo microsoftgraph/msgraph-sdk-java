@@ -59,26 +59,26 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
+     * @return a LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningCourseActivityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LearningCourseActivityCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
+     * @return a LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningCourseActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LearningCourseActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LearningCourseActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LearningCourseActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user. This API is available in the following national cloud deployments.

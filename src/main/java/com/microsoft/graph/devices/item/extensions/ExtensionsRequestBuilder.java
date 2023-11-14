@@ -60,48 +60,48 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of open extensions defined for the device. Read-only. Nullable.
-     * @return a CompletableFuture of ExtensionCollectionResponse
+     * @return a ExtensionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ExtensionCollectionResponse get() {
         return get(null);
     }
     /**
      * The collection of open extensions defined for the device. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExtensionCollectionResponse
+     * @return a ExtensionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExtensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExtensionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExtensionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to extensions for devices
      * @param body The request body
-     * @return a CompletableFuture of Extension
+     * @return a Extension
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> post(@jakarta.annotation.Nonnull final Extension body) {
+    @jakarta.annotation.Nullable
+    public Extension post(@jakarta.annotation.Nonnull final Extension body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to extensions for devices
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Extension
+     * @return a Extension
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> post(@jakarta.annotation.Nonnull final Extension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Extension post(@jakarta.annotation.Nonnull final Extension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of open extensions defined for the device. Read-only. Nullable.

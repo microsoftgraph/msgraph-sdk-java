@@ -60,52 +60,52 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     }
     /**
      * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
-     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @return a DeviceCompliancePolicySettingStateSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicySettingStateSummaryCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @return a DeviceCompliancePolicySettingStateSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicySettingStateSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicySettingStateSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummaryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
+     * @return a DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicySettingStateSummary post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
         return post(body, null);
     }
     /**
      * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
+     * @return a DeviceCompliancePolicySettingStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicySettingStateSummary post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.

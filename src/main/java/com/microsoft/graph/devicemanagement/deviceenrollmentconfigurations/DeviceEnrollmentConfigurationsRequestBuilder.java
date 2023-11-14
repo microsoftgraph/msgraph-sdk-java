@@ -59,56 +59,56 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
-     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
+     * @return a DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceEnrollmentConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return post(body, null);
     }
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return new DeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
+     * List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

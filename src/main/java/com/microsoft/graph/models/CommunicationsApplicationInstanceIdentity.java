@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationInstanceIdentity extends Identity implements Parsable {
     /**
-     * The hidden property
+     * True if the participant shouldn't be shown in other participants' rosters.
      */
     private Boolean hidden;
     /**
-     * The tenantId property
+     * The tenant ID of the application.
      */
     private String tenantId;
     /**
@@ -45,7 +45,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         return this.hidden;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The tenant ID of the application.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The tenant ID of the application.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

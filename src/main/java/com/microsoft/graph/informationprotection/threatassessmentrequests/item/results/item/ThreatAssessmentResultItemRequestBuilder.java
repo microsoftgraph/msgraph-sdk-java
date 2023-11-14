@@ -39,66 +39,64 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property results for informationProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property results for informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> get() {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult get() {
         return get(null);
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property results in informationProtection
      * @param body The request body
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property results in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult patch(@jakarta.annotation.Nonnull final ThreatAssessmentResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property results for informationProtection
@@ -125,6 +123,7 @@ public class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

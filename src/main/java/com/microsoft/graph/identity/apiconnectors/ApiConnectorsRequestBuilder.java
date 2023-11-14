@@ -60,52 +60,52 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
+     * @return a IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnectorCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
+     * @return a IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnectorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityApiConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of IdentityApiConnector
+     * @return a IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@jakarta.annotation.Nonnull final IdentityApiConnector body) {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnector post(@jakarta.annotation.Nonnull final IdentityApiConnector body) {
         return post(body, null);
     }
     /**
      * Create a new identityApiConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityApiConnector
+     * @return a IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@jakarta.annotation.Nonnull final IdentityApiConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnector post(@jakarta.annotation.Nonnull final IdentityApiConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties of an identityApiConnector object. This API is available in the following national cloud deployments.

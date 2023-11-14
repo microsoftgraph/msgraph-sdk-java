@@ -60,52 +60,52 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
+     * @return a BookingCustomerBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingCustomerBaseCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public BookingCustomerBaseCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingCustomerBaseCollectionResponse
+     * @return a BookingCustomerBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingCustomerBaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BookingCustomerBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BookingCustomerBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BookingCustomerBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of BookingCustomerBase
+     * @return a BookingCustomerBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingCustomerBase> post(@jakarta.annotation.Nonnull final BookingCustomerBase body) {
+    @jakarta.annotation.Nullable
+    public BookingCustomerBase post(@jakarta.annotation.Nonnull final BookingCustomerBase body) {
         return post(body, null);
     }
     /**
      * Create a new bookingCustomer object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingCustomerBase
+     * @return a BookingCustomerBase
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingCustomerBase> post(@jakarta.annotation.Nonnull final BookingCustomerBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BookingCustomerBase post(@jakarta.annotation.Nonnull final BookingCustomerBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BookingCustomerBase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BookingCustomerBase::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of bookingCustomer objects of a business. This API is available in the following national cloud deployments.

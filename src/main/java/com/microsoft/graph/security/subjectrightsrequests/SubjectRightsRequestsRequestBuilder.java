@@ -60,48 +60,48 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get subjectRightsRequests from security
-     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
+     * @return a SubjectRightsRequestCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SubjectRightsRequestCollectionResponse get() {
         return get(null);
     }
     /**
      * Get subjectRightsRequests from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
+     * @return a SubjectRightsRequestCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SubjectRightsRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubjectRightsRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SubjectRightsRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to subjectRightsRequests for security
      * @param body The request body
-     * @return a CompletableFuture of SubjectRightsRequest
+     * @return a SubjectRightsRequest
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
+    @jakarta.annotation.Nullable
+    public SubjectRightsRequest post(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to subjectRightsRequests for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubjectRightsRequest
+     * @return a SubjectRightsRequest
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SubjectRightsRequest post(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubjectRightsRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SubjectRightsRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get subjectRightsRequests from security

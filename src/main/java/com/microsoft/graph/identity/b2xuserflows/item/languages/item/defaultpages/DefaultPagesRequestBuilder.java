@@ -60,48 +60,48 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
-     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
+     * @return a UserFlowLanguagePageCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePageCollectionResponse get() {
         return get(null);
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
+     * @return a UserFlowLanguagePageCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguagePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguagePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to defaultPages for identity
      * @param body The request body
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to defaultPages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.

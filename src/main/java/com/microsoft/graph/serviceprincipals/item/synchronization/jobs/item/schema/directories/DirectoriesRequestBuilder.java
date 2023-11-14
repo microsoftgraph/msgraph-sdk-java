@@ -60,48 +60,48 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Contains the collection of directories and all of their objects.
-     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
+     * @return a DirectoryDefinitionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
      * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
+     * @return a DirectoryDefinitionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DirectoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to directories for servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of DirectoryDefinition
+     * @return a DirectoryDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@jakarta.annotation.Nonnull final DirectoryDefinition body) {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinition post(@jakarta.annotation.Nonnull final DirectoryDefinition body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to directories for servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryDefinition
+     * @return a DirectoryDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@jakarta.annotation.Nonnull final DirectoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinition post(@jakarta.annotation.Nonnull final DirectoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DirectoryDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Contains the collection of directories and all of their objects.

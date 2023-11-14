@@ -78,48 +78,48 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identity
-     * @return a CompletableFuture of IdentityContainer
+     * @return a IdentityContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> get() {
+    @jakarta.annotation.Nullable
+    public IdentityContainer get() {
         return get(null);
     }
     /**
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityContainer
+     * @return a IdentityContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update identity
      * @param body The request body
-     * @return a CompletableFuture of IdentityContainer
+     * @return a IdentityContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
+    @jakarta.annotation.Nullable
+    public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
         return patch(body, null);
     }
     /**
      * Update identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityContainer
+     * @return a IdentityContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get identity

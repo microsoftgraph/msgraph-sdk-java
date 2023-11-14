@@ -62,48 +62,48 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get planner
-     * @return a CompletableFuture of Planner
+     * @return a Planner
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Planner> get() {
+    @jakarta.annotation.Nullable
+    public Planner get() {
         return get(null);
     }
     /**
      * Get planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Planner
+     * @return a Planner
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Planner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Planner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Planner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Planner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update planner
      * @param body The request body
-     * @return a CompletableFuture of Planner
+     * @return a Planner
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Planner> patch(@jakarta.annotation.Nonnull final Planner body) {
+    @jakarta.annotation.Nullable
+    public Planner patch(@jakarta.annotation.Nonnull final Planner body) {
         return patch(body, null);
     }
     /**
      * Update planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Planner
+     * @return a Planner
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Planner> patch(@jakarta.annotation.Nonnull final Planner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Planner patch(@jakarta.annotation.Nonnull final Planner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Planner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Planner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get planner

@@ -3,6 +3,7 @@ package com.microsoft.graph.communications.onlinemeetings.item;
 import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.recordings.RecordingsRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.transcripts.TranscriptsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
@@ -25,7 +26,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
      */
     @jakarta.annotation.Nonnull
     public AttendanceReportsRequestBuilder attendanceReports() {
@@ -44,6 +45,13 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RecordingsRequestBuilder recordings() {
+        return new RecordingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
@@ -71,66 +79,64 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property onlineMeetings for communications
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property onlineMeetings for communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get onlineMeetings from communications
-     * @return a CompletableFuture of OnlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting get() {
         return get(null);
     }
     /**
      * Get onlineMeetings from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property onlineMeetings in communications
      * @param body The request body
-     * @return a CompletableFuture of OnlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property onlineMeetings in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnlineMeeting
+     * @return a OnlineMeeting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnlineMeeting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property onlineMeetings for communications
@@ -157,6 +163,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

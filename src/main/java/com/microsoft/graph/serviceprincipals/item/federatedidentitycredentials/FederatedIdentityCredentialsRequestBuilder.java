@@ -60,48 +60,48 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
+     * @return a FederatedIdentityCredentialCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public FederatedIdentityCredentialCollectionResponse get() {
         return get(null);
     }
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
+     * @return a FederatedIdentityCredentialCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public FederatedIdentityCredentialCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of FederatedIdentityCredential
+     * @return a FederatedIdentityCredential
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
+    @jakarta.annotation.Nullable
+    public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FederatedIdentityCredential
+     * @return a FederatedIdentityCredential
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, FederatedIdentityCredential::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SolutionsRoot;
 import com.microsoft.graph.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,13 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public VirtualEventsRequestBuilder virtualEvents() {
+        return new VirtualEventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -54,48 +62,48 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get solutions
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a SolutionsRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SolutionsRoot> get() {
+    @jakarta.annotation.Nullable
+    public SolutionsRoot get() {
         return get(null);
     }
     /**
      * Get solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a SolutionsRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SolutionsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SolutionsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SolutionsRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SolutionsRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update solutions
      * @param body The request body
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a SolutionsRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SolutionsRoot> patch(@jakarta.annotation.Nonnull final SolutionsRoot body) {
+    @jakarta.annotation.Nullable
+    public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body) {
         return patch(body, null);
     }
     /**
      * Update solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a SolutionsRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SolutionsRoot> patch(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SolutionsRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SolutionsRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get solutions

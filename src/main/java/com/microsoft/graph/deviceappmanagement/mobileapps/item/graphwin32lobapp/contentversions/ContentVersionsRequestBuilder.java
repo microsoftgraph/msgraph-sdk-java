@@ -60,48 +60,48 @@ public class ContentVersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of content versions for this app.
-     * @return a CompletableFuture of MobileAppContentCollectionResponse
+     * @return a MobileAppContentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppContentCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of content versions for this app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContentCollectionResponse
+     * @return a MobileAppContentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to contentVersions for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of MobileAppContent
+     * @return a MobileAppContent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> post(@jakarta.annotation.Nonnull final MobileAppContent body) {
+    @jakarta.annotation.Nullable
+    public MobileAppContent post(@jakarta.annotation.Nonnull final MobileAppContent body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to contentVersions for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContent
+     * @return a MobileAppContent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> post(@jakarta.annotation.Nonnull final MobileAppContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContent post(@jakarta.annotation.Nonnull final MobileAppContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContent::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of content versions for this app.

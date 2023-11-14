@@ -60,48 +60,48 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
-     * @return a CompletableFuture of MobileContainedAppCollectionResponse
+     * @return a MobileContainedAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileContainedAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileContainedAppCollectionResponse get() {
         return get(null);
     }
     /**
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileContainedAppCollectionResponse
+     * @return a MobileContainedAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileContainedAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileContainedAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileContainedAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileContainedAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to committedContainedApps for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of MobileContainedApp
+     * @return a MobileContainedApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileContainedApp> post(@jakarta.annotation.Nonnull final MobileContainedApp body) {
+    @jakarta.annotation.Nullable
+    public MobileContainedApp post(@jakarta.annotation.Nonnull final MobileContainedApp body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to committedContainedApps for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileContainedApp
+     * @return a MobileContainedApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileContainedApp> post(@jakarta.annotation.Nonnull final MobileContainedApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileContainedApp post(@jakarta.annotation.Nonnull final MobileContainedApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileContainedApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileContainedApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.

@@ -37,24 +37,24 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBu
     }
     /**
      * Gets diagnostics validation status for a given user.
-     * @return a CompletableFuture of GetManagedAppDiagnosticStatusesGetResponse
+     * @return a GetManagedAppDiagnosticStatusesGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedAppDiagnosticStatusesGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetManagedAppDiagnosticStatusesGetResponse get() {
         return get(null);
     }
     /**
      * Gets diagnostics validation status for a given user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetManagedAppDiagnosticStatusesGetResponse
+     * @return a GetManagedAppDiagnosticStatusesGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedAppDiagnosticStatusesGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetManagedAppDiagnosticStatusesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetManagedAppDiagnosticStatusesGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetManagedAppDiagnosticStatusesGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Gets diagnostics validation status for a given user.

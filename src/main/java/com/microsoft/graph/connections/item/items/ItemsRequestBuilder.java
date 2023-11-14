@@ -60,48 +60,48 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ExternalItemCollectionResponse
+     * @return a ExternalItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ExternalItemCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalItemCollectionResponse
+     * @return a ExternalItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to items for connections
      * @param body The request body
-     * @return a CompletableFuture of ExternalItem
+     * @return a ExternalItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalItem> post(@jakarta.annotation.Nonnull final ExternalItem body) {
+    @jakarta.annotation.Nullable
+    public ExternalItem post(@jakarta.annotation.Nonnull final ExternalItem body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to items for connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalItem
+     * @return a ExternalItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalItem> post(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalItem post(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of an externalItem object. This API is available in the following national cloud deployments.

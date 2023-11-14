@@ -59,24 +59,24 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the tags that are a child of a tag.
-     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
+     * @return a EdiscoveryReviewTagCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EdiscoveryReviewTagCollectionResponse get() {
         return get(null);
     }
     /**
      * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
+     * @return a EdiscoveryReviewTagCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryReviewTagCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Returns the tags that are a child of a tag.

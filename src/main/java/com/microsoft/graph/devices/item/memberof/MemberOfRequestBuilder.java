@@ -75,26 +75,26 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
     /**
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.

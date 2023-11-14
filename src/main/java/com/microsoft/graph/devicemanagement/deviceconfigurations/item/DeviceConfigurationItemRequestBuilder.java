@@ -94,48 +94,46 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a androidGeneralDeviceConfiguration.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a windows10EnterpriseModernAppManagementConfiguration.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10enterprisemodernappmanagementconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Deletes a androidGeneralDeviceConfiguration.
+     * Deletes a windows10EnterpriseModernAppManagementConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10enterprisemodernappmanagementconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the windows10TeamGeneralConfiguration object.
-     * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10teamgeneralconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the iosCertificateProfile object.
+     * @return a DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscertificateprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
+    @jakarta.annotation.Nullable
+    public DeviceConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the windows10TeamGeneralConfiguration object.
+     * Read properties and relationships of the iosCertificateProfile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10teamgeneralconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscertificateprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
@@ -148,33 +146,33 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the properties of a windowsUpdateForBusinessConfiguration object.
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
+    @jakarta.annotation.Nullable
+    public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windowsUpdateForBusinessConfiguration object.
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a androidGeneralDeviceConfiguration.
+     * Deletes a windows10EnterpriseModernAppManagementConfiguration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +180,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a androidGeneralDeviceConfiguration.
+     * Deletes a windows10EnterpriseModernAppManagementConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -198,10 +196,11 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windows10TeamGeneralConfiguration object.
+     * Read properties and relationships of the iosCertificateProfile object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -209,7 +208,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windows10TeamGeneralConfiguration object.
+     * Read properties and relationships of the iosCertificateProfile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +229,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a windowsUpdateForBusinessConfiguration object.
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -239,7 +238,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windowsUpdateForBusinessConfiguration object.
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,7 +277,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windows10TeamGeneralConfiguration object.
+     * Read properties and relationships of the iosCertificateProfile object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

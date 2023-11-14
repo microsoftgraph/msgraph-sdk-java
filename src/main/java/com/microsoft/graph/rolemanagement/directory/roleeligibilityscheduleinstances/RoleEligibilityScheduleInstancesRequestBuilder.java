@@ -71,50 +71,50 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
     }
     /**
      * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
+     * @return a UnifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstanceCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the instances of role eligibilities. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
+     * @return a UnifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstance
+     * @return a UnifiedRoleEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleEligibilityScheduleInstance post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the instances of role eligibilities. This API is available in the following national cloud deployments.

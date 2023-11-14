@@ -39,66 +39,64 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder ext
     /**
      * Delete navigation property metricDevices for deviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property metricDevices for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The work from anywhere metric devices. Read-only.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice get() {
         return get(null);
     }
     /**
      * The work from anywhere metric devices. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property metricDevices in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property metricDevices in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property metricDevices for deviceManagement
@@ -125,6 +123,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder ext
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

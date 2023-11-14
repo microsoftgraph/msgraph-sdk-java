@@ -36,24 +36,24 @@ public class CheckGrantedPermissionsForAppRequestBuilder extends BaseRequestBuil
     }
     /**
      * Invoke action checkGrantedPermissionsForApp
-     * @return a CompletableFuture of CheckGrantedPermissionsForAppPostResponse
+     * @return a CheckGrantedPermissionsForAppPostResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CheckGrantedPermissionsForAppPostResponse> post() {
+    @jakarta.annotation.Nullable
+    public CheckGrantedPermissionsForAppPostResponse post() {
         return post(null);
     }
     /**
      * Invoke action checkGrantedPermissionsForApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CheckGrantedPermissionsForAppPostResponse
+     * @return a CheckGrantedPermissionsForAppPostResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CheckGrantedPermissionsForAppPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CheckGrantedPermissionsForAppPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CheckGrantedPermissionsForAppPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CheckGrantedPermissionsForAppPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action checkGrantedPermissionsForApp

@@ -39,24 +39,24 @@ public class SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder exte
     }
     /**
      * Invoke function summarizeDevicePerformanceDevices
-     * @return a CompletableFuture of SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse
+     * @return a SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function summarizeDevicePerformanceDevices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse
+     * @return a SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function summarizeDevicePerformanceDevices

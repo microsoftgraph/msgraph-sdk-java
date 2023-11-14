@@ -14,7 +14,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The length property
+     * Length of coachmark.
      */
     private Integer length;
     /**
@@ -22,11 +22,11 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The offset property
+     * Offset of coachmark.
      */
     private Integer offset;
     /**
-     * The type property
+     * Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      */
     private CoachmarkLocationType type;
     /**
@@ -67,7 +67,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the length property value. The length property
+     * Gets the length property value. Length of coachmark.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the offset property value. The offset property
+     * Gets the offset property value. Offset of coachmark.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
         return this.offset;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      * @return a CoachmarkLocationType
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the length property value. The length property
+     * Sets the length property value. Length of coachmark.
      * @param value Value to set for the length property.
      */
     public void setLength(@jakarta.annotation.Nullable final Integer value) {
@@ -132,14 +132,14 @@ public class CoachmarkLocation implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the offset property value. The offset property
+     * Sets the offset property value. Offset of coachmark.
      * @param value Value to set for the offset property.
      */
     public void setOffset(@jakarta.annotation.Nullable final Integer value) {
         this.offset = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. Type of coachmark location. The possible values are: unknown, fromEmail, subject, externalTag, displayName, messageBody, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CoachmarkLocationType value) {

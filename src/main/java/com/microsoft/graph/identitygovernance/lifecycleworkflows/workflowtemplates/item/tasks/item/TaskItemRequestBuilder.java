@@ -46,24 +46,24 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
-     * @return a CompletableFuture of Task
+     * @return a Task
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Task> get() {
+    @jakarta.annotation.Nullable
+    public Task get() {
         return get(null);
     }
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Task
+     * @return a Task
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Task> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Task get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Task::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Task::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.

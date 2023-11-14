@@ -60,48 +60,48 @@ public class RolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of AccessPackageResourceRoleCollectionResponse
+     * @return a AccessPackageResourceRoleCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleCollectionResponse get() {
         return get(null);
     }
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceRoleCollectionResponse
+     * @return a AccessPackageResourceRoleCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceRoleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceRoleCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to roles for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageResourceRole
+     * @return a AccessPackageResourceRole
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRole post(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to roles for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceRole
+     * @return a AccessPackageResourceRole
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRole post(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceRole::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceRole::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read-only. Nullable. Supports $expand.

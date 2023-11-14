@@ -61,48 +61,48 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     }
     /**
      * User experience analytics device performance
-     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsDevicePerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDevicePerformanceCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics device performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsDevicePerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDevicePerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDevicePerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDevicePerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformance
+     * @return a UserExperienceAnalyticsDevicePerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDevicePerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformance
+     * @return a UserExperienceAnalyticsDevicePerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDevicePerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the summarizeDevicePerformanceDevices method.

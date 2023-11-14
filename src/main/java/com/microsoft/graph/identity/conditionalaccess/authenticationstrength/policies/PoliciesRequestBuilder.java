@@ -60,48 +60,48 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @return a AuthenticationStrengthPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @return a AuthenticationStrengthPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to policies for identity
      * @param body The request body
-     * @return a CompletableFuture of AuthenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthPolicy post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to policies for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthPolicy post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.

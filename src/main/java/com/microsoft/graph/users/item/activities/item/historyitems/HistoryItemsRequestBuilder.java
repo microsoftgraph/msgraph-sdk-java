@@ -60,48 +60,48 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
+     * @return a ActivityHistoryItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItemCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ActivityHistoryItemCollectionResponse get() {
         return get(null);
     }
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
+     * @return a ActivityHistoryItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ActivityHistoryItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ActivityHistoryItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ActivityHistoryItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to historyItems for users
      * @param body The request body
-     * @return a CompletableFuture of ActivityHistoryItem
+     * @return a ActivityHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> post(@jakarta.annotation.Nonnull final ActivityHistoryItem body) {
+    @jakarta.annotation.Nullable
+    public ActivityHistoryItem post(@jakarta.annotation.Nonnull final ActivityHistoryItem body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to historyItems for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ActivityHistoryItem
+     * @return a ActivityHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> post(@jakarta.annotation.Nonnull final ActivityHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ActivityHistoryItem post(@jakarta.annotation.Nonnull final ActivityHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ActivityHistoryItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ActivityHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.

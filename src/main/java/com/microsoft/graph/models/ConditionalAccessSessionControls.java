@@ -22,7 +22,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     private CloudAppSecuritySessionControl cloudAppSecurity;
     /**
-     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      */
     private Boolean disableResilienceDefaults;
     /**
@@ -78,7 +78,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         return this.cloudAppSecurity;
     }
     /**
-     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         this.cloudAppSecurity = value;
     }
     /**
-     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @param value Value to set for the disableResilienceDefaults property.
      */
     public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {

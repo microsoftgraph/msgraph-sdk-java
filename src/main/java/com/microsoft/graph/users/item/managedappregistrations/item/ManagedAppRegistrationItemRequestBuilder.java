@@ -38,24 +38,24 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Zero or more managed app registrations that belong to the user.
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration get() {
         return get(null);
     }
     /**
      * Zero or more managed app registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Zero or more managed app registrations that belong to the user.

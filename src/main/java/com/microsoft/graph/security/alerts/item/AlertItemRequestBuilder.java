@@ -38,52 +38,52 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an alert object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of Alert
+     * @return a Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> get() {
+    @jakarta.annotation.Nullable
+    public Alert get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of an alert object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Alert
+     * @return a Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Alert get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Alert::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Alert::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Alert
+     * @return a Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> patch(@jakarta.annotation.Nonnull final Alert body) {
+    @jakarta.annotation.Nullable
+    public Alert patch(@jakarta.annotation.Nonnull final Alert body) {
         return patch(body, null);
     }
     /**
      * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Alert
+     * @return a Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> patch(@jakarta.annotation.Nonnull final Alert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Alert patch(@jakarta.annotation.Nonnull final Alert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Alert::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Alert::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of an alert object. This API is available in the following national cloud deployments.

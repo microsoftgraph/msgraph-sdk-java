@@ -68,52 +68,52 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @return a ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ConversationMemberCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @return a ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConversationMemberCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConversationMemberCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConversationMemberCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
+     * @return a ConversationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> post(@jakarta.annotation.Nonnull final ConversationMember body) {
+    @jakarta.annotation.Nullable
+    public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body) {
         return post(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
+     * @return a ConversationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> post(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list. This API is available in the following national cloud deployments.
@@ -145,7 +145,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This API is available in the following national cloud deployments.
+     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

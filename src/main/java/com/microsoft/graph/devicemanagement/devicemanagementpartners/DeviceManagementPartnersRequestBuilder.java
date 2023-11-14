@@ -60,52 +60,52 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceManagementPartner objects.
-     * @return a CompletableFuture of DeviceManagementPartnerCollectionResponse
+     * @return a DeviceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartnerCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagementPartnerCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementPartnerCollectionResponse
+     * @return a DeviceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartnerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceManagementPartner object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceManagementPartner
+     * @return a DeviceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> post(@jakarta.annotation.Nonnull final DeviceManagementPartner body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementPartner post(@jakarta.annotation.Nonnull final DeviceManagementPartner body) {
         return post(body, null);
     }
     /**
      * Create a new deviceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementPartner
+     * @return a DeviceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> post(@jakarta.annotation.Nonnull final DeviceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementPartner post(@jakarta.annotation.Nonnull final DeviceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceManagementPartner objects.

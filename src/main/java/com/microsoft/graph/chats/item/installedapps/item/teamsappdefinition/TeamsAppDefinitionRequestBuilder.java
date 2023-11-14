@@ -38,24 +38,24 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The details of this version of the app.
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> get() {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition get() {
         return get(null);
     }
     /**
      * The details of this version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The details of this version of the app.

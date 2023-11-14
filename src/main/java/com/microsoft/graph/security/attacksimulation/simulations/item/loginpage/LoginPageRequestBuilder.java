@@ -37,28 +37,28 @@ public class LoginPageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}/loginPage{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get loginPage from security
-     * @return a CompletableFuture of LoginPage
+     * The login page associated with a simulation during its creation.
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> get() {
+    @jakarta.annotation.Nullable
+    public LoginPage get() {
         return get(null);
     }
     /**
-     * Get loginPage from security
+     * The login page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LoginPage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get loginPage from security
+     * The login page associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class LoginPageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get loginPage from security
+     * The login page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class LoginPageRequestBuilder extends BaseRequestBuilder {
         return new LoginPageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get loginPage from security
+     * The login page associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

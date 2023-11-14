@@ -60,52 +60,52 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
+     * @return a EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoverySearchCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EdiscoverySearchCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
+     * @return a EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoverySearchCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoverySearchCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoverySearchCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoverySearchCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of EdiscoverySearch
+     * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoverySearch> post(@jakarta.annotation.Nonnull final EdiscoverySearch body) {
+    @jakarta.annotation.Nullable
+    public EdiscoverySearch post(@jakarta.annotation.Nonnull final EdiscoverySearch body) {
         return post(body, null);
     }
     /**
      * Create a new ediscoverySearch object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoverySearch
+     * @return a EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoverySearch> post(@jakarta.annotation.Nonnull final EdiscoverySearch body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoverySearch post(@jakarta.annotation.Nonnull final EdiscoverySearch body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoverySearch::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoverySearch::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object. This API is available in the following national cloud deployments.

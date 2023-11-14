@@ -60,50 +60,50 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the synchronization templates associated with a given application or service principal. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of SynchronizationTemplateCollectionResponse
+     * @return a SynchronizationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationTemplateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SynchronizationTemplateCollectionResponse get() {
         return get(null);
     }
     /**
      * List the synchronization templates associated with a given application or service principal. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SynchronizationTemplateCollectionResponse
+     * @return a SynchronizationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SynchronizationTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SynchronizationTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SynchronizationTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to templates for applications
      * @param body The request body
-     * @return a CompletableFuture of SynchronizationTemplate
+     * @return a SynchronizationTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationTemplate> post(@jakarta.annotation.Nonnull final SynchronizationTemplate body) {
+    @jakarta.annotation.Nullable
+    public SynchronizationTemplate post(@jakarta.annotation.Nonnull final SynchronizationTemplate body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to templates for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SynchronizationTemplate
+     * @return a SynchronizationTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationTemplate> post(@jakarta.annotation.Nonnull final SynchronizationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SynchronizationTemplate post(@jakarta.annotation.Nonnull final SynchronizationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SynchronizationTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SynchronizationTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List the synchronization templates associated with a given application or service principal. This API is available in the following national cloud deployments.

@@ -103,66 +103,64 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property list for drives
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property list for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
-     * @return a CompletableFuture of List
+     * @return a List
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<List> get() {
+    @jakarta.annotation.Nullable
+    public List get() {
         return get(null);
     }
     /**
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of List
+     * @return a List
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<List> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public List get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, List::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, List::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property list in drives
      * @param body The request body
-     * @return a CompletableFuture of List
+     * @return a List
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body) {
+    @jakarta.annotation.Nullable
+    public List patch(@jakarta.annotation.Nonnull final List body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property list in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of List
+     * @return a List
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public List patch(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, List::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, List::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property list for drives
@@ -189,6 +187,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

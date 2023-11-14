@@ -23,6 +23,10 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     private OffsetDateTime activatedDateTime;
     /**
+     * The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. The default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it isn't automatically extended.
+     */
+    private PeriodAndDuration autoExtendDuration;
+    /**
      * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      */
     private OffsetDateTime createdDateTime;
@@ -106,6 +110,14 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         return this.activatedDateTime;
     }
     /**
+     * Gets the autoExtendDuration property value. The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. The default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it isn't automatically extended.
+     * @return a PeriodAndDuration
+     */
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getAutoExtendDuration() {
+        return this.autoExtendDuration;
+    }
+    /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      * @return a OffsetDateTime
      */
@@ -155,6 +167,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         deserializerMap.put("accessAssignments", (n) -> { this.setAccessAssignments(n.getCollectionOfObjectValues(DelegatedAdminAccessAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("accessDetails", (n) -> { this.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("activatedDateTime", (n) -> { this.setActivatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("autoExtendDuration", (n) -> { this.setAutoExtendDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(DelegatedAdminRelationshipCustomerParticipant::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -208,6 +221,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("accessAssignments", this.getAccessAssignments());
         writer.writeObjectValue("accessDetails", this.getAccessDetails());
         writer.writeOffsetDateTimeValue("activatedDateTime", this.getActivatedDateTime());
+        writer.writePeriodAndDurationValue("autoExtendDuration", this.getAutoExtendDuration());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("customer", this.getCustomer());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -238,6 +252,13 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     public void setActivatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activatedDateTime = value;
+    }
+    /**
+     * Sets the autoExtendDuration property value. The duration by which the validity of the relationship is automatically extended, denoted in ISO 8601 format. Supported values are: P0D, PT0S, P180D. The default value is PT0S. PT0S indicates that the relationship expires when the endDateTime is reached and it isn't automatically extended.
+     * @param value Value to set for the autoExtendDuration property.
+     */
+    public void setAutoExtendDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
+        this.autoExtendDuration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.

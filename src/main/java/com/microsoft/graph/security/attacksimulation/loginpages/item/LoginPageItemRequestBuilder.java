@@ -39,66 +39,64 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property loginPages for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property loginPages for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get loginPages from security
-     * @return a CompletableFuture of LoginPage
+     * Represents an attack simulation training login page.
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> get() {
+    @jakarta.annotation.Nullable
+    public LoginPage get() {
         return get(null);
     }
     /**
-     * Get loginPages from security
+     * Represents an attack simulation training login page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LoginPage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property loginPages in security
      * @param body The request body
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> patch(@jakarta.annotation.Nonnull final LoginPage body) {
+    @jakarta.annotation.Nullable
+    public LoginPage patch(@jakarta.annotation.Nonnull final LoginPage body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property loginPages in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> patch(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LoginPage patch(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property loginPages for security
@@ -125,10 +123,11 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get loginPages from security
+     * Represents an attack simulation training login page.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +135,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get loginPages from security
+     * Represents an attack simulation training login page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +204,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get loginPages from security
+     * Represents an attack simulation training login page.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

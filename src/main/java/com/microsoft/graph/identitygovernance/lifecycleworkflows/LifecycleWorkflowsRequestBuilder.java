@@ -87,66 +87,64 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get lifecycleWorkflows from identityGovernance
-     * @return a CompletableFuture of LifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> get() {
+    @jakarta.annotation.Nullable
+    public LifecycleWorkflowsContainer get() {
         return get(null);
     }
     /**
      * Get lifecycleWorkflows from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LifecycleWorkflowsContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LifecycleWorkflowsContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LifecycleWorkflowsContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property lifecycleWorkflows in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of LifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body) {
+    @jakarta.annotation.Nullable
+    public LifecycleWorkflowsContainer patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property lifecycleWorkflows in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LifecycleWorkflowsContainer> patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LifecycleWorkflowsContainer patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LifecycleWorkflowsContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LifecycleWorkflowsContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance
@@ -173,6 +171,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

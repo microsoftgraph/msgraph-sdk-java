@@ -59,52 +59,52 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/landingPages/{landingPage%2Did}/details{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get details from security
-     * @return a CompletableFuture of LandingPageDetailCollectionResponse
+     * The detail information for a landing page associated with a simulation during its creation.
+     * @return a LandingPageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetailCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LandingPageDetailCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LandingPageDetailCollectionResponse
+     * @return a LandingPageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetailCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LandingPageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LandingPageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to details for security
      * @param body The request body
-     * @return a CompletableFuture of LandingPageDetail
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> post(@jakarta.annotation.Nonnull final LandingPageDetail body) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail post(@jakarta.annotation.Nonnull final LandingPageDetail body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to details for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LandingPageDetail
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> post(@jakarta.annotation.Nonnull final LandingPageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail post(@jakarta.annotation.Nonnull final LandingPageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +175,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
         return new DetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

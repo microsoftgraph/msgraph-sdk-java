@@ -47,70 +47,68 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property line for drives
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property line for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookChartLineFormat get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of chartlineformat object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartLineFormat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartLineFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartLineFormat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of WorkbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartLineFormat patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body) {
         return patch(body, null);
     }
     /**
      * Update the properties of chartlineformat object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      * @see <a href="https://learn.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartLineFormat patch(@jakarta.annotation.Nonnull final WorkbookChartLineFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartLineFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartLineFormat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property line for drives
@@ -137,6 +135,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

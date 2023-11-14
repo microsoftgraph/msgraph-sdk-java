@@ -38,24 +38,24 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Navigation link to the terms and conditions that are assigned.
-     * @return a CompletableFuture of TermsAndConditions
+     * @return a TermsAndConditions
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> get() {
+    @jakarta.annotation.Nullable
+    public TermsAndConditions get() {
         return get(null);
     }
     /**
      * Navigation link to the terms and conditions that are assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsAndConditions
+     * @return a TermsAndConditions
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditions::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditions::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Navigation link to the terms and conditions that are assigned.

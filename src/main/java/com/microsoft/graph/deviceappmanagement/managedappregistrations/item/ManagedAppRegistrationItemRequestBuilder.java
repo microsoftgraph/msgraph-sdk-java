@@ -63,68 +63,66 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property managedAppRegistrations for deviceAppManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property managedAppRegistrations for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
-     * @return a CompletableFuture of ManagedAppRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * Read properties and relationships of the androidManagedAppRegistration object.
+     * @return a ManagedAppRegistration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the androidManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a ManagedAppRegistration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property managedAppRegistrations for deviceAppManagement
@@ -151,10 +149,11 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the androidManagedAppRegistration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -162,7 +161,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the androidManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -231,7 +230,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * Read properties and relationships of the androidManagedAppRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

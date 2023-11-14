@@ -60,50 +60,50 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ListItemVersionCollectionResponse
+     * @return a ListItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ListItemVersionCollectionResponse get() {
         return get(null);
     }
     /**
      * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ListItemVersionCollectionResponse
+     * @return a ListItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ListItemVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ListItemVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ListItemVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to versions for shares
      * @param body The request body
-     * @return a CompletableFuture of ListItemVersion
+     * @return a ListItemVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> post(@jakarta.annotation.Nonnull final ListItemVersion body) {
+    @jakarta.annotation.Nullable
+    public ListItemVersion post(@jakarta.annotation.Nonnull final ListItemVersion body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to versions for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ListItemVersion
+     * @return a ListItemVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> post(@jakarta.annotation.Nonnull final ListItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ListItemVersion post(@jakarta.annotation.Nonnull final ListItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ListItemVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ListItemVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * SharePoint can be configured to retain the history for list items. Previous versions may be retained for a finite period of time depending on admin settings which may be unique per user or location. This API is available in the following national cloud deployments.

@@ -60,48 +60,48 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The async operations that ran or are running on this team.
-     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
+     * @return a TeamsAsyncOperationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TeamsAsyncOperationCollectionResponse get() {
         return get(null);
     }
     /**
      * The async operations that ran or are running on this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
+     * @return a TeamsAsyncOperationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAsyncOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAsyncOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAsyncOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to operations for users
      * @param body The request body
-     * @return a CompletableFuture of TeamsAsyncOperation
+     * @return a TeamsAsyncOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body) {
+    @jakarta.annotation.Nullable
+    public TeamsAsyncOperation post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to operations for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAsyncOperation
+     * @return a TeamsAsyncOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAsyncOperation post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAsyncOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAsyncOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The async operations that ran or are running on this team.

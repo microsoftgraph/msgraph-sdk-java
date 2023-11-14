@@ -37,28 +37,28 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}/landingPage{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get landingPage from security
-     * @return a CompletableFuture of LandingPage
+     * The landing page associated with a simulation during its creation.
+     * @return a LandingPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPage> get() {
+    @jakarta.annotation.Nullable
+    public LandingPage get() {
         return get(null);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LandingPage
+     * @return a LandingPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LandingPage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LandingPage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LandingPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return new LandingPageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get landingPage from security
+     * The landing page associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

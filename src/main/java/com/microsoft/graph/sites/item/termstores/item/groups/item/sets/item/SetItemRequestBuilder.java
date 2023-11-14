@@ -71,66 +71,64 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property sets for sites
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property sets for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * All sets under the group in a term [store].
-     * @return a CompletableFuture of Set
+     * @return a Set
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Set> get() {
+    @jakarta.annotation.Nullable
+    public Set get() {
         return get(null);
     }
     /**
      * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Set
+     * @return a Set
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Set> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Set get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property sets in sites
      * @param body The request body
-     * @return a CompletableFuture of Set
+     * @return a Set
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Set> patch(@jakarta.annotation.Nonnull final Set body) {
+    @jakarta.annotation.Nullable
+    public Set patch(@jakarta.annotation.Nonnull final Set body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property sets in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Set
+     * @return a Set
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Set> patch(@jakarta.annotation.Nonnull final Set body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Set patch(@jakarta.annotation.Nonnull final Set body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Set::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property sets for sites
@@ -157,6 +155,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

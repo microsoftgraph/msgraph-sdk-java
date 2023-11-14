@@ -38,24 +38,24 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of historical records associated to this WHOIS object.
-     * @return a CompletableFuture of WhoisHistoryRecord
+     * @return a WhoisHistoryRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> get() {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecord get() {
         return get(null);
     }
     /**
      * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WhoisHistoryRecord
+     * @return a WhoisHistoryRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecord get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of historical records associated to this WHOIS object.

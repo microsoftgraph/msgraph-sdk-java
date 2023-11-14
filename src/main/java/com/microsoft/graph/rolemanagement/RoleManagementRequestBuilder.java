@@ -54,48 +54,48 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get roleManagement
-     * @return a CompletableFuture of RoleManagement
+     * @return a RoleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleManagement> get() {
+    @jakarta.annotation.Nullable
+    public RoleManagement get() {
         return get(null);
     }
     /**
      * Get roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleManagement
+     * @return a RoleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoleManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoleManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoleManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update roleManagement
      * @param body The request body
-     * @return a CompletableFuture of RoleManagement
+     * @return a RoleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleManagement> patch(@jakarta.annotation.Nonnull final RoleManagement body) {
+    @jakarta.annotation.Nullable
+    public RoleManagement patch(@jakarta.annotation.Nonnull final RoleManagement body) {
         return patch(body, null);
     }
     /**
      * Update roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleManagement
+     * @return a RoleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleManagement> patch(@jakarta.annotation.Nonnull final RoleManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoleManagement patch(@jakarta.annotation.Nonnull final RoleManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoleManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoleManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get roleManagement

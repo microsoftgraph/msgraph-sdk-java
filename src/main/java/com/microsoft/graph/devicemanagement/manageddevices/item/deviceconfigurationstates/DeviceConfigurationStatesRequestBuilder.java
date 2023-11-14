@@ -60,48 +60,48 @@ public class DeviceConfigurationStatesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Device configuration states for this device.
-     * @return a CompletableFuture of DeviceConfigurationStateCollectionResponse
+     * @return a DeviceConfigurationStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationStateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationStateCollectionResponse get() {
         return get(null);
     }
     /**
      * Device configuration states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfigurationStateCollectionResponse
+     * @return a DeviceConfigurationStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfigurationStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfigurationStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deviceConfigurationStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of DeviceConfigurationState
+     * @return a DeviceConfigurationState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationState> post(@jakarta.annotation.Nonnull final DeviceConfigurationState body) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationState post(@jakarta.annotation.Nonnull final DeviceConfigurationState body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deviceConfigurationStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfigurationState
+     * @return a DeviceConfigurationState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationState> post(@jakarta.annotation.Nonnull final DeviceConfigurationState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationState post(@jakarta.annotation.Nonnull final DeviceConfigurationState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfigurationState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfigurationState::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Device configuration states for this device.

@@ -60,52 +60,52 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of LearningProviderCollectionResponse
+     * @return a LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningProviderCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LearningProviderCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningProviderCollectionResponse
+     * @return a LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningProviderCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LearningProviderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LearningProviderCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LearningProviderCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of LearningProvider
+     * @return a LearningProvider
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningProvider> post(@jakarta.annotation.Nonnull final LearningProvider body) {
+    @jakarta.annotation.Nullable
+    public LearningProvider post(@jakarta.annotation.Nonnull final LearningProvider body) {
         return post(body, null);
     }
     /**
      * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningProvider
+     * @return a LearningProvider
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningProvider> post(@jakarta.annotation.Nonnull final LearningProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LearningProvider post(@jakarta.annotation.Nonnull final LearningProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LearningProvider::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LearningProvider::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant. This API is available in the following national cloud deployments.

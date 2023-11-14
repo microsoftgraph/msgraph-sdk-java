@@ -60,48 +60,48 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of workbookCommentReply object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookCommentReplyCollectionResponse
+     * @return a WorkbookCommentReplyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentReplyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentReplyCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of workbookCommentReply object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookCommentReplyCollectionResponse
+     * @return a WorkbookCommentReplyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentReplyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentReplyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookCommentReplyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookCommentReplyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to replies for drives
      * @param body The request body
-     * @return a CompletableFuture of WorkbookCommentReply
+     * @return a WorkbookCommentReply
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentReply> post(@jakarta.annotation.Nonnull final WorkbookCommentReply body) {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentReply post(@jakarta.annotation.Nonnull final WorkbookCommentReply body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to replies for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookCommentReply
+     * @return a WorkbookCommentReply
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentReply> post(@jakarta.annotation.Nonnull final WorkbookCommentReply body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentReply post(@jakarta.annotation.Nonnull final WorkbookCommentReply body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookCommentReply::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookCommentReply::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of workbookCommentReply object. This API is available in the following national cloud deployments.

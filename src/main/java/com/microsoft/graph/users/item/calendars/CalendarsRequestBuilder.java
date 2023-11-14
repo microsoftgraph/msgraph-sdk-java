@@ -60,52 +60,52 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of CalendarCollectionResponse
+     * @return a CalendarCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CalendarCollectionResponse get() {
         return get(null);
     }
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CalendarCollectionResponse
+     * @return a CalendarCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CalendarCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CalendarCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CalendarCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new calendar for a user. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Calendar
+     * @return a Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-calendars?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> post(@jakarta.annotation.Nonnull final Calendar body) {
+    @jakarta.annotation.Nullable
+    public Calendar post(@jakarta.annotation.Nonnull final Calendar body) {
         return post(body, null);
     }
     /**
      * Create a new calendar for a user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Calendar
+     * @return a Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-calendars?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> post(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Calendar post(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group.  This API is available in the following national cloud deployments.

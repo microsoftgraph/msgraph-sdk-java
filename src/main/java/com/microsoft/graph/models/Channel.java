@@ -50,11 +50,15 @@ public class Channel extends Entity implements Parsable {
      */
     private java.util.List<SharedWithChannelTeamInfo> sharedWithTeams;
     /**
+     * Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     */
+    private ChannelSummary summary;
+    /**
      * A collection of all the tabs in the channel. A navigation property.
      */
     private java.util.List<TeamsTab> tabs;
     /**
-     * The ID of the Azure Active Directory tenant.
+     * The ID of the Microsoft Entra tenant.
      */
     private String tenantId;
     /**
@@ -126,6 +130,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
@@ -180,6 +185,14 @@ public class Channel extends Entity implements Parsable {
         return this.sharedWithTeams;
     }
     /**
+     * Gets the summary property value. Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     * @return a ChannelSummary
+     */
+    @jakarta.annotation.Nullable
+    public ChannelSummary getSummary() {
+        return this.summary;
+    }
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return a java.util.List<TeamsTab>
      */
@@ -188,7 +201,7 @@ public class Channel extends Entity implements Parsable {
         return this.tabs;
     }
     /**
-     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -220,6 +233,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
+        writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
@@ -295,6 +309,13 @@ public class Channel extends Entity implements Parsable {
         this.sharedWithTeams = value;
     }
     /**
+     * Sets the summary property value. Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
+     * @param value Value to set for the summary property.
+     */
+    public void setSummary(@jakarta.annotation.Nullable final ChannelSummary value) {
+        this.summary = value;
+    }
+    /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @param value Value to set for the tabs property.
      */
@@ -302,7 +323,7 @@ public class Channel extends Entity implements Parsable {
         this.tabs = value;
     }
     /**
-     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

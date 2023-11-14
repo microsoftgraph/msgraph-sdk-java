@@ -60,52 +60,52 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AllowedValueCollectionResponse
+     * @return a AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedValueCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AllowedValueCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AllowedValueCollectionResponse
+     * @return a AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedValueCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AllowedValueCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AllowedValueCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AllowedValueCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new allowedValue object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of AllowedValue
+     * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedValue> post(@jakarta.annotation.Nonnull final AllowedValue body) {
+    @jakarta.annotation.Nullable
+    public AllowedValue post(@jakarta.annotation.Nonnull final AllowedValue body) {
         return post(body, null);
     }
     /**
      * Create a new allowedValue object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AllowedValue
+     * @return a AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllowedValue> post(@jakarta.annotation.Nonnull final AllowedValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AllowedValue post(@jakarta.annotation.Nonnull final AllowedValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AllowedValue::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AllowedValue::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the allowedValue objects and their properties. This API is available in the following national cloud deployments.

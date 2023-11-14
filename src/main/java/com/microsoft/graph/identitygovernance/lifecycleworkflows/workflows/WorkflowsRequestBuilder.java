@@ -60,52 +60,52 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkflowCollectionResponse
+     * @return a WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkflowCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkflowCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkflowCollectionResponse
+     * @return a WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkflowCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkflowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkflowCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkflowCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Workflow
+     * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-workflows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> post(@jakarta.annotation.Nonnull final Workflow body) {
+    @jakarta.annotation.Nullable
+    public Workflow post(@jakarta.annotation.Nonnull final Workflow body) {
         return post(body, null);
     }
     /**
      * Create a new workflow object. You can create up to 50 workflows in a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Workflow
+     * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-workflows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> post(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Workflow post(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Workflow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Workflow::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of workflow resources that are associated with lifecycle workflows. This API is available in the following national cloud deployments.

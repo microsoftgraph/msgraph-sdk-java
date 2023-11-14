@@ -38,24 +38,24 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The application that is linked to the tab. This can't be changed after tab creation.
-     * @return a CompletableFuture of TeamsApp
+     * @return a TeamsApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> get() {
+    @jakarta.annotation.Nullable
+    public TeamsApp get() {
         return get(null);
     }
     /**
      * The application that is linked to the tab. This can't be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsApp
+     * @return a TeamsApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The application that is linked to the tab. This can't be changed after tab creation.

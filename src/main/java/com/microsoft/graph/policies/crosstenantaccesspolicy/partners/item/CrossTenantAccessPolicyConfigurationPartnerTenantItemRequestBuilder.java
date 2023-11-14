@@ -48,71 +48,69 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> get() {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a partner-specific configuration. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration. This API is available in the following national cloud deployments.
@@ -139,6 +137,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

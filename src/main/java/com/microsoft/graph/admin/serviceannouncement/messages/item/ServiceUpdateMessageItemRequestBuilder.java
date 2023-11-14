@@ -55,68 +55,66 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messages for admin
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property messages for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ServiceUpdateMessage
+     * @return a ServiceUpdateMessage
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> get() {
+    @jakarta.annotation.Nullable
+    public ServiceUpdateMessage get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceUpdateMessage
+     * @return a ServiceUpdateMessage
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ServiceUpdateMessage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ServiceUpdateMessage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ServiceUpdateMessage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property messages in admin
      * @param body The request body
-     * @return a CompletableFuture of ServiceUpdateMessage
+     * @return a ServiceUpdateMessage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body) {
+    @jakarta.annotation.Nullable
+    public ServiceUpdateMessage patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property messages in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceUpdateMessage
+     * @return a ServiceUpdateMessage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ServiceUpdateMessage patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ServiceUpdateMessage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ServiceUpdateMessage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property messages for admin
@@ -143,6 +141,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

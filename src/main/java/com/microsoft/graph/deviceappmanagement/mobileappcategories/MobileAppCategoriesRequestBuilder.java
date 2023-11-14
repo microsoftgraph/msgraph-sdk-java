@@ -60,52 +60,52 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the mobileAppCategory objects.
-     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
+     * @return a MobileAppCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppCategoryCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the mobileAppCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
+     * @return a MobileAppCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new mobileAppCategory object.
      * @param body The request body
-     * @return a CompletableFuture of MobileAppCategory
+     * @return a MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@jakarta.annotation.Nonnull final MobileAppCategory body) {
+    @jakarta.annotation.Nullable
+    public MobileAppCategory post(@jakarta.annotation.Nonnull final MobileAppCategory body) {
         return post(body, null);
     }
     /**
      * Create a new mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppCategory
+     * @return a MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@jakarta.annotation.Nonnull final MobileAppCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppCategory post(@jakarta.annotation.Nonnull final MobileAppCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the mobileAppCategory objects.

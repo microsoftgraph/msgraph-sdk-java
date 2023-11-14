@@ -14,15 +14,15 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The appScope property
+     * App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      */
     private OAuthAppScope appScope;
     /**
-     * The displayLogo property
+     * App display logo.
      */
     private String displayLogo;
     /**
-     * The displayName property
+     * App name.
      */
     private String displayName;
     /**
@@ -54,7 +54,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the appScope property value. The appScope property
+     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @return a OAuthAppScope
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return this.appScope;
     }
     /**
-     * Gets the displayLogo property value. The displayLogo property
+     * Gets the displayLogo property value. App display logo.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return this.displayLogo;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. App name.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -118,21 +118,21 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the appScope property value. The appScope property
+     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final OAuthAppScope value) {
         this.appScope = value;
     }
     /**
-     * Sets the displayLogo property value. The displayLogo property
+     * Sets the displayLogo property value. App display logo.
      * @param value Value to set for the displayLogo property.
      */
     public void setDisplayLogo(@jakarta.annotation.Nullable final String value) {
         this.displayLogo = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. App name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

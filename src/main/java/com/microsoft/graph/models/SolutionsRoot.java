@@ -26,6 +26,10 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
+     * The virtualEvents property
+     */
+    private VirtualEventsRoot virtualEvents;
+    /**
      * Instantiates a new SolutionsRoot and sets the default values.
      */
     public SolutionsRoot() {
@@ -71,10 +75,11 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("virtualEvents", (n) -> { this.setVirtualEvents(n.getObjectValue(VirtualEventsRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -86,6 +91,14 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
+     * Gets the virtualEvents property value. The virtualEvents property
+     * @return a VirtualEventsRoot
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventsRoot getVirtualEvents() {
+        return this.virtualEvents;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -94,6 +107,7 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("virtualEvents", this.getVirtualEvents());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +137,12 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
+    }
+    /**
+     * Sets the virtualEvents property value. The virtualEvents property
+     * @param value Value to set for the virtualEvents property.
+     */
+    public void setVirtualEvents(@jakarta.annotation.Nullable final VirtualEventsRoot value) {
+        this.virtualEvents = value;
     }
 }

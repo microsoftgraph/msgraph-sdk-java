@@ -46,24 +46,24 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get bitlocker from informationProtection
-     * @return a CompletableFuture of Bitlocker
+     * @return a Bitlocker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Bitlocker> get() {
+    @jakarta.annotation.Nullable
+    public Bitlocker get() {
         return get(null);
     }
     /**
      * Get bitlocker from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Bitlocker
+     * @return a Bitlocker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Bitlocker> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Bitlocker get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Bitlocker::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Bitlocker::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get bitlocker from informationProtection

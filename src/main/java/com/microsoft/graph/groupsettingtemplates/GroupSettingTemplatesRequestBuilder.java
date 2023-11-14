@@ -92,50 +92,50 @@ public class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of GroupSettingTemplateCollectionResponse
+     * @return a GroupSettingTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GroupSettingTemplateCollectionResponse get() {
         return get(null);
     }
     /**
      * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupSettingTemplateCollectionResponse
+     * @return a GroupSettingTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupSettingTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupSettingTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupSettingTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to groupSettingTemplates
      * @param body The request body
-     * @return a CompletableFuture of GroupSettingTemplate
+     * @return a GroupSettingTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> post(@jakarta.annotation.Nonnull final GroupSettingTemplate body) {
+    @jakarta.annotation.Nullable
+    public GroupSettingTemplate post(@jakarta.annotation.Nonnull final GroupSettingTemplate body) {
         return post(body, null);
     }
     /**
      * Add new entity to groupSettingTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupSettingTemplate
+     * @return a GroupSettingTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> post(@jakarta.annotation.Nonnull final GroupSettingTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupSettingTemplate post(@jakarta.annotation.Nonnull final GroupSettingTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupSettingTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupSettingTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. This API is available in the following national cloud deployments.

@@ -60,48 +60,48 @@ public class MetricDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The work from anywhere metric devices. Read-only.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse get() {
         return get(null);
     }
     /**
      * The work from anywhere metric devices. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDeviceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to metricDevices for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to metricDevices for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereDevice
+     * @return a UserExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereDevice post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The work from anywhere metric devices. Read-only.

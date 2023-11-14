@@ -47,66 +47,64 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property used for users
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property used for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> get() {
+    @jakarta.annotation.Nullable
+    public UsedInsight get() {
         return get(null);
     }
     /**
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UsedInsight get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property used in users
      * @param body The request body
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> patch(@jakarta.annotation.Nonnull final UsedInsight body) {
+    @jakarta.annotation.Nullable
+    public UsedInsight patch(@jakarta.annotation.Nonnull final UsedInsight body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property used in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> patch(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UsedInsight patch(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property used for users
@@ -133,6 +131,7 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

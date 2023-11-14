@@ -47,66 +47,64 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property planner for groups
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property planner for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Entry-point to Planner resource that might exist for a Unified Group.
-     * @return a CompletableFuture of PlannerGroup
+     * @return a PlannerGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerGroup> get() {
+    @jakarta.annotation.Nullable
+    public PlannerGroup get() {
         return get(null);
     }
     /**
      * Entry-point to Planner resource that might exist for a Unified Group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlannerGroup
+     * @return a PlannerGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PlannerGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PlannerGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PlannerGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property planner in groups
      * @param body The request body
-     * @return a CompletableFuture of PlannerGroup
+     * @return a PlannerGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerGroup> patch(@jakarta.annotation.Nonnull final PlannerGroup body) {
+    @jakarta.annotation.Nullable
+    public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property planner in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlannerGroup
+     * @return a PlannerGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerGroup> patch(@jakarta.annotation.Nonnull final PlannerGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PlannerGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PlannerGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property planner for groups
@@ -133,6 +131,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

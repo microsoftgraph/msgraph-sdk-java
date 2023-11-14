@@ -190,48 +190,48 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policies
-     * @return a CompletableFuture of PolicyRoot
+     * @return a PolicyRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> get() {
+    @jakarta.annotation.Nullable
+    public PolicyRoot get() {
         return get(null);
     }
     /**
      * Get policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PolicyRoot
+     * @return a PolicyRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PolicyRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update policies
      * @param body The request body
-     * @return a CompletableFuture of PolicyRoot
+     * @return a PolicyRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@jakarta.annotation.Nonnull final PolicyRoot body) {
+    @jakarta.annotation.Nullable
+    public PolicyRoot patch(@jakarta.annotation.Nonnull final PolicyRoot body) {
         return patch(body, null);
     }
     /**
      * Update policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PolicyRoot
+     * @return a PolicyRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> patch(@jakarta.annotation.Nonnull final PolicyRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PolicyRoot patch(@jakarta.annotation.Nonnull final PolicyRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PolicyRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get policies

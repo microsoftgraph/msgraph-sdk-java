@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+ * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeetingBase entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder {
@@ -47,68 +47,64 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property attendanceReports for users
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property attendanceReports for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of MeetingAttendanceReport
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
+     * Get attendanceReports from users
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> get() {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport get() {
         return get(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingAttendanceReport
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property attendanceReports in users
      * @param body The request body
-     * @return a CompletableFuture of MeetingAttendanceReport
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property attendanceReports in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingAttendanceReport
+     * @return a MeetingAttendanceReport
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MeetingAttendanceReport patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MeetingAttendanceReport::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property attendanceReports for users
@@ -135,10 +131,11 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from users
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +143,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +212,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is available in the following national cloud deployments.
+     * Get attendanceReports from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

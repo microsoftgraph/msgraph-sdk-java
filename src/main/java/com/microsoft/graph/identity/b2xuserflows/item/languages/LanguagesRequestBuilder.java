@@ -60,50 +60,50 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UserFlowLanguageConfigurationCollectionResponse
+     * @return a UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguageConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguageConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguageConfigurationCollectionResponse
+     * @return a UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguageConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguageConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguageConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to languages for identity
      * @param body The request body
-     * @return a CompletableFuture of UserFlowLanguageConfiguration
+     * @return a UserFlowLanguageConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguageConfiguration post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to languages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguageConfiguration
+     * @return a UserFlowLanguageConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguageConfiguration post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguageConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguageConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow. This API is available in the following national cloud deployments.

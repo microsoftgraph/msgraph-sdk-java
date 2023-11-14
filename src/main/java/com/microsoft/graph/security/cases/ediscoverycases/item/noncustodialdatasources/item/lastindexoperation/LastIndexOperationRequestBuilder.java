@@ -38,24 +38,24 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Operation entity that represents the latest indexing for the noncustodial data source.
-     * @return a CompletableFuture of EdiscoveryIndexOperation
+     * @return a EdiscoveryIndexOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get() {
+    @jakarta.annotation.Nullable
+    public EdiscoveryIndexOperation get() {
         return get(null);
     }
     /**
      * Operation entity that represents the latest indexing for the noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryIndexOperation
+     * @return a EdiscoveryIndexOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryIndexOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoveryIndexOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoveryIndexOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Operation entity that represents the latest indexing for the noncustodial data source.

@@ -60,50 +60,50 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of accessPackageResource objects in an accessPackageCatalog. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AccessPackageResourceCollectionResponse
+     * @return a AccessPackageResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of accessPackageResource objects in an accessPackageCatalog. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceCollectionResponse
+     * @return a AccessPackageResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resources for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageResource
+     * @return a AccessPackageResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResource> post(@jakarta.annotation.Nonnull final AccessPackageResource body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResource post(@jakarta.annotation.Nonnull final AccessPackageResource body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resources for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResource
+     * @return a AccessPackageResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResource> post(@jakarta.annotation.Nonnull final AccessPackageResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResource post(@jakarta.annotation.Nonnull final AccessPackageResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of accessPackageResource objects in an accessPackageCatalog. This API is available in the following national cloud deployments.

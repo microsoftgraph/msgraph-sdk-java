@@ -59,24 +59,24 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of users who can approve the request. Currently only supported for requests of type delete.
-     * @return a CompletableFuture of UserCollectionResponse
+     * @return a UserCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserCollectionResponse get() {
         return get(null);
     }
     /**
      * Collection of users who can approve the request. Currently only supported for requests of type delete.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserCollectionResponse
+     * @return a UserCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Collection of users who can approve the request. Currently only supported for requests of type delete.

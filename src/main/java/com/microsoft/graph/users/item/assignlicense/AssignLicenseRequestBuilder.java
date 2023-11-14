@@ -38,28 +38,28 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
     /**
      * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of User
+     * @return a User
      * @see <a href="https://learn.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> post(@jakarta.annotation.Nonnull final AssignLicensePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public User post(@jakarta.annotation.Nonnull final AssignLicensePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of User
+     * @return a User
      * @see <a href="https://learn.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> post(@jakarta.annotation.Nonnull final AssignLicensePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public User post(@jakarta.annotation.Nonnull final AssignLicensePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. This API is available in the following national cloud deployments.

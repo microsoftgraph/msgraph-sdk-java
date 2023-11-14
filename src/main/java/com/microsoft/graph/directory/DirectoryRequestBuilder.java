@@ -4,6 +4,7 @@ import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequ
 import com.microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
 import com.microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
 import com.microsoft.graph.models.Directory;
@@ -55,6 +56,13 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
+        return new DeviceLocalCredentialsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
      */
     @jakarta.annotation.Nonnull
@@ -86,48 +94,48 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get directory
-     * @return a CompletableFuture of Directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> get() {
+    @jakarta.annotation.Nullable
+    public Directory get() {
         return get(null);
     }
     /**
      * Get directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Directory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update directory
      * @param body The request body
-     * @return a CompletableFuture of Directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> patch(@jakarta.annotation.Nonnull final Directory body) {
+    @jakarta.annotation.Nullable
+    public Directory patch(@jakarta.annotation.Nonnull final Directory body) {
         return patch(body, null);
     }
     /**
      * Update directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> patch(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Directory patch(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get directory

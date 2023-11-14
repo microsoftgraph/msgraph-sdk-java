@@ -37,71 +37,75 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people/profileCardProperties/{profileCardProperty%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get profileCardProperties from admin
-     * @return a CompletableFuture of ProfileCardProperty
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
+     * @return a ProfileCardProperty
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfileCardProperty> get() {
+    @jakarta.annotation.Nullable
+    public ProfileCardProperty get() {
         return get(null);
     }
     /**
-     * Get profileCardProperties from admin
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ProfileCardProperty
+     * @return a ProfileCardProperty
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfileCardProperty> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfileCardProperty get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfileCardProperty::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProfileCardProperty::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
-     * @return a CompletableFuture of ProfileCardProperty
+     * @return a ProfileCardProperty
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfileCardProperty> patch(@jakarta.annotation.Nonnull final ProfileCardProperty body) {
+    @jakarta.annotation.Nullable
+    public ProfileCardProperty patch(@jakarta.annotation.Nonnull final ProfileCardProperty body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ProfileCardProperty
+     * @return a ProfileCardProperty
+     * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfileCardProperty> patch(@jakarta.annotation.Nonnull final ProfileCardProperty body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfileCardProperty patch(@jakarta.annotation.Nonnull final ProfileCardProperty body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfileCardProperty::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProfileCardProperty::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +113,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -125,10 +129,11 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get profileCardProperties from admin
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +141,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get profileCardProperties from admin
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +162,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -166,7 +171,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +210,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get profileCardProperties from admin
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

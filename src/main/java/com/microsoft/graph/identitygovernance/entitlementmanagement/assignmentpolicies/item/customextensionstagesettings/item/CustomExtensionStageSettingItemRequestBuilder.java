@@ -47,66 +47,64 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
     /**
      * Delete navigation property customExtensionStageSettings for identityGovernance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property customExtensionStageSettings for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> get() {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting get() {
         return get(null);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property customExtensionStageSettings for identityGovernance
@@ -133,6 +131,7 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

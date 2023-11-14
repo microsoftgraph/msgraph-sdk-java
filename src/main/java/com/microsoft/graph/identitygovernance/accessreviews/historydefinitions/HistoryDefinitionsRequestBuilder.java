@@ -60,52 +60,52 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
+     * @return a AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinitionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessReviewHistoryDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
+     * @return a AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessReviewHistoryDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of AccessReviewHistoryDefinition
+     * @return a AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body) {
+    @jakarta.annotation.Nullable
+    public AccessReviewHistoryDefinition post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body) {
         return post(body, null);
     }
     /**
      * Create a new accessReviewHistoryDefinition object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewHistoryDefinition
+     * @return a AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessReviewHistoryDefinition post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessReviewHistoryDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessReviewHistoryDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties. This API is available in the following national cloud deployments.

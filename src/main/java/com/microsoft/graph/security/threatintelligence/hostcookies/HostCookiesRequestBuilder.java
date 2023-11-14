@@ -60,48 +60,48 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of HostCookieCollectionResponse
+     * @return a HostCookieCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public HostCookieCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostCookieCollectionResponse
+     * @return a HostCookieCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostCookieCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostCookieCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostCookieCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to hostCookies for security
      * @param body The request body
-     * @return a CompletableFuture of HostCookie
+     * @return a HostCookie
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body) {
+    @jakarta.annotation.Nullable
+    public HostCookie post(@jakarta.annotation.Nonnull final HostCookie body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to hostCookies for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostCookie
+     * @return a HostCookie
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostCookie post(@jakarta.annotation.Nonnull final HostCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostCookie::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostCookie::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a hostCookie object. This API is available in the following national cloud deployments.

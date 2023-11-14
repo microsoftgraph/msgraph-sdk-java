@@ -40,71 +40,69 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
      * Delete a browserSharedCookie from a browserSiteList. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete a browserSharedCookie from a browserSiteList. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of BrowserSharedCookie
+     * @return a BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get() {
+    @jakarta.annotation.Nullable
+    public BrowserSharedCookie get() {
         return get(null);
     }
     /**
      * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BrowserSharedCookie
+     * @return a BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BrowserSharedCookie get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BrowserSharedCookie::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BrowserSharedCookie::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of a browserSharedCookie object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of BrowserSharedCookie
+     * @return a BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@jakarta.annotation.Nonnull final BrowserSharedCookie body) {
+    @jakarta.annotation.Nullable
+    public BrowserSharedCookie patch(@jakarta.annotation.Nonnull final BrowserSharedCookie body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a browserSharedCookie object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BrowserSharedCookie
+     * @return a BrowserSharedCookie
      * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@jakarta.annotation.Nonnull final BrowserSharedCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BrowserSharedCookie patch(@jakarta.annotation.Nonnull final BrowserSharedCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BrowserSharedCookie::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BrowserSharedCookie::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete a browserSharedCookie from a browserSiteList. This API is available in the following national cloud deployments.
@@ -131,6 +129,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

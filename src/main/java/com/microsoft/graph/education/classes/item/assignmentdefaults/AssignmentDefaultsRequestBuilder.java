@@ -39,70 +39,68 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property assignmentDefaults for education
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property assignmentDefaults for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each assignment creation if they don't want the default behaviors. Only teachers can perform this operation. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EducationAssignmentDefaults
+     * @return a EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentDefaults> get() {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentDefaults get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each assignment creation if they don't want the default behaviors. Only teachers can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentDefaults
+     * @return a EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentDefaults> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentDefaults get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentDefaults::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationAssignmentDefaults::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of EducationAssignmentDefaults
+     * @return a EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentDefaults> patch(@jakarta.annotation.Nonnull final EducationAssignmentDefaults body) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentDefaults patch(@jakarta.annotation.Nonnull final EducationAssignmentDefaults body) {
         return patch(body, null);
     }
     /**
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentDefaults
+     * @return a EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentDefaults> patch(@jakarta.annotation.Nonnull final EducationAssignmentDefaults body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentDefaults patch(@jakarta.annotation.Nonnull final EducationAssignmentDefaults body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentDefaults::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationAssignmentDefaults::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property assignmentDefaults for education
@@ -129,6 +127,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
