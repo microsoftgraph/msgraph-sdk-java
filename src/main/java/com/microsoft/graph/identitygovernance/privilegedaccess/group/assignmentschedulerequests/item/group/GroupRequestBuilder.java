@@ -46,24 +46,24 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get() {
+    @jakarta.annotation.Nullable
+    public Group get() {
         return get(null);
     }
     /**
      * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.

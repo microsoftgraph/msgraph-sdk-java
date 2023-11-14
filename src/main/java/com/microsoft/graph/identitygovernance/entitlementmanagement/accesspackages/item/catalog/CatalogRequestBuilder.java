@@ -38,24 +38,24 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Required when creating the access package. Read-only. Nullable.
-     * @return a CompletableFuture of AccessPackageCatalog
+     * @return a AccessPackageCatalog
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageCatalog get() {
         return get(null);
     }
     /**
      * Required when creating the access package. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageCatalog
+     * @return a AccessPackageCatalog
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageCatalog get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageCatalog::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageCatalog::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Required when creating the access package. Read-only. Nullable.

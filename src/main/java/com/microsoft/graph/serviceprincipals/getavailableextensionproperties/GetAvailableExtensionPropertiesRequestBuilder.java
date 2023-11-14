@@ -37,28 +37,28 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of GetAvailableExtensionPropertiesPostResponse
+     * @return a GetAvailableExtensionPropertiesPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesPostResponse> post(@jakarta.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public GetAvailableExtensionPropertiesPostResponse post(@jakarta.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetAvailableExtensionPropertiesPostResponse
+     * @return a GetAvailableExtensionPropertiesPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesPostResponse> post(@jakarta.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetAvailableExtensionPropertiesPostResponse post(@jakarta.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties: This API is available in the following national cloud deployments.

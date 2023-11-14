@@ -52,50 +52,50 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of SubscribedSkuCollectionResponse
+     * @return a SubscribedSkuCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSkuCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SubscribedSkuCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscribedSkuCollectionResponse
+     * @return a SubscribedSkuCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSkuCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SubscribedSkuCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubscribedSkuCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SubscribedSkuCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to subscribedSkus
      * @param body The request body
-     * @return a CompletableFuture of SubscribedSku
+     * @return a SubscribedSku
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> post(@jakarta.annotation.Nonnull final SubscribedSku body) {
+    @jakarta.annotation.Nullable
+    public SubscribedSku post(@jakarta.annotation.Nonnull final SubscribedSku body) {
         return post(body, null);
     }
     /**
      * Add new entity to subscribedSkus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscribedSku
+     * @return a SubscribedSku
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> post(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SubscribedSku post(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubscribedSku::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SubscribedSku::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing. This API is available in the following national cloud deployments.

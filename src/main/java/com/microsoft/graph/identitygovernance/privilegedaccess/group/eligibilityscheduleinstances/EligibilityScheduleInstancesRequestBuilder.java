@@ -70,54 +70,54 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
-     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstance
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupEligibilityScheduleInstance post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstance
+     * @return a PrivilegedAccessGroupEligibilityScheduleInstance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupEligibilityScheduleInstance post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
         return new EligibilityScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

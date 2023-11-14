@@ -53,7 +53,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageResource> resources;
     /**
-     * The settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Microsoft Entra entitlement management.
      */
     private EntitlementManagementSettings settings;
     /**
@@ -182,7 +182,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.resources;
     }
     /**
-     * Gets the settings property value. The settings that control the behavior of Azure AD entitlement management.
+     * Gets the settings property value. The settings that control the behavior of Microsoft Entra entitlement management.
      * @return a EntitlementManagementSettings
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.resources = value;
     }
     /**
-     * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
+     * Sets the settings property value. The settings that control the behavior of Microsoft Entra entitlement management.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {

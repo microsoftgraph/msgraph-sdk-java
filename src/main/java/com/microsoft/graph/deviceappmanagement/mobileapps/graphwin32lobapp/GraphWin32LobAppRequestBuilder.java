@@ -46,24 +46,24 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.win32LobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of Win32LobAppCollectionResponse
+     * @return a Win32LobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public Win32LobAppCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the items of type microsoft.graph.win32LobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Win32LobAppCollectionResponse
+     * @return a Win32LobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Win32LobAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Win32LobAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Win32LobAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the items of type microsoft.graph.win32LobApp in the microsoft.graph.mobileApp collection

@@ -47,66 +47,64 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property userExperienceAnalyticsCategories for deviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property userExperienceAnalyticsCategories for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * User experience analytics categories
-     * @return a CompletableFuture of UserExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory get() {
         return get(null);
     }
     /**
      * User experience analytics categories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsCategory patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property userExperienceAnalyticsCategories for deviceManagement
@@ -133,6 +131,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

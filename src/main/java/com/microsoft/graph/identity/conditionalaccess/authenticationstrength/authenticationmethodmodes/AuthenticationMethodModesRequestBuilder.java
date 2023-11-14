@@ -60,50 +60,50 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
+     * @return a AuthenticationMethodModeDetailCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetailCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodModeDetailCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
+     * @return a AuthenticationMethodModeDetailCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetailCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodModeDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationMethodModeDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationMethodModeDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to authenticationMethodModes for identity
      * @param body The request body
-     * @return a CompletableFuture of AuthenticationMethodModeDetail
+     * @return a AuthenticationMethodModeDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodModeDetail post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to authenticationMethodModes for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationMethodModeDetail
+     * @return a AuthenticationMethodModeDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetail> post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodModeDetail post(@jakarta.annotation.Nonnull final AuthenticationMethodModeDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationMethodModeDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationMethodModeDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties. This API is available in the following national cloud deployments.

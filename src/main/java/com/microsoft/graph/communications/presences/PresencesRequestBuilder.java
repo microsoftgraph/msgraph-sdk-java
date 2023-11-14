@@ -60,48 +60,48 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a user's presence information. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PresenceCollectionResponse
+     * @return a PresenceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PresenceCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a user's presence information. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PresenceCollectionResponse
+     * @return a PresenceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PresenceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PresenceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PresenceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to presences for communications
      * @param body The request body
-     * @return a CompletableFuture of Presence
+     * @return a Presence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> post(@jakarta.annotation.Nonnull final Presence body) {
+    @jakarta.annotation.Nullable
+    public Presence post(@jakarta.annotation.Nonnull final Presence body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to presences for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Presence
+     * @return a Presence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> post(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Presence post(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Presence::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Presence::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a user's presence information. This API is available in the following national cloud deployments.

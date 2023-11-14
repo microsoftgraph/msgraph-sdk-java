@@ -39,66 +39,64 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property details for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property details for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get details from security
-     * @return a CompletableFuture of LandingPageDetail
+     * The detail information for a landing page associated with a simulation during its creation.
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> get() {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail get() {
         return get(null);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LandingPageDetail
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property details in security
      * @param body The request body
-     * @return a CompletableFuture of LandingPageDetail
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> patch(@jakarta.annotation.Nonnull final LandingPageDetail body) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail patch(@jakarta.annotation.Nonnull final LandingPageDetail body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property details in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LandingPageDetail
+     * @return a LandingPageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LandingPageDetail> patch(@jakarta.annotation.Nonnull final LandingPageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LandingPageDetail patch(@jakarta.annotation.Nonnull final LandingPageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LandingPageDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property details for security
@@ -125,10 +123,11 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +135,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +204,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get details from security
+     * The detail information for a landing page associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

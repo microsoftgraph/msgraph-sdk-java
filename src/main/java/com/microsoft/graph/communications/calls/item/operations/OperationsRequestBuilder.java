@@ -60,48 +60,48 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of CommsOperationCollectionResponse
+     * @return a CommsOperationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CommsOperationCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CommsOperationCollectionResponse
+     * @return a CommsOperationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CommsOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CommsOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CommsOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to operations for communications
      * @param body The request body
-     * @return a CompletableFuture of CommsOperation
+     * @return a CommsOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> post(@jakarta.annotation.Nonnull final CommsOperation body) {
+    @jakarta.annotation.Nullable
+    public CommsOperation post(@jakarta.annotation.Nonnull final CommsOperation body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to operations for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CommsOperation
+     * @return a CommsOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> post(@jakarta.annotation.Nonnull final CommsOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CommsOperation post(@jakarta.annotation.Nonnull final CommsOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CommsOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CommsOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call. This API is available in the following national cloud deployments.

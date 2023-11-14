@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
     }
     /**
      * The user experience analytics work from anywhere model performance
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse get() {
         return get(null);
     }
     /**
      * The user experience analytics work from anywhere model performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereModelPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a UserExperienceAnalyticsWorkFromAnywhereModelPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsWorkFromAnywhereModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The user experience analytics work from anywhere model performance

@@ -60,48 +60,48 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
-     * @return a CompletableFuture of AgreementFileVersionCollectionResponse
+     * @return a AgreementFileVersionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileVersionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AgreementFileVersionCollectionResponse get() {
         return get(null);
     }
     /**
      * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileVersionCollectionResponse
+     * @return a AgreementFileVersionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AgreementFileVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AgreementFileVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AgreementFileVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to versions for agreements
      * @param body The request body
-     * @return a CompletableFuture of AgreementFileVersion
+     * @return a AgreementFileVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileVersion> post(@jakarta.annotation.Nonnull final AgreementFileVersion body) {
+    @jakarta.annotation.Nullable
+    public AgreementFileVersion post(@jakarta.annotation.Nonnull final AgreementFileVersion body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to versions for agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileVersion
+     * @return a AgreementFileVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileVersion> post(@jakarta.annotation.Nonnull final AgreementFileVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AgreementFileVersion post(@jakarta.annotation.Nonnull final AgreementFileVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AgreementFileVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AgreementFileVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.

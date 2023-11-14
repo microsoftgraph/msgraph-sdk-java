@@ -39,24 +39,24 @@ public class GetMailboxUsageDetailWithPeriodRequestBuilder extends BaseRequestBu
     }
     /**
      * Invoke function getMailboxUsageDetail
-     * @return a CompletableFuture of InputStream
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get() {
+    @jakarta.annotation.Nullable
+    public InputStream get() {
         return get(null);
     }
     /**
      * Invoke function getMailboxUsageDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InputStream
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+        return this.requestAdapter.sendPrimitive(requestInfo, InputStream.class, errorMapping);
     }
     /**
      * Invoke function getMailboxUsageDetail
@@ -83,6 +83,7 @@ public class GetMailboxUsageDetailWithPeriodRequestBuilder extends BaseRequestBu
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
         return requestInfo;
     }
     /**

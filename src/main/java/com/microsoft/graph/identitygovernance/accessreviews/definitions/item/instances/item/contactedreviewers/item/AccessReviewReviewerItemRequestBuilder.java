@@ -39,66 +39,64 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property contactedReviewers for identityGovernance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property contactedReviewers for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
-     * @return a CompletableFuture of AccessReviewReviewer
+     * @return a AccessReviewReviewer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get() {
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewer get() {
         return get(null);
     }
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewReviewer
+     * @return a AccessReviewReviewer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessReviewReviewer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessReviewReviewer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property contactedReviewers in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessReviewReviewer
+     * @return a AccessReviewReviewer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewer patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property contactedReviewers in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewReviewer
+     * @return a AccessReviewReviewer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewer patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessReviewReviewer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessReviewReviewer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property contactedReviewers for identityGovernance
@@ -125,6 +123,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

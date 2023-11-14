@@ -60,52 +60,52 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of workforceIntegration objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
+     * @return a WorkforceIntegrationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegrationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkforceIntegrationCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of workforceIntegration objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
+     * @return a WorkforceIntegrationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkforceIntegrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkforceIntegrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkforceIntegrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of WorkforceIntegration
+     * @return a WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> post(@jakarta.annotation.Nonnull final WorkforceIntegration body) {
+    @jakarta.annotation.Nullable
+    public WorkforceIntegration post(@jakarta.annotation.Nonnull final WorkforceIntegration body) {
         return post(body, null);
     }
     /**
      * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkforceIntegration
+     * @return a WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> post(@jakarta.annotation.Nonnull final WorkforceIntegration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkforceIntegration post(@jakarta.annotation.Nonnull final WorkforceIntegration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkforceIntegration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkforceIntegration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of workforceIntegration objects. This API is available in the following national cloud deployments.

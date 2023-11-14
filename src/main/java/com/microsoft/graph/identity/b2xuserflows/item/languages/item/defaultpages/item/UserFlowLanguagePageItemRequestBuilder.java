@@ -47,66 +47,64 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property defaultPages for identity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property defaultPages for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> get() {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage get() {
         return get(null);
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property defaultPages in identity
      * @param body The request body
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property defaultPages in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguagePage
+     * @return a UserFlowLanguagePage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowLanguagePage patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowLanguagePage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property defaultPages for identity
@@ -133,6 +131,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

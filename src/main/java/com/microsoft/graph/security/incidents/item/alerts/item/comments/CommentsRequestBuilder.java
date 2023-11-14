@@ -46,26 +46,26 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
-     * @return a CompletableFuture of java.util.List<AlertComment>
+     * @return a java.util.List<AlertComment>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<AlertComment>> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
+    @jakarta.annotation.Nullable
+    public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
         return post(body, null);
     }
     /**
      * Sets a new value for the collection of alertComment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of java.util.List<AlertComment>
+     * @return a java.util.List<AlertComment>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<AlertComment>> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendCollectionAsync(requestInfo, AlertComment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendCollection(requestInfo, AlertComment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Sets a new value for the collection of alertComment.

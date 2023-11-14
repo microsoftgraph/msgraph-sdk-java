@@ -60,52 +60,52 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the complianceManagementPartner objects.
-     * @return a CompletableFuture of ComplianceManagementPartnerCollectionResponse
+     * @return a ComplianceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartnerCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ComplianceManagementPartnerCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the complianceManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ComplianceManagementPartnerCollectionResponse
+     * @return a ComplianceManagementPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartnerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ComplianceManagementPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ComplianceManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ComplianceManagementPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new complianceManagementPartner object.
      * @param body The request body
-     * @return a CompletableFuture of ComplianceManagementPartner
+     * @return a ComplianceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> post(@jakarta.annotation.Nonnull final ComplianceManagementPartner body) {
+    @jakarta.annotation.Nullable
+    public ComplianceManagementPartner post(@jakarta.annotation.Nonnull final ComplianceManagementPartner body) {
         return post(body, null);
     }
     /**
      * Create a new complianceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ComplianceManagementPartner
+     * @return a ComplianceManagementPartner
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> post(@jakarta.annotation.Nonnull final ComplianceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ComplianceManagementPartner post(@jakarta.annotation.Nonnull final ComplianceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ComplianceManagementPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ComplianceManagementPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the complianceManagementPartner objects.

@@ -68,52 +68,52 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the iosManagedAppRegistration objects.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a ManagedAppRegistrationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistrationCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the iosManagedAppRegistration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a ManagedAppRegistrationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new androidManagedAppRegistration object.
      * @param body The request body
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration post(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
         return post(body, null);
     }
     /**
      * Create a new androidManagedAppRegistration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistration
+     * @return a ManagedAppRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistration post(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the iosManagedAppRegistration objects.

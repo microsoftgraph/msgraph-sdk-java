@@ -60,52 +60,52 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the educationAssignmentResource objects associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EducationAssignmentResourceCollectionResponse
+     * @return a EducationAssignmentResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * Get all the educationAssignmentResource objects associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentResourceCollectionResponse
+     * @return a EducationAssignmentResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationAssignmentResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of EducationAssignmentResource
+     * @return a EducationAssignmentResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-post-resource?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentResource> post(@jakarta.annotation.Nonnull final EducationAssignmentResource body) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentResource post(@jakarta.annotation.Nonnull final EducationAssignmentResource body) {
         return post(body, null);
     }
     /**
      * Create an assignment resource. Only teachers can perform this operation. You can create the following types of assignment resources: Every resource has an @odata.type property to indicate which type of resource is being created. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentResource
+     * @return a EducationAssignmentResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-post-resource?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignmentResource> post(@jakarta.annotation.Nonnull final EducationAssignmentResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationAssignmentResource post(@jakarta.annotation.Nonnull final EducationAssignmentResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationAssignmentResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationAssignmentResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get all the educationAssignmentResource objects associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.

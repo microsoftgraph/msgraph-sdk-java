@@ -37,26 +37,26 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookRange
+     * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRange> post() {
+    @jakarta.annotation.Nullable
+    public WorkbookRange post() {
         return post(null);
     }
     /**
      * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookRange
+     * @return a WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRange> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookRange post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookRange::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Converts the table into a normal range of cells. All data is preserved. This API is available in the following national cloud deployments.

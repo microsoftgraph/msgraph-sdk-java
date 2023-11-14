@@ -10,11 +10,11 @@ dependencies {
     implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
 
     // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:3.0.8-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.7.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.7.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.7.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.7.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.7.1'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.7.1'
+    api 'com.microsoft.graph:microsoft-graph-core:3.0.9-SNAPSHOT'
+    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.9.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.9.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.9.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.9.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:0.9.1'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:0.9.1'
 }

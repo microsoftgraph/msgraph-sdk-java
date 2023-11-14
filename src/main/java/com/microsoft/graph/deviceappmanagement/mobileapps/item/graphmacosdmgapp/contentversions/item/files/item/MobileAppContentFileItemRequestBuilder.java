@@ -55,66 +55,64 @@ public class MobileAppContentFileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property files for deviceAppManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property files for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The list of files for this app content version.
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile get() {
         return get(null);
     }
     /**
      * The list of files for this app content version.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property files in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> patch(@jakarta.annotation.Nonnull final MobileAppContentFile body) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile patch(@jakarta.annotation.Nonnull final MobileAppContentFile body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property files in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> patch(@jakarta.annotation.Nonnull final MobileAppContentFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile patch(@jakarta.annotation.Nonnull final MobileAppContentFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property files for deviceAppManagement
@@ -141,6 +139,7 @@ public class MobileAppContentFileItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

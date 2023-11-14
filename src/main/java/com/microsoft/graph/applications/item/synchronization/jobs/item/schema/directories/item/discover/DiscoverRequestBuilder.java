@@ -37,26 +37,26 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of DirectoryDefinition
+     * @return a DirectoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinition> post() {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinition post() {
         return post(null);
     }
     /**
      * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryDefinition
+     * @return a DirectoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DirectoryDefinition post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DirectoryDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Discover the latest schema definition for provisioning to an application.  This API is available in the following national cloud deployments.

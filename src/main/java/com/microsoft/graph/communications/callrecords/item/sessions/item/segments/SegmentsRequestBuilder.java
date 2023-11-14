@@ -60,48 +60,48 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of segments involved in the session. Read-only. Nullable.
-     * @return a CompletableFuture of SegmentCollectionResponse
+     * @return a SegmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SegmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SegmentCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of segments involved in the session. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SegmentCollectionResponse
+     * @return a SegmentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SegmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SegmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SegmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SegmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to segments for communications
      * @param body The request body
-     * @return a CompletableFuture of Segment
+     * @return a Segment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Segment> post(@jakarta.annotation.Nonnull final Segment body) {
+    @jakarta.annotation.Nullable
+    public Segment post(@jakarta.annotation.Nonnull final Segment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to segments for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Segment
+     * @return a Segment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Segment> post(@jakarta.annotation.Nonnull final Segment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Segment post(@jakarta.annotation.Nonnull final Segment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Segment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Segment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of segments involved in the session. Read-only. Nullable.

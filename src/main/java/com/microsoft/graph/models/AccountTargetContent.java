@@ -18,7 +18,7 @@ public class AccountTargetContent implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The type property
+     * The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      */
     private AccountTargetContentType type;
     /**
@@ -73,7 +73,7 @@ public class AccountTargetContent implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @return a AccountTargetContentType
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class AccountTargetContent implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AccountTargetContentType value) {

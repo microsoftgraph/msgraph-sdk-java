@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRe
     }
     /**
      * User experience analytics appHealth Application Performance by OS Version
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics appHealth Application Performance by OS Version
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * User experience analytics appHealth Application Performance by OS Version

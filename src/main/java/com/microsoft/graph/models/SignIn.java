@@ -18,7 +18,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String appId;
     /**
-     * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      */
     private java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
     /**
@@ -134,7 +134,7 @@ public class SignIn extends Entity implements Parsable {
         return this.appId;
     }
     /**
-     * Gets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Gets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      * @return a java.util.List<AppliedConditionalAccessPolicy>
      */
     @jakarta.annotation.Nullable
@@ -379,7 +379,7 @@ public class SignIn extends Entity implements Parsable {
         this.appId = value;
     }
     /**
-     * Sets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Sets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      */
     public void setAppliedConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {

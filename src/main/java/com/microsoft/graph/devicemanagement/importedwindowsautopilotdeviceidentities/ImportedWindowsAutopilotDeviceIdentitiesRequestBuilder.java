@@ -68,52 +68,52 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
     }
     /**
      * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentityCollectionResponse
+     * @return a ImportedWindowsAutopilotDeviceIdentityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentityCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentityCollectionResponse
+     * @return a ImportedWindowsAutopilotDeviceIdentityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedWindowsAutopilotDeviceIdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
         return post(body, null);
     }
     /**
      * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.

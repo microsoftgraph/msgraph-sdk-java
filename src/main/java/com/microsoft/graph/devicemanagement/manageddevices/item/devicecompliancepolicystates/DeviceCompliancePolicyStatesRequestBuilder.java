@@ -60,48 +60,48 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Device compliance policy states for this device.
-     * @return a CompletableFuture of DeviceCompliancePolicyStateCollectionResponse
+     * @return a DeviceCompliancePolicyStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyStateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyStateCollectionResponse get() {
         return get(null);
     }
     /**
      * Device compliance policy states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicyStateCollectionResponse
+     * @return a DeviceCompliancePolicyStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicyStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicyStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of DeviceCompliancePolicyState
+     * @return a DeviceCompliancePolicyState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyState> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyState post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicyState
+     * @return a DeviceCompliancePolicyState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyState> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyState post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicyState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicyState::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Device compliance policy states for this device.

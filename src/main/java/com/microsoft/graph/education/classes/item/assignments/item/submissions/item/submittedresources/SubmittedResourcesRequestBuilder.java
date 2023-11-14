@@ -60,50 +60,50 @@ public class SubmittedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the educationSubmissionResource objects that have officially been submitted for grading. Only teachers, students, and applications with application permissions can perform this operation. The student who owns the submission cannot change the submitted list without resubmitting the assignment. This is a wrapper around the real resource and can contain a pointer back to the actual assignment resource if this resource was copied from the assignment. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a EducationSubmissionResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-list-submittedresources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * List the educationSubmissionResource objects that have officially been submitted for grading. Only teachers, students, and applications with application permissions can perform this operation. The student who owns the submission cannot change the submitted list without resubmitting the assignment. This is a wrapper around the real resource and can contain a pointer back to the actual assignment resource if this resource was copied from the assignment. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a EducationSubmissionResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-list-submittedresources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationSubmissionResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationSubmissionResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to submittedResources for education
      * @param body The request body
-     * @return a CompletableFuture of EducationSubmissionResource
+     * @return a EducationSubmissionResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResource> post(@jakarta.annotation.Nonnull final EducationSubmissionResource body) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResource post(@jakarta.annotation.Nonnull final EducationSubmissionResource body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to submittedResources for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionResource
+     * @return a EducationSubmissionResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResource> post(@jakarta.annotation.Nonnull final EducationSubmissionResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResource post(@jakarta.annotation.Nonnull final EducationSubmissionResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationSubmissionResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationSubmissionResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List the educationSubmissionResource objects that have officially been submitted for grading. Only teachers, students, and applications with application permissions can perform this operation. The student who owns the submission cannot change the submitted list without resubmitting the assignment. This is a wrapper around the real resource and can contain a pointer back to the actual assignment resource if this resource was copied from the assignment. This API is available in the following national cloud deployments.

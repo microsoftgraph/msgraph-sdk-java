@@ -60,48 +60,48 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of subscriptions on the item. Only supported on the root of a drive.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a SubscriptionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SubscriptionCollectionResponse get() {
         return get(null);
     }
     /**
      * The set of subscriptions on the item. Only supported on the root of a drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a SubscriptionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SubscriptionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SubscriptionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SubscriptionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to subscriptions for drives
      * @param body The request body
-     * @return a CompletableFuture of Subscription
+     * @return a Subscription
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> post(@jakarta.annotation.Nonnull final Subscription body) {
+    @jakarta.annotation.Nullable
+    public Subscription post(@jakarta.annotation.Nonnull final Subscription body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to subscriptions for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Subscription
+     * @return a Subscription
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> post(@jakarta.annotation.Nonnull final Subscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Subscription post(@jakarta.annotation.Nonnull final Subscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Subscription::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Subscription::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The set of subscriptions on the item. Only supported on the root of a drive.

@@ -38,24 +38,24 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Role definition this assignment is part of.
-     * @return a CompletableFuture of RoleDefinition
+     * @return a RoleDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> get() {
+    @jakarta.annotation.Nullable
+    public RoleDefinition get() {
         return get(null);
     }
     /**
      * Role definition this assignment is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleDefinition
+     * @return a RoleDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoleDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Role definition this assignment is part of.

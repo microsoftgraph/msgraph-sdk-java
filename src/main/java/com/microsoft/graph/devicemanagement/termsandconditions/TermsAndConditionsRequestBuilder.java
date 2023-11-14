@@ -60,52 +60,52 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the termsAndConditions objects.
-     * @return a CompletableFuture of TermsAndConditionsCollectionResponse
+     * @return a TermsAndConditionsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the termsAndConditions objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsAndConditionsCollectionResponse
+     * @return a TermsAndConditionsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditionsCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditionsCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new termsAndConditions object.
      * @param body The request body
-     * @return a CompletableFuture of TermsAndConditions
+     * @return a TermsAndConditions
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> post(@jakarta.annotation.Nonnull final TermsAndConditions body) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditions post(@jakarta.annotation.Nonnull final TermsAndConditions body) {
         return post(body, null);
     }
     /**
      * Create a new termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsAndConditions
+     * @return a TermsAndConditions
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> post(@jakarta.annotation.Nonnull final TermsAndConditions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditions post(@jakarta.annotation.Nonnull final TermsAndConditions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditions::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditions::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the termsAndConditions objects.

@@ -68,52 +68,52 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel). This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @return a ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ChatMessageCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel). This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @return a ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ChatMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ChatMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ChatMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Send a new chatMessage in the specified channel. This API is available in the following national cloud deployments.
+     * Send a new chatMessage in the specified channel or a chat. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ChatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-1.0">Find more info here</a>
+     * @return a ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body) {
+    @jakarta.annotation.Nullable
+    public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel. This API is available in the following national cloud deployments.
+     * Send a new chatMessage in the specified channel or a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-1.0">Find more info here</a>
+     * @return a ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ChatMessage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ChatMessage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel). This API is available in the following national cloud deployments.
@@ -145,7 +145,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new chatMessage in the specified channel. This API is available in the following national cloud deployments.
+     * Send a new chatMessage in the specified channel or a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel. This API is available in the following national cloud deployments.
+     * Send a new chatMessage in the specified channel or a chat. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

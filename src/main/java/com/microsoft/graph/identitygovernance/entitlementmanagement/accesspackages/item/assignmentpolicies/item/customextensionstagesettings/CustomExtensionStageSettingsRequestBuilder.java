@@ -60,48 +60,48 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a CompletableFuture of CustomExtensionStageSettingCollectionResponse
+     * @return a CustomExtensionStageSettingCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSettingCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSettingCollectionResponse get() {
         return get(null);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CustomExtensionStageSettingCollectionResponse
+     * @return a CustomExtensionStageSettingCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CustomExtensionStageSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CustomExtensionStageSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CustomExtensionStageSetting
+     * @return a CustomExtensionStageSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CustomExtensionStageSetting post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CustomExtensionStageSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.

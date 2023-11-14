@@ -60,52 +60,52 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the enrollmentConfigurationAssignment objects.
-     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
+     * @return a EnrollmentConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EnrollmentConfigurationAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the enrollmentConfigurationAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
+     * @return a EnrollmentConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EnrollmentConfigurationAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EnrollmentConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EnrollmentConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new enrollmentConfigurationAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of EnrollmentConfigurationAssignment
+     * @return a EnrollmentConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> post(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
+    @jakarta.annotation.Nullable
+    public EnrollmentConfigurationAssignment post(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new enrollmentConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EnrollmentConfigurationAssignment
+     * @return a EnrollmentConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> post(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EnrollmentConfigurationAssignment post(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EnrollmentConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EnrollmentConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the enrollmentConfigurationAssignment objects.

@@ -177,24 +177,24 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a CompletableFuture of Site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> get() {
+    @jakarta.annotation.Nullable
+    public Site get() {
         return get(null);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Site get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
@@ -233,26 +233,26 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sites in groups
      * @param body The request body
-     * @return a CompletableFuture of Site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body) {
+    @jakarta.annotation.Nullable
+    public Site patch(@jakarta.annotation.Nonnull final Site body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property sites in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Site patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.

@@ -47,68 +47,66 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property appDefinitions for appCatalogs
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property appDefinitions for appCatalogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * The details for each version of the app.
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> get() {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition get() {
         return get(null);
     }
     /**
      * The details for each version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Publish an app to the Microsoft Teams app catalog.Specifically, this API publishes the app to your organization's catalog (the tenant app catalog);the created resource has a distributionMethod property value of organization. The requiresReview property allows any user to submit an app for review by an administrator. Admins can approve or reject these apps via this API or the Microsoft Teams admin center. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-publish?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> patch(@jakarta.annotation.Nonnull final TeamsAppDefinition body) {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition patch(@jakarta.annotation.Nonnull final TeamsAppDefinition body) {
         return patch(body, null);
     }
     /**
      * Publish an app to the Microsoft Teams app catalog.Specifically, this API publishes the app to your organization's catalog (the tenant app catalog);the created resource has a distributionMethod property value of organization. The requiresReview property allows any user to submit an app for review by an administrator. Admins can approve or reject these apps via this API or the Microsoft Teams admin center. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppDefinition
+     * @return a TeamsAppDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-publish?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> patch(@jakarta.annotation.Nonnull final TeamsAppDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAppDefinition patch(@jakarta.annotation.Nonnull final TeamsAppDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAppDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property appDefinitions for appCatalogs
@@ -135,6 +133,7 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

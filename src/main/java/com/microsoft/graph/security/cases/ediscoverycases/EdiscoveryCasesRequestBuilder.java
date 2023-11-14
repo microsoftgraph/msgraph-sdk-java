@@ -60,52 +60,52 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the ediscoveryCase objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
+     * @return a EdiscoveryCaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCaseCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCaseCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the ediscoveryCase objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
+     * @return a EdiscoveryCaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoveryCaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoveryCaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new ediscoveryCase object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of EdiscoveryCase
+     * @return a EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCase> post(@jakarta.annotation.Nonnull final EdiscoveryCase body) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCase post(@jakarta.annotation.Nonnull final EdiscoveryCase body) {
         return post(body, null);
     }
     /**
      * Create a new ediscoveryCase object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryCase
+     * @return a EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCase> post(@jakarta.annotation.Nonnull final EdiscoveryCase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCase post(@jakarta.annotation.Nonnull final EdiscoveryCase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EdiscoveryCase::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EdiscoveryCase::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the ediscoveryCase objects and their properties. This API is available in the following national cloud deployments.

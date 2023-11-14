@@ -60,52 +60,52 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
     }
     /**
      * List properties and relationships of the localizedNotificationMessage objects.
-     * @return a CompletableFuture of LocalizedNotificationMessageCollectionResponse
+     * @return a LocalizedNotificationMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LocalizedNotificationMessageCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the localizedNotificationMessage objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LocalizedNotificationMessageCollectionResponse
+     * @return a LocalizedNotificationMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LocalizedNotificationMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LocalizedNotificationMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LocalizedNotificationMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new localizedNotificationMessage object.
      * @param body The request body
-     * @return a CompletableFuture of LocalizedNotificationMessage
+     * @return a LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> post(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body) {
+    @jakarta.annotation.Nullable
+    public LocalizedNotificationMessage post(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body) {
         return post(body, null);
     }
     /**
      * Create a new localizedNotificationMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LocalizedNotificationMessage
+     * @return a LocalizedNotificationMessage
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> post(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LocalizedNotificationMessage post(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LocalizedNotificationMessage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LocalizedNotificationMessage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the localizedNotificationMessage objects.

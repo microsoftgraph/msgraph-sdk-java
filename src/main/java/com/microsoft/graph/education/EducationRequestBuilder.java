@@ -70,48 +70,48 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get education
-     * @return a CompletableFuture of EducationRoot
+     * @return a EducationRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationRoot> get() {
+    @jakarta.annotation.Nullable
+    public EducationRoot get() {
         return get(null);
     }
     /**
      * Get education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationRoot
+     * @return a EducationRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update education
      * @param body The request body
-     * @return a CompletableFuture of EducationRoot
+     * @return a EducationRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationRoot> patch(@jakarta.annotation.Nonnull final EducationRoot body) {
+    @jakarta.annotation.Nullable
+    public EducationRoot patch(@jakarta.annotation.Nonnull final EducationRoot body) {
         return patch(body, null);
     }
     /**
      * Update education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationRoot
+     * @return a EducationRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationRoot> patch(@jakarta.annotation.Nonnull final EducationRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationRoot patch(@jakarta.annotation.Nonnull final EducationRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get education

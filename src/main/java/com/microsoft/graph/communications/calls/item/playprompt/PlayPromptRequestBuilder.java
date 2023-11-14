@@ -38,28 +38,28 @@ public class PlayPromptRequestBuilder extends BaseRequestBuilder {
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of PlayPromptOperation
+     * @return a PlayPromptOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> post(@jakarta.annotation.Nonnull final PlayPromptPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public PlayPromptOperation post(@jakarta.annotation.Nonnull final PlayPromptPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlayPromptOperation
+     * @return a PlayPromptOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> post(@jakarta.annotation.Nonnull final PlayPromptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PlayPromptOperation post(@jakarta.annotation.Nonnull final PlayPromptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PlayPromptOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PlayPromptOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation This API is available in the following national cloud deployments.

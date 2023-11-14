@@ -71,68 +71,66 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property assignments for identityGovernance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property assignments for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AccessPackageAssignment
+     * @return a AccessPackageAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignment get() {
         return get(null);
     }
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageAssignment
+     * @return a AccessPackageAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property assignments in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageAssignment
+     * @return a AccessPackageAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignment patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property assignments in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageAssignment
+     * @return a AccessPackageAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignment patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property assignments for identityGovernance
@@ -159,6 +157,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

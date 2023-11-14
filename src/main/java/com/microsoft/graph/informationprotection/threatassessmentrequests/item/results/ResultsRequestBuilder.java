@@ -60,48 +60,48 @@ public class ResultsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a CompletableFuture of ThreatAssessmentResultCollectionResponse
+     * @return a ThreatAssessmentResultCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResultCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResultCollectionResponse get() {
         return get(null);
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentResultCollectionResponse
+     * @return a ThreatAssessmentResultCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResultCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResultCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatAssessmentResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatAssessmentResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to results for informationProtection
      * @param body The request body
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> post(@jakarta.annotation.Nonnull final ThreatAssessmentResult body) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult post(@jakarta.annotation.Nonnull final ThreatAssessmentResult body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to results for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentResult
+     * @return a ThreatAssessmentResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentResult> post(@jakarta.annotation.Nonnull final ThreatAssessmentResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatAssessmentResult post(@jakarta.annotation.Nonnull final ThreatAssessmentResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatAssessmentResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.

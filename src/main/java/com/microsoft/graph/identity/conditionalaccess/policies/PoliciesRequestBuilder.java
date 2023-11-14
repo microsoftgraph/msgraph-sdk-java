@@ -60,52 +60,52 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of conditionalAccessPolicy objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
+     * @return a ConditionalAccessPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of conditionalAccessPolicy objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
+     * @return a ConditionalAccessPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new conditionalAccessPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return post(body, null);
     }
     /**
      * Create a new conditionalAccessPolicy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConditionalAccessPolicy
+     * @return a ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConditionalAccessPolicy post(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConditionalAccessPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of conditionalAccessPolicy objects. This API is available in the following national cloud deployments.

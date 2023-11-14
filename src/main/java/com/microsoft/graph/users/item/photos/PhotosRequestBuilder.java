@@ -2,7 +2,6 @@ package com.microsoft.graph.users.item.photos;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProfilePhotoCollectionResponse;
-import com.microsoft.graph.users.item.photos.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.photos.item.ProfilePhotoItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -23,13 +22,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhotosRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to count the resources in the collection.
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the photos property of the microsoft.graph.user entity.
      * @param profilePhotoId The unique identifier of profilePhoto
      * @return a ProfilePhotoItemRequestBuilder
@@ -47,7 +39,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PhotosRequestBuilder and sets the default values.
@@ -55,31 +47,31 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24top,%24skip,%24filter,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get photos from users
-     * @return a CompletableFuture of ProfilePhotoCollectionResponse
+     * The collection of the user's profile photos in different sizes. Read-only.
+     * @return a ProfilePhotoCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ProfilePhotoCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ProfilePhotoCollectionResponse
+     * @return a ProfilePhotoCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfilePhotoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfilePhotoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProfilePhotoCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +79,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -118,16 +110,10 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return new PhotosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
-        /**
-         * Include count of items
-         */
-        @QueryParameter(name = "%24count")
-        @jakarta.annotation.Nullable
-        public Boolean count;
         /**
          * Filter items by property values
          */

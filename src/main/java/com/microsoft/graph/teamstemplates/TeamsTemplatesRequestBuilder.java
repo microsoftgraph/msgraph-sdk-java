@@ -60,48 +60,48 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from teamsTemplates
-     * @return a CompletableFuture of TeamsTemplateCollectionResponse
+     * @return a TeamsTemplateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TeamsTemplateCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from teamsTemplates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsTemplateCollectionResponse
+     * @return a TeamsTemplateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to teamsTemplates
      * @param body The request body
-     * @return a CompletableFuture of TeamsTemplate
+     * @return a TeamsTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> post(@jakarta.annotation.Nonnull final TeamsTemplate body) {
+    @jakarta.annotation.Nullable
+    public TeamsTemplate post(@jakarta.annotation.Nonnull final TeamsTemplate body) {
         return post(body, null);
     }
     /**
      * Add new entity to teamsTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsTemplate
+     * @return a TeamsTemplate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> post(@jakarta.annotation.Nonnull final TeamsTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsTemplate post(@jakarta.annotation.Nonnull final TeamsTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from teamsTemplates

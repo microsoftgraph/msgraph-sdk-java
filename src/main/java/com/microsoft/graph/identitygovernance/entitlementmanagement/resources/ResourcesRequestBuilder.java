@@ -60,48 +60,48 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The resources associated with the catalogs.
-     * @return a CompletableFuture of AccessPackageResourceCollectionResponse
+     * @return a AccessPackageResourceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * The resources associated with the catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceCollectionResponse
+     * @return a AccessPackageResourceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resources for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageResource
+     * @return a AccessPackageResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResource> post(@jakarta.annotation.Nonnull final AccessPackageResource body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResource post(@jakarta.annotation.Nonnull final AccessPackageResource body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resources for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResource
+     * @return a AccessPackageResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResource> post(@jakarta.annotation.Nonnull final AccessPackageResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResource post(@jakarta.annotation.Nonnull final AccessPackageResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The resources associated with the catalogs.

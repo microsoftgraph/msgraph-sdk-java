@@ -38,24 +38,24 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The devices that have the discovered application installed
-     * @return a CompletableFuture of ManagedDevice
+     * @return a ManagedDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> get() {
+    @jakarta.annotation.Nullable
+    public ManagedDevice get() {
         return get(null);
     }
     /**
      * The devices that have the discovered application installed
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDevice
+     * @return a ManagedDevice
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDevice::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The devices that have the discovered application installed

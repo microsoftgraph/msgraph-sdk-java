@@ -59,24 +59,24 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The devices that have the discovered application installed
-     * @return a CompletableFuture of ManagedDeviceCollectionResponse
+     * @return a ManagedDeviceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceCollectionResponse get() {
         return get(null);
     }
     /**
      * The devices that have the discovered application installed
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceCollectionResponse
+     * @return a ManagedDeviceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The devices that have the discovered application installed

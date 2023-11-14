@@ -47,66 +47,64 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property cases for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property cases for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get cases from security
-     * @return a CompletableFuture of CasesRoot
+     * @return a CasesRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CasesRoot> get() {
+    @jakarta.annotation.Nullable
+    public CasesRoot get() {
         return get(null);
     }
     /**
      * Get cases from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CasesRoot
+     * @return a CasesRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CasesRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CasesRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CasesRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CasesRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property cases in security
      * @param body The request body
-     * @return a CompletableFuture of CasesRoot
+     * @return a CasesRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CasesRoot> patch(@jakarta.annotation.Nonnull final CasesRoot body) {
+    @jakarta.annotation.Nullable
+    public CasesRoot patch(@jakarta.annotation.Nonnull final CasesRoot body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property cases in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CasesRoot
+     * @return a CasesRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CasesRoot> patch(@jakarta.annotation.Nonnull final CasesRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CasesRoot patch(@jakarta.annotation.Nonnull final CasesRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CasesRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CasesRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property cases for security
@@ -133,6 +131,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

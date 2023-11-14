@@ -60,52 +60,52 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
-     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
+     * @return a AndroidManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtectionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AndroidManagedAppProtectionCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
+     * @return a AndroidManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AndroidManagedAppProtectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AndroidManagedAppProtectionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AndroidManagedAppProtectionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new androidManagedAppProtection object.
      * @param body The request body
-     * @return a CompletableFuture of AndroidManagedAppProtection
+     * @return a AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> post(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body) {
+    @jakarta.annotation.Nullable
+    public AndroidManagedAppProtection post(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body) {
         return post(body, null);
     }
     /**
      * Create a new androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AndroidManagedAppProtection
+     * @return a AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> post(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AndroidManagedAppProtection post(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AndroidManagedAppProtection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AndroidManagedAppProtection::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the androidManagedAppProtection objects.

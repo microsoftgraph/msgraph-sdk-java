@@ -60,52 +60,52 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     }
     /**
      * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
-     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @return a DeviceEnrollmentConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceEnrollmentConfigurationCollectionResponse
+     * @return a DeviceEnrollmentConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return post(body, null);
     }
     /**
      * Create a new deviceEnrollmentLimitConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceEnrollmentConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.

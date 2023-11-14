@@ -38,24 +38,24 @@ public class GraphApplicationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.application
-     * @return a CompletableFuture of Application
+     * @return a Application
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Application> get() {
+    @jakarta.annotation.Nullable
+    public Application get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.application
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Application
+     * @return a Application
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Application> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Application get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Application::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Application::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.application

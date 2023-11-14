@@ -60,52 +60,52 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
+     * @return a CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartnerCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
+     * @return a CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartnerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CrossTenantAccessPolicyConfigurationPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartnerCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new partner configuration in a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
         return post(body, null);
     }
     /**
      * Create a new partner configuration in a cross-tenant access policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyConfigurationPartner post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations. This API is available in the following national cloud deployments.

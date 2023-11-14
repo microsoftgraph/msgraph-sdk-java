@@ -36,24 +36,24 @@ public class ImageRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function image
-     * @return a CompletableFuture of ImageGetResponse
+     * @return a ImageGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImageGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public ImageGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ImageGetResponse
+     * @return a ImageGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImageGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImageGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImageGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImageGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function image

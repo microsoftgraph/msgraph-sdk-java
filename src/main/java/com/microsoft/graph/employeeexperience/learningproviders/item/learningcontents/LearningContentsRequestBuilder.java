@@ -60,50 +60,50 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of LearningContentCollectionResponse
+     * @return a LearningContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningContentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LearningContentCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningContentCollectionResponse
+     * @return a LearningContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningContentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LearningContentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LearningContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LearningContentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
-     * @return a CompletableFuture of LearningContent
+     * @return a LearningContent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningContent> post(@jakarta.annotation.Nonnull final LearningContent body) {
+    @jakarta.annotation.Nullable
+    public LearningContent post(@jakarta.annotation.Nonnull final LearningContent body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to learningContents for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LearningContent
+     * @return a LearningContent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LearningContent> post(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LearningContent post(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LearningContent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LearningContent::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning. This API is available in the following national cloud deployments.

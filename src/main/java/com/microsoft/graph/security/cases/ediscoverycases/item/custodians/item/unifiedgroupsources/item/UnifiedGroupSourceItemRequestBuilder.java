@@ -47,66 +47,64 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property unifiedGroupSources for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property unifiedGroupSources for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Data source entity for groups associated with the custodian.
-     * @return a CompletableFuture of UnifiedGroupSource
+     * @return a UnifiedGroupSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedGroupSource> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedGroupSource get() {
         return get(null);
     }
     /**
      * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedGroupSource
+     * @return a UnifiedGroupSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedGroupSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedGroupSource get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedGroupSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedGroupSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property unifiedGroupSources in security
      * @param body The request body
-     * @return a CompletableFuture of UnifiedGroupSource
+     * @return a UnifiedGroupSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedGroupSource> patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body) {
+    @jakarta.annotation.Nullable
+    public UnifiedGroupSource patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property unifiedGroupSources in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedGroupSource
+     * @return a UnifiedGroupSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedGroupSource> patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedGroupSource patch(@jakarta.annotation.Nonnull final UnifiedGroupSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedGroupSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedGroupSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property unifiedGroupSources for security
@@ -133,6 +131,7 @@ public class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

@@ -76,48 +76,48 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get tenantRelationships
-     * @return a CompletableFuture of TenantRelationship
+     * @return a TenantRelationship
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> get() {
+    @jakarta.annotation.Nullable
+    public TenantRelationship get() {
         return get(null);
     }
     /**
      * Get tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TenantRelationship
+     * @return a TenantRelationship
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TenantRelationship get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TenantRelationship::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TenantRelationship::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of TenantRelationship
+     * @return a TenantRelationship
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body) {
+    @jakarta.annotation.Nullable
+    public TenantRelationship patch(@jakarta.annotation.Nonnull final TenantRelationship body) {
         return patch(body, null);
     }
     /**
      * Update tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TenantRelationship
+     * @return a TenantRelationship
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TenantRelationship patch(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TenantRelationship::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TenantRelationship::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get tenantRelationships

@@ -60,48 +60,48 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
-     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
+     * @return a WhoisHistoryRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecordCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
+     * @return a WhoisHistoryRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to whoisHistoryRecords for security
      * @param body The request body
-     * @return a CompletableFuture of WhoisHistoryRecord
+     * @return a WhoisHistoryRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body) {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecord post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to whoisHistoryRecords for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WhoisHistoryRecord
+     * @return a WhoisHistoryRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecord post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.

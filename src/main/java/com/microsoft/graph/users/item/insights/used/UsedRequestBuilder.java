@@ -60,50 +60,50 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UsedInsightCollectionResponse
+     * @return a UsedInsightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-used?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsightCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UsedInsightCollectionResponse get() {
         return get(null);
     }
     /**
      * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UsedInsightCollectionResponse
+     * @return a UsedInsightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-used?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsightCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UsedInsightCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UsedInsightCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UsedInsightCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to used for users
      * @param body The request body
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> post(@jakarta.annotation.Nonnull final UsedInsight body) {
+    @jakarta.annotation.Nullable
+    public UsedInsight post(@jakarta.annotation.Nonnull final UsedInsight body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to used for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UsedInsight
+     * @return a UsedInsight
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> post(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UsedInsight post(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UsedInsight::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified. This API is available in the following national cloud deployments.

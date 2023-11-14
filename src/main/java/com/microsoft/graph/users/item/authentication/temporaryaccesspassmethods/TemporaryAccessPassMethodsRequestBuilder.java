@@ -60,52 +60,52 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
+     * @return a TemporaryAccessPassAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethodCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TemporaryAccessPassAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
+     * @return a TemporaryAccessPassAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethodCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TemporaryAccessPassAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TemporaryAccessPassAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TemporaryAccessPassAuthenticationMethodCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethod
+     * @return a TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> post(@jakarta.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body) {
+    @jakarta.annotation.Nullable
+    public TemporaryAccessPassAuthenticationMethod post(@jakarta.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body) {
         return post(body, null);
     }
     /**
      * Create a new temporaryAccessPassAuthenticationMethod object on a user. A user can only have one Temporary Access Pass that's usable within its specified lifetime. If the user requires a new Temporary Access Pass while the current Temporary Access Pass is valid, the admin can create a new Temporary Access Pass for the user, the previous Temporary Access Pass will be deleted, and a new Temporary Access Pass will be created. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethod
+     * @return a TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> post(@jakarta.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TemporaryAccessPassAuthenticationMethod post(@jakarta.annotation.Nonnull final TemporaryAccessPassAuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method. This API is available in the following national cloud deployments.

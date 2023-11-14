@@ -38,24 +38,24 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
-     * @return a CompletableFuture of CustomCalloutExtension
+     * @return a CustomCalloutExtension
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get() {
+    @jakarta.annotation.Nullable
+    public CustomCalloutExtension get() {
         return get(null);
     }
     /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CustomCalloutExtension
+     * @return a CustomCalloutExtension
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CustomCalloutExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CustomCalloutExtension::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CustomCalloutExtension::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.

@@ -46,24 +46,24 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
-     * @return a CompletableFuture of DriveItem
+     * @return a DriveItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> get() {
+    @jakarta.annotation.Nullable
+    public DriveItem get() {
         return get(null);
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItem
+     * @return a DriveItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.

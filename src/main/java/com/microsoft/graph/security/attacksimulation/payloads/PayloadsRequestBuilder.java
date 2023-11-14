@@ -59,52 +59,54 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/payloads{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get payloads from security
-     * @return a CompletableFuture of PayloadCollectionResponse
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * @return a PayloadCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PayloadCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PayloadCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get payloads from security
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PayloadCollectionResponse
+     * @return a PayloadCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PayloadCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PayloadCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PayloadCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PayloadCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to payloads for security
      * @param body The request body
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> post(@jakarta.annotation.Nonnull final Payload body) {
+    @jakarta.annotation.Nullable
+    public Payload post(@jakarta.annotation.Nonnull final Payload body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to payloads for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> post(@jakarta.annotation.Nonnull final Payload body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Payload post(@jakarta.annotation.Nonnull final Payload body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get payloads from security
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get payloads from security
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +177,7 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         return new PayloadsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get payloads from security
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

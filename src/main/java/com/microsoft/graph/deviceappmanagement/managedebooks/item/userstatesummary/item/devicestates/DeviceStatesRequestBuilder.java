@@ -60,48 +60,48 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The install state of the eBook.
-     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
+     * @return a DeviceInstallStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallStateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceInstallStateCollectionResponse get() {
         return get(null);
     }
     /**
      * The install state of the eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceInstallStateCollectionResponse
+     * @return a DeviceInstallStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceInstallStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceInstallStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceInstallStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of DeviceInstallState
+     * @return a DeviceInstallState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> post(@jakarta.annotation.Nonnull final DeviceInstallState body) {
+    @jakarta.annotation.Nullable
+    public DeviceInstallState post(@jakarta.annotation.Nonnull final DeviceInstallState body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceInstallState
+     * @return a DeviceInstallState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> post(@jakarta.annotation.Nonnull final DeviceInstallState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceInstallState post(@jakarta.annotation.Nonnull final DeviceInstallState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceInstallState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceInstallState::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The install state of the eBook.

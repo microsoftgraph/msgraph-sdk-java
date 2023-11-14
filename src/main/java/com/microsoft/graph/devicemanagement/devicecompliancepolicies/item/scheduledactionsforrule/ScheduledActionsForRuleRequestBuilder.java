@@ -60,52 +60,52 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a DeviceComplianceScheduledActionForRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceScheduledActionForRuleCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a DeviceComplianceScheduledActionForRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceScheduledActionForRuleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceScheduledActionForRuleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceComplianceScheduledActionForRuleCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceComplianceScheduledActionForRule object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
+     * @return a DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceScheduledActionForRule post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
         return post(body, null);
     }
     /**
      * Create a new deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
+     * @return a DeviceComplianceScheduledActionForRule
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceScheduledActionForRule post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceComplianceScheduledActionForRule objects.

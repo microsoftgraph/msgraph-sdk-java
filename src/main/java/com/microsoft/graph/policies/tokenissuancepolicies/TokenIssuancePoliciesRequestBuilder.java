@@ -60,52 +60,52 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a TokenIssuancePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a TokenIssuancePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TokenIssuancePolicy
+     * @return a TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body) {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicy post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body) {
         return post(body, null);
     }
     /**
      * Create a new tokenIssuancePolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TokenIssuancePolicy
+     * @return a TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TokenIssuancePolicy post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TokenIssuancePolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TokenIssuancePolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of tokenIssuancePolicy objects. This API is available in the following national cloud deployments.

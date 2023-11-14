@@ -87,6 +87,10 @@ public class Alert extends Entity implements Parsable {
      */
     private java.util.List<String> mitreTechniques;
     /**
+     * The productName property
+     */
+    private String productName;
+    /**
      * The ID of the alert as it appears in the security provider product that generated the alert.
      */
     private String providerAlertId;
@@ -272,6 +276,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("lastActivityDateTime", (n) -> { this.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
         deserializerMap.put("providerAlertId", (n) -> { this.setProviderAlertId(n.getStringValue()); });
         deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
         deserializerMap.put("resolvedDateTime", (n) -> { this.setResolvedDateTime(n.getOffsetDateTimeValue()); });
@@ -331,6 +336,14 @@ public class Alert extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<String> getMitreTechniques() {
         return this.mitreTechniques;
+    }
+    /**
+     * Gets the productName property value. The productName property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getProductName() {
+        return this.productName;
     }
     /**
      * Gets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
@@ -438,6 +451,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastActivityDateTime", this.getLastActivityDateTime());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
         writer.writeCollectionOfPrimitiveValues("mitreTechniques", this.getMitreTechniques());
+        writer.writeStringValue("productName", this.getProductName());
         writer.writeStringValue("providerAlertId", this.getProviderAlertId());
         writer.writeStringValue("recommendedActions", this.getRecommendedActions());
         writer.writeOffsetDateTimeValue("resolvedDateTime", this.getResolvedDateTime());
@@ -581,6 +595,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setMitreTechniques(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.mitreTechniques = value;
+    }
+    /**
+     * Sets the productName property value. The productName property
+     * @param value Value to set for the productName property.
+     */
+    public void setProductName(@jakarta.annotation.Nullable final String value) {
+        this.productName = value;
     }
     /**
      * Sets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.

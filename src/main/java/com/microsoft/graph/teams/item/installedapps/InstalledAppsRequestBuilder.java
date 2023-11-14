@@ -60,52 +60,52 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of apps installed in the specified team. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @return a TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TeamsAppInstallationCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of apps installed in the specified team. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @return a TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAppInstallationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Install an app to the specified team. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TeamsAppInstallation
+     * @return a TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/team-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> post(@jakarta.annotation.Nonnull final TeamsAppInstallation body) {
+    @jakarta.annotation.Nullable
+    public TeamsAppInstallation post(@jakarta.annotation.Nonnull final TeamsAppInstallation body) {
         return post(body, null);
     }
     /**
      * Install an app to the specified team. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppInstallation
+     * @return a TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/team-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> post(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsAppInstallation post(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsAppInstallation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of apps installed in the specified team. This API is available in the following national cloud deployments.

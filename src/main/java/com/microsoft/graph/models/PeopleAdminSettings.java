@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PeopleAdminSettings extends Entity implements Parsable {
     /**
-     * The profileCardProperties property
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      */
     private java.util.List<ProfileCardProperty> profileCardProperties;
     /**
@@ -39,7 +39,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the profileCardProperties property value. The profileCardProperties property
+     * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @return a java.util.List<ProfileCardProperty>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
     }
     /**
-     * Sets the profileCardProperties property value. The profileCardProperties property
+     * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @param value Value to set for the profileCardProperties property.
      */
     public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {

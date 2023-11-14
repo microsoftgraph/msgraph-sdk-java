@@ -70,48 +70,48 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get admin
-     * @return a CompletableFuture of Admin
+     * @return a Admin
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Admin> get() {
+    @jakarta.annotation.Nullable
+    public Admin get() {
         return get(null);
     }
     /**
      * Get admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Admin
+     * @return a Admin
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Admin> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Admin get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Admin::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Admin::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update admin
      * @param body The request body
-     * @return a CompletableFuture of Admin
+     * @return a Admin
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Admin> patch(@jakarta.annotation.Nonnull final Admin body) {
+    @jakarta.annotation.Nullable
+    public Admin patch(@jakarta.annotation.Nonnull final Admin body) {
         return patch(body, null);
     }
     /**
      * Update admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Admin
+     * @return a Admin
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Admin> patch(@jakarta.annotation.Nonnull final Admin body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Admin patch(@jakarta.annotation.Nonnull final Admin body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Admin::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Admin::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get admin

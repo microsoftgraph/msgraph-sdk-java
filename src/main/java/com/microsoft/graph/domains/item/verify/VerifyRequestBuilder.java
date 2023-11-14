@@ -37,26 +37,26 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Validates the ownership of the domain. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of Domain
+     * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> post() {
+    @jakarta.annotation.Nullable
+    public Domain post() {
         return post(null);
     }
     /**
      * Validates the ownership of the domain. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Domain
+     * @return a Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Domain post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Domain::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Domain::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Validates the ownership of the domain. This API is available in the following national cloud deployments.

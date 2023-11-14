@@ -37,24 +37,24 @@ public class GetAllSitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getAllSites
-     * @return a CompletableFuture of GetAllSitesGetResponse
+     * @return a GetAllSitesGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAllSitesGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetAllSitesGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getAllSites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetAllSitesGetResponse
+     * @return a GetAllSitesGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAllSitesGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetAllSitesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetAllSitesGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetAllSitesGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getAllSites

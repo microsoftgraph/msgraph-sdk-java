@@ -59,52 +59,54 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/loginPages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get loginPages from security
-     * @return a CompletableFuture of LoginPageCollectionResponse
+     * Get a list of the loginPage objects and their properties.
+     * @return a LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LoginPageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LoginPageCollectionResponse
+     * @return a LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LoginPageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LoginPageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LoginPageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to loginPages for security
      * @param body The request body
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body) {
+    @jakarta.annotation.Nullable
+    public LoginPage post(@jakarta.annotation.Nonnull final LoginPage body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to loginPages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LoginPage
+     * @return a LoginPage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LoginPage post(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +177,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return new LoginPagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

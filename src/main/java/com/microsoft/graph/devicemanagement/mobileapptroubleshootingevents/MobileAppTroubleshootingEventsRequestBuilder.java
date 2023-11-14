@@ -60,52 +60,52 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
     }
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.
-     * @return a CompletableFuture of MobileAppTroubleshootingEventCollectionResponse
+     * @return a MobileAppTroubleshootingEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEventCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppTroubleshootingEventCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppTroubleshootingEventCollectionResponse
+     * @return a MobileAppTroubleshootingEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppTroubleshootingEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppTroubleshootingEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppTroubleshootingEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
-     * @return a CompletableFuture of MobileAppTroubleshootingEvent
+     * @return a MobileAppTroubleshootingEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body) {
+    @jakarta.annotation.Nullable
+    public MobileAppTroubleshootingEvent post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body) {
         return post(body, null);
     }
     /**
      * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppTroubleshootingEvent
+     * @return a MobileAppTroubleshootingEvent
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppTroubleshootingEvent post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the mobileAppTroubleshootingEvent objects.

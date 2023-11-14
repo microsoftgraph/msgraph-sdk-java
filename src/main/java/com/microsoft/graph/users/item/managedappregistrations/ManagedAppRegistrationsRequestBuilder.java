@@ -59,24 +59,24 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Zero or more managed app registrations that belong to the user.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a ManagedAppRegistrationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistrationCollectionResponse get() {
         return get(null);
     }
     /**
      * Zero or more managed app registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a ManagedAppRegistrationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Zero or more managed app registrations that belong to the user.

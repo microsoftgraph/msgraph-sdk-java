@@ -62,48 +62,48 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get auditLogs
-     * @return a CompletableFuture of AuditLogRoot
+     * @return a AuditLogRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> get() {
+    @jakarta.annotation.Nullable
+    public AuditLogRoot get() {
         return get(null);
     }
     /**
      * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuditLogRoot
+     * @return a AuditLogRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuditLogRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuditLogRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuditLogRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update auditLogs
      * @param body The request body
-     * @return a CompletableFuture of AuditLogRoot
+     * @return a AuditLogRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> patch(@jakarta.annotation.Nonnull final AuditLogRoot body) {
+    @jakarta.annotation.Nullable
+    public AuditLogRoot patch(@jakarta.annotation.Nonnull final AuditLogRoot body) {
         return patch(body, null);
     }
     /**
      * Update auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuditLogRoot
+     * @return a AuditLogRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> patch(@jakarta.annotation.Nonnull final AuditLogRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuditLogRoot patch(@jakarta.annotation.Nonnull final AuditLogRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuditLogRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuditLogRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get auditLogs

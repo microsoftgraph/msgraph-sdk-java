@@ -30,6 +30,10 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<HostPair> hostPairs;
     /**
+     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     */
+    private java.util.List<HostPort> hostPorts;
+    /**
      * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      */
     private java.util.List<Host> hosts;
@@ -117,6 +121,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         deserializerMap.put("hostComponents", (n) -> { this.setHostComponents(n.getCollectionOfObjectValues(HostComponent::createFromDiscriminatorValue)); });
         deserializerMap.put("hostCookies", (n) -> { this.setHostCookies(n.getCollectionOfObjectValues(HostCookie::createFromDiscriminatorValue)); });
         deserializerMap.put("hostPairs", (n) -> { this.setHostPairs(n.getCollectionOfObjectValues(HostPair::createFromDiscriminatorValue)); });
+        deserializerMap.put("hostPorts", (n) -> { this.setHostPorts(n.getCollectionOfObjectValues(HostPort::createFromDiscriminatorValue)); });
         deserializerMap.put("hosts", (n) -> { this.setHosts(n.getCollectionOfObjectValues(Host::createFromDiscriminatorValue)); });
         deserializerMap.put("hostSslCertificates", (n) -> { this.setHostSslCertificates(n.getCollectionOfObjectValues(HostSslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("hostTrackers", (n) -> { this.setHostTrackers(n.getCollectionOfObjectValues(HostTracker::createFromDiscriminatorValue)); });
@@ -153,6 +158,14 @@ public class ThreatIntelligence extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
         return this.hostPairs;
+    }
+    /**
+     * Gets the hostPorts property value. Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * @return a java.util.List<HostPort>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HostPort> getHostPorts() {
+        return this.hostPorts;
     }
     /**
      * Gets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
@@ -254,6 +267,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("hostComponents", this.getHostComponents());
         writer.writeCollectionOfObjectValues("hostCookies", this.getHostCookies());
         writer.writeCollectionOfObjectValues("hostPairs", this.getHostPairs());
+        writer.writeCollectionOfObjectValues("hostPorts", this.getHostPorts());
         writer.writeCollectionOfObjectValues("hosts", this.getHosts());
         writer.writeCollectionOfObjectValues("hostSslCertificates", this.getHostSslCertificates());
         writer.writeCollectionOfObjectValues("hostTrackers", this.getHostTrackers());
@@ -300,6 +314,13 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     public void setHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
         this.hostPairs = value;
+    }
+    /**
+     * Sets the hostPorts property value. Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * @param value Value to set for the hostPorts property.
+     */
+    public void setHostPorts(@jakarta.annotation.Nullable final java.util.List<HostPort> value) {
+        this.hostPorts = value;
     }
     /**
      * Sets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.

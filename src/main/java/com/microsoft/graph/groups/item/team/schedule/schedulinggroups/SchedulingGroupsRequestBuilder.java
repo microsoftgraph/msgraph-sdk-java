@@ -60,52 +60,52 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of SchedulingGroupCollectionResponse
+     * @return a SchedulingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SchedulingGroupCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SchedulingGroupCollectionResponse
+     * @return a SchedulingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SchedulingGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SchedulingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SchedulingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new schedulingGroup. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of SchedulingGroup
+     * @return a SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@jakarta.annotation.Nonnull final SchedulingGroup body) {
+    @jakarta.annotation.Nullable
+    public SchedulingGroup post(@jakarta.annotation.Nonnull final SchedulingGroup body) {
         return post(body, null);
     }
     /**
      * Create a new schedulingGroup. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SchedulingGroup
+     * @return a SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@jakarta.annotation.Nonnull final SchedulingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SchedulingGroup post(@jakarta.annotation.Nonnull final SchedulingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SchedulingGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SchedulingGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the list of schedulingGroups in this schedule. This API is available in the following national cloud deployments.

@@ -60,52 +60,52 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TimeOffReasonCollectionResponse
+     * @return a TimeOffReasonCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TimeOffReasonCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TimeOffReasonCollectionResponse
+     * @return a TimeOffReasonCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReasonCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TimeOffReasonCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TimeOffReasonCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TimeOffReasonCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new timeOffReason. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TimeOffReason
+     * @return a TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> post(@jakarta.annotation.Nonnull final TimeOffReason body) {
+    @jakarta.annotation.Nullable
+    public TimeOffReason post(@jakarta.annotation.Nonnull final TimeOffReason body) {
         return post(body, null);
     }
     /**
      * Create a new timeOffReason. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TimeOffReason
+     * @return a TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> post(@jakarta.annotation.Nonnull final TimeOffReason body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TimeOffReason post(@jakarta.annotation.Nonnull final TimeOffReason body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TimeOffReason::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TimeOffReason::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the list of timeOffReasons in a schedule. This API is available in the following national cloud deployments.

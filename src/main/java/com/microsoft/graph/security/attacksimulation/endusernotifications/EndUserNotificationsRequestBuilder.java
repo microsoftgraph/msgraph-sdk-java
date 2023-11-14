@@ -59,52 +59,54 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/endUserNotifications{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get endUserNotifications from security
-     * @return a CompletableFuture of EndUserNotificationCollectionResponse
+     * Get a list of endUserNotification objects and their properties.
+     * @return a EndUserNotificationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EndUserNotificationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EndUserNotificationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Get a list of endUserNotification objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EndUserNotificationCollectionResponse
+     * @return a EndUserNotificationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EndUserNotificationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EndUserNotificationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EndUserNotificationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EndUserNotificationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to endUserNotifications for security
      * @param body The request body
-     * @return a CompletableFuture of EndUserNotification
+     * @return a EndUserNotification
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EndUserNotification> post(@jakarta.annotation.Nonnull final EndUserNotification body) {
+    @jakarta.annotation.Nullable
+    public EndUserNotification post(@jakarta.annotation.Nonnull final EndUserNotification body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to endUserNotifications for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EndUserNotification
+     * @return a EndUserNotification
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EndUserNotification> post(@jakarta.annotation.Nonnull final EndUserNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EndUserNotification post(@jakarta.annotation.Nonnull final EndUserNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EndUserNotification::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EndUserNotification::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get endUserNotifications from security
+     * Get a list of endUserNotification objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Get a list of endUserNotification objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +177,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         return new EndUserNotificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get endUserNotifications from security
+     * Get a list of endUserNotification objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

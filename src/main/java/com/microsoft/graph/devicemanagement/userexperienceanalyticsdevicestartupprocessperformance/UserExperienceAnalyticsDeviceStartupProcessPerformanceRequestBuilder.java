@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilde
     }
     /**
      * User experience analytics device Startup Process Performance
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics device Startup Process Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcessPerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceStartupProcessPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupProcessPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsDeviceStartupProcessPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsDeviceStartupProcessPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsDeviceStartupProcessPerformance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * User experience analytics device Startup Process Performance

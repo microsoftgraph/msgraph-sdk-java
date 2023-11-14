@@ -60,52 +60,52 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the notificationMessageTemplate objects.
-     * @return a CompletableFuture of NotificationMessageTemplateCollectionResponse
+     * @return a NotificationMessageTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplateCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the notificationMessageTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of NotificationMessageTemplateCollectionResponse
+     * @return a NotificationMessageTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, NotificationMessageTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, NotificationMessageTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new notificationMessageTemplate object.
      * @param body The request body
-     * @return a CompletableFuture of NotificationMessageTemplate
+     * @return a NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplate post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
         return post(body, null);
     }
     /**
      * Create a new notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of NotificationMessageTemplate
+     * @return a NotificationMessageTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplate post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, NotificationMessageTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, NotificationMessageTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the notificationMessageTemplate objects.

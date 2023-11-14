@@ -60,52 +60,52 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
+     * @return a AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AudioRoutingGroupCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
+     * @return a AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AudioRoutingGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of AudioRoutingGroup
+     * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AudioRoutingGroup> post(@jakarta.annotation.Nonnull final AudioRoutingGroup body) {
+    @jakarta.annotation.Nullable
+    public AudioRoutingGroup post(@jakarta.annotation.Nonnull final AudioRoutingGroup body) {
         return post(body, null);
     }
     /**
      * Create a new audioRoutingGroup. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AudioRoutingGroup
+     * @return a AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AudioRoutingGroup> post(@jakarta.annotation.Nonnull final AudioRoutingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AudioRoutingGroup post(@jakarta.annotation.Nonnull final AudioRoutingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AudioRoutingGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AudioRoutingGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of audioRoutingGroup objects. This API is available in the following national cloud deployments.

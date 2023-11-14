@@ -59,24 +59,24 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a UserProcessingResultCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserProcessingResultCollectionResponse get() {
         return get(null);
     }
     /**
      * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a UserProcessingResultCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserProcessingResultCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserProcessingResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserProcessingResultCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The unique identifier of the Microsoft Entra identity that last modified the workflow object.

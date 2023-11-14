@@ -40,69 +40,67 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
      * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get() {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity get() {
         return get(null);
     }
     /**
      * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
+     * @return a ImportedWindowsAutopilotDeviceIdentity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedWindowsAutopilotDeviceIdentity patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Deletes a importedWindowsAutopilotDeviceIdentity.
@@ -129,6 +127,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

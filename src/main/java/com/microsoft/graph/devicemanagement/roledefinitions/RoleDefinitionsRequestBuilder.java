@@ -60,52 +60,52 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
-     * @return a CompletableFuture of RoleDefinitionCollectionResponse
+     * @return a RoleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinitionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public RoleDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleDefinitionCollectionResponse
+     * @return a RoleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoleDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoleDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoleDefinitionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new roleDefinition object.
+     * Create a new deviceAndAppManagementRoleDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a RoleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> post(@jakarta.annotation.Nonnull final RoleDefinition body) {
+    @jakarta.annotation.Nullable
+    public RoleDefinition post(@jakarta.annotation.Nonnull final RoleDefinition body) {
         return post(body, null);
     }
     /**
-     * Create a new roleDefinition object.
+     * Create a new deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleDefinition
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a RoleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> post(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RoleDefinition post(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RoleDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
@@ -137,7 +137,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new roleDefinition object.
+     * Create a new deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new roleDefinition object.
+     * Create a new deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

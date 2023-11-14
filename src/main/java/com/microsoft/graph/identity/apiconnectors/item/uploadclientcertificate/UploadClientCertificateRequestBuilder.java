@@ -38,28 +38,28 @@ public class UploadClientCertificateRequestBuilder extends BaseRequestBuilder {
     /**
      * Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of IdentityApiConnector
+     * @return a IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-uploadclientcertificate?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@jakarta.annotation.Nonnull final UploadClientCertificatePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnector post(@jakarta.annotation.Nonnull final UploadClientCertificatePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityApiConnector
+     * @return a IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-uploadclientcertificate?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@jakarta.annotation.Nonnull final UploadClientCertificatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityApiConnector post(@jakarta.annotation.Nonnull final UploadClientCertificatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Upload a PKCS 12 format key (.pfx) to an API connector's authentication configuration. The input is a base-64 encoded value of the PKCS 12 certificate contents. This method returns an apiConnector. This API is available in the following national cloud deployments.

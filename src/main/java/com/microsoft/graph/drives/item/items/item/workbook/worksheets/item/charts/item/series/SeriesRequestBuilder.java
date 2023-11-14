@@ -61,26 +61,26 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
+     * @return a WorkbookChartSeriesCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookChartSeriesCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
+     * @return a WorkbookChartSeriesCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartSeriesCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartSeriesCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartSeriesCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the itemAt method.
@@ -95,28 +95,28 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new ChartSeries. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of WorkbookChartSeries
+     * @return a WorkbookChartSeries
      * @see <a href="https://learn.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartSeries> post(@jakarta.annotation.Nonnull final WorkbookChartSeries body) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartSeries post(@jakarta.annotation.Nonnull final WorkbookChartSeries body) {
         return post(body, null);
     }
     /**
      * Use this API to create a new ChartSeries. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartSeries
+     * @return a WorkbookChartSeries
      * @see <a href="https://learn.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartSeries> post(@jakarta.annotation.Nonnull final WorkbookChartSeries body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartSeries post(@jakarta.annotation.Nonnull final WorkbookChartSeries body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartSeries::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartSeries::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of chartseries objects. This API is available in the following national cloud deployments.

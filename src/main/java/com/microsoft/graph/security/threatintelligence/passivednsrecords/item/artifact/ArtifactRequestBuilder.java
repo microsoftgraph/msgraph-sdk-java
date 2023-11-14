@@ -38,24 +38,24 @@ public class ArtifactRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The artifact related to this passiveDnsRecord entry.
-     * @return a CompletableFuture of Artifact
+     * @return a Artifact
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Artifact> get() {
+    @jakarta.annotation.Nullable
+    public Artifact get() {
         return get(null);
     }
     /**
      * The artifact related to this passiveDnsRecord entry.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Artifact
+     * @return a Artifact
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Artifact> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Artifact get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Artifact::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Artifact::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The artifact related to this passiveDnsRecord entry.

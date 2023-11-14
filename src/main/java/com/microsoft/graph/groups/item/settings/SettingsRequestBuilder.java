@@ -60,52 +60,52 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tenant-level or group-specific group settings objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of GroupSettingCollectionResponse
+     * @return a GroupSettingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GroupSettingCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of tenant-level or group-specific group settings objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupSettingCollectionResponse
+     * @return a GroupSettingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of GroupSetting
+     * @return a GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSetting> post(@jakarta.annotation.Nonnull final GroupSetting body) {
+    @jakarta.annotation.Nullable
+    public GroupSetting post(@jakarta.annotation.Nonnull final GroupSetting body) {
         return post(body, null);
     }
     /**
      * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupSetting
+     * @return a GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSetting> post(@jakarta.annotation.Nonnull final GroupSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupSetting post(@jakarta.annotation.Nonnull final GroupSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of tenant-level or group-specific group settings objects. This API is available in the following national cloud deployments.

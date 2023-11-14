@@ -46,48 +46,48 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get appCatalogs
-     * @return a CompletableFuture of AppCatalogs
+     * @return a AppCatalogs
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> get() {
+    @jakarta.annotation.Nullable
+    public AppCatalogs get() {
         return get(null);
     }
     /**
      * Get appCatalogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppCatalogs
+     * @return a AppCatalogs
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AppCatalogs get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AppCatalogs::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AppCatalogs::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update appCatalogs
      * @param body The request body
-     * @return a CompletableFuture of AppCatalogs
+     * @return a AppCatalogs
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> patch(@jakarta.annotation.Nonnull final AppCatalogs body) {
+    @jakarta.annotation.Nullable
+    public AppCatalogs patch(@jakarta.annotation.Nonnull final AppCatalogs body) {
         return patch(body, null);
     }
     /**
      * Update appCatalogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppCatalogs
+     * @return a AppCatalogs
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> patch(@jakarta.annotation.Nonnull final AppCatalogs body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AppCatalogs patch(@jakarta.annotation.Nonnull final AppCatalogs body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AppCatalogs::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AppCatalogs::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get appCatalogs

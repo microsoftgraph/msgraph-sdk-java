@@ -55,66 +55,64 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property tasks for print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property tasks for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * A list of printTasks that were triggered by this print job.
-     * @return a CompletableFuture of PrintTask
+     * @return a PrintTask
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintTask> get() {
+    @jakarta.annotation.Nullable
+    public PrintTask get() {
         return get(null);
     }
     /**
      * A list of printTasks that were triggered by this print job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintTask
+     * @return a PrintTask
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintTask> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property tasks in print
      * @param body The request body
-     * @return a CompletableFuture of PrintTask
+     * @return a PrintTask
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintTask> patch(@jakarta.annotation.Nonnull final PrintTask body) {
+    @jakarta.annotation.Nullable
+    public PrintTask patch(@jakarta.annotation.Nonnull final PrintTask body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property tasks in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintTask
+     * @return a PrintTask
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintTask> patch(@jakarta.annotation.Nonnull final PrintTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintTask patch(@jakarta.annotation.Nonnull final PrintTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintTask::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property tasks for print
@@ -141,6 +139,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

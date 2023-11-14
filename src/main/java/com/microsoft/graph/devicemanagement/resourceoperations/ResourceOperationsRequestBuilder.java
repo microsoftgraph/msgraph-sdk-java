@@ -60,52 +60,52 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the resourceOperation objects.
-     * @return a CompletableFuture of ResourceOperationCollectionResponse
+     * @return a ResourceOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ResourceOperationCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the resourceOperation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceOperationCollectionResponse
+     * @return a ResourceOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ResourceOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ResourceOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ResourceOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new resourceOperation object.
      * @param body The request body
-     * @return a CompletableFuture of ResourceOperation
+     * @return a ResourceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> post(@jakarta.annotation.Nonnull final ResourceOperation body) {
+    @jakarta.annotation.Nullable
+    public ResourceOperation post(@jakarta.annotation.Nonnull final ResourceOperation body) {
         return post(body, null);
     }
     /**
      * Create a new resourceOperation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceOperation
+     * @return a ResourceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> post(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ResourceOperation post(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ResourceOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ResourceOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the resourceOperation objects.

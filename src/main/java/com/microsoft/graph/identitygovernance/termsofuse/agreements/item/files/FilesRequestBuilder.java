@@ -60,50 +60,50 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a AgreementFileLocalizationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AgreementFileLocalizationCollectionResponse get() {
         return get(null);
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a AgreementFileLocalizationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AgreementFileLocalizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AgreementFileLocalizationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new localized agreement file. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of AgreementFileLocalization
+     * @return a AgreementFileLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileLocalization> post(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
+    @jakarta.annotation.Nullable
+    public AgreementFileLocalization post(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
         return post(body, null);
     }
     /**
      * Create a new localized agreement file. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileLocalization
+     * @return a AgreementFileLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementFileLocalization> post(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AgreementFileLocalization post(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AgreementFileLocalization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AgreementFileLocalization::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.

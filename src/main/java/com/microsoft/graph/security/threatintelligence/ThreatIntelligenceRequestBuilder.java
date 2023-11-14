@@ -7,6 +7,7 @@ import com.microsoft.graph.security.threatintelligence.articles.ArticlesRequestB
 import com.microsoft.graph.security.threatintelligence.hostcomponents.HostComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcookies.HostCookiesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostpairs.HostPairsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostports.HostPortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.HostsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostsslcertificates.HostSslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosttrackers.HostTrackersRequestBuilder;
@@ -70,6 +71,13 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder hostPairs() {
         return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostPorts property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostPortsRequestBuilder hostPorts() {
+        return new HostPortsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
@@ -167,66 +175,64 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property threatIntelligence for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property threatIntelligence for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get threatIntelligence from security
-     * @return a CompletableFuture of ThreatIntelligence
+     * @return a ThreatIntelligence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatIntelligence> get() {
+    @jakarta.annotation.Nullable
+    public ThreatIntelligence get() {
         return get(null);
     }
     /**
      * Get threatIntelligence from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatIntelligence
+     * @return a ThreatIntelligence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatIntelligence> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatIntelligence get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatIntelligence::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatIntelligence::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property threatIntelligence in security
      * @param body The request body
-     * @return a CompletableFuture of ThreatIntelligence
+     * @return a ThreatIntelligence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatIntelligence> patch(@jakarta.annotation.Nonnull final ThreatIntelligence body) {
+    @jakarta.annotation.Nullable
+    public ThreatIntelligence patch(@jakarta.annotation.Nonnull final ThreatIntelligence body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property threatIntelligence in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatIntelligence
+     * @return a ThreatIntelligence
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatIntelligence> patch(@jakarta.annotation.Nonnull final ThreatIntelligence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThreatIntelligence patch(@jakarta.annotation.Nonnull final ThreatIntelligence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThreatIntelligence::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThreatIntelligence::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property threatIntelligence for security
@@ -253,6 +259,7 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

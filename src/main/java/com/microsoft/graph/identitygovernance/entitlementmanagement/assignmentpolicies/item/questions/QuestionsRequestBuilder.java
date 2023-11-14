@@ -60,48 +60,48 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Questions that are posed to the  requestor.
-     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
+     * @return a AccessPackageQuestionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageQuestionCollectionResponse get() {
         return get(null);
     }
     /**
      * Questions that are posed to the  requestor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
+     * @return a AccessPackageQuestionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageQuestionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageQuestionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageQuestionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to questions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageQuestion
+     * @return a AccessPackageQuestion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageQuestion> post(@jakarta.annotation.Nonnull final AccessPackageQuestion body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageQuestion post(@jakarta.annotation.Nonnull final AccessPackageQuestion body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to questions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageQuestion
+     * @return a AccessPackageQuestion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageQuestion> post(@jakarta.annotation.Nonnull final AccessPackageQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageQuestion post(@jakarta.annotation.Nonnull final AccessPackageQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageQuestion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageQuestion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Questions that are posed to the  requestor.

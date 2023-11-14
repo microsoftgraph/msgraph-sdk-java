@@ -60,52 +60,52 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the resources associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. The educationSubmissionResource object is a wrapper around the actual resource object the student is working on. The wrapper also includes a pointer to the resources on the assignment if this was copied from the assignment during the assign process. These resources are the working copy of the assignment. The submittedResources are the resources that have officially been submitted to be graded. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a EducationSubmissionResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * List the resources associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. The educationSubmissionResource object is a wrapper around the actual resource object the student is working on. The wrapper also includes a pointer to the resources on the assignment if this was copied from the assignment during the assign process. These resources are the working copy of the assignment. The submittedResources are the resources that have officially been submitted to be graded. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a EducationSubmissionResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationSubmissionResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationSubmissionResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add an educationSubmissionResource to a submission resource list. Only teachers and students can perform this operation. The operation will not succeed if the allowStudentsToAddResources flag is not set to true. To create a new file-based resource, upload the file to the resources folder associated with the submission. If the file doesn't exist or is not in that folder, the POST request will fail. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of EducationSubmissionResource
+     * @return a EducationSubmissionResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResource> post(@jakarta.annotation.Nonnull final EducationSubmissionResource body) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResource post(@jakarta.annotation.Nonnull final EducationSubmissionResource body) {
         return post(body, null);
     }
     /**
      * Add an educationSubmissionResource to a submission resource list. Only teachers and students can perform this operation. The operation will not succeed if the allowStudentsToAddResources flag is not set to true. To create a new file-based resource, upload the file to the resources folder associated with the submission. If the file doesn't exist or is not in that folder, the POST request will fail. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionResource
+     * @return a EducationSubmissionResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSubmissionResource> post(@jakarta.annotation.Nonnull final EducationSubmissionResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationSubmissionResource post(@jakarta.annotation.Nonnull final EducationSubmissionResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationSubmissionResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationSubmissionResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List the resources associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. The educationSubmissionResource object is a wrapper around the actual resource object the student is working on. The wrapper also includes a pointer to the resources on the assignment if this was copied from the assignment during the assign process. These resources are the working copy of the assignment. The submittedResources are the resources that have officially been submitted to be graded. This API is available in the following national cloud deployments.

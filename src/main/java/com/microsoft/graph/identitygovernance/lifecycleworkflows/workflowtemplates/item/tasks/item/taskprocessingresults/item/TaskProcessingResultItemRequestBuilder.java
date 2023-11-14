@@ -62,24 +62,24 @@ public class TaskProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The result of processing the task.
-     * @return a CompletableFuture of TaskProcessingResult
+     * @return a TaskProcessingResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskProcessingResult> get() {
+    @jakarta.annotation.Nullable
+    public TaskProcessingResult get() {
         return get(null);
     }
     /**
      * The result of processing the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TaskProcessingResult
+     * @return a TaskProcessingResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskProcessingResult> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TaskProcessingResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TaskProcessingResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TaskProcessingResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The result of processing the task.

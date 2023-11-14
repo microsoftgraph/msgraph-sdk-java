@@ -60,52 +60,52 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ConversationCollectionResponse
+     * @return a ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ConversationCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConversationCollectionResponse
+     * @return a ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ConversationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ConversationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ConversationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Conversation
+     * @return a Conversation
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Conversation> post(@jakarta.annotation.Nonnull final Conversation body) {
+    @jakarta.annotation.Nullable
+    public Conversation post(@jakarta.annotation.Nonnull final Conversation body) {
         return post(body, null);
     }
     /**
      * Use reply thread or reply post to further post to that conversation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Conversation
+     * @return a Conversation
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Conversation> post(@jakarta.annotation.Nonnull final Conversation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Conversation post(@jakarta.annotation.Nonnull final Conversation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Conversation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Conversation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the list of conversations in this group. This API is available in the following national cloud deployments.

@@ -60,48 +60,48 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of HostPairCollectionResponse
+     * @return a HostPairCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public HostPairCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostPairCollectionResponse
+     * @return a HostPairCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostPairCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostPairCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostPairCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to hostPairs for security
      * @param body The request body
-     * @return a CompletableFuture of HostPair
+     * @return a HostPair
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body) {
+    @jakarta.annotation.Nullable
+    public HostPair post(@jakarta.annotation.Nonnull final HostPair body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to hostPairs for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostPair
+     * @return a HostPair
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostPair post(@jakarta.annotation.Nonnull final HostPair body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.

@@ -38,28 +38,28 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ContentType
+     * @return a ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> post(@jakarta.annotation.Nonnull final AddCopyPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public ContentType post(@jakarta.annotation.Nonnull final AddCopyPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContentType
+     * @return a ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> post(@jakarta.annotation.Nonnull final AddCopyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ContentType post(@jakarta.annotation.Nonnull final AddCopyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ContentType::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add a copy of a content type][contentType] from a [site][site] to a [list][list]. This API is available in the following [national cloud deployments.

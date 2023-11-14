@@ -59,26 +59,26 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
+     * @return a WhoisHistoryRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list-history?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecordCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
+     * @return a WhoisHistoryRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list-history?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WhoisHistoryRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources. This API is available in the following national cloud deployments.

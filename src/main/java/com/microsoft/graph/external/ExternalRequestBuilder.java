@@ -46,48 +46,48 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get external
-     * @return a CompletableFuture of External
+     * @return a External
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<External> get() {
+    @jakarta.annotation.Nullable
+    public External get() {
         return get(null);
     }
     /**
      * Get external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of External
+     * @return a External
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<External> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public External get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, External::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, External::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update external
      * @param body The request body
-     * @return a CompletableFuture of External
+     * @return a External
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<External> patch(@jakarta.annotation.Nonnull final External body) {
+    @jakarta.annotation.Nullable
+    public External patch(@jakarta.annotation.Nonnull final External body) {
         return patch(body, null);
     }
     /**
      * Update external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of External
+     * @return a External
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<External> patch(@jakarta.annotation.Nonnull final External body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public External patch(@jakarta.annotation.Nonnull final External body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, External::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, External::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get external

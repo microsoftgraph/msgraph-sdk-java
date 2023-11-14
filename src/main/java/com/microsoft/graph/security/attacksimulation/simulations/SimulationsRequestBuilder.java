@@ -60,50 +60,52 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of SimulationCollectionResponse
+     * @return a SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SimulationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SimulationCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SimulationCollectionResponse
+     * @return a SimulationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SimulationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SimulationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SimulationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SimulationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
-     * @return a CompletableFuture of Simulation
+     * @return a Simulation
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-post-simulation?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Simulation> post(@jakarta.annotation.Nonnull final Simulation body) {
+    @jakarta.annotation.Nullable
+    public Simulation post(@jakarta.annotation.Nonnull final Simulation body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Simulation
+     * @return a Simulation
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-post-simulation?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Simulation> post(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Simulation post(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of attack simulation campaigns for a tenant. This API is available in the following national cloud deployments.
@@ -135,7 +137,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -144,7 +146,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

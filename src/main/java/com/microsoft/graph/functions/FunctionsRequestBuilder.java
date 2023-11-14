@@ -60,48 +60,48 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from functions
-     * @return a CompletableFuture of AttributeMappingFunctionSchemaCollectionResponse
+     * @return a AttributeMappingFunctionSchemaCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchemaCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AttributeMappingFunctionSchemaCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from functions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AttributeMappingFunctionSchemaCollectionResponse
+     * @return a AttributeMappingFunctionSchemaCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchemaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AttributeMappingFunctionSchemaCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AttributeMappingFunctionSchemaCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AttributeMappingFunctionSchemaCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to functions
      * @param body The request body
-     * @return a CompletableFuture of AttributeMappingFunctionSchema
+     * @return a AttributeMappingFunctionSchema
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body) {
+    @jakarta.annotation.Nullable
+    public AttributeMappingFunctionSchema post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body) {
         return post(body, null);
     }
     /**
      * Add new entity to functions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AttributeMappingFunctionSchema
+     * @return a AttributeMappingFunctionSchema
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AttributeMappingFunctionSchema> post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AttributeMappingFunctionSchema post(@jakarta.annotation.Nonnull final AttributeMappingFunctionSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AttributeMappingFunctionSchema::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AttributeMappingFunctionSchema::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from functions

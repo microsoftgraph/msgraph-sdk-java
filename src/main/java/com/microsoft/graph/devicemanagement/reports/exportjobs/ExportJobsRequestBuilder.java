@@ -60,52 +60,52 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceManagementExportJob objects.
-     * @return a CompletableFuture of DeviceManagementExportJobCollectionResponse
+     * @return a DeviceManagementExportJobCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExportJobCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExportJobCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceManagementExportJob objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementExportJobCollectionResponse
+     * @return a DeviceManagementExportJobCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExportJobCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExportJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementExportJobCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementExportJobCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceManagementExportJob object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceManagementExportJob
+     * @return a DeviceManagementExportJob
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExportJob post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body) {
         return post(body, null);
     }
     /**
      * Create a new deviceManagementExportJob object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementExportJob
+     * @return a DeviceManagementExportJob
      * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExportJob post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementExportJob::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementExportJob::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceManagementExportJob objects.

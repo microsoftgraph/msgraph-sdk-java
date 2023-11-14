@@ -60,48 +60,48 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of files for this app content version.
-     * @return a CompletableFuture of MobileAppContentFileCollectionResponse
+     * @return a MobileAppContentFileCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFileCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFileCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of files for this app content version.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContentFileCollectionResponse
+     * @return a MobileAppContentFileCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContentFileCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContentFileCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to files for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> post(@jakarta.annotation.Nonnull final MobileAppContentFile body) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile post(@jakarta.annotation.Nonnull final MobileAppContentFile body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to files for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppContentFile
+     * @return a MobileAppContentFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> post(@jakarta.annotation.Nonnull final MobileAppContentFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MobileAppContentFile post(@jakarta.annotation.Nonnull final MobileAppContentFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MobileAppContentFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of files for this app content version.

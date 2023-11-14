@@ -60,52 +60,52 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of page objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @return a OnenotePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public OnenotePageCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of page objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @return a OnenotePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnenotePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnenotePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnenotePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.   This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of OnenotePage
+     * @return a OnenotePage
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> post(@jakarta.annotation.Nonnull final OnenotePage body) {
+    @jakarta.annotation.Nullable
+    public OnenotePage post(@jakarta.annotation.Nonnull final OnenotePage body) {
         return post(body, null);
     }
     /**
      * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.   This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenotePage
+     * @return a OnenotePage
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> post(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnenotePage post(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnenotePage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnenotePage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of page objects. This API is available in the following national cloud deployments.

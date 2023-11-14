@@ -59,52 +59,52 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get languageDetails from security
-     * @return a CompletableFuture of TrainingLanguageDetailCollectionResponse
+     * Language specific details on a training.
+     * @return a TrainingLanguageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetailCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TrainingLanguageDetailCollectionResponse
+     * @return a TrainingLanguageDetailCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TrainingLanguageDetailCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to languageDetails for security
      * @param body The request body
-     * @return a CompletableFuture of TrainingLanguageDetail
+     * @return a TrainingLanguageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetail post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to languageDetails for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TrainingLanguageDetail
+     * @return a TrainingLanguageDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TrainingLanguageDetail post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -175,7 +175,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return new LanguageDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

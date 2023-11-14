@@ -38,24 +38,24 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicators related to this article.
-     * @return a CompletableFuture of ArticleIndicator
+     * @return a ArticleIndicator
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArticleIndicator> get() {
+    @jakarta.annotation.Nullable
+    public ArticleIndicator get() {
         return get(null);
     }
     /**
      * Indicators related to this article.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ArticleIndicator
+     * @return a ArticleIndicator
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArticleIndicator> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ArticleIndicator get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ArticleIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ArticleIndicator::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Indicators related to this article.

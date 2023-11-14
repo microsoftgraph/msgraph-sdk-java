@@ -60,50 +60,50 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
+     * @return a RichLongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RichLongRunningOperationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public RichLongRunningOperationCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
+     * @return a RichLongRunningOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RichLongRunningOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RichLongRunningOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RichLongRunningOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RichLongRunningOperationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to operations for groups
      * @param body The request body
-     * @return a CompletableFuture of RichLongRunningOperation
+     * @return a RichLongRunningOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RichLongRunningOperation> post(@jakarta.annotation.Nonnull final RichLongRunningOperation body) {
+    @jakarta.annotation.Nullable
+    public RichLongRunningOperation post(@jakarta.annotation.Nonnull final RichLongRunningOperation body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to operations for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RichLongRunningOperation
+     * @return a RichLongRunningOperation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RichLongRunningOperation> post(@jakarta.annotation.Nonnull final RichLongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RichLongRunningOperation post(@jakarta.annotation.Nonnull final RichLongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RichLongRunningOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of rich long-running operations associated with a site. This API is available in the following national cloud deployments.

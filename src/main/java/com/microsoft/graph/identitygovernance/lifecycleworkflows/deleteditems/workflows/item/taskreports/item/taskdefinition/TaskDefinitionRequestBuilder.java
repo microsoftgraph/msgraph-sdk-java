@@ -38,24 +38,24 @@ public class TaskDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The taskDefinition associated with the related lifecycle workflow task.Supports $filter(eq, ne) and $expand.
-     * @return a CompletableFuture of TaskDefinition
+     * @return a TaskDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskDefinition> get() {
+    @jakarta.annotation.Nullable
+    public TaskDefinition get() {
         return get(null);
     }
     /**
      * The taskDefinition associated with the related lifecycle workflow task.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TaskDefinition
+     * @return a TaskDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TaskDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TaskDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TaskDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The taskDefinition associated with the related lifecycle workflow task.Supports $filter(eq, ne) and $expand.

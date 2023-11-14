@@ -60,52 +60,52 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceConfigurationAssignment objects.
-     * @return a CompletableFuture of DeviceConfigurationAssignmentCollectionResponse
+     * @return a DeviceConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceConfigurationAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfigurationAssignmentCollectionResponse
+     * @return a DeviceConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceConfigurationAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceConfigurationAssignment
+     * @return a DeviceConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignment> post(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationAssignment post(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new deviceConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfigurationAssignment
+     * @return a DeviceConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignment> post(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceConfigurationAssignment post(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceConfigurationAssignment objects.

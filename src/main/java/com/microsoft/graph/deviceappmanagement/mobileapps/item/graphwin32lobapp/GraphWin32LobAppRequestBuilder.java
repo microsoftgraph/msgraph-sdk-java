@@ -62,24 +62,24 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.win32LobApp
-     * @return a CompletableFuture of Win32LobApp
+     * @return a Win32LobApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> get() {
+    @jakarta.annotation.Nullable
+    public Win32LobApp get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.win32LobApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Win32LobApp
+     * @return a Win32LobApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Win32LobApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Win32LobApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Win32LobApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.win32LobApp

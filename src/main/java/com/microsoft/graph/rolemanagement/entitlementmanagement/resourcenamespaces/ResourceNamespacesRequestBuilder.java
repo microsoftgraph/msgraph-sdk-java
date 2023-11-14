@@ -60,48 +60,48 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceNamespaces from roleManagement
-     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
+     * @return a UnifiedRbacResourceNamespaceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceNamespaceCollectionResponse get() {
         return get(null);
     }
     /**
      * Get resourceNamespaces from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
+     * @return a UnifiedRbacResourceNamespaceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceNamespaceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRbacResourceNamespaceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceNamespaceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resourceNamespaces for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of UnifiedRbacResourceNamespace
+     * @return a UnifiedRbacResourceNamespace
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceNamespace post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resourceNamespaces for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceNamespace
+     * @return a UnifiedRbacResourceNamespace
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceNamespace post(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRbacResourceNamespace::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceNamespace::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get resourceNamespaces from roleManagement

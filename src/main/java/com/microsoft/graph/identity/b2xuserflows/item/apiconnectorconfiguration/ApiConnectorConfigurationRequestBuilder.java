@@ -54,24 +54,24 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
-     * @return a CompletableFuture of UserFlowApiConnectorConfiguration
+     * @return a UserFlowApiConnectorConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowApiConnectorConfiguration> get() {
+    @jakarta.annotation.Nullable
+    public UserFlowApiConnectorConfiguration get() {
         return get(null);
     }
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowApiConnectorConfiguration
+     * @return a UserFlowApiConnectorConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserFlowApiConnectorConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserFlowApiConnectorConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserFlowApiConnectorConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserFlowApiConnectorConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.

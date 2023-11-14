@@ -60,52 +60,52 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TeamsTabCollectionResponse
+     * @return a TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TeamsTabCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsTabCollectionResponse
+     * @return a TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsTabCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsTabCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsTabCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TeamsTab
+     * @return a TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> post(@jakarta.annotation.Nonnull final TeamsTab body) {
+    @jakarta.annotation.Nullable
+    public TeamsTab post(@jakarta.annotation.Nonnull final TeamsTab body) {
         return post(body, null);
     }
     /**
      * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsTab
+     * @return a TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> post(@jakarta.annotation.Nonnull final TeamsTab body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamsTab post(@jakarta.annotation.Nonnull final TeamsTab body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamsTab::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamsTab::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the list of tabs in the specified channel within a team.  This API is available in the following national cloud deployments.

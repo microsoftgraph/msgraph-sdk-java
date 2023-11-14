@@ -18,7 +18,7 @@ public class ExternalGroup extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      */
     private java.util.List<Identity> members;
     /**
@@ -66,7 +66,7 @@ public class ExternalGroup extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Gets the members property value. A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      * @return a java.util.List<Identity>
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ExternalGroup extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     * Sets the members property value. A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<Identity> value) {

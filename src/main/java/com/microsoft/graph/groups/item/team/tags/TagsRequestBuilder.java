@@ -60,52 +60,52 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TeamworkTagCollectionResponse
+     * @return a TeamworkTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TeamworkTagCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamworkTagCollectionResponse
+     * @return a TeamworkTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamworkTagCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamworkTagCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamworkTagCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of TeamworkTag
+     * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamworkTag> post(@jakarta.annotation.Nonnull final TeamworkTag body) {
+    @jakarta.annotation.Nullable
+    public TeamworkTag post(@jakarta.annotation.Nonnull final TeamworkTag body) {
         return post(body, null);
     }
     /**
      * Create a standard tag for members in a team. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamworkTag
+     * @return a TeamworkTag
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TeamworkTag> post(@jakarta.annotation.Nonnull final TeamworkTag body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TeamworkTag post(@jakarta.annotation.Nonnull final TeamworkTag body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TeamworkTag::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TeamworkTag::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the tag objects and their properties. This API is available in the following national cloud deployments.

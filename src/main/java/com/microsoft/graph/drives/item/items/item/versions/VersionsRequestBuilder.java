@@ -60,50 +60,50 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings that may be unique per user or location. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of DriveItemVersionCollectionResponse
+     * @return a DriveItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DriveItemVersionCollectionResponse get() {
         return get(null);
     }
     /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings that may be unique per user or location. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemVersionCollectionResponse
+     * @return a DriveItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItemVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItemVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItemVersionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to versions for drives
      * @param body The request body
-     * @return a CompletableFuture of DriveItemVersion
+     * @return a DriveItemVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> post(@jakarta.annotation.Nonnull final DriveItemVersion body) {
+    @jakarta.annotation.Nullable
+    public DriveItemVersion post(@jakarta.annotation.Nonnull final DriveItemVersion body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to versions for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemVersion
+     * @return a DriveItemVersion
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> post(@jakarta.annotation.Nonnull final DriveItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItemVersion post(@jakarta.annotation.Nonnull final DriveItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItemVersion::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItemVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings that may be unique per user or location. This API is available in the following national cloud deployments.

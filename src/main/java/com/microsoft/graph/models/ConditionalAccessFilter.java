@@ -22,7 +22,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Rule syntax is similar to that used for membership rules for groups in Microsoft Entra ID. For details, see rules with multiple expressions
      */
     private String rule;
     /**
@@ -78,7 +78,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Microsoft Entra ID. For details, see rules with multiple expressions
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
+     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Microsoft Entra ID. For details, see rules with multiple expressions
      * @param value Value to set for the rule property.
      */
     public void setRule(@jakarta.annotation.Nullable final String value) {

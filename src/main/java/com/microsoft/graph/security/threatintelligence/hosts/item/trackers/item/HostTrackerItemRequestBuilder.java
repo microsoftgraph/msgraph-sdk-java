@@ -38,24 +38,24 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostTrackers that are associated with this host.
-     * @return a CompletableFuture of HostTracker
+     * @return a HostTracker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTracker> get() {
+    @jakarta.annotation.Nullable
+    public HostTracker get() {
         return get(null);
     }
     /**
      * The hostTrackers that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostTracker
+     * @return a HostTracker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTracker> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostTracker get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The hostTrackers that are associated with this host.

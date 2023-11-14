@@ -60,50 +60,50 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of TrendingCollectionResponse
+     * @return a TrendingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrendingCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TrendingCollectionResponse get() {
         return get(null);
     }
     /**
      * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TrendingCollectionResponse
+     * @return a TrendingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TrendingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TrendingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TrendingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TrendingCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to trending for users
      * @param body The request body
-     * @return a CompletableFuture of Trending
+     * @return a Trending
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> post(@jakarta.annotation.Nonnull final Trending body) {
+    @jakarta.annotation.Nullable
+    public Trending post(@jakarta.annotation.Nonnull final Trending body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to trending for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Trending
+     * @return a Trending
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> post(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Trending post(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Trending::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Trending::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Calculated insight that includes a list of documents trending around the user. This API is available in the following national cloud deployments.

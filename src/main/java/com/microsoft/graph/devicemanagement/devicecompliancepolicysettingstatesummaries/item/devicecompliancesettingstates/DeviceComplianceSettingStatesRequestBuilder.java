@@ -60,52 +60,52 @@ public class DeviceComplianceSettingStatesRequestBuilder extends BaseRequestBuil
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
-     * @return a CompletableFuture of DeviceComplianceSettingStateCollectionResponse
+     * @return a DeviceComplianceSettingStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingStateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceSettingStateCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceSettingStateCollectionResponse
+     * @return a DeviceComplianceSettingStateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceSettingStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceSettingStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceComplianceSettingStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceComplianceSettingState
+     * @return a DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingState> post(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceSettingState post(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body) {
         return post(body, null);
     }
     /**
      * Create a new deviceComplianceSettingState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceSettingState
+     * @return a DeviceComplianceSettingState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancesettingstate-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingState> post(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceComplianceSettingState post(@jakarta.annotation.Nonnull final DeviceComplianceSettingState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceComplianceSettingState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceComplianceSettingState::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceComplianceSettingState objects.

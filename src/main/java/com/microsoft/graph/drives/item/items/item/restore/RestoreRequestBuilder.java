@@ -38,28 +38,28 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Restore a driveItem that has been deleted and is currently in the recycle bin. NOTE: This functionality is currently only available for OneDrive Personal. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of DriveItem
+     * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-restore?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> post(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public DriveItem post(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Restore a driveItem that has been deleted and is currently in the recycle bin. NOTE: This functionality is currently only available for OneDrive Personal. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItem
+     * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-restore?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> post(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItem post(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Restore a driveItem that has been deleted and is currently in the recycle bin. NOTE: This functionality is currently only available for OneDrive Personal. This API is available in the following national cloud deployments.

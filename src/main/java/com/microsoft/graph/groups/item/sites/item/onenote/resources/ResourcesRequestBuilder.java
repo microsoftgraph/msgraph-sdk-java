@@ -60,48 +60,48 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     * @return a CompletableFuture of OnenoteResourceCollectionResponse
+     * @return a OnenoteResourceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResourceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public OnenoteResourceCollectionResponse get() {
         return get(null);
     }
     /**
      * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenoteResourceCollectionResponse
+     * @return a OnenoteResourceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnenoteResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnenoteResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnenoteResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resources for groups
      * @param body The request body
-     * @return a CompletableFuture of OnenoteResource
+     * @return a OnenoteResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> post(@jakarta.annotation.Nonnull final OnenoteResource body) {
+    @jakarta.annotation.Nullable
+    public OnenoteResource post(@jakarta.annotation.Nonnull final OnenoteResource body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resources for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenoteResource
+     * @return a OnenoteResource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> post(@jakarta.annotation.Nonnull final OnenoteResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnenoteResource post(@jakarta.annotation.Nonnull final OnenoteResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnenoteResource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnenoteResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
