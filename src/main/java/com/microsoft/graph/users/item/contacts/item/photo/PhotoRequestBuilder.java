@@ -46,48 +46,48 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Optional contact picture. You can get or set a photo for a contact.
-     * @return a CompletableFuture of ProfilePhoto
+     * @return a ProfilePhoto
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
+    @jakarta.annotation.Nullable
+    public ProfilePhoto get() {
         return get(null);
     }
     /**
      * Optional contact picture. You can get or set a photo for a contact.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ProfilePhoto
+     * @return a ProfilePhoto
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfilePhoto get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property photo in users
      * @param body The request body
-     * @return a CompletableFuture of ProfilePhoto
+     * @return a ProfilePhoto
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> patch(@jakarta.annotation.Nonnull final ProfilePhoto body) {
+    @jakarta.annotation.Nullable
+    public ProfilePhoto patch(@jakarta.annotation.Nonnull final ProfilePhoto body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property photo in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ProfilePhoto
+     * @return a ProfilePhoto
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> patch(@jakarta.annotation.Nonnull final ProfilePhoto body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProfilePhoto patch(@jakarta.annotation.Nonnull final ProfilePhoto body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Optional contact picture. You can get or set a photo for a contact.

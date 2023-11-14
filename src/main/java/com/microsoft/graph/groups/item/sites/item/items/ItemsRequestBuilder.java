@@ -59,24 +59,24 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
-     * @return a CompletableFuture of BaseItemCollectionResponse
+     * @return a BaseItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public BaseItemCollectionResponse get() {
         return get(null);
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BaseItemCollectionResponse
+     * @return a BaseItemCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BaseItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BaseItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BaseItemCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.

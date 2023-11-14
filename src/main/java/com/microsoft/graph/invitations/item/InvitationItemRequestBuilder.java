@@ -47,66 +47,64 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete entity from invitations
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete entity from invitations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get entity from invitations by key
-     * @return a CompletableFuture of Invitation
+     * @return a Invitation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> get() {
+    @jakarta.annotation.Nullable
+    public Invitation get() {
         return get(null);
     }
     /**
      * Get entity from invitations by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Invitation
+     * @return a Invitation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Invitation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Invitation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Invitation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update entity in invitations
      * @param body The request body
-     * @return a CompletableFuture of Invitation
+     * @return a Invitation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> patch(@jakarta.annotation.Nonnull final Invitation body) {
+    @jakarta.annotation.Nullable
+    public Invitation patch(@jakarta.annotation.Nonnull final Invitation body) {
         return patch(body, null);
     }
     /**
      * Update entity in invitations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Invitation
+     * @return a Invitation
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> patch(@jakarta.annotation.Nonnull final Invitation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Invitation patch(@jakarta.annotation.Nonnull final Invitation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Invitation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Invitation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete entity from invitations
@@ -133,6 +131,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

@@ -386,7 +386,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private ProfilePhoto photo;
     /**
-     * The photos property
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     private java.util.List<ProfilePhoto> photos;
     /**
@@ -1408,7 +1408,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.photo;
     }
     /**
-     * Gets the photos property value. The photos property
+     * Gets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
      * @return a java.util.List<ProfilePhoto>
      */
     @jakarta.annotation.Nullable
@@ -2438,7 +2438,7 @@ public class User extends DirectoryObject implements Parsable {
         this.photo = value;
     }
     /**
-     * Sets the photos property value. The photos property
+     * Sets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
      * @param value Value to set for the photos property.
      */
     public void setPhotos(@jakarta.annotation.Nullable final java.util.List<ProfilePhoto> value) {

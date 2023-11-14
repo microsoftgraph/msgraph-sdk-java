@@ -38,24 +38,24 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
-     * @return a CompletableFuture of HostPair
+     * @return a HostPair
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPair> get() {
+    @jakarta.annotation.Nullable
+    public HostPair get() {
         return get(null);
     }
     /**
      * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostPair
+     * @return a HostPair
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostPair> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostPair get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.

@@ -60,50 +60,50 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
     }
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
+     * @return a UnifiedRoleManagementPolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicyAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
+     * @return a UnifiedRoleManagementPolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicyAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleManagementPolicyAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
      * @param body The request body
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
+     * @return a UnifiedRoleManagementPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicyAssignment post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
+     * @return a UnifiedRoleManagementPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRoleManagementPolicyAssignment post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups. This API is available in the following national cloud deployments.

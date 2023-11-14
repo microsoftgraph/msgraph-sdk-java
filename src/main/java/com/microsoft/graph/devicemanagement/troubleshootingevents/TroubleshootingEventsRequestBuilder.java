@@ -60,48 +60,48 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of troubleshooting events for the tenant.
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
+     * @return a DeviceManagementTroubleshootingEventCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagementTroubleshootingEventCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of troubleshooting events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
+     * @return a DeviceManagementTroubleshootingEventCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementTroubleshootingEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementTroubleshootingEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementTroubleshootingEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to troubleshootingEvents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementTroubleshootingEvent post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to troubleshootingEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementTroubleshootingEvent post(@jakarta.annotation.Nonnull final DeviceManagementTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of troubleshooting events for the tenant.

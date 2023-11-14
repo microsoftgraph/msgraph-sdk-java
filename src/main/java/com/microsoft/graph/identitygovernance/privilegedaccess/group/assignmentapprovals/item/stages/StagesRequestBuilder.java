@@ -60,50 +60,50 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ApprovalStageCollectionResponse
+     * @return a ApprovalStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApprovalStageCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ApprovalStageCollectionResponse get() {
         return get(null);
     }
     /**
      * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApprovalStageCollectionResponse
+     * @return a ApprovalStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApprovalStageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ApprovalStageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ApprovalStageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ApprovalStageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of ApprovalStage
+     * @return a ApprovalStage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApprovalStage> post(@jakarta.annotation.Nonnull final ApprovalStage body) {
+    @jakarta.annotation.Nullable
+    public ApprovalStage post(@jakarta.annotation.Nonnull final ApprovalStage body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApprovalStage
+     * @return a ApprovalStage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApprovalStage> post(@jakarta.annotation.Nonnull final ApprovalStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ApprovalStage post(@jakarta.annotation.Nonnull final ApprovalStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ApprovalStage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List the approvalStage objects associated with an approval. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request. This API is available in the following national cloud deployments.

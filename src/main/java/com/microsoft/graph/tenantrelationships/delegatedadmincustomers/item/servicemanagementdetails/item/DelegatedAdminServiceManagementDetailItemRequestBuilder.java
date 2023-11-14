@@ -39,66 +39,64 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
     /**
      * Delete navigation property serviceManagementDetails for tenantRelationships
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property serviceManagementDetails for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Contains the management details of a service in the customer tenant that's managed by delegated administration.
-     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
+     * @return a DelegatedAdminServiceManagementDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> get() {
+    @jakarta.annotation.Nullable
+    public DelegatedAdminServiceManagementDetail get() {
         return get(null);
     }
     /**
      * Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
+     * @return a DelegatedAdminServiceManagementDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DelegatedAdminServiceManagementDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
+     * @return a DelegatedAdminServiceManagementDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body) {
+    @jakarta.annotation.Nullable
+    public DelegatedAdminServiceManagementDetail patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
+     * @return a DelegatedAdminServiceManagementDetail
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DelegatedAdminServiceManagementDetail patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DelegatedAdminServiceManagementDetail::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property serviceManagementDetails for tenantRelationships
@@ -125,6 +123,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

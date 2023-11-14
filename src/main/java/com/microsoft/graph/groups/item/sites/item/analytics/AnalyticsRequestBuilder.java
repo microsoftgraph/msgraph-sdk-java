@@ -63,66 +63,64 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property analytics for groups
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property analytics for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Analytics about the view activities that took place in this site.
-     * @return a CompletableFuture of ItemAnalytics
+     * @return a ItemAnalytics
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> get() {
+    @jakarta.annotation.Nullable
+    public ItemAnalytics get() {
         return get(null);
     }
     /**
      * Analytics about the view activities that took place in this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemAnalytics
+     * @return a ItemAnalytics
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemAnalytics get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property analytics in groups
      * @param body The request body
-     * @return a CompletableFuture of ItemAnalytics
+     * @return a ItemAnalytics
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@jakarta.annotation.Nonnull final ItemAnalytics body) {
+    @jakarta.annotation.Nullable
+    public ItemAnalytics patch(@jakarta.annotation.Nonnull final ItemAnalytics body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property analytics in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemAnalytics
+     * @return a ItemAnalytics
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@jakarta.annotation.Nonnull final ItemAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemAnalytics patch(@jakarta.annotation.Nonnull final ItemAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemAnalytics::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property analytics for groups
@@ -149,6 +147,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

@@ -39,70 +39,68 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
     /**
      * Delete navigation property onPremisesSynchronization for directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property onPremisesSynchronization for directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of OnPremisesDirectorySynchronization
+     * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> get() {
+    @jakarta.annotation.Nullable
+    public OnPremisesDirectorySynchronization get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnPremisesDirectorySynchronization
+     * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnPremisesDirectorySynchronization get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of OnPremisesDirectorySynchronization
+     * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body) {
+    @jakarta.annotation.Nullable
+    public OnPremisesDirectorySynchronization patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body) {
         return patch(body, null);
     }
     /**
      * Update the properties of an onPremisesDirectorySynchronization object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnPremisesDirectorySynchronization
+     * @return a OnPremisesDirectorySynchronization
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnPremisesDirectorySynchronization patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnPremisesDirectorySynchronization::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property onPremisesSynchronization for directory
@@ -129,6 +127,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

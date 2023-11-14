@@ -60,27 +60,27 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}/points{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookChartPointCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
+     * @return a WorkbookChartPointCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookChartPointCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartPointCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a WorkbookChartPointCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartPointCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartPointCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartPointCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the itemAt method.
@@ -95,31 +95,31 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new ChartPoints. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of WorkbookChartPoint
+     * @return a WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> post(@jakarta.annotation.Nonnull final WorkbookChartPoint body) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartPoint post(@jakarta.annotation.Nonnull final WorkbookChartPoint body) {
         return post(body, null);
     }
     /**
      * Use this API to create a new ChartPoints. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartPoint
+     * @return a WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> post(@jakarta.annotation.Nonnull final WorkbookChartPoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartPoint post(@jakarta.annotation.Nonnull final WorkbookChartPoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartPoint::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartPoint::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -190,7 +190,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return new PointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of chartpoint objects. This API is available in the following national cloud deployments.
+     * Retrieve a list of chartpoints objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

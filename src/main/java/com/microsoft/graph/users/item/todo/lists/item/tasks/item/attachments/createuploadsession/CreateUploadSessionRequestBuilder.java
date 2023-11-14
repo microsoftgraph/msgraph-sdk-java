@@ -38,28 +38,28 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential PUT queries. The request headers for each PUT operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of UploadSession
+     * @return a UploadSession
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadSession> post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential PUT queries. The request headers for each PUT operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UploadSession
+     * @return a UploadSession
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadSession> post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UploadSession::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UploadSession::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential PUT queries. The request headers for each PUT operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task. This API is available in the following national cloud deployments.

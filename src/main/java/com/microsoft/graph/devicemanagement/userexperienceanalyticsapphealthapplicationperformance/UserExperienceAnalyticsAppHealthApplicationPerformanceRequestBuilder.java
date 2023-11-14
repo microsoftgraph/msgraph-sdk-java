@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilde
     }
     /**
      * User experience analytics appHealth Application Performance
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics appHealth Application Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthApplicationPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthApplicationPerformance body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthApplicationPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthApplicationPerformance body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a UserExperienceAnalyticsAppHealthApplicationPerformance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthApplicationPerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthApplicationPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsAppHealthApplicationPerformance post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthApplicationPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * User experience analytics appHealth Application Performance

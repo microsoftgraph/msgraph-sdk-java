@@ -60,48 +60,48 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of activities performed on the item. Write-only.
-     * @return a CompletableFuture of ExternalActivityCollectionResponse
+     * @return a ExternalActivityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalActivityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ExternalActivityCollectionResponse get() {
         return get(null);
     }
     /**
      * Returns a list of activities performed on the item. Write-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalActivityCollectionResponse
+     * @return a ExternalActivityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to activities for external
      * @param body The request body
-     * @return a CompletableFuture of ExternalActivity
+     * @return a ExternalActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalActivity> post(@jakarta.annotation.Nonnull final ExternalActivity body) {
+    @jakarta.annotation.Nullable
+    public ExternalActivity post(@jakarta.annotation.Nonnull final ExternalActivity body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to activities for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalActivity
+     * @return a ExternalActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalActivity> post(@jakarta.annotation.Nonnull final ExternalActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalActivity post(@jakarta.annotation.Nonnull final ExternalActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Returns a list of activities performed on the item. Write-only.

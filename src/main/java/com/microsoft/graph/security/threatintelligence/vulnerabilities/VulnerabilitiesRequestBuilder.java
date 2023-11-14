@@ -60,48 +60,48 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of VulnerabilityCollectionResponse
+     * @return a VulnerabilityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VulnerabilityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public VulnerabilityCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of VulnerabilityCollectionResponse
+     * @return a VulnerabilityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VulnerabilityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VulnerabilityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VulnerabilityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, VulnerabilityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to vulnerabilities for security
      * @param body The request body
-     * @return a CompletableFuture of Vulnerability
+     * @return a Vulnerability
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Vulnerability> post(@jakarta.annotation.Nonnull final Vulnerability body) {
+    @jakarta.annotation.Nullable
+    public Vulnerability post(@jakarta.annotation.Nonnull final Vulnerability body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to vulnerabilities for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Vulnerability
+     * @return a Vulnerability
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Vulnerability> post(@jakarta.annotation.Nonnull final Vulnerability body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Vulnerability post(@jakarta.annotation.Nonnull final Vulnerability body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Vulnerability::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Vulnerability::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a vulnerability object. This API is available in the following national cloud deployments.

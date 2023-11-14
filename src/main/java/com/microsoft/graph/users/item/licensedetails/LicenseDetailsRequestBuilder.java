@@ -60,50 +60,50 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of LicenseDetailsCollectionResponse
+     * @return a LicenseDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetailsCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public LicenseDetailsCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LicenseDetailsCollectionResponse
+     * @return a LicenseDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetailsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LicenseDetailsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LicenseDetailsCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LicenseDetailsCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to licenseDetails for users
      * @param body The request body
-     * @return a CompletableFuture of LicenseDetails
+     * @return a LicenseDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> post(@jakarta.annotation.Nonnull final LicenseDetails body) {
+    @jakarta.annotation.Nullable
+    public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to licenseDetails for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LicenseDetails
+     * @return a LicenseDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> post(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LicenseDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, LicenseDetails::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups. This API is available in the following national cloud deployments.

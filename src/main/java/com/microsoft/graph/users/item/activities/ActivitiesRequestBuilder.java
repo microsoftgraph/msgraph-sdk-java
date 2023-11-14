@@ -68,50 +68,50 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get activities for a given user. Unlike the recent OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the nextLink property to paginate. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of UserActivityCollectionResponse
+     * @return a UserActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-get-activities?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserActivityCollectionResponse get() {
         return get(null);
     }
     /**
      * Get activities for a given user. Unlike the recent OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the nextLink property to paginate. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserActivityCollectionResponse
+     * @return a UserActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-get-activities?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to activities for users
      * @param body The request body
-     * @return a CompletableFuture of UserActivity
+     * @return a UserActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivity> post(@jakarta.annotation.Nonnull final UserActivity body) {
+    @jakarta.annotation.Nullable
+    public UserActivity post(@jakarta.annotation.Nonnull final UserActivity body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to activities for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserActivity
+     * @return a UserActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivity> post(@jakarta.annotation.Nonnull final UserActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserActivity post(@jakarta.annotation.Nonnull final UserActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get activities for a given user. Unlike the recent OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the nextLink property to paginate. This API is available in the following national cloud deployments.

@@ -54,48 +54,48 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get informationProtection
-     * @return a CompletableFuture of InformationProtection
+     * @return a InformationProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> get() {
+    @jakarta.annotation.Nullable
+    public InformationProtection get() {
         return get(null);
     }
     /**
      * Get informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InformationProtection
+     * @return a InformationProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InformationProtection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, InformationProtection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, InformationProtection::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update informationProtection
      * @param body The request body
-     * @return a CompletableFuture of InformationProtection
+     * @return a InformationProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> patch(@jakarta.annotation.Nonnull final InformationProtection body) {
+    @jakarta.annotation.Nullable
+    public InformationProtection patch(@jakarta.annotation.Nonnull final InformationProtection body) {
         return patch(body, null);
     }
     /**
      * Update informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InformationProtection
+     * @return a InformationProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> patch(@jakarta.annotation.Nonnull final InformationProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InformationProtection patch(@jakarta.annotation.Nonnull final InformationProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, InformationProtection::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, InformationProtection::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get informationProtection

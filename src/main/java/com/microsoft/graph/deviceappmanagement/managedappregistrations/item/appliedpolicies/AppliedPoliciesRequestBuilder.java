@@ -60,48 +60,48 @@ public class AppliedPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
+     * @return a ManagedAppPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppPolicyCollectionResponse
+     * @return a ManagedAppPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to appliedPolicies for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of ManagedAppPolicy
+     * @return a ManagedAppPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicy post(@jakarta.annotation.Nonnull final ManagedAppPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to appliedPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppPolicy
+     * @return a ManagedAppPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicy post(@jakarta.annotation.Nonnull final ManagedAppPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedAppPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.

@@ -60,48 +60,48 @@ public class HostTrackersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of HostTrackerCollectionResponse
+     * @return a HostTrackerCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTrackerCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public HostTrackerCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostTrackerCollectionResponse
+     * @return a HostTrackerCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTrackerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostTrackerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostTrackerCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostTrackerCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to hostTrackers for security
      * @param body The request body
-     * @return a CompletableFuture of HostTracker
+     * @return a HostTracker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTracker> post(@jakarta.annotation.Nonnull final HostTracker body) {
+    @jakarta.annotation.Nullable
+    public HostTracker post(@jakarta.annotation.Nonnull final HostTracker body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to hostTrackers for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostTracker
+     * @return a HostTracker
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostTracker> post(@jakarta.annotation.Nonnull final HostTracker body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostTracker post(@jakarta.annotation.Nonnull final HostTracker body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostTracker::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a hostTracker object. This API is available in the following national cloud deployments.

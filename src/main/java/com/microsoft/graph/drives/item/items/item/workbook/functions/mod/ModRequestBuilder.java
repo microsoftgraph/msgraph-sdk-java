@@ -38,26 +38,26 @@ public class ModRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action mod
      * @param body The request body
-     * @return a CompletableFuture of WorkbookFunctionResult
+     * @return a WorkbookFunctionResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final ModPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public WorkbookFunctionResult post(@jakarta.annotation.Nonnull final ModPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action mod
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookFunctionResult
+     * @return a WorkbookFunctionResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final ModPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookFunctionResult post(@jakarta.annotation.Nonnull final ModPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookFunctionResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookFunctionResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action mod

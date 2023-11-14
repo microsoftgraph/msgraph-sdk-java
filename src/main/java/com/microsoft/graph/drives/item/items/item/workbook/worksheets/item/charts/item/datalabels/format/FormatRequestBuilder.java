@@ -55,66 +55,64 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property format for drives
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property format for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
-     * @return a CompletableFuture of WorkbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookChartDataLabelFormat get() {
         return get(null);
     }
     /**
      * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartDataLabelFormat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartDataLabelFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartDataLabelFormat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property format in drives
      * @param body The request body
-     * @return a CompletableFuture of WorkbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabelFormat body) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartDataLabelFormat patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabelFormat body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property format in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabelFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookChartDataLabelFormat patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabelFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookChartDataLabelFormat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookChartDataLabelFormat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property format for drives
@@ -141,6 +139,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

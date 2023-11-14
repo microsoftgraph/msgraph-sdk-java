@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsUserIdentity extends Identity implements Parsable {
     /**
-     * The tenantId property
+     * The user's tenant ID.
      */
     private String tenantId;
     /**
@@ -40,7 +40,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The user's tenant ID.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The user's tenant ID.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

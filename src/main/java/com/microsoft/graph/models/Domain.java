@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Domain extends Entity implements Parsable {
     /**
-     * Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      */
     private String authenticationType;
     /**
@@ -21,7 +21,7 @@ public class Domain extends Entity implements Parsable {
      */
     private java.util.List<DirectoryObject> domainNameReferences;
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      */
     private java.util.List<InternalDomainFederation> federationConfiguration;
     /**
@@ -73,7 +73,7 @@ public class Domain extends Entity implements Parsable {
      */
     private java.util.List<String> supportedServices;
     /**
-     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
+     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
      */
     private java.util.List<DomainDnsRecord> verificationDnsRecords;
     /**
@@ -93,7 +93,7 @@ public class Domain extends Entity implements Parsable {
         return new Domain();
     }
     /**
-     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class Domain extends Entity implements Parsable {
         return this.domainNameReferences;
     }
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @return a java.util.List<InternalDomainFederation>
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class Domain extends Entity implements Parsable {
         return this.supportedServices;
     }
     /**
-     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
+     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
      * @return a java.util.List<DomainDnsRecord>
      */
     @jakarta.annotation.Nullable
@@ -280,7 +280,7 @@ public class Domain extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("verificationDnsRecords", this.getVerificationDnsRecords());
     }
     /**
-     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
@@ -301,7 +301,7 @@ public class Domain extends Entity implements Parsable {
         this.domainNameReferences = value;
     }
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param value Value to set for the federationConfiguration property.
      */
     public void setFederationConfiguration(@jakarta.annotation.Nullable final java.util.List<InternalDomainFederation> value) {
@@ -392,7 +392,7 @@ public class Domain extends Entity implements Parsable {
         this.supportedServices = value;
     }
     /**
-     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
+     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
      * @param value Value to set for the verificationDnsRecords property.
      */
     public void setVerificationDnsRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {

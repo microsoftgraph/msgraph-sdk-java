@@ -111,66 +111,64 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property directory for roleManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property directory for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get directory from roleManagement
-     * @return a CompletableFuture of RbacApplication
+     * @return a RbacApplication
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RbacApplication> get() {
+    @jakarta.annotation.Nullable
+    public RbacApplication get() {
         return get(null);
     }
     /**
      * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RbacApplication
+     * @return a RbacApplication
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RbacApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RbacApplication get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property directory in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of RbacApplication
+     * @return a RbacApplication
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body) {
+    @jakarta.annotation.Nullable
+    public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property directory in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RbacApplication
+     * @return a RbacApplication
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RbacApplication::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property directory for roleManagement
@@ -197,6 +195,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

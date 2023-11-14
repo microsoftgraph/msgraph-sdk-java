@@ -37,26 +37,26 @@ public class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action checkMemberObjects
      * @param body The request body
-     * @return a CompletableFuture of CheckMemberObjectsPostResponse
+     * @return a CheckMemberObjectsPostResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CheckMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public CheckMemberObjectsPostResponse post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action checkMemberObjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CheckMemberObjectsPostResponse
+     * @return a CheckMemberObjectsPostResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CheckMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CheckMemberObjectsPostResponse post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CheckMemberObjectsPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CheckMemberObjectsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action checkMemberObjects

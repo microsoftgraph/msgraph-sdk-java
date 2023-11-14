@@ -38,24 +38,24 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.
-     * @return a CompletableFuture of AgreementAcceptance
+     * @return a AgreementAcceptance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementAcceptance> get() {
+    @jakarta.annotation.Nullable
+    public AgreementAcceptance get() {
         return get(null);
     }
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementAcceptance
+     * @return a AgreementAcceptance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementAcceptance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AgreementAcceptance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AgreementAcceptance::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AgreementAcceptance::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The user's terms of use acceptance statuses. Read-only. Nullable.

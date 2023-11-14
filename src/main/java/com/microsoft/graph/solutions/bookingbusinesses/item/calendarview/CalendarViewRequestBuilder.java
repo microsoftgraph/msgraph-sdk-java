@@ -60,50 +60,50 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a BookingAppointmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public BookingAppointmentCollectionResponse get() {
         return get(null);
     }
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a BookingAppointmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BookingAppointmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BookingAppointmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BookingAppointmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to calendarView for solutions
      * @param body The request body
-     * @return a CompletableFuture of BookingAppointment
+     * @return a BookingAppointment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingAppointment> post(@jakarta.annotation.Nonnull final BookingAppointment body) {
+    @jakarta.annotation.Nullable
+    public BookingAppointment post(@jakarta.annotation.Nonnull final BookingAppointment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to calendarView for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingAppointment
+     * @return a BookingAppointment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BookingAppointment> post(@jakarta.annotation.Nonnull final BookingAppointment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BookingAppointment post(@jakarta.annotation.Nonnull final BookingAppointment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BookingAppointment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BookingAppointment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.

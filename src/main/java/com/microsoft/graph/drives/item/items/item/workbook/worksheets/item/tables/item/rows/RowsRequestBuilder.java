@@ -69,26 +69,26 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
+     * @return a WorkbookTableRowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookTableRowCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
+     * @return a WorkbookTableRowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookTableRowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookTableRowCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookTableRowCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the itemAt method.
@@ -103,28 +103,28 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of WorkbookTableRow
+     * @return a WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-rows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> post(@jakarta.annotation.Nonnull final WorkbookTableRow body) {
+    @jakarta.annotation.Nullable
+    public WorkbookTableRow post(@jakarta.annotation.Nonnull final WorkbookTableRow body) {
         return post(body, null);
     }
     /**
      * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookTableRow
+     * @return a WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-rows?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> post(@jakarta.annotation.Nonnull final WorkbookTableRow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookTableRow post(@jakarta.annotation.Nonnull final WorkbookTableRow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookTableRow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookTableRow::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of tablerow objects. This API is available in the following national cloud deployments.

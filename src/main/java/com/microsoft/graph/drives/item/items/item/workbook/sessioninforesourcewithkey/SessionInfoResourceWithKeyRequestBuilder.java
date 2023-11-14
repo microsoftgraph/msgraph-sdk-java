@@ -39,24 +39,24 @@ public class SessionInfoResourceWithKeyRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Invoke function sessionInfoResource
-     * @return a CompletableFuture of WorkbookSessionInfo
+     * @return a WorkbookSessionInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookSessionInfo get() {
         return get(null);
     }
     /**
      * Invoke function sessionInfoResource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookSessionInfo
+     * @return a WorkbookSessionInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookSessionInfo get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookSessionInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookSessionInfo::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function sessionInfoResource

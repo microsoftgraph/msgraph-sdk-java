@@ -38,24 +38,24 @@ public class LastSevenDaysRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get lastSevenDays from sites
-     * @return a CompletableFuture of ItemActivityStat
+     * @return a ItemActivityStat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> get() {
+    @jakarta.annotation.Nullable
+    public ItemActivityStat get() {
         return get(null);
     }
     /**
      * Get lastSevenDays from sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivityStat
+     * @return a ItemActivityStat
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivityStat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivityStat::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivityStat::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get lastSevenDays from sites

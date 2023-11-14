@@ -60,48 +60,48 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceActions from roleManagement
-     * @return a CompletableFuture of UnifiedRbacResourceActionCollectionResponse
+     * @return a UnifiedRbacResourceActionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceActionCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceActionCollectionResponse get() {
         return get(null);
     }
     /**
      * Get resourceActions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceActionCollectionResponse
+     * @return a UnifiedRbacResourceActionCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceActionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceActionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRbacResourceActionCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceActionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resourceActions for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of UnifiedRbacResourceAction
+     * @return a UnifiedRbacResourceAction
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceAction post(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resourceActions for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceAction
+     * @return a UnifiedRbacResourceAction
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UnifiedRbacResourceAction> post(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UnifiedRbacResourceAction post(@jakarta.annotation.Nonnull final UnifiedRbacResourceAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UnifiedRbacResourceAction::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UnifiedRbacResourceAction::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get resourceActions from roleManagement

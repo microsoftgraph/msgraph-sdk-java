@@ -38,24 +38,24 @@ public class SourceColumnRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The source column for the content type column.
-     * @return a CompletableFuture of ColumnDefinition
+     * @return a ColumnDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
+    @jakarta.annotation.Nullable
+    public ColumnDefinition get() {
         return get(null);
     }
     /**
      * The source column for the content type column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnDefinition
+     * @return a ColumnDefinition
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ColumnDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ColumnDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The source column for the content type column.

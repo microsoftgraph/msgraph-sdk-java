@@ -59,56 +59,56 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
-     * @return a CompletableFuture of ManagedEBookAssignmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * List properties and relationships of the iosVppEBookAssignment objects.
+     * @return a ManagedEBookAssignmentCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedEBookAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * List properties and relationships of the iosVppEBookAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedEBookAssignmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a ManagedEBookAssignmentCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedEBookAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedEBookAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedEBookAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new managedEBookAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of ManagedEBookAssignment
+     * @return a ManagedEBookAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> post(@jakarta.annotation.Nonnull final ManagedEBookAssignment body) {
+    @jakarta.annotation.Nullable
+    public ManagedEBookAssignment post(@jakarta.annotation.Nonnull final ManagedEBookAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new managedEBookAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedEBookAssignment
+     * @return a ManagedEBookAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> post(@jakarta.annotation.Nonnull final ManagedEBookAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedEBookAssignment post(@jakarta.annotation.Nonnull final ManagedEBookAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedEBookAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedEBookAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * List properties and relationships of the iosVppEBookAssignment objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * List properties and relationships of the iosVppEBookAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the managedEBookAssignment objects.
+     * List properties and relationships of the iosVppEBookAssignment objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

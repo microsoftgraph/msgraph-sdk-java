@@ -60,52 +60,52 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.
-     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
+     * @return a DeviceManagementExchangeConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnectorCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnectorCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
+     * @return a DeviceManagementExchangeConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnectorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnectorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementExchangeConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementExchangeConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceManagementExchangeConnector object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceManagementExchangeConnector
+     * @return a DeviceManagementExchangeConnector
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnector post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
         return post(body, null);
     }
     /**
      * Create a new deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementExchangeConnector
+     * @return a DeviceManagementExchangeConnector
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnector post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementExchangeConnector::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementExchangeConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceManagementExchangeConnector objects.

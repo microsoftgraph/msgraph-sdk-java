@@ -38,28 +38,28 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
     /**
      * Create a new version of the workflow object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of Workflow
+     * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> post(@jakarta.annotation.Nonnull final CreateNewVersionPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public Workflow post(@jakarta.annotation.Nonnull final CreateNewVersionPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Create a new version of the workflow object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Workflow
+     * @return a Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> post(@jakarta.annotation.Nonnull final CreateNewVersionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Workflow post(@jakarta.annotation.Nonnull final CreateNewVersionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Workflow::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Workflow::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new version of the workflow object. This API is available in the following national cloud deployments.

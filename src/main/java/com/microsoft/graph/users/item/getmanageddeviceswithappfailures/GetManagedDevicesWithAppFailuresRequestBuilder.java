@@ -37,24 +37,24 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the list of devices with failed apps
-     * @return a CompletableFuture of GetManagedDevicesWithAppFailuresGetResponse
+     * @return a GetManagedDevicesWithAppFailuresGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithAppFailuresGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetManagedDevicesWithAppFailuresGetResponse get() {
         return get(null);
     }
     /**
      * Retrieves the list of devices with failed apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetManagedDevicesWithAppFailuresGetResponse
+     * @return a GetManagedDevicesWithAppFailuresGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithAppFailuresGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetManagedDevicesWithAppFailuresGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetManagedDevicesWithAppFailuresGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetManagedDevicesWithAppFailuresGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieves the list of devices with failed apps

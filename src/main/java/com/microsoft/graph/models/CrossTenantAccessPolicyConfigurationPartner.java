@@ -18,11 +18,11 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /**
-     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /**
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
     /**
@@ -30,7 +30,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /**
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
     /**
@@ -38,7 +38,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private CrossTenantIdentitySyncPolicyPartner identitySynchronization;
     /**
-     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /**
@@ -50,7 +50,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private String odataType;
     /**
-     * The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      */
     private String tenantId;
     /**
@@ -86,7 +86,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.automaticUserConsentSettings;
     }
     /**
-     * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @return a CrossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.b2bCollaborationInbound;
     }
     /**
-     * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @return a CrossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.b2bDirectConnectInbound;
     }
     /**
-     * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @return a CrossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.identitySynchronization;
     }
     /**
-     * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @return a CrossTenantAccessPolicyInboundTrust
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -209,14 +209,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.automaticUserConsentSettings = value;
     }
     /**
-     * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
      */
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
-     * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
      */
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
@@ -230,7 +230,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.b2bDirectConnectInbound = value;
     }
     /**
-     * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
@@ -244,7 +244,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.identitySynchronization = value;
     }
     /**
-     * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @param value Value to set for the inboundTrust property.
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
@@ -265,7 +265,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -504,26 +504,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceManagement object.
-     * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mstunnel-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagement get() {
         return get(null);
     }
     /**
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mstunnel-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
@@ -538,28 +538,28 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceManagement object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a DeviceManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read properties and relationships of the deviceManagement object.

@@ -62,24 +62,24 @@ public class GraphWindowsMobileMSIRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsMobileMSI
-     * @return a CompletableFuture of WindowsMobileMSI
+     * @return a WindowsMobileMSI
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> get() {
+    @jakarta.annotation.Nullable
+    public WindowsMobileMSI get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsMobileMSI
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsMobileMSI
+     * @return a WindowsMobileMSI
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsMobileMSI get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsMobileMSI::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsMobileMSI::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.windowsMobileMSI

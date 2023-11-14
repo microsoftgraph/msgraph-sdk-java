@@ -59,24 +59,24 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Articles related to this vulnerability.
-     * @return a CompletableFuture of ArticleCollectionResponse
+     * @return a ArticleCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArticleCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ArticleCollectionResponse get() {
         return get(null);
     }
     /**
      * Articles related to this vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ArticleCollectionResponse
+     * @return a ArticleCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArticleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ArticleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ArticleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ArticleCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Articles related to this vulnerability.

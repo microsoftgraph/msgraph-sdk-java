@@ -38,28 +38,28 @@ public class FindMeetingTimesRequestBuilder extends BaseRequestBuilder {
     /**
      * Suggest meeting times and locations based on organizer and attendee availability, and time or location constraints specified as parameters. If findMeetingTimes cannot return any meeting suggestions, the response would indicate a reason in the emptySuggestionsReason property. Based on this value, you can better adjust the parameters and call findMeetingTimes again. The algorithm used to suggest meeting times and locations undergoes fine-tuning from time to time. In scenarios like test environments where the input parameters and calendar data remain static, expect that the suggested results may differ over time. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of MeetingTimeSuggestionsResult
+     * @return a MeetingTimeSuggestionsResult
      * @see <a href="https://learn.microsoft.com/graph/api/user-findmeetingtimes?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@jakarta.annotation.Nonnull final FindMeetingTimesPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public MeetingTimeSuggestionsResult post(@jakarta.annotation.Nonnull final FindMeetingTimesPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Suggest meeting times and locations based on organizer and attendee availability, and time or location constraints specified as parameters. If findMeetingTimes cannot return any meeting suggestions, the response would indicate a reason in the emptySuggestionsReason property. Based on this value, you can better adjust the parameters and call findMeetingTimes again. The algorithm used to suggest meeting times and locations undergoes fine-tuning from time to time. In scenarios like test environments where the input parameters and calendar data remain static, expect that the suggested results may differ over time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingTimeSuggestionsResult
+     * @return a MeetingTimeSuggestionsResult
      * @see <a href="https://learn.microsoft.com/graph/api/user-findmeetingtimes?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@jakarta.annotation.Nonnull final FindMeetingTimesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MeetingTimeSuggestionsResult post(@jakarta.annotation.Nonnull final FindMeetingTimesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MeetingTimeSuggestionsResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MeetingTimeSuggestionsResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Suggest meeting times and locations based on organizer and attendee availability, and time or location constraints specified as parameters. If findMeetingTimes cannot return any meeting suggestions, the response would indicate a reason in the emptySuggestionsReason property. Based on this value, you can better adjust the parameters and call findMeetingTimes again. The algorithm used to suggest meeting times and locations undergoes fine-tuning from time to time. In scenarios like test environments where the input parameters and calendar data remain static, expect that the suggested results may differ over time. This API is available in the following national cloud deployments.

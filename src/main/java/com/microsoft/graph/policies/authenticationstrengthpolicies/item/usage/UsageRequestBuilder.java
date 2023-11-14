@@ -37,24 +37,24 @@ public class UsageRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function usage
-     * @return a CompletableFuture of AuthenticationStrengthUsage
+     * @return a AuthenticationStrengthUsage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthUsage> get() {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthUsage get() {
         return get(null);
     }
     /**
      * Invoke function usage
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationStrengthUsage
+     * @return a AuthenticationStrengthUsage
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AuthenticationStrengthUsage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AuthenticationStrengthUsage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthUsage::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AuthenticationStrengthUsage::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function usage

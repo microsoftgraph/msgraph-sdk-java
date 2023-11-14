@@ -37,26 +37,26 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending jobs are completed, aborted, or canceled. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PrintJobStatus
+     * @return a PrintJobStatus
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-start?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJobStatus> post() {
+    @jakarta.annotation.Nullable
+    public PrintJobStatus post() {
         return post(null);
     }
     /**
      * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending jobs are completed, aborted, or canceled. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintJobStatus
+     * @return a PrintJobStatus
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-start?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJobStatus> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintJobStatus post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintJobStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintJobStatus::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Submits the print job to the associated printer or printerShare. It will be printed after any existing pending jobs are completed, aborted, or canceled. This API is available in the following national cloud deployments.

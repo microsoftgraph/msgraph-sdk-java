@@ -60,48 +60,48 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
-     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
+     * @return a CertificateBasedAuthConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
+     * @return a CertificateBasedAuthConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to certificateBasedAuthConfiguration
      * @param body The request body
-     * @return a CompletableFuture of CertificateBasedAuthConfiguration
+     * @return a CertificateBasedAuthConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
         return post(body, null);
     }
     /**
      * Add new entity to certificateBasedAuthConfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CertificateBasedAuthConfiguration
+     * @return a CertificateBasedAuthConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CertificateBasedAuthConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CertificateBasedAuthConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from certificateBasedAuthConfiguration

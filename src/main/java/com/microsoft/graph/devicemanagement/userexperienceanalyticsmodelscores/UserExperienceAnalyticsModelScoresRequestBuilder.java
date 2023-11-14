@@ -60,48 +60,48 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
     }
     /**
      * User experience analytics model scores
-     * @return a CompletableFuture of UserExperienceAnalyticsModelScoresCollectionResponse
+     * @return a UserExperienceAnalyticsModelScoresCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScoresCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsModelScoresCollectionResponse get() {
         return get(null);
     }
     /**
      * User experience analytics model scores
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsModelScoresCollectionResponse
+     * @return a UserExperienceAnalyticsModelScoresCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScoresCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsModelScoresCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsModelScoresCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsModelScoresCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
+     * @return a UserExperienceAnalyticsModelScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsModelScores post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
+     * @return a UserExperienceAnalyticsModelScores
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsModelScores post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserExperienceAnalyticsModelScores::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserExperienceAnalyticsModelScores::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * User experience analytics model scores

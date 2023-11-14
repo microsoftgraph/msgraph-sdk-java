@@ -60,52 +60,52 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the appLogCollectionRequest objects.
-     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
+     * @return a AppLogCollectionRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AppLogCollectionRequestCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the appLogCollectionRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
+     * @return a AppLogCollectionRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AppLogCollectionRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AppLogCollectionRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AppLogCollectionRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new appLogCollectionRequest object.
      * @param body The request body
-     * @return a CompletableFuture of AppLogCollectionRequest
+     * @return a AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body) {
+    @jakarta.annotation.Nullable
+    public AppLogCollectionRequest post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body) {
         return post(body, null);
     }
     /**
      * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppLogCollectionRequest
+     * @return a AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AppLogCollectionRequest post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AppLogCollectionRequest::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AppLogCollectionRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the appLogCollectionRequest objects.

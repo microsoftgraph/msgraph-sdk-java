@@ -74,30 +74,30 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/transitiveMemberOf{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
+     * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return new TransitiveMemberOfRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The groups that a group is a member of, either directly and through nested membership. Nullable.
+     * The groups that a group is a member of, either directly or through nested membership. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

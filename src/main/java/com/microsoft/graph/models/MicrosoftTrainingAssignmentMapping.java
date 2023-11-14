@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implements Parsable {
     /**
-     * The assignedTo property
+     * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      */
     private java.util.List<TrainingAssignedTo> assignedTo;
     /**
@@ -34,7 +34,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
         return new MicrosoftTrainingAssignmentMapping();
     }
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @return a java.util.List<TrainingAssignedTo>
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class MicrosoftTrainingAssignmentMapping extends TrainingSetting implemen
         writer.writeObjectValue("training", this.getTraining());
     }
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<TrainingAssignedTo> value) {

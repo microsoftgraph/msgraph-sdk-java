@@ -60,50 +60,50 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the Microsoft Entra user sign-ins for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.  The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of SignInCollectionResponse
+     * @return a SignInCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SignInCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public SignInCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the Microsoft Entra user sign-ins for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.  The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SignInCollectionResponse
+     * @return a SignInCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SignInCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SignInCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SignInCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SignInCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
-     * @return a CompletableFuture of SignIn
+     * @return a SignIn
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> post(@jakarta.annotation.Nonnull final SignIn body) {
+    @jakarta.annotation.Nullable
+    public SignIn post(@jakarta.annotation.Nonnull final SignIn body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SignIn
+     * @return a SignIn
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> post(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SignIn post(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SignIn::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SignIn::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the Microsoft Entra user sign-ins for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.  The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available. This API is available in the following national cloud deployments.

@@ -60,52 +60,52 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the termsAndConditionsAssignment objects.
-     * @return a CompletableFuture of TermsAndConditionsAssignmentCollectionResponse
+     * @return a TermsAndConditionsAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the termsAndConditionsAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsAndConditionsAssignmentCollectionResponse
+     * @return a TermsAndConditionsAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditionsAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditionsAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new termsAndConditionsAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of TermsAndConditionsAssignment
+     * @return a TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignment post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsAndConditionsAssignment
+     * @return a TermsAndConditionsAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsAndConditionsAssignment post(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsAndConditionsAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsAndConditionsAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the termsAndConditionsAssignment objects.

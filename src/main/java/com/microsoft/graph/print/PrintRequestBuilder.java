@@ -86,48 +86,48 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get print
-     * @return a CompletableFuture of Print
+     * @return a Print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Print> get() {
+    @jakarta.annotation.Nullable
+    public Print get() {
         return get(null);
     }
     /**
      * Get print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Print
+     * @return a Print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Print> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Print get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Print::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Print::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update print
      * @param body The request body
-     * @return a CompletableFuture of Print
+     * @return a Print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Print> patch(@jakarta.annotation.Nonnull final Print body) {
+    @jakarta.annotation.Nullable
+    public Print patch(@jakarta.annotation.Nonnull final Print body) {
         return patch(body, null);
     }
     /**
      * Update print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Print
+     * @return a Print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Print> patch(@jakarta.annotation.Nonnull final Print body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Print patch(@jakarta.annotation.Nonnull final Print body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Print::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Print::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get print

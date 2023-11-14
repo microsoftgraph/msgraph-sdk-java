@@ -60,48 +60,48 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of columns that are required by this content type.
-     * @return a CompletableFuture of ColumnLinkCollectionResponse
+     * @return a ColumnLinkCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ColumnLinkCollectionResponse get() {
         return get(null);
     }
     /**
      * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnLinkCollectionResponse
+     * @return a ColumnLinkCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ColumnLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ColumnLinkCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ColumnLinkCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to columnLinks for groups
      * @param body The request body
-     * @return a CompletableFuture of ColumnLink
+     * @return a ColumnLink
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> post(@jakarta.annotation.Nonnull final ColumnLink body) {
+    @jakarta.annotation.Nullable
+    public ColumnLink post(@jakarta.annotation.Nonnull final ColumnLink body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to columnLinks for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnLink
+     * @return a ColumnLink
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> post(@jakarta.annotation.Nonnull final ColumnLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ColumnLink post(@jakarta.annotation.Nonnull final ColumnLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ColumnLink::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ColumnLink::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of columns that are required by this content type.

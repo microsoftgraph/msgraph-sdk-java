@@ -60,52 +60,52 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of OutlookCategoryCollectionResponse
+     * @return a OutlookCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public OutlookCategoryCollectionResponse get() {
         return get(null);
     }
     /**
      * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OutlookCategoryCollectionResponse
+     * @return a OutlookCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OutlookCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OutlookCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OutlookCategoryCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of OutlookCategory
+     * @return a OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@jakarta.annotation.Nonnull final OutlookCategory body) {
+    @jakarta.annotation.Nullable
+    public OutlookCategory post(@jakarta.annotation.Nonnull final OutlookCategory body) {
         return post(body, null);
     }
     /**
      * Create an outlookCategory object in the user's master list of categories. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OutlookCategory
+     * @return a OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OutlookCategory post(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OutlookCategory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OutlookCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get all the categories that have been defined for the user. This API is available in the following national cloud deployments.

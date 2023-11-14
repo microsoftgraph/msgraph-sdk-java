@@ -68,50 +68,50 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of worksheet objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @return a WorkbookWorksheetCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookWorksheetCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of worksheet objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @return a WorkbookWorksheetCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookWorksheetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookWorksheetCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookWorksheetCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to worksheets for drives
      * @param body The request body
-     * @return a CompletableFuture of WorkbookWorksheet
+     * @return a WorkbookWorksheet
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> post(@jakarta.annotation.Nonnull final WorkbookWorksheet body) {
+    @jakarta.annotation.Nullable
+    public WorkbookWorksheet post(@jakarta.annotation.Nonnull final WorkbookWorksheet body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to worksheets for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookWorksheet
+     * @return a WorkbookWorksheet
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> post(@jakarta.annotation.Nonnull final WorkbookWorksheet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookWorksheet post(@jakarta.annotation.Nonnull final WorkbookWorksheet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookWorksheet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookWorksheet::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of worksheet objects. This API is available in the following national cloud deployments.

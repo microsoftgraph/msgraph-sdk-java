@@ -39,68 +39,66 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property endpoints for print
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property endpoints for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of a print service endpoint. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      * @see <a href="https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> get() {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint get() {
         return get(null);
     }
     /**
      * Retrieve the properties and relationships of a print service endpoint. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      * @see <a href="https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property endpoints in print
      * @param body The request body
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property endpoints in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property endpoints for print
@@ -127,6 +125,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

@@ -10,11 +10,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftManagedTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * The completionDateTime property
+     * The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime completionDateTime;
     /**
-     * The trainingCompletionDuration property
+     * The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      */
     private TrainingCompletionDuration trainingCompletionDuration;
     /**
@@ -35,7 +35,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
         return new MicrosoftManagedTrainingSetting();
     }
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
         return deserializerMap;
     }
     /**
-     * Gets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @return a TrainingCompletionDuration
      */
     @jakarta.annotation.Nullable
@@ -72,14 +72,14 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
         writer.writeEnumValue("trainingCompletionDuration", this.getTrainingCompletionDuration());
     }
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. The completion date for the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
-     * Sets the trainingCompletionDuration property value. The trainingCompletionDuration property
+     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @param value Value to set for the trainingCompletionDuration property.
      */
     public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final TrainingCompletionDuration value) {

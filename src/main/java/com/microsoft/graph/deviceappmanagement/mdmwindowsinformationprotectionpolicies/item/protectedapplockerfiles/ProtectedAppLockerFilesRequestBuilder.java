@@ -60,48 +60,48 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Another way to input protected apps through xml files
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a WindowsInformationProtectionAppLockerFileCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionAppLockerFileCollectionResponse get() {
         return get(null);
     }
     /**
      * Another way to input protected apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a WindowsInformationProtectionAppLockerFileCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionAppLockerFileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsInformationProtectionAppLockerFileCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLockerFileCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
+     * @return a WindowsInformationProtectionAppLockerFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to protectedAppLockerFiles for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFile
+     * @return a WindowsInformationProtectionAppLockerFile
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Another way to input protected apps through xml files

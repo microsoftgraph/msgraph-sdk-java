@@ -37,24 +37,24 @@ public class PreviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function preview
-     * @return a CompletableFuture of OnenotePagePreview
+     * @return a OnenotePagePreview
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePagePreview> get() {
+    @jakarta.annotation.Nullable
+    public OnenotePagePreview get() {
         return get(null);
     }
     /**
      * Invoke function preview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenotePagePreview
+     * @return a OnenotePagePreview
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePagePreview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnenotePagePreview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnenotePagePreview::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnenotePagePreview::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function preview

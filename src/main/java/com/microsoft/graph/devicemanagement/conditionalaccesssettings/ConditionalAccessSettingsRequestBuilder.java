@@ -39,70 +39,68 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property conditionalAccessSettings for deviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property conditionalAccessSettings for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Read properties and relationships of the onPremisesConditionalAccessSettings object.
-     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get() {
+    @jakarta.annotation.Nullable
+    public OnPremisesConditionalAccessSettings get() {
         return get(null);
     }
     /**
      * Read properties and relationships of the onPremisesConditionalAccessSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnPremisesConditionalAccessSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnPremisesConditionalAccessSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnPremisesConditionalAccessSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param body The request body
-     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body) {
+    @jakarta.annotation.Nullable
+    public OnPremisesConditionalAccessSettings patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a onPremisesConditionalAccessSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public OnPremisesConditionalAccessSettings patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, OnPremisesConditionalAccessSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, OnPremisesConditionalAccessSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property conditionalAccessSettings for deviceManagement
@@ -129,6 +127,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

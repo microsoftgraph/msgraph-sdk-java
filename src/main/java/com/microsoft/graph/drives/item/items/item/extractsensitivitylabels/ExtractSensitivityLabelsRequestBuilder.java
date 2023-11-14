@@ -37,24 +37,24 @@ public class ExtractSensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action extractSensitivityLabels
-     * @return a CompletableFuture of ExtractSensitivityLabelsResult
+     * @return a ExtractSensitivityLabelsResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExtractSensitivityLabelsResult> post() {
+    @jakarta.annotation.Nullable
+    public ExtractSensitivityLabelsResult post() {
         return post(null);
     }
     /**
      * Invoke action extractSensitivityLabels
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExtractSensitivityLabelsResult
+     * @return a ExtractSensitivityLabelsResult
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExtractSensitivityLabelsResult> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExtractSensitivityLabelsResult post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExtractSensitivityLabelsResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExtractSensitivityLabelsResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action extractSensitivityLabels

@@ -37,28 +37,28 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}/payload{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get payload from security
-     * @return a CompletableFuture of Payload
+     * The payload associated with a simulation during its creation.
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> get() {
+    @jakarta.annotation.Nullable
+    public Payload get() {
         return get(null);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Payload get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return new PayloadRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get payload from security
+     * The payload associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

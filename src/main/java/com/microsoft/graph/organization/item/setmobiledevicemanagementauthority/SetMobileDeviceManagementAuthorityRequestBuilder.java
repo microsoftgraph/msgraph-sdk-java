@@ -36,26 +36,26 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     }
     /**
      * Set mobile device management authority
-     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityPostResponse
+     * @return a SetMobileDeviceManagementAuthorityPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityPostResponse> post() {
+    @jakarta.annotation.Nullable
+    public SetMobileDeviceManagementAuthorityPostResponse post() {
         return post(null);
     }
     /**
      * Set mobile device management authority
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityPostResponse
+     * @return a SetMobileDeviceManagementAuthorityPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SetMobileDeviceManagementAuthorityPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SetMobileDeviceManagementAuthorityPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SetMobileDeviceManagementAuthorityPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Set mobile device management authority

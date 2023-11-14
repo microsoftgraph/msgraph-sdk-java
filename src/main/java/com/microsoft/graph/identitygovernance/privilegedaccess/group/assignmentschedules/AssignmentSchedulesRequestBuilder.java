@@ -70,54 +70,54 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
-     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleCollectionResponse
+     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties. This API is available in the following national cloud deployments.
+     * @return a PrivilegedAccessGroupAssignmentScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentScheduleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleCollectionResponse
+     * @return a PrivilegedAccessGroupAssignmentScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentScheduleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupAssignmentScheduleCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentScheduleCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to assignmentSchedules for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
+     * @return a PrivilegedAccessGroupAssignmentSchedule
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentSchedule> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentSchedule post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to assignmentSchedules for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
+     * @return a PrivilegedAccessGroupAssignmentSchedule
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentSchedule> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentSchedule post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupAssignmentSchedule::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedAccessGroupAssignmentSchedule::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new AssignmentSchedulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -46,24 +46,24 @@ public class GraphAndroidStoreAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.androidStoreApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of AndroidStoreAppCollectionResponse
+     * @return a AndroidStoreAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AndroidStoreAppCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the items of type microsoft.graph.androidStoreApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AndroidStoreAppCollectionResponse
+     * @return a AndroidStoreAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AndroidStoreAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AndroidStoreAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AndroidStoreAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the items of type microsoft.graph.androidStoreApp in the microsoft.graph.mobileApp collection

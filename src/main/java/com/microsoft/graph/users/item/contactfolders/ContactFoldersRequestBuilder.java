@@ -68,52 +68,52 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a ContactFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ContactFolderCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a ContactFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ContactFolderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ContactFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ContactFolderCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ContactFolder
+     * @return a ContactFolder
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> post(@jakarta.annotation.Nonnull final ContactFolder body) {
+    @jakarta.annotation.Nullable
+    public ContactFolder post(@jakarta.annotation.Nonnull final ContactFolder body) {
         return post(body, null);
     }
     /**
      * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContactFolder
+     * @return a ContactFolder
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> post(@jakarta.annotation.Nonnull final ContactFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ContactFolder post(@jakarta.annotation.Nonnull final ContactFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ContactFolder::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ContactFolder::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user. This API is available in the following national cloud deployments.

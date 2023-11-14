@@ -29,7 +29,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private byte[] content;
     /**
-     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      */
     private String cTag;
     /**
@@ -81,7 +81,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private Photo photo;
     /**
-     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      */
     private PublicationFacet publication;
     /**
@@ -97,7 +97,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private SearchResult searchResult;
     /**
-     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
      */
     private Shared shared;
     /**
@@ -117,7 +117,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private java.util.List<Subscription> subscriptions;
     /**
-     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     * Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      */
     private java.util.List<ThumbnailSet> thumbnails;
     /**
@@ -133,7 +133,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private String webDavUrl;
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      */
     private Workbook workbook;
     /**
@@ -194,7 +194,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.content;
     }
     /**
-     * Gets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -339,7 +339,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.photo;
     }
     /**
-     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @return a PublicationFacet
      */
     @jakarta.annotation.Nullable
@@ -371,7 +371,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.searchResult;
     }
     /**
-     * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Gets the shared property value. Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
      * @return a Shared
      */
     @jakarta.annotation.Nullable
@@ -411,7 +411,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.subscriptions;
     }
     /**
-     * Gets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     * Gets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      * @return a java.util.List<ThumbnailSet>
      */
     @jakarta.annotation.Nullable
@@ -443,7 +443,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.webDavUrl;
     }
     /**
-     * Gets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @return a Workbook
      */
     @jakarta.annotation.Nullable
@@ -526,7 +526,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.content = value;
     }
     /**
-     * Sets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Sets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @param value Value to set for the cTag property.
      */
     public void setCTag(@jakarta.annotation.Nullable final String value) {
@@ -617,7 +617,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.photo = value;
     }
     /**
-     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @param value Value to set for the publication property.
      */
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
@@ -645,7 +645,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.searchResult = value;
     }
     /**
-     * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Sets the shared property value. Indicates that the item was shared with others and provides information about the shared state of the item. Read-only.
      * @param value Value to set for the shared property.
      */
     public void setShared(@jakarta.annotation.Nullable final Shared value) {
@@ -680,7 +680,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.subscriptions = value;
     }
     /**
-     * Sets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     * Sets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
      * @param value Value to set for the thumbnails property.
      */
     public void setThumbnails(@jakarta.annotation.Nullable final java.util.List<ThumbnailSet> value) {
@@ -708,7 +708,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.webDavUrl = value;
     }
     /**
-     * Sets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Sets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @param value Value to set for the workbook property.
      */
     public void setWorkbook(@jakarta.annotation.Nullable final Workbook value) {

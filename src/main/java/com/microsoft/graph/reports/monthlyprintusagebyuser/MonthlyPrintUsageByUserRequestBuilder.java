@@ -60,50 +60,50 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
+     * @return a PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintUsageByUserCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrintUsageByUserCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
+     * @return a PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintUsageByUserCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintUsageByUserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintUsageByUserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintUsageByUserCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to monthlyPrintUsageByUser for reports
      * @param body The request body
-     * @return a CompletableFuture of PrintUsageByUser
+     * @return a PrintUsageByUser
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body) {
+    @jakarta.annotation.Nullable
+    public PrintUsageByUser post(@jakarta.annotation.Nonnull final PrintUsageByUser body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to monthlyPrintUsageByUser for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintUsageByUser
+     * @return a PrintUsageByUser
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintUsageByUser post(@jakarta.annotation.Nonnull final PrintUsageByUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintUsageByUser::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintUsageByUser::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of monthly print usage summaries, grouped by user. This API is available in the following national cloud deployments.

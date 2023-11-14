@@ -60,50 +60,50 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an externalGroup object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ExternalGroupCollectionResponse
+     * @return a ExternalGroupCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalGroupCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ExternalGroupCollectionResponse get() {
         return get(null);
     }
     /**
      * Get an externalGroup object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalGroupCollectionResponse
+     * @return a ExternalGroupCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalGroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ExternalGroup
+     * @return a ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalGroup> post(@jakarta.annotation.Nonnull final ExternalGroup body) {
+    @jakarta.annotation.Nullable
+    public ExternalGroup post(@jakarta.annotation.Nonnull final ExternalGroup body) {
         return post(body, null);
     }
     /**
      * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalGroup
+     * @return a ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExternalGroup> post(@jakarta.annotation.Nonnull final ExternalGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ExternalGroup post(@jakarta.annotation.Nonnull final ExternalGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExternalGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ExternalGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get an externalGroup object. This API is available in the following national cloud deployments.

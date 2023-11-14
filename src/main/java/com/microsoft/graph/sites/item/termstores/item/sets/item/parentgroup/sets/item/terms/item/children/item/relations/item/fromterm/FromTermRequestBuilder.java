@@ -38,24 +38,24 @@ public class FromTermRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
-     * @return a CompletableFuture of Term
+     * @return a Term
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Term> get() {
+    @jakarta.annotation.Nullable
+    public Term get() {
         return get(null);
     }
     /**
      * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Term
+     * @return a Term
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Term> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Term get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Term::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Term::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].

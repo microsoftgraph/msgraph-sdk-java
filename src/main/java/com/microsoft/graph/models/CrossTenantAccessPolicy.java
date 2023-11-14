@@ -13,11 +13,11 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     private java.util.List<String> allowedCloudEndpoints;
     /**
-     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      */
     private CrossTenantAccessPolicyConfigurationDefault defaultEscaped;
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      */
     private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
     /**
@@ -46,7 +46,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         return this.allowedCloudEndpoints;
     }
     /**
-     * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Gets the default property value. Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      * @return a CrossTenantAccessPolicyConfigurationDefault
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Gets the partners property value. Defines partner-specific configurations for external Microsoft Entra organizations.
      * @return a java.util.List<CrossTenantAccessPolicyConfigurationPartner>
      */
     @jakarta.annotation.Nullable
@@ -92,14 +92,14 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         this.allowedCloudEndpoints = value;
     }
     /**
-     * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Sets the default property value. Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      * @param value Value to set for the default property.
      */
     public void setDefault(@jakarta.annotation.Nullable final CrossTenantAccessPolicyConfigurationDefault value) {
         this.defaultEscaped = value;
     }
     /**
-     * Sets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Sets the partners property value. Defines partner-specific configurations for external Microsoft Entra organizations.
      * @param value Value to set for the partners property.
      */
     public void setPartners(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {

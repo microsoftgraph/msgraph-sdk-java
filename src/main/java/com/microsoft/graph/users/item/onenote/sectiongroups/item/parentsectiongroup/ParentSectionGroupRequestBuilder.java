@@ -38,24 +38,24 @@ public class ParentSectionGroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The section group that contains the section group. Read-only.
-     * @return a CompletableFuture of SectionGroup
+     * @return a SectionGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> get() {
+    @jakarta.annotation.Nullable
+    public SectionGroup get() {
         return get(null);
     }
     /**
      * The section group that contains the section group. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SectionGroup
+     * @return a SectionGroup
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public SectionGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SectionGroup::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, SectionGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The section group that contains the section group. Read-only.

@@ -39,66 +39,64 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
     /**
      * Delete navigation property assignments for deviceAppManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property assignments for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
+     * @return a TargetedManagedAppPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> get() {
+    @jakarta.annotation.Nullable
+    public TargetedManagedAppPolicyAssignment get() {
         return get(null);
     }
     /**
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
+     * @return a TargetedManagedAppPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TargetedManagedAppPolicyAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
+     * @return a TargetedManagedAppPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body) {
+    @jakarta.annotation.Nullable
+    public TargetedManagedAppPolicyAssignment patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
+     * @return a TargetedManagedAppPolicyAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TargetedManagedAppPolicyAssignment patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property assignments for deviceAppManagement
@@ -125,6 +123,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

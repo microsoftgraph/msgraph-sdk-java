@@ -238,26 +238,26 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the reportRoot object.
-     * @return a CompletableFuture of ReportRoot
+     * @return a ReportRoot
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> get() {
+    @jakarta.annotation.Nullable
+    public ReportRoot get() {
         return get(null);
     }
     /**
      * Read properties and relationships of the reportRoot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ReportRoot
+     * @return a ReportRoot
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ReportRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getEmailActivityCounts method.
@@ -1220,28 +1220,28 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a reportRoot object.
      * @param body The request body
-     * @return a CompletableFuture of ReportRoot
+     * @return a ReportRoot
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@jakarta.annotation.Nonnull final ReportRoot body) {
+    @jakarta.annotation.Nullable
+    public ReportRoot patch(@jakarta.annotation.Nonnull final ReportRoot body) {
         return patch(body, null);
     }
     /**
      * Update the properties of a reportRoot object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ReportRoot
+     * @return a ReportRoot
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ReportRoot patch(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read properties and relationships of the reportRoot object.

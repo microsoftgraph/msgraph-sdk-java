@@ -38,26 +38,26 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action createUploadSession
      * @param body The request body
-     * @return a CompletableFuture of UploadSession
+     * @return a UploadSession
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadSession> post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action createUploadSession
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UploadSession
+     * @return a UploadSession
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadSession> post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UploadSession::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UploadSession::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action createUploadSession

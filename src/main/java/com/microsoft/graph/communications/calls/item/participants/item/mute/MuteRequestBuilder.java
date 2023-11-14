@@ -38,28 +38,28 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
     /**
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of MuteParticipantOperation
+     * @return a MuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> post(@jakarta.annotation.Nonnull final MutePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public MuteParticipantOperation post(@jakarta.annotation.Nonnull final MutePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MuteParticipantOperation
+     * @return a MuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> post(@jakarta.annotation.Nonnull final MutePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public MuteParticipantOperation post(@jakarta.annotation.Nonnull final MutePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, MuteParticipantOperation::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, MuteParticipantOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation. This API is available in the following national cloud deployments.

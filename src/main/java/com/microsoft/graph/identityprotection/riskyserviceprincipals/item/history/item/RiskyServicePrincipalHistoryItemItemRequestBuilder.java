@@ -39,66 +39,64 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
     /**
      * Delete navigation property history for identityProtection
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property history for identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Represents the risk history of Microsoft Entra service principals.
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> get() {
+    @jakarta.annotation.Nullable
+    public RiskyServicePrincipalHistoryItem get() {
         return get(null);
     }
     /**
      * Represents the risk history of Microsoft Entra service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RiskyServicePrincipalHistoryItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property history in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
+    @jakarta.annotation.Nullable
+    public RiskyServicePrincipalHistoryItem patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property history in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItem
+     * @return a RiskyServicePrincipalHistoryItem
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RiskyServicePrincipalHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RiskyServicePrincipalHistoryItem patch(@jakarta.annotation.Nonnull final RiskyServicePrincipalHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property history for identityProtection
@@ -125,6 +123,7 @@ public class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequ
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

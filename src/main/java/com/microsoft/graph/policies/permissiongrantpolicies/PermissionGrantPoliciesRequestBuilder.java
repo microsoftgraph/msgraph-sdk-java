@@ -60,52 +60,52 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of permissionGrantPolicy objects. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
+     * @return a PermissionGrantPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PermissionGrantPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve the list of permissionGrantPolicy objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
+     * @return a PermissionGrantPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PermissionGrantPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PermissionGrantPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PermissionGrantPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of PermissionGrantPolicy
+     * @return a PermissionGrantPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@jakarta.annotation.Nonnull final PermissionGrantPolicy body) {
+    @jakarta.annotation.Nullable
+    public PermissionGrantPolicy post(@jakarta.annotation.Nonnull final PermissionGrantPolicy body) {
         return post(body, null);
     }
     /**
      * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PermissionGrantPolicy
+     * @return a PermissionGrantPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@jakarta.annotation.Nonnull final PermissionGrantPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PermissionGrantPolicy post(@jakarta.annotation.Nonnull final PermissionGrantPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PermissionGrantPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PermissionGrantPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve the list of permissionGrantPolicy objects. This API is available in the following national cloud deployments.

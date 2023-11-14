@@ -60,48 +60,48 @@ public class DocumentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get documents from print
-     * @return a CompletableFuture of PrintDocumentCollectionResponse
+     * @return a PrintDocumentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintDocumentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrintDocumentCollectionResponse get() {
         return get(null);
     }
     /**
      * Get documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintDocumentCollectionResponse
+     * @return a PrintDocumentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintDocumentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintDocumentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintDocumentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintDocumentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to documents for print
      * @param body The request body
-     * @return a CompletableFuture of PrintDocument
+     * @return a PrintDocument
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintDocument> post(@jakarta.annotation.Nonnull final PrintDocument body) {
+    @jakarta.annotation.Nullable
+    public PrintDocument post(@jakarta.annotation.Nonnull final PrintDocument body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to documents for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintDocument
+     * @return a PrintDocument
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintDocument> post(@jakarta.annotation.Nonnull final PrintDocument body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintDocument post(@jakarta.annotation.Nonnull final PrintDocument body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintDocument::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintDocument::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get documents from print

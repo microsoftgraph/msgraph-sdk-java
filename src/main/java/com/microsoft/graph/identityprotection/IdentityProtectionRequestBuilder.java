@@ -70,48 +70,48 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityProtection
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a IdentityProtectionRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> get() {
+    @jakarta.annotation.Nullable
+    public IdentityProtectionRoot get() {
         return get(null);
     }
     /**
      * Get identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a IdentityProtectionRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityProtectionRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityProtectionRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityProtectionRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update identityProtection
      * @param body The request body
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a IdentityProtectionRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> patch(@jakarta.annotation.Nonnull final IdentityProtectionRoot body) {
+    @jakarta.annotation.Nullable
+    public IdentityProtectionRoot patch(@jakarta.annotation.Nonnull final IdentityProtectionRoot body) {
         return patch(body, null);
     }
     /**
      * Update identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a IdentityProtectionRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> patch(@jakarta.annotation.Nonnull final IdentityProtectionRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IdentityProtectionRoot patch(@jakarta.annotation.Nonnull final IdentityProtectionRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IdentityProtectionRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IdentityProtectionRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get identityProtection

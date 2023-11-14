@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Simulation extends Entity implements Parsable {
     /**
-     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      */
     private SimulationAttackTechnique attackTechnique;
     /**
@@ -42,19 +42,19 @@ public class Simulation extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * The durationInDays property
+     * Simulation duration in days.
      */
     private Integer durationInDays;
     /**
-     * The endUserNotificationSetting property
+     * Details about the end user notification setting.
      */
     private EndUserNotificationSetting endUserNotificationSetting;
     /**
-     * The excludedAccountTarget property
+     * Users excluded from the simulation.
      */
     private AccountTargetContent excludedAccountTarget;
     /**
-     * The includedAccountTarget property
+     * Users targeted in the simulation.
      */
     private AccountTargetContent includedAccountTarget;
     /**
@@ -62,7 +62,7 @@ public class Simulation extends Entity implements Parsable {
      */
     private Boolean isAutomated;
     /**
-     * The landingPage property
+     * The landing page associated with a simulation during its creation.
      */
     private LandingPage landingPage;
     /**
@@ -78,15 +78,15 @@ public class Simulation extends Entity implements Parsable {
      */
     private OffsetDateTime launchDateTime;
     /**
-     * The loginPage property
+     * The login page associated with a simulation during its creation.
      */
     private LoginPage loginPage;
     /**
-     * The oAuthConsentAppDetail property
+     * OAuth app details for the OAuth technique.
      */
     private OAuthConsentAppDetail oAuthConsentAppDetail;
     /**
-     * The payload property
+     * The payload associated with a simulation during its creation.
      */
     private Payload payload;
     /**
@@ -102,7 +102,7 @@ public class Simulation extends Entity implements Parsable {
      */
     private SimulationStatus status;
     /**
-     * The trainingSetting property
+     * Details about the training settings for a simulation.
      */
     private TrainingSetting trainingSetting;
     /**
@@ -122,7 +122,7 @@ public class Simulation extends Entity implements Parsable {
         return new Simulation();
     }
     /**
-     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return a SimulationAttackTechnique
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class Simulation extends Entity implements Parsable {
         return this.displayName;
     }
     /**
-     * Gets the durationInDays property value. The durationInDays property
+     * Gets the durationInDays property value. Simulation duration in days.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class Simulation extends Entity implements Parsable {
         return this.durationInDays;
     }
     /**
-     * Gets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Gets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @return a EndUserNotificationSetting
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class Simulation extends Entity implements Parsable {
         return this.endUserNotificationSetting;
     }
     /**
-     * Gets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Gets the excludedAccountTarget property value. Users excluded from the simulation.
      * @return a AccountTargetContent
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class Simulation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the includedAccountTarget property value. The includedAccountTarget property
+     * Gets the includedAccountTarget property value. Users targeted in the simulation.
      * @return a AccountTargetContent
      */
     @jakarta.annotation.Nullable
@@ -259,7 +259,7 @@ public class Simulation extends Entity implements Parsable {
         return this.isAutomated;
     }
     /**
-     * Gets the landingPage property value. The landingPage property
+     * Gets the landingPage property value. The landing page associated with a simulation during its creation.
      * @return a LandingPage
      */
     @jakarta.annotation.Nullable
@@ -291,7 +291,7 @@ public class Simulation extends Entity implements Parsable {
         return this.launchDateTime;
     }
     /**
-     * Gets the loginPage property value. The loginPage property
+     * Gets the loginPage property value. The login page associated with a simulation during its creation.
      * @return a LoginPage
      */
     @jakarta.annotation.Nullable
@@ -299,7 +299,7 @@ public class Simulation extends Entity implements Parsable {
         return this.loginPage;
     }
     /**
-     * Gets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * Gets the oAuthConsentAppDetail property value. OAuth app details for the OAuth technique.
      * @return a OAuthConsentAppDetail
      */
     @jakarta.annotation.Nullable
@@ -307,7 +307,7 @@ public class Simulation extends Entity implements Parsable {
         return this.oAuthConsentAppDetail;
     }
     /**
-     * Gets the payload property value. The payload property
+     * Gets the payload property value. The payload associated with a simulation during its creation.
      * @return a Payload
      */
     @jakarta.annotation.Nullable
@@ -339,7 +339,7 @@ public class Simulation extends Entity implements Parsable {
         return this.status;
     }
     /**
-     * Gets the trainingSetting property value. The trainingSetting property
+     * Gets the trainingSetting property value. Details about the training settings for a simulation.
      * @return a TrainingSetting
      */
     @jakarta.annotation.Nullable
@@ -379,7 +379,7 @@ public class Simulation extends Entity implements Parsable {
         writer.writeObjectValue("trainingSetting", this.getTrainingSetting());
     }
     /**
-     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the attackTechnique property.
      */
     public void setAttackTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
@@ -435,28 +435,28 @@ public class Simulation extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the durationInDays property value. The durationInDays property
+     * Sets the durationInDays property value. Simulation duration in days.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.durationInDays = value;
     }
     /**
-     * Sets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Sets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @param value Value to set for the endUserNotificationSetting property.
      */
     public void setEndUserNotificationSetting(@jakarta.annotation.Nullable final EndUserNotificationSetting value) {
         this.endUserNotificationSetting = value;
     }
     /**
-     * Sets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Sets the excludedAccountTarget property value. Users excluded from the simulation.
      * @param value Value to set for the excludedAccountTarget property.
      */
     public void setExcludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
         this.excludedAccountTarget = value;
     }
     /**
-     * Sets the includedAccountTarget property value. The includedAccountTarget property
+     * Sets the includedAccountTarget property value. Users targeted in the simulation.
      * @param value Value to set for the includedAccountTarget property.
      */
     public void setIncludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
@@ -470,7 +470,7 @@ public class Simulation extends Entity implements Parsable {
         this.isAutomated = value;
     }
     /**
-     * Sets the landingPage property value. The landingPage property
+     * Sets the landingPage property value. The landing page associated with a simulation during its creation.
      * @param value Value to set for the landingPage property.
      */
     public void setLandingPage(@jakarta.annotation.Nullable final LandingPage value) {
@@ -498,21 +498,21 @@ public class Simulation extends Entity implements Parsable {
         this.launchDateTime = value;
     }
     /**
-     * Sets the loginPage property value. The loginPage property
+     * Sets the loginPage property value. The login page associated with a simulation during its creation.
      * @param value Value to set for the loginPage property.
      */
     public void setLoginPage(@jakarta.annotation.Nullable final LoginPage value) {
         this.loginPage = value;
     }
     /**
-     * Sets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
+     * Sets the oAuthConsentAppDetail property value. OAuth app details for the OAuth technique.
      * @param value Value to set for the oAuthConsentAppDetail property.
      */
     public void setOAuthConsentAppDetail(@jakarta.annotation.Nullable final OAuthConsentAppDetail value) {
         this.oAuthConsentAppDetail = value;
     }
     /**
-     * Sets the payload property value. The payload property
+     * Sets the payload property value. The payload associated with a simulation during its creation.
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final Payload value) {
@@ -540,7 +540,7 @@ public class Simulation extends Entity implements Parsable {
         this.status = value;
     }
     /**
-     * Sets the trainingSetting property value. The trainingSetting property
+     * Sets the trainingSetting property value. Details about the training settings for a simulation.
      * @param value Value to set for the trainingSetting property.
      */
     public void setTrainingSetting(@jakarta.annotation.Nullable final TrainingSetting value) {

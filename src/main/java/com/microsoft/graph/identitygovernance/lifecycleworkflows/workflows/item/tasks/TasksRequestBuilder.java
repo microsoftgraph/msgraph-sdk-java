@@ -60,48 +60,48 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The tasks in the workflow.
-     * @return a CompletableFuture of TaskCollectionResponse
+     * @return a TaskCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public TaskCollectionResponse get() {
         return get(null);
     }
     /**
      * The tasks in the workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TaskCollectionResponse
+     * @return a TaskCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TaskCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to tasks for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of Task
+     * @return a Task
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Task> post(@jakarta.annotation.Nonnull final Task body) {
+    @jakarta.annotation.Nullable
+    public Task post(@jakarta.annotation.Nonnull final Task body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to tasks for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Task
+     * @return a Task
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Task> post(@jakarta.annotation.Nonnull final Task body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Task post(@jakarta.annotation.Nonnull final Task body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Task::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Task::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The tasks in the workflow.

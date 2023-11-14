@@ -14,7 +14,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private Boolean allowedToSignUpEmailBasedSubscriptions;
     /**
-     * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+     * Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      */
     private Boolean allowedToUseSSPR;
     /**
@@ -67,7 +67,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.allowedToSignUpEmailBasedSubscriptions;
     }
     /**
-     * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+     * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.allowedToSignUpEmailBasedSubscriptions = value;
     }
     /**
-     * Sets the allowedToUseSSPR property value. Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+     * Sets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      * @param value Value to set for the allowedToUseSSPR property.
      */
     public void setAllowedToUseSSPR(@jakarta.annotation.Nullable final Boolean value) {

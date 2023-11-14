@@ -60,48 +60,48 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a passiveDnsRecord object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
+     * @return a PassiveDnsRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecordCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecordCollectionResponse get() {
         return get(null);
     }
     /**
      * Read the properties and relationships of a passiveDnsRecord object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
+     * @return a PassiveDnsRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to passiveDnsRecords for security
      * @param body The request body
-     * @return a CompletableFuture of PassiveDnsRecord
+     * @return a PassiveDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecord> post(@jakarta.annotation.Nonnull final PassiveDnsRecord body) {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecord post(@jakarta.annotation.Nonnull final PassiveDnsRecord body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to passiveDnsRecords for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PassiveDnsRecord
+     * @return a PassiveDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecord> post(@jakarta.annotation.Nonnull final PassiveDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecord post(@jakarta.annotation.Nonnull final PassiveDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PassiveDnsRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PassiveDnsRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a passiveDnsRecord object. This API is available in the following national cloud deployments.

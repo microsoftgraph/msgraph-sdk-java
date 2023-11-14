@@ -60,48 +60,48 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents a collection of comments in a workbook.
-     * @return a CompletableFuture of WorkbookCommentCollectionResponse
+     * @return a WorkbookCommentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentCollectionResponse get() {
         return get(null);
     }
     /**
      * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookCommentCollectionResponse
+     * @return a WorkbookCommentCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookCommentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookCommentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookCommentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to comments for drives
      * @param body The request body
-     * @return a CompletableFuture of WorkbookComment
+     * @return a WorkbookComment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> post(@jakarta.annotation.Nonnull final WorkbookComment body) {
+    @jakarta.annotation.Nullable
+    public WorkbookComment post(@jakarta.annotation.Nonnull final WorkbookComment body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to comments for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookComment
+     * @return a WorkbookComment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> post(@jakarta.annotation.Nonnull final WorkbookComment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WorkbookComment post(@jakarta.annotation.Nonnull final WorkbookComment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WorkbookComment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WorkbookComment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Represents a collection of comments in a workbook.

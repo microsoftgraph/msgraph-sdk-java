@@ -13,7 +13,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     private String email;
     /**
-     * TenantId which the Azure AD user belongs to.
+     * TenantId which the Microsoft Entra user belongs to.
      */
     private String tenantId;
     /**
@@ -63,7 +63,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. TenantId which the Azure AD user belongs to.
+     * Gets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         this.email = value;
     }
     /**
-     * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
+     * Sets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

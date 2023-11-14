@@ -38,24 +38,24 @@ public class PrinterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The printer that this printer share is related to.
-     * @return a CompletableFuture of Printer
+     * @return a Printer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Printer> get() {
+    @jakarta.annotation.Nullable
+    public Printer get() {
         return get(null);
     }
     /**
      * The printer that this printer share is related to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Printer
+     * @return a Printer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Printer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Printer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Printer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Printer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The printer that this printer share is related to.

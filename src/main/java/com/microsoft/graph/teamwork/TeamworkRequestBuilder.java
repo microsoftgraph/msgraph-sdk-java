@@ -70,48 +70,48 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get teamwork
-     * @return a CompletableFuture of Teamwork
+     * @return a Teamwork
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> get() {
+    @jakarta.annotation.Nullable
+    public Teamwork get() {
         return get(null);
     }
     /**
      * Get teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Teamwork
+     * @return a Teamwork
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Teamwork get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Teamwork::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Teamwork::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update teamwork
      * @param body The request body
-     * @return a CompletableFuture of Teamwork
+     * @return a Teamwork
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> patch(@jakarta.annotation.Nonnull final Teamwork body) {
+    @jakarta.annotation.Nullable
+    public Teamwork patch(@jakarta.annotation.Nonnull final Teamwork body) {
         return patch(body, null);
     }
     /**
      * Update teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Teamwork
+     * @return a Teamwork
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> patch(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Teamwork patch(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Teamwork::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Teamwork::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get teamwork

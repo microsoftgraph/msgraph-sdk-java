@@ -60,48 +60,48 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from filterOperators
-     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
+     * @return a FilterOperatorSchemaCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public FilterOperatorSchemaCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from filterOperators
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
+     * @return a FilterOperatorSchemaCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public FilterOperatorSchemaCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FilterOperatorSchemaCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, FilterOperatorSchemaCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to filterOperators
      * @param body The request body
-     * @return a CompletableFuture of FilterOperatorSchema
+     * @return a FilterOperatorSchema
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FilterOperatorSchema> post(@jakarta.annotation.Nonnull final FilterOperatorSchema body) {
+    @jakarta.annotation.Nullable
+    public FilterOperatorSchema post(@jakarta.annotation.Nonnull final FilterOperatorSchema body) {
         return post(body, null);
     }
     /**
      * Add new entity to filterOperators
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FilterOperatorSchema
+     * @return a FilterOperatorSchema
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FilterOperatorSchema> post(@jakarta.annotation.Nonnull final FilterOperatorSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public FilterOperatorSchema post(@jakarta.annotation.Nonnull final FilterOperatorSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FilterOperatorSchema::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, FilterOperatorSchema::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from filterOperators

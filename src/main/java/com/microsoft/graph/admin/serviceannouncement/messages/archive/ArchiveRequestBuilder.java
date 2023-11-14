@@ -37,28 +37,28 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
     /**
      * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of ArchivePostResponse
+     * @return a ArchivePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArchivePostResponse> post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public ArchivePostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ArchivePostResponse
+     * @return a ArchivePostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ArchivePostResponse> post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ArchivePostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ArchivePostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ArchivePostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Archive a list of serviceUpdateMessages for the signed in user. This API is available in the following national cloud deployments.

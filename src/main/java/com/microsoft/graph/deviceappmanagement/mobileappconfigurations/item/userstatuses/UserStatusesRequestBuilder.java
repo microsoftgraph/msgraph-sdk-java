@@ -60,52 +60,52 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatus
+     * @return a ManagedDeviceMobileAppConfigurationUserStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationUserStatus post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body) {
         return post(body, null);
     }
     /**
      * Create a new managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatus
+     * @return a ManagedDeviceMobileAppConfigurationUserStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationUserStatus post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.

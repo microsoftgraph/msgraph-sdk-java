@@ -60,48 +60,48 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Exposes the itemActivities represented in this itemActivityStat resource.
-     * @return a CompletableFuture of ItemActivityCollectionResponse
+     * @return a ItemActivityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ItemActivityCollectionResponse get() {
         return get(null);
     }
     /**
      * Exposes the itemActivities represented in this itemActivityStat resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivityCollectionResponse
+     * @return a ItemActivityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to activities for drives
      * @param body The request body
-     * @return a CompletableFuture of ItemActivity
+     * @return a ItemActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> post(@jakarta.annotation.Nonnull final ItemActivity body) {
+    @jakarta.annotation.Nullable
+    public ItemActivity post(@jakarta.annotation.Nonnull final ItemActivity body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to activities for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivity
+     * @return a ItemActivity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> post(@jakarta.annotation.Nonnull final ItemActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivity post(@jakarta.annotation.Nonnull final ItemActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Exposes the itemActivities represented in this itemActivityStat resource.

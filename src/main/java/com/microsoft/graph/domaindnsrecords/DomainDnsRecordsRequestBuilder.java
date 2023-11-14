@@ -60,48 +60,48 @@ public class DomainDnsRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from domainDnsRecords
-     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
+     * @return a DomainDnsRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecordCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DomainDnsRecordCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from domainDnsRecords
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
+     * @return a DomainDnsRecordCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DomainDnsRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DomainDnsRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DomainDnsRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to domainDnsRecords
      * @param body The request body
-     * @return a CompletableFuture of DomainDnsRecord
+     * @return a DomainDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
+    @jakarta.annotation.Nullable
+    public DomainDnsRecord post(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
         return post(body, null);
     }
     /**
      * Add new entity to domainDnsRecords
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DomainDnsRecord
+     * @return a DomainDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DomainDnsRecord post(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DomainDnsRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DomainDnsRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from domainDnsRecords

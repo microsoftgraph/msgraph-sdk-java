@@ -37,28 +37,28 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of GetMemberObjectsPostResponse
+     * @return a GetMemberObjectsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public GetMemberObjectsPostResponse post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetMemberObjectsPostResponse
+     * @return a GetMemberObjectsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetMemberObjectsPostResponse post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetMemberObjectsPostResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetMemberObjectsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles. This API is available in the following national cloud deployments.

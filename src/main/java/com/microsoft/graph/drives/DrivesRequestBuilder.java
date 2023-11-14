@@ -52,48 +52,48 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from drives
-     * @return a CompletableFuture of DriveCollectionResponse
+     * @return a DriveCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DriveCollectionResponse get() {
         return get(null);
     }
     /**
      * Get entities from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveCollectionResponse
+     * @return a DriveCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Add new entity to drives
      * @param body The request body
-     * @return a CompletableFuture of Drive
+     * @return a Drive
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Drive> post(@jakarta.annotation.Nonnull final Drive body) {
+    @jakarta.annotation.Nullable
+    public Drive post(@jakarta.annotation.Nonnull final Drive body) {
         return post(body, null);
     }
     /**
      * Add new entity to drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Drive
+     * @return a Drive
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Drive> post(@jakarta.annotation.Nonnull final Drive body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Drive post(@jakarta.annotation.Nonnull final Drive body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Drive::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get entities from drives

@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsApplicationIdentity extends Identity implements Parsable {
     /**
-     * The applicationType property
+     * First-party Microsoft application that presents this identity.
      */
     private String applicationType;
     /**
-     * The hidden property
+     * True if the participant shouldn't be shown in other participants' rosters.
      */
     private Boolean hidden;
     /**
@@ -34,7 +34,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return new CommunicationsApplicationIdentity();
     }
     /**
-     * Gets the applicationType property value. The applicationType property
+     * Gets the applicationType property value. First-party Microsoft application that presents this identity.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         writer.writeBooleanValue("hidden", this.getHidden());
     }
     /**
-     * Sets the applicationType property value. The applicationType property
+     * Sets the applicationType property value. First-party Microsoft application that presents this identity.
      * @param value Value to set for the applicationType property.
      */
     public void setApplicationType(@jakarta.annotation.Nullable final String value) {
         this.applicationType = value;
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {

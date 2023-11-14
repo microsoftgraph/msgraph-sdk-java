@@ -60,50 +60,50 @@ public class ThumbnailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a collection of ThumbnailSet resources for a DriveItem resource. A DriveItem can be represented by zero or more ThumbnailSet resources.Each thumbnailSet can have one or more thumbnail objects, which are images that represent the item.For example, a thumbnailSet may include thumbnail objects, such as common ones including small, medium, or large. There are many ways to work with thumbnails on OneDrive.Here are the most common ones: This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of ThumbnailSetCollectionResponse
+     * @return a ThumbnailSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-thumbnails?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSetCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ThumbnailSetCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a collection of ThumbnailSet resources for a DriveItem resource. A DriveItem can be represented by zero or more ThumbnailSet resources.Each thumbnailSet can have one or more thumbnail objects, which are images that represent the item.For example, a thumbnailSet may include thumbnail objects, such as common ones including small, medium, or large. There are many ways to work with thumbnails on OneDrive.Here are the most common ones: This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThumbnailSetCollectionResponse
+     * @return a ThumbnailSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-thumbnails?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThumbnailSetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThumbnailSetCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThumbnailSetCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to thumbnails for drives
      * @param body The request body
-     * @return a CompletableFuture of ThumbnailSet
+     * @return a ThumbnailSet
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> post(@jakarta.annotation.Nonnull final ThumbnailSet body) {
+    @jakarta.annotation.Nullable
+    public ThumbnailSet post(@jakarta.annotation.Nonnull final ThumbnailSet body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to thumbnails for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThumbnailSet
+     * @return a ThumbnailSet
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> post(@jakarta.annotation.Nonnull final ThumbnailSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ThumbnailSet post(@jakarta.annotation.Nonnull final ThumbnailSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ThumbnailSet::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ThumbnailSet::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a collection of ThumbnailSet resources for a DriveItem resource. A DriveItem can be represented by zero or more ThumbnailSet resources.Each thumbnailSet can have one or more thumbnail objects, which are images that represent the item.For example, a thumbnailSet may include thumbnail objects, such as common ones including small, medium, or large. There are many ways to work with thumbnails on OneDrive.Here are the most common ones: This API is available in the following national cloud deployments.

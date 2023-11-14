@@ -60,52 +60,52 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the deviceCompliancePolicyAssignment objects.
-     * @return a CompletableFuture of DeviceCompliancePolicyAssignmentCollectionResponse
+     * @return a DeviceCompliancePolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicyAssignmentCollectionResponse
+     * @return a DeviceCompliancePolicyAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicyAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicyAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of DeviceCompliancePolicyAssignment
+     * @return a DeviceCompliancePolicyAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyAssignment post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicyAssignment
+     * @return a DeviceCompliancePolicyAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyAssignment post(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceCompliancePolicyAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceCompliancePolicyAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the deviceCompliancePolicyAssignment objects.

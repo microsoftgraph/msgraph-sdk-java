@@ -38,24 +38,24 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get homeRealmDiscoveryPolicies from applications
-     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
+     * @return a HomeRealmDiscoveryPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get() {
+    @jakarta.annotation.Nullable
+    public HomeRealmDiscoveryPolicy get() {
         return get(null);
     }
     /**
      * Get homeRealmDiscoveryPolicies from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
+     * @return a HomeRealmDiscoveryPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HomeRealmDiscoveryPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get homeRealmDiscoveryPolicies from applications

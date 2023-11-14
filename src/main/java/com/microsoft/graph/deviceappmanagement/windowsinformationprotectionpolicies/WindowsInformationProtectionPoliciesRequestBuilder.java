@@ -60,52 +60,52 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
     }
     /**
      * List properties and relationships of the windowsInformationProtectionPolicy objects.
-     * @return a CompletableFuture of WindowsInformationProtectionPolicyCollectionResponse
+     * @return a WindowsInformationProtectionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the windowsInformationProtectionPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionPolicyCollectionResponse
+     * @return a WindowsInformationProtectionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsInformationProtectionPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new windowsInformationProtectionPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of WindowsInformationProtectionPolicy
+     * @return a WindowsInformationProtectionPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionPolicy post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body) {
         return post(body, null);
     }
     /**
      * Create a new windowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionPolicy
+     * @return a WindowsInformationProtectionPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionPolicy post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsInformationProtectionPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the windowsInformationProtectionPolicy objects.

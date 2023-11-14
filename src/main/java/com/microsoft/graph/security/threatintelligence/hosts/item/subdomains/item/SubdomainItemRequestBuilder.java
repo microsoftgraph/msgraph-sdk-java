@@ -38,24 +38,24 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The subdomains that are associated with this host.
-     * @return a CompletableFuture of Subdomain
+     * @return a Subdomain
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Subdomain> get() {
+    @jakarta.annotation.Nullable
+    public Subdomain get() {
         return get(null);
     }
     /**
      * The subdomains that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Subdomain
+     * @return a Subdomain
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Subdomain> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Subdomain get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Subdomain::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Subdomain::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The subdomains that are associated with this host.

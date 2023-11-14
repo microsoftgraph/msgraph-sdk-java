@@ -68,50 +68,50 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the deletedTeam objects and their properties. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of DeletedTeamCollectionResponse
+     * @return a DeletedTeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeletedTeamCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeletedTeamCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the deletedTeam objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeletedTeamCollectionResponse
+     * @return a DeletedTeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeletedTeamCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeletedTeamCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeletedTeamCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeletedTeamCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deletedTeams for teamwork
      * @param body The request body
-     * @return a CompletableFuture of DeletedTeam
+     * @return a DeletedTeam
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeletedTeam> post(@jakarta.annotation.Nonnull final DeletedTeam body) {
+    @jakarta.annotation.Nullable
+    public DeletedTeam post(@jakarta.annotation.Nonnull final DeletedTeam body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deletedTeams for teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeletedTeam
+     * @return a DeletedTeam
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeletedTeam> post(@jakarta.annotation.Nonnull final DeletedTeam body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeletedTeam post(@jakarta.annotation.Nonnull final DeletedTeam body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeletedTeam::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeletedTeam::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get a list of the deletedTeam objects and their properties. This API is available in the following national cloud deployments.

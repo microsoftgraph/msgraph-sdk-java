@@ -60,52 +60,52 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationAssignment objects.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse
+     * @return a ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
+     * @return a ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationAssignment post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body) {
         return post(body, null);
     }
     /**
      * Create a new managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
+     * @return a ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedDeviceMobileAppConfigurationAssignment post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationAssignment objects.

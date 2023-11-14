@@ -39,66 +39,64 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property userSources for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property userSources for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     * @return a CompletableFuture of UserSource
+     * @return a UserSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserSource> get() {
+    @jakarta.annotation.Nullable
+    public UserSource get() {
         return get(null);
     }
     /**
      * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserSource
+     * @return a UserSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserSource get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property userSources in security
      * @param body The request body
-     * @return a CompletableFuture of UserSource
+     * @return a UserSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserSource> patch(@jakarta.annotation.Nonnull final UserSource body) {
+    @jakarta.annotation.Nullable
+    public UserSource patch(@jakarta.annotation.Nonnull final UserSource body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property userSources in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserSource
+     * @return a UserSource
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserSource> patch(@jakarta.annotation.Nonnull final UserSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public UserSource patch(@jakarta.annotation.Nonnull final UserSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UserSource::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, UserSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property userSources for security
@@ -125,6 +123,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

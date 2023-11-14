@@ -60,48 +60,48 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of HostSslCertificateCollectionResponse
+     * @return a HostSslCertificateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostSslCertificateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public HostSslCertificateCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostSslCertificateCollectionResponse
+     * @return a HostSslCertificateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostSslCertificateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostSslCertificateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostSslCertificateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostSslCertificateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to hostSslCertificates for security
      * @param body The request body
-     * @return a CompletableFuture of HostSslCertificate
+     * @return a HostSslCertificate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostSslCertificate> post(@jakarta.annotation.Nonnull final HostSslCertificate body) {
+    @jakarta.annotation.Nullable
+    public HostSslCertificate post(@jakarta.annotation.Nonnull final HostSslCertificate body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to hostSslCertificates for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HostSslCertificate
+     * @return a HostSslCertificate
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HostSslCertificate> post(@jakarta.annotation.Nonnull final HostSslCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HostSslCertificate post(@jakarta.annotation.Nonnull final HostSslCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HostSslCertificate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HostSslCertificate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.

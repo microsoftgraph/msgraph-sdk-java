@@ -46,24 +46,24 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.iosLobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of IosLobAppCollectionResponse
+     * @return a IosLobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public IosLobAppCollectionResponse get() {
         return get(null);
     }
     /**
      * Get the items of type microsoft.graph.iosLobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IosLobAppCollectionResponse
+     * @return a IosLobAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IosLobAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IosLobAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IosLobAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the items of type microsoft.graph.iosLobApp in the microsoft.graph.mobileApp collection

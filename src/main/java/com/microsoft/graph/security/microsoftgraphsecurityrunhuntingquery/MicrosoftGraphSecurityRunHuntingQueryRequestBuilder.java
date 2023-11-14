@@ -38,26 +38,26 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
     /**
      * Invoke action runHuntingQuery
      * @param body The request body
-     * @return a CompletableFuture of HuntingQueryResults
+     * @return a HuntingQueryResults
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public HuntingQueryResults post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action runHuntingQuery
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HuntingQueryResults
+     * @return a HuntingQueryResults
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public HuntingQueryResults post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HuntingQueryResults::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, HuntingQueryResults::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action runHuntingQuery

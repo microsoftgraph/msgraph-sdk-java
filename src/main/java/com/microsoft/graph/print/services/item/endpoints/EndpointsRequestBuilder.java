@@ -60,50 +60,50 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.
-     * @return a CompletableFuture of PrintServiceEndpointCollectionResponse
+     * @return a PrintServiceEndpointCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpointCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpointCollectionResponse get() {
         return get(null);
     }
     /**
      * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintServiceEndpointCollectionResponse
+     * @return a PrintServiceEndpointCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpointCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpointCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintServiceEndpointCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintServiceEndpointCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to endpoints for print
      * @param body The request body
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> post(@jakarta.annotation.Nonnull final PrintServiceEndpoint body) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint post(@jakarta.annotation.Nonnull final PrintServiceEndpoint body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to endpoints for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintServiceEndpoint
+     * @return a PrintServiceEndpoint
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> post(@jakarta.annotation.Nonnull final PrintServiceEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintServiceEndpoint post(@jakarta.annotation.Nonnull final PrintServiceEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintServiceEndpoint::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve a list of endpoints exposed by a print service. This API is available in the following national cloud deployments.

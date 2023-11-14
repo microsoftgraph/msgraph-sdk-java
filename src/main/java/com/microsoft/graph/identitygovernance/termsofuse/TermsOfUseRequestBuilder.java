@@ -55,66 +55,64 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property termsOfUse for identityGovernance
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property termsOfUse for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get termsOfUse from identityGovernance
-     * @return a CompletableFuture of TermsOfUseContainer
+     * @return a TermsOfUseContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsOfUseContainer> get() {
+    @jakarta.annotation.Nullable
+    public TermsOfUseContainer get() {
         return get(null);
     }
     /**
      * Get termsOfUse from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsOfUseContainer
+     * @return a TermsOfUseContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsOfUseContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsOfUseContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsOfUseContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsOfUseContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property termsOfUse in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of TermsOfUseContainer
+     * @return a TermsOfUseContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsOfUseContainer> patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body) {
+    @jakarta.annotation.Nullable
+    public TermsOfUseContainer patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property termsOfUse in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermsOfUseContainer
+     * @return a TermsOfUseContainer
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TermsOfUseContainer> patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TermsOfUseContainer patch(@jakarta.annotation.Nonnull final TermsOfUseContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, TermsOfUseContainer::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, TermsOfUseContainer::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property termsOfUse for identityGovernance
@@ -141,6 +139,7 @@ public class TermsOfUseRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

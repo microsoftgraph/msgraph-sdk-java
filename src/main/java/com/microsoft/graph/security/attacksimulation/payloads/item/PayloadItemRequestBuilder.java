@@ -39,66 +39,64 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property payloads for security
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property payloads for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get payloads from security
-     * @return a CompletableFuture of Payload
+     * Represents an attack simulation training campaign payload in a tenant.
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> get() {
+    @jakarta.annotation.Nullable
+    public Payload get() {
         return get(null);
     }
     /**
-     * Get payloads from security
+     * Represents an attack simulation training campaign payload in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Payload get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property payloads in security
      * @param body The request body
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> patch(@jakarta.annotation.Nonnull final Payload body) {
+    @jakarta.annotation.Nullable
+    public Payload patch(@jakarta.annotation.Nonnull final Payload body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property payloads in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Payload
+     * @return a Payload
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Payload> patch(@jakarta.annotation.Nonnull final Payload body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Payload patch(@jakarta.annotation.Nonnull final Payload body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Payload::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property payloads for security
@@ -125,10 +123,11 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get payloads from security
+     * Represents an attack simulation training campaign payload in a tenant.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +135,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get payloads from security
+     * Represents an attack simulation training campaign payload in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +204,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get payloads from security
+     * Represents an attack simulation training campaign payload in a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

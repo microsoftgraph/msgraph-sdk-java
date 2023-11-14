@@ -60,48 +60,48 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
-     * @return a CompletableFuture of PrintJobCollectionResponse
+     * @return a PrintJobCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJobCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public PrintJobCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintJobCollectionResponse
+     * @return a PrintJobCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJobCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintJobCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintJobCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to jobs for print
      * @param body The request body
-     * @return a CompletableFuture of PrintJob
+     * @return a PrintJob
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJob> post(@jakarta.annotation.Nonnull final PrintJob body) {
+    @jakarta.annotation.Nullable
+    public PrintJob post(@jakarta.annotation.Nonnull final PrintJob body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to jobs for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintJob
+     * @return a PrintJob
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrintJob> post(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrintJob post(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrintJob::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrintJob::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.

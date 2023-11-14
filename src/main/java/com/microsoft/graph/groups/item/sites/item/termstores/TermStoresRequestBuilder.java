@@ -60,48 +60,48 @@ public class TermStoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of termStores under this site.
-     * @return a CompletableFuture of StoreCollectionResponse
+     * @return a StoreCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<StoreCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public StoreCollectionResponse get() {
         return get(null);
     }
     /**
      * The collection of termStores under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of StoreCollectionResponse
+     * @return a StoreCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<StoreCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public StoreCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, StoreCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, StoreCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to termStores for groups
      * @param body The request body
-     * @return a CompletableFuture of Store
+     * @return a Store
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Store> post(@jakarta.annotation.Nonnull final Store body) {
+    @jakarta.annotation.Nullable
+    public Store post(@jakarta.annotation.Nonnull final Store body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to termStores for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Store
+     * @return a Store
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Store> post(@jakarta.annotation.Nonnull final Store body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Store post(@jakarta.annotation.Nonnull final Store body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Store::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Store::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The collection of termStores under this site.

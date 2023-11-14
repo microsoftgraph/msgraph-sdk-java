@@ -46,24 +46,24 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get serviceProvisioningErrors property value
-     * @return a CompletableFuture of ServiceProvisioningErrorCollectionResponse
+     * @return a ServiceProvisioningErrorCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceProvisioningErrorCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ServiceProvisioningErrorCollectionResponse get() {
         return get(null);
     }
     /**
      * Get serviceProvisioningErrors property value
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceProvisioningErrorCollectionResponse
+     * @return a ServiceProvisioningErrorCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ServiceProvisioningErrorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ServiceProvisioningErrorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ServiceProvisioningErrorCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ServiceProvisioningErrorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get serviceProvisioningErrors property value

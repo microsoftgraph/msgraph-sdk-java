@@ -60,48 +60,48 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of apps to which the policy is deployed.
-     * @return a CompletableFuture of ManagedMobileAppCollectionResponse
+     * @return a ManagedMobileAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileAppCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ManagedMobileAppCollectionResponse get() {
         return get(null);
     }
     /**
      * List of apps to which the policy is deployed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedMobileAppCollectionResponse
+     * @return a ManagedMobileAppCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedMobileAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedMobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedMobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to apps for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of ManagedMobileApp
+     * @return a ManagedMobileApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> post(@jakarta.annotation.Nonnull final ManagedMobileApp body) {
+    @jakarta.annotation.Nullable
+    public ManagedMobileApp post(@jakarta.annotation.Nonnull final ManagedMobileApp body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to apps for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedMobileApp
+     * @return a ManagedMobileApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> post(@jakarta.annotation.Nonnull final ManagedMobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ManagedMobileApp post(@jakarta.annotation.Nonnull final ManagedMobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ManagedMobileApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ManagedMobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * List of apps to which the policy is deployed.

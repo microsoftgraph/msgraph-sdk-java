@@ -60,48 +60,48 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceRoleScopes from identityGovernance
-     * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
+     * @return a AccessPackageResourceRoleScopeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScopeCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScopeCollectionResponse get() {
         return get(null);
     }
     /**
      * Get resourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
+     * @return a AccessPackageResourceRoleScopeCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScopeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScopeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceRoleScopeCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceRoleScopeCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to resourceRoleScopes for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of AccessPackageResourceRoleScope
+     * @return a AccessPackageResourceRoleScope
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScope post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to resourceRoleScopes for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageResourceRoleScope
+     * @return a AccessPackageResourceRoleScope
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScope post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AccessPackageResourceRoleScope::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AccessPackageResourceRoleScope::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get resourceRoleScopes from identityGovernance

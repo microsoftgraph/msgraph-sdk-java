@@ -39,24 +39,24 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user
-     * @return a CompletableFuture of GetEffectivePermissionsWithScopeGetResponse
+     * @return a GetEffectivePermissionsWithScopeGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetEffectivePermissionsWithScopeGetResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetEffectivePermissionsWithScopeGetResponse get() {
         return get(null);
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GetEffectivePermissionsWithScopeGetResponse
+     * @return a GetEffectivePermissionsWithScopeGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetEffectivePermissionsWithScopeGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetEffectivePermissionsWithScopeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetEffectivePermissionsWithScopeGetResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetEffectivePermissionsWithScopeGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user

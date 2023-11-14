@@ -38,24 +38,24 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Classes to which the user belongs. Nullable.
-     * @return a CompletableFuture of EducationClass
+     * @return a EducationClass
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> get() {
+    @jakarta.annotation.Nullable
+    public EducationClass get() {
         return get(null);
     }
     /**
      * Classes to which the user belongs. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationClass
+     * @return a EducationClass
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EducationClass get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EducationClass::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EducationClass::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Classes to which the user belongs. Nullable.
