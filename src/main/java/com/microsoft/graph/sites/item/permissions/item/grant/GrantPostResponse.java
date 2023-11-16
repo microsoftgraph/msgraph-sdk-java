@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GrantPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Permission> value;
-    /**
      * Instantiates a new GrantPostResponse and sets the default values.
      */
     public GrantPostResponse() {
@@ -46,7 +42,7 @@ public class GrantPostResponse extends BaseCollectionPaginationCountResponse imp
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GrantPostResponse extends BaseCollectionPaginationCountResponse imp
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

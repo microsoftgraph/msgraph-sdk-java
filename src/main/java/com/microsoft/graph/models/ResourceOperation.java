@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceOperation extends Entity implements Parsable {
     /**
-     * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
-     */
-    private String actionName;
-    /**
-     * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
-     */
-    private String description;
-    /**
-     * Name of the Resource this operation is performed on.
-     */
-    private String resourceName;
-    /**
      * Instantiates a new ResourceOperation and sets the default values.
      */
     public ResourceOperation() {
@@ -45,7 +33,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
-        return this.actionName;
+        return this.BackingStore.get("actionName");
     }
     /**
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
@@ -53,7 +41,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +61,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
-        return this.resourceName;
+        return this.BackingStore.get("resourceName");
     }
     /**
      * Serializes information the current object
@@ -91,20 +79,20 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final String value) {
-        this.actionName = value;
+        this.BackingStore.set("actionName", value);
     }
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
      * @param value Value to set for the resourceName property.
      */
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.resourceName = value;
+        this.BackingStore.set("resourceName", value);
     }
 }

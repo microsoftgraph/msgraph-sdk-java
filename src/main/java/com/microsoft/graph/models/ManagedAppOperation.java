@@ -13,22 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppOperation extends Entity implements Parsable {
     /**
-     * The operation name.
-     */
-    private String displayName;
-    /**
-     * The last time the app operation was modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The current state of the operation
-     */
-    private String state;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
      * Instantiates a new ManagedAppOperation and sets the default values.
      */
     public ManagedAppOperation() {
@@ -50,7 +34,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +55,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the state property value. The current state of the operation
@@ -79,7 +63,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -87,7 +71,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class ManagedAppOperation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The last time the app operation was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the state property value. The current state of the operation
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

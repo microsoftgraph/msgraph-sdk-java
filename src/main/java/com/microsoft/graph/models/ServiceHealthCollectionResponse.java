@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHealthCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ServiceHealth> value;
-    /**
      * Instantiates a new ServiceHealthCollectionResponse and sets the default values.
      */
     public ServiceHealthCollectionResponse() {
@@ -44,7 +40,7 @@ public class ServiceHealthCollectionResponse extends BaseCollectionPaginationCou
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealth> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ServiceHealthCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ServiceHealth> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

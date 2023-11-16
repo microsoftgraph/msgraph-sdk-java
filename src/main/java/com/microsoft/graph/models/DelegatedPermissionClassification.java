@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /**
-     * The classification value being given. Possible value: low. Doesn't support $filter.
-     */
-    private PermissionClassificationType classification;
-    /**
-     * The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn't support $filter.
-     */
-    private String permissionId;
-    /**
-     * The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn't support $filter.
-     */
-    private String permissionName;
-    /**
      * Instantiates a new DelegatedPermissionClassification and sets the default values.
      */
     public DelegatedPermissionClassification() {
@@ -42,7 +30,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public PermissionClassificationType getClassification() {
-        return this.classification;
+        return this.BackingStore.get("classification");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getPermissionId() {
-        return this.permissionId;
+        return this.BackingStore.get("permissionId");
     }
     /**
      * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn't support $filter.
@@ -70,7 +58,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getPermissionName() {
-        return this.permissionName;
+        return this.BackingStore.get("permissionName");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final PermissionClassificationType value) {
-        this.classification = value;
+        this.BackingStore.set("classification", value);
     }
     /**
      * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn't support $filter.
      * @param value Value to set for the permissionId property.
      */
     public void setPermissionId(@jakarta.annotation.Nullable final String value) {
-        this.permissionId = value;
+        this.BackingStore.set("permissionId", value);
     }
     /**
      * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn't support $filter.
      * @param value Value to set for the permissionName property.
      */
     public void setPermissionName(@jakarta.annotation.Nullable final String value) {
-        this.permissionName = value;
+        this.BackingStore.set("permissionName", value);
     }
 }

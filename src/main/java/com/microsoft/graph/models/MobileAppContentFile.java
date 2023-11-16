@@ -13,42 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppContentFile extends Entity implements Parsable {
     /**
-     * The Azure Storage URI.
-     */
-    private String azureStorageUri;
-    /**
-     * The time the Azure storage Uri expires.
-     */
-    private OffsetDateTime azureStorageUriExpirationDateTime;
-    /**
-     * The time the file was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * A value indicating whether the file is committed.
-     */
-    private Boolean isCommitted;
-    /**
-     * The manifest information.
-     */
-    private byte[] manifest;
-    /**
-     * the file name.
-     */
-    private String name;
-    /**
-     * The size of the file prior to encryption.
-     */
-    private Long size;
-    /**
-     * The size of the file after encryption.
-     */
-    private Long sizeEncrypted;
-    /**
-     * Contains properties for upload request states.
-     */
-    private MobileAppContentFileUploadState uploadState;
-    /**
      * Instantiates a new MobileAppContentFile and sets the default values.
      */
     public MobileAppContentFile() {
@@ -70,7 +34,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageUri() {
-        return this.azureStorageUri;
+        return this.BackingStore.get("azureStorageUri");
     }
     /**
      * Gets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
@@ -78,7 +42,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAzureStorageUriExpirationDateTime() {
-        return this.azureStorageUriExpirationDateTime;
+        return this.BackingStore.get("azureStorageUriExpirationDateTime");
     }
     /**
      * Gets the createdDateTime property value. The time the file was created.
@@ -86,7 +50,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -112,7 +76,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
-        return this.isCommitted;
+        return this.BackingStore.get("isCommitted");
     }
     /**
      * Gets the manifest property value. The manifest information.
@@ -120,7 +84,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getManifest() {
-        return this.manifest;
+        return this.BackingStore.get("manifest");
     }
     /**
      * Gets the name property value. the file name.
@@ -128,7 +92,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the size property value. The size of the file prior to encryption.
@@ -136,7 +100,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
-        return this.size;
+        return this.BackingStore.get("size");
     }
     /**
      * Gets the sizeEncrypted property value. The size of the file after encryption.
@@ -144,7 +108,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
-        return this.sizeEncrypted;
+        return this.BackingStore.get("sizeEncrypted");
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
@@ -152,7 +116,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {
-        return this.uploadState;
+        return this.BackingStore.get("uploadState");
     }
     /**
      * Serializes information the current object
@@ -176,62 +140,62 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the azureStorageUri property.
      */
     public void setAzureStorageUri(@jakarta.annotation.Nullable final String value) {
-        this.azureStorageUri = value;
+        this.BackingStore.set("azureStorageUri", value);
     }
     /**
      * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
      * @param value Value to set for the azureStorageUriExpirationDateTime property.
      */
     public void setAzureStorageUriExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.azureStorageUriExpirationDateTime = value;
+        this.BackingStore.set("azureStorageUriExpirationDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The time the file was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isCommitted property value. A value indicating whether the file is committed.
      * @param value Value to set for the isCommitted property.
      */
     public void setIsCommitted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCommitted = value;
+        this.BackingStore.set("isCommitted", value);
     }
     /**
      * Sets the manifest property value. The manifest information.
      * @param value Value to set for the manifest property.
      */
     public void setManifest(@jakarta.annotation.Nullable final byte[] value) {
-        this.manifest = value;
+        this.BackingStore.set("manifest", value);
     }
     /**
      * Sets the name property value. the file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the size property value. The size of the file prior to encryption.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
-        this.size = value;
+        this.BackingStore.set("size", value);
     }
     /**
      * Sets the sizeEncrypted property value. The size of the file after encryption.
      * @param value Value to set for the sizeEncrypted property.
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
-        this.sizeEncrypted = value;
+        this.BackingStore.set("sizeEncrypted", value);
     }
     /**
      * Sets the uploadState property value. Contains properties for upload request states.
      * @param value Value to set for the uploadState property.
      */
     public void setUploadState(@jakarta.annotation.Nullable final MobileAppContentFileUploadState value) {
-        this.uploadState = value;
+        this.BackingStore.set("uploadState", value);
     }
 }

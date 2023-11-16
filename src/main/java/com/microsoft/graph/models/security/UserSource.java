@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSource extends DataSource implements Parsable {
     /**
-     * Email address of the user's mailbox.
-     */
-    private String email;
-    /**
-     * Specifies which sources are included in this group. Possible values are: mailbox, site.
-     */
-    private EnumSet<SourceType> includedSources;
-    /**
-     * The URL of the user's OneDrive for Business site. Read-only.
-     */
-    private String siteWebUrl;
-    /**
      * Instantiates a new UserSource and sets the default values.
      */
     public UserSource() {
@@ -44,7 +32,7 @@ public class UserSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -64,7 +52,7 @@ public class UserSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getIncludedSources() {
-        return this.includedSources;
+        return this.BackingStore.get("includedSources");
     }
     /**
      * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
@@ -72,7 +60,7 @@ public class UserSource extends DataSource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSiteWebUrl() {
-        return this.siteWebUrl;
+        return this.BackingStore.get("siteWebUrl");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
     public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
-        this.includedSources = value;
+        this.BackingStore.set("includedSources", value);
     }
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
      */
     public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.siteWebUrl = value;
+        this.BackingStore.set("siteWebUrl", value);
     }
 }

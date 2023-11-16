@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Quota implements AdditionalDataHolder, Parsable {
+public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Total space consumed by files in the recycle bin, in bytes. Read-only.
-     */
-    private Long deleted;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Total space remaining before reaching the quota limit, in bytes. Read-only.
-     */
-    private Long remaining;
-    /**
-     * Enumeration value that indicates the state of the storage space. Read-only.
-     */
-    private String state;
-    /**
-     * Information about the drive's storage quota plans. Only in Personal OneDrive.
-     */
-    private StoragePlanInformation storagePlanInformation;
-    /**
-     * Total allowed storage space, in bytes. Read-only.
-     */
-    private Long total;
-    /**
-     * Total space used, in bytes. Read-only.
-     */
-    private Long used;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Quota and sets the default values.
      */
     public Quota() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,20 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
@@ -71,7 +60,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getDeleted() {
-        return this.deleted;
+        return this.BackingStore.get("deleted");
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +84,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -103,7 +92,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getRemaining() {
-        return this.remaining;
+        return this.BackingStore.get("remaining");
     }
     /**
      * Gets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
@@ -111,7 +100,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
@@ -119,7 +108,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public StoragePlanInformation getStoragePlanInformation() {
-        return this.storagePlanInformation;
+        return this.BackingStore.get("storagePlanInformation");
     }
     /**
      * Gets the total property value. Total allowed storage space, in bytes. Read-only.
@@ -127,7 +116,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {
-        return this.total;
+        return this.BackingStore.get("total");
     }
     /**
      * Gets the used property value. Total space used, in bytes. Read-only.
@@ -135,7 +124,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Long getUsed() {
-        return this.used;
+        return this.BackingStore.get("used");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
      * @param value Value to set for the deleted property.
      */
     public void setDeleted(@jakarta.annotation.Nullable final Long value) {
-        this.deleted = value;
+        this.BackingStore.set("deleted", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
      * @param value Value to set for the remaining property.
      */
     public void setRemaining(@jakarta.annotation.Nullable final Long value) {
-        this.remaining = value;
+        this.BackingStore.set("remaining", value);
     }
     /**
      * Sets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
      * @param value Value to set for the storagePlanInformation property.
      */
     public void setStoragePlanInformation(@jakarta.annotation.Nullable final StoragePlanInformation value) {
-        this.storagePlanInformation = value;
+        this.BackingStore.set("storagePlanInformation", value);
     }
     /**
      * Sets the total property value. Total allowed storage space, in bytes. Read-only.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Long value) {
-        this.total = value;
+        this.BackingStore.set("total", value);
     }
     /**
      * Sets the used property value. Total space used, in bytes. Read-only.
      * @param value Value to set for the used property.
      */
     public void setUsed(@jakarta.annotation.Nullable final Long value) {
-        this.used = value;
+        this.BackingStore.set("used", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetManager extends SubjectSet implements Parsable {
     /**
-     * Manager level, between 1 and 4. The direct manager is 1.
-     */
-    private Integer managerLevel;
-    /**
      * Instantiates a new TargetManager and sets the default values.
      */
     public TargetManager() {
@@ -45,7 +41,7 @@ public class TargetManager extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getManagerLevel() {
-        return this.managerLevel;
+        return this.BackingStore.get("managerLevel");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TargetManager extends SubjectSet implements Parsable {
      * @param value Value to set for the managerLevel property.
      */
     public void setManagerLevel(@jakarta.annotation.Nullable final Integer value) {
-        this.managerLevel = value;
+        this.BackingStore.set("managerLevel", value);
     }
 }

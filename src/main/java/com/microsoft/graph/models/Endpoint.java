@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Endpoint extends DirectoryObject implements Parsable {
     /**
-     * The capability property
-     */
-    private String capability;
-    /**
-     * The providerId property
-     */
-    private String providerId;
-    /**
-     * The providerName property
-     */
-    private String providerName;
-    /**
-     * The providerResourceId property
-     */
-    private String providerResourceId;
-    /**
-     * The uri property
-     */
-    private String uri;
-    /**
      * Instantiates a new Endpoint and sets the default values.
      */
     public Endpoint() {
@@ -51,7 +31,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCapability() {
-        return this.capability;
+        return this.BackingStore.get("capability");
     }
     /**
      * The deserialization information for the current model
@@ -73,7 +53,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProviderId() {
-        return this.providerId;
+        return this.BackingStore.get("providerId");
     }
     /**
      * Gets the providerName property value. The providerName property
@@ -81,7 +61,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
-        return this.providerName;
+        return this.BackingStore.get("providerName");
     }
     /**
      * Gets the providerResourceId property value. The providerResourceId property
@@ -89,7 +69,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProviderResourceId() {
-        return this.providerResourceId;
+        return this.BackingStore.get("providerResourceId");
     }
     /**
      * Gets the uri property value. The uri property
@@ -97,7 +77,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUri() {
-        return this.uri;
+        return this.BackingStore.get("uri");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the capability property.
      */
     public void setCapability(@jakarta.annotation.Nullable final String value) {
-        this.capability = value;
+        this.BackingStore.set("capability", value);
     }
     /**
      * Sets the providerId property value. The providerId property
      * @param value Value to set for the providerId property.
      */
     public void setProviderId(@jakarta.annotation.Nullable final String value) {
-        this.providerId = value;
+        this.BackingStore.set("providerId", value);
     }
     /**
      * Sets the providerName property value. The providerName property
      * @param value Value to set for the providerName property.
      */
     public void setProviderName(@jakarta.annotation.Nullable final String value) {
-        this.providerName = value;
+        this.BackingStore.set("providerName", value);
     }
     /**
      * Sets the providerResourceId property value. The providerResourceId property
      * @param value Value to set for the providerResourceId property.
      */
     public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {
-        this.providerResourceId = value;
+        this.BackingStore.set("providerResourceId", value);
     }
     /**
      * Sets the uri property value. The uri property
      * @param value Value to set for the uri property.
      */
     public void setUri(@jakarta.annotation.Nullable final String value) {
-        this.uri = value;
+        this.BackingStore.set("uri", value);
     }
 }

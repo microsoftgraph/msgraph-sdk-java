@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /**
-     * The endpoint where you can get details about the page. Read-only.
-     */
-    private String self;
-    /**
      * Instantiates a new OnenoteEntityBaseModel and sets the default values.
      */
     public OnenoteEntityBaseModel() {
@@ -57,7 +53,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSelf() {
-        return this.self;
+        return this.BackingStore.get("self");
     }
     /**
      * Serializes information the current object
@@ -73,6 +69,6 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      * @param value Value to set for the self property.
      */
     public void setSelf(@jakarta.annotation.Nullable final String value) {
-        this.self = value;
+        this.BackingStore.set("self", value);
     }
 }

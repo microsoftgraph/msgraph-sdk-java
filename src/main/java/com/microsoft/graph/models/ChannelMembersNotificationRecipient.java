@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * The unique identifier for the channel whose members should receive the notification.
-     */
-    private String channelId;
-    /**
-     * The unique identifier for the team under which the channel resides.
-     */
-    private String teamId;
-    /**
      * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
      */
     public ChannelMembersNotificationRecipient() {
@@ -39,7 +31,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
-        return this.channelId;
+        return this.BackingStore.get("channelId");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {
-        return this.teamId;
+        return this.BackingStore.get("teamId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
      * @param value Value to set for the channelId property.
      */
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
-        this.channelId = value;
+        this.BackingStore.set("channelId", value);
     }
     /**
      * Sets the teamId property value. The unique identifier for the team under which the channel resides.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.teamId = value;
+        this.BackingStore.set("teamId", value);
     }
 }

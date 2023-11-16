@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
-     */
-    private String contentData;
-    /**
-     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     */
-    private MailDestinationRoutingReason destinationRoutingReason;
-    /**
-     * The mail recipient whose policies are used to assess the mail.
-     */
-    private String recipientEmail;
-    /**
      * Instantiates a new EmailFileAssessmentRequest and sets the default values.
      */
     public EmailFileAssessmentRequest() {
@@ -43,7 +31,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @jakarta.annotation.Nullable
     public String getContentData() {
-        return this.contentData;
+        return this.BackingStore.get("contentData");
     }
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -51,7 +39,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
-        return this.destinationRoutingReason;
+        return this.BackingStore.get("destinationRoutingReason");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmail() {
-        return this.recipientEmail;
+        return this.BackingStore.get("recipientEmail");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the contentData property.
      */
     public void setContentData(@jakarta.annotation.Nullable final String value) {
-        this.contentData = value;
+        this.BackingStore.set("contentData", value);
     }
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param value Value to set for the destinationRoutingReason property.
      */
     public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
-        this.destinationRoutingReason = value;
+        this.BackingStore.set("destinationRoutingReason", value);
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @param value Value to set for the recipientEmail property.
      */
     public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
-        this.recipientEmail = value;
+        this.BackingStore.set("recipientEmail", value);
     }
 }

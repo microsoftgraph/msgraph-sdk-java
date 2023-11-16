@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalGroup extends Entity implements Parsable {
     /**
-     * The description of the external group. Optional.
-     */
-    private String description;
-    /**
-     * The friendly name of the external group. Optional.
-     */
-    private String displayName;
-    /**
-     * A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
-     */
-    private java.util.List<Identity> members;
-    /**
      * Instantiates a new ExternalGroup and sets the default values.
      */
     public ExternalGroup() {
@@ -43,7 +31,7 @@ public class ExternalGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The friendly name of the external group. Optional.
@@ -51,7 +39,7 @@ public class ExternalGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class ExternalGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Identity> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ExternalGroup extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The friendly name of the external group. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the members property value. A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or an externalGroup as members.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<Identity> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
 }

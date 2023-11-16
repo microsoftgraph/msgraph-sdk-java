@@ -13,50 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfiguration extends Entity implements Parsable {
     /**
-     * The list of assignments for the device configuration profile.
-     */
-    private java.util.List<DeviceConfigurationAssignment> assignments;
-    /**
-     * DateTime the object was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Admin provided description of the Device Configuration.
-     */
-    private String description;
-    /**
-     * Device Configuration Setting State Device Summary
-     */
-    private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
-    /**
-     * Device configuration installation status by device.
-     */
-    private java.util.List<DeviceConfigurationDeviceStatus> deviceStatuses;
-    /**
-     * Device Configuration devices status overview
-     */
-    private DeviceConfigurationDeviceOverview deviceStatusOverview;
-    /**
-     * Admin provided name of the device configuration.
-     */
-    private String displayName;
-    /**
-     * DateTime the object was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Device configuration installation status by user.
-     */
-    private java.util.List<DeviceConfigurationUserStatus> userStatuses;
-    /**
-     * Device Configuration users status overview
-     */
-    private DeviceConfigurationUserOverview userStatusOverview;
-    /**
-     * Version of the device configuration.
-     */
-    private Integer version;
-    /**
      * Instantiates a new DeviceConfiguration and sets the default values.
      */
     public DeviceConfiguration() {
@@ -110,7 +66,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getAssignments() {
-        return this.assignments;
+        return this.BackingStore.get("assignments");
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -118,7 +74,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
@@ -126,7 +82,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
@@ -134,7 +90,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
-        return this.deviceSettingStateSummaries;
+        return this.BackingStore.get("deviceSettingStateSummaries");
     }
     /**
      * Gets the deviceStatuses property value. Device configuration installation status by device.
@@ -142,7 +98,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationDeviceStatus> getDeviceStatuses() {
-        return this.deviceStatuses;
+        return this.BackingStore.get("deviceStatuses");
     }
     /**
      * Gets the deviceStatusOverview property value. Device Configuration devices status overview
@@ -150,7 +106,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceOverview getDeviceStatusOverview() {
-        return this.deviceStatusOverview;
+        return this.BackingStore.get("deviceStatusOverview");
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
@@ -158,7 +114,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -186,7 +142,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the userStatuses property value. Device configuration installation status by user.
@@ -194,7 +150,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationUserStatus> getUserStatuses() {
-        return this.userStatuses;
+        return this.BackingStore.get("userStatuses");
     }
     /**
      * Gets the userStatusOverview property value. Device Configuration users status overview
@@ -202,7 +158,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserOverview getUserStatusOverview() {
-        return this.userStatusOverview;
+        return this.BackingStore.get("userStatusOverview");
     }
     /**
      * Gets the version property value. Version of the device configuration.
@@ -210,7 +166,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -236,76 +192,76 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
-        this.assignments = value;
+        this.BackingStore.set("assignments", value);
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
      * @param value Value to set for the deviceSettingStateSummaries property.
      */
     public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
-        this.deviceSettingStateSummaries = value;
+        this.BackingStore.set("deviceSettingStateSummaries", value);
     }
     /**
      * Sets the deviceStatuses property value. Device configuration installation status by device.
      * @param value Value to set for the deviceStatuses property.
      */
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
-        this.deviceStatuses = value;
+        this.BackingStore.set("deviceStatuses", value);
     }
     /**
      * Sets the deviceStatusOverview property value. Device Configuration devices status overview
      * @param value Value to set for the deviceStatusOverview property.
      */
     public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
-        this.deviceStatusOverview = value;
+        this.BackingStore.set("deviceStatusOverview", value);
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the userStatuses property value. Device configuration installation status by user.
      * @param value Value to set for the userStatuses property.
      */
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
-        this.userStatuses = value;
+        this.BackingStore.set("userStatuses", value);
     }
     /**
      * Sets the userStatusOverview property value. Device Configuration users status overview
      * @param value Value to set for the userStatusOverview property.
      */
     public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationUserOverview value) {
-        this.userStatusOverview = value;
+        this.BackingStore.set("userStatusOverview", value);
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

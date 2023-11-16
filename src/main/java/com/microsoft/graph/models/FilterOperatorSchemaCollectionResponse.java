@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilterOperatorSchemaCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<FilterOperatorSchema> value;
-    /**
      * Instantiates a new FilterOperatorSchemaCollectionResponse and sets the default values.
      */
     public FilterOperatorSchemaCollectionResponse() {
@@ -44,7 +40,7 @@ public class FilterOperatorSchemaCollectionResponse extends BaseCollectionPagina
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterOperatorSchema> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class FilterOperatorSchemaCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<FilterOperatorSchema> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

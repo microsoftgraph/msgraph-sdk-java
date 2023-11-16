@@ -9,26 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     */
-    private java.util.List<TrainingAssignedTo> assignedTo;
-    /**
-     * The description of the custom training setting.
-     */
-    private String description;
-    /**
-     * The display name of the custom training setting.
-     */
-    private String displayName;
-    /**
-     * Training duration.
-     */
-    private Integer durationInMinutes;
-    /**
-     * The training URL.
-     */
-    private String url;
-    /**
      * Instantiates a new CustomTrainingSetting and sets the default values.
      */
     public CustomTrainingSetting() {
@@ -51,7 +31,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingAssignedTo> getAssignedTo() {
-        return this.assignedTo;
+        return this.BackingStore.get("assignedTo");
     }
     /**
      * Gets the description property value. The description of the custom training setting.
@@ -59,7 +39,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the custom training setting.
@@ -67,7 +47,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the durationInMinutes property value. Training duration.
@@ -75,7 +55,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMinutes() {
-        return this.durationInMinutes;
+        return this.BackingStore.get("durationInMinutes");
     }
     /**
      * The deserialization information for the current model
@@ -97,7 +77,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<TrainingAssignedTo> value) {
-        this.assignedTo = value;
+        this.BackingStore.set("assignedTo", value);
     }
     /**
      * Sets the description property value. The description of the custom training setting.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the custom training setting.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the durationInMinutes property value. Training duration.
      * @param value Value to set for the durationInMinutes property.
      */
     public void setDurationInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.durationInMinutes = value;
+        this.BackingStore.set("durationInMinutes", value);
     }
     /**
      * Sets the url property value. The training URL.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

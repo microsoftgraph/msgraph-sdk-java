@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FreeBusyError implements AdditionalDataHolder, Parsable {
+public class FreeBusyError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Describes the error.
-     */
-    private String message;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The response code from querying for the availability of the user, distribution list, or resource.
-     */
-    private String responseCode;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new FreeBusyError and sets the default values.
      */
     public FreeBusyError() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +72,7 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.BackingStore.get("message");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +80,7 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the responseCode property value. The response code from querying for the availability of the user, distribution list, or resource.
@@ -83,7 +88,7 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getResponseCode() {
-        return this.responseCode;
+        return this.BackingStore.get("responseCode");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the message property value. Describes the error.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.BackingStore.set("message", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the responseCode property value. The response code from querying for the availability of the user, distribution list, or resource.
      * @param value Value to set for the responseCode property.
      */
     public void setResponseCode(@jakarta.annotation.Nullable final String value) {
-        this.responseCode = value;
+        this.BackingStore.set("responseCode", value);
     }
 }

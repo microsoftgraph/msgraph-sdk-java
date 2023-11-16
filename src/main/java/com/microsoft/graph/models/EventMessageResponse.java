@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessageResponse extends EventMessage implements Parsable {
     /**
-     * The proposedNewTime property
-     */
-    private TimeSlot proposedNewTime;
-    /**
-     * The responseType property
-     */
-    private ResponseType responseType;
-    /**
      * Instantiates a new EventMessageResponse and sets the default values.
      */
     public EventMessageResponse() {
@@ -50,7 +42,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TimeSlot getProposedNewTime() {
-        return this.proposedNewTime;
+        return this.BackingStore.get("proposedNewTime");
     }
     /**
      * Gets the responseType property value. The responseType property
@@ -58,7 +50,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResponseType getResponseType() {
-        return this.responseType;
+        return this.BackingStore.get("responseType");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * @param value Value to set for the proposedNewTime property.
      */
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
-        this.proposedNewTime = value;
+        this.BackingStore.set("proposedNewTime", value);
     }
     /**
      * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
      */
     public void setResponseType(@jakarta.annotation.Nullable final ResponseType value) {
-        this.responseType = value;
+        this.BackingStore.set("responseType", value);
     }
 }

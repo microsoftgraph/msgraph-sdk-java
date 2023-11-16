@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Request extends Entity implements Parsable {
     /**
-     * The identifier of the approval of the request.
-     */
-    private String approvalId;
-    /**
-     * The request completion date time.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * The principal that created the request.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The request creation date time.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Free text field to define any custom data for the request. Not used.
-     */
-    private String customData;
-    /**
-     * The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
-     */
-    private String status;
-    /**
      * Instantiates a new Request and sets the default values.
      */
     public Request() {
@@ -67,7 +43,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getApprovalId() {
-        return this.approvalId;
+        return this.BackingStore.get("approvalId");
     }
     /**
      * Gets the completedDateTime property value. The request completion date time.
@@ -75,7 +51,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * Gets the createdBy property value. The principal that created the request.
@@ -83,7 +59,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The request creation date time.
@@ -91,7 +67,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the customData property value. Free text field to define any custom data for the request. Not used.
@@ -99,7 +75,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCustomData() {
-        return this.customData;
+        return this.BackingStore.get("customData");
     }
     /**
      * The deserialization information for the current model
@@ -122,7 +98,7 @@ public class Request extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -143,41 +119,41 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the approvalId property.
      */
     public void setApprovalId(@jakarta.annotation.Nullable final String value) {
-        this.approvalId = value;
+        this.BackingStore.set("approvalId", value);
     }
     /**
      * Sets the completedDateTime property value. The request completion date time.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdBy property value. The principal that created the request.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The request creation date time.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customData property value. Free text field to define any custom data for the request. Not used.
      * @param value Value to set for the customData property.
      */
     public void setCustomData(@jakarta.annotation.Nullable final String value) {
-        this.customData = value;
+        this.BackingStore.set("customData", value);
     }
     /**
      * Sets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

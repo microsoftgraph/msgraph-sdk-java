@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements Parsable {
     /**
-     * Number of points a teacher is giving this submission object.
-     */
-    private Float points;
-    /**
      * Instantiates a new EducationAssignmentPointsGrade and sets the default values.
      */
     public EducationAssignmentPointsGrade() {
@@ -45,7 +41,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      */
     @jakarta.annotation.Nullable
     public Float getPoints() {
-        return this.points;
+        return this.BackingStore.get("points");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final Float value) {
-        this.points = value;
+        this.BackingStore.set("points", value);
     }
 }

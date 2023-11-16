@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintServiceEndpoint extends Entity implements Parsable {
     /**
-     * A human-readable display name for the endpoint.
-     */
-    private String displayName;
-    /**
-     * The URI that can be used to access the service.
-     */
-    private String uri;
-    /**
      * Instantiates a new PrintServiceEndpoint and sets the default values.
      */
     public PrintServiceEndpoint() {
@@ -38,7 +30,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUri() {
-        return this.uri;
+        return this.BackingStore.get("uri");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the uri property value. The URI that can be used to access the service.
      * @param value Value to set for the uri property.
      */
     public void setUri(@jakarta.annotation.Nullable final String value) {
-        this.uri = value;
+        this.BackingStore.set("uri", value);
     }
 }

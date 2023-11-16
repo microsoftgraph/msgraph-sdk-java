@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * Target user type. Possible values are: unknown, clicked, compromised, allUsers, unknownFutureValue.
-     */
-    private TargettedUserType targettedUserType;
-    /**
      * Instantiates a new SimulationNotification and sets the default values.
      */
     public SimulationNotification() {
@@ -45,7 +41,7 @@ public class SimulationNotification extends BaseEndUserNotification implements P
      */
     @jakarta.annotation.Nullable
     public TargettedUserType getTargettedUserType() {
-        return this.targettedUserType;
+        return this.BackingStore.get("targettedUserType");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SimulationNotification extends BaseEndUserNotification implements P
      * @param value Value to set for the targettedUserType property.
      */
     public void setTargettedUserType(@jakarta.annotation.Nullable final TargettedUserType value) {
-        this.targettedUserType = value;
+        this.BackingStore.set("targettedUserType", value);
     }
 }

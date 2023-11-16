@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable {
     /**
-     * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
-     */
-    private String edgeSearchEngineOpenSearchXmlUrl;
-    /**
      * Instantiates a new EdgeSearchEngineCustom and sets the default values.
      */
     public EdgeSearchEngineCustom() {
@@ -38,7 +34,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      */
     @jakarta.annotation.Nullable
     public String getEdgeSearchEngineOpenSearchXmlUrl() {
-        return this.edgeSearchEngineOpenSearchXmlUrl;
+        return this.BackingStore.get("edgeSearchEngineOpenSearchXmlUrl");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      * @param value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
      */
     public void setEdgeSearchEngineOpenSearchXmlUrl(@jakarta.annotation.Nullable final String value) {
-        this.edgeSearchEngineOpenSearchXmlUrl = value;
+        this.BackingStore.set("edgeSearchEngineOpenSearchXmlUrl", value);
     }
 }

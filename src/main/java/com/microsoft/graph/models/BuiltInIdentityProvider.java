@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable {
     /**
-     * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
-     */
-    private String identityProviderType;
-    /**
      * Instantiates a new BuiltInIdentityProvider and sets the default values.
      */
     public BuiltInIdentityProvider() {
@@ -45,7 +41,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      */
     @jakarta.annotation.Nullable
     public String getIdentityProviderType() {
-        return this.identityProviderType;
+        return this.BackingStore.get("identityProviderType");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * @param value Value to set for the identityProviderType property.
      */
     public void setIdentityProviderType(@jakarta.annotation.Nullable final String value) {
-        this.identityProviderType = value;
+        this.BackingStore.set("identityProviderType", value);
     }
 }

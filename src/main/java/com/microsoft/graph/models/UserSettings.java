@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSettings extends Entity implements Parsable {
     /**
-     * Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
-     */
-    private Boolean contributionToContentDiscoveryAsOrganizationDisabled;
-    /**
-     * When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
-     */
-    private Boolean contributionToContentDiscoveryDisabled;
-    /**
-     * The shiftPreferences property
-     */
-    private ShiftPreferences shiftPreferences;
-    /**
      * Instantiates a new UserSettings and sets the default values.
      */
     public UserSettings() {
@@ -42,7 +30,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryAsOrganizationDisabled() {
-        return this.contributionToContentDiscoveryAsOrganizationDisabled;
+        return this.BackingStore.get("contributionToContentDiscoveryAsOrganizationDisabled");
     }
     /**
      * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
@@ -50,7 +38,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryDisabled() {
-        return this.contributionToContentDiscoveryDisabled;
+        return this.BackingStore.get("contributionToContentDiscoveryDisabled");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +58,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {
-        return this.shiftPreferences;
+        return this.BackingStore.get("shiftPreferences");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      */
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.contributionToContentDiscoveryAsOrganizationDisabled = value;
+        this.BackingStore.set("contributionToContentDiscoveryAsOrganizationDisabled", value);
     }
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      */
     public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.contributionToContentDiscoveryDisabled = value;
+        this.BackingStore.set("contributionToContentDiscoveryDisabled", value);
     }
     /**
      * Sets the shiftPreferences property value. The shiftPreferences property
      * @param value Value to set for the shiftPreferences property.
      */
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
-        this.shiftPreferences = value;
+        this.BackingStore.set("shiftPreferences", value);
     }
 }

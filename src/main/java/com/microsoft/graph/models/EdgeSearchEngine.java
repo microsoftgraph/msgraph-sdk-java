@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
-     * Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     */
-    private EdgeSearchEngineType edgeSearchEngineType;
-    /**
      * Instantiates a new EdgeSearchEngine and sets the default values.
      */
     public EdgeSearchEngine() {
@@ -38,7 +34,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EdgeSearchEngineType getEdgeSearchEngineType() {
-        return this.edgeSearchEngineType;
+        return this.BackingStore.get("edgeSearchEngineType");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      * @param value Value to set for the edgeSearchEngineType property.
      */
     public void setEdgeSearchEngineType(@jakarta.annotation.Nullable final EdgeSearchEngineType value) {
-        this.edgeSearchEngineType = value;
+        this.BackingStore.set("edgeSearchEngineType", value);
     }
 }

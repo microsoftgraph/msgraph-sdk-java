@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFile extends AgreementFileProperties implements Parsable {
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
-     */
-    private java.util.List<AgreementFileLocalization> localizations;
-    /**
      * Instantiates a new AgreementFile and sets the default values.
      */
     public AgreementFile() {
@@ -44,7 +40,7 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileLocalization> getLocalizations() {
-        return this.localizations;
+        return this.BackingStore.get("localizations");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
-        this.localizations = value;
+        this.BackingStore.set("localizations", value);
     }
 }

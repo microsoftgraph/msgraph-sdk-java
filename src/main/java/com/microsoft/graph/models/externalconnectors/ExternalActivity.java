@@ -11,18 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalActivity extends Entity implements Parsable {
     /**
-     * Represents an identity used to identify who is responsible for the activity.
-     */
-    private Identity performedBy;
-    /**
-     * The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * The type property
-     */
-    private ExternalActivityType type;
-    /**
      * Instantiates a new ExternalActivity and sets the default values.
      */
     public ExternalActivity() {
@@ -63,7 +51,7 @@ public class ExternalActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getPerformedBy() {
-        return this.performedBy;
+        return this.BackingStore.get("performedBy");
     }
     /**
      * Gets the startDateTime property value. The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -71,7 +59,7 @@ public class ExternalActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the type property value. The type property
@@ -79,7 +67,7 @@ public class ExternalActivity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ExternalActivityType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -97,20 +85,20 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param value Value to set for the performedBy property.
      */
     public void setPerformedBy(@jakarta.annotation.Nullable final Identity value) {
-        this.performedBy = value;
+        this.BackingStore.set("performedBy", value);
     }
     /**
      * Sets the startDateTime property value. The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final ExternalActivityType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

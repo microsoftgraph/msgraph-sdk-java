@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
     /**
-     * The unique identifier for the team whose members should receive the notification.
-     */
-    private String teamId;
-    /**
      * Instantiates a new TeamMembersNotificationRecipient and sets the default values.
      */
     public TeamMembersNotificationRecipient() {
@@ -45,7 +41,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
      */
     @jakarta.annotation.Nullable
     public String getTeamId() {
-        return this.teamId;
+        return this.BackingStore.get("teamId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
-        this.teamId = value;
+        this.BackingStore.set("teamId", value);
     }
 }

@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope implements Parsable {
     /**
-     * Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
-     */
-    private PeriodAndDuration inactiveDuration;
-    /**
      * Instantiates a new AccessReviewInactiveUsersQueryScope and sets the default values.
      */
     public AccessReviewInactiveUsersQueryScope() {
@@ -46,7 +42,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getInactiveDuration() {
-        return this.inactiveDuration;
+        return this.BackingStore.get("inactiveDuration");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * @param value Value to set for the inactiveDuration property.
      */
     public void setInactiveDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.inactiveDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("inactiveDuration", value);
     }
 }

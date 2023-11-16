@@ -12,34 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
-     * UPN of the user the device will be assigned
-     */
-    private String assignedUserPrincipalName;
-    /**
-     * Group Tag of the Windows autopilot device.
-     */
-    private String groupTag;
-    /**
-     * Hardware Blob of the Windows autopilot device.
-     */
-    private byte[] hardwareIdentifier;
-    /**
-     * The Import Id of the Windows autopilot device.
-     */
-    private String importId;
-    /**
-     * Product Key of the Windows autopilot device.
-     */
-    private String productKey;
-    /**
-     * Serial number of the Windows autopilot device.
-     */
-    private String serialNumber;
-    /**
-     * Current state of the imported device.
-     */
-    private ImportedWindowsAutopilotDeviceIdentityState state;
-    /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentity and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentity() {
@@ -61,7 +33,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getAssignedUserPrincipalName() {
-        return this.assignedUserPrincipalName;
+        return this.BackingStore.get("assignedUserPrincipalName");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +57,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
-        return this.groupTag;
+        return this.BackingStore.get("groupTag");
     }
     /**
      * Gets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
@@ -93,7 +65,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public byte[] getHardwareIdentifier() {
-        return this.hardwareIdentifier;
+        return this.BackingStore.get("hardwareIdentifier");
     }
     /**
      * Gets the importId property value. The Import Id of the Windows autopilot device.
@@ -101,7 +73,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getImportId() {
-        return this.importId;
+        return this.BackingStore.get("importId");
     }
     /**
      * Gets the productKey property value. Product Key of the Windows autopilot device.
@@ -109,7 +81,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.BackingStore.get("productKey");
     }
     /**
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
@@ -117,7 +89,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Gets the state property value. Current state of the imported device.
@@ -125,7 +97,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -147,48 +119,48 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the assignedUserPrincipalName property.
      */
     public void setAssignedUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.assignedUserPrincipalName = value;
+        this.BackingStore.set("assignedUserPrincipalName", value);
     }
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
      * @param value Value to set for the groupTag property.
      */
     public void setGroupTag(@jakarta.annotation.Nullable final String value) {
-        this.groupTag = value;
+        this.BackingStore.set("groupTag", value);
     }
     /**
      * Sets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
      * @param value Value to set for the hardwareIdentifier property.
      */
     public void setHardwareIdentifier(@jakarta.annotation.Nullable final byte[] value) {
-        this.hardwareIdentifier = value;
+        this.BackingStore.set("hardwareIdentifier", value);
     }
     /**
      * Sets the importId property value. The Import Id of the Windows autopilot device.
      * @param value Value to set for the importId property.
      */
     public void setImportId(@jakarta.annotation.Nullable final String value) {
-        this.importId = value;
+        this.BackingStore.set("importId", value);
     }
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.BackingStore.set("productKey", value);
     }
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
     /**
      * Sets the state property value. Current state of the imported device.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
 }

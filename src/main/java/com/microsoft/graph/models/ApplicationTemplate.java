@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationTemplate extends Entity implements Parsable {
     /**
-     * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.
-     */
-    private java.util.List<String> categories;
-    /**
-     * A description of the application.
-     */
-    private String description;
-    /**
-     * The name of the application.
-     */
-    private String displayName;
-    /**
-     * The home page URL of the application.
-     */
-    private String homePageUrl;
-    /**
-     * The URL to get the logo for this application.
-     */
-    private String logoUrl;
-    /**
-     * The name of the publisher for this application.
-     */
-    private String publisher;
-    /**
-     * The list of provisioning modes supported by this application. The only valid value is sync.
-     */
-    private java.util.List<String> supportedProvisioningTypes;
-    /**
-     * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
-     */
-    private java.util.List<String> supportedSingleSignOnModes;
-    /**
      * Instantiates a new ApplicationTemplate and sets the default values.
      */
     public ApplicationTemplate() {
@@ -62,7 +30,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this.categories;
+        return this.BackingStore.get("categories");
     }
     /**
      * Gets the description property value. A description of the application.
@@ -70,7 +38,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name of the application.
@@ -78,7 +46,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +71,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getHomePageUrl() {
-        return this.homePageUrl;
+        return this.BackingStore.get("homePageUrl");
     }
     /**
      * Gets the logoUrl property value. The URL to get the logo for this application.
@@ -111,7 +79,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLogoUrl() {
-        return this.logoUrl;
+        return this.BackingStore.get("logoUrl");
     }
     /**
      * Gets the publisher property value. The name of the publisher for this application.
@@ -119,7 +87,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.BackingStore.get("publisher");
     }
     /**
      * Gets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
@@ -127,7 +95,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedProvisioningTypes() {
-        return this.supportedProvisioningTypes;
+        return this.BackingStore.get("supportedProvisioningTypes");
     }
     /**
      * Gets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
@@ -135,7 +103,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedSingleSignOnModes() {
-        return this.supportedSingleSignOnModes;
+        return this.BackingStore.get("supportedSingleSignOnModes");
     }
     /**
      * Serializes information the current object
@@ -158,55 +126,55 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.categories = value;
+        this.BackingStore.set("categories", value);
     }
     /**
      * Sets the description property value. A description of the application.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name of the application.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the homePageUrl property value. The home page URL of the application.
      * @param value Value to set for the homePageUrl property.
      */
     public void setHomePageUrl(@jakarta.annotation.Nullable final String value) {
-        this.homePageUrl = value;
+        this.BackingStore.set("homePageUrl", value);
     }
     /**
      * Sets the logoUrl property value. The URL to get the logo for this application.
      * @param value Value to set for the logoUrl property.
      */
     public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
-        this.logoUrl = value;
+        this.BackingStore.set("logoUrl", value);
     }
     /**
      * Sets the publisher property value. The name of the publisher for this application.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.BackingStore.set("publisher", value);
     }
     /**
      * Sets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
      * @param value Value to set for the supportedProvisioningTypes property.
      */
     public void setSupportedProvisioningTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedProvisioningTypes = value;
+        this.BackingStore.set("supportedProvisioningTypes", value);
     }
     /**
      * Sets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
      * @param value Value to set for the supportedSingleSignOnModes property.
      */
     public void setSupportedSingleSignOnModes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedSingleSignOnModes = value;
+        this.BackingStore.set("supportedSingleSignOnModes", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The password. It isn't returned in the responses.
-     */
-    private String password;
-    /**
-     * The username.
-     */
-    private String username;
-    /**
      * Instantiates a new BasicAuthentication and sets the default values.
      */
     public BasicAuthentication() {
@@ -50,7 +42,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.BackingStore.get("password");
     }
     /**
      * Gets the username property value. The username.
@@ -58,7 +50,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     @jakarta.annotation.Nullable
     public String getUsername() {
-        return this.username;
+        return this.BackingStore.get("username");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.BackingStore.set("password", value);
     }
     /**
      * Sets the username property value. The username.
      * @param value Value to set for the username property.
      */
     public void setUsername(@jakarta.annotation.Nullable final String value) {
-        this.username = value;
+        this.BackingStore.set("username", value);
     }
 }

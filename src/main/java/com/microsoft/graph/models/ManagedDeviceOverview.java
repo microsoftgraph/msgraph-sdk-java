@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
-     * Distribution of Exchange Access State in Intune
-     */
-    private DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
-    /**
-     * Device operating system summary.
-     */
-    private DeviceOperatingSystemSummary deviceOperatingSystemSummary;
-    /**
-     * The number of devices enrolled in both MDM and EAS
-     */
-    private Integer dualEnrolledDeviceCount;
-    /**
-     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
-     */
-    private Integer enrolledDeviceCount;
-    /**
-     * The number of devices enrolled in MDM
-     */
-    private Integer mdmEnrolledCount;
-    /**
      * Instantiates a new ManagedDeviceOverview and sets the default values.
      */
     public ManagedDeviceOverview() {
@@ -53,7 +33,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
-        return this.deviceExchangeAccessStateSummary;
+        return this.BackingStore.get("deviceExchangeAccessStateSummary");
     }
     /**
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
@@ -61,7 +41,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
-        return this.deviceOperatingSystemSummary;
+        return this.BackingStore.get("deviceOperatingSystemSummary");
     }
     /**
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
@@ -69,7 +49,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
-        return this.dualEnrolledDeviceCount;
+        return this.BackingStore.get("dualEnrolledDeviceCount");
     }
     /**
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
@@ -77,7 +57,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
-        return this.enrolledDeviceCount;
+        return this.BackingStore.get("enrolledDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +79,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMdmEnrolledCount() {
-        return this.mdmEnrolledCount;
+        return this.BackingStore.get("mdmEnrolledCount");
     }
     /**
      * Serializes information the current object
@@ -119,34 +99,34 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceExchangeAccessStateSummary property.
      */
     public void setDeviceExchangeAccessStateSummary(@jakarta.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
-        this.deviceExchangeAccessStateSummary = value;
+        this.BackingStore.set("deviceExchangeAccessStateSummary", value);
     }
     /**
      * Sets the deviceOperatingSystemSummary property value. Device operating system summary.
      * @param value Value to set for the deviceOperatingSystemSummary property.
      */
     public void setDeviceOperatingSystemSummary(@jakarta.annotation.Nullable final DeviceOperatingSystemSummary value) {
-        this.deviceOperatingSystemSummary = value;
+        this.BackingStore.set("deviceOperatingSystemSummary", value);
     }
     /**
      * Sets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
      * @param value Value to set for the dualEnrolledDeviceCount property.
      */
     public void setDualEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.dualEnrolledDeviceCount = value;
+        this.BackingStore.set("dualEnrolledDeviceCount", value);
     }
     /**
      * Sets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      * @param value Value to set for the enrolledDeviceCount property.
      */
     public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.enrolledDeviceCount = value;
+        this.BackingStore.set("enrolledDeviceCount", value);
     }
     /**
      * Sets the mdmEnrolledCount property value. The number of devices enrolled in MDM
      * @param value Value to set for the mdmEnrolledCount property.
      */
     public void setMdmEnrolledCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mdmEnrolledCount = value;
+        this.BackingStore.set("mdmEnrolledCount", value);
     }
 }

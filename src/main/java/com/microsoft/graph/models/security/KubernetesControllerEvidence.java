@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesControllerEvidence extends AlertEvidence implements Parsable {
     /**
-     * The labels for the Kubernetes pod.
-     */
-    private Dictionary labels;
-    /**
-     * The controller name.
-     */
-    private String name;
-    /**
-     * The service account namespace.
-     */
-    private KubernetesNamespaceEvidence namespace;
-    /**
-     * The controller type.
-     */
-    private String type;
-    /**
      * Instantiates a new KubernetesControllerEvidence and sets the default values.
      */
     public KubernetesControllerEvidence() {
@@ -60,7 +44,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
-        return this.labels;
+        return this.BackingStore.get("labels");
     }
     /**
      * Gets the name property value. The controller name.
@@ -68,7 +52,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the namespace property value. The service account namespace.
@@ -76,7 +60,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
-        return this.namespace;
+        return this.BackingStore.get("namespace");
     }
     /**
      * Gets the type property value. The controller type.
@@ -84,7 +68,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
-        this.labels = value;
+        this.BackingStore.set("labels", value);
     }
     /**
      * Sets the name property value. The controller name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the namespace property value. The service account namespace.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
-        this.namespace = value;
+        this.BackingStore.set("namespace", value);
     }
     /**
      * Sets the type property value. The controller type.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

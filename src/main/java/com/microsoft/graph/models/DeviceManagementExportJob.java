@@ -13,46 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExportJob extends Entity implements Parsable {
     /**
-     * Time that the exported report expires
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * Filters applied on the report
-     */
-    private String filter;
-    /**
-     * Possible values for the file format of a report
-     */
-    private DeviceManagementReportFileFormat format;
-    /**
-     * Configures how the requested export job is localized
-     */
-    private DeviceManagementExportJobLocalizationType localizationType;
-    /**
-     * Name of the report
-     */
-    private String reportName;
-    /**
-     * Time that the exported report was requested
-     */
-    private OffsetDateTime requestDateTime;
-    /**
-     * Columns selected from the report
-     */
-    private java.util.List<String> select;
-    /**
-     * A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
-     */
-    private String snapshotId;
-    /**
-     * Possible statuses associated with a generated report
-     */
-    private DeviceManagementReportStatus status;
-    /**
-     * Temporary location of the exported report
-     */
-    private String url;
-    /**
      * Instantiates a new DeviceManagementExportJob and sets the default values.
      */
     public DeviceManagementExportJob() {
@@ -74,7 +34,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +61,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
-        return this.filter;
+        return this.BackingStore.get("filter");
     }
     /**
      * Gets the format property value. Possible values for the file format of a report
@@ -109,7 +69,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportFileFormat getFormat() {
-        return this.format;
+        return this.BackingStore.get("format");
     }
     /**
      * Gets the localizationType property value. Configures how the requested export job is localized
@@ -117,7 +77,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJobLocalizationType getLocalizationType() {
-        return this.localizationType;
+        return this.BackingStore.get("localizationType");
     }
     /**
      * Gets the reportName property value. Name of the report
@@ -125,7 +85,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getReportName() {
-        return this.reportName;
+        return this.BackingStore.get("reportName");
     }
     /**
      * Gets the requestDateTime property value. Time that the exported report was requested
@@ -133,7 +93,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
-        return this.requestDateTime;
+        return this.BackingStore.get("requestDateTime");
     }
     /**
      * Gets the select property value. Columns selected from the report
@@ -141,7 +101,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
-        return this.select;
+        return this.BackingStore.get("select");
     }
     /**
      * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
@@ -149,7 +109,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSnapshotId() {
-        return this.snapshotId;
+        return this.BackingStore.get("snapshotId");
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report
@@ -157,7 +117,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the url property value. Temporary location of the exported report
@@ -165,7 +125,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -190,69 +150,69 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the filter property value. Filters applied on the report
      * @param value Value to set for the filter property.
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
-        this.filter = value;
+        this.BackingStore.set("filter", value);
     }
     /**
      * Sets the format property value. Possible values for the file format of a report
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementReportFileFormat value) {
-        this.format = value;
+        this.BackingStore.set("format", value);
     }
     /**
      * Sets the localizationType property value. Configures how the requested export job is localized
      * @param value Value to set for the localizationType property.
      */
     public void setLocalizationType(@jakarta.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
-        this.localizationType = value;
+        this.BackingStore.set("localizationType", value);
     }
     /**
      * Sets the reportName property value. Name of the report
      * @param value Value to set for the reportName property.
      */
     public void setReportName(@jakarta.annotation.Nullable final String value) {
-        this.reportName = value;
+        this.BackingStore.set("reportName", value);
     }
     /**
      * Sets the requestDateTime property value. Time that the exported report was requested
      * @param value Value to set for the requestDateTime property.
      */
     public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestDateTime = value;
+        this.BackingStore.set("requestDateTime", value);
     }
     /**
      * Sets the select property value. Columns selected from the report
      * @param value Value to set for the select property.
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.select = value;
+        this.BackingStore.set("select", value);
     }
     /**
      * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
      * @param value Value to set for the snapshotId property.
      */
     public void setSnapshotId(@jakarta.annotation.Nullable final String value) {
-        this.snapshotId = value;
+        this.BackingStore.set("snapshotId", value);
     }
     /**
      * Sets the status property value. Possible statuses associated with a generated report
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementReportStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the url property value. Temporary location of the exported report
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

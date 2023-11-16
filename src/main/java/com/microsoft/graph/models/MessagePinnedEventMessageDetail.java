@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessagePinnedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Date and time when the event occurred.
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
      * Instantiates a new MessagePinnedEventMessageDetail and sets the default values.
      */
     public MessagePinnedEventMessageDetail() {
@@ -40,7 +32,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.BackingStore.get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -59,7 +51,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.BackingStore.set("eventDateTime", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TimeOff> value;
-    /**
      * Instantiates a new TimeOffCollectionResponse and sets the default values.
      */
     public TimeOffCollectionResponse() {
@@ -44,7 +40,7 @@ public class TimeOffCollectionResponse extends BaseCollectionPaginationCountResp
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeOff> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TimeOffCollectionResponse extends BaseCollectionPaginationCountResp
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TimeOff> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

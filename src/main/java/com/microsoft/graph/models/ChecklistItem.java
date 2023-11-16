@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChecklistItem extends Entity implements Parsable {
     /**
-     * The date and time when the checklistItem was finished.
-     */
-    private OffsetDateTime checkedDateTime;
-    /**
-     * The date and time when the checklistItem was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Field indicating the title of checklistItem.
-     */
-    private String displayName;
-    /**
-     * State indicating whether the item is checked off or not.
-     */
-    private Boolean isChecked;
-    /**
      * Instantiates a new ChecklistItem and sets the default values.
      */
     public ChecklistItem() {
@@ -47,7 +31,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCheckedDateTime() {
-        return this.checkedDateTime;
+        return this.BackingStore.get("checkedDateTime");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the checklistItem was created.
@@ -55,7 +39,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. Field indicating the title of checklistItem.
@@ -63,7 +47,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +68,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsChecked() {
-        return this.isChecked;
+        return this.BackingStore.get("isChecked");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param value Value to set for the checkedDateTime property.
      */
     public void setCheckedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.checkedDateTime = value;
+        this.BackingStore.set("checkedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the checklistItem was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. Field indicating the title of checklistItem.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isChecked property value. State indicating whether the item is checked off or not.
      * @param value Value to set for the isChecked property.
      */
     public void setIsChecked(@jakarta.annotation.Nullable final Boolean value) {
-        this.isChecked = value;
+        this.BackingStore.set("isChecked", value);
     }
 }

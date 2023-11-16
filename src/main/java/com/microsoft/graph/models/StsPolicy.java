@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StsPolicy extends PolicyBase implements Parsable {
     /**
-     * The appliesTo property
-     */
-    private java.util.List<DirectoryObject> appliesTo;
-    /**
-     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
-     */
-    private java.util.List<String> definition;
-    /**
-     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
-     */
-    private Boolean isOrganizationDefault;
-    /**
      * Instantiates a new StsPolicy and sets the default values.
      */
     public StsPolicy() {
@@ -54,7 +42,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this.appliesTo;
+        return this.BackingStore.get("appliesTo");
     }
     /**
      * Gets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
@@ -62,7 +50,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefinition() {
-        return this.definition;
+        return this.BackingStore.get("definition");
     }
     /**
      * The deserialization information for the current model
@@ -82,7 +70,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
-        return this.isOrganizationDefault;
+        return this.BackingStore.get("isOrganizationDefault");
     }
     /**
      * Serializes information the current object
@@ -100,20 +88,20 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.appliesTo = value;
+        this.BackingStore.set("appliesTo", value);
     }
     /**
      * Sets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.definition = value;
+        this.BackingStore.set("definition", value);
     }
     /**
      * Sets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
      * @param value Value to set for the isOrganizationDefault property.
      */
     public void setIsOrganizationDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOrganizationDefault = value;
+        this.BackingStore.set("isOrganizationDefault", value);
     }
 }

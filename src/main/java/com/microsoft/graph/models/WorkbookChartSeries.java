@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartSeries extends Entity implements Parsable {
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
-     */
-    private WorkbookChartSeriesFormat format;
-    /**
-     * Represents the name of a series in a chart.
-     */
-    private String name;
-    /**
-     * Represents a collection of all points in the series. Read-only.
-     */
-    private java.util.List<WorkbookChartPoint> points;
-    /**
      * Instantiates a new WorkbookChartSeries and sets the default values.
      */
     public WorkbookChartSeries() {
@@ -54,7 +42,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookChartSeriesFormat getFormat() {
-        return this.format;
+        return this.BackingStore.get("format");
     }
     /**
      * Gets the name property value. Represents the name of a series in a chart.
@@ -62,7 +50,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the points property value. Represents a collection of all points in the series. Read-only.
@@ -70,7 +58,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookChartPoint> getPoints() {
-        return this.points;
+        return this.BackingStore.get("points");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartSeriesFormat value) {
-        this.format = value;
+        this.BackingStore.set("format", value);
     }
     /**
      * Sets the name property value. Represents the name of a series in a chart.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the points property value. Represents a collection of all points in the series. Read-only.
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final java.util.List<WorkbookChartPoint> value) {
-        this.points = value;
+        this.BackingStore.set("points", value);
     }
 }

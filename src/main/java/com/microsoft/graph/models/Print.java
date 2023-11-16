@@ -4,51 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Print implements AdditionalDataHolder, Parsable {
+public class Print implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The list of available print connectors.
-     */
-    private java.util.List<PrintConnector> connectors;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The list of print long running operations.
-     */
-    private java.util.List<PrintOperation> operations;
-    /**
-     * The list of printers registered in the tenant.
-     */
-    private java.util.List<Printer> printers;
-    /**
-     * The list of available Universal Print service endpoints.
-     */
-    private java.util.List<PrintService> services;
-    /**
-     * Tenant-wide settings for the Universal Print service.
-     */
-    private PrintSettings settings;
-    /**
-     * The list of printer shares registered in the tenant.
-     */
-    private java.util.List<PrinterShare> shares;
-    /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
-     */
-    private java.util.List<PrintTaskDefinition> taskDefinitions;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Print and sets the default values.
      */
     public Print() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +39,20 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the connectors property value. The list of available print connectors.
@@ -75,7 +60,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
-        return this.connectors;
+        return this.BackingStore.get("connectors");
     }
     /**
      * The deserialization information for the current model
@@ -100,7 +85,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the operations property value. The list of print long running operations.
@@ -108,7 +93,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the printers property value. The list of printers registered in the tenant.
@@ -116,7 +101,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Printer> getPrinters() {
-        return this.printers;
+        return this.BackingStore.get("printers");
     }
     /**
      * Gets the services property value. The list of available Universal Print service endpoints.
@@ -124,7 +109,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintService> getServices() {
-        return this.services;
+        return this.BackingStore.get("services");
     }
     /**
      * Gets the settings property value. Tenant-wide settings for the Universal Print service.
@@ -132,7 +117,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintSettings getSettings() {
-        return this.settings;
+        return this.BackingStore.get("settings");
     }
     /**
      * Gets the shares property value. The list of printer shares registered in the tenant.
@@ -140,7 +125,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
-        return this.shares;
+        return this.BackingStore.get("shares");
     }
     /**
      * Gets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
@@ -148,7 +133,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskDefinition> getTaskDefinitions() {
-        return this.taskDefinitions;
+        return this.BackingStore.get("taskDefinitions");
     }
     /**
      * Serializes information the current object
@@ -171,62 +156,70 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the connectors property value. The list of available print connectors.
      * @param value Value to set for the connectors property.
      */
     public void setConnectors(@jakarta.annotation.Nullable final java.util.List<PrintConnector> value) {
-        this.connectors = value;
+        this.BackingStore.set("connectors", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the operations property value. The list of print long running operations.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<PrintOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the printers property value. The list of printers registered in the tenant.
      * @param value Value to set for the printers property.
      */
     public void setPrinters(@jakarta.annotation.Nullable final java.util.List<Printer> value) {
-        this.printers = value;
+        this.BackingStore.set("printers", value);
     }
     /**
      * Sets the services property value. The list of available Universal Print service endpoints.
      * @param value Value to set for the services property.
      */
     public void setServices(@jakarta.annotation.Nullable final java.util.List<PrintService> value) {
-        this.services = value;
+        this.BackingStore.set("services", value);
     }
     /**
      * Sets the settings property value. Tenant-wide settings for the Universal Print service.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final PrintSettings value) {
-        this.settings = value;
+        this.BackingStore.set("settings", value);
     }
     /**
      * Sets the shares property value. The list of printer shares registered in the tenant.
      * @param value Value to set for the shares property.
      */
     public void setShares(@jakarta.annotation.Nullable final java.util.List<PrinterShare> value) {
-        this.shares = value;
+        this.BackingStore.set("shares", value);
     }
     /**
      * Sets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @param value Value to set for the taskDefinitions property.
      */
     public void setTaskDefinitions(@jakarta.annotation.Nullable final java.util.List<PrintTaskDefinition> value) {
-        this.taskDefinitions = value;
+        this.BackingStore.set("taskDefinitions", value);
     }
 }

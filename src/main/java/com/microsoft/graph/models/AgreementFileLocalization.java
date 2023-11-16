@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /**
-     * Read-only. Customized versions of the terms of use agreement in the Microsoft Entra tenant.
-     */
-    private java.util.List<AgreementFileVersion> versions;
-    /**
      * Instantiates a new AgreementFileLocalization and sets the default values.
      */
     public AgreementFileLocalization() {
@@ -44,7 +40,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileVersion> getVersions() {
-        return this.versions;
+        return this.BackingStore.get("versions");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<AgreementFileVersion> value) {
-        this.versions = value;
+        this.BackingStore.set("versions", value);
     }
 }

@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostComponent extends Artifact implements Parsable {
     /**
-     * The type of component that was detected (for example, Operating System, Framework, Remote Access, or Server).
-     */
-    private String category;
-    /**
-     * The first date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The host property
-     */
-    private Host host;
-    /**
-     * The most recent date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * A name running on the artifact, for example, Microsoft IIS.
-     */
-    private String name;
-    /**
-     * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
-     */
-    private String version;
-    /**
      * Instantiates a new HostComponent and sets the default values.
      */
     public HostComponent() {
@@ -56,7 +32,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * The deserialization information for the current model
@@ -79,7 +55,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the host property value. The host property
@@ -87,7 +63,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
-        return this.host;
+        return this.BackingStore.get("host");
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
@@ -95,7 +71,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the name property value. A name running on the artifact, for example, Microsoft IIS.
@@ -103,7 +79,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
@@ -111,7 +87,7 @@ public class HostComponent extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class HostComponent extends Artifact implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the host property value. The host property
      * @param value Value to set for the host property.
      */
     public void setHost(@jakarta.annotation.Nullable final Host value) {
-        this.host = value;
+        this.BackingStore.set("host", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the name property value. A name running on the artifact, for example, Microsoft IIS.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Whether or not to use device licensing.
-     */
-    private Boolean useDeviceLicensing;
-    /**
-     * The VPN Configuration Id to apply for this app.
-     */
-    private String vpnConfigurationId;
-    /**
      * Instantiates a new IosVppAppAssignmentSettings and sets the default values.
      */
     public IosVppAppAssignmentSettings() {
@@ -53,7 +45,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceLicensing() {
-        return this.useDeviceLicensing;
+        return this.BackingStore.get("useDeviceLicensing");
     }
     /**
      * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
@@ -61,7 +53,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @jakarta.annotation.Nullable
     public String getVpnConfigurationId() {
-        return this.vpnConfigurationId;
+        return this.BackingStore.get("vpnConfigurationId");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the useDeviceLicensing property.
      */
     public void setUseDeviceLicensing(@jakarta.annotation.Nullable final Boolean value) {
-        this.useDeviceLicensing = value;
+        this.BackingStore.set("useDeviceLicensing", value);
     }
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
      * @param value Value to set for the vpnConfigurationId property.
      */
     public void setVpnConfigurationId(@jakarta.annotation.Nullable final String value) {
-        this.vpnConfigurationId = value;
+        this.BackingStore.set("vpnConfigurationId", value);
     }
 }

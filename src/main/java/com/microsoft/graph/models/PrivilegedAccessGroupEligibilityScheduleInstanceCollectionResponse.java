@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrivilegedAccessGroupEligibilityScheduleInstance> value;
-    /**
      * Instantiates a new PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse and sets the default values.
      */
     public PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse() {
@@ -44,7 +40,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse 
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupEligibilityScheduleInstance> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse 
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrivilegedAccessGroupEligibilityScheduleInstance> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

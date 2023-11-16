@@ -10,38 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable {
     /**
-     * The assignedTo property
-     */
-    private ScheduleChangeRequestActor assignedTo;
-    /**
-     * The managerActionDateTime property
-     */
-    private OffsetDateTime managerActionDateTime;
-    /**
-     * The managerActionMessage property
-     */
-    private String managerActionMessage;
-    /**
-     * The managerUserId property
-     */
-    private String managerUserId;
-    /**
-     * The senderDateTime property
-     */
-    private OffsetDateTime senderDateTime;
-    /**
-     * The senderMessage property
-     */
-    private String senderMessage;
-    /**
-     * The senderUserId property
-     */
-    private String senderUserId;
-    /**
-     * The state property
-     */
-    private ScheduleChangeState state;
-    /**
      * Instantiates a new ScheduleChangeRequest and sets the default values.
      */
     public ScheduleChangeRequest() {
@@ -74,7 +42,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public ScheduleChangeRequestActor getAssignedTo() {
-        return this.assignedTo;
+        return this.BackingStore.get("assignedTo");
     }
     /**
      * The deserialization information for the current model
@@ -99,7 +67,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getManagerActionDateTime() {
-        return this.managerActionDateTime;
+        return this.BackingStore.get("managerActionDateTime");
     }
     /**
      * Gets the managerActionMessage property value. The managerActionMessage property
@@ -107,7 +75,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getManagerActionMessage() {
-        return this.managerActionMessage;
+        return this.BackingStore.get("managerActionMessage");
     }
     /**
      * Gets the managerUserId property value. The managerUserId property
@@ -115,7 +83,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getManagerUserId() {
-        return this.managerUserId;
+        return this.BackingStore.get("managerUserId");
     }
     /**
      * Gets the senderDateTime property value. The senderDateTime property
@@ -123,7 +91,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSenderDateTime() {
-        return this.senderDateTime;
+        return this.BackingStore.get("senderDateTime");
     }
     /**
      * Gets the senderMessage property value. The senderMessage property
@@ -131,7 +99,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getSenderMessage() {
-        return this.senderMessage;
+        return this.BackingStore.get("senderMessage");
     }
     /**
      * Gets the senderUserId property value. The senderUserId property
@@ -139,7 +107,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getSenderUserId() {
-        return this.senderUserId;
+        return this.BackingStore.get("senderUserId");
     }
     /**
      * Gets the state property value. The state property
@@ -147,7 +115,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     @jakarta.annotation.Nullable
     public ScheduleChangeState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -166,55 +134,55 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestActor value) {
-        this.assignedTo = value;
+        this.BackingStore.set("assignedTo", value);
     }
     /**
      * Sets the managerActionDateTime property value. The managerActionDateTime property
      * @param value Value to set for the managerActionDateTime property.
      */
     public void setManagerActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.managerActionDateTime = value;
+        this.BackingStore.set("managerActionDateTime", value);
     }
     /**
      * Sets the managerActionMessage property value. The managerActionMessage property
      * @param value Value to set for the managerActionMessage property.
      */
     public void setManagerActionMessage(@jakarta.annotation.Nullable final String value) {
-        this.managerActionMessage = value;
+        this.BackingStore.set("managerActionMessage", value);
     }
     /**
      * Sets the managerUserId property value. The managerUserId property
      * @param value Value to set for the managerUserId property.
      */
     public void setManagerUserId(@jakarta.annotation.Nullable final String value) {
-        this.managerUserId = value;
+        this.BackingStore.set("managerUserId", value);
     }
     /**
      * Sets the senderDateTime property value. The senderDateTime property
      * @param value Value to set for the senderDateTime property.
      */
     public void setSenderDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.senderDateTime = value;
+        this.BackingStore.set("senderDateTime", value);
     }
     /**
      * Sets the senderMessage property value. The senderMessage property
      * @param value Value to set for the senderMessage property.
      */
     public void setSenderMessage(@jakarta.annotation.Nullable final String value) {
-        this.senderMessage = value;
+        this.BackingStore.set("senderMessage", value);
     }
     /**
      * Sets the senderUserId property value. The senderUserId property
      * @param value Value to set for the senderUserId property.
      */
     public void setSenderUserId(@jakarta.annotation.Nullable final String value) {
-        this.senderUserId = value;
+        this.BackingStore.set("senderUserId", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ScheduleChangeState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
 }

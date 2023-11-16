@@ -10,50 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotification extends Entity implements Parsable {
     /**
-     * Identity of the user who created the notification.
-     */
-    private EmailIdentity createdBy;
-    /**
-     * Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description of the notification as defined by the user.
-     */
-    private String description;
-    /**
-     * The details property
-     */
-    private java.util.List<EndUserNotificationDetail> details;
-    /**
-     * Name of the notification as defined by the user.
-     */
-    private String displayName;
-    /**
-     * Identity of the user who last modified the notification.
-     */
-    private EmailIdentity lastModifiedBy;
-    /**
-     * Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
-     */
-    private EndUserNotificationType notificationType;
-    /**
-     * The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
-     */
-    private SimulationContentSource source;
-    /**
-     * The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     */
-    private SimulationContentStatus status;
-    /**
-     * Supported locales for endUserNotification content.
-     */
-    private java.util.List<String> supportedLocales;
-    /**
      * Instantiates a new EndUserNotification and sets the default values.
      */
     public EndUserNotification() {
@@ -75,7 +31,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -83,7 +39,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Description of the notification as defined by the user.
@@ -91,7 +47,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the details property value. The details property
@@ -99,7 +55,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EndUserNotificationDetail> getDetails() {
-        return this.details;
+        return this.BackingStore.get("details");
     }
     /**
      * Gets the displayName property value. Name of the notification as defined by the user.
@@ -107,7 +63,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -135,7 +91,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -143,7 +99,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
@@ -151,7 +107,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationType getNotificationType() {
-        return this.notificationType;
+        return this.BackingStore.get("notificationType");
     }
     /**
      * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
@@ -159,7 +115,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
@@ -167,7 +123,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the supportedLocales property value. Supported locales for endUserNotification content.
@@ -175,7 +131,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {
-        return this.supportedLocales;
+        return this.BackingStore.get("supportedLocales");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class EndUserNotification extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time when the notification was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description of the notification as defined by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the details property value. The details property
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<EndUserNotificationDetail> value) {
-        this.details = value;
+        this.BackingStore.set("details", value);
     }
     /**
      * Sets the displayName property value. Name of the notification as defined by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who last modified the notification.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the notification was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @param value Value to set for the notificationType property.
      */
     public void setNotificationType(@jakarta.annotation.Nullable final EndUserNotificationType value) {
-        this.notificationType = value;
+        this.BackingStore.set("notificationType", value);
     }
     /**
      * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
     /**
      * Sets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the supportedLocales property value. Supported locales for endUserNotification content.
      * @param value Value to set for the supportedLocales property.
      */
     public void setSupportedLocales(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedLocales = value;
+        this.BackingStore.set("supportedLocales", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The list of certificates uploaded for this API connector.
-     */
-    private java.util.List<Pkcs12CertificateInformation> certificateList;
-    /**
      * Instantiates a new ClientCertificateAuthentication and sets the default values.
      */
     public ClientCertificateAuthentication() {
@@ -35,7 +31,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      */
     @jakarta.annotation.Nullable
     public java.util.List<Pkcs12CertificateInformation> getCertificateList() {
-        return this.certificateList;
+        return this.BackingStore.get("certificateList");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * @param value Value to set for the certificateList property.
      */
     public void setCertificateList(@jakarta.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
-        this.certificateList = value;
+        this.BackingStore.set("certificateList", value);
     }
 }

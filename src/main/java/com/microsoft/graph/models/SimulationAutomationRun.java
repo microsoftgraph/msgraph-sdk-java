@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationAutomationRun extends Entity implements Parsable {
     /**
-     * Date and time when the run ends in an attack simulation automation.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
-     */
-    private String simulationId;
-    /**
-     * Date and time when the run starts in an attack simulation automation.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
-     */
-    private SimulationAutomationRunStatus status;
-    /**
      * Instantiates a new SimulationAutomationRun and sets the default values.
      */
     public SimulationAutomationRun() {
@@ -47,7 +31,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +52,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSimulationId() {
-        return this.simulationId;
+        return this.BackingStore.get("simulationId");
     }
     /**
      * Gets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
@@ -76,7 +60,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
@@ -84,7 +68,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationAutomationRunStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      * @param value Value to set for the simulationId property.
      */
     public void setSimulationId(@jakarta.annotation.Nullable final String value) {
-        this.simulationId = value;
+        this.BackingStore.set("simulationId", value);
     }
     /**
      * Sets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationAutomationRunStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

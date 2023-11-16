@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
     /**
-     * The userId property
-     */
-    private String userId;
-    /**
      * Instantiates a new AadUserConversationMemberResult and sets the default values.
      */
     public AadUserConversationMemberResult() {
@@ -45,7 +41,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

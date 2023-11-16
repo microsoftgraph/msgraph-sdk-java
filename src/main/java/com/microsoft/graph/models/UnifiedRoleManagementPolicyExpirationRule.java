@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
-     */
-    private Boolean isExpirationRequired;
-    /**
-     * The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
-     */
-    private PeriodAndDuration maximumDuration;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyExpirationRule() {
@@ -51,7 +43,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpirationRequired() {
-        return this.isExpirationRequired;
+        return this.BackingStore.get("isExpirationRequired");
     }
     /**
      * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
@@ -59,7 +51,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMaximumDuration() {
-        return this.maximumDuration;
+        return this.BackingStore.get("maximumDuration");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * @param value Value to set for the isExpirationRequired property.
      */
     public void setIsExpirationRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExpirationRequired = value;
+        this.BackingStore.set("isExpirationRequired", value);
     }
     /**
      * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      * @param value Value to set for the maximumDuration property.
      */
     public void setMaximumDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("maximumDuration", value);
     }
 }

@@ -11,38 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Session extends Entity implements Parsable {
     /**
-     * Endpoint that answered the session.
-     */
-    private Endpoint callee;
-    /**
-     * Endpoint that initiated the session.
-     */
-    private Endpoint caller;
-    /**
-     * UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Failure information associated with the session if the session failed.
-     */
-    private FailureInfo failureInfo;
-    /**
-     * Specifies whether the session is a test.
-     */
-    private Boolean isTest;
-    /**
-     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     */
-    private java.util.List<Modality> modalities;
-    /**
-     * The list of segments involved in the session. Read-only. Nullable.
-     */
-    private java.util.List<Segment> segments;
-    /**
-     * UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime startDateTime;
-    /**
      * Instantiates a new Session and sets the default values.
      */
     public Session() {
@@ -64,7 +32,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Endpoint getCallee() {
-        return this.callee;
+        return this.BackingStore.get("callee");
     }
     /**
      * Gets the caller property value. Endpoint that initiated the session.
@@ -72,7 +40,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Endpoint getCaller() {
-        return this.caller;
+        return this.BackingStore.get("caller");
     }
     /**
      * Gets the endDateTime property value. UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -80,7 +48,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * Gets the failureInfo property value. Failure information associated with the session if the session failed.
@@ -88,7 +56,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FailureInfo getFailureInfo() {
-        return this.failureInfo;
+        return this.BackingStore.get("failureInfo");
     }
     /**
      * The deserialization information for the current model
@@ -113,7 +81,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTest() {
-        return this.isTest;
+        return this.BackingStore.get("isTest");
     }
     /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
@@ -121,7 +89,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getModalities() {
-        return this.modalities;
+        return this.BackingStore.get("modalities");
     }
     /**
      * Gets the segments property value. The list of segments involved in the session. Read-only. Nullable.
@@ -129,7 +97,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Segment> getSegments() {
-        return this.segments;
+        return this.BackingStore.get("segments");
     }
     /**
      * Gets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -137,7 +105,7 @@ public class Session extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -160,55 +128,55 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the callee property.
      */
     public void setCallee(@jakarta.annotation.Nullable final Endpoint value) {
-        this.callee = value;
+        this.BackingStore.set("callee", value);
     }
     /**
      * Sets the caller property value. Endpoint that initiated the session.
      * @param value Value to set for the caller property.
      */
     public void setCaller(@jakarta.annotation.Nullable final Endpoint value) {
-        this.caller = value;
+        this.BackingStore.set("caller", value);
     }
     /**
      * Sets the endDateTime property value. UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the failureInfo property value. Failure information associated with the session if the session failed.
      * @param value Value to set for the failureInfo property.
      */
     public void setFailureInfo(@jakarta.annotation.Nullable final FailureInfo value) {
-        this.failureInfo = value;
+        this.BackingStore.set("failureInfo", value);
     }
     /**
      * Sets the isTest property value. Specifies whether the session is a test.
      * @param value Value to set for the isTest property.
      */
     public void setIsTest(@jakarta.annotation.Nullable final Boolean value) {
-        this.isTest = value;
+        this.BackingStore.set("isTest", value);
     }
     /**
      * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param value Value to set for the modalities property.
      */
     public void setModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
-        this.modalities = value;
+        this.BackingStore.set("modalities", value);
     }
     /**
      * Sets the segments property value. The list of segments involved in the session. Read-only. Nullable.
      * @param value Value to set for the segments property.
      */
     public void setSegments(@jakarta.annotation.Nullable final java.util.List<Segment> value) {
-        this.segments = value;
+        this.BackingStore.set("segments", value);
     }
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
 }

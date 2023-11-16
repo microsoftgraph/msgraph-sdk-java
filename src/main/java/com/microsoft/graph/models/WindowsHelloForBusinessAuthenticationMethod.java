@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The date and time that this Windows Hello for Business key was registered.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     */
-    private Device device;
-    /**
-     * The name of the device on which Windows Hello for Business is registered
-     */
-    private String displayName;
-    /**
-     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     */
-    private AuthenticationMethodKeyStrength keyStrength;
-    /**
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
      */
     public WindowsHelloForBusinessAuthenticationMethod() {
@@ -48,7 +32,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
@@ -56,7 +40,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
-        return this.device;
+        return this.BackingStore.get("device");
     }
     /**
      * Gets the displayName property value. The name of the device on which Windows Hello for Business is registered
@@ -64,7 +48,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +69,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodKeyStrength getKeyStrength() {
-        return this.keyStrength;
+        return this.BackingStore.get("keyStrength");
     }
     /**
      * Serializes information the current object
@@ -104,27 +88,27 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {
-        this.device = value;
+        this.BackingStore.set("device", value);
     }
     /**
      * Sets the displayName property value. The name of the device on which Windows Hello for Business is registered
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
      * @param value Value to set for the keyStrength property.
      */
     public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {
-        this.keyStrength = value;
+        this.BackingStore.set("keyStrength", value);
     }
 }

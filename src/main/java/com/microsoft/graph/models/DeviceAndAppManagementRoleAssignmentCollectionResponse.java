@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementRoleAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceAndAppManagementRoleAssignment> value;
-    /**
      * Instantiates a new DeviceAndAppManagementRoleAssignmentCollectionResponse and sets the default values.
      */
     public DeviceAndAppManagementRoleAssignmentCollectionResponse() {
@@ -44,7 +40,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse extends Base
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementRoleAssignment> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceAndAppManagementRoleAssignmentCollectionResponse extends Base
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TemporaryAccessPassAuthenticationMethod> value;
-    /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.
      */
     public TemporaryAccessPassAuthenticationMethodCollectionResponse() {
@@ -44,7 +40,7 @@ public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends B
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemporaryAccessPassAuthenticationMethod> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends B
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

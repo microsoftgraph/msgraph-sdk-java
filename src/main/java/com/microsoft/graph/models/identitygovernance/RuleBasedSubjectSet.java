@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     /**
-     * The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
-     */
-    private String rule;
-    /**
      * Instantiates a new RuleBasedSubjectSet and sets the default values.
      */
     public RuleBasedSubjectSet() {
@@ -46,7 +42,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRule() {
-        return this.rule;
+        return this.BackingStore.get("rule");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * @param value Value to set for the rule property.
      */
     public void setRule(@jakarta.annotation.Nullable final String value) {
-        this.rule = value;
+        this.BackingStore.set("rule", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesServiceAccountEvidence extends AlertEvidence implements Parsable {
     /**
-     * The service account name.
-     */
-    private String name;
-    /**
-     * The service account namespace.
-     */
-    private KubernetesNamespaceEvidence namespace;
-    /**
      * Instantiates a new KubernetesServiceAccountEvidence and sets the default values.
      */
     public KubernetesServiceAccountEvidence() {
@@ -50,7 +42,7 @@ public class KubernetesServiceAccountEvidence extends AlertEvidence implements P
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the namespace property value. The service account namespace.
@@ -58,7 +50,7 @@ public class KubernetesServiceAccountEvidence extends AlertEvidence implements P
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
-        return this.namespace;
+        return this.BackingStore.get("namespace");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class KubernetesServiceAccountEvidence extends AlertEvidence implements P
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the namespace property value. The service account namespace.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
-        this.namespace = value;
+        this.BackingStore.set("namespace", value);
     }
 }

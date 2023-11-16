@@ -9,102 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Call extends Entity implements Parsable {
     /**
-     * The audioRoutingGroups property
-     */
-    private java.util.List<AudioRoutingGroup> audioRoutingGroups;
-    /**
-     * The callback URL on which callbacks will be delivered. Must be https.
-     */
-    private String callbackUri;
-    /**
-     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     */
-    private String callChainId;
-    /**
-     * Contains the optional features for the call.
-     */
-    private CallOptions callOptions;
-    /**
-     * The routing information on how the call was retargeted. Read-only.
-     */
-    private java.util.List<CallRoute> callRoutes;
-    /**
-     * The chat information. Required information for joining a meeting.
-     */
-    private ChatInfo chatInfo;
-    /**
-     * The contentSharingSessions property
-     */
-    private java.util.List<ContentSharingSession> contentSharingSessions;
-    /**
-     * The direction of the call. The possible values are incoming or outgoing. Read-only.
-     */
-    private CallDirection direction;
-    /**
-     * Call context associated with an incoming call.
-     */
-    private IncomingContext incomingContext;
-    /**
-     * The media configuration. Required.
-     */
-    private MediaConfig mediaConfig;
-    /**
-     * Read-only. The call media state.
-     */
-    private CallMediaState mediaState;
-    /**
-     * The meeting information. Required information for meeting scenarios.
-     */
-    private MeetingInfo meetingInfo;
-    /**
-     * The myParticipantId property
-     */
-    private String myParticipantId;
-    /**
-     * The operations property
-     */
-    private java.util.List<CommsOperation> operations;
-    /**
-     * The participants property
-     */
-    private java.util.List<Participant> participants;
-    /**
-     * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     */
-    private java.util.List<Modality> requestedModalities;
-    /**
-     * The result information. For example, the result can hold termination reason. Read-only.
-     */
-    private ResultInfo resultInfo;
-    /**
-     * The originator of the call.
-     */
-    private ParticipantInfo source;
-    /**
-     * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
-     */
-    private CallState state;
-    /**
-     * The subject of the conversation.
-     */
-    private String subject;
-    /**
-     * The targets of the call. Required information for creating peer to peer call.
-     */
-    private java.util.List<InvitationParticipantInfo> targets;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The toneInfo property
-     */
-    private ToneInfo toneInfo;
-    /**
-     * The transcription information for the call. Read-only.
-     */
-    private CallTranscriptionInfo transcription;
-    /**
      * Instantiates a new Call and sets the default values.
      */
     public Call() {
@@ -126,7 +30,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getAudioRoutingGroups() {
-        return this.audioRoutingGroups;
+        return this.BackingStore.get("audioRoutingGroups");
     }
     /**
      * Gets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
@@ -134,7 +38,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
-        return this.callbackUri;
+        return this.BackingStore.get("callbackUri");
     }
     /**
      * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
@@ -142,7 +46,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallChainId() {
-        return this.callChainId;
+        return this.BackingStore.get("callChainId");
     }
     /**
      * Gets the callOptions property value. Contains the optional features for the call.
@@ -150,7 +54,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CallOptions getCallOptions() {
-        return this.callOptions;
+        return this.BackingStore.get("callOptions");
     }
     /**
      * Gets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
@@ -158,7 +62,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CallRoute> getCallRoutes() {
-        return this.callRoutes;
+        return this.BackingStore.get("callRoutes");
     }
     /**
      * Gets the chatInfo property value. The chat information. Required information for joining a meeting.
@@ -166,7 +70,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
-        return this.chatInfo;
+        return this.BackingStore.get("chatInfo");
     }
     /**
      * Gets the contentSharingSessions property value. The contentSharingSessions property
@@ -174,7 +78,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentSharingSession> getContentSharingSessions() {
-        return this.contentSharingSessions;
+        return this.BackingStore.get("contentSharingSessions");
     }
     /**
      * Gets the direction property value. The direction of the call. The possible values are incoming or outgoing. Read-only.
@@ -182,7 +86,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CallDirection getDirection() {
-        return this.direction;
+        return this.BackingStore.get("direction");
     }
     /**
      * The deserialization information for the current model
@@ -223,7 +127,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IncomingContext getIncomingContext() {
-        return this.incomingContext;
+        return this.BackingStore.get("incomingContext");
     }
     /**
      * Gets the mediaConfig property value. The media configuration. Required.
@@ -231,7 +135,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
-        return this.mediaConfig;
+        return this.BackingStore.get("mediaConfig");
     }
     /**
      * Gets the mediaState property value. Read-only. The call media state.
@@ -239,7 +143,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CallMediaState getMediaState() {
-        return this.mediaState;
+        return this.BackingStore.get("mediaState");
     }
     /**
      * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
@@ -247,7 +151,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MeetingInfo getMeetingInfo() {
-        return this.meetingInfo;
+        return this.BackingStore.get("meetingInfo");
     }
     /**
      * Gets the myParticipantId property value. The myParticipantId property
@@ -255,7 +159,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMyParticipantId() {
-        return this.myParticipantId;
+        return this.BackingStore.get("myParticipantId");
     }
     /**
      * Gets the operations property value. The operations property
@@ -263,7 +167,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommsOperation> getOperations() {
-        return this.operations;
+        return this.BackingStore.get("operations");
     }
     /**
      * Gets the participants property value. The participants property
@@ -271,7 +175,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
-        return this.participants;
+        return this.BackingStore.get("participants");
     }
     /**
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
@@ -279,7 +183,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getRequestedModalities() {
-        return this.requestedModalities;
+        return this.BackingStore.get("requestedModalities");
     }
     /**
      * Gets the resultInfo property value. The result information. For example, the result can hold termination reason. Read-only.
@@ -287,7 +191,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
-        return this.resultInfo;
+        return this.BackingStore.get("resultInfo");
     }
     /**
      * Gets the source property value. The originator of the call.
@@ -295,7 +199,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
@@ -303,7 +207,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CallState getState() {
-        return this.state;
+        return this.BackingStore.get("state");
     }
     /**
      * Gets the subject property value. The subject of the conversation.
@@ -311,7 +215,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
@@ -319,7 +223,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
-        return this.targets;
+        return this.BackingStore.get("targets");
     }
     /**
      * Gets the tenantId property value. The tenantId property
@@ -327,7 +231,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the toneInfo property value. The toneInfo property
@@ -335,7 +239,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ToneInfo getToneInfo() {
-        return this.toneInfo;
+        return this.BackingStore.get("toneInfo");
     }
     /**
      * Gets the transcription property value. The transcription information for the call. Read-only.
@@ -343,7 +247,7 @@ public class Call extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CallTranscriptionInfo getTranscription() {
-        return this.transcription;
+        return this.BackingStore.get("transcription");
     }
     /**
      * Serializes information the current object
@@ -382,167 +286,167 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the audioRoutingGroups property.
      */
     public void setAudioRoutingGroups(@jakarta.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
-        this.audioRoutingGroups = value;
+        this.BackingStore.set("audioRoutingGroups", value);
     }
     /**
      * Sets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
      * @param value Value to set for the callbackUri property.
      */
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
-        this.callbackUri = value;
+        this.BackingStore.set("callbackUri", value);
     }
     /**
      * Sets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @param value Value to set for the callChainId property.
      */
     public void setCallChainId(@jakarta.annotation.Nullable final String value) {
-        this.callChainId = value;
+        this.BackingStore.set("callChainId", value);
     }
     /**
      * Sets the callOptions property value. Contains the optional features for the call.
      * @param value Value to set for the callOptions property.
      */
     public void setCallOptions(@jakarta.annotation.Nullable final CallOptions value) {
-        this.callOptions = value;
+        this.BackingStore.set("callOptions", value);
     }
     /**
      * Sets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
      * @param value Value to set for the callRoutes property.
      */
     public void setCallRoutes(@jakarta.annotation.Nullable final java.util.List<CallRoute> value) {
-        this.callRoutes = value;
+        this.BackingStore.set("callRoutes", value);
     }
     /**
      * Sets the chatInfo property value. The chat information. Required information for joining a meeting.
      * @param value Value to set for the chatInfo property.
      */
     public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
-        this.chatInfo = value;
+        this.BackingStore.set("chatInfo", value);
     }
     /**
      * Sets the contentSharingSessions property value. The contentSharingSessions property
      * @param value Value to set for the contentSharingSessions property.
      */
     public void setContentSharingSessions(@jakarta.annotation.Nullable final java.util.List<ContentSharingSession> value) {
-        this.contentSharingSessions = value;
+        this.BackingStore.set("contentSharingSessions", value);
     }
     /**
      * Sets the direction property value. The direction of the call. The possible values are incoming or outgoing. Read-only.
      * @param value Value to set for the direction property.
      */
     public void setDirection(@jakarta.annotation.Nullable final CallDirection value) {
-        this.direction = value;
+        this.BackingStore.set("direction", value);
     }
     /**
      * Sets the incomingContext property value. Call context associated with an incoming call.
      * @param value Value to set for the incomingContext property.
      */
     public void setIncomingContext(@jakarta.annotation.Nullable final IncomingContext value) {
-        this.incomingContext = value;
+        this.BackingStore.set("incomingContext", value);
     }
     /**
      * Sets the mediaConfig property value. The media configuration. Required.
      * @param value Value to set for the mediaConfig property.
      */
     public void setMediaConfig(@jakarta.annotation.Nullable final MediaConfig value) {
-        this.mediaConfig = value;
+        this.BackingStore.set("mediaConfig", value);
     }
     /**
      * Sets the mediaState property value. Read-only. The call media state.
      * @param value Value to set for the mediaState property.
      */
     public void setMediaState(@jakarta.annotation.Nullable final CallMediaState value) {
-        this.mediaState = value;
+        this.BackingStore.set("mediaState", value);
     }
     /**
      * Sets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      * @param value Value to set for the meetingInfo property.
      */
     public void setMeetingInfo(@jakarta.annotation.Nullable final MeetingInfo value) {
-        this.meetingInfo = value;
+        this.BackingStore.set("meetingInfo", value);
     }
     /**
      * Sets the myParticipantId property value. The myParticipantId property
      * @param value Value to set for the myParticipantId property.
      */
     public void setMyParticipantId(@jakarta.annotation.Nullable final String value) {
-        this.myParticipantId = value;
+        this.BackingStore.set("myParticipantId", value);
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<CommsOperation> value) {
-        this.operations = value;
+        this.BackingStore.set("operations", value);
     }
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
-        this.participants = value;
+        this.BackingStore.set("participants", value);
     }
     /**
      * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @param value Value to set for the requestedModalities property.
      */
     public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
-        this.requestedModalities = value;
+        this.BackingStore.set("requestedModalities", value);
     }
     /**
      * Sets the resultInfo property value. The result information. For example, the result can hold termination reason. Read-only.
      * @param value Value to set for the resultInfo property.
      */
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
-        this.resultInfo = value;
+        this.BackingStore.set("resultInfo", value);
     }
     /**
      * Sets the source property value. The originator of the call.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final ParticipantInfo value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
     /**
      * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final CallState value) {
-        this.state = value;
+        this.BackingStore.set("state", value);
     }
     /**
      * Sets the subject property value. The subject of the conversation.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
-        this.targets = value;
+        this.BackingStore.set("targets", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the toneInfo property value. The toneInfo property
      * @param value Value to set for the toneInfo property.
      */
     public void setToneInfo(@jakarta.annotation.Nullable final ToneInfo value) {
-        this.toneInfo = value;
+        this.BackingStore.set("toneInfo", value);
     }
     /**
      * Sets the transcription property value. The transcription information for the call. Read-only.
      * @param value Value to set for the transcription property.
      */
     public void setTranscription(@jakarta.annotation.Nullable final CallTranscriptionInfo value) {
-        this.transcription = value;
+        this.BackingStore.set("transcription", value);
     }
 }

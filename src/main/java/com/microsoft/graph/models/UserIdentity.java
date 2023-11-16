@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserIdentity extends Identity implements Parsable {
     /**
-     * Indicates the client IP address used by user performing the activity (audit log only).
-     */
-    private String ipAddress;
-    /**
-     * The userPrincipalName attribute of the user.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new UserIdentity and sets the default values.
      */
     public UserIdentity() {
@@ -50,7 +42,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
-        return this.ipAddress;
+        return this.BackingStore.get("ipAddress");
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName attribute of the user.
@@ -58,7 +50,7 @@ public class UserIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class UserIdentity extends Identity implements Parsable {
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.ipAddress = value;
+        this.BackingStore.set("ipAddress", value);
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

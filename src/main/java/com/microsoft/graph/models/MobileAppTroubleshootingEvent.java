@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingEvent extends Entity implements Parsable {
     /**
-     * Indicates collection of App Log Upload Request.
-     */
-    private java.util.List<AppLogCollectionRequest> appLogCollectionRequests;
-    /**
      * Instantiates a new MobileAppTroubleshootingEvent and sets the default values.
      */
     public MobileAppTroubleshootingEvent() {
@@ -34,7 +30,7 @@ public class MobileAppTroubleshootingEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppLogCollectionRequest> getAppLogCollectionRequests() {
-        return this.appLogCollectionRequests;
+        return this.BackingStore.get("appLogCollectionRequests");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class MobileAppTroubleshootingEvent extends Entity implements Parsable {
      * @param value Value to set for the appLogCollectionRequests property.
      */
     public void setAppLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<AppLogCollectionRequest> value) {
-        this.appLogCollectionRequests = value;
+        this.BackingStore.set("appLogCollectionRequests", value);
     }
 }

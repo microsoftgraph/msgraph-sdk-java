@@ -11,74 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Incident extends Entity implements Parsable {
     /**
-     * The list of related alerts. Supports $expand.
-     */
-    private java.util.List<Alert> alerts;
-    /**
-     * Owner of the incident, or null if no owner is assigned. Free editable text.
-     */
-    private String assignedTo;
-    /**
-     * The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     */
-    private AlertClassification classification;
-    /**
-     * Array of comments created by the Security Operations (SecOps) team when the incident is managed.
-     */
-    private java.util.List<AlertComment> comments;
-    /**
-     * Time when the incident was first created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Array of custom tags associated with an incident.
-     */
-    private java.util.List<String> customTags;
-    /**
-     * The description property
-     */
-    private String description;
-    /**
-     * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     */
-    private AlertDetermination determination;
-    /**
-     * The incident name.
-     */
-    private String displayName;
-    /**
-     * The URL for the incident page in the Microsoft 365 Defender portal.
-     */
-    private String incidentWebUrl;
-    /**
-     * The lastModifiedBy property
-     */
-    private String lastModifiedBy;
-    /**
-     * Time when the incident was last updated.
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
-     */
-    private String redirectIncidentId;
-    /**
-     * The severity property
-     */
-    private AlertSeverity severity;
-    /**
-     * The status property
-     */
-    private IncidentStatus status;
-    /**
-     * The systemTags property
-     */
-    private java.util.List<String> systemTags;
-    /**
-     * The Microsoft Entra tenant in which the alert was created.
-     */
-    private String tenantId;
-    /**
      * Instantiates a new Incident and sets the default values.
      */
     public Incident() {
@@ -100,7 +32,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
-        return this.alerts;
+        return this.BackingStore.get("alerts");
     }
     /**
      * Gets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
@@ -108,7 +40,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
-        return this.assignedTo;
+        return this.BackingStore.get("assignedTo");
     }
     /**
      * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
@@ -116,7 +48,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AlertClassification getClassification() {
-        return this.classification;
+        return this.BackingStore.get("classification");
     }
     /**
      * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
@@ -124,7 +56,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> getComments() {
-        return this.comments;
+        return this.BackingStore.get("comments");
     }
     /**
      * Gets the createdDateTime property value. Time when the incident was first created.
@@ -132,7 +64,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the customTags property value. Array of custom tags associated with an incident.
@@ -140,7 +72,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCustomTags() {
-        return this.customTags;
+        return this.BackingStore.get("customTags");
     }
     /**
      * Gets the description property value. The description property
@@ -148,7 +80,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
@@ -156,7 +88,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AlertDetermination getDetermination() {
-        return this.determination;
+        return this.BackingStore.get("determination");
     }
     /**
      * Gets the displayName property value. The incident name.
@@ -164,7 +96,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -198,7 +130,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getIncidentWebUrl() {
-        return this.incidentWebUrl;
+        return this.BackingStore.get("incidentWebUrl");
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
@@ -206,7 +138,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastUpdateDateTime property value. Time when the incident was last updated.
@@ -214,7 +146,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
+        return this.BackingStore.get("lastUpdateDateTime");
     }
     /**
      * Gets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
@@ -222,7 +154,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRedirectIncidentId() {
-        return this.redirectIncidentId;
+        return this.BackingStore.get("redirectIncidentId");
     }
     /**
      * Gets the severity property value. The severity property
@@ -230,7 +162,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
-        return this.severity;
+        return this.BackingStore.get("severity");
     }
     /**
      * Gets the status property value. The status property
@@ -238,7 +170,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IncidentStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the systemTags property value. The systemTags property
@@ -246,7 +178,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSystemTags() {
-        return this.systemTags;
+        return this.BackingStore.get("systemTags");
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant in which the alert was created.
@@ -254,7 +186,7 @@ public class Incident extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -286,118 +218,118 @@ public class Incident extends Entity implements Parsable {
      * @param value Value to set for the alerts property.
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
-        this.alerts = value;
+        this.BackingStore.set("alerts", value);
     }
     /**
      * Sets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
-        this.assignedTo = value;
+        this.BackingStore.set("assignedTo", value);
     }
     /**
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final AlertClassification value) {
-        this.classification = value;
+        this.BackingStore.set("classification", value);
     }
     /**
      * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      * @param value Value to set for the comments property.
      */
     public void setComments(@jakarta.annotation.Nullable final java.util.List<AlertComment> value) {
-        this.comments = value;
+        this.BackingStore.set("comments", value);
     }
     /**
      * Sets the createdDateTime property value. Time when the incident was first created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customTags property value. Array of custom tags associated with an incident.
      * @param value Value to set for the customTags property.
      */
     public void setCustomTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.customTags = value;
+        this.BackingStore.set("customTags", value);
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      */
     public void setDetermination(@jakarta.annotation.Nullable final AlertDetermination value) {
-        this.determination = value;
+        this.BackingStore.set("determination", value);
     }
     /**
      * Sets the displayName property value. The incident name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
      */
     public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.incidentWebUrl = value;
+        this.BackingStore.set("incidentWebUrl", value);
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. Time when the incident was last updated.
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
+        this.BackingStore.set("lastUpdateDateTime", value);
     }
     /**
      * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param value Value to set for the redirectIncidentId property.
      */
     public void setRedirectIncidentId(@jakarta.annotation.Nullable final String value) {
-        this.redirectIncidentId = value;
+        this.BackingStore.set("redirectIncidentId", value);
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
-        this.severity = value;
+        this.BackingStore.set("severity", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final IncidentStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the systemTags property value. The systemTags property
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.systemTags = value;
+        this.BackingStore.set("systemTags", value);
     }
     /**
      * Sets the tenantId property value. The Microsoft Entra tenant in which the alert was created.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

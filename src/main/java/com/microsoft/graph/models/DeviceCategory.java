@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCategory extends Entity implements Parsable {
     /**
-     * Optional description for the device category.
-     */
-    private String description;
-    /**
-     * Display name for the device category.
-     */
-    private String displayName;
-    /**
      * Instantiates a new DeviceCategory and sets the default values.
      */
     public DeviceCategory() {
@@ -41,7 +33,7 @@ public class DeviceCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display name for the device category.
@@ -49,7 +41,7 @@ public class DeviceCategory extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -77,13 +69,13 @@ public class DeviceCategory extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name for the device category.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
 }

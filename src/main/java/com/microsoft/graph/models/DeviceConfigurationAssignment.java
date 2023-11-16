@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
-     * The assignment target for the device configuration.
-     */
-    private DeviceAndAppManagementAssignmentTarget target;
-    /**
      * Instantiates a new DeviceConfigurationAssignment and sets the default values.
      */
     public DeviceConfigurationAssignment() {
@@ -47,7 +43,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this.target;
+        return this.BackingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this.target = value;
+        this.BackingStore.set("target", value);
     }
 }

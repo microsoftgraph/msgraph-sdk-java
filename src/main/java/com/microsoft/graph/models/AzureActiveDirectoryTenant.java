@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /**
-     * The name of the Microsoft Entra tenant. Read only.
-     */
-    private String displayName;
-    /**
-     * The ID of the Microsoft Entra tenant. Read only.
-     */
-    private String tenantId;
-    /**
      * Instantiates a new AzureActiveDirectoryTenant and sets the default values.
      */
     public AzureActiveDirectoryTenant() {
@@ -39,7 +31,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

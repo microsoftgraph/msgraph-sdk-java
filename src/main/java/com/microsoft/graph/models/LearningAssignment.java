@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningAssignment extends LearningCourseActivity implements Parsable {
     /**
-     * Assigned date for the course activity. Optional.
-     */
-    private OffsetDateTime assignedDateTime;
-    /**
-     * The user ID of the assigner. Optional.
-     */
-    private String assignerUserId;
-    /**
-     * The assignmentType property
-     */
-    private AssignmentType assignmentType;
-    /**
-     * Due date for the course activity. Optional.
-     */
-    private DateTimeTimeZone dueDateTime;
-    /**
-     * Notes for the course activity. Optional.
-     */
-    private ItemBody notes;
-    /**
      * Instantiates a new LearningAssignment and sets the default values.
      */
     public LearningAssignment() {
@@ -51,7 +31,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
-        return this.assignedDateTime;
+        return this.BackingStore.get("assignedDateTime");
     }
     /**
      * Gets the assignerUserId property value. The user ID of the assigner. Optional.
@@ -59,7 +39,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     @jakarta.annotation.Nullable
     public String getAssignerUserId() {
-        return this.assignerUserId;
+        return this.BackingStore.get("assignerUserId");
     }
     /**
      * Gets the assignmentType property value. The assignmentType property
@@ -67,7 +47,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     @jakarta.annotation.Nullable
     public AssignmentType getAssignmentType() {
-        return this.assignmentType;
+        return this.BackingStore.get("assignmentType");
     }
     /**
      * Gets the dueDateTime property value. Due date for the course activity. Optional.
@@ -75,7 +55,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
-        return this.dueDateTime;
+        return this.BackingStore.get("dueDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -97,7 +77,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
-        return this.notes;
+        return this.BackingStore.get("notes");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * @param value Value to set for the assignedDateTime property.
      */
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.assignedDateTime = value;
+        this.BackingStore.set("assignedDateTime", value);
     }
     /**
      * Sets the assignerUserId property value. The user ID of the assigner. Optional.
      * @param value Value to set for the assignerUserId property.
      */
     public void setAssignerUserId(@jakarta.annotation.Nullable final String value) {
-        this.assignerUserId = value;
+        this.BackingStore.set("assignerUserId", value);
     }
     /**
      * Sets the assignmentType property value. The assignmentType property
      * @param value Value to set for the assignmentType property.
      */
     public void setAssignmentType(@jakarta.annotation.Nullable final AssignmentType value) {
-        this.assignmentType = value;
+        this.BackingStore.set("assignmentType", value);
     }
     /**
      * Sets the dueDateTime property value. Due date for the course activity. Optional.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.dueDateTime = value;
+        this.BackingStore.set("dueDateTime", value);
     }
     /**
      * Sets the notes property value. Notes for the course activity. Optional.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
-        this.notes = value;
+        this.BackingStore.set("notes", value);
     }
 }

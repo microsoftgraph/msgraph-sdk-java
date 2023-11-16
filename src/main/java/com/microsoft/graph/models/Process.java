@@ -4,72 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Process implements AdditionalDataHolder, Parsable {
+public class Process implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
+     * Stores model information.
      */
-    private String accountName;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The full process invocation commandline including all parameters.
-     */
-    private String commandLine;
-    /**
-     * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Complex type containing file hashes (cryptographic and location-sensitive).
-     */
-    private FileHash fileHash;
-    /**
-     * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     */
-    private ProcessIntegrityLevel integrityLevel;
-    /**
-     * True if the process is elevated.
-     */
-    private Boolean isElevated;
-    /**
-     * The name of the process' Image file.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime parentProcessCreatedDateTime;
-    /**
-     * The Process ID (PID) of the parent process.
-     */
-    private Integer parentProcessId;
-    /**
-     * The name of the image file of the parent process.
-     */
-    private String parentProcessName;
-    /**
-     * Full path, including filename.
-     */
-    private String path;
-    /**
-     * The Process ID (PID) of the process.
-     */
-    private Integer processId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Process and sets the default values.
      */
     public Process() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -88,7 +40,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.BackingStore.get("accountName");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -96,7 +48,20 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the commandLine property value. The full process invocation commandline including all parameters.
@@ -104,7 +69,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCommandLine() {
-        return this.commandLine;
+        return this.BackingStore.get("commandLine");
     }
     /**
      * Gets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -112,7 +77,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -142,7 +107,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FileHash getFileHash() {
-        return this.fileHash;
+        return this.BackingStore.get("fileHash");
     }
     /**
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
@@ -150,7 +115,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ProcessIntegrityLevel getIntegrityLevel() {
-        return this.integrityLevel;
+        return this.BackingStore.get("integrityLevel");
     }
     /**
      * Gets the isElevated property value. True if the process is elevated.
@@ -158,7 +123,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
-        return this.isElevated;
+        return this.BackingStore.get("isElevated");
     }
     /**
      * Gets the name property value. The name of the process' Image file.
@@ -166,7 +131,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -174,7 +139,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -182,7 +147,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getParentProcessCreatedDateTime() {
-        return this.parentProcessCreatedDateTime;
+        return this.BackingStore.get("parentProcessCreatedDateTime");
     }
     /**
      * Gets the parentProcessId property value. The Process ID (PID) of the parent process.
@@ -190,7 +155,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getParentProcessId() {
-        return this.parentProcessId;
+        return this.BackingStore.get("parentProcessId");
     }
     /**
      * Gets the parentProcessName property value. The name of the image file of the parent process.
@@ -198,7 +163,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParentProcessName() {
-        return this.parentProcessName;
+        return this.BackingStore.get("parentProcessName");
     }
     /**
      * Gets the path property value. Full path, including filename.
@@ -206,7 +171,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPath() {
-        return this.path;
+        return this.BackingStore.get("path");
     }
     /**
      * Gets the processId property value. The Process ID (PID) of the process.
@@ -214,7 +179,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getProcessId() {
-        return this.processId;
+        return this.BackingStore.get("processId");
     }
     /**
      * Serializes information the current object
@@ -242,97 +207,105 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.BackingStore.set("accountName", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the commandLine property value. The full process invocation commandline including all parameters.
      * @param value Value to set for the commandLine property.
      */
     public void setCommandLine(@jakarta.annotation.Nullable final String value) {
-        this.commandLine = value;
+        this.BackingStore.set("commandLine", value);
     }
     /**
      * Sets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
      * @param value Value to set for the fileHash property.
      */
     public void setFileHash(@jakarta.annotation.Nullable final FileHash value) {
-        this.fileHash = value;
+        this.BackingStore.set("fileHash", value);
     }
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      * @param value Value to set for the integrityLevel property.
      */
     public void setIntegrityLevel(@jakarta.annotation.Nullable final ProcessIntegrityLevel value) {
-        this.integrityLevel = value;
+        this.BackingStore.set("integrityLevel", value);
     }
     /**
      * Sets the isElevated property value. True if the process is elevated.
      * @param value Value to set for the isElevated property.
      */
     public void setIsElevated(@jakarta.annotation.Nullable final Boolean value) {
-        this.isElevated = value;
+        this.BackingStore.set("isElevated", value);
     }
     /**
      * Sets the name property value. The name of the process' Image file.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the parentProcessCreatedDateTime property.
      */
     public void setParentProcessCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.parentProcessCreatedDateTime = value;
+        this.BackingStore.set("parentProcessCreatedDateTime", value);
     }
     /**
      * Sets the parentProcessId property value. The Process ID (PID) of the parent process.
      * @param value Value to set for the parentProcessId property.
      */
     public void setParentProcessId(@jakarta.annotation.Nullable final Integer value) {
-        this.parentProcessId = value;
+        this.BackingStore.set("parentProcessId", value);
     }
     /**
      * Sets the parentProcessName property value. The name of the image file of the parent process.
      * @param value Value to set for the parentProcessName property.
      */
     public void setParentProcessName(@jakarta.annotation.Nullable final String value) {
-        this.parentProcessName = value;
+        this.BackingStore.set("parentProcessName", value);
     }
     /**
      * Sets the path property value. Full path, including filename.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
-        this.path = value;
+        this.BackingStore.set("path", value);
     }
     /**
      * Sets the processId property value. The Process ID (PID) of the process.
      * @param value Value to set for the processId property.
      */
     public void setProcessId(@jakarta.annotation.Nullable final Integer value) {
-        this.processId = value;
+        this.BackingStore.set("processId", value);
     }
 }

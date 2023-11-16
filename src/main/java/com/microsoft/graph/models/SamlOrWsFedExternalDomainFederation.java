@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
     /**
-     * Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
-     */
-    private java.util.List<ExternalDomainName> domains;
-    /**
      * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
      */
     public SamlOrWsFedExternalDomainFederation() {
@@ -35,7 +31,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalDomainName> getDomains() {
-        return this.domains;
+        return this.BackingStore.get("domains");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      * @param value Value to set for the domains property.
      */
     public void setDomains(@jakarta.annotation.Nullable final java.util.List<ExternalDomainName> value) {
-        this.domains = value;
+        this.BackingStore.set("domains", value);
     }
 }

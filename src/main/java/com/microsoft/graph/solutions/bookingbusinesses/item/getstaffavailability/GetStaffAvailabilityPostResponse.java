@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetStaffAvailabilityPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<StaffAvailabilityItem> value;
-    /**
      * Instantiates a new GetStaffAvailabilityPostResponse and sets the default values.
      */
     public GetStaffAvailabilityPostResponse() {
@@ -46,7 +42,7 @@ public class GetStaffAvailabilityPostResponse extends BaseCollectionPaginationCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<StaffAvailabilityItem> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetStaffAvailabilityPostResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<StaffAvailabilityItem> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

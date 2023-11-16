@@ -11,30 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskDefinition extends Entity implements Parsable {
     /**
-     * The category property
-     */
-    private EnumSet<LifecycleTaskCategory> category;
-    /**
-     * The continueOnError property
-     */
-    private Boolean continueOnError;
-    /**
-     * The description of the taskDefinition.
-     */
-    private String description;
-    /**
-     * The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
-     */
-    private String displayName;
-    /**
-     * The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
-     */
-    private java.util.List<Parameter> parameters;
-    /**
-     * The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
-     */
-    private Integer version;
-    /**
      * Instantiates a new TaskDefinition and sets the default values.
      */
     public TaskDefinition() {
@@ -56,7 +32,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<LifecycleTaskCategory> getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the continueOnError property value. The continueOnError property
@@ -64,7 +40,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getContinueOnError() {
-        return this.continueOnError;
+        return this.BackingStore.get("continueOnError");
     }
     /**
      * Gets the description property value. The description of the taskDefinition.
@@ -72,7 +48,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
@@ -80,7 +56,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +79,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Parameter> getParameters() {
-        return this.parameters;
+        return this.BackingStore.get("parameters");
     }
     /**
      * Gets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
@@ -111,7 +87,7 @@ public class TaskDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class TaskDefinition extends Entity implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final EnumSet<LifecycleTaskCategory> value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the continueOnError property value. The continueOnError property
      * @param value Value to set for the continueOnError property.
      */
     public void setContinueOnError(@jakarta.annotation.Nullable final Boolean value) {
-        this.continueOnError = value;
+        this.BackingStore.set("continueOnError", value);
     }
     /**
      * Sets the description property value. The description of the taskDefinition.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<Parameter> value) {
-        this.parameters = value;
+        this.BackingStore.set("parameters", value);
     }
     /**
      * Sets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable {
     /**
-     * Defines the scopes of the principals whose access to resources are reviewed in the access review.
-     */
-    private java.util.List<AccessReviewScope> principalScopes;
-    /**
-     * Defines the scopes of the resources for which access is reviewed.
-     */
-    private java.util.List<AccessReviewScope> resourceScopes;
-    /**
      * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
      */
     public PrincipalResourceMembershipsScope() {
@@ -50,7 +42,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getPrincipalScopes() {
-        return this.principalScopes;
+        return this.BackingStore.get("principalScopes");
     }
     /**
      * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
@@ -58,7 +50,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getResourceScopes() {
-        return this.resourceScopes;
+        return this.BackingStore.get("resourceScopes");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param value Value to set for the principalScopes property.
      */
     public void setPrincipalScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
-        this.principalScopes = value;
+        this.BackingStore.set("principalScopes", value);
     }
     /**
      * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
      * @param value Value to set for the resourceScopes property.
      */
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
-        this.resourceScopes = value;
+        this.BackingStore.set("resourceScopes", value);
     }
 }

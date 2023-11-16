@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,47 +14,16 @@ import java.util.Objects;
  * Contains properties for file encryption information for the content version of a line of business app.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
+public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The key used to encrypt the file content.
-     */
-    private byte[] encryptionKey;
-    /**
-     * The file digest prior to encryption. ProfileVersion1 requires a non-null FileDigest.
-     */
-    private byte[] fileDigest;
-    /**
-     * The file digest algorithm. ProfileVersion1 currently only supports SHA256 for the FileDigestAlgorithm.
-     */
-    private String fileDigestAlgorithm;
-    /**
-     * The initialization vector (IV) used for the encryption algorithm. Must be 16 bytes.
-     */
-    private byte[] initializationVector;
-    /**
-     * The hash of the concatenation of the IV and encrypted file content. Must be 32 bytes.
-     */
-    private byte[] mac;
-    /**
-     * The key used to compute the message authentication code of the concatenation of the IV and encrypted file content. Must be 32 bytes.
-     */
-    private byte[] macKey;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The profile identifier. Maps to the strategy used to encrypt the file. Currently, only ProfileVersion1 is supported.
-     */
-    private String profileIdentifier;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new FileEncryptionInfo and sets the default values.
      */
     public FileEncryptionInfo() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -70,7 +42,20 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the encryptionKey property value. The key used to encrypt the file content.
@@ -78,7 +63,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getEncryptionKey() {
-        return this.encryptionKey;
+        return this.BackingStore.get("encryptionKey");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +88,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getFileDigest() {
-        return this.fileDigest;
+        return this.BackingStore.get("fileDigest");
     }
     /**
      * Gets the fileDigestAlgorithm property value. The file digest algorithm. ProfileVersion1 currently only supports SHA256 for the FileDigestAlgorithm.
@@ -111,7 +96,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileDigestAlgorithm() {
-        return this.fileDigestAlgorithm;
+        return this.BackingStore.get("fileDigestAlgorithm");
     }
     /**
      * Gets the initializationVector property value. The initialization vector (IV) used for the encryption algorithm. Must be 16 bytes.
@@ -119,7 +104,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getInitializationVector() {
-        return this.initializationVector;
+        return this.BackingStore.get("initializationVector");
     }
     /**
      * Gets the mac property value. The hash of the concatenation of the IV and encrypted file content. Must be 32 bytes.
@@ -127,7 +112,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getMac() {
-        return this.mac;
+        return this.BackingStore.get("mac");
     }
     /**
      * Gets the macKey property value. The key used to compute the message authentication code of the concatenation of the IV and encrypted file content. Must be 32 bytes.
@@ -135,7 +120,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getMacKey() {
-        return this.macKey;
+        return this.BackingStore.get("macKey");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -143,7 +128,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the profileIdentifier property value. The profile identifier. Maps to the strategy used to encrypt the file. Currently, only ProfileVersion1 is supported.
@@ -151,7 +136,7 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProfileIdentifier() {
-        return this.profileIdentifier;
+        return this.BackingStore.get("profileIdentifier");
     }
     /**
      * Serializes information the current object
@@ -174,62 +159,70 @@ public class FileEncryptionInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the encryptionKey property value. The key used to encrypt the file content.
      * @param value Value to set for the encryptionKey property.
      */
     public void setEncryptionKey(@jakarta.annotation.Nullable final byte[] value) {
-        this.encryptionKey = value;
+        this.BackingStore.set("encryptionKey", value);
     }
     /**
      * Sets the fileDigest property value. The file digest prior to encryption. ProfileVersion1 requires a non-null FileDigest.
      * @param value Value to set for the fileDigest property.
      */
     public void setFileDigest(@jakarta.annotation.Nullable final byte[] value) {
-        this.fileDigest = value;
+        this.BackingStore.set("fileDigest", value);
     }
     /**
      * Sets the fileDigestAlgorithm property value. The file digest algorithm. ProfileVersion1 currently only supports SHA256 for the FileDigestAlgorithm.
      * @param value Value to set for the fileDigestAlgorithm property.
      */
     public void setFileDigestAlgorithm(@jakarta.annotation.Nullable final String value) {
-        this.fileDigestAlgorithm = value;
+        this.BackingStore.set("fileDigestAlgorithm", value);
     }
     /**
      * Sets the initializationVector property value. The initialization vector (IV) used for the encryption algorithm. Must be 16 bytes.
      * @param value Value to set for the initializationVector property.
      */
     public void setInitializationVector(@jakarta.annotation.Nullable final byte[] value) {
-        this.initializationVector = value;
+        this.BackingStore.set("initializationVector", value);
     }
     /**
      * Sets the mac property value. The hash of the concatenation of the IV and encrypted file content. Must be 32 bytes.
      * @param value Value to set for the mac property.
      */
     public void setMac(@jakarta.annotation.Nullable final byte[] value) {
-        this.mac = value;
+        this.BackingStore.set("mac", value);
     }
     /**
      * Sets the macKey property value. The key used to compute the message authentication code of the concatenation of the IV and encrypted file content. Must be 32 bytes.
      * @param value Value to set for the macKey property.
      */
     public void setMacKey(@jakarta.annotation.Nullable final byte[] value) {
-        this.macKey = value;
+        this.BackingStore.set("macKey", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the profileIdentifier property value. The profile identifier. Maps to the strategy used to encrypt the file. Currently, only ProfileVersion1 is supported.
      * @param value Value to set for the profileIdentifier property.
      */
     public void setProfileIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.profileIdentifier = value;
+        this.BackingStore.set("profileIdentifier", value);
     }
 }

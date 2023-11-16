@@ -4,59 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
+public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
-     */
-    private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
-    /**
-     * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
-    /**
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
-    /**
-     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
-    /**
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
-    /**
-     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
-     */
-    private CrossTenantIdentitySyncPolicyPartner identitySynchronization;
-    /**
-     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
-     */
-    private CrossTenantAccessPolicyInboundTrust inboundTrust;
-    /**
-     * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
-     */
-    private Boolean isServiceProvider;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
-     */
-    private String tenantId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartner and sets the default values.
      */
     public CrossTenantAccessPolicyConfigurationPartner() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -75,7 +39,12 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
@@ -83,7 +52,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
-        return this.automaticUserConsentSettings;
+        return this.BackingStore.get("automaticUserConsentSettings");
     }
     /**
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
@@ -91,7 +60,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
-        return this.b2bCollaborationInbound;
+        return this.BackingStore.get("b2bCollaborationInbound");
     }
     /**
      * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
@@ -99,7 +68,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
-        return this.b2bCollaborationOutbound;
+        return this.BackingStore.get("b2bCollaborationOutbound");
     }
     /**
      * Gets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
@@ -107,7 +76,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
-        return this.b2bDirectConnectInbound;
+        return this.BackingStore.get("b2bDirectConnectInbound");
     }
     /**
      * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
@@ -115,7 +84,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
-        return this.b2bDirectConnectOutbound;
+        return this.BackingStore.get("b2bDirectConnectOutbound");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -142,7 +119,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantIdentitySyncPolicyPartner getIdentitySynchronization() {
-        return this.identitySynchronization;
+        return this.BackingStore.get("identitySynchronization");
     }
     /**
      * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
@@ -150,7 +127,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
-        return this.inboundTrust;
+        return this.BackingStore.get("inboundTrust");
     }
     /**
      * Gets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
@@ -158,7 +135,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsServiceProvider() {
-        return this.isServiceProvider;
+        return this.BackingStore.get("isServiceProvider");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -166,7 +143,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
@@ -174,7 +151,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -199,76 +176,84 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @param value Value to set for the automaticUserConsentSettings property.
      */
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
-        this.automaticUserConsentSettings = value;
+        this.BackingStore.set("automaticUserConsentSettings", value);
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
      */
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bCollaborationInbound = value;
+        this.BackingStore.set("b2bCollaborationInbound", value);
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
      */
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bCollaborationOutbound = value;
+        this.BackingStore.set("b2bCollaborationOutbound", value);
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      * @param value Value to set for the b2bDirectConnectInbound property.
      */
     public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bDirectConnectInbound = value;
+        this.BackingStore.set("b2bDirectConnectInbound", value);
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bDirectConnectOutbound = value;
+        this.BackingStore.set("b2bDirectConnectOutbound", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @param value Value to set for the identitySynchronization property.
      */
     public void setIdentitySynchronization(@jakarta.annotation.Nullable final CrossTenantIdentitySyncPolicyPartner value) {
-        this.identitySynchronization = value;
+        this.BackingStore.set("identitySynchronization", value);
     }
     /**
      * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @param value Value to set for the inboundTrust property.
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
-        this.inboundTrust = value;
+        this.BackingStore.set("inboundTrust", value);
     }
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      * @param value Value to set for the isServiceProvider property.
      */
     public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
-        this.isServiceProvider = value;
+        this.BackingStore.set("isServiceProvider", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

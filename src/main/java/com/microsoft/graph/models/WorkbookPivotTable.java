@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookPivotTable extends Entity implements Parsable {
     /**
-     * Name of the PivotTable.
-     */
-    private String name;
-    /**
-     * The worksheet containing the current PivotTable. Read-only.
-     */
-    private WorkbookWorksheet worksheet;
-    /**
      * Instantiates a new WorkbookPivotTable and sets the default values.
      */
     public WorkbookPivotTable() {
@@ -49,7 +41,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
@@ -57,7 +49,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this.worksheet;
+        return this.BackingStore.get("worksheet");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
      * @param value Value to set for the worksheet property.
      */
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
-        this.worksheet = value;
+        this.BackingStore.set("worksheet", value);
     }
 }

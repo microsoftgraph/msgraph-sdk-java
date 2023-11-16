@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilterOperatorSchema extends Entity implements Parsable {
     /**
-     * The arity property
-     */
-    private ScopeOperatorType arity;
-    /**
-     * The multivaluedComparisonType property
-     */
-    private ScopeOperatorMultiValuedComparisonType multivaluedComparisonType;
-    /**
-     * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
-     */
-    private java.util.List<AttributeType> supportedAttributeTypes;
-    /**
      * Instantiates a new FilterOperatorSchema and sets the default values.
      */
     public FilterOperatorSchema() {
@@ -42,7 +30,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ScopeOperatorType getArity() {
-        return this.arity;
+        return this.BackingStore.get("arity");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ScopeOperatorMultiValuedComparisonType getMultivaluedComparisonType() {
-        return this.multivaluedComparisonType;
+        return this.BackingStore.get("multivaluedComparisonType");
     }
     /**
      * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
@@ -70,7 +58,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeType> getSupportedAttributeTypes() {
-        return this.supportedAttributeTypes;
+        return this.BackingStore.get("supportedAttributeTypes");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * @param value Value to set for the arity property.
      */
     public void setArity(@jakarta.annotation.Nullable final ScopeOperatorType value) {
-        this.arity = value;
+        this.BackingStore.set("arity", value);
     }
     /**
      * Sets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @param value Value to set for the multivaluedComparisonType property.
      */
     public void setMultivaluedComparisonType(@jakarta.annotation.Nullable final ScopeOperatorMultiValuedComparisonType value) {
-        this.multivaluedComparisonType = value;
+        this.BackingStore.set("multivaluedComparisonType", value);
     }
     /**
      * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      * @param value Value to set for the supportedAttributeTypes property.
      */
     public void setSupportedAttributeTypes(@jakarta.annotation.Nullable final java.util.List<AttributeType> value) {
-        this.supportedAttributeTypes = value;
+        this.BackingStore.set("supportedAttributeTypes", value);
     }
 }

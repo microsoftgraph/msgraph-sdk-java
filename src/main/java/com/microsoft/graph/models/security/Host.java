@@ -10,66 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
-     */
-    private java.util.List<HostPair> childHostPairs;
-    /**
-     * The hostComponents that are associated with this host.
-     */
-    private java.util.List<HostComponent> components;
-    /**
-     * The hostCookies that are associated with this host.
-     */
-    private java.util.List<HostCookie> cookies;
-    /**
-     * The first date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
-     */
-    private java.util.List<HostPair> hostPairs;
-    /**
-     * The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
-     */
-    private java.util.List<HostPair> parentHostPairs;
-    /**
-     * Passive DNS retrieval about this host.
-     */
-    private java.util.List<PassiveDnsRecord> passiveDns;
-    /**
-     * Reverse passive DNS retrieval about this host.
-     */
-    private java.util.List<PassiveDnsRecord> passiveDnsReverse;
-    /**
-     * The hostPorts associated with a host.
-     */
-    private java.util.List<HostPort> ports;
-    /**
-     * Represents a calculated reputation of this host.
-     */
-    private HostReputation reputation;
-    /**
-     * The hostSslCertificates that are associated with this host.
-     */
-    private java.util.List<HostSslCertificate> sslCertificates;
-    /**
-     * The subdomains that are associated with this host.
-     */
-    private java.util.List<Subdomain> subdomains;
-    /**
-     * The hostTrackers that are associated with this host.
-     */
-    private java.util.List<HostTracker> trackers;
-    /**
-     * The most recent whoisRecord for this host.
-     */
-    private WhoisRecord whois;
-    /**
      * Instantiates a new Host and sets the default values.
      */
     public Host() {
@@ -100,7 +40,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getChildHostPairs() {
-        return this.childHostPairs;
+        return this.BackingStore.get("childHostPairs");
     }
     /**
      * Gets the components property value. The hostComponents that are associated with this host.
@@ -108,7 +48,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getComponents() {
-        return this.components;
+        return this.BackingStore.get("components");
     }
     /**
      * Gets the cookies property value. The hostCookies that are associated with this host.
@@ -116,7 +56,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getCookies() {
-        return this.cookies;
+        return this.BackingStore.get("cookies");
     }
     /**
      * The deserialization information for the current model
@@ -148,7 +88,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
@@ -156,7 +96,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
-        return this.hostPairs;
+        return this.BackingStore.get("hostPairs");
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -164,7 +104,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
@@ -172,7 +112,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getParentHostPairs() {
-        return this.parentHostPairs;
+        return this.BackingStore.get("parentHostPairs");
     }
     /**
      * Gets the passiveDns property value. Passive DNS retrieval about this host.
@@ -180,7 +120,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDns() {
-        return this.passiveDns;
+        return this.BackingStore.get("passiveDns");
     }
     /**
      * Gets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
@@ -188,7 +128,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
-        return this.passiveDnsReverse;
+        return this.BackingStore.get("passiveDnsReverse");
     }
     /**
      * Gets the ports property value. The hostPorts associated with a host.
@@ -196,7 +136,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPort> getPorts() {
-        return this.ports;
+        return this.BackingStore.get("ports");
     }
     /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
@@ -204,7 +144,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public HostReputation getReputation() {
-        return this.reputation;
+        return this.BackingStore.get("reputation");
     }
     /**
      * Gets the sslCertificates property value. The hostSslCertificates that are associated with this host.
@@ -212,7 +152,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getSslCertificates() {
-        return this.sslCertificates;
+        return this.BackingStore.get("sslCertificates");
     }
     /**
      * Gets the subdomains property value. The subdomains that are associated with this host.
@@ -220,7 +160,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getSubdomains() {
-        return this.subdomains;
+        return this.BackingStore.get("subdomains");
     }
     /**
      * Gets the trackers property value. The hostTrackers that are associated with this host.
@@ -228,7 +168,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getTrackers() {
-        return this.trackers;
+        return this.BackingStore.get("trackers");
     }
     /**
      * Gets the whois property value. The most recent whoisRecord for this host.
@@ -236,7 +176,7 @@ public class Host extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WhoisRecord getWhois() {
-        return this.whois;
+        return this.BackingStore.get("whois");
     }
     /**
      * Serializes information the current object
@@ -266,104 +206,104 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the childHostPairs property.
      */
     public void setChildHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
-        this.childHostPairs = value;
+        this.BackingStore.set("childHostPairs", value);
     }
     /**
      * Sets the components property value. The hostComponents that are associated with this host.
      * @param value Value to set for the components property.
      */
     public void setComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
-        this.components = value;
+        this.BackingStore.set("components", value);
     }
     /**
      * Sets the cookies property value. The hostCookies that are associated with this host.
      * @param value Value to set for the cookies property.
      */
     public void setCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
-        this.cookies = value;
+        this.BackingStore.set("cookies", value);
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @param value Value to set for the hostPairs property.
      */
     public void setHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
-        this.hostPairs = value;
+        this.BackingStore.set("hostPairs", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
      * @param value Value to set for the parentHostPairs property.
      */
     public void setParentHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
-        this.parentHostPairs = value;
+        this.BackingStore.set("parentHostPairs", value);
     }
     /**
      * Sets the passiveDns property value. Passive DNS retrieval about this host.
      * @param value Value to set for the passiveDns property.
      */
     public void setPassiveDns(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
-        this.passiveDns = value;
+        this.BackingStore.set("passiveDns", value);
     }
     /**
      * Sets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
      * @param value Value to set for the passiveDnsReverse property.
      */
     public void setPassiveDnsReverse(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
-        this.passiveDnsReverse = value;
+        this.BackingStore.set("passiveDnsReverse", value);
     }
     /**
      * Sets the ports property value. The hostPorts associated with a host.
      * @param value Value to set for the ports property.
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<HostPort> value) {
-        this.ports = value;
+        this.BackingStore.set("ports", value);
     }
     /**
      * Sets the reputation property value. Represents a calculated reputation of this host.
      * @param value Value to set for the reputation property.
      */
     public void setReputation(@jakarta.annotation.Nullable final HostReputation value) {
-        this.reputation = value;
+        this.BackingStore.set("reputation", value);
     }
     /**
      * Sets the sslCertificates property value. The hostSslCertificates that are associated with this host.
      * @param value Value to set for the sslCertificates property.
      */
     public void setSslCertificates(@jakarta.annotation.Nullable final java.util.List<HostSslCertificate> value) {
-        this.sslCertificates = value;
+        this.BackingStore.set("sslCertificates", value);
     }
     /**
      * Sets the subdomains property value. The subdomains that are associated with this host.
      * @param value Value to set for the subdomains property.
      */
     public void setSubdomains(@jakarta.annotation.Nullable final java.util.List<Subdomain> value) {
-        this.subdomains = value;
+        this.BackingStore.set("subdomains", value);
     }
     /**
      * Sets the trackers property value. The hostTrackers that are associated with this host.
      * @param value Value to set for the trackers property.
      */
     public void setTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
-        this.trackers = value;
+        this.BackingStore.set("trackers", value);
     }
     /**
      * Sets the whois property value. The most recent whoisRecord for this host.
      * @param value Value to set for the whois property.
      */
     public void setWhois(@jakarta.annotation.Nullable final WhoisRecord value) {
-        this.whois = value;
+        this.BackingStore.set("whois", value);
     }
 }

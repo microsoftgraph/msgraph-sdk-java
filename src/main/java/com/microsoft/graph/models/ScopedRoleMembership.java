@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScopedRoleMembership extends Entity implements Parsable {
     /**
-     * Unique identifier for the administrative unit that the directory role is scoped to
-     */
-    private String administrativeUnitId;
-    /**
-     * Unique identifier for the directory role that the member is in.
-     */
-    private String roleId;
-    /**
-     * The roleMemberInfo property
-     */
-    private Identity roleMemberInfo;
-    /**
      * Instantiates a new ScopedRoleMembership and sets the default values.
      */
     public ScopedRoleMembership() {
@@ -42,7 +30,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAdministrativeUnitId() {
-        return this.administrativeUnitId;
+        return this.BackingStore.get("administrativeUnitId");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.BackingStore.get("roleId");
     }
     /**
      * Gets the roleMemberInfo property value. The roleMemberInfo property
@@ -70,7 +58,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getRoleMemberInfo() {
-        return this.roleMemberInfo;
+        return this.BackingStore.get("roleMemberInfo");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnitId property.
      */
     public void setAdministrativeUnitId(@jakarta.annotation.Nullable final String value) {
-        this.administrativeUnitId = value;
+        this.BackingStore.set("administrativeUnitId", value);
     }
     /**
      * Sets the roleId property value. Unique identifier for the directory role that the member is in.
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.BackingStore.set("roleId", value);
     }
     /**
      * Sets the roleMemberInfo property value. The roleMemberInfo property
      * @param value Value to set for the roleMemberInfo property.
      */
     public void setRoleMemberInfo(@jakarta.annotation.Nullable final Identity value) {
-        this.roleMemberInfo = value;
+        this.BackingStore.set("roleMemberInfo", value);
     }
 }

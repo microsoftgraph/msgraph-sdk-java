@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalActivityCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ExternalActivity> value;
-    /**
      * Instantiates a new ExternalActivityCollectionResponse and sets the default values.
      */
     public ExternalActivityCollectionResponse() {
@@ -45,7 +41,7 @@ public class ExternalActivityCollectionResponse extends BaseCollectionPagination
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalActivity> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ExternalActivityCollectionResponse extends BaseCollectionPagination
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ExternalActivity> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

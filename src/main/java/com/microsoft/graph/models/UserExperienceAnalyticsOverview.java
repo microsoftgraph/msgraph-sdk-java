@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsOverview extends Entity implements Parsable {
     /**
-     * The user experience analytics insights. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsInsight> insights;
-    /**
      * Instantiates a new UserExperienceAnalyticsOverview and sets the default values.
      */
     public UserExperienceAnalyticsOverview() {
@@ -47,7 +43,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
-        return this.insights;
+        return this.BackingStore.get("insights");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
-        this.insights = value;
+        this.BackingStore.set("insights", value);
     }
 }

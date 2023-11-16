@@ -9,34 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembershipOutlierInsight extends GovernanceInsight implements Parsable {
     /**
-     * Navigation link to the container directory object. For example, to a group.
-     */
-    private DirectoryObject container;
-    /**
-     * Indicates the identifier of the container, for example, a group ID.
-     */
-    private String containerId;
-    /**
-     * Navigation link to a member object who modified the record. For example, to a user.
-     */
-    private User lastModifiedBy;
-    /**
-     * Navigation link to a member object. For example, to a user.
-     */
-    private DirectoryObject member;
-    /**
-     * Indicates the identifier of the user.
-     */
-    private String memberId;
-    /**
-     * The outlierContainerType property
-     */
-    private OutlierContainerType outlierContainerType;
-    /**
-     * The outlierMemberType property
-     */
-    private OutlierMemberType outlierMemberType;
-    /**
      * Instantiates a new MembershipOutlierInsight and sets the default values.
      */
     public MembershipOutlierInsight() {
@@ -59,7 +31,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getContainer() {
-        return this.container;
+        return this.BackingStore.get("container");
     }
     /**
      * Gets the containerId property value. Indicates the identifier of the container, for example, a group ID.
@@ -67,7 +39,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getContainerId() {
-        return this.containerId;
+        return this.BackingStore.get("containerId");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +63,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the member property value. Navigation link to a member object. For example, to a user.
@@ -99,7 +71,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getMember() {
-        return this.member;
+        return this.BackingStore.get("member");
     }
     /**
      * Gets the memberId property value. Indicates the identifier of the user.
@@ -107,7 +79,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getMemberId() {
-        return this.memberId;
+        return this.BackingStore.get("memberId");
     }
     /**
      * Gets the outlierContainerType property value. The outlierContainerType property
@@ -115,7 +87,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public OutlierContainerType getOutlierContainerType() {
-        return this.outlierContainerType;
+        return this.BackingStore.get("outlierContainerType");
     }
     /**
      * Gets the outlierMemberType property value. The outlierMemberType property
@@ -123,7 +95,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @jakarta.annotation.Nullable
     public OutlierMemberType getOutlierMemberType() {
-        return this.outlierMemberType;
+        return this.BackingStore.get("outlierMemberType");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the container property.
      */
     public void setContainer(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.container = value;
+        this.BackingStore.set("container", value);
     }
     /**
      * Sets the containerId property value. Indicates the identifier of the container, for example, a group ID.
      * @param value Value to set for the containerId property.
      */
     public void setContainerId(@jakarta.annotation.Nullable final String value) {
-        this.containerId = value;
+        this.BackingStore.set("containerId", value);
     }
     /**
      * Sets the lastModifiedBy property value. Navigation link to a member object who modified the record. For example, to a user.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the member property value. Navigation link to a member object. For example, to a user.
      * @param value Value to set for the member property.
      */
     public void setMember(@jakarta.annotation.Nullable final DirectoryObject value) {
-        this.member = value;
+        this.BackingStore.set("member", value);
     }
     /**
      * Sets the memberId property value. Indicates the identifier of the user.
      * @param value Value to set for the memberId property.
      */
     public void setMemberId(@jakarta.annotation.Nullable final String value) {
-        this.memberId = value;
+        this.BackingStore.set("memberId", value);
     }
     /**
      * Sets the outlierContainerType property value. The outlierContainerType property
      * @param value Value to set for the outlierContainerType property.
      */
     public void setOutlierContainerType(@jakarta.annotation.Nullable final OutlierContainerType value) {
-        this.outlierContainerType = value;
+        this.BackingStore.set("outlierContainerType", value);
     }
     /**
      * Sets the outlierMemberType property value. The outlierMemberType property
      * @param value Value to set for the outlierMemberType property.
      */
     public void setOutlierMemberType(@jakarta.annotation.Nullable final OutlierMemberType value) {
-        this.outlierMemberType = value;
+        this.BackingStore.set("outlierMemberType", value);
     }
 }

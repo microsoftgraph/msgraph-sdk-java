@@ -4,55 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ResourceVisualization implements AdditionalDataHolder, Parsable {
+public class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
-     */
-    private String containerDisplayName;
-    /**
-     * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-     */
-    private String containerType;
-    /**
-     * A path leading to the folder in which the item is stored.
-     */
-    private String containerWebUrl;
-    /**
-     * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
-     */
-    private String mediaType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * A URL leading to the preview image for the item.
-     */
-    private String previewImageUrl;
-    /**
-     * A preview text for the item.
-     */
-    private String previewText;
-    /**
-     * The item's title text.
-     */
-    private String title;
-    /**
-     * The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
-     */
-    private String type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ResourceVisualization and sets the default values.
      */
     public ResourceVisualization() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +39,20 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
@@ -79,7 +60,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContainerDisplayName() {
-        return this.containerDisplayName;
+        return this.BackingStore.get("containerDisplayName");
     }
     /**
      * Gets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
@@ -87,7 +68,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContainerType() {
-        return this.containerType;
+        return this.BackingStore.get("containerType");
     }
     /**
      * Gets the containerWebUrl property value. A path leading to the folder in which the item is stored.
@@ -95,7 +76,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContainerWebUrl() {
-        return this.containerWebUrl;
+        return this.BackingStore.get("containerWebUrl");
     }
     /**
      * The deserialization information for the current model
@@ -121,7 +102,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
-        return this.mediaType;
+        return this.BackingStore.get("mediaType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -129,7 +110,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the previewImageUrl property value. A URL leading to the preview image for the item.
@@ -137,7 +118,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPreviewImageUrl() {
-        return this.previewImageUrl;
+        return this.BackingStore.get("previewImageUrl");
     }
     /**
      * Gets the previewText property value. A preview text for the item.
@@ -145,7 +126,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPreviewText() {
-        return this.previewText;
+        return this.BackingStore.get("previewText");
     }
     /**
      * Gets the title property value. The item's title text.
@@ -153,7 +134,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
@@ -161,7 +142,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -185,69 +166,77 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      * @param value Value to set for the containerDisplayName property.
      */
     public void setContainerDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.containerDisplayName = value;
+        this.BackingStore.set("containerDisplayName", value);
     }
     /**
      * Sets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      * @param value Value to set for the containerType property.
      */
     public void setContainerType(@jakarta.annotation.Nullable final String value) {
-        this.containerType = value;
+        this.BackingStore.set("containerType", value);
     }
     /**
      * Sets the containerWebUrl property value. A path leading to the folder in which the item is stored.
      * @param value Value to set for the containerWebUrl property.
      */
     public void setContainerWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.containerWebUrl = value;
+        this.BackingStore.set("containerWebUrl", value);
     }
     /**
      * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
-        this.mediaType = value;
+        this.BackingStore.set("mediaType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.
      * @param value Value to set for the previewImageUrl property.
      */
     public void setPreviewImageUrl(@jakarta.annotation.Nullable final String value) {
-        this.previewImageUrl = value;
+        this.BackingStore.set("previewImageUrl", value);
     }
     /**
      * Sets the previewText property value. A preview text for the item.
      * @param value Value to set for the previewText property.
      */
     public void setPreviewText(@jakarta.annotation.Nullable final String value) {
-        this.previewText = value;
+        this.BackingStore.set("previewText", value);
     }
     /**
      * Sets the title property value. The item's title text.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
     /**
      * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

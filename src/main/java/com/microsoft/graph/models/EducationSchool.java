@@ -9,62 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSchool extends EducationOrganization implements Parsable {
     /**
-     * Address of the school.
-     */
-    private PhysicalAddress address;
-    /**
-     * The underlying administrativeUnit for this school.
-     */
-    private AdministrativeUnit administrativeUnit;
-    /**
-     * Classes taught at the school. Nullable.
-     */
-    private java.util.List<EducationClass> classes;
-    /**
-     * Entity who created the school.
-     */
-    private IdentitySet createdBy;
-    /**
-     * ID of school in syncing system.
-     */
-    private String externalId;
-    /**
-     * ID of principal in syncing system.
-     */
-    private String externalPrincipalId;
-    /**
-     * The fax property
-     */
-    private String fax;
-    /**
-     * Highest grade taught.
-     */
-    private String highestGrade;
-    /**
-     * Lowest grade taught.
-     */
-    private String lowestGrade;
-    /**
-     * Phone number of school.
-     */
-    private String phone;
-    /**
-     * Email address of the principal.
-     */
-    private String principalEmail;
-    /**
-     * Name of the principal.
-     */
-    private String principalName;
-    /**
-     * School Number.
-     */
-    private String schoolNumber;
-    /**
-     * Users in the school. Nullable.
-     */
-    private java.util.List<EducationUser> users;
-    /**
      * Instantiates a new EducationSchool and sets the default values.
      */
     public EducationSchool() {
@@ -87,7 +31,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this.address;
+        return this.BackingStore.get("address");
     }
     /**
      * Gets the administrativeUnit property value. The underlying administrativeUnit for this school.
@@ -95,7 +39,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit getAdministrativeUnit() {
-        return this.administrativeUnit;
+        return this.BackingStore.get("administrativeUnit");
     }
     /**
      * Gets the classes property value. Classes taught at the school. Nullable.
@@ -103,7 +47,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
-        return this.classes;
+        return this.BackingStore.get("classes");
     }
     /**
      * Gets the createdBy property value. Entity who created the school.
@@ -111,7 +55,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the externalId property value. ID of school in syncing system.
@@ -119,7 +63,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * Gets the externalPrincipalId property value. ID of principal in syncing system.
@@ -127,7 +71,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalPrincipalId() {
-        return this.externalPrincipalId;
+        return this.BackingStore.get("externalPrincipalId");
     }
     /**
      * Gets the fax property value. The fax property
@@ -135,7 +79,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFax() {
-        return this.fax;
+        return this.BackingStore.get("fax");
     }
     /**
      * The deserialization information for the current model
@@ -166,7 +110,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getHighestGrade() {
-        return this.highestGrade;
+        return this.BackingStore.get("highestGrade");
     }
     /**
      * Gets the lowestGrade property value. Lowest grade taught.
@@ -174,7 +118,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLowestGrade() {
-        return this.lowestGrade;
+        return this.BackingStore.get("lowestGrade");
     }
     /**
      * Gets the phone property value. Phone number of school.
@@ -182,7 +126,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
-        return this.phone;
+        return this.BackingStore.get("phone");
     }
     /**
      * Gets the principalEmail property value. Email address of the principal.
@@ -190,7 +134,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrincipalEmail() {
-        return this.principalEmail;
+        return this.BackingStore.get("principalEmail");
     }
     /**
      * Gets the principalName property value. Name of the principal.
@@ -198,7 +142,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
-        return this.principalName;
+        return this.BackingStore.get("principalName");
     }
     /**
      * Gets the schoolNumber property value. School Number.
@@ -206,7 +150,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSchoolNumber() {
-        return this.schoolNumber;
+        return this.BackingStore.get("schoolNumber");
     }
     /**
      * Gets the users property value. Users in the school. Nullable.
@@ -214,7 +158,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getUsers() {
-        return this.users;
+        return this.BackingStore.get("users");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.address = value;
+        this.BackingStore.set("address", value);
     }
     /**
      * Sets the administrativeUnit property value. The underlying administrativeUnit for this school.
      * @param value Value to set for the administrativeUnit property.
      */
     public void setAdministrativeUnit(@jakarta.annotation.Nullable final AdministrativeUnit value) {
-        this.administrativeUnit = value;
+        this.BackingStore.set("administrativeUnit", value);
     }
     /**
      * Sets the classes property value. Classes taught at the school. Nullable.
      * @param value Value to set for the classes property.
      */
     public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
-        this.classes = value;
+        this.BackingStore.set("classes", value);
     }
     /**
      * Sets the createdBy property value. Entity who created the school.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the externalId property value. ID of school in syncing system.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the externalPrincipalId property value. ID of principal in syncing system.
      * @param value Value to set for the externalPrincipalId property.
      */
     public void setExternalPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.externalPrincipalId = value;
+        this.BackingStore.set("externalPrincipalId", value);
     }
     /**
      * Sets the fax property value. The fax property
      * @param value Value to set for the fax property.
      */
     public void setFax(@jakarta.annotation.Nullable final String value) {
-        this.fax = value;
+        this.BackingStore.set("fax", value);
     }
     /**
      * Sets the highestGrade property value. Highest grade taught.
      * @param value Value to set for the highestGrade property.
      */
     public void setHighestGrade(@jakarta.annotation.Nullable final String value) {
-        this.highestGrade = value;
+        this.BackingStore.set("highestGrade", value);
     }
     /**
      * Sets the lowestGrade property value. Lowest grade taught.
      * @param value Value to set for the lowestGrade property.
      */
     public void setLowestGrade(@jakarta.annotation.Nullable final String value) {
-        this.lowestGrade = value;
+        this.BackingStore.set("lowestGrade", value);
     }
     /**
      * Sets the phone property value. Phone number of school.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
-        this.phone = value;
+        this.BackingStore.set("phone", value);
     }
     /**
      * Sets the principalEmail property value. Email address of the principal.
      * @param value Value to set for the principalEmail property.
      */
     public void setPrincipalEmail(@jakarta.annotation.Nullable final String value) {
-        this.principalEmail = value;
+        this.BackingStore.set("principalEmail", value);
     }
     /**
      * Sets the principalName property value. Name of the principal.
      * @param value Value to set for the principalName property.
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.principalName = value;
+        this.BackingStore.set("principalName", value);
     }
     /**
      * Sets the schoolNumber property value. School Number.
      * @param value Value to set for the schoolNumber property.
      */
     public void setSchoolNumber(@jakarta.annotation.Nullable final String value) {
-        this.schoolNumber = value;
+        this.BackingStore.set("schoolNumber", value);
     }
     /**
      * Sets the users property value. Users in the school. Nullable.
      * @param value Value to set for the users property.
      */
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
-        this.users = value;
+        this.BackingStore.set("users", value);
     }
 }

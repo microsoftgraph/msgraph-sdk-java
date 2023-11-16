@@ -11,42 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Article extends Entity implements Parsable {
     /**
-     * The body property
-     */
-    private FormattedContent body;
-    /**
-     * The date and time when this article was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * URL of the header image for this article, used for display purposes.
-     */
-    private String imageUrl;
-    /**
-     * Indicators related to this article.
-     */
-    private java.util.List<ArticleIndicator> indicators;
-    /**
-     * Indicates whether this article is currently featured by Microsoft.
-     */
-    private Boolean isFeatured;
-    /**
-     * The most recent date and time when this article was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The summary property
-     */
-    private FormattedContent summary;
-    /**
-     * Tags for this article, communicating keywords, or key concepts.
-     */
-    private java.util.List<String> tags;
-    /**
-     * The title of this article.
-     */
-    private String title;
-    /**
      * Instantiates a new Article and sets the default values.
      */
     public Article() {
@@ -68,7 +32,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FormattedContent getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the createdDateTime property value. The date and time when this article was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -76,7 +40,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -102,7 +66,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getImageUrl() {
-        return this.imageUrl;
+        return this.BackingStore.get("imageUrl");
     }
     /**
      * Gets the indicators property value. Indicators related to this article.
@@ -110,7 +74,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getIndicators() {
-        return this.indicators;
+        return this.BackingStore.get("indicators");
     }
     /**
      * Gets the isFeatured property value. Indicates whether this article is currently featured by Microsoft.
@@ -118,7 +82,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
-        return this.isFeatured;
+        return this.BackingStore.get("isFeatured");
     }
     /**
      * Gets the lastUpdatedDateTime property value. The most recent date and time when this article was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -126,7 +90,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.BackingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the summary property value. The summary property
@@ -134,7 +98,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
-        return this.summary;
+        return this.BackingStore.get("summary");
     }
     /**
      * Gets the tags property value. Tags for this article, communicating keywords, or key concepts.
@@ -142,7 +106,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.BackingStore.get("tags");
     }
     /**
      * Gets the title property value. The title of this article.
@@ -150,7 +114,7 @@ public class Article extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -174,62 +138,62 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final FormattedContent value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when this article was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the imageUrl property value. URL of the header image for this article, used for display purposes.
      * @param value Value to set for the imageUrl property.
      */
     public void setImageUrl(@jakarta.annotation.Nullable final String value) {
-        this.imageUrl = value;
+        this.BackingStore.set("imageUrl", value);
     }
     /**
      * Sets the indicators property value. Indicators related to this article.
      * @param value Value to set for the indicators property.
      */
     public void setIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
-        this.indicators = value;
+        this.BackingStore.set("indicators", value);
     }
     /**
      * Sets the isFeatured property value. Indicates whether this article is currently featured by Microsoft.
      * @param value Value to set for the isFeatured property.
      */
     public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFeatured = value;
+        this.BackingStore.set("isFeatured", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The most recent date and time when this article was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.BackingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
-        this.summary = value;
+        this.BackingStore.set("summary", value);
     }
     /**
      * Sets the tags property value. Tags for this article, communicating keywords, or key concepts.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.BackingStore.set("tags", value);
     }
     /**
      * Sets the title property value. The title of this article.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
 }

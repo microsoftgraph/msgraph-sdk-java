@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecordingEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Unique identifier of the call.
-     */
-    private String callId;
-    /**
-     * Display name for the call recording.
-     */
-    private String callRecordingDisplayName;
-    /**
-     * Duration of the call recording.
-     */
-    private PeriodAndDuration callRecordingDuration;
-    /**
-     * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     */
-    private CallRecordingStatus callRecordingStatus;
-    /**
-     * Call recording URL.
-     */
-    private String callRecordingUrl;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * Organizer of the meeting.
-     */
-    private IdentitySet meetingOrganizer;
-    /**
      * Instantiates a new CallRecordingEventMessageDetail and sets the default values.
      */
     public CallRecordingEventMessageDetail() {
@@ -60,7 +32,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
-        return this.callId;
+        return this.BackingStore.get("callId");
     }
     /**
      * Gets the callRecordingDisplayName property value. Display name for the call recording.
@@ -68,7 +40,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public String getCallRecordingDisplayName() {
-        return this.callRecordingDisplayName;
+        return this.BackingStore.get("callRecordingDisplayName");
     }
     /**
      * Gets the callRecordingDuration property value. Duration of the call recording.
@@ -76,7 +48,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getCallRecordingDuration() {
-        return this.callRecordingDuration;
+        return this.BackingStore.get("callRecordingDuration");
     }
     /**
      * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
@@ -84,7 +56,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public CallRecordingStatus getCallRecordingStatus() {
-        return this.callRecordingStatus;
+        return this.BackingStore.get("callRecordingStatus");
     }
     /**
      * Gets the callRecordingUrl property value. Call recording URL.
@@ -92,7 +64,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public String getCallRecordingUrl() {
-        return this.callRecordingUrl;
+        return this.BackingStore.get("callRecordingUrl");
     }
     /**
      * The deserialization information for the current model
@@ -116,7 +88,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Gets the meetingOrganizer property value. Organizer of the meeting.
@@ -124,7 +96,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
-        return this.meetingOrganizer;
+        return this.BackingStore.get("meetingOrganizer");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callId property.
      */
     public void setCallId(@jakarta.annotation.Nullable final String value) {
-        this.callId = value;
+        this.BackingStore.set("callId", value);
     }
     /**
      * Sets the callRecordingDisplayName property value. Display name for the call recording.
      * @param value Value to set for the callRecordingDisplayName property.
      */
     public void setCallRecordingDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.callRecordingDisplayName = value;
+        this.BackingStore.set("callRecordingDisplayName", value);
     }
     /**
      * Sets the callRecordingDuration property value. Duration of the call recording.
      * @param value Value to set for the callRecordingDuration property.
      */
     public void setCallRecordingDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.callRecordingDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("callRecordingDuration", value);
     }
     /**
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @param value Value to set for the callRecordingStatus property.
      */
     public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingStatus value) {
-        this.callRecordingStatus = value;
+        this.BackingStore.set("callRecordingStatus", value);
     }
     /**
      * Sets the callRecordingUrl property value. Call recording URL.
      * @param value Value to set for the callRecordingUrl property.
      */
     public void setCallRecordingUrl(@jakarta.annotation.Nullable final String value) {
-        this.callRecordingUrl = value;
+        this.BackingStore.set("callRecordingUrl", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
     /**
      * Sets the meetingOrganizer property value. Organizer of the meeting.
      * @param value Value to set for the meetingOrganizer property.
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.meetingOrganizer = value;
+        this.BackingStore.set("meetingOrganizer", value);
     }
 }

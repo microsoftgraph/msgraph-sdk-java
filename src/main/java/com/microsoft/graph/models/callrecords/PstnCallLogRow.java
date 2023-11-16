@@ -4,117 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
+public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     */
-    private PstnCallDurationSource callDurationSource;
-    /**
-     * Number dialed in E.164 format.
-     */
-    private String calleeNumber;
-    /**
-     * Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
-     */
-    private String callerNumber;
-    /**
-     * Call identifier. Not guaranteed to be unique.
-     */
-    private String callId;
-    /**
-     * Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
-     */
-    private String callType;
-    /**
-     * Amount of money or cost of the call that is charged to your account.
-     */
-    private BigDecimal charge;
-    /**
-     * ID of the audio conference.
-     */
-    private String conferenceId;
-    /**
-     * Connection fee price.
-     */
-    private BigDecimal connectionCharge;
-    /**
-     * Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
-     */
-    private String currency;
-    /**
-     * Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
-     */
-    private String destinationContext;
-    /**
-     * Country or region dialed.
-     */
-    private String destinationName;
-    /**
-     * How long the call was connected, in seconds.
-     */
-    private Integer duration;
-    /**
-     * Call end time.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * Unique call identifier. GUID.
-     */
-    private String id;
-    /**
-     * User's phone number type, such as a service of toll-free number.
-     */
-    private String inventoryType;
-    /**
-     * The license used for the call.
-     */
-    private String licenseCapability;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
-     */
-    private String operator;
-    /**
-     * Call start time.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
-     */
-    private String tenantCountryCode;
-    /**
-     * Country code of the user. For details, see ISO 3166-1 alpha-2.
-     */
-    private String usageCountryCode;
-    /**
-     * Display name of the user.
-     */
-    private String userDisplayName;
-    /**
-     * Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
-     */
-    private String userId;
-    /**
-     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
-     */
-    private String userPrincipalName;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new PstnCallLogRow and sets the default values.
      */
     public PstnCallLogRow() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -133,7 +41,20 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
@@ -141,7 +62,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public PstnCallDurationSource getCallDurationSource() {
-        return this.callDurationSource;
+        return this.BackingStore.get("callDurationSource");
     }
     /**
      * Gets the calleeNumber property value. Number dialed in E.164 format.
@@ -149,7 +70,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
-        return this.calleeNumber;
+        return this.BackingStore.get("calleeNumber");
     }
     /**
      * Gets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
@@ -157,7 +78,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
-        return this.callerNumber;
+        return this.BackingStore.get("callerNumber");
     }
     /**
      * Gets the callId property value. Call identifier. Not guaranteed to be unique.
@@ -165,7 +86,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
-        return this.callId;
+        return this.BackingStore.get("callId");
     }
     /**
      * Gets the callType property value. Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
@@ -173,7 +94,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
-        return this.callType;
+        return this.BackingStore.get("callType");
     }
     /**
      * Gets the charge property value. Amount of money or cost of the call that is charged to your account.
@@ -181,7 +102,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCharge() {
-        return this.charge;
+        return this.BackingStore.get("charge");
     }
     /**
      * Gets the conferenceId property value. ID of the audio conference.
@@ -189,7 +110,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
-        return this.conferenceId;
+        return this.BackingStore.get("conferenceId");
     }
     /**
      * Gets the connectionCharge property value. Connection fee price.
@@ -197,7 +118,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public BigDecimal getConnectionCharge() {
-        return this.connectionCharge;
+        return this.BackingStore.get("connectionCharge");
     }
     /**
      * Gets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
@@ -205,7 +126,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
-        return this.currency;
+        return this.BackingStore.get("currency");
     }
     /**
      * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
@@ -213,7 +134,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
-        return this.destinationContext;
+        return this.BackingStore.get("destinationContext");
     }
     /**
      * Gets the destinationName property value. Country or region dialed.
@@ -221,7 +142,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDestinationName() {
-        return this.destinationName;
+        return this.BackingStore.get("destinationName");
     }
     /**
      * Gets the duration property value. How long the call was connected, in seconds.
@@ -229,7 +150,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
-        return this.duration;
+        return this.BackingStore.get("duration");
     }
     /**
      * Gets the endDateTime property value. Call end time.
@@ -237,7 +158,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -278,7 +199,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.BackingStore.get("id");
     }
     /**
      * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
@@ -286,7 +207,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getInventoryType() {
-        return this.inventoryType;
+        return this.BackingStore.get("inventoryType");
     }
     /**
      * Gets the licenseCapability property value. The license used for the call.
@@ -294,7 +215,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLicenseCapability() {
-        return this.licenseCapability;
+        return this.BackingStore.get("licenseCapability");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -302,7 +223,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
@@ -310,7 +231,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
-        return this.operator;
+        return this.BackingStore.get("operator");
     }
     /**
      * Gets the startDateTime property value. Call start time.
@@ -318,7 +239,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
@@ -326,7 +247,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantCountryCode() {
-        return this.tenantCountryCode;
+        return this.BackingStore.get("tenantCountryCode");
     }
     /**
      * Gets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
@@ -334,7 +255,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUsageCountryCode() {
-        return this.usageCountryCode;
+        return this.BackingStore.get("usageCountryCode");
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
@@ -342,7 +263,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
-        return this.userDisplayName;
+        return this.BackingStore.get("userDisplayName");
     }
     /**
      * Gets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
@@ -350,7 +271,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
@@ -358,7 +279,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -397,174 +318,182 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator can provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      * @param value Value to set for the callDurationSource property.
      */
     public void setCallDurationSource(@jakarta.annotation.Nullable final PstnCallDurationSource value) {
-        this.callDurationSource = value;
+        this.BackingStore.set("callDurationSource", value);
     }
     /**
      * Sets the calleeNumber property value. Number dialed in E.164 format.
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
-        this.calleeNumber = value;
+        this.BackingStore.set("calleeNumber", value);
     }
     /**
      * Sets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
-        this.callerNumber = value;
+        this.BackingStore.set("callerNumber", value);
     }
     /**
      * Sets the callId property value. Call identifier. Not guaranteed to be unique.
      * @param value Value to set for the callId property.
      */
     public void setCallId(@jakarta.annotation.Nullable final String value) {
-        this.callId = value;
+        this.BackingStore.set("callId", value);
     }
     /**
      * Sets the callType property value. Indicates whether the call was a PSTN outbound or inbound call and the type of call, such as a call placed by a user or an audio conference.
      * @param value Value to set for the callType property.
      */
     public void setCallType(@jakarta.annotation.Nullable final String value) {
-        this.callType = value;
+        this.BackingStore.set("callType", value);
     }
     /**
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
      * @param value Value to set for the charge property.
      */
     public void setCharge(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.charge = value;
+        this.BackingStore.set("charge", value);
     }
     /**
      * Sets the conferenceId property value. ID of the audio conference.
      * @param value Value to set for the conferenceId property.
      */
     public void setConferenceId(@jakarta.annotation.Nullable final String value) {
-        this.conferenceId = value;
+        this.BackingStore.set("conferenceId", value);
     }
     /**
      * Sets the connectionCharge property value. Connection fee price.
      * @param value Value to set for the connectionCharge property.
      */
     public void setConnectionCharge(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.connectionCharge = value;
+        this.BackingStore.set("connectionCharge", value);
     }
     /**
      * Sets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      * @param value Value to set for the currency property.
      */
     public void setCurrency(@jakarta.annotation.Nullable final String value) {
-        this.currency = value;
+        this.BackingStore.set("currency", value);
     }
     /**
      * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
-        this.destinationContext = value;
+        this.BackingStore.set("destinationContext", value);
     }
     /**
      * Sets the destinationName property value. Country or region dialed.
      * @param value Value to set for the destinationName property.
      */
     public void setDestinationName(@jakarta.annotation.Nullable final String value) {
-        this.destinationName = value;
+        this.BackingStore.set("destinationName", value);
     }
     /**
      * Sets the duration property value. How long the call was connected, in seconds.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
-        this.duration = value;
+        this.BackingStore.set("duration", value);
     }
     /**
      * Sets the endDateTime property value. Call end time.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the id property value. Unique call identifier. GUID.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.BackingStore.set("id", value);
     }
     /**
      * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
      * @param value Value to set for the inventoryType property.
      */
     public void setInventoryType(@jakarta.annotation.Nullable final String value) {
-        this.inventoryType = value;
+        this.BackingStore.set("inventoryType", value);
     }
     /**
      * Sets the licenseCapability property value. The license used for the call.
      * @param value Value to set for the licenseCapability property.
      */
     public void setLicenseCapability(@jakarta.annotation.Nullable final String value) {
-        this.licenseCapability = value;
+        this.BackingStore.set("licenseCapability", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This might be Microsoft, or it might be a third-party operator via the Operator Connect Program.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {
-        this.operator = value;
+        this.BackingStore.set("operator", value);
     }
     /**
      * Sets the startDateTime property value. Call start time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the tenantCountryCode property.
      */
     public void setTenantCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.tenantCountryCode = value;
+        this.BackingStore.set("tenantCountryCode", value);
     }
     /**
      * Sets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the usageCountryCode property.
      */
     public void setUsageCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.usageCountryCode = value;
+        this.BackingStore.set("usageCountryCode", value);
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.userDisplayName = value;
+        this.BackingStore.set("userDisplayName", value);
     }
     /**
      * Sets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

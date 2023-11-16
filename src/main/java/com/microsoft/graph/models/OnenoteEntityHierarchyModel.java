@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable {
     /**
-     * Identity of the user, device, and application that created the item. Read-only.
-     */
-    private IdentitySet createdBy;
-    /**
-     * The name of the notebook.
-     */
-    private String displayName;
-    /**
-     * Identity of the user, device, and application that created the item. Read-only.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
      * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.
      */
     public OnenoteEntityHierarchyModel() {
@@ -57,7 +41,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the displayName property value. The name of the notebook.
@@ -65,7 +49,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -86,7 +70,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -94,7 +78,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -113,27 +97,27 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the displayName property value. The name of the notebook.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application that created the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
 }

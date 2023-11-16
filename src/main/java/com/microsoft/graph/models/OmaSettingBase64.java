@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
-     * File name associated with the Value property (.cer
-     */
-    private String fileName;
-    /**
-     * Value. (Base64 encoded string)
-     */
-    private String value;
-    /**
      * Instantiates a new OmaSettingBase64 and sets the default values.
      */
     public OmaSettingBase64() {
@@ -53,7 +45,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.BackingStore.get("fileName");
     }
     /**
      * Gets the value property value. Value. (Base64 encoded string)
@@ -61,7 +53,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.BackingStore.set("fileName", value);
     }
     /**
      * Sets the value property value. Value. (Base64 encoded string)
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

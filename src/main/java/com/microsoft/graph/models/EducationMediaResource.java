@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationMediaResource extends EducationResource implements Parsable {
     /**
-     * Location of the file on shared point folder. Required
-     */
-    private String fileUrl;
-    /**
      * Instantiates a new EducationMediaResource and sets the default values.
      */
     public EducationMediaResource() {
@@ -45,7 +41,7 @@ public class EducationMediaResource extends EducationResource implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getFileUrl() {
-        return this.fileUrl;
+        return this.BackingStore.get("fileUrl");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationMediaResource extends EducationResource implements Parsabl
      * @param value Value to set for the fileUrl property.
      */
     public void setFileUrl(@jakarta.annotation.Nullable final String value) {
-        this.fileUrl = value;
+        this.BackingStore.set("fileUrl", value);
     }
 }

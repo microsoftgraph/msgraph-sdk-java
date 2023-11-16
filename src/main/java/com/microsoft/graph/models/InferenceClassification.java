@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InferenceClassification extends Entity implements Parsable {
     /**
-     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
-     */
-    private java.util.List<InferenceClassificationOverride> overrides;
-    /**
      * Instantiates a new InferenceClassification and sets the default values.
      */
     public InferenceClassification() {
@@ -44,7 +40,7 @@ public class InferenceClassification extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<InferenceClassificationOverride> getOverrides() {
-        return this.overrides;
+        return this.BackingStore.get("overrides");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class InferenceClassification extends Entity implements Parsable {
      * @param value Value to set for the overrides property.
      */
     public void setOverrides(@jakarta.annotation.Nullable final java.util.List<InferenceClassificationOverride> value) {
-        this.overrides = value;
+        this.BackingStore.set("overrides", value);
     }
 }

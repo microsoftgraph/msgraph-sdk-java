@@ -12,70 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-     */
-    private Boolean bitLockerEnabled;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation.
-     */
-    private Boolean codeIntegrityEnabled;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     */
-    private Boolean earlyLaunchAntiMalwareDriverEnabled;
-    /**
-     * Maximum Windows Phone version.
-     */
-    private String osMaximumVersion;
-    /**
-     * Minimum Windows Phone version.
-     */
-    private String osMinimumVersion;
-    /**
-     * Whether or not to block syncing the calendar.
-     */
-    private Boolean passwordBlockSimple;
-    /**
-     * Number of days before password expiration. Valid values 1 to 255
-     */
-    private Integer passwordExpirationDays;
-    /**
-     * The number of character sets required in the password.
-     */
-    private Integer passwordMinimumCharacterSetCount;
-    /**
-     * Minimum password length. Valid values 4 to 16
-     */
-    private Integer passwordMinimumLength;
-    /**
-     * Minutes of inactivity before a password is required.
-     */
-    private Integer passwordMinutesOfInactivityBeforeLock;
-    /**
-     * The number of previous passwords to prevent re-use of.
-     */
-    private Integer passwordPreviousPasswordBlockCount;
-    /**
-     * Require a password to unlock Windows Phone device.
-     */
-    private Boolean passwordRequired;
-    /**
-     * Possible values of required passwords.
-     */
-    private RequiredPasswordType passwordRequiredType;
-    /**
-     * Require a password to unlock an idle device.
-     */
-    private Boolean passwordRequireToUnlockFromIdle;
-    /**
-     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     */
-    private Boolean secureBootEnabled;
-    /**
-     * Require encryption on windows devices.
-     */
-    private Boolean storageRequireEncryption;
-    /**
      * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.
      */
     public Windows10MobileCompliancePolicy() {
@@ -98,7 +34,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEnabled() {
-        return this.bitLockerEnabled;
+        return this.BackingStore.get("bitLockerEnabled");
     }
     /**
      * Gets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
@@ -106,7 +42,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getCodeIntegrityEnabled() {
-        return this.codeIntegrityEnabled;
+        return this.BackingStore.get("codeIntegrityEnabled");
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
@@ -114,7 +50,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getEarlyLaunchAntiMalwareDriverEnabled() {
-        return this.earlyLaunchAntiMalwareDriverEnabled;
+        return this.BackingStore.get("earlyLaunchAntiMalwareDriverEnabled");
     }
     /**
      * The deserialization information for the current model
@@ -147,7 +83,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this.osMaximumVersion;
+        return this.BackingStore.get("osMaximumVersion");
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows Phone version.
@@ -155,7 +91,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this.osMinimumVersion;
+        return this.BackingStore.get("osMinimumVersion");
     }
     /**
      * Gets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
@@ -163,7 +99,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this.passwordBlockSimple;
+        return this.BackingStore.get("passwordBlockSimple");
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
@@ -171,7 +107,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this.passwordExpirationDays;
+        return this.BackingStore.get("passwordExpirationDays");
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -179,7 +115,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this.passwordMinimumCharacterSetCount;
+        return this.BackingStore.get("passwordMinimumCharacterSetCount");
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
@@ -187,7 +123,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this.passwordMinimumLength;
+        return this.BackingStore.get("passwordMinimumLength");
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -195,7 +131,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this.passwordMinutesOfInactivityBeforeLock;
+        return this.BackingStore.get("passwordMinutesOfInactivityBeforeLock");
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
@@ -203,7 +139,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this.passwordPreviousPasswordBlockCount;
+        return this.BackingStore.get("passwordPreviousPasswordBlockCount");
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock Windows Phone device.
@@ -211,7 +147,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this.passwordRequired;
+        return this.BackingStore.get("passwordRequired");
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -219,7 +155,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this.passwordRequiredType;
+        return this.BackingStore.get("passwordRequiredType");
     }
     /**
      * Gets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
@@ -227,7 +163,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequireToUnlockFromIdle() {
-        return this.passwordRequireToUnlockFromIdle;
+        return this.BackingStore.get("passwordRequireToUnlockFromIdle");
     }
     /**
      * Gets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
@@ -235,7 +171,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootEnabled() {
-        return this.secureBootEnabled;
+        return this.BackingStore.get("secureBootEnabled");
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows devices.
@@ -243,7 +179,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this.storageRequireEncryption;
+        return this.BackingStore.get("storageRequireEncryption");
     }
     /**
      * Serializes information the current object
@@ -274,111 +210,111 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the bitLockerEnabled property.
      */
     public void setBitLockerEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.bitLockerEnabled = value;
+        this.BackingStore.set("bitLockerEnabled", value);
     }
     /**
      * Sets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
      * @param value Value to set for the codeIntegrityEnabled property.
      */
     public void setCodeIntegrityEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.codeIntegrityEnabled = value;
+        this.BackingStore.set("codeIntegrityEnabled", value);
     }
     /**
      * Sets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      * @param value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
      */
     public void setEarlyLaunchAntiMalwareDriverEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.earlyLaunchAntiMalwareDriverEnabled = value;
+        this.BackingStore.set("earlyLaunchAntiMalwareDriverEnabled", value);
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Windows Phone version.
      * @param value Value to set for the osMaximumVersion property.
      */
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMaximumVersion = value;
+        this.BackingStore.set("osMaximumVersion", value);
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
      * @param value Value to set for the osMinimumVersion property.
      */
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.osMinimumVersion = value;
+        this.BackingStore.set("osMinimumVersion", value);
     }
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordBlockSimple = value;
+        this.BackingStore.set("passwordBlockSimple", value);
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
      * @param value Value to set for the passwordExpirationDays property.
      */
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordExpirationDays = value;
+        this.BackingStore.set("passwordExpirationDays", value);
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      */
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumCharacterSetCount = value;
+        this.BackingStore.set("passwordMinimumCharacterSetCount", value);
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
      */
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinimumLength = value;
+        this.BackingStore.set("passwordMinimumLength", value);
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      */
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordMinutesOfInactivityBeforeLock = value;
+        this.BackingStore.set("passwordMinutesOfInactivityBeforeLock", value);
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      */
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
-        this.passwordPreviousPasswordBlockCount = value;
+        this.BackingStore.set("passwordPreviousPasswordBlockCount", value);
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows Phone device.
      * @param value Value to set for the passwordRequired property.
      */
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequired = value;
+        this.BackingStore.set("passwordRequired", value);
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
-        this.passwordRequiredType = value;
+        this.BackingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
      * @param value Value to set for the passwordRequireToUnlockFromIdle property.
      */
     public void setPasswordRequireToUnlockFromIdle(@jakarta.annotation.Nullable final Boolean value) {
-        this.passwordRequireToUnlockFromIdle = value;
+        this.BackingStore.set("passwordRequireToUnlockFromIdle", value);
     }
     /**
      * Sets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      * @param value Value to set for the secureBootEnabled property.
      */
     public void setSecureBootEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.secureBootEnabled = value;
+        this.BackingStore.set("secureBootEnabled", value);
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows devices.
      * @param value Value to set for the storageRequireEncryption property.
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageRequireEncryption = value;
+        this.BackingStore.set("storageRequireEncryption", value);
     }
 }

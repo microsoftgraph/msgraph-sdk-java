@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,43 +14,16 @@ import java.util.Objects;
  * configuration Manager client enabled features
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, Parsable {
+public class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Whether compliance policy is managed by Intune
-     */
-    private Boolean compliancePolicy;
-    /**
-     * Whether device configuration is managed by Intune
-     */
-    private Boolean deviceConfiguration;
-    /**
-     * Whether inventory is managed by Intune
-     */
-    private Boolean inventory;
-    /**
-     * Whether modern application is managed by Intune
-     */
-    private Boolean modernApps;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Whether resource access is managed by Intune
-     */
-    private Boolean resourceAccess;
-    /**
-     * Whether Windows Update for Business is managed by Intune
-     */
-    private Boolean windowsUpdateForBusiness;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ConfigurationManagerClientEnabledFeatures and sets the default values.
      */
     public ConfigurationManagerClientEnabledFeatures() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -66,7 +42,20 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the compliancePolicy property value. Whether compliance policy is managed by Intune
@@ -74,7 +63,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getCompliancePolicy() {
-        return this.compliancePolicy;
+        return this.BackingStore.get("compliancePolicy");
     }
     /**
      * Gets the deviceConfiguration property value. Whether device configuration is managed by Intune
@@ -82,7 +71,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceConfiguration() {
-        return this.deviceConfiguration;
+        return this.BackingStore.get("deviceConfiguration");
     }
     /**
      * The deserialization information for the current model
@@ -106,7 +95,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getInventory() {
-        return this.inventory;
+        return this.BackingStore.get("inventory");
     }
     /**
      * Gets the modernApps property value. Whether modern application is managed by Intune
@@ -114,7 +103,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getModernApps() {
-        return this.modernApps;
+        return this.BackingStore.get("modernApps");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -122,7 +111,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the resourceAccess property value. Whether resource access is managed by Intune
@@ -130,7 +119,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getResourceAccess() {
-        return this.resourceAccess;
+        return this.BackingStore.get("resourceAccess");
     }
     /**
      * Gets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
@@ -138,7 +127,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsUpdateForBusiness() {
-        return this.windowsUpdateForBusiness;
+        return this.BackingStore.get("windowsUpdateForBusiness");
     }
     /**
      * Serializes information the current object
@@ -160,55 +149,63 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the compliancePolicy property value. Whether compliance policy is managed by Intune
      * @param value Value to set for the compliancePolicy property.
      */
     public void setCompliancePolicy(@jakarta.annotation.Nullable final Boolean value) {
-        this.compliancePolicy = value;
+        this.BackingStore.set("compliancePolicy", value);
     }
     /**
      * Sets the deviceConfiguration property value. Whether device configuration is managed by Intune
      * @param value Value to set for the deviceConfiguration property.
      */
     public void setDeviceConfiguration(@jakarta.annotation.Nullable final Boolean value) {
-        this.deviceConfiguration = value;
+        this.BackingStore.set("deviceConfiguration", value);
     }
     /**
      * Sets the inventory property value. Whether inventory is managed by Intune
      * @param value Value to set for the inventory property.
      */
     public void setInventory(@jakarta.annotation.Nullable final Boolean value) {
-        this.inventory = value;
+        this.BackingStore.set("inventory", value);
     }
     /**
      * Sets the modernApps property value. Whether modern application is managed by Intune
      * @param value Value to set for the modernApps property.
      */
     public void setModernApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.modernApps = value;
+        this.BackingStore.set("modernApps", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the resourceAccess property value. Whether resource access is managed by Intune
      * @param value Value to set for the resourceAccess property.
      */
     public void setResourceAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.resourceAccess = value;
+        this.BackingStore.set("resourceAccess", value);
     }
     /**
      * Sets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
      * @param value Value to set for the windowsUpdateForBusiness property.
      */
     public void setWindowsUpdateForBusiness(@jakarta.annotation.Nullable final Boolean value) {
-        this.windowsUpdateForBusiness = value;
+        this.BackingStore.set("windowsUpdateForBusiness", value);
     }
 }

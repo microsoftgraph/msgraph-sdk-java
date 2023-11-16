@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     /**
-     * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
-     */
-    private java.util.List<String> allowedCloudEndpoints;
-    /**
-     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
-     */
-    private CrossTenantAccessPolicyConfigurationDefault defaultEscaped;
-    /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
-     */
-    private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
-    /**
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      */
     public CrossTenantAccessPolicy() {
@@ -43,7 +31,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedCloudEndpoints() {
-        return this.allowedCloudEndpoints;
+        return this.BackingStore.get("allowedCloudEndpoints");
     }
     /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
@@ -51,7 +39,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault getDefault() {
-        return this.defaultEscaped;
+        return this.BackingStore.get("default");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {
-        return this.partners;
+        return this.BackingStore.get("partners");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedCloudEndpoints property.
      */
     public void setAllowedCloudEndpoints(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.allowedCloudEndpoints = value;
+        this.BackingStore.set("allowedCloudEndpoints", value);
     }
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      * @param value Value to set for the default property.
      */
     public void setDefault(@jakarta.annotation.Nullable final CrossTenantAccessPolicyConfigurationDefault value) {
-        this.defaultEscaped = value;
+        this.BackingStore.set("default", value);
     }
     /**
      * Sets the partners property value. Defines partner-specific configurations for external Microsoft Entra organizations.
      * @param value Value to set for the partners property.
      */
     public void setPartners(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
-        this.partners = value;
+        this.BackingStore.set("partners", value);
     }
 }

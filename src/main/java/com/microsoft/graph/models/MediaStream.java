@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MediaStream implements AdditionalDataHolder, Parsable {
+public class MediaStream implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The direction property
-     */
-    private MediaDirection direction;
-    /**
-     * The media stream label.
-     */
-    private String label;
-    /**
-     * The mediaType property
-     */
-    private Modality mediaType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * If the media is muted by the server.
-     */
-    private Boolean serverMuted;
-    /**
-     * The source ID.
-     */
-    private String sourceId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MediaStream and sets the default values.
      */
     public MediaStream() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,20 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the direction property value. The direction property
@@ -67,7 +60,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public MediaDirection getDirection() {
-        return this.direction;
+        return this.BackingStore.get("direction");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +83,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
-        return this.label;
+        return this.BackingStore.get("label");
     }
     /**
      * Gets the mediaType property value. The mediaType property
@@ -98,7 +91,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Modality getMediaType() {
-        return this.mediaType;
+        return this.BackingStore.get("mediaType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +99,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the serverMuted property value. If the media is muted by the server.
@@ -114,7 +107,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getServerMuted() {
-        return this.serverMuted;
+        return this.BackingStore.get("serverMuted");
     }
     /**
      * Gets the sourceId property value. The source ID.
@@ -122,7 +115,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
-        return this.sourceId;
+        return this.BackingStore.get("sourceId");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the direction property value. The direction property
      * @param value Value to set for the direction property.
      */
     public void setDirection(@jakarta.annotation.Nullable final MediaDirection value) {
-        this.direction = value;
+        this.BackingStore.set("direction", value);
     }
     /**
      * Sets the label property value. The media stream label.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.label = value;
+        this.BackingStore.set("label", value);
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final Modality value) {
-        this.mediaType = value;
+        this.BackingStore.set("mediaType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the serverMuted property value. If the media is muted by the server.
      * @param value Value to set for the serverMuted property.
      */
     public void setServerMuted(@jakarta.annotation.Nullable final Boolean value) {
-        this.serverMuted = value;
+        this.BackingStore.set("serverMuted", value);
     }
     /**
      * Sets the sourceId property value. The source ID.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
-        this.sourceId = value;
+        this.BackingStore.set("sourceId", value);
     }
 }

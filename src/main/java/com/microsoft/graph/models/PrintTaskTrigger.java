@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskTrigger extends Entity implements Parsable {
     /**
-     * The definition property
-     */
-    private PrintTaskDefinition definition;
-    /**
-     * The event property
-     */
-    private PrintEvent event;
-    /**
      * Instantiates a new PrintTaskTrigger and sets the default values.
      */
     public PrintTaskTrigger() {
@@ -38,7 +30,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintTaskDefinition getDefinition() {
-        return this.definition;
+        return this.BackingStore.get("definition");
     }
     /**
      * Gets the event property value. The event property
@@ -46,7 +38,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PrintEvent getEvent() {
-        return this.event;
+        return this.BackingStore.get("event");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class PrintTaskTrigger extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final PrintTaskDefinition value) {
-        this.definition = value;
+        this.BackingStore.set("definition", value);
     }
     /**
      * Sets the event property value. The event property
      * @param value Value to set for the event property.
      */
     public void setEvent(@jakarta.annotation.Nullable final PrintEvent value) {
-        this.event = value;
+        this.BackingStore.set("event", value);
     }
 }

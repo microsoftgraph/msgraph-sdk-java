@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Roles for the coversation member user.
-     */
-    private java.util.List<String> conversationMemberRoles;
-    /**
-     * Identity of the conversation member user.
-     */
-    private TeamworkUserIdentity conversationMemberUser;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
      * Instantiates a new ConversationMemberRoleUpdatedEventMessageDetail and sets the default values.
      */
     public ConversationMemberRoleUpdatedEventMessageDetail() {
@@ -43,7 +31,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getConversationMemberRoles() {
-        return this.conversationMemberRoles;
+        return this.BackingStore.get("conversationMemberRoles");
     }
     /**
      * Gets the conversationMemberUser property value. Identity of the conversation member user.
@@ -51,7 +39,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentity getConversationMemberUser() {
-        return this.conversationMemberUser;
+        return this.BackingStore.get("conversationMemberUser");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the conversationMemberRoles property.
      */
     public void setConversationMemberRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.conversationMemberRoles = value;
+        this.BackingStore.set("conversationMemberRoles", value);
     }
     /**
      * Sets the conversationMemberUser property value. Identity of the conversation member user.
      * @param value Value to set for the conversationMemberUser property.
      */
     public void setConversationMemberUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
-        this.conversationMemberUser = value;
+        this.BackingStore.set("conversationMemberUser", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
 }

@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataPolicyOperation extends Entity implements Parsable {
     /**
-     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * Specifies the progress of an operation.
-     */
-    private Double progress;
-    /**
-     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     */
-    private DataPolicyOperationStatus status;
-    /**
-     * The URL location to where data is being exported for export requests.
-     */
-    private String storageLocation;
-    /**
-     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime submittedDateTime;
-    /**
-     * The id for the user on whom the operation is performed.
-     */
-    private String userId;
-    /**
      * Instantiates a new DataPolicyOperation and sets the default values.
      */
     public DataPolicyOperation() {
@@ -55,7 +31,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -78,7 +54,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getProgress() {
-        return this.progress;
+        return this.BackingStore.get("progress");
     }
     /**
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
@@ -86,7 +62,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DataPolicyOperationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the storageLocation property value. The URL location to where data is being exported for export requests.
@@ -94,7 +70,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStorageLocation() {
-        return this.storageLocation;
+        return this.BackingStore.get("storageLocation");
     }
     /**
      * Gets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -102,7 +78,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
-        return this.submittedDateTime;
+        return this.BackingStore.get("submittedDateTime");
     }
     /**
      * Gets the userId property value. The id for the user on whom the operation is performed.
@@ -110,7 +86,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the progress property value. Specifies the progress of an operation.
      * @param value Value to set for the progress property.
      */
     public void setProgress(@jakarta.annotation.Nullable final Double value) {
-        this.progress = value;
+        this.BackingStore.set("progress", value);
     }
     /**
      * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DataPolicyOperationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the storageLocation property value. The URL location to where data is being exported for export requests.
      * @param value Value to set for the storageLocation property.
      */
     public void setStorageLocation(@jakarta.annotation.Nullable final String value) {
-        this.storageLocation = value;
+        this.BackingStore.set("storageLocation", value);
     }
     /**
      * Sets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the submittedDateTime property.
      */
     public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.submittedDateTime = value;
+        this.BackingStore.set("submittedDateTime", value);
     }
     /**
      * Sets the userId property value. The id for the user on whom the operation is performed.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

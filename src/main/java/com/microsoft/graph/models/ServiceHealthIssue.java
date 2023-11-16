@@ -9,42 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable {
     /**
-     * The classification property
-     */
-    private ServiceHealthClassificationType classification;
-    /**
-     * The feature name of the service issue.
-     */
-    private String feature;
-    /**
-     * The feature group name of the service issue.
-     */
-    private String featureGroup;
-    /**
-     * The description of the service issue impact.
-     */
-    private String impactDescription;
-    /**
-     * Indicates whether the issue is resolved.
-     */
-    private Boolean isResolved;
-    /**
-     * The origin property
-     */
-    private ServiceHealthOrigin origin;
-    /**
-     * Collection of historical posts for the service issue.
-     */
-    private java.util.List<ServiceHealthIssuePost> posts;
-    /**
-     * Indicates the service affected by the issue.
-     */
-    private String service;
-    /**
-     * The status property
-     */
-    private ServiceHealthStatus status;
-    /**
      * Instantiates a new ServiceHealthIssue and sets the default values.
      */
     public ServiceHealthIssue() {
@@ -67,7 +31,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public ServiceHealthClassificationType getClassification() {
-        return this.classification;
+        return this.BackingStore.get("classification");
     }
     /**
      * Gets the feature property value. The feature name of the service issue.
@@ -75,7 +39,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getFeature() {
-        return this.feature;
+        return this.BackingStore.get("feature");
     }
     /**
      * Gets the featureGroup property value. The feature group name of the service issue.
@@ -83,7 +47,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getFeatureGroup() {
-        return this.featureGroup;
+        return this.BackingStore.get("featureGroup");
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +73,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getImpactDescription() {
-        return this.impactDescription;
+        return this.BackingStore.get("impactDescription");
     }
     /**
      * Gets the isResolved property value. Indicates whether the issue is resolved.
@@ -117,7 +81,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsResolved() {
-        return this.isResolved;
+        return this.BackingStore.get("isResolved");
     }
     /**
      * Gets the origin property value. The origin property
@@ -125,7 +89,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public ServiceHealthOrigin getOrigin() {
-        return this.origin;
+        return this.BackingStore.get("origin");
     }
     /**
      * Gets the posts property value. Collection of historical posts for the service issue.
@@ -133,7 +97,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssuePost> getPosts() {
-        return this.posts;
+        return this.BackingStore.get("posts");
     }
     /**
      * Gets the service property value. Indicates the service affected by the issue.
@@ -141,7 +105,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getService() {
-        return this.service;
+        return this.BackingStore.get("service");
     }
     /**
      * Gets the status property value. The status property
@@ -149,7 +113,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     @jakarta.annotation.Nullable
     public ServiceHealthStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final ServiceHealthClassificationType value) {
-        this.classification = value;
+        this.BackingStore.set("classification", value);
     }
     /**
      * Sets the feature property value. The feature name of the service issue.
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final String value) {
-        this.feature = value;
+        this.BackingStore.set("feature", value);
     }
     /**
      * Sets the featureGroup property value. The feature group name of the service issue.
      * @param value Value to set for the featureGroup property.
      */
     public void setFeatureGroup(@jakarta.annotation.Nullable final String value) {
-        this.featureGroup = value;
+        this.BackingStore.set("featureGroup", value);
     }
     /**
      * Sets the impactDescription property value. The description of the service issue impact.
      * @param value Value to set for the impactDescription property.
      */
     public void setImpactDescription(@jakarta.annotation.Nullable final String value) {
-        this.impactDescription = value;
+        this.BackingStore.set("impactDescription", value);
     }
     /**
      * Sets the isResolved property value. Indicates whether the issue is resolved.
      * @param value Value to set for the isResolved property.
      */
     public void setIsResolved(@jakarta.annotation.Nullable final Boolean value) {
-        this.isResolved = value;
+        this.BackingStore.set("isResolved", value);
     }
     /**
      * Sets the origin property value. The origin property
      * @param value Value to set for the origin property.
      */
     public void setOrigin(@jakarta.annotation.Nullable final ServiceHealthOrigin value) {
-        this.origin = value;
+        this.BackingStore.set("origin", value);
     }
     /**
      * Sets the posts property value. Collection of historical posts for the service issue.
      * @param value Value to set for the posts property.
      */
     public void setPosts(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssuePost> value) {
-        this.posts = value;
+        this.BackingStore.set("posts", value);
     }
     /**
      * Sets the service property value. Indicates the service affected by the issue.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {
-        this.service = value;
+        this.BackingStore.set("service", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ServiceHealthStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

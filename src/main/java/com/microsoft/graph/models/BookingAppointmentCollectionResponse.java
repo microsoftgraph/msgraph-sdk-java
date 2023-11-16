@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingAppointmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<BookingAppointment> value;
-    /**
      * Instantiates a new BookingAppointmentCollectionResponse and sets the default values.
      */
     public BookingAppointmentCollectionResponse() {
@@ -44,7 +40,7 @@ public class BookingAppointmentCollectionResponse extends BaseCollectionPaginati
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class BookingAppointmentCollectionResponse extends BaseCollectionPaginati
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

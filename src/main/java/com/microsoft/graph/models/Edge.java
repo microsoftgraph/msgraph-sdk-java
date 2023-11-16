@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Edge extends Entity implements Parsable {
     /**
-     * A container for Internet Explorer mode resources.
-     */
-    private InternetExplorerMode internetExplorerMode;
-    /**
      * Instantiates a new Edge and sets the default values.
      */
     public Edge() {
@@ -44,7 +40,7 @@ public class Edge extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public InternetExplorerMode getInternetExplorerMode() {
-        return this.internetExplorerMode;
+        return this.BackingStore.get("internetExplorerMode");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class Edge extends Entity implements Parsable {
      * @param value Value to set for the internetExplorerMode property.
      */
     public void setInternetExplorerMode(@jakarta.annotation.Nullable final InternetExplorerMode value) {
-        this.internetExplorerMode = value;
+        this.BackingStore.set("internetExplorerMode", value);
     }
 }

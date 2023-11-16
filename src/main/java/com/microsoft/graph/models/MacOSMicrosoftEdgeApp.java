@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
-     * The enum to specify the channels for Microsoft Edge apps.
-     */
-    private MicrosoftEdgeChannel channel;
-    /**
      * Instantiates a new MacOSMicrosoftEdgeApp and sets the default values.
      */
     public MacOSMicrosoftEdgeApp() {
@@ -38,7 +34,7 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public MicrosoftEdgeChannel getChannel() {
-        return this.channel;
+        return this.BackingStore.get("channel");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the channel property.
      */
     public void setChannel(@jakarta.annotation.Nullable final MicrosoftEdgeChannel value) {
-        this.channel = value;
+        this.BackingStore.set("channel", value);
     }
 }

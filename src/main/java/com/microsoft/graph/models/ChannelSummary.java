@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChannelSummary implements AdditionalDataHolder, Parsable {
+public class ChannelSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Count of guests in a channel.
-     */
-    private Integer guestsCount;
-    /**
-     * Indicates whether external members are included on the channel.
-     */
-    private Boolean hasMembersFromOtherTenants;
-    /**
-     * Count of members in a channel.
-     */
-    private Integer membersCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Count of owners in a channel.
-     */
-    private Integer ownersCount;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ChannelSummary and sets the default values.
      */
     public ChannelSummary() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +74,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getGuestsCount() {
-        return this.guestsCount;
+        return this.BackingStore.get("guestsCount");
     }
     /**
      * Gets the hasMembersFromOtherTenants property value. Indicates whether external members are included on the channel.
@@ -85,7 +82,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasMembersFromOtherTenants() {
-        return this.hasMembersFromOtherTenants;
+        return this.BackingStore.get("hasMembersFromOtherTenants");
     }
     /**
      * Gets the membersCount property value. Count of members in a channel.
@@ -93,7 +90,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMembersCount() {
-        return this.membersCount;
+        return this.BackingStore.get("membersCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +98,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the ownersCount property value. Count of owners in a channel.
@@ -109,7 +106,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getOwnersCount() {
-        return this.ownersCount;
+        return this.BackingStore.get("ownersCount");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the guestsCount property value. Count of guests in a channel.
      * @param value Value to set for the guestsCount property.
      */
     public void setGuestsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.guestsCount = value;
+        this.BackingStore.set("guestsCount", value);
     }
     /**
      * Sets the hasMembersFromOtherTenants property value. Indicates whether external members are included on the channel.
      * @param value Value to set for the hasMembersFromOtherTenants property.
      */
     public void setHasMembersFromOtherTenants(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasMembersFromOtherTenants = value;
+        this.BackingStore.set("hasMembersFromOtherTenants", value);
     }
     /**
      * Sets the membersCount property value. Count of members in a channel.
      * @param value Value to set for the membersCount property.
      */
     public void setMembersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.membersCount = value;
+        this.BackingStore.set("membersCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the ownersCount property value. Count of owners in a channel.
      * @param value Value to set for the ownersCount property.
      */
     public void setOwnersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ownersCount = value;
+        this.BackingStore.set("ownersCount", value);
     }
 }

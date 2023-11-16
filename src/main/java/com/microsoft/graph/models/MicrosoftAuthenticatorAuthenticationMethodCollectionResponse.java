@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value;
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodCollectionResponse and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethodCollectionResponse() {
@@ -44,7 +40,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionResponse extend
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethod> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodCollectionResponse extend
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

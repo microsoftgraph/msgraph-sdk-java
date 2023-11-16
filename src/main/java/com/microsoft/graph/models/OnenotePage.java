@@ -10,50 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
     /**
-     * The page's HTML content.
-     */
-    private byte[] content;
-    /**
-     * The URL for the page's HTML content.  Read-only.
-     */
-    private String contentUrl;
-    /**
-     * The unique identifier of the application that created the page. Read-only.
-     */
-    private String createdByAppId;
-    /**
-     * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The indentation level of the page. Read-only.
-     */
-    private Integer level;
-    /**
-     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-     */
-    private PageLinks links;
-    /**
-     * The order of the page within its parent section. Read-only.
-     */
-    private Integer order;
-    /**
-     * The notebook that contains the page.  Read-only.
-     */
-    private Notebook parentNotebook;
-    /**
-     * The section that contains the page. Read-only.
-     */
-    private OnenoteSection parentSection;
-    /**
-     * The title of the page.
-     */
-    private String title;
-    /**
-     * The userTags property
-     */
-    private java.util.List<String> userTags;
-    /**
      * Instantiates a new OnenotePage and sets the default values.
      */
     public OnenotePage() {
@@ -76,7 +32,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the contentUrl property value. The URL for the page's HTML content.  Read-only.
@@ -84,7 +40,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
-        return this.contentUrl;
+        return this.BackingStore.get("contentUrl");
     }
     /**
      * Gets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
@@ -92,7 +48,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getCreatedByAppId() {
-        return this.createdByAppId;
+        return this.BackingStore.get("createdByAppId");
     }
     /**
      * The deserialization information for the current model
@@ -120,7 +76,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the level property value. The indentation level of the page. Read-only.
@@ -128,7 +84,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getLevel() {
-        return this.level;
+        return this.BackingStore.get("level");
     }
     /**
      * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
@@ -136,7 +92,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public PageLinks getLinks() {
-        return this.links;
+        return this.BackingStore.get("links");
     }
     /**
      * Gets the order property value. The order of the page within its parent section. Read-only.
@@ -144,7 +100,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public Integer getOrder() {
-        return this.order;
+        return this.BackingStore.get("order");
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the page.  Read-only.
@@ -152,7 +108,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
-        return this.parentNotebook;
+        return this.BackingStore.get("parentNotebook");
     }
     /**
      * Gets the parentSection property value. The section that contains the page. Read-only.
@@ -160,7 +116,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public OnenoteSection getParentSection() {
-        return this.parentSection;
+        return this.BackingStore.get("parentSection");
     }
     /**
      * Gets the title property value. The title of the page.
@@ -168,7 +124,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Gets the userTags property value. The userTags property
@@ -176,7 +132,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserTags() {
-        return this.userTags;
+        return this.BackingStore.get("userTags");
     }
     /**
      * Serializes information the current object
@@ -202,76 +158,76 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the contentUrl property value. The URL for the page's HTML content.  Read-only.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentUrl = value;
+        this.BackingStore.set("contentUrl", value);
     }
     /**
      * Sets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
      * @param value Value to set for the createdByAppId property.
      */
     public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {
-        this.createdByAppId = value;
+        this.BackingStore.set("createdByAppId", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the level property value. The indentation level of the page. Read-only.
      * @param value Value to set for the level property.
      */
     public void setLevel(@jakarta.annotation.Nullable final Integer value) {
-        this.level = value;
+        this.BackingStore.set("level", value);
     }
     /**
      * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final PageLinks value) {
-        this.links = value;
+        this.BackingStore.set("links", value);
     }
     /**
      * Sets the order property value. The order of the page within its parent section. Read-only.
      * @param value Value to set for the order property.
      */
     public void setOrder(@jakarta.annotation.Nullable final Integer value) {
-        this.order = value;
+        this.BackingStore.set("order", value);
     }
     /**
      * Sets the parentNotebook property value. The notebook that contains the page.  Read-only.
      * @param value Value to set for the parentNotebook property.
      */
     public void setParentNotebook(@jakarta.annotation.Nullable final Notebook value) {
-        this.parentNotebook = value;
+        this.BackingStore.set("parentNotebook", value);
     }
     /**
      * Sets the parentSection property value. The section that contains the page. Read-only.
      * @param value Value to set for the parentSection property.
      */
     public void setParentSection(@jakarta.annotation.Nullable final OnenoteSection value) {
-        this.parentSection = value;
+        this.BackingStore.set("parentSection", value);
     }
     /**
      * Sets the title property value. The title of the page.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
     /**
      * Sets the userTags property value. The userTags property
      * @param value Value to set for the userTags property.
      */
     public void setUserTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userTags = value;
+        this.BackingStore.set("userTags", value);
     }
 }

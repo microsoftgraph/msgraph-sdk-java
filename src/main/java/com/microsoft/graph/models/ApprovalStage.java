@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApprovalStage extends Entity implements Parsable {
     /**
-     * Indicates whether the stage is assigned to the calling user to review. Read-only.
-     */
-    private Boolean assignedToMe;
-    /**
-     * The label provided by the policy creator to identify an approval stage. Read-only.
-     */
-    private String displayName;
-    /**
-     * The justification associated with the approval stage decision.
-     */
-    private String justification;
-    /**
-     * The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-     */
-    private Identity reviewedBy;
-    /**
-     * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime reviewedDateTime;
-    /**
-     * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-     */
-    private String reviewResult;
-    /**
-     * The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-     */
-    private String status;
-    /**
      * Instantiates a new ApprovalStage and sets the default values.
      */
     public ApprovalStage() {
@@ -59,7 +31,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAssignedToMe() {
-        return this.assignedToMe;
+        return this.BackingStore.get("assignedToMe");
     }
     /**
      * Gets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
@@ -67,7 +39,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +63,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.BackingStore.get("justification");
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
@@ -99,7 +71,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Identity getReviewedBy() {
-        return this.reviewedBy;
+        return this.BackingStore.get("reviewedBy");
     }
     /**
      * Gets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -107,7 +79,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
-        return this.reviewedDateTime;
+        return this.BackingStore.get("reviewedDateTime");
     }
     /**
      * Gets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
@@ -115,7 +87,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getReviewResult() {
-        return this.reviewResult;
+        return this.BackingStore.get("reviewResult");
     }
     /**
      * Gets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
@@ -123,7 +95,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the assignedToMe property.
      */
     public void setAssignedToMe(@jakarta.annotation.Nullable final Boolean value) {
-        this.assignedToMe = value;
+        this.BackingStore.set("assignedToMe", value);
     }
     /**
      * Sets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the justification property value. The justification associated with the approval stage decision.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.BackingStore.set("justification", value);
     }
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @param value Value to set for the reviewedBy property.
      */
     public void setReviewedBy(@jakarta.annotation.Nullable final Identity value) {
-        this.reviewedBy = value;
+        this.BackingStore.set("reviewedBy", value);
     }
     /**
      * Sets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the reviewedDateTime property.
      */
     public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.reviewedDateTime = value;
+        this.BackingStore.set("reviewedDateTime", value);
     }
     /**
      * Sets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
      * @param value Value to set for the reviewResult property.
      */
     public void setReviewResult(@jakarta.annotation.Nullable final String value) {
-        this.reviewResult = value;
+        this.BackingStore.set("reviewResult", value);
     }
     /**
      * Sets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

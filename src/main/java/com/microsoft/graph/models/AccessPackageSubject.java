@@ -9,34 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageSubject extends Entity implements Parsable {
     /**
-     * The connected organization of the subject. Read-only. Nullable.
-     */
-    private ConnectedOrganization connectedOrganization;
-    /**
-     * The display name of the subject.
-     */
-    private String displayName;
-    /**
-     * The email address of the subject.
-     */
-    private String email;
-    /**
-     * The object identifier of the subject. null if the subject isn't yet a user in the tenant.
-     */
-    private String objectId;
-    /**
-     * A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
-     */
-    private String onPremisesSecurityIdentifier;
-    /**
-     * The principal name, if known, of the subject.
-     */
-    private String principalName;
-    /**
-     * The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     */
-    private AccessPackageSubjectType subjectType;
-    /**
      * Instantiates a new AccessPackageSubject and sets the default values.
      */
     public AccessPackageSubject() {
@@ -58,7 +30,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganization getConnectedOrganization() {
-        return this.connectedOrganization;
+        return this.BackingStore.get("connectedOrganization");
     }
     /**
      * Gets the displayName property value. The display name of the subject.
@@ -66,7 +38,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the email property value. The email address of the subject.
@@ -74,7 +46,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +70,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
-        return this.objectId;
+        return this.BackingStore.get("objectId");
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
@@ -106,7 +78,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
-        return this.onPremisesSecurityIdentifier;
+        return this.BackingStore.get("onPremisesSecurityIdentifier");
     }
     /**
      * Gets the principalName property value. The principal name, if known, of the subject.
@@ -114,7 +86,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
-        return this.principalName;
+        return this.BackingStore.get("principalName");
     }
     /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
@@ -122,7 +94,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubjectType getSubjectType() {
-        return this.subjectType;
+        return this.BackingStore.get("subjectType");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganization property.
      */
     public void setConnectedOrganization(@jakarta.annotation.Nullable final ConnectedOrganization value) {
-        this.connectedOrganization = value;
+        this.BackingStore.set("connectedOrganization", value);
     }
     /**
      * Sets the displayName property value. The display name of the subject.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the email property value. The email address of the subject.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
     /**
      * Sets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
-        this.objectId = value;
+        this.BackingStore.set("objectId", value);
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.onPremisesSecurityIdentifier = value;
+        this.BackingStore.set("onPremisesSecurityIdentifier", value);
     }
     /**
      * Sets the principalName property value. The principal name, if known, of the subject.
      * @param value Value to set for the principalName property.
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.principalName = value;
+        this.BackingStore.set("principalName", value);
     }
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @param value Value to set for the subjectType property.
      */
     public void setSubjectType(@jakarta.annotation.Nullable final AccessPackageSubjectType value) {
-        this.subjectType = value;
+        this.BackingStore.set("subjectType", value);
     }
 }

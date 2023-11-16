@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeRuleMembers extends SubjectSet implements Parsable {
     /**
-     * A description of the membership rule.
-     */
-    private String description;
-    /**
-     * Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
-     */
-    private String membershipRule;
-    /**
      * Instantiates a new AttributeRuleMembers and sets the default values.
      */
     public AttributeRuleMembers() {
@@ -39,7 +31,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getMembershipRule() {
-        return this.membershipRule;
+        return this.BackingStore.get("membershipRule");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      * @param value Value to set for the membershipRule property.
      */
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
-        this.membershipRule = value;
+        this.BackingStore.set("membershipRule", value);
     }
 }

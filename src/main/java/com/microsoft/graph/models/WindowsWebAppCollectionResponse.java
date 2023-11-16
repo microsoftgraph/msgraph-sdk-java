@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsWebAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<WindowsWebApp> value;
-    /**
      * Instantiates a new WindowsWebAppCollectionResponse and sets the default values.
      */
     public WindowsWebAppCollectionResponse() {
@@ -44,7 +40,7 @@ public class WindowsWebAppCollectionResponse extends BaseCollectionPaginationCou
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsWebApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class WindowsWebAppCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<WindowsWebApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

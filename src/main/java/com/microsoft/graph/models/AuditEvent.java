@@ -14,50 +14,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
-     * Friendly name of the activity.
-     */
-    private String activity;
-    /**
-     * The date time in UTC when the activity was performed.
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * The HTTP operation type of the activity.
-     */
-    private String activityOperationType;
-    /**
-     * The result of the activity.
-     */
-    private String activityResult;
-    /**
-     * The type of activity that was being performed.
-     */
-    private String activityType;
-    /**
-     * AAD user and application that are associated with the audit event.
-     */
-    private AuditActor actor;
-    /**
-     * Audit category.
-     */
-    private String category;
-    /**
-     * Component name.
-     */
-    private String componentName;
-    /**
-     * The client request Id that is used to correlate activity within the system.
-     */
-    private UUID correlationId;
-    /**
-     * Event display name.
-     */
-    private String displayName;
-    /**
-     * Resources being modified.
-     */
-    private java.util.List<AuditResource> resources;
-    /**
      * Instantiates a new AuditEvent and sets the default values.
      */
     public AuditEvent() {
@@ -79,7 +35,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.BackingStore.get("activity");
     }
     /**
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.
@@ -87,7 +43,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the activityOperationType property value. The HTTP operation type of the activity.
@@ -95,7 +51,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivityOperationType() {
-        return this.activityOperationType;
+        return this.BackingStore.get("activityOperationType");
     }
     /**
      * Gets the activityResult property value. The result of the activity.
@@ -103,7 +59,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivityResult() {
-        return this.activityResult;
+        return this.BackingStore.get("activityResult");
     }
     /**
      * Gets the activityType property value. The type of activity that was being performed.
@@ -111,7 +67,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
-        return this.activityType;
+        return this.BackingStore.get("activityType");
     }
     /**
      * Gets the actor property value. AAD user and application that are associated with the audit event.
@@ -119,7 +75,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AuditActor getActor() {
-        return this.actor;
+        return this.BackingStore.get("actor");
     }
     /**
      * Gets the category property value. Audit category.
@@ -127,7 +83,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the componentName property value. Component name.
@@ -135,7 +91,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getComponentName() {
-        return this.componentName;
+        return this.BackingStore.get("componentName");
     }
     /**
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
@@ -143,7 +99,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getCorrelationId() {
-        return this.correlationId;
+        return this.BackingStore.get("correlationId");
     }
     /**
      * Gets the displayName property value. Event display name.
@@ -151,7 +107,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -179,7 +135,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditResource> getResources() {
-        return this.resources;
+        return this.BackingStore.get("resources");
     }
     /**
      * Serializes information the current object
@@ -205,76 +161,76 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.BackingStore.set("activity", value);
     }
     /**
      * Sets the activityDateTime property value. The date time in UTC when the activity was performed.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the activityOperationType property value. The HTTP operation type of the activity.
      * @param value Value to set for the activityOperationType property.
      */
     public void setActivityOperationType(@jakarta.annotation.Nullable final String value) {
-        this.activityOperationType = value;
+        this.BackingStore.set("activityOperationType", value);
     }
     /**
      * Sets the activityResult property value. The result of the activity.
      * @param value Value to set for the activityResult property.
      */
     public void setActivityResult(@jakarta.annotation.Nullable final String value) {
-        this.activityResult = value;
+        this.BackingStore.set("activityResult", value);
     }
     /**
      * Sets the activityType property value. The type of activity that was being performed.
      * @param value Value to set for the activityType property.
      */
     public void setActivityType(@jakarta.annotation.Nullable final String value) {
-        this.activityType = value;
+        this.BackingStore.set("activityType", value);
     }
     /**
      * Sets the actor property value. AAD user and application that are associated with the audit event.
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final AuditActor value) {
-        this.actor = value;
+        this.BackingStore.set("actor", value);
     }
     /**
      * Sets the category property value. Audit category.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the componentName property value. Component name.
      * @param value Value to set for the componentName property.
      */
     public void setComponentName(@jakarta.annotation.Nullable final String value) {
-        this.componentName = value;
+        this.BackingStore.set("componentName", value);
     }
     /**
      * Sets the correlationId property value. The client request Id that is used to correlate activity within the system.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final UUID value) {
-        this.correlationId = value;
+        this.BackingStore.set("correlationId", value);
     }
     /**
      * Sets the displayName property value. Event display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the resources property value. Resources being modified.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<AuditResource> value) {
-        this.resources = value;
+        this.BackingStore.set("resources", value);
     }
 }

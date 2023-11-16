@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfileCardProperty extends Entity implements Parsable {
     /**
-     * Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
-     */
-    private java.util.List<ProfileCardAnnotation> annotations;
-    /**
-     * Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
-     */
-    private String directoryPropertyName;
-    /**
      * Instantiates a new ProfileCardProperty and sets the default values.
      */
     public ProfileCardProperty() {
@@ -38,7 +30,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardAnnotation> getAnnotations() {
-        return this.annotations;
+        return this.BackingStore.get("annotations");
     }
     /**
      * Gets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
@@ -46,7 +38,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDirectoryPropertyName() {
-        return this.directoryPropertyName;
+        return this.BackingStore.get("directoryPropertyName");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * @param value Value to set for the annotations property.
      */
     public void setAnnotations(@jakarta.annotation.Nullable final java.util.List<ProfileCardAnnotation> value) {
-        this.annotations = value;
+        this.BackingStore.set("annotations", value);
     }
     /**
      * Sets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Microsoft Entra ID properties on the Microsoft 365 profile card within their tenant. When present, the Microsoft Entra ID field referenced in this property is visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
      * @param value Value to set for the directoryPropertyName property.
      */
     public void setDirectoryPropertyName(@jakarta.annotation.Nullable final String value) {
-        this.directoryPropertyName = value;
+        this.BackingStore.set("directoryPropertyName", value);
     }
 }

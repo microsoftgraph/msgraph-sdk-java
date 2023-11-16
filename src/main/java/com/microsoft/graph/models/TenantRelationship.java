@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TenantRelationship implements AdditionalDataHolder, Parsable {
+public class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
-     */
-    private java.util.List<DelegatedAdminCustomer> delegatedAdminCustomers;
-    /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
-     */
-    private java.util.List<DelegatedAdminRelationship> delegatedAdminRelationships;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TenantRelationship and sets the default values.
      */
     public TenantRelationship() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
@@ -55,7 +60,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminCustomer> getDelegatedAdminCustomers() {
-        return this.delegatedAdminCustomers;
+        return this.BackingStore.get("delegatedAdminCustomers");
     }
     /**
      * Gets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
@@ -63,7 +68,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationship> getDelegatedAdminRelationships() {
-        return this.delegatedAdminRelationships;
+        return this.BackingStore.get("delegatedAdminRelationships");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +88,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
      * @param value Value to set for the delegatedAdminCustomers property.
      */
     public void setDelegatedAdminCustomers(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminCustomer> value) {
-        this.delegatedAdminCustomers = value;
+        this.BackingStore.set("delegatedAdminCustomers", value);
     }
     /**
      * Sets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @param value Value to set for the delegatedAdminRelationships property.
      */
     public void setDelegatedAdminRelationships(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
-        this.delegatedAdminRelationships = value;
+        this.BackingStore.set("delegatedAdminRelationships", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

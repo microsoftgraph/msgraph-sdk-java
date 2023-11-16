@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleInstanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UnifiedRoleEligibilityScheduleInstance> value;
-    /**
      * Instantiates a new UnifiedRoleEligibilityScheduleInstanceCollectionResponse and sets the default values.
      */
     public UnifiedRoleEligibilityScheduleInstanceCollectionResponse() {
@@ -44,7 +40,7 @@ public class UnifiedRoleEligibilityScheduleInstanceCollectionResponse extends Ba
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleInstance> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UnifiedRoleEligibilityScheduleInstanceCollectionResponse extends Ba
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

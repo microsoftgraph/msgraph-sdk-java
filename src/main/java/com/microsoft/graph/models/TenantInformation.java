@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TenantInformation implements AdditionalDataHolder, Parsable {
+public class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Primary domain name of a Microsoft Entra tenant.
-     */
-    private String defaultDomainName;
-    /**
-     * Display name of a Microsoft Entra tenant.
-     */
-    private String displayName;
-    /**
-     * Name shown to users that sign in to a Microsoft Entra tenant.
-     */
-    private String federationBrandName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Unique identifier of a Microsoft Entra tenant.
-     */
-    private String tenantId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TenantInformation and sets the default values.
      */
     public TenantInformation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
@@ -63,7 +60,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
-        return this.defaultDomainName;
+        return this.BackingStore.get("defaultDomainName");
     }
     /**
      * Gets the displayName property value. Display name of a Microsoft Entra tenant.
@@ -71,7 +68,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
@@ -79,7 +76,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFederationBrandName() {
-        return this.federationBrandName;
+        return this.BackingStore.get("federationBrandName");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +98,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
@@ -109,7 +106,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
-        this.defaultDomainName = value;
+        this.BackingStore.set("defaultDomainName", value);
     }
     /**
      * Sets the displayName property value. Display name of a Microsoft Entra tenant.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @param value Value to set for the federationBrandName property.
      */
     public void setFederationBrandName(@jakarta.annotation.Nullable final String value) {
-        this.federationBrandName = value;
+        this.BackingStore.set("federationBrandName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

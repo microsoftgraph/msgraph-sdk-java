@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
-     * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     */
-    private String bundleID;
-    /**
      * Instantiates a new IosHomeScreenApp and sets the default values.
      */
     public IosHomeScreenApp() {
@@ -38,7 +34,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
-        return this.bundleID;
+        return this.BackingStore.get("bundleID");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
      * @param value Value to set for the bundleID property.
      */
     public void setBundleID(@jakarta.annotation.Nullable final String value) {
-        this.bundleID = value;
+        this.BackingStore.set("bundleID", value);
     }
 }

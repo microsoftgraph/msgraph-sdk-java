@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable {
+public class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
-     */
-    private Boolean isActive;
-    /**
-     * The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     */
-    private Long notAfter;
-    /**
-     * The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     */
-    private Long notBefore;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The certificate thumbprint.
-     */
-    private String thumbprint;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new Pkcs12CertificateInformation and sets the default values.
      */
     public Pkcs12CertificateInformation() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +74,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -85,7 +82,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Long getNotAfter() {
-        return this.notAfter;
+        return this.BackingStore.get("notAfter");
     }
     /**
      * Gets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -93,7 +90,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public Long getNotBefore() {
-        return this.notBefore;
+        return this.BackingStore.get("notBefore");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +98,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the thumbprint property value. The certificate thumbprint.
@@ -109,7 +106,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
-        return this.thumbprint;
+        return this.BackingStore.get("thumbprint");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notAfter property.
      */
     public void setNotAfter(@jakarta.annotation.Nullable final Long value) {
-        this.notAfter = value;
+        this.BackingStore.set("notAfter", value);
     }
     /**
      * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notBefore property.
      */
     public void setNotBefore(@jakarta.annotation.Nullable final Long value) {
-        this.notBefore = value;
+        this.BackingStore.set("notBefore", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the thumbprint property value. The certificate thumbprint.
      * @param value Value to set for the thumbprint property.
      */
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
-        this.thumbprint = value;
+        this.BackingStore.set("thumbprint", value);
     }
 }

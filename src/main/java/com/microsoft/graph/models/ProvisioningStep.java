@@ -4,43 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ProvisioningStep implements AdditionalDataHolder, Parsable {
+public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Summary of what occurred during the step.
-     */
-    private String description;
-    /**
-     * Details of what occurred during the step.
-     */
-    private DetailsInfo details;
-    /**
-     * Name of the step.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
-     */
-    private ProvisioningStepType provisioningStepType;
-    /**
-     * Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
-     */
-    private ProvisioningResult status;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ProvisioningStep and sets the default values.
      */
     public ProvisioningStep() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -59,7 +39,20 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the description property value. Summary of what occurred during the step.
@@ -67,7 +60,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the details property value. Details of what occurred during the step.
@@ -75,7 +68,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public DetailsInfo getDetails() {
-        return this.details;
+        return this.BackingStore.get("details");
     }
     /**
      * The deserialization information for the current model
@@ -98,7 +91,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +99,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
@@ -114,7 +107,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningStepType getProvisioningStepType() {
-        return this.provisioningStepType;
+        return this.BackingStore.get("provisioningStepType");
     }
     /**
      * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
@@ -122,7 +115,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningResult getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -143,48 +136,56 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the description property value. Summary of what occurred during the step.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the details property value. Details of what occurred during the step.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final DetailsInfo value) {
-        this.details = value;
+        this.BackingStore.set("details", value);
     }
     /**
      * Sets the name property value. Name of the step.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @param value Value to set for the provisioningStepType property.
      */
     public void setProvisioningStepType(@jakarta.annotation.Nullable final ProvisioningStepType value) {
-        this.provisioningStepType = value;
+        this.BackingStore.set("provisioningStepType", value);
     }
     /**
      * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

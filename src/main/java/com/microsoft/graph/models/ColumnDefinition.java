@@ -9,134 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ColumnDefinition extends Entity implements Parsable {
     /**
-     * This column stores boolean values.
-     */
-    private BooleanColumn booleanEscaped;
-    /**
-     * This column's data is calculated based on other columns.
-     */
-    private CalculatedColumn calculated;
-    /**
-     * This column stores data from a list of choices.
-     */
-    private ChoiceColumn choice;
-    /**
-     * For site columns, the name of the group this column belongs to. Helps organize related columns.
-     */
-    private String columnGroup;
-    /**
-     * This column stores content approval status.
-     */
-    private ContentApprovalStatusColumn contentApprovalStatus;
-    /**
-     * This column stores currency values.
-     */
-    private CurrencyColumn currency;
-    /**
-     * This column stores DateTime values.
-     */
-    private DateTimeColumn dateTime;
-    /**
-     * The default value for this column.
-     */
-    private DefaultColumnValue defaultValue;
-    /**
-     * The user-facing description of the column.
-     */
-    private String description;
-    /**
-     * The user-facing name of the column.
-     */
-    private String displayName;
-    /**
-     * If true, no two list items may have the same value for this column.
-     */
-    private Boolean enforceUniqueValues;
-    /**
-     * This column stores a geolocation.
-     */
-    private GeolocationColumn geolocation;
-    /**
-     * Specifies whether the column is displayed in the user interface.
-     */
-    private Boolean hidden;
-    /**
-     * This column stores hyperlink or picture values.
-     */
-    private HyperlinkOrPictureColumn hyperlinkOrPicture;
-    /**
-     * Specifies whether the column values can be used for sorting and searching.
-     */
-    private Boolean indexed;
-    /**
-     * Indicates whether this column can be deleted.
-     */
-    private Boolean isDeletable;
-    /**
-     * Indicates whether values in the column can be reordered. Read-only.
-     */
-    private Boolean isReorderable;
-    /**
-     * Specifies whether the column can be changed.
-     */
-    private Boolean isSealed;
-    /**
-     * This column's data is looked up from another source in the site.
-     */
-    private LookupColumn lookup;
-    /**
-     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
-     */
-    private String name;
-    /**
-     * This column stores number values.
-     */
-    private NumberColumn number;
-    /**
-     * This column stores Person or Group values.
-     */
-    private PersonOrGroupColumn personOrGroup;
-    /**
-     * If 'true', changes to this column will be propagated to lists that implement the column.
-     */
-    private Boolean propagateChanges;
-    /**
-     * Specifies whether the column values can be modified.
-     */
-    private Boolean readOnly;
-    /**
-     * Specifies whether the column value isn't optional.
-     */
-    private Boolean required;
-    /**
-     * The source column for the content type column.
-     */
-    private ColumnDefinition sourceColumn;
-    /**
-     * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
-     */
-    private ContentTypeInfo sourceContentType;
-    /**
-     * This column stores taxonomy terms.
-     */
-    private TermColumn term;
-    /**
-     * This column stores text values.
-     */
-    private TextColumn text;
-    /**
-     * This column stores thumbnail values.
-     */
-    private ThumbnailColumn thumbnail;
-    /**
-     * For site columns, the type of column. Read-only.
-     */
-    private ColumnTypes type;
-    /**
-     * This column stores validation formula and message for the column.
-     */
-    private ColumnValidation validation;
-    /**
      * Instantiates a new ColumnDefinition and sets the default values.
      */
     public ColumnDefinition() {
@@ -158,7 +30,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public BooleanColumn getBoolean() {
-        return this.booleanEscaped;
+        return this.BackingStore.get("boolean");
     }
     /**
      * Gets the calculated property value. This column's data is calculated based on other columns.
@@ -166,7 +38,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CalculatedColumn getCalculated() {
-        return this.calculated;
+        return this.BackingStore.get("calculated");
     }
     /**
      * Gets the choice property value. This column stores data from a list of choices.
@@ -174,7 +46,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChoiceColumn getChoice() {
-        return this.choice;
+        return this.BackingStore.get("choice");
     }
     /**
      * Gets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
@@ -182,7 +54,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getColumnGroup() {
-        return this.columnGroup;
+        return this.BackingStore.get("columnGroup");
     }
     /**
      * Gets the contentApprovalStatus property value. This column stores content approval status.
@@ -190,7 +62,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContentApprovalStatusColumn getContentApprovalStatus() {
-        return this.contentApprovalStatus;
+        return this.BackingStore.get("contentApprovalStatus");
     }
     /**
      * Gets the currency property value. This column stores currency values.
@@ -198,7 +70,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public CurrencyColumn getCurrency() {
-        return this.currency;
+        return this.BackingStore.get("currency");
     }
     /**
      * Gets the dateTime property value. This column stores DateTime values.
@@ -206,7 +78,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeColumn getDateTime() {
-        return this.dateTime;
+        return this.BackingStore.get("dateTime");
     }
     /**
      * Gets the defaultValue property value. The default value for this column.
@@ -214,7 +86,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DefaultColumnValue getDefaultValue() {
-        return this.defaultValue;
+        return this.BackingStore.get("defaultValue");
     }
     /**
      * Gets the description property value. The user-facing description of the column.
@@ -222,7 +94,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The user-facing name of the column.
@@ -230,7 +102,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
@@ -238,7 +110,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceUniqueValues() {
-        return this.enforceUniqueValues;
+        return this.BackingStore.get("enforceUniqueValues");
     }
     /**
      * The deserialization information for the current model
@@ -287,7 +159,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public GeolocationColumn getGeolocation() {
-        return this.geolocation;
+        return this.BackingStore.get("geolocation");
     }
     /**
      * Gets the hidden property value. Specifies whether the column is displayed in the user interface.
@@ -295,7 +167,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.BackingStore.get("hidden");
     }
     /**
      * Gets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
@@ -303,7 +175,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public HyperlinkOrPictureColumn getHyperlinkOrPicture() {
-        return this.hyperlinkOrPicture;
+        return this.BackingStore.get("hyperlinkOrPicture");
     }
     /**
      * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
@@ -311,7 +183,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIndexed() {
-        return this.indexed;
+        return this.BackingStore.get("indexed");
     }
     /**
      * Gets the isDeletable property value. Indicates whether this column can be deleted.
@@ -319,7 +191,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeletable() {
-        return this.isDeletable;
+        return this.BackingStore.get("isDeletable");
     }
     /**
      * Gets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
@@ -327,7 +199,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReorderable() {
-        return this.isReorderable;
+        return this.BackingStore.get("isReorderable");
     }
     /**
      * Gets the isSealed property value. Specifies whether the column can be changed.
@@ -335,7 +207,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSealed() {
-        return this.isSealed;
+        return this.BackingStore.get("isSealed");
     }
     /**
      * Gets the lookup property value. This column's data is looked up from another source in the site.
@@ -343,7 +215,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LookupColumn getLookup() {
-        return this.lookup;
+        return this.BackingStore.get("lookup");
     }
     /**
      * Gets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
@@ -351,7 +223,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the number property value. This column stores number values.
@@ -359,7 +231,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public NumberColumn getNumber() {
-        return this.number;
+        return this.BackingStore.get("number");
     }
     /**
      * Gets the personOrGroup property value. This column stores Person or Group values.
@@ -367,7 +239,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PersonOrGroupColumn getPersonOrGroup() {
-        return this.personOrGroup;
+        return this.BackingStore.get("personOrGroup");
     }
     /**
      * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
@@ -375,7 +247,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getPropagateChanges() {
-        return this.propagateChanges;
+        return this.BackingStore.get("propagateChanges");
     }
     /**
      * Gets the readOnly property value. Specifies whether the column values can be modified.
@@ -383,7 +255,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getReadOnly() {
-        return this.readOnly;
+        return this.BackingStore.get("readOnly");
     }
     /**
      * Gets the required property value. Specifies whether the column value isn't optional.
@@ -391,7 +263,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
-        return this.required;
+        return this.BackingStore.get("required");
     }
     /**
      * Gets the sourceColumn property value. The source column for the content type column.
@@ -399,7 +271,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ColumnDefinition getSourceColumn() {
-        return this.sourceColumn;
+        return this.BackingStore.get("sourceColumn");
     }
     /**
      * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
@@ -407,7 +279,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getSourceContentType() {
-        return this.sourceContentType;
+        return this.BackingStore.get("sourceContentType");
     }
     /**
      * Gets the term property value. This column stores taxonomy terms.
@@ -415,7 +287,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TermColumn getTerm() {
-        return this.term;
+        return this.BackingStore.get("term");
     }
     /**
      * Gets the text property value. This column stores text values.
@@ -423,7 +295,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TextColumn getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the thumbnail property value. This column stores thumbnail values.
@@ -431,7 +303,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ThumbnailColumn getThumbnail() {
-        return this.thumbnail;
+        return this.BackingStore.get("thumbnail");
     }
     /**
      * Gets the type property value. For site columns, the type of column. Read-only.
@@ -439,7 +311,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ColumnTypes getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Gets the validation property value. This column stores validation formula and message for the column.
@@ -447,7 +319,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ColumnValidation getValidation() {
-        return this.validation;
+        return this.BackingStore.get("validation");
     }
     /**
      * Serializes information the current object
@@ -494,223 +366,223 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the boolean property.
      */
     public void setBoolean(@jakarta.annotation.Nullable final BooleanColumn value) {
-        this.booleanEscaped = value;
+        this.BackingStore.set("boolean", value);
     }
     /**
      * Sets the calculated property value. This column's data is calculated based on other columns.
      * @param value Value to set for the calculated property.
      */
     public void setCalculated(@jakarta.annotation.Nullable final CalculatedColumn value) {
-        this.calculated = value;
+        this.BackingStore.set("calculated", value);
     }
     /**
      * Sets the choice property value. This column stores data from a list of choices.
      * @param value Value to set for the choice property.
      */
     public void setChoice(@jakarta.annotation.Nullable final ChoiceColumn value) {
-        this.choice = value;
+        this.BackingStore.set("choice", value);
     }
     /**
      * Sets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
      * @param value Value to set for the columnGroup property.
      */
     public void setColumnGroup(@jakarta.annotation.Nullable final String value) {
-        this.columnGroup = value;
+        this.BackingStore.set("columnGroup", value);
     }
     /**
      * Sets the contentApprovalStatus property value. This column stores content approval status.
      * @param value Value to set for the contentApprovalStatus property.
      */
     public void setContentApprovalStatus(@jakarta.annotation.Nullable final ContentApprovalStatusColumn value) {
-        this.contentApprovalStatus = value;
+        this.BackingStore.set("contentApprovalStatus", value);
     }
     /**
      * Sets the currency property value. This column stores currency values.
      * @param value Value to set for the currency property.
      */
     public void setCurrency(@jakarta.annotation.Nullable final CurrencyColumn value) {
-        this.currency = value;
+        this.BackingStore.set("currency", value);
     }
     /**
      * Sets the dateTime property value. This column stores DateTime values.
      * @param value Value to set for the dateTime property.
      */
     public void setDateTime(@jakarta.annotation.Nullable final DateTimeColumn value) {
-        this.dateTime = value;
+        this.BackingStore.set("dateTime", value);
     }
     /**
      * Sets the defaultValue property value. The default value for this column.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final DefaultColumnValue value) {
-        this.defaultValue = value;
+        this.BackingStore.set("defaultValue", value);
     }
     /**
      * Sets the description property value. The user-facing description of the column.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The user-facing name of the column.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
      * @param value Value to set for the enforceUniqueValues property.
      */
     public void setEnforceUniqueValues(@jakarta.annotation.Nullable final Boolean value) {
-        this.enforceUniqueValues = value;
+        this.BackingStore.set("enforceUniqueValues", value);
     }
     /**
      * Sets the geolocation property value. This column stores a geolocation.
      * @param value Value to set for the geolocation property.
      */
     public void setGeolocation(@jakarta.annotation.Nullable final GeolocationColumn value) {
-        this.geolocation = value;
+        this.BackingStore.set("geolocation", value);
     }
     /**
      * Sets the hidden property value. Specifies whether the column is displayed in the user interface.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.BackingStore.set("hidden", value);
     }
     /**
      * Sets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
      * @param value Value to set for the hyperlinkOrPicture property.
      */
     public void setHyperlinkOrPicture(@jakarta.annotation.Nullable final HyperlinkOrPictureColumn value) {
-        this.hyperlinkOrPicture = value;
+        this.BackingStore.set("hyperlinkOrPicture", value);
     }
     /**
      * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @param value Value to set for the indexed property.
      */
     public void setIndexed(@jakarta.annotation.Nullable final Boolean value) {
-        this.indexed = value;
+        this.BackingStore.set("indexed", value);
     }
     /**
      * Sets the isDeletable property value. Indicates whether this column can be deleted.
      * @param value Value to set for the isDeletable property.
      */
     public void setIsDeletable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeletable = value;
+        this.BackingStore.set("isDeletable", value);
     }
     /**
      * Sets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
      * @param value Value to set for the isReorderable property.
      */
     public void setIsReorderable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReorderable = value;
+        this.BackingStore.set("isReorderable", value);
     }
     /**
      * Sets the isSealed property value. Specifies whether the column can be changed.
      * @param value Value to set for the isSealed property.
      */
     public void setIsSealed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSealed = value;
+        this.BackingStore.set("isSealed", value);
     }
     /**
      * Sets the lookup property value. This column's data is looked up from another source in the site.
      * @param value Value to set for the lookup property.
      */
     public void setLookup(@jakarta.annotation.Nullable final LookupColumn value) {
-        this.lookup = value;
+        this.BackingStore.set("lookup", value);
     }
     /**
      * Sets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the number property value. This column stores number values.
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final NumberColumn value) {
-        this.number = value;
+        this.BackingStore.set("number", value);
     }
     /**
      * Sets the personOrGroup property value. This column stores Person or Group values.
      * @param value Value to set for the personOrGroup property.
      */
     public void setPersonOrGroup(@jakarta.annotation.Nullable final PersonOrGroupColumn value) {
-        this.personOrGroup = value;
+        this.BackingStore.set("personOrGroup", value);
     }
     /**
      * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      * @param value Value to set for the propagateChanges property.
      */
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {
-        this.propagateChanges = value;
+        this.BackingStore.set("propagateChanges", value);
     }
     /**
      * Sets the readOnly property value. Specifies whether the column values can be modified.
      * @param value Value to set for the readOnly property.
      */
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.readOnly = value;
+        this.BackingStore.set("readOnly", value);
     }
     /**
      * Sets the required property value. Specifies whether the column value isn't optional.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
-        this.required = value;
+        this.BackingStore.set("required", value);
     }
     /**
      * Sets the sourceColumn property value. The source column for the content type column.
      * @param value Value to set for the sourceColumn property.
      */
     public void setSourceColumn(@jakarta.annotation.Nullable final ColumnDefinition value) {
-        this.sourceColumn = value;
+        this.BackingStore.set("sourceColumn", value);
     }
     /**
      * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      * @param value Value to set for the sourceContentType property.
      */
     public void setSourceContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
-        this.sourceContentType = value;
+        this.BackingStore.set("sourceContentType", value);
     }
     /**
      * Sets the term property value. This column stores taxonomy terms.
      * @param value Value to set for the term property.
      */
     public void setTerm(@jakarta.annotation.Nullable final TermColumn value) {
-        this.term = value;
+        this.BackingStore.set("term", value);
     }
     /**
      * Sets the text property value. This column stores text values.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final TextColumn value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the thumbnail property value. This column stores thumbnail values.
      * @param value Value to set for the thumbnail property.
      */
     public void setThumbnail(@jakarta.annotation.Nullable final ThumbnailColumn value) {
-        this.thumbnail = value;
+        this.BackingStore.set("thumbnail", value);
     }
     /**
      * Sets the type property value. For site columns, the type of column. Read-only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final ColumnTypes value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
     /**
      * Sets the validation property value. This column stores validation formula and message for the column.
      * @param value Value to set for the validation property.
      */
     public void setValidation(@jakarta.annotation.Nullable final ColumnValidation value) {
-        this.validation = value;
+        this.BackingStore.set("validation", value);
     }
 }

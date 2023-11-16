@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
-     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
-     */
-    private java.util.List<PermissionGrantConditionSet> excludes;
-    /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
-     */
-    private java.util.List<PermissionGrantConditionSet> includes;
-    /**
      * Instantiates a new PermissionGrantPolicy and sets the default values.
      */
     public PermissionGrantPolicy() {
@@ -39,7 +31,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getExcludes() {
-        return this.excludes;
+        return this.BackingStore.get("excludes");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantConditionSet> getIncludes() {
-        return this.includes;
+        return this.BackingStore.get("includes");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the excludes property.
      */
     public void setExcludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
-        this.excludes = value;
+        this.BackingStore.set("excludes", value);
     }
     /**
      * Sets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      * @param value Value to set for the includes property.
      */
     public void setIncludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
-        this.includes = value;
+        this.BackingStore.set("includes", value);
     }
 }

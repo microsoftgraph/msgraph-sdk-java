@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
     /**
-     * The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The data (payload) for the operation. Read-only.
-     */
-    private String data;
-    /**
-     * The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The operationType property
-     */
-    private DelegatedAdminRelationshipOperationType operationType;
-    /**
-     * The status property
-     */
-    private LongRunningOperationStatus status;
-    /**
      * Instantiates a new DelegatedAdminRelationshipOperation and sets the default values.
      */
     public DelegatedAdminRelationshipOperation() {
@@ -51,7 +31,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the data property value. The data (payload) for the operation. Read-only.
@@ -59,7 +39,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getData() {
-        return this.data;
+        return this.BackingStore.get("data");
     }
     /**
      * The deserialization information for the current model
@@ -81,7 +61,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the operationType property value. The operationType property
@@ -89,7 +69,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipOperationType getOperationType() {
-        return this.operationType;
+        return this.BackingStore.get("operationType");
     }
     /**
      * Gets the status property value. The status property
@@ -97,7 +77,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the data property value. The data (payload) for the operation. Read-only.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final String value) {
-        this.data = value;
+        this.BackingStore.set("data", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final DelegatedAdminRelationshipOperationType value) {
-        this.operationType = value;
+        this.BackingStore.set("operationType", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

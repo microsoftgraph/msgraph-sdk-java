@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileAttachment extends Attachment implements Parsable {
     /**
-     * The base64-encoded contents of the file.
-     */
-    private byte[] contentBytes;
-    /**
-     * The ID of the attachment in the Exchange store.
-     */
-    private String contentId;
-    /**
-     * Don't use this property as it isn't supported.
-     */
-    private String contentLocation;
-    /**
      * Instantiates a new FileAttachment and sets the default values.
      */
     public FileAttachment() {
@@ -43,7 +31,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
-        return this.contentBytes;
+        return this.BackingStore.get("contentBytes");
     }
     /**
      * Gets the contentId property value. The ID of the attachment in the Exchange store.
@@ -51,7 +39,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
-        return this.contentId;
+        return this.BackingStore.get("contentId");
     }
     /**
      * Gets the contentLocation property value. Don't use this property as it isn't supported.
@@ -59,7 +47,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentLocation() {
-        return this.contentLocation;
+        return this.BackingStore.get("contentLocation");
     }
     /**
      * The deserialization information for the current model
@@ -89,20 +77,20 @@ public class FileAttachment extends Attachment implements Parsable {
      * @param value Value to set for the contentBytes property.
      */
     public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
-        this.contentBytes = value;
+        this.BackingStore.set("contentBytes", value);
     }
     /**
      * Sets the contentId property value. The ID of the attachment in the Exchange store.
      * @param value Value to set for the contentId property.
      */
     public void setContentId(@jakarta.annotation.Nullable final String value) {
-        this.contentId = value;
+        this.BackingStore.set("contentId", value);
     }
     /**
      * Sets the contentLocation property value. Don't use this property as it isn't supported.
      * @param value Value to set for the contentLocation property.
      */
     public void setContentLocation(@jakarta.annotation.Nullable final String value) {
-        this.contentLocation = value;
+        this.BackingStore.set("contentLocation", value);
     }
 }

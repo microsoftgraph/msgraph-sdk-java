@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintService extends Entity implements Parsable {
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
-     */
-    private java.util.List<PrintServiceEndpoint> endpoints;
-    /**
      * Instantiates a new PrintService and sets the default values.
      */
     public PrintService() {
@@ -34,7 +30,7 @@ public class PrintService extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintServiceEndpoint> getEndpoints() {
-        return this.endpoints;
+        return this.BackingStore.get("endpoints");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class PrintService extends Entity implements Parsable {
      * @param value Value to set for the endpoints property.
      */
     public void setEndpoints(@jakarta.annotation.Nullable final java.util.List<PrintServiceEndpoint> value) {
-        this.endpoints = value;
+        this.BackingStore.set("endpoints", value);
     }
 }

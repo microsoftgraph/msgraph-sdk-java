@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The decision property
-     */
-    private String decision;
-    /**
-     * The justification property
-     */
-    private String justification;
-    /**
-     * The principalId property
-     */
-    private String principalId;
-    /**
-     * The resourceId property
-     */
-    private String resourceId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new BatchRecordDecisionsPostRequestBody and sets the default values.
      */
     public BatchRecordDecisionsPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the decision property value. The decision property
@@ -59,7 +60,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getDecision() {
-        return this.decision;
+        return this.BackingStore.get("decision");
     }
     /**
      * The deserialization information for the current model
@@ -80,7 +81,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
-        return this.justification;
+        return this.BackingStore.get("justification");
     }
     /**
      * Gets the principalId property value. The principalId property
@@ -88,7 +89,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
-        return this.principalId;
+        return this.BackingStore.get("principalId");
     }
     /**
      * Gets the resourceId property value. The resourceId property
@@ -96,7 +97,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.BackingStore.get("resourceId");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
      */
     public void setDecision(@jakarta.annotation.Nullable final String value) {
-        this.decision = value;
+        this.BackingStore.set("decision", value);
     }
     /**
      * Sets the justification property value. The justification property
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
-        this.justification = value;
+        this.BackingStore.set("justification", value);
     }
     /**
      * Sets the principalId property value. The principalId property
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.principalId = value;
+        this.BackingStore.set("principalId", value);
     }
     /**
      * Sets the resourceId property value. The resourceId property
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.BackingStore.set("resourceId", value);
     }
 }

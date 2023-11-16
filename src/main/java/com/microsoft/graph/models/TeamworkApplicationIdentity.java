@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkApplicationIdentity extends Identity implements Parsable {
     /**
-     * Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     */
-    private TeamworkApplicationIdentityType applicationIdentityType;
-    /**
      * Instantiates a new TeamworkApplicationIdentity and sets the default values.
      */
     public TeamworkApplicationIdentity() {
@@ -35,7 +31,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamworkApplicationIdentityType getApplicationIdentityType() {
-        return this.applicationIdentityType;
+        return this.BackingStore.get("applicationIdentityType");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      * @param value Value to set for the applicationIdentityType property.
      */
     public void setApplicationIdentityType(@jakarta.annotation.Nullable final TeamworkApplicationIdentityType value) {
-        this.applicationIdentityType = value;
+        this.BackingStore.set("applicationIdentityType", value);
     }
 }

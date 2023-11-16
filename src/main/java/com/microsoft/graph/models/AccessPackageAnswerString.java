@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAnswerString extends AccessPackageAnswer implements Parsable {
     /**
-     * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
-     */
-    private String value;
-    /**
      * Instantiates a new AccessPackageAnswerString and sets the default values.
      */
     public AccessPackageAnswerString() {
@@ -45,7 +41,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

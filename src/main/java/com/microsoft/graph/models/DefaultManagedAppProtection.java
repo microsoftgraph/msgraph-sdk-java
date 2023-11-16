@@ -12,54 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable {
     /**
-     * Represents the level to which app data is encrypted for managed apps
-     */
-    private ManagedAppDataEncryptionType appDataEncryptionType;
-    /**
-     * List of apps to which the policy is deployed.
-     */
-    private java.util.List<ManagedMobileApp> apps;
-    /**
-     * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     */
-    private java.util.List<KeyValuePair> customSettings;
-    /**
-     * Count of apps to which the current policy is deployed.
-     */
-    private Integer deployedAppCount;
-    /**
-     * Navigation property to deployment summary of the configuration.
-     */
-    private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /**
-     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-     */
-    private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
-    /**
-     * Indicates whether managed-app data should be encrypted. (Android only)
-     */
-    private Boolean encryptAppData;
-    /**
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-     */
-    private Boolean faceIdBlocked;
-    /**
-     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
-     */
-    private String minimumRequiredPatchVersion;
-    /**
-     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-     */
-    private String minimumRequiredSdkVersion;
-    /**
-     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-     */
-    private String minimumWarningPatchVersion;
-    /**
-     * Indicates whether screen capture is blocked. (Android only)
-     */
-    private Boolean screenCaptureBlocked;
-    /**
      * Instantiates a new DefaultManagedAppProtection and sets the default values.
      */
     public DefaultManagedAppProtection() {
@@ -82,7 +34,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
-        return this.appDataEncryptionType;
+        return this.BackingStore.get("appDataEncryptionType");
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
@@ -90,7 +42,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this.apps;
+        return this.BackingStore.get("apps");
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
@@ -98,7 +50,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
-        return this.customSettings;
+        return this.BackingStore.get("customSettings");
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -106,7 +58,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this.deployedAppCount;
+        return this.BackingStore.get("deployedAppCount");
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -114,7 +66,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this.deploymentSummary;
+        return this.BackingStore.get("deploymentSummary");
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -122,7 +74,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
-        return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return this.BackingStore.get("disableAppEncryptionIfDeviceEncryptionIsEnabled");
     }
     /**
      * Gets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
@@ -130,7 +82,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
-        return this.encryptAppData;
+        return this.BackingStore.get("encryptAppData");
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -138,7 +90,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
-        return this.faceIdBlocked;
+        return this.BackingStore.get("faceIdBlocked");
     }
     /**
      * The deserialization information for the current model
@@ -167,7 +119,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
-        return this.minimumRequiredPatchVersion;
+        return this.BackingStore.get("minimumRequiredPatchVersion");
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -175,7 +127,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
-        return this.minimumRequiredSdkVersion;
+        return this.BackingStore.get("minimumRequiredSdkVersion");
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -183,7 +135,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
-        return this.minimumWarningPatchVersion;
+        return this.BackingStore.get("minimumWarningPatchVersion");
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
@@ -191,7 +143,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this.screenCaptureBlocked;
+        return this.BackingStore.get("screenCaptureBlocked");
     }
     /**
      * Serializes information the current object
@@ -218,83 +170,83 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appDataEncryptionType property.
      */
     public void setAppDataEncryptionType(@jakarta.annotation.Nullable final ManagedAppDataEncryptionType value) {
-        this.appDataEncryptionType = value;
+        this.BackingStore.set("appDataEncryptionType", value);
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
      */
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this.apps = value;
+        this.BackingStore.set("apps", value);
     }
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      * @param value Value to set for the customSettings property.
      */
     public void setCustomSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.customSettings = value;
+        this.BackingStore.set("customSettings", value);
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.deployedAppCount = value;
+        this.BackingStore.set("deployedAppCount", value);
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      */
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this.deploymentSummary = value;
+        this.BackingStore.set("deploymentSummary", value);
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      */
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
+        this.BackingStore.set("disableAppEncryptionIfDeviceEncryptionIsEnabled", value);
     }
     /**
      * Sets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
      * @param value Value to set for the encryptAppData property.
      */
     public void setEncryptAppData(@jakarta.annotation.Nullable final Boolean value) {
-        this.encryptAppData = value;
+        this.BackingStore.set("encryptAppData", value);
     }
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      * @param value Value to set for the faceIdBlocked property.
      */
     public void setFaceIdBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.faceIdBlocked = value;
+        this.BackingStore.set("faceIdBlocked", value);
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      * @param value Value to set for the minimumRequiredPatchVersion property.
      */
     public void setMinimumRequiredPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredPatchVersion = value;
+        this.BackingStore.set("minimumRequiredPatchVersion", value);
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      * @param value Value to set for the minimumRequiredSdkVersion property.
      */
     public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumRequiredSdkVersion = value;
+        this.BackingStore.set("minimumRequiredSdkVersion", value);
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      * @param value Value to set for the minimumWarningPatchVersion property.
      */
     public void setMinimumWarningPatchVersion(@jakarta.annotation.Nullable final String value) {
-        this.minimumWarningPatchVersion = value;
+        this.BackingStore.set("minimumWarningPatchVersion", value);
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
      * @param value Value to set for the screenCaptureBlocked property.
      */
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.screenCaptureBlocked = value;
+        this.BackingStore.set("screenCaptureBlocked", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SingleUser extends SubjectSet implements Parsable {
     /**
-     * The name of the user in Microsoft Entra ID. Read only.
-     */
-    private String description;
-    /**
-     * The ID of the user in Microsoft Entra ID.
-     */
-    private String userId;
-    /**
      * Instantiates a new SingleUser and sets the default values.
      */
     public SingleUser() {
@@ -39,7 +31,7 @@ public class SingleUser extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class SingleUser extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.BackingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class SingleUser extends SubjectSet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the userId property value. The ID of the user in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.BackingStore.set("userId", value);
     }
 }

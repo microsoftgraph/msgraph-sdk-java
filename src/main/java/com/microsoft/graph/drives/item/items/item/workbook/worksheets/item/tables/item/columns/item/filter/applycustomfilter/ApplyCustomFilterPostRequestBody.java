@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The criteria1 property
-     */
-    private String criteria1;
-    /**
-     * The criteria2 property
-     */
-    private String criteria2;
-    /**
-     * The oper property
-     */
-    private String oper;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ApplyCustomFilterPostRequestBody and sets the default values.
      */
     public ApplyCustomFilterPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the criteria1 property value. The criteria1 property
@@ -55,7 +60,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getCriteria1() {
-        return this.criteria1;
+        return this.BackingStore.get("criteria1");
     }
     /**
      * Gets the criteria2 property value. The criteria2 property
@@ -63,7 +68,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getCriteria2() {
-        return this.criteria2;
+        return this.BackingStore.get("criteria2");
     }
     /**
      * The deserialization information for the current model
@@ -83,7 +88,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public String getOper() {
-        return this.oper;
+        return this.BackingStore.get("oper");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the criteria1 property value. The criteria1 property
      * @param value Value to set for the criteria1 property.
      */
     public void setCriteria1(@jakarta.annotation.Nullable final String value) {
-        this.criteria1 = value;
+        this.BackingStore.set("criteria1", value);
     }
     /**
      * Sets the criteria2 property value. The criteria2 property
      * @param value Value to set for the criteria2 property.
      */
     public void setCriteria2(@jakarta.annotation.Nullable final String value) {
-        this.criteria2 = value;
+        this.BackingStore.set("criteria2", value);
     }
     /**
      * Sets the oper property value. The oper property
      * @param value Value to set for the oper property.
      */
     public void setOper(@jakarta.annotation.Nullable final String value) {
-        this.oper = value;
+        this.BackingStore.set("oper", value);
     }
 }

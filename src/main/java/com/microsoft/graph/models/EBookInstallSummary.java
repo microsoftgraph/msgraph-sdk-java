@@ -12,30 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EBookInstallSummary extends Entity implements Parsable {
     /**
-     * Number of Devices that have failed to install this book.
-     */
-    private Integer failedDeviceCount;
-    /**
-     * Number of Users that have 1 or more device that failed to install this book.
-     */
-    private Integer failedUserCount;
-    /**
-     * Number of Devices that have successfully installed this book.
-     */
-    private Integer installedDeviceCount;
-    /**
-     * Number of Users whose devices have all succeeded to install this book.
-     */
-    private Integer installedUserCount;
-    /**
-     * Number of Devices that does not have this book installed.
-     */
-    private Integer notInstalledDeviceCount;
-    /**
-     * Number of Users that did not install this book.
-     */
-    private Integer notInstalledUserCount;
-    /**
      * Instantiates a new EBookInstallSummary and sets the default values.
      */
     public EBookInstallSummary() {
@@ -57,7 +33,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this.failedDeviceCount;
+        return this.BackingStore.get("failedDeviceCount");
     }
     /**
      * Gets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this book.
@@ -65,7 +41,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUserCount() {
-        return this.failedUserCount;
+        return this.BackingStore.get("failedUserCount");
     }
     /**
      * The deserialization information for the current model
@@ -88,7 +64,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
-        return this.installedDeviceCount;
+        return this.BackingStore.get("installedDeviceCount");
     }
     /**
      * Gets the installedUserCount property value. Number of Users whose devices have all succeeded to install this book.
@@ -96,7 +72,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledUserCount() {
-        return this.installedUserCount;
+        return this.BackingStore.get("installedUserCount");
     }
     /**
      * Gets the notInstalledDeviceCount property value. Number of Devices that does not have this book installed.
@@ -104,7 +80,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
-        return this.notInstalledDeviceCount;
+        return this.BackingStore.get("notInstalledDeviceCount");
     }
     /**
      * Gets the notInstalledUserCount property value. Number of Users that did not install this book.
@@ -112,7 +88,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledUserCount() {
-        return this.notInstalledUserCount;
+        return this.BackingStore.get("notInstalledUserCount");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the failedDeviceCount property.
      */
     public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedDeviceCount = value;
+        this.BackingStore.set("failedDeviceCount", value);
     }
     /**
      * Sets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this book.
      * @param value Value to set for the failedUserCount property.
      */
     public void setFailedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedUserCount = value;
+        this.BackingStore.set("failedUserCount", value);
     }
     /**
      * Sets the installedDeviceCount property value. Number of Devices that have successfully installed this book.
      * @param value Value to set for the installedDeviceCount property.
      */
     public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.installedDeviceCount = value;
+        this.BackingStore.set("installedDeviceCount", value);
     }
     /**
      * Sets the installedUserCount property value. Number of Users whose devices have all succeeded to install this book.
      * @param value Value to set for the installedUserCount property.
      */
     public void setInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.installedUserCount = value;
+        this.BackingStore.set("installedUserCount", value);
     }
     /**
      * Sets the notInstalledDeviceCount property value. Number of Devices that does not have this book installed.
      * @param value Value to set for the notInstalledDeviceCount property.
      */
     public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notInstalledDeviceCount = value;
+        this.BackingStore.set("notInstalledDeviceCount", value);
     }
     /**
      * Sets the notInstalledUserCount property value. Number of Users that did not install this book.
      * @param value Value to set for the notInstalledUserCount property.
      */
     public void setNotInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.notInstalledUserCount = value;
+        this.BackingStore.set("notInstalledUserCount", value);
     }
 }

@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppInstallation extends Entity implements Parsable {
     /**
-     * The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
-     */
-    private TeamsAppPermissionSet consentedPermissionSet;
-    /**
-     * The app that is installed.
-     */
-    private TeamsApp teamsApp;
-    /**
-     * The details of this version of the app.
-     */
-    private TeamsAppDefinition teamsAppDefinition;
-    /**
      * Instantiates a new TeamsAppInstallation and sets the default values.
      */
     public TeamsAppInstallation() {
@@ -49,7 +37,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAppPermissionSet getConsentedPermissionSet() {
-        return this.consentedPermissionSet;
+        return this.BackingStore.get("consentedPermissionSet");
     }
     /**
      * The deserialization information for the current model
@@ -69,7 +57,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
-        return this.teamsApp;
+        return this.BackingStore.get("teamsApp");
     }
     /**
      * Gets the teamsAppDefinition property value. The details of this version of the app.
@@ -77,7 +65,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAppDefinition getTeamsAppDefinition() {
-        return this.teamsAppDefinition;
+        return this.BackingStore.get("teamsAppDefinition");
     }
     /**
      * Serializes information the current object
@@ -95,20 +83,20 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      * @param value Value to set for the consentedPermissionSet property.
      */
     public void setConsentedPermissionSet(@jakarta.annotation.Nullable final TeamsAppPermissionSet value) {
-        this.consentedPermissionSet = value;
+        this.BackingStore.set("consentedPermissionSet", value);
     }
     /**
      * Sets the teamsApp property value. The app that is installed.
      * @param value Value to set for the teamsApp property.
      */
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {
-        this.teamsApp = value;
+        this.BackingStore.set("teamsApp", value);
     }
     /**
      * Sets the teamsAppDefinition property value. The details of this version of the app.
      * @param value Value to set for the teamsAppDefinition property.
      */
     public void setTeamsAppDefinition(@jakarta.annotation.Nullable final TeamsAppDefinition value) {
-        this.teamsAppDefinition = value;
+        this.BackingStore.set("teamsAppDefinition", value);
     }
 }

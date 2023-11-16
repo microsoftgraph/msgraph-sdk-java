@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The secret key of the method. Always returns null.
-     */
-    private String secretKey;
-    /**
      * Instantiates a new SoftwareOathAuthenticationMethod and sets the default values.
      */
     public SoftwareOathAuthenticationMethod() {
@@ -45,7 +41,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      */
     @jakarta.annotation.Nullable
     public String getSecretKey() {
-        return this.secretKey;
+        return this.BackingStore.get("secretKey");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param value Value to set for the secretKey property.
      */
     public void setSecretKey(@jakarta.annotation.Nullable final String value) {
-        this.secretKey = value;
+        this.BackingStore.set("secretKey", value);
     }
 }

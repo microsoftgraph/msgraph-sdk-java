@@ -10,34 +10,6 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationTemplate extends Entity implements Parsable {
     /**
-     * Identifier of the application this template belongs to.
-     */
-    private UUID applicationId;
-    /**
-     * true if this template is recommended to be the default for the application.
-     */
-    private Boolean defaultEscaped;
-    /**
-     * Description of the template.
-     */
-    private String description;
-    /**
-     * true if this template should appear in the collection of templates available for the application instance (service principal).
-     */
-    private Boolean discoverable;
-    /**
-     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
-     */
-    private String factoryTag;
-    /**
-     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     */
-    private java.util.List<SynchronizationMetadataEntry> metadata;
-    /**
-     * Default synchronization schema for the jobs based on this template.
-     */
-    private SynchronizationSchema schema;
-    /**
      * Instantiates a new SynchronizationTemplate and sets the default values.
      */
     public SynchronizationTemplate() {
@@ -59,7 +31,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getApplicationId() {
-        return this.applicationId;
+        return this.BackingStore.get("applicationId");
     }
     /**
      * Gets the default property value. true if this template is recommended to be the default for the application.
@@ -67,7 +39,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getDefault() {
-        return this.defaultEscaped;
+        return this.BackingStore.get("default");
     }
     /**
      * Gets the description property value. Description of the template.
@@ -75,7 +47,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
@@ -83,7 +55,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscoverable() {
-        return this.discoverable;
+        return this.BackingStore.get("discoverable");
     }
     /**
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
@@ -91,7 +63,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFactoryTag() {
-        return this.factoryTag;
+        return this.BackingStore.get("factoryTag");
     }
     /**
      * The deserialization information for the current model
@@ -115,7 +87,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationMetadataEntry> getMetadata() {
-        return this.metadata;
+        return this.BackingStore.get("metadata");
     }
     /**
      * Gets the schema property value. Default synchronization schema for the jobs based on this template.
@@ -123,7 +95,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {
-        return this.schema;
+        return this.BackingStore.get("schema");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the applicationId property.
      */
     public void setApplicationId(@jakarta.annotation.Nullable final UUID value) {
-        this.applicationId = value;
+        this.BackingStore.set("applicationId", value);
     }
     /**
      * Sets the default property value. true if this template is recommended to be the default for the application.
      * @param value Value to set for the default property.
      */
     public void setDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.defaultEscaped = value;
+        this.BackingStore.set("default", value);
     }
     /**
      * Sets the description property value. Description of the template.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @param value Value to set for the discoverable property.
      */
     public void setDiscoverable(@jakarta.annotation.Nullable final Boolean value) {
-        this.discoverable = value;
+        this.BackingStore.set("discoverable", value);
     }
     /**
      * Sets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @param value Value to set for the factoryTag property.
      */
     public void setFactoryTag(@jakarta.annotation.Nullable final String value) {
-        this.factoryTag = value;
+        this.BackingStore.set("factoryTag", value);
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<SynchronizationMetadataEntry> value) {
-        this.metadata = value;
+        this.BackingStore.set("metadata", value);
     }
     /**
      * Sets the schema property value. Default synchronization schema for the jobs based on this template.
      * @param value Value to set for the schema property.
      */
     public void setSchema(@jakarta.annotation.Nullable final SynchronizationSchema value) {
-        this.schema = value;
+        this.BackingStore.set("schema", value);
     }
 }

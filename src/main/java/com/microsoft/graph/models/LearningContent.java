@@ -11,78 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningContent extends Entity implements Parsable {
     /**
-     * Keywords, topics, and other tags associated with the learning content. Optional.
-     */
-    private java.util.List<String> additionalTags;
-    /**
-     * The content web URL for the learning content. Required.
-     */
-    private String contentWebUrl;
-    /**
-     * The authors, creators, or contributors of the learning content. Optional.
-     */
-    private java.util.List<String> contributors;
-    /**
-     * The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description or summary for the learning content. Optional.
-     */
-    private String description;
-    /**
-     * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
-     */
-    private PeriodAndDuration duration;
-    /**
-     * Unique external content ID for the learning content. Required.
-     */
-    private String externalId;
-    /**
-     * The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
-     */
-    private String format;
-    /**
-     * Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
-     */
-    private Boolean isActive;
-    /**
-     * Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
-     */
-    private Boolean isPremium;
-    /**
-     * Indicates whether the learning content is searchable or not. The default value is true. Optional.
-     */
-    private Boolean isSearchable;
-    /**
-     * The language of the learning content, for example, en-us or fr-fr. Required.
-     */
-    private String languageTag;
-    /**
-     * The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The number of pages of the learning content, for example, 9. Optional.
-     */
-    private Integer numberOfPages;
-    /**
-     * The skills tags associated with the learning content. Optional.
-     */
-    private java.util.List<String> skillTags;
-    /**
-     * The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
-     */
-    private String sourceName;
-    /**
-     * The URL of learning content thumbnail image. Optional.
-     */
-    private String thumbnailWebUrl;
-    /**
-     * The title of the learning content. Required.
-     */
-    private String title;
-    /**
      * Instantiates a new LearningContent and sets the default values.
      */
     public LearningContent() {
@@ -104,7 +32,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdditionalTags() {
-        return this.additionalTags;
+        return this.BackingStore.get("additionalTags");
     }
     /**
      * Gets the contentWebUrl property value. The content web URL for the learning content. Required.
@@ -112,7 +40,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentWebUrl() {
-        return this.contentWebUrl;
+        return this.BackingStore.get("contentWebUrl");
     }
     /**
      * Gets the contributors property value. The authors, creators, or contributors of the learning content. Optional.
@@ -120,7 +48,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContributors() {
-        return this.contributors;
+        return this.BackingStore.get("contributors");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
@@ -128,7 +56,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description or summary for the learning content. Optional.
@@ -136,7 +64,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
@@ -144,7 +72,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
-        return this.duration;
+        return this.BackingStore.get("duration");
     }
     /**
      * Gets the externalId property value. Unique external content ID for the learning content. Required.
@@ -152,7 +80,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
-        return this.externalId;
+        return this.BackingStore.get("externalId");
     }
     /**
      * The deserialization information for the current model
@@ -187,7 +115,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
-        return this.format;
+        return this.BackingStore.get("format");
     }
     /**
      * Gets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
@@ -195,7 +123,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the isPremium property value. Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
@@ -203,7 +131,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPremium() {
-        return this.isPremium;
+        return this.BackingStore.get("isPremium");
     }
     /**
      * Gets the isSearchable property value. Indicates whether the learning content is searchable or not. The default value is true. Optional.
@@ -211,7 +139,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
-        return this.isSearchable;
+        return this.BackingStore.get("isSearchable");
     }
     /**
      * Gets the languageTag property value. The language of the learning content, for example, en-us or fr-fr. Required.
@@ -219,7 +147,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.BackingStore.get("languageTag");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
@@ -227,7 +155,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
@@ -235,7 +163,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfPages() {
-        return this.numberOfPages;
+        return this.BackingStore.get("numberOfPages");
     }
     /**
      * Gets the skillTags property value. The skills tags associated with the learning content. Optional.
@@ -243,7 +171,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSkillTags() {
-        return this.skillTags;
+        return this.BackingStore.get("skillTags");
     }
     /**
      * Gets the sourceName property value. The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
@@ -251,7 +179,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSourceName() {
-        return this.sourceName;
+        return this.BackingStore.get("sourceName");
     }
     /**
      * Gets the thumbnailWebUrl property value. The URL of learning content thumbnail image. Optional.
@@ -259,7 +187,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getThumbnailWebUrl() {
-        return this.thumbnailWebUrl;
+        return this.BackingStore.get("thumbnailWebUrl");
     }
     /**
      * Gets the title property value. The title of the learning content. Required.
@@ -267,7 +195,7 @@ public class LearningContent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -300,125 +228,125 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the additionalTags property.
      */
     public void setAdditionalTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.additionalTags = value;
+        this.BackingStore.set("additionalTags", value);
     }
     /**
      * Sets the contentWebUrl property value. The content web URL for the learning content. Required.
      * @param value Value to set for the contentWebUrl property.
      */
     public void setContentWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.contentWebUrl = value;
+        this.BackingStore.set("contentWebUrl", value);
     }
     /**
      * Sets the contributors property value. The authors, creators, or contributors of the learning content. Optional.
      * @param value Value to set for the contributors property.
      */
     public void setContributors(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.contributors = value;
+        this.BackingStore.set("contributors", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description or summary for the learning content. Optional.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.duration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("duration", value);
     }
     /**
      * Sets the externalId property value. Unique external content ID for the learning content. Required.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
-        this.externalId = value;
+        this.BackingStore.set("externalId", value);
     }
     /**
      * Sets the format property value. The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {
-        this.format = value;
+        this.BackingStore.set("format", value);
     }
     /**
      * Sets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the isPremium property value. Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
      * @param value Value to set for the isPremium property.
      */
     public void setIsPremium(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPremium = value;
+        this.BackingStore.set("isPremium", value);
     }
     /**
      * Sets the isSearchable property value. Indicates whether the learning content is searchable or not. The default value is true. Optional.
      * @param value Value to set for the isSearchable property.
      */
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSearchable = value;
+        this.BackingStore.set("isSearchable", value);
     }
     /**
      * Sets the languageTag property value. The language of the learning content, for example, en-us or fr-fr. Required.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.BackingStore.set("languageTag", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
      * @param value Value to set for the numberOfPages property.
      */
     public void setNumberOfPages(@jakarta.annotation.Nullable final Integer value) {
-        this.numberOfPages = value;
+        this.BackingStore.set("numberOfPages", value);
     }
     /**
      * Sets the skillTags property value. The skills tags associated with the learning content. Optional.
      * @param value Value to set for the skillTags property.
      */
     public void setSkillTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.skillTags = value;
+        this.BackingStore.set("skillTags", value);
     }
     /**
      * Sets the sourceName property value. The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
      * @param value Value to set for the sourceName property.
      */
     public void setSourceName(@jakarta.annotation.Nullable final String value) {
-        this.sourceName = value;
+        this.BackingStore.set("sourceName", value);
     }
     /**
      * Sets the thumbnailWebUrl property value. The URL of learning content thumbnail image. Optional.
      * @param value Value to set for the thumbnailWebUrl property.
      */
     public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.thumbnailWebUrl = value;
+        this.BackingStore.set("thumbnailWebUrl", value);
     }
     /**
      * Sets the title property value. The title of the learning content. Required.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
 }

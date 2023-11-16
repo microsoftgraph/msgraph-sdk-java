@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
-     */
-    private Boolean allowSampleSharing;
-    /**
-     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
-     */
-    private Boolean enableExpeditedTelemetryReporting;
-    /**
      * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
      */
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
@@ -42,7 +34,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSampleSharing() {
-        return this.allowSampleSharing;
+        return this.BackingStore.get("allowSampleSharing");
     }
     /**
      * Gets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -50,7 +42,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableExpeditedTelemetryReporting() {
-        return this.enableExpeditedTelemetryReporting;
+        return this.BackingStore.get("enableExpeditedTelemetryReporting");
     }
     /**
      * The deserialization information for the current model
@@ -78,13 +70,13 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * @param value Value to set for the allowSampleSharing property.
      */
     public void setAllowSampleSharing(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowSampleSharing = value;
+        this.BackingStore.set("allowSampleSharing", value);
     }
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      * @param value Value to set for the enableExpeditedTelemetryReporting property.
      */
     public void setEnableExpeditedTelemetryReporting(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableExpeditedTelemetryReporting = value;
+        this.BackingStore.set("enableExpeditedTelemetryReporting", value);
     }
 }

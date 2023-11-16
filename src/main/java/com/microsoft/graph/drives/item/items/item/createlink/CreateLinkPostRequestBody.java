@@ -4,44 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable {
+public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The expirationDateTime property
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The message property
-     */
-    private String message;
-    /**
-     * The password property
-     */
-    private String password;
-    /**
-     * The retainInheritedPermissions property
-     */
-    private Boolean retainInheritedPermissions;
-    /**
-     * The scope property
-     */
-    private String scope;
-    /**
-     * The type property
-     */
-    private String type;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new CreateLinkPostRequestBody and sets the default values.
      */
     public CreateLinkPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -60,7 +40,20 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -68,7 +61,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -91,7 +84,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
-        return this.message;
+        return this.BackingStore.get("message");
     }
     /**
      * Gets the password property value. The password property
@@ -99,7 +92,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
-        return this.password;
+        return this.BackingStore.get("password");
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
@@ -107,7 +100,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
-        return this.retainInheritedPermissions;
+        return this.BackingStore.get("retainInheritedPermissions");
     }
     /**
      * Gets the scope property value. The scope property
@@ -115,7 +108,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getScope() {
-        return this.scope;
+        return this.BackingStore.get("scope");
     }
     /**
      * Gets the type property value. The type property
@@ -123,7 +116,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -144,48 +137,56 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
-        this.message = value;
+        this.BackingStore.set("message", value);
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {
-        this.password = value;
+        this.BackingStore.set("password", value);
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param value Value to set for the retainInheritedPermissions property.
      */
     public void setRetainInheritedPermissions(@jakarta.annotation.Nullable final Boolean value) {
-        this.retainInheritedPermissions = value;
+        this.BackingStore.set("retainInheritedPermissions", value);
     }
     /**
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {
-        this.scope = value;
+        this.BackingStore.set("scope", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

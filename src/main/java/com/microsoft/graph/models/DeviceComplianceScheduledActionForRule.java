@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScheduledActionForRule extends Entity implements Parsable {
     /**
-     * Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
-     */
-    private String ruleName;
-    /**
-     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     */
-    private java.util.List<DeviceComplianceActionItem> scheduledActionConfigurations;
-    /**
      * Instantiates a new DeviceComplianceScheduledActionForRule and sets the default values.
      */
     public DeviceComplianceScheduledActionForRule() {
@@ -52,7 +44,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
-        return this.ruleName;
+        return this.BackingStore.get("ruleName");
     }
     /**
      * Gets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
@@ -60,7 +52,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceActionItem> getScheduledActionConfigurations() {
-        return this.scheduledActionConfigurations;
+        return this.BackingStore.get("scheduledActionConfigurations");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      * @param value Value to set for the ruleName property.
      */
     public void setRuleName(@jakarta.annotation.Nullable final String value) {
-        this.ruleName = value;
+        this.BackingStore.set("ruleName", value);
     }
     /**
      * Sets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param value Value to set for the scheduledActionConfigurations property.
      */
     public void setScheduledActionConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceActionItem> value) {
-        this.scheduledActionConfigurations = value;
+        this.BackingStore.set("scheduledActionConfigurations", value);
     }
 }

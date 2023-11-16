@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenTypeExtension extends Extension implements Parsable {
     /**
-     * A unique text identifier for an open type data extension. Optional.
-     */
-    private String extensionName;
-    /**
      * Instantiates a new OpenTypeExtension and sets the default values.
      */
     public OpenTypeExtension() {
@@ -35,7 +31,7 @@ public class OpenTypeExtension extends Extension implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getExtensionName() {
-        return this.extensionName;
+        return this.BackingStore.get("extensionName");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class OpenTypeExtension extends Extension implements Parsable {
      * @param value Value to set for the extensionName property.
      */
     public void setExtensionName(@jakarta.annotation.Nullable final String value) {
-        this.extensionName = value;
+        this.BackingStore.set("extensionName", value);
     }
 }

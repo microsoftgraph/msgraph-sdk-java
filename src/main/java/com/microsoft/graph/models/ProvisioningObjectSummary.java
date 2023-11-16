@@ -10,70 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
-     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  SUpports $filter (eq, gt, lt) and orderby.
-     */
-    private OffsetDateTime activityDateTime;
-    /**
-     * Unique ID of this change in this cycle. Supports $filter (eq, contains).
-     */
-    private String changeId;
-    /**
-     * Unique ID per job iteration. Supports $filter (eq, contains).
-     */
-    private String cycleId;
-    /**
-     * Indicates how long this provisioning action took to finish. Measured in milliseconds.
-     */
-    private Integer durationInMilliseconds;
-    /**
-     * Details of who initiated this provisioning. Supports $filter (eq, contains).
-     */
-    private Initiator initiatedBy;
-    /**
-     * The unique ID for the whole provisioning job. Supports $filter (eq, contains).
-     */
-    private String jobId;
-    /**
-     * Details of each property that was modified in this provisioning action on this object.
-     */
-    private java.util.List<ModifiedProperty> modifiedProperties;
-    /**
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
-     */
-    private ProvisioningAction provisioningAction;
-    /**
-     * Details of provisioning status.
-     */
-    private ProvisioningStatusInfo provisioningStatusInfo;
-    /**
-     * Details of each step in provisioning.
-     */
-    private java.util.List<ProvisioningStep> provisioningSteps;
-    /**
-     * Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
-     */
-    private ProvisioningServicePrincipal servicePrincipal;
-    /**
-     * Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     */
-    private ProvisionedIdentity sourceIdentity;
-    /**
-     * Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     */
-    private ProvisioningSystem sourceSystem;
-    /**
-     * Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     */
-    private ProvisionedIdentity targetIdentity;
-    /**
-     * Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     */
-    private ProvisioningSystem targetSystem;
-    /**
-     * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
-     */
-    private String tenantId;
-    /**
      * Instantiates a new ProvisioningObjectSummary and sets the default values.
      */
     public ProvisioningObjectSummary() {
@@ -95,7 +31,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this.activityDateTime;
+        return this.BackingStore.get("activityDateTime");
     }
     /**
      * Gets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
@@ -103,7 +39,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getChangeId() {
-        return this.changeId;
+        return this.BackingStore.get("changeId");
     }
     /**
      * Gets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
@@ -111,7 +47,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCycleId() {
-        return this.cycleId;
+        return this.BackingStore.get("cycleId");
     }
     /**
      * Gets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds.
@@ -119,7 +55,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMilliseconds() {
-        return this.durationInMilliseconds;
+        return this.BackingStore.get("durationInMilliseconds");
     }
     /**
      * The deserialization information for the current model
@@ -152,7 +88,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Initiator getInitiatedBy() {
-        return this.initiatedBy;
+        return this.BackingStore.get("initiatedBy");
     }
     /**
      * Gets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
@@ -160,7 +96,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getJobId() {
-        return this.jobId;
+        return this.BackingStore.get("jobId");
     }
     /**
      * Gets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
@@ -168,7 +104,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
-        return this.modifiedProperties;
+        return this.BackingStore.get("modifiedProperties");
     }
     /**
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
@@ -176,7 +112,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningAction getProvisioningAction() {
-        return this.provisioningAction;
+        return this.BackingStore.get("provisioningAction");
     }
     /**
      * Gets the provisioningStatusInfo property value. Details of provisioning status.
@@ -184,7 +120,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusInfo getProvisioningStatusInfo() {
-        return this.provisioningStatusInfo;
+        return this.BackingStore.get("provisioningStatusInfo");
     }
     /**
      * Gets the provisioningSteps property value. Details of each step in provisioning.
@@ -192,7 +128,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningStep> getProvisioningSteps() {
-        return this.provisioningSteps;
+        return this.BackingStore.get("provisioningSteps");
     }
     /**
      * Gets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
@@ -200,7 +136,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningServicePrincipal getServicePrincipal() {
-        return this.servicePrincipal;
+        return this.BackingStore.get("servicePrincipal");
     }
     /**
      * Gets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
@@ -208,7 +144,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getSourceIdentity() {
-        return this.sourceIdentity;
+        return this.BackingStore.get("sourceIdentity");
     }
     /**
      * Gets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
@@ -216,7 +152,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getSourceSystem() {
-        return this.sourceSystem;
+        return this.BackingStore.get("sourceSystem");
     }
     /**
      * Gets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
@@ -224,7 +160,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getTargetIdentity() {
-        return this.targetIdentity;
+        return this.BackingStore.get("targetIdentity");
     }
     /**
      * Gets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
@@ -232,7 +168,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getTargetSystem() {
-        return this.targetSystem;
+        return this.BackingStore.get("targetSystem");
     }
     /**
      * Gets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
@@ -240,7 +176,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -271,111 +207,111 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.activityDateTime = value;
+        this.BackingStore.set("activityDateTime", value);
     }
     /**
      * Sets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
      * @param value Value to set for the changeId property.
      */
     public void setChangeId(@jakarta.annotation.Nullable final String value) {
-        this.changeId = value;
+        this.BackingStore.set("changeId", value);
     }
     /**
      * Sets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
      * @param value Value to set for the cycleId property.
      */
     public void setCycleId(@jakarta.annotation.Nullable final String value) {
-        this.cycleId = value;
+        this.BackingStore.set("cycleId", value);
     }
     /**
      * Sets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds.
      * @param value Value to set for the durationInMilliseconds property.
      */
     public void setDurationInMilliseconds(@jakarta.annotation.Nullable final Integer value) {
-        this.durationInMilliseconds = value;
+        this.BackingStore.set("durationInMilliseconds", value);
     }
     /**
      * Sets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
      * @param value Value to set for the initiatedBy property.
      */
     public void setInitiatedBy(@jakarta.annotation.Nullable final Initiator value) {
-        this.initiatedBy = value;
+        this.BackingStore.set("initiatedBy", value);
     }
     /**
      * Sets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      * @param value Value to set for the jobId property.
      */
     public void setJobId(@jakarta.annotation.Nullable final String value) {
-        this.jobId = value;
+        this.BackingStore.set("jobId", value);
     }
     /**
      * Sets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
      * @param value Value to set for the modifiedProperties property.
      */
     public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<ModifiedProperty> value) {
-        this.modifiedProperties = value;
+        this.BackingStore.set("modifiedProperties", value);
     }
     /**
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      */
     public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {
-        this.provisioningAction = value;
+        this.BackingStore.set("provisioningAction", value);
     }
     /**
      * Sets the provisioningStatusInfo property value. Details of provisioning status.
      * @param value Value to set for the provisioningStatusInfo property.
      */
     public void setProvisioningStatusInfo(@jakarta.annotation.Nullable final ProvisioningStatusInfo value) {
-        this.provisioningStatusInfo = value;
+        this.BackingStore.set("provisioningStatusInfo", value);
     }
     /**
      * Sets the provisioningSteps property value. Details of each step in provisioning.
      * @param value Value to set for the provisioningSteps property.
      */
     public void setProvisioningSteps(@jakarta.annotation.Nullable final java.util.List<ProvisioningStep> value) {
-        this.provisioningSteps = value;
+        this.BackingStore.set("provisioningSteps", value);
     }
     /**
      * Sets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      * @param value Value to set for the servicePrincipal property.
      */
     public void setServicePrincipal(@jakarta.annotation.Nullable final ProvisioningServicePrincipal value) {
-        this.servicePrincipal = value;
+        this.BackingStore.set("servicePrincipal", value);
     }
     /**
      * Sets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the sourceIdentity property.
      */
     public void setSourceIdentity(@jakarta.annotation.Nullable final ProvisionedIdentity value) {
-        this.sourceIdentity = value;
+        this.BackingStore.set("sourceIdentity", value);
     }
     /**
      * Sets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the sourceSystem property.
      */
     public void setSourceSystem(@jakarta.annotation.Nullable final ProvisioningSystem value) {
-        this.sourceSystem = value;
+        this.BackingStore.set("sourceSystem", value);
     }
     /**
      * Sets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the targetIdentity property.
      */
     public void setTargetIdentity(@jakarta.annotation.Nullable final ProvisionedIdentity value) {
-        this.targetIdentity = value;
+        this.BackingStore.set("targetIdentity", value);
     }
     /**
      * Sets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the targetSystem property.
      */
     public void setTargetSystem(@jakarta.annotation.Nullable final ProvisioningSystem value) {
-        this.targetSystem = value;
+        this.BackingStore.set("targetSystem", value);
     }
     /**
      * Sets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
 }

@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /**
-     * The licenseType property
-     */
-    private MicrosoftStoreForBusinessLicenseType licenseType;
-    /**
-     * The app package identifier
-     */
-    private String packageIdentityName;
-    /**
-     * The app product key
-     */
-    private String productKey;
-    /**
-     * The total number of Microsoft Store for Business licenses.
-     */
-    private Integer totalLicenseCount;
-    /**
-     * The number of Microsoft Store for Business licenses in use.
-     */
-    private Integer usedLicenseCount;
-    /**
      * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
      */
     public MicrosoftStoreForBusinessApp() {
@@ -68,7 +48,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {
-        return this.licenseType;
+        return this.BackingStore.get("licenseType");
     }
     /**
      * Gets the packageIdentityName property value. The app package identifier
@@ -76,7 +56,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getPackageIdentityName() {
-        return this.packageIdentityName;
+        return this.BackingStore.get("packageIdentityName");
     }
     /**
      * Gets the productKey property value. The app product key
@@ -84,7 +64,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
-        return this.productKey;
+        return this.BackingStore.get("productKey");
     }
     /**
      * Gets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
@@ -92,7 +72,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this.totalLicenseCount;
+        return this.BackingStore.get("totalLicenseCount");
     }
     /**
      * Gets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
@@ -100,7 +80,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this.usedLicenseCount;
+        return this.BackingStore.get("usedLicenseCount");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the licenseType property.
      */
     public void setLicenseType(@jakarta.annotation.Nullable final MicrosoftStoreForBusinessLicenseType value) {
-        this.licenseType = value;
+        this.BackingStore.set("licenseType", value);
     }
     /**
      * Sets the packageIdentityName property value. The app package identifier
      * @param value Value to set for the packageIdentityName property.
      */
     public void setPackageIdentityName(@jakarta.annotation.Nullable final String value) {
-        this.packageIdentityName = value;
+        this.BackingStore.set("packageIdentityName", value);
     }
     /**
      * Sets the productKey property value. The app product key
      * @param value Value to set for the productKey property.
      */
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
-        this.productKey = value;
+        this.BackingStore.set("productKey", value);
     }
     /**
      * Sets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
      * @param value Value to set for the totalLicenseCount property.
      */
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicenseCount = value;
+        this.BackingStore.set("totalLicenseCount", value);
     }
     /**
      * Sets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
      * @param value Value to set for the usedLicenseCount property.
      */
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.usedLicenseCount = value;
+        this.BackingStore.set("usedLicenseCount", value);
     }
 }

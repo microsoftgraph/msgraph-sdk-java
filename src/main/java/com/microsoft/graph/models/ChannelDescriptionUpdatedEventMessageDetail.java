@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * The updated description of the channel.
-     */
-    private String channelDescription;
-    /**
-     * Unique identifier of the channel.
-     */
-    private String channelId;
-    /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
      * Instantiates a new ChannelDescriptionUpdatedEventMessageDetail and sets the default values.
      */
     public ChannelDescriptionUpdatedEventMessageDetail() {
@@ -43,7 +31,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
      */
     @jakarta.annotation.Nullable
     public String getChannelDescription() {
-        return this.channelDescription;
+        return this.BackingStore.get("channelDescription");
     }
     /**
      * Gets the channelId property value. Unique identifier of the channel.
@@ -51,7 +39,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
      */
     @jakarta.annotation.Nullable
     public String getChannelId() {
-        return this.channelId;
+        return this.BackingStore.get("channelId");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
      * @param value Value to set for the channelDescription property.
      */
     public void setChannelDescription(@jakarta.annotation.Nullable final String value) {
-        this.channelDescription = value;
+        this.BackingStore.set("channelDescription", value);
     }
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      * @param value Value to set for the channelId property.
      */
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
-        this.channelId = value;
+        this.BackingStore.set("channelId", value);
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
 }

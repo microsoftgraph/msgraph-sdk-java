@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocateDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * device location
-     */
-    private DeviceGeoLocation deviceLocation;
-    /**
      * Instantiates a new LocateDeviceActionResult and sets the default values.
      */
     public LocateDeviceActionResult() {
@@ -37,7 +33,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      */
     @jakarta.annotation.Nullable
     public DeviceGeoLocation getDeviceLocation() {
-        return this.deviceLocation;
+        return this.BackingStore.get("deviceLocation");
     }
     /**
      * The deserialization information for the current model
@@ -63,6 +59,6 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param value Value to set for the deviceLocation property.
      */
     public void setDeviceLocation(@jakarta.annotation.Nullable final DeviceGeoLocation value) {
-        this.deviceLocation = value;
+        this.BackingStore.set("deviceLocation", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     /**
-     * The ID used to join the meeting.
-     */
-    private String joinMeetingId;
-    /**
-     * The passcode used to join the meeting. Optional.
-     */
-    private String passcode;
-    /**
      * Instantiates a new JoinMeetingIdMeetingInfo and sets the default values.
      */
     public JoinMeetingIdMeetingInfo() {
@@ -50,7 +42,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getJoinMeetingId() {
-        return this.joinMeetingId;
+        return this.BackingStore.get("joinMeetingId");
     }
     /**
      * Gets the passcode property value. The passcode used to join the meeting. Optional.
@@ -58,7 +50,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPasscode() {
-        return this.passcode;
+        return this.BackingStore.get("passcode");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the joinMeetingId property.
      */
     public void setJoinMeetingId(@jakarta.annotation.Nullable final String value) {
-        this.joinMeetingId = value;
+        this.BackingStore.set("joinMeetingId", value);
     }
     /**
      * Sets the passcode property value. The passcode used to join the meeting. Optional.
      * @param value Value to set for the passcode property.
      */
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
-        this.passcode = value;
+        this.BackingStore.set("passcode", value);
     }
 }

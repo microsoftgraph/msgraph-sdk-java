@@ -4,31 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchQuery implements AdditionalDataHolder, Parsable {
+public class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The search query containing the search terms. Required.
-     */
-    private String queryString;
-    /**
-     * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
-     */
-    private String queryTemplate;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SearchQuery and sets the default values.
      */
     public SearchQuery() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -47,7 +39,20 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -67,7 +72,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the queryString property value. The search query containing the search terms. Required.
@@ -75,7 +80,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getQueryString() {
-        return this.queryString;
+        return this.BackingStore.get("queryString");
     }
     /**
      * Gets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
@@ -83,7 +88,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getQueryTemplate() {
-        return this.queryTemplate;
+        return this.BackingStore.get("queryTemplate");
     }
     /**
      * Serializes information the current object
@@ -101,27 +106,35 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the queryString property value. The search query containing the search terms. Required.
      * @param value Value to set for the queryString property.
      */
     public void setQueryString(@jakarta.annotation.Nullable final String value) {
-        this.queryString = value;
+        this.BackingStore.set("queryString", value);
     }
     /**
      * Sets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @param value Value to set for the queryTemplate property.
      */
     public void setQueryTemplate(@jakarta.annotation.Nullable final String value) {
-        this.queryTemplate = value;
+        this.BackingStore.set("queryTemplate", value);
     }
 }

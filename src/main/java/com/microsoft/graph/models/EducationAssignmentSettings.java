@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
-     * Indicates whether turn-in celebration animation is shown. A value of true indicates that the animation isn't shown. Default value is false.
-     */
-    private Boolean submissionAnimationDisabled;
-    /**
      * Instantiates a new EducationAssignmentSettings and sets the default values.
      */
     public EducationAssignmentSettings() {
@@ -44,7 +40,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSubmissionAnimationDisabled() {
-        return this.submissionAnimationDisabled;
+        return this.BackingStore.get("submissionAnimationDisabled");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * @param value Value to set for the submissionAnimationDisabled property.
      */
     public void setSubmissionAnimationDisabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.submissionAnimationDisabled = value;
+        this.BackingStore.set("submissionAnimationDisabled", value);
     }
 }

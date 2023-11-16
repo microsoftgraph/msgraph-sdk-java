@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
-     * The completion date and time of the training. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime completionDateTime;
-    /**
-     * The mapping details of the associated training.
-     */
-    private java.util.List<MicrosoftTrainingAssignmentMapping> trainingAssignmentMappings;
-    /**
-     * The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
-     */
-    private TrainingCompletionDuration trainingCompletionDuration;
-    /**
      * Instantiates a new MicrosoftCustomTrainingSetting and sets the default values.
      */
     public MicrosoftCustomTrainingSetting() {
@@ -44,7 +32,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
-        return this.completionDateTime;
+        return this.BackingStore.get("completionDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -64,7 +52,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTrainingAssignmentMapping> getTrainingAssignmentMappings() {
-        return this.trainingAssignmentMappings;
+        return this.BackingStore.get("trainingAssignmentMappings");
     }
     /**
      * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
@@ -72,7 +60,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      */
     @jakarta.annotation.Nullable
     public TrainingCompletionDuration getTrainingCompletionDuration() {
-        return this.trainingCompletionDuration;
+        return this.BackingStore.get("trainingCompletionDuration");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completionDateTime = value;
+        this.BackingStore.set("completionDateTime", value);
     }
     /**
      * Sets the trainingAssignmentMappings property value. The mapping details of the associated training.
      * @param value Value to set for the trainingAssignmentMappings property.
      */
     public void setTrainingAssignmentMappings(@jakarta.annotation.Nullable final java.util.List<MicrosoftTrainingAssignmentMapping> value) {
-        this.trainingAssignmentMappings = value;
+        this.BackingStore.set("trainingAssignmentMappings", value);
     }
     /**
      * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
      * @param value Value to set for the trainingCompletionDuration property.
      */
     public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final TrainingCompletionDuration value) {
-        this.trainingCompletionDuration = value;
+        this.BackingStore.set("trainingCompletionDuration", value);
     }
 }

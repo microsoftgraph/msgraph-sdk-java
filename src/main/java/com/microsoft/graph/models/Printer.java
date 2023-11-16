@@ -10,34 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Printer extends PrinterBase implements Parsable {
     /**
-     * The connectors that are associated with the printer.
-     */
-    private java.util.List<PrintConnector> connectors;
-    /**
-     * True if the printer has a physical device for printing. Read-only.
-     */
-    private Boolean hasPhysicalDevice;
-    /**
-     * True if the printer is shared; false otherwise. Read-only.
-     */
-    private Boolean isShared;
-    /**
-     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The DateTimeOffset when the printer was registered. Read-only.
-     */
-    private OffsetDateTime registeredDateTime;
-    /**
-     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     */
-    private java.util.List<PrinterShare> shares;
-    /**
-     * A list of task triggers that are associated with the printer.
-     */
-    private java.util.List<PrintTaskTrigger> taskTriggers;
-    /**
      * Instantiates a new Printer and sets the default values.
      */
     public Printer() {
@@ -60,7 +32,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
-        return this.connectors;
+        return this.BackingStore.get("connectors");
     }
     /**
      * The deserialization information for the current model
@@ -84,7 +56,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
-        return this.hasPhysicalDevice;
+        return this.BackingStore.get("hasPhysicalDevice");
     }
     /**
      * Gets the isShared property value. True if the printer is shared; false otherwise. Read-only.
@@ -92,7 +64,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
-        return this.isShared;
+        return this.BackingStore.get("isShared");
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
@@ -100,7 +72,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
@@ -108,7 +80,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
-        return this.registeredDateTime;
+        return this.BackingStore.get("registeredDateTime");
     }
     /**
      * Gets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
@@ -116,7 +88,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
-        return this.shares;
+        return this.BackingStore.get("shares");
     }
     /**
      * Gets the taskTriggers property value. A list of task triggers that are associated with the printer.
@@ -124,7 +96,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskTrigger> getTaskTriggers() {
-        return this.taskTriggers;
+        return this.BackingStore.get("taskTriggers");
     }
     /**
      * Serializes information the current object
@@ -146,48 +118,48 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the connectors property.
      */
     public void setConnectors(@jakarta.annotation.Nullable final java.util.List<PrintConnector> value) {
-        this.connectors = value;
+        this.BackingStore.set("connectors", value);
     }
     /**
      * Sets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
      * @param value Value to set for the hasPhysicalDevice property.
      */
     public void setHasPhysicalDevice(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasPhysicalDevice = value;
+        this.BackingStore.set("hasPhysicalDevice", value);
     }
     /**
      * Sets the isShared property value. True if the printer is shared; false otherwise. Read-only.
      * @param value Value to set for the isShared property.
      */
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
-        this.isShared = value;
+        this.BackingStore.set("isShared", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
      * @param value Value to set for the registeredDateTime property.
      */
     public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.registeredDateTime = value;
+        this.BackingStore.set("registeredDateTime", value);
     }
     /**
      * Sets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @param value Value to set for the shares property.
      */
     public void setShares(@jakarta.annotation.Nullable final java.util.List<PrinterShare> value) {
-        this.shares = value;
+        this.BackingStore.set("shares", value);
     }
     /**
      * Sets the taskTriggers property value. A list of task triggers that are associated with the printer.
      * @param value Value to set for the taskTriggers property.
      */
     public void setTaskTriggers(@jakarta.annotation.Nullable final java.util.List<PrintTaskTrigger> value) {
-        this.taskTriggers = value;
+        this.BackingStore.set("taskTriggers", value);
     }
 }

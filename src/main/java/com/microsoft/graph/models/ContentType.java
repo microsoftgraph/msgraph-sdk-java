@@ -9,82 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentType extends Entity implements Parsable {
     /**
-     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
-     */
-    private java.util.List<String> associatedHubsUrls;
-    /**
-     * Parent contentType from which this content type is derived.
-     */
-    private ContentType base;
-    /**
-     * The collection of content types that are ancestors of this content type.
-     */
-    private java.util.List<ContentType> baseTypes;
-    /**
-     * The collection of columns that are required by this content type.
-     */
-    private java.util.List<ColumnLink> columnLinks;
-    /**
-     * Column order information in a content type.
-     */
-    private java.util.List<ColumnDefinition> columnPositions;
-    /**
-     * The collection of column definitions for this contentType.
-     */
-    private java.util.List<ColumnDefinition> columns;
-    /**
-     * The descriptive text for the item.
-     */
-    private String description;
-    /**
-     * Document Set metadata.
-     */
-    private DocumentSet documentSet;
-    /**
-     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
-     */
-    private DocumentSetContent documentTemplate;
-    /**
-     * The name of the group this content type belongs to. Helps organize related content types.
-     */
-    private String group;
-    /**
-     * Indicates whether the content type is hidden in the list's 'New' menu.
-     */
-    private Boolean hidden;
-    /**
-     * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
-     */
-    private ItemReference inheritedFrom;
-    /**
-     * Specifies if a content type is a built-in content type.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * The name of the content type.
-     */
-    private String name;
-    /**
-     * Specifies the order in which the content type appears in the selection UI.
-     */
-    private ContentTypeOrder order;
-    /**
-     * The unique identifier of the content type.
-     */
-    private String parentId;
-    /**
-     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
-     */
-    private Boolean propagateChanges;
-    /**
-     * If true, the content type can't be modified unless this value is first set to false.
-     */
-    private Boolean readOnly;
-    /**
-     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
-     */
-    private Boolean sealed;
-    /**
      * Instantiates a new ContentType and sets the default values.
      */
     public ContentType() {
@@ -106,7 +30,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssociatedHubsUrls() {
-        return this.associatedHubsUrls;
+        return this.BackingStore.get("associatedHubsUrls");
     }
     /**
      * Gets the base property value. Parent contentType from which this content type is derived.
@@ -114,7 +38,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContentType getBase() {
-        return this.base;
+        return this.BackingStore.get("base");
     }
     /**
      * Gets the baseTypes property value. The collection of content types that are ancestors of this content type.
@@ -122,7 +46,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getBaseTypes() {
-        return this.baseTypes;
+        return this.BackingStore.get("baseTypes");
     }
     /**
      * Gets the columnLinks property value. The collection of columns that are required by this content type.
@@ -130,7 +54,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnLink> getColumnLinks() {
-        return this.columnLinks;
+        return this.BackingStore.get("columnLinks");
     }
     /**
      * Gets the columnPositions property value. Column order information in a content type.
@@ -138,7 +62,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumnPositions() {
-        return this.columnPositions;
+        return this.BackingStore.get("columnPositions");
     }
     /**
      * Gets the columns property value. The collection of column definitions for this contentType.
@@ -146,7 +70,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
-        return this.columns;
+        return this.BackingStore.get("columns");
     }
     /**
      * Gets the description property value. The descriptive text for the item.
@@ -154,7 +78,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the documentSet property value. Document Set metadata.
@@ -162,7 +86,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DocumentSet getDocumentSet() {
-        return this.documentSet;
+        return this.BackingStore.get("documentSet");
     }
     /**
      * Gets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
@@ -170,7 +94,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DocumentSetContent getDocumentTemplate() {
-        return this.documentTemplate;
+        return this.BackingStore.get("documentTemplate");
     }
     /**
      * The deserialization information for the current model
@@ -206,7 +130,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getGroup() {
-        return this.group;
+        return this.BackingStore.get("group");
     }
     /**
      * Gets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
@@ -214,7 +138,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
-        return this.hidden;
+        return this.BackingStore.get("hidden");
     }
     /**
      * Gets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
@@ -222,7 +146,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemReference getInheritedFrom() {
-        return this.inheritedFrom;
+        return this.BackingStore.get("inheritedFrom");
     }
     /**
      * Gets the isBuiltIn property value. Specifies if a content type is a built-in content type.
@@ -230,7 +154,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.BackingStore.get("isBuiltIn");
     }
     /**
      * Gets the name property value. The name of the content type.
@@ -238,7 +162,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the order property value. Specifies the order in which the content type appears in the selection UI.
@@ -246,7 +170,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ContentTypeOrder getOrder() {
-        return this.order;
+        return this.BackingStore.get("order");
     }
     /**
      * Gets the parentId property value. The unique identifier of the content type.
@@ -254,7 +178,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParentId() {
-        return this.parentId;
+        return this.BackingStore.get("parentId");
     }
     /**
      * Gets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
@@ -262,7 +186,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getPropagateChanges() {
-        return this.propagateChanges;
+        return this.BackingStore.get("propagateChanges");
     }
     /**
      * Gets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
@@ -270,7 +194,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getReadOnly() {
-        return this.readOnly;
+        return this.BackingStore.get("readOnly");
     }
     /**
      * Gets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
@@ -278,7 +202,7 @@ public class ContentType extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getSealed() {
-        return this.sealed;
+        return this.BackingStore.get("sealed");
     }
     /**
      * Serializes information the current object
@@ -312,132 +236,132 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the associatedHubsUrls property.
      */
     public void setAssociatedHubsUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.associatedHubsUrls = value;
+        this.BackingStore.set("associatedHubsUrls", value);
     }
     /**
      * Sets the base property value. Parent contentType from which this content type is derived.
      * @param value Value to set for the base property.
      */
     public void setBase(@jakarta.annotation.Nullable final ContentType value) {
-        this.base = value;
+        this.BackingStore.set("base", value);
     }
     /**
      * Sets the baseTypes property value. The collection of content types that are ancestors of this content type.
      * @param value Value to set for the baseTypes property.
      */
     public void setBaseTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
-        this.baseTypes = value;
+        this.BackingStore.set("baseTypes", value);
     }
     /**
      * Sets the columnLinks property value. The collection of columns that are required by this content type.
      * @param value Value to set for the columnLinks property.
      */
     public void setColumnLinks(@jakarta.annotation.Nullable final java.util.List<ColumnLink> value) {
-        this.columnLinks = value;
+        this.BackingStore.set("columnLinks", value);
     }
     /**
      * Sets the columnPositions property value. Column order information in a content type.
      * @param value Value to set for the columnPositions property.
      */
     public void setColumnPositions(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this.columnPositions = value;
+        this.BackingStore.set("columnPositions", value);
     }
     /**
      * Sets the columns property value. The collection of column definitions for this contentType.
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
-        this.columns = value;
+        this.BackingStore.set("columns", value);
     }
     /**
      * Sets the description property value. The descriptive text for the item.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the documentSet property value. Document Set metadata.
      * @param value Value to set for the documentSet property.
      */
     public void setDocumentSet(@jakarta.annotation.Nullable final DocumentSet value) {
-        this.documentSet = value;
+        this.BackingStore.set("documentSet", value);
     }
     /**
      * Sets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
      * @param value Value to set for the documentTemplate property.
      */
     public void setDocumentTemplate(@jakarta.annotation.Nullable final DocumentSetContent value) {
-        this.documentTemplate = value;
+        this.BackingStore.set("documentTemplate", value);
     }
     /**
      * Sets the group property value. The name of the group this content type belongs to. Helps organize related content types.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final String value) {
-        this.group = value;
+        this.BackingStore.set("group", value);
     }
     /**
      * Sets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.hidden = value;
+        this.BackingStore.set("hidden", value);
     }
     /**
      * Sets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
      * @param value Value to set for the inheritedFrom property.
      */
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
-        this.inheritedFrom = value;
+        this.BackingStore.set("inheritedFrom", value);
     }
     /**
      * Sets the isBuiltIn property value. Specifies if a content type is a built-in content type.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.BackingStore.set("isBuiltIn", value);
     }
     /**
      * Sets the name property value. The name of the content type.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the order property value. Specifies the order in which the content type appears in the selection UI.
      * @param value Value to set for the order property.
      */
     public void setOrder(@jakarta.annotation.Nullable final ContentTypeOrder value) {
-        this.order = value;
+        this.BackingStore.set("order", value);
     }
     /**
      * Sets the parentId property value. The unique identifier of the content type.
      * @param value Value to set for the parentId property.
      */
     public void setParentId(@jakarta.annotation.Nullable final String value) {
-        this.parentId = value;
+        this.BackingStore.set("parentId", value);
     }
     /**
      * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
      * @param value Value to set for the propagateChanges property.
      */
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {
-        this.propagateChanges = value;
+        this.BackingStore.set("propagateChanges", value);
     }
     /**
      * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
      * @param value Value to set for the readOnly property.
      */
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.readOnly = value;
+        this.BackingStore.set("readOnly", value);
     }
     /**
      * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @param value Value to set for the sealed property.
      */
     public void setSealed(@jakarta.annotation.Nullable final Boolean value) {
-        this.sealed = value;
+        this.BackingStore.set("sealed", value);
     }
 }

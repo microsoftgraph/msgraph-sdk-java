@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,75 +14,16 @@ import java.util.Objects;
  * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IntuneBrand implements AdditionalDataHolder, Parsable {
+public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Email address of the person/organization responsible for IT support.
-     */
-    private String contactITEmailAddress;
-    /**
-     * Name of the person/organization responsible for IT support.
-     */
-    private String contactITName;
-    /**
-     * Text comments regarding the person/organization responsible for IT support.
-     */
-    private String contactITNotes;
-    /**
-     * Phone number of the person/organization responsible for IT support.
-     */
-    private String contactITPhoneNumber;
-    /**
-     * Logo image displayed in Company Portal apps which have a dark background behind the logo.
-     */
-    private MimeContent darkBackgroundLogo;
-    /**
-     * Company/organization name that is displayed to end users.
-     */
-    private String displayName;
-    /**
-     * Logo image displayed in Company Portal apps which have a light background behind the logo.
-     */
-    private MimeContent lightBackgroundLogo;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Display name of the company/organizations IT helpdesk site.
-     */
-    private String onlineSupportSiteName;
-    /**
-     * URL to the company/organizations IT helpdesk site.
-     */
-    private String onlineSupportSiteUrl;
-    /**
-     * URL to the company/organizations privacy policy.
-     */
-    private String privacyUrl;
-    /**
-     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-     */
-    private Boolean showDisplayNameNextToLogo;
-    /**
-     * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
-     */
-    private Boolean showLogo;
-    /**
-     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-     */
-    private Boolean showNameNextToLogo;
-    /**
-     * Primary theme color used in the Company Portal applications and web portal.
-     */
-    private RgbColor themeColor;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new IntuneBrand and sets the default values.
      */
     public IntuneBrand() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -98,7 +42,20 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
@@ -106,7 +63,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContactITEmailAddress() {
-        return this.contactITEmailAddress;
+        return this.BackingStore.get("contactITEmailAddress");
     }
     /**
      * Gets the contactITName property value. Name of the person/organization responsible for IT support.
@@ -114,7 +71,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContactITName() {
-        return this.contactITName;
+        return this.BackingStore.get("contactITName");
     }
     /**
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
@@ -122,7 +79,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContactITNotes() {
-        return this.contactITNotes;
+        return this.BackingStore.get("contactITNotes");
     }
     /**
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
@@ -130,7 +87,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContactITPhoneNumber() {
-        return this.contactITPhoneNumber;
+        return this.BackingStore.get("contactITPhoneNumber");
     }
     /**
      * Gets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
@@ -138,7 +95,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public MimeContent getDarkBackgroundLogo() {
-        return this.darkBackgroundLogo;
+        return this.BackingStore.get("darkBackgroundLogo");
     }
     /**
      * Gets the displayName property value. Company/organization name that is displayed to end users.
@@ -146,7 +103,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -178,7 +135,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
-        return this.lightBackgroundLogo;
+        return this.BackingStore.get("lightBackgroundLogo");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -186,7 +143,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
@@ -194,7 +151,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnlineSupportSiteName() {
-        return this.onlineSupportSiteName;
+        return this.BackingStore.get("onlineSupportSiteName");
     }
     /**
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
@@ -202,7 +159,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
-        return this.onlineSupportSiteUrl;
+        return this.BackingStore.get("onlineSupportSiteUrl");
     }
     /**
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
@@ -210,7 +167,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrivacyUrl() {
-        return this.privacyUrl;
+        return this.BackingStore.get("privacyUrl");
     }
     /**
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -218,7 +175,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
-        return this.showDisplayNameNextToLogo;
+        return this.BackingStore.get("showDisplayNameNextToLogo");
     }
     /**
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
@@ -226,7 +183,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowLogo() {
-        return this.showLogo;
+        return this.BackingStore.get("showLogo");
     }
     /**
      * Gets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -234,7 +191,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getShowNameNextToLogo() {
-        return this.showNameNextToLogo;
+        return this.BackingStore.get("showNameNextToLogo");
     }
     /**
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
@@ -242,7 +199,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public RgbColor getThemeColor() {
-        return this.themeColor;
+        return this.BackingStore.get("themeColor");
     }
     /**
      * Serializes information the current object
@@ -272,111 +229,119 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      * @param value Value to set for the contactITEmailAddress property.
      */
     public void setContactITEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.contactITEmailAddress = value;
+        this.BackingStore.set("contactITEmailAddress", value);
     }
     /**
      * Sets the contactITName property value. Name of the person/organization responsible for IT support.
      * @param value Value to set for the contactITName property.
      */
     public void setContactITName(@jakarta.annotation.Nullable final String value) {
-        this.contactITName = value;
+        this.BackingStore.set("contactITName", value);
     }
     /**
      * Sets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      * @param value Value to set for the contactITNotes property.
      */
     public void setContactITNotes(@jakarta.annotation.Nullable final String value) {
-        this.contactITNotes = value;
+        this.BackingStore.set("contactITNotes", value);
     }
     /**
      * Sets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      * @param value Value to set for the contactITPhoneNumber property.
      */
     public void setContactITPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.contactITPhoneNumber = value;
+        this.BackingStore.set("contactITPhoneNumber", value);
     }
     /**
      * Sets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      * @param value Value to set for the darkBackgroundLogo property.
      */
     public void setDarkBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
-        this.darkBackgroundLogo = value;
+        this.BackingStore.set("darkBackgroundLogo", value);
     }
     /**
      * Sets the displayName property value. Company/organization name that is displayed to end users.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      * @param value Value to set for the lightBackgroundLogo property.
      */
     public void setLightBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
-        this.lightBackgroundLogo = value;
+        this.BackingStore.set("lightBackgroundLogo", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
      */
     public void setOnlineSupportSiteName(@jakarta.annotation.Nullable final String value) {
-        this.onlineSupportSiteName = value;
+        this.BackingStore.set("onlineSupportSiteName", value);
     }
     /**
      * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
      */
     public void setOnlineSupportSiteUrl(@jakarta.annotation.Nullable final String value) {
-        this.onlineSupportSiteUrl = value;
+        this.BackingStore.set("onlineSupportSiteUrl", value);
     }
     /**
      * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
      */
     public void setPrivacyUrl(@jakarta.annotation.Nullable final String value) {
-        this.privacyUrl = value;
+        this.BackingStore.set("privacyUrl", value);
     }
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showDisplayNameNextToLogo property.
      */
     public void setShowDisplayNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
-        this.showDisplayNameNextToLogo = value;
+        this.BackingStore.set("showDisplayNameNextToLogo", value);
     }
     /**
      * Sets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      * @param value Value to set for the showLogo property.
      */
     public void setShowLogo(@jakarta.annotation.Nullable final Boolean value) {
-        this.showLogo = value;
+        this.BackingStore.set("showLogo", value);
     }
     /**
      * Sets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showNameNextToLogo property.
      */
     public void setShowNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
-        this.showNameNextToLogo = value;
+        this.BackingStore.set("showNameNextToLogo", value);
     }
     /**
      * Sets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      * @param value Value to set for the themeColor property.
      */
     public void setThemeColor(@jakarta.annotation.Nullable final RgbColor value) {
-        this.themeColor = value;
+        this.BackingStore.set("themeColor", value);
     }
 }

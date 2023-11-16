@@ -4,51 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SharepointIds implements AdditionalDataHolder, Parsable {
+public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The unique identifier (guid) for the item's list in SharePoint.
-     */
-    private String listId;
-    /**
-     * An integer identifier for the item within the containing list.
-     */
-    private String listItemId;
-    /**
-     * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
-     */
-    private String listItemUniqueId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The unique identifier (guid) for the item's site collection (SPSite).
-     */
-    private String siteId;
-    /**
-     * The SharePoint URL for the site that contains the item.
-     */
-    private String siteUrl;
-    /**
-     * The unique identifier (guid) for the tenancy.
-     */
-    private String tenantId;
-    /**
-     * The unique identifier (guid) for the item's site (SPWeb).
-     */
-    private String webId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SharepointIds and sets the default values.
      */
     public SharepointIds() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -67,7 +39,20 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -92,7 +77,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getListId() {
-        return this.listId;
+        return this.BackingStore.get("listId");
     }
     /**
      * Gets the listItemId property value. An integer identifier for the item within the containing list.
@@ -100,7 +85,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getListItemId() {
-        return this.listItemId;
+        return this.BackingStore.get("listItemId");
     }
     /**
      * Gets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
@@ -108,7 +93,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getListItemUniqueId() {
-        return this.listItemUniqueId;
+        return this.BackingStore.get("listItemUniqueId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -116,7 +101,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
@@ -124,7 +109,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSiteId() {
-        return this.siteId;
+        return this.BackingStore.get("siteId");
     }
     /**
      * Gets the siteUrl property value. The SharePoint URL for the site that contains the item.
@@ -132,7 +117,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSiteUrl() {
-        return this.siteUrl;
+        return this.BackingStore.get("siteUrl");
     }
     /**
      * Gets the tenantId property value. The unique identifier (guid) for the tenancy.
@@ -140,7 +125,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.BackingStore.get("tenantId");
     }
     /**
      * Gets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
@@ -148,7 +133,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebId() {
-        return this.webId;
+        return this.BackingStore.get("webId");
     }
     /**
      * Serializes information the current object
@@ -171,62 +156,70 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
      * @param value Value to set for the listId property.
      */
     public void setListId(@jakarta.annotation.Nullable final String value) {
-        this.listId = value;
+        this.BackingStore.set("listId", value);
     }
     /**
      * Sets the listItemId property value. An integer identifier for the item within the containing list.
      * @param value Value to set for the listItemId property.
      */
     public void setListItemId(@jakarta.annotation.Nullable final String value) {
-        this.listItemId = value;
+        this.BackingStore.set("listItemId", value);
     }
     /**
      * Sets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
      * @param value Value to set for the listItemUniqueId property.
      */
     public void setListItemUniqueId(@jakarta.annotation.Nullable final String value) {
-        this.listItemUniqueId = value;
+        this.BackingStore.set("listItemUniqueId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
-        this.siteId = value;
+        this.BackingStore.set("siteId", value);
     }
     /**
      * Sets the siteUrl property value. The SharePoint URL for the site that contains the item.
      * @param value Value to set for the siteUrl property.
      */
     public void setSiteUrl(@jakarta.annotation.Nullable final String value) {
-        this.siteUrl = value;
+        this.BackingStore.set("siteUrl", value);
     }
     /**
      * Sets the tenantId property value. The unique identifier (guid) for the tenancy.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.BackingStore.set("tenantId", value);
     }
     /**
      * Sets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
      * @param value Value to set for the webId property.
      */
     public void setWebId(@jakarta.annotation.Nullable final String value) {
-        this.webId = value;
+        this.BackingStore.set("webId", value);
     }
 }

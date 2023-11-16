@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageInfo extends Entity implements Parsable {
     /**
-     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
-     */
-    private ItemBody body;
-    /**
-     * Date time object representing the time at which message was created.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
-     */
-    private EventMessageDetail eventDetail;
-    /**
-     * Information about the sender of the message.
-     */
-    private ChatMessageFromIdentitySet from;
-    /**
-     * If set to true, the original message has been deleted.
-     */
-    private Boolean isDeleted;
-    /**
-     * The messageType property
-     */
-    private ChatMessageType messageType;
-    /**
      * Instantiates a new ChatMessageInfo and sets the default values.
      */
     public ChatMessageInfo() {
@@ -55,7 +31,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the createdDateTime property value. Date time object representing the time at which message was created.
@@ -63,7 +39,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
@@ -71,7 +47,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EventMessageDetail getEventDetail() {
-        return this.eventDetail;
+        return this.BackingStore.get("eventDetail");
     }
     /**
      * The deserialization information for the current model
@@ -94,7 +70,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
-        return this.from;
+        return this.BackingStore.get("from");
     }
     /**
      * Gets the isDeleted property value. If set to true, the original message has been deleted.
@@ -102,7 +78,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this.isDeleted;
+        return this.BackingStore.get("isDeleted");
     }
     /**
      * Gets the messageType property value. The messageType property
@@ -110,7 +86,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ChatMessageType getMessageType() {
-        return this.messageType;
+        return this.BackingStore.get("messageType");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the createdDateTime property value. Date time object representing the time at which message was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      * @param value Value to set for the eventDetail property.
      */
     public void setEventDetail(@jakarta.annotation.Nullable final EventMessageDetail value) {
-        this.eventDetail = value;
+        this.BackingStore.set("eventDetail", value);
     }
     /**
      * Sets the from property value. Information about the sender of the message.
      * @param value Value to set for the from property.
      */
     public void setFrom(@jakarta.annotation.Nullable final ChatMessageFromIdentitySet value) {
-        this.from = value;
+        this.BackingStore.set("from", value);
     }
     /**
      * Sets the isDeleted property value. If set to true, the original message has been deleted.
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeleted = value;
+        this.BackingStore.set("isDeleted", value);
     }
     /**
      * Sets the messageType property value. The messageType property
      * @param value Value to set for the messageType property.
      */
     public void setMessageType(@jakarta.annotation.Nullable final ChatMessageType value) {
-        this.messageType = value;
+        this.BackingStore.set("messageType", value);
     }
 }

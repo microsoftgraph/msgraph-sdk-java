@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationFeedbackOutcome extends EducationOutcome implements Parsable {
     /**
-     * Teacher's written feedback to the student.
-     */
-    private EducationFeedback feedback;
-    /**
-     * A copy of the feedback property that is made when the grade is released to the student.
-     */
-    private EducationFeedback publishedFeedback;
-    /**
      * Instantiates a new EducationFeedbackOutcome and sets the default values.
      */
     public EducationFeedbackOutcome() {
@@ -39,7 +31,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getFeedback() {
-        return this.feedback;
+        return this.BackingStore.get("feedback");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     @jakarta.annotation.Nullable
     public EducationFeedback getPublishedFeedback() {
-        return this.publishedFeedback;
+        return this.BackingStore.get("publishedFeedback");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
-        this.feedback = value;
+        this.BackingStore.set("feedback", value);
     }
     /**
      * Sets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
      * @param value Value to set for the publishedFeedback property.
      */
     public void setPublishedFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
-        this.publishedFeedback = value;
+        this.BackingStore.set("publishedFeedback", value);
     }
 }

@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Teamwork extends Entity implements Parsable {
     /**
-     * The deleted team.
-     */
-    private java.util.List<DeletedTeam> deletedTeams;
-    /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
-     */
-    private TeamsAppSettings teamsAppSettings;
-    /**
-     * The workforceIntegrations property
-     */
-    private java.util.List<WorkforceIntegration> workforceIntegrations;
-    /**
      * Instantiates a new Teamwork and sets the default values.
      */
     public Teamwork() {
@@ -42,7 +30,7 @@ public class Teamwork extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeletedTeam> getDeletedTeams() {
-        return this.deletedTeams;
+        return this.BackingStore.get("deletedTeams");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class Teamwork extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings getTeamsAppSettings() {
-        return this.teamsAppSettings;
+        return this.BackingStore.get("teamsAppSettings");
     }
     /**
      * Gets the workforceIntegrations property value. The workforceIntegrations property
@@ -70,7 +58,7 @@ public class Teamwork extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkforceIntegration> getWorkforceIntegrations() {
-        return this.workforceIntegrations;
+        return this.BackingStore.get("workforceIntegrations");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class Teamwork extends Entity implements Parsable {
      * @param value Value to set for the deletedTeams property.
      */
     public void setDeletedTeams(@jakarta.annotation.Nullable final java.util.List<DeletedTeam> value) {
-        this.deletedTeams = value;
+        this.BackingStore.set("deletedTeams", value);
     }
     /**
      * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @param value Value to set for the teamsAppSettings property.
      */
     public void setTeamsAppSettings(@jakarta.annotation.Nullable final TeamsAppSettings value) {
-        this.teamsAppSettings = value;
+        this.BackingStore.set("teamsAppSettings", value);
     }
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property
      * @param value Value to set for the workforceIntegrations property.
      */
     public void setWorkforceIntegrations(@jakarta.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
-        this.workforceIntegrations = value;
+        this.BackingStore.set("workforceIntegrations", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<MacOSDmgApp> value;
-    /**
      * Instantiates a new MacOSDmgAppCollectionResponse and sets the default values.
      */
     public MacOSDmgAppCollectionResponse() {
@@ -44,7 +40,7 @@ public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCount
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSDmgApp> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class MacOSDmgAppCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<MacOSDmgApp> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

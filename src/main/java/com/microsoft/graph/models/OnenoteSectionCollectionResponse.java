@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteSectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<OnenoteSection> value;
-    /**
      * Instantiates a new OnenoteSectionCollectionResponse and sets the default values.
      */
     public OnenoteSectionCollectionResponse() {
@@ -44,7 +40,7 @@ public class OnenoteSectionCollectionResponse extends BaseCollectionPaginationCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class OnenoteSectionCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

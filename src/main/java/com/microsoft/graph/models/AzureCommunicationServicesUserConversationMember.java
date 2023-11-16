@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable {
     /**
-     * Azure Communication Services ID of the user.
-     */
-    private String azureCommunicationServicesId;
-    /**
      * Instantiates a new AzureCommunicationServicesUserConversationMember and sets the default values.
      */
     public AzureCommunicationServicesUserConversationMember() {
@@ -35,7 +31,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
      */
     @jakarta.annotation.Nullable
     public String getAzureCommunicationServicesId() {
-        return this.azureCommunicationServicesId;
+        return this.BackingStore.get("azureCommunicationServicesId");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
      * @param value Value to set for the azureCommunicationServicesId property.
      */
     public void setAzureCommunicationServicesId(@jakarta.annotation.Nullable final String value) {
-        this.azureCommunicationServicesId = value;
+        this.BackingStore.set("azureCommunicationServicesId", value);
     }
 }

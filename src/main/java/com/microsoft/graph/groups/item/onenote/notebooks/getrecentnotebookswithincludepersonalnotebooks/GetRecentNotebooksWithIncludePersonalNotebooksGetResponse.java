@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetRecentNotebooksWithIncludePersonalNotebooksGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<RecentNotebook> value;
-    /**
      * Instantiates a new GetRecentNotebooksWithIncludePersonalNotebooksGetResponse and sets the default values.
      */
     public GetRecentNotebooksWithIncludePersonalNotebooksGetResponse() {
@@ -46,7 +42,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksGetResponse extends B
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecentNotebook> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksGetResponse extends B
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RecentNotebook> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

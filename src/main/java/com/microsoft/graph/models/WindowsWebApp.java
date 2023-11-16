@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsWebApp extends MobileApp implements Parsable {
     /**
-     * Indicates the Windows web app URL. Example: 'https://www.contoso.com'
-     */
-    private String appUrl;
-    /**
      * Instantiates a new WindowsWebApp and sets the default values.
      */
     public WindowsWebApp() {
@@ -38,7 +34,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
-        return this.appUrl;
+        return this.BackingStore.get("appUrl");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class WindowsWebApp extends MobileApp implements Parsable {
      * @param value Value to set for the appUrl property.
      */
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {
-        this.appUrl = value;
+        this.BackingStore.set("appUrl", value);
     }
 }

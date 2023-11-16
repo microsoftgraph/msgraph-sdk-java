@@ -10,174 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Event extends OutlookItem implements Parsable {
     /**
-     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
-     */
-    private Boolean allowNewTimeProposals;
-    /**
-     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     */
-    private java.util.List<Attachment> attachments;
-    /**
-     * The collection of attendees for the event.
-     */
-    private java.util.List<Attendee> attendees;
-    /**
-     * The body of the message associated with the event. It can be in HTML or text format.
-     */
-    private ItemBody body;
-    /**
-     * The preview of the message associated with the event. It is in text format.
-     */
-    private String bodyPreview;
-    /**
-     * The calendar that contains the event. Navigation property. Read-only.
-     */
-    private Calendar calendar;
-    /**
-     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
-     */
-    private DateTimeTimeZone end;
-    /**
-     * The collection of open extensions defined for the event. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * Set to true if the event has attachments.
-     */
-    private Boolean hasAttachments;
-    /**
-     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
-     */
-    private Boolean hideAttendees;
-    /**
-     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
-     */
-    private String iCalUId;
-    /**
-     * The importance property
-     */
-    private Importance importance;
-    /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
-     */
-    private java.util.List<Event> instances;
-    /**
-     * The isAllDay property
-     */
-    private Boolean isAllDay;
-    /**
-     * The isCancelled property
-     */
-    private Boolean isCancelled;
-    /**
-     * The isDraft property
-     */
-    private Boolean isDraft;
-    /**
-     * The isOnlineMeeting property
-     */
-    private Boolean isOnlineMeeting;
-    /**
-     * The isOrganizer property
-     */
-    private Boolean isOrganizer;
-    /**
-     * The isReminderOn property
-     */
-    private Boolean isReminderOn;
-    /**
-     * The location property
-     */
-    private Location location;
-    /**
-     * The locations property
-     */
-    private java.util.List<Location> locations;
-    /**
-     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * The onlineMeeting property
-     */
-    private OnlineMeetingInfo onlineMeeting;
-    /**
-     * The onlineMeetingProvider property
-     */
-    private OnlineMeetingProviderType onlineMeetingProvider;
-    /**
-     * The onlineMeetingUrl property
-     */
-    private String onlineMeetingUrl;
-    /**
-     * The organizer property
-     */
-    private Recipient organizer;
-    /**
-     * The originalEndTimeZone property
-     */
-    private String originalEndTimeZone;
-    /**
-     * The originalStart property
-     */
-    private OffsetDateTime originalStart;
-    /**
-     * The originalStartTimeZone property
-     */
-    private String originalStartTimeZone;
-    /**
-     * The recurrence property
-     */
-    private PatternedRecurrence recurrence;
-    /**
-     * The reminderMinutesBeforeStart property
-     */
-    private Integer reminderMinutesBeforeStart;
-    /**
-     * The responseRequested property
-     */
-    private Boolean responseRequested;
-    /**
-     * The responseStatus property
-     */
-    private ResponseStatus responseStatus;
-    /**
-     * The sensitivity property
-     */
-    private Sensitivity sensitivity;
-    /**
-     * The seriesMasterId property
-     */
-    private String seriesMasterId;
-    /**
-     * The showAs property
-     */
-    private FreeBusyStatus showAs;
-    /**
-     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
-     * The start property
-     */
-    private DateTimeTimeZone start;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
-     * The transactionId property
-     */
-    private String transactionId;
-    /**
-     * The type property
-     */
-    private EventType type;
-    /**
-     * The webLink property
-     */
-    private String webLink;
-    /**
      * Instantiates a new Event and sets the default values.
      */
     public Event() {
@@ -200,7 +32,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowNewTimeProposals() {
-        return this.allowNewTimeProposals;
+        return this.BackingStore.get("allowNewTimeProposals");
     }
     /**
      * Gets the attachments property value. The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
@@ -208,7 +40,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
-        return this.attachments;
+        return this.BackingStore.get("attachments");
     }
     /**
      * Gets the attendees property value. The collection of attendees for the event.
@@ -216,7 +48,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attendee> getAttendees() {
-        return this.attendees;
+        return this.BackingStore.get("attendees");
     }
     /**
      * Gets the body property value. The body of the message associated with the event. It can be in HTML or text format.
@@ -224,7 +56,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
@@ -232,7 +64,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBodyPreview() {
-        return this.bodyPreview;
+        return this.BackingStore.get("bodyPreview");
     }
     /**
      * Gets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
@@ -240,7 +72,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Calendar getCalendar() {
-        return this.calendar;
+        return this.BackingStore.get("calendar");
     }
     /**
      * Gets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
@@ -248,7 +80,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
-        return this.end;
+        return this.BackingStore.get("end");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the event. Nullable.
@@ -256,7 +88,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -315,7 +147,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.BackingStore.get("hasAttachments");
     }
     /**
      * Gets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
@@ -323,7 +155,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHideAttendees() {
-        return this.hideAttendees;
+        return this.BackingStore.get("hideAttendees");
     }
     /**
      * Gets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
@@ -331,7 +163,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getICalUId() {
-        return this.iCalUId;
+        return this.BackingStore.get("iCalUId");
     }
     /**
      * Gets the importance property value. The importance property
@@ -339,7 +171,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
-        return this.importance;
+        return this.BackingStore.get("importance");
     }
     /**
      * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
@@ -347,7 +179,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getInstances() {
-        return this.instances;
+        return this.BackingStore.get("instances");
     }
     /**
      * Gets the isAllDay property value. The isAllDay property
@@ -355,7 +187,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAllDay() {
-        return this.isAllDay;
+        return this.BackingStore.get("isAllDay");
     }
     /**
      * Gets the isCancelled property value. The isCancelled property
@@ -363,7 +195,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCancelled() {
-        return this.isCancelled;
+        return this.BackingStore.get("isCancelled");
     }
     /**
      * Gets the isDraft property value. The isDraft property
@@ -371,7 +203,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDraft() {
-        return this.isDraft;
+        return this.BackingStore.get("isDraft");
     }
     /**
      * Gets the isOnlineMeeting property value. The isOnlineMeeting property
@@ -379,7 +211,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOnlineMeeting() {
-        return this.isOnlineMeeting;
+        return this.BackingStore.get("isOnlineMeeting");
     }
     /**
      * Gets the isOrganizer property value. The isOrganizer property
@@ -387,7 +219,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOrganizer() {
-        return this.isOrganizer;
+        return this.BackingStore.get("isOrganizer");
     }
     /**
      * Gets the isReminderOn property value. The isReminderOn property
@@ -395,7 +227,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReminderOn() {
-        return this.isReminderOn;
+        return this.BackingStore.get("isReminderOn");
     }
     /**
      * Gets the location property value. The location property
@@ -403,7 +235,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
-        return this.location;
+        return this.BackingStore.get("location");
     }
     /**
      * Gets the locations property value. The locations property
@@ -411,7 +243,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Location> getLocations() {
-        return this.locations;
+        return this.BackingStore.get("locations");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the event. Read-only. Nullable.
@@ -419,7 +251,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.BackingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the onlineMeeting property value. The onlineMeeting property
@@ -427,7 +259,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingInfo getOnlineMeeting() {
-        return this.onlineMeeting;
+        return this.BackingStore.get("onlineMeeting");
     }
     /**
      * Gets the onlineMeetingProvider property value. The onlineMeetingProvider property
@@ -435,7 +267,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingProviderType getOnlineMeetingProvider() {
-        return this.onlineMeetingProvider;
+        return this.BackingStore.get("onlineMeetingProvider");
     }
     /**
      * Gets the onlineMeetingUrl property value. The onlineMeetingUrl property
@@ -443,7 +275,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnlineMeetingUrl() {
-        return this.onlineMeetingUrl;
+        return this.BackingStore.get("onlineMeetingUrl");
     }
     /**
      * Gets the organizer property value. The organizer property
@@ -451,7 +283,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Recipient getOrganizer() {
-        return this.organizer;
+        return this.BackingStore.get("organizer");
     }
     /**
      * Gets the originalEndTimeZone property value. The originalEndTimeZone property
@@ -459,7 +291,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOriginalEndTimeZone() {
-        return this.originalEndTimeZone;
+        return this.BackingStore.get("originalEndTimeZone");
     }
     /**
      * Gets the originalStart property value. The originalStart property
@@ -467,7 +299,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOriginalStart() {
-        return this.originalStart;
+        return this.BackingStore.get("originalStart");
     }
     /**
      * Gets the originalStartTimeZone property value. The originalStartTimeZone property
@@ -475,7 +307,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOriginalStartTimeZone() {
-        return this.originalStartTimeZone;
+        return this.BackingStore.get("originalStartTimeZone");
     }
     /**
      * Gets the recurrence property value. The recurrence property
@@ -483,7 +315,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.BackingStore.get("recurrence");
     }
     /**
      * Gets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
@@ -491,7 +323,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getReminderMinutesBeforeStart() {
-        return this.reminderMinutesBeforeStart;
+        return this.BackingStore.get("reminderMinutesBeforeStart");
     }
     /**
      * Gets the responseRequested property value. The responseRequested property
@@ -499,7 +331,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getResponseRequested() {
-        return this.responseRequested;
+        return this.BackingStore.get("responseRequested");
     }
     /**
      * Gets the responseStatus property value. The responseStatus property
@@ -507,7 +339,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ResponseStatus getResponseStatus() {
-        return this.responseStatus;
+        return this.BackingStore.get("responseStatus");
     }
     /**
      * Gets the sensitivity property value. The sensitivity property
@@ -515,7 +347,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Sensitivity getSensitivity() {
-        return this.sensitivity;
+        return this.BackingStore.get("sensitivity");
     }
     /**
      * Gets the seriesMasterId property value. The seriesMasterId property
@@ -523,7 +355,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSeriesMasterId() {
-        return this.seriesMasterId;
+        return this.BackingStore.get("seriesMasterId");
     }
     /**
      * Gets the showAs property value. The showAs property
@@ -531,7 +363,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getShowAs() {
-        return this.showAs;
+        return this.BackingStore.get("showAs");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the event. Read-only. Nullable.
@@ -539,7 +371,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.BackingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the start property value. The start property
@@ -547,7 +379,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStart() {
-        return this.start;
+        return this.BackingStore.get("start");
     }
     /**
      * Gets the subject property value. The subject property
@@ -555,7 +387,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the transactionId property value. The transactionId property
@@ -563,7 +395,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTransactionId() {
-        return this.transactionId;
+        return this.BackingStore.get("transactionId");
     }
     /**
      * Gets the type property value. The type property
@@ -571,7 +403,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EventType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Gets the webLink property value. The webLink property
@@ -579,7 +411,7 @@ public class Event extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebLink() {
-        return this.webLink;
+        return this.BackingStore.get("webLink");
     }
     /**
      * Serializes information the current object
@@ -636,293 +468,293 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the allowNewTimeProposals property.
      */
     public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowNewTimeProposals = value;
+        this.BackingStore.set("allowNewTimeProposals", value);
     }
     /**
      * Sets the attachments property value. The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
-        this.attachments = value;
+        this.BackingStore.set("attachments", value);
     }
     /**
      * Sets the attendees property value. The collection of attendees for the event.
      * @param value Value to set for the attendees property.
      */
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<Attendee> value) {
-        this.attendees = value;
+        this.BackingStore.set("attendees", value);
     }
     /**
      * Sets the body property value. The body of the message associated with the event. It can be in HTML or text format.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
      * @param value Value to set for the bodyPreview property.
      */
     public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
-        this.bodyPreview = value;
+        this.BackingStore.set("bodyPreview", value);
     }
     /**
      * Sets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
      * @param value Value to set for the calendar property.
      */
     public void setCalendar(@jakarta.annotation.Nullable final Calendar value) {
-        this.calendar = value;
+        this.BackingStore.set("calendar", value);
     }
     /**
      * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @param value Value to set for the end property.
      */
     public void setEnd(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.end = value;
+        this.BackingStore.set("end", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the event. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the hasAttachments property value. Set to true if the event has attachments.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.BackingStore.set("hasAttachments", value);
     }
     /**
      * Sets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
      * @param value Value to set for the hideAttendees property.
      */
     public void setHideAttendees(@jakarta.annotation.Nullable final Boolean value) {
-        this.hideAttendees = value;
+        this.BackingStore.set("hideAttendees", value);
     }
     /**
      * Sets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      * @param value Value to set for the iCalUId property.
      */
     public void setICalUId(@jakarta.annotation.Nullable final String value) {
-        this.iCalUId = value;
+        this.BackingStore.set("iCalUId", value);
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
-        this.importance = value;
+        this.BackingStore.set("importance", value);
     }
     /**
      * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<Event> value) {
-        this.instances = value;
+        this.BackingStore.set("instances", value);
     }
     /**
      * Sets the isAllDay property value. The isAllDay property
      * @param value Value to set for the isAllDay property.
      */
     public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAllDay = value;
+        this.BackingStore.set("isAllDay", value);
     }
     /**
      * Sets the isCancelled property value. The isCancelled property
      * @param value Value to set for the isCancelled property.
      */
     public void setIsCancelled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCancelled = value;
+        this.BackingStore.set("isCancelled", value);
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
      */
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDraft = value;
+        this.BackingStore.set("isDraft", value);
     }
     /**
      * Sets the isOnlineMeeting property value. The isOnlineMeeting property
      * @param value Value to set for the isOnlineMeeting property.
      */
     public void setIsOnlineMeeting(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOnlineMeeting = value;
+        this.BackingStore.set("isOnlineMeeting", value);
     }
     /**
      * Sets the isOrganizer property value. The isOrganizer property
      * @param value Value to set for the isOrganizer property.
      */
     public void setIsOrganizer(@jakarta.annotation.Nullable final Boolean value) {
-        this.isOrganizer = value;
+        this.BackingStore.set("isOrganizer", value);
     }
     /**
      * Sets the isReminderOn property value. The isReminderOn property
      * @param value Value to set for the isReminderOn property.
      */
     public void setIsReminderOn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReminderOn = value;
+        this.BackingStore.set("isReminderOn", value);
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
-        this.location = value;
+        this.BackingStore.set("location", value);
     }
     /**
      * Sets the locations property value. The locations property
      * @param value Value to set for the locations property.
      */
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<Location> value) {
-        this.locations = value;
+        this.BackingStore.set("locations", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.BackingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the onlineMeeting property value. The onlineMeeting property
      * @param value Value to set for the onlineMeeting property.
      */
     public void setOnlineMeeting(@jakarta.annotation.Nullable final OnlineMeetingInfo value) {
-        this.onlineMeeting = value;
+        this.BackingStore.set("onlineMeeting", value);
     }
     /**
      * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
      * @param value Value to set for the onlineMeetingProvider property.
      */
     public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
-        this.onlineMeetingProvider = value;
+        this.BackingStore.set("onlineMeetingProvider", value);
     }
     /**
      * Sets the onlineMeetingUrl property value. The onlineMeetingUrl property
      * @param value Value to set for the onlineMeetingUrl property.
      */
     public void setOnlineMeetingUrl(@jakarta.annotation.Nullable final String value) {
-        this.onlineMeetingUrl = value;
+        this.BackingStore.set("onlineMeetingUrl", value);
     }
     /**
      * Sets the organizer property value. The organizer property
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final Recipient value) {
-        this.organizer = value;
+        this.BackingStore.set("organizer", value);
     }
     /**
      * Sets the originalEndTimeZone property value. The originalEndTimeZone property
      * @param value Value to set for the originalEndTimeZone property.
      */
     public void setOriginalEndTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.originalEndTimeZone = value;
+        this.BackingStore.set("originalEndTimeZone", value);
     }
     /**
      * Sets the originalStart property value. The originalStart property
      * @param value Value to set for the originalStart property.
      */
     public void setOriginalStart(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.originalStart = value;
+        this.BackingStore.set("originalStart", value);
     }
     /**
      * Sets the originalStartTimeZone property value. The originalStartTimeZone property
      * @param value Value to set for the originalStartTimeZone property.
      */
     public void setOriginalStartTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.originalStartTimeZone = value;
+        this.BackingStore.set("originalStartTimeZone", value);
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
-        this.recurrence = value;
+        this.BackingStore.set("recurrence", value);
     }
     /**
      * Sets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
      * @param value Value to set for the reminderMinutesBeforeStart property.
      */
     public void setReminderMinutesBeforeStart(@jakarta.annotation.Nullable final Integer value) {
-        this.reminderMinutesBeforeStart = value;
+        this.BackingStore.set("reminderMinutesBeforeStart", value);
     }
     /**
      * Sets the responseRequested property value. The responseRequested property
      * @param value Value to set for the responseRequested property.
      */
     public void setResponseRequested(@jakarta.annotation.Nullable final Boolean value) {
-        this.responseRequested = value;
+        this.BackingStore.set("responseRequested", value);
     }
     /**
      * Sets the responseStatus property value. The responseStatus property
      * @param value Value to set for the responseStatus property.
      */
     public void setResponseStatus(@jakarta.annotation.Nullable final ResponseStatus value) {
-        this.responseStatus = value;
+        this.BackingStore.set("responseStatus", value);
     }
     /**
      * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
-        this.sensitivity = value;
+        this.BackingStore.set("sensitivity", value);
     }
     /**
      * Sets the seriesMasterId property value. The seriesMasterId property
      * @param value Value to set for the seriesMasterId property.
      */
     public void setSeriesMasterId(@jakarta.annotation.Nullable final String value) {
-        this.seriesMasterId = value;
+        this.BackingStore.set("seriesMasterId", value);
     }
     /**
      * Sets the showAs property value. The showAs property
      * @param value Value to set for the showAs property.
      */
     public void setShowAs(@jakarta.annotation.Nullable final FreeBusyStatus value) {
-        this.showAs = value;
+        this.BackingStore.set("showAs", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the event. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.BackingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the start property value. The start property
      * @param value Value to set for the start property.
      */
     public void setStart(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.start = value;
+        this.BackingStore.set("start", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the transactionId property value. The transactionId property
      * @param value Value to set for the transactionId property.
      */
     public void setTransactionId(@jakarta.annotation.Nullable final String value) {
-        this.transactionId = value;
+        this.BackingStore.set("transactionId", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final EventType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
      */
     public void setWebLink(@jakarta.annotation.Nullable final String value) {
-        this.webLink = value;
+        this.BackingStore.set("webLink", value);
     }
 }

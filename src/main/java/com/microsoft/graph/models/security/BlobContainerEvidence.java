@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BlobContainerEvidence extends AlertEvidence implements Parsable {
     /**
-     * The name of the blob container.
-     */
-    private String name;
-    /**
-     * The storage which the blob container belongs to.
-     */
-    private AzureResourceEvidence storageResource;
-    /**
-     * The full URL representation of the blob container.
-     */
-    private String url;
-    /**
      * Instantiates a new BlobContainerEvidence and sets the default values.
      */
     public BlobContainerEvidence() {
@@ -55,7 +43,7 @@ public class BlobContainerEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the storageResource property value. The storage which the blob container belongs to.
@@ -63,7 +51,7 @@ public class BlobContainerEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AzureResourceEvidence getStorageResource() {
-        return this.storageResource;
+        return this.BackingStore.get("storageResource");
     }
     /**
      * Gets the url property value. The full URL representation of the blob container.
@@ -71,7 +59,7 @@ public class BlobContainerEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class BlobContainerEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the storageResource property value. The storage which the blob container belongs to.
      * @param value Value to set for the storageResource property.
      */
     public void setStorageResource(@jakarta.annotation.Nullable final AzureResourceEvidence value) {
-        this.storageResource = value;
+        this.BackingStore.set("storageResource", value);
     }
     /**
      * Sets the url property value. The full URL representation of the blob container.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

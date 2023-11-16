@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlow extends Entity implements Parsable {
     /**
-     * The userFlowType property
-     */
-    private UserFlowType userFlowType;
-    /**
-     * The userFlowTypeVersion property
-     */
-    private Float userFlowTypeVersion;
-    /**
      * Instantiates a new IdentityUserFlow and sets the default values.
      */
     public IdentityUserFlow() {
@@ -56,7 +48,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UserFlowType getUserFlowType() {
-        return this.userFlowType;
+        return this.BackingStore.get("userFlowType");
     }
     /**
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
@@ -64,7 +56,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Float getUserFlowTypeVersion() {
-        return this.userFlowTypeVersion;
+        return this.BackingStore.get("userFlowTypeVersion");
     }
     /**
      * Serializes information the current object
@@ -81,13 +73,13 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowType property.
      */
     public void setUserFlowType(@jakarta.annotation.Nullable final UserFlowType value) {
-        this.userFlowType = value;
+        this.BackingStore.set("userFlowType", value);
     }
     /**
      * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
      * @param value Value to set for the userFlowTypeVersion property.
      */
     public void setUserFlowTypeVersion(@jakarta.annotation.Nullable final Float value) {
-        this.userFlowTypeVersion = value;
+        this.BackingStore.set("userFlowTypeVersion", value);
     }
 }

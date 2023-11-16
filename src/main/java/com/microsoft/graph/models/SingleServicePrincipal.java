@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SingleServicePrincipal extends SubjectSet implements Parsable {
     /**
-     * Description of this service principal.
-     */
-    private String description;
-    /**
-     * ID of the servicePrincipal.
-     */
-    private String servicePrincipalId;
-    /**
      * Instantiates a new SingleServicePrincipal and sets the default values.
      */
     public SingleServicePrincipal() {
@@ -39,7 +31,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
-        return this.servicePrincipalId;
+        return this.BackingStore.get("servicePrincipalId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the servicePrincipalId property value. ID of the servicePrincipal.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.servicePrincipalId = value;
+        this.BackingStore.set("servicePrincipalId", value);
     }
 }

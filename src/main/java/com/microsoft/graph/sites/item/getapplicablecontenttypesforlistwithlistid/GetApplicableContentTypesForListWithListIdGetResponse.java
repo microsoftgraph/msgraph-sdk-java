@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetApplicableContentTypesForListWithListIdGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ContentType> value;
-    /**
      * Instantiates a new GetApplicableContentTypesForListWithListIdGetResponse and sets the default values.
      */
     public GetApplicableContentTypesForListWithListIdGetResponse() {
@@ -46,7 +42,7 @@ public class GetApplicableContentTypesForListWithListIdGetResponse extends BaseC
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetApplicableContentTypesForListWithListIdGetResponse extends BaseC
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

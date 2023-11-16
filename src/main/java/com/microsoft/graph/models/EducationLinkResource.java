@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationLinkResource extends EducationResource implements Parsable {
     /**
-     * URL to the resource.
-     */
-    private String link;
-    /**
      * Instantiates a new EducationLinkResource and sets the default values.
      */
     public EducationLinkResource() {
@@ -45,7 +41,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getLink() {
-        return this.link;
+        return this.BackingStore.get("link");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationLinkResource extends EducationResource implements Parsable
      * @param value Value to set for the link property.
      */
     public void setLink(@jakarta.annotation.Nullable final String value) {
-        this.link = value;
+        this.BackingStore.set("link", value);
     }
 }

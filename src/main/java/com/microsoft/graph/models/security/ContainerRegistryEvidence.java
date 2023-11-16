@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerRegistryEvidence extends AlertEvidence implements Parsable {
     /**
-     * The registry URI.
-     */
-    private String registry;
-    /**
      * Instantiates a new ContainerRegistryEvidence and sets the default values.
      */
     public ContainerRegistryEvidence() {
@@ -45,7 +41,7 @@ public class ContainerRegistryEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getRegistry() {
-        return this.registry;
+        return this.BackingStore.get("registry");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class ContainerRegistryEvidence extends AlertEvidence implements Parsable
      * @param value Value to set for the registry property.
      */
     public void setRegistry(@jakarta.annotation.Nullable final String value) {
-        this.registry = value;
+        this.BackingStore.set("registry", value);
     }
 }

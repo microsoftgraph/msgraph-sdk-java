@@ -4,47 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
+public class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If set to true, members can add and remove apps.
-     */
-    private Boolean allowAddRemoveApps;
-    /**
-     * If set to true, members can add and update private channels.
-     */
-    private Boolean allowCreatePrivateChannels;
-    /**
-     * If set to true, members can add and update channels.
-     */
-    private Boolean allowCreateUpdateChannels;
-    /**
-     * If set to true, members can add, update, and remove connectors.
-     */
-    private Boolean allowCreateUpdateRemoveConnectors;
-    /**
-     * If set to true, members can add, update, and remove tabs.
-     */
-    private Boolean allowCreateUpdateRemoveTabs;
-    /**
-     * If set to true, members can delete channels.
-     */
-    private Boolean allowDeleteChannels;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new TeamMemberSettings and sets the default values.
      */
     public TeamMemberSettings() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -63,7 +39,12 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
@@ -71,7 +52,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAddRemoveApps() {
-        return this.allowAddRemoveApps;
+        return this.BackingStore.get("allowAddRemoveApps");
     }
     /**
      * Gets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
@@ -79,7 +60,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreatePrivateChannels() {
-        return this.allowCreatePrivateChannels;
+        return this.BackingStore.get("allowCreatePrivateChannels");
     }
     /**
      * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
@@ -87,7 +68,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateChannels() {
-        return this.allowCreateUpdateChannels;
+        return this.BackingStore.get("allowCreateUpdateChannels");
     }
     /**
      * Gets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
@@ -95,7 +76,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveConnectors() {
-        return this.allowCreateUpdateRemoveConnectors;
+        return this.BackingStore.get("allowCreateUpdateRemoveConnectors");
     }
     /**
      * Gets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
@@ -103,7 +84,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveTabs() {
-        return this.allowCreateUpdateRemoveTabs;
+        return this.BackingStore.get("allowCreateUpdateRemoveTabs");
     }
     /**
      * Gets the allowDeleteChannels property value. If set to true, members can delete channels.
@@ -111,7 +92,15 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteChannels() {
-        return this.allowDeleteChannels;
+        return this.BackingStore.get("allowDeleteChannels");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -135,7 +124,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -157,55 +146,63 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
      * @param value Value to set for the allowAddRemoveApps property.
      */
     public void setAllowAddRemoveApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowAddRemoveApps = value;
+        this.BackingStore.set("allowAddRemoveApps", value);
     }
     /**
      * Sets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
      * @param value Value to set for the allowCreatePrivateChannels property.
      */
     public void setAllowCreatePrivateChannels(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowCreatePrivateChannels = value;
+        this.BackingStore.set("allowCreatePrivateChannels", value);
     }
     /**
      * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @param value Value to set for the allowCreateUpdateChannels property.
      */
     public void setAllowCreateUpdateChannels(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowCreateUpdateChannels = value;
+        this.BackingStore.set("allowCreateUpdateChannels", value);
     }
     /**
      * Sets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
      * @param value Value to set for the allowCreateUpdateRemoveConnectors property.
      */
     public void setAllowCreateUpdateRemoveConnectors(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowCreateUpdateRemoveConnectors = value;
+        this.BackingStore.set("allowCreateUpdateRemoveConnectors", value);
     }
     /**
      * Sets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
      * @param value Value to set for the allowCreateUpdateRemoveTabs property.
      */
     public void setAllowCreateUpdateRemoveTabs(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowCreateUpdateRemoveTabs = value;
+        this.BackingStore.set("allowCreateUpdateRemoveTabs", value);
     }
     /**
      * Sets the allowDeleteChannels property value. If set to true, members can delete channels.
      * @param value Value to set for the allowDeleteChannels property.
      */
     public void setAllowDeleteChannels(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDeleteChannels = value;
+        this.BackingStore.set("allowDeleteChannels", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

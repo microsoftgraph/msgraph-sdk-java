@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefaultManagedAppProtectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DefaultManagedAppProtection> value;
-    /**
      * Instantiates a new DefaultManagedAppProtectionCollectionResponse and sets the default values.
      */
     public DefaultManagedAppProtectionCollectionResponse() {
@@ -44,7 +40,7 @@ public class DefaultManagedAppProtectionCollectionResponse extends BaseCollectio
      */
     @jakarta.annotation.Nullable
     public java.util.List<DefaultManagedAppProtection> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DefaultManagedAppProtectionCollectionResponse extends BaseCollectio
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DefaultManagedAppProtection> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

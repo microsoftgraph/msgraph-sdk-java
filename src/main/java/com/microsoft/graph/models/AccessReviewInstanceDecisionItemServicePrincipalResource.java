@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
-     * The globally unique identifier of the application to which access has been granted.
-     */
-    private String appId;
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
      */
     public AccessReviewInstanceDecisionItemServicePrincipalResource() {
@@ -35,7 +31,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.BackingStore.get("appId");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.BackingStore.set("appId", value);
     }
 }

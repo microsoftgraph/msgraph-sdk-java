@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType implements Parsable {
     /**
-     * Max points possible for this assignment.
-     */
-    private Float maxPoints;
-    /**
      * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.
      */
     public EducationAssignmentPointsGradeType() {
@@ -45,7 +41,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      */
     @jakarta.annotation.Nullable
     public Float getMaxPoints() {
-        return this.maxPoints;
+        return this.BackingStore.get("maxPoints");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param value Value to set for the maxPoints property.
      */
     public void setMaxPoints(@jakarta.annotation.Nullable final Float value) {
-        this.maxPoints = value;
+        this.BackingStore.set("maxPoints", value);
     }
 }

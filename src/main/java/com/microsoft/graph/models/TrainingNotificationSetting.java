@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * Training assignment details.
-     */
-    private BaseEndUserNotification trainingAssignment;
-    /**
-     * Training reminder details.
-     */
-    private TrainingReminderNotification trainingReminder;
-    /**
      * Instantiates a new TrainingNotificationSetting and sets the default values.
      */
     public TrainingNotificationSetting() {
@@ -50,7 +42,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
      */
     @jakarta.annotation.Nullable
     public BaseEndUserNotification getTrainingAssignment() {
-        return this.trainingAssignment;
+        return this.BackingStore.get("trainingAssignment");
     }
     /**
      * Gets the trainingReminder property value. Training reminder details.
@@ -58,7 +50,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
      */
     @jakarta.annotation.Nullable
     public TrainingReminderNotification getTrainingReminder() {
-        return this.trainingReminder;
+        return this.BackingStore.get("trainingReminder");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
      * @param value Value to set for the trainingAssignment property.
      */
     public void setTrainingAssignment(@jakarta.annotation.Nullable final BaseEndUserNotification value) {
-        this.trainingAssignment = value;
+        this.BackingStore.set("trainingAssignment", value);
     }
     /**
      * Sets the trainingReminder property value. Training reminder details.
      * @param value Value to set for the trainingReminder property.
      */
     public void setTrainingReminder(@jakarta.annotation.Nullable final TrainingReminderNotification value) {
-        this.trainingReminder = value;
+        this.BackingStore.set("trainingReminder", value);
     }
 }

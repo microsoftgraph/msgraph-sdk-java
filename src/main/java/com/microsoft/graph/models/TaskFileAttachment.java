@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
     /**
-     * The base64-encoded contents of the file.
-     */
-    private byte[] contentBytes;
-    /**
      * Instantiates a new TaskFileAttachment and sets the default values.
      */
     public TaskFileAttachment() {
@@ -35,7 +31,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
-        return this.contentBytes;
+        return this.BackingStore.get("contentBytes");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * @param value Value to set for the contentBytes property.
      */
     public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
-        this.contentBytes = value;
+        this.BackingStore.set("contentBytes", value);
     }
 }

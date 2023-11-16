@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChoiceColumn implements AdditionalDataHolder, Parsable {
+public class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * If true, allows custom values that aren't in the configured choices.
-     */
-    private Boolean allowTextEntry;
-    /**
-     * The list of values available for this column.
-     */
-    private java.util.List<String> choices;
-    /**
-     * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
-     */
-    private String displayAs;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new ChoiceColumn and sets the default values.
      */
     public ChoiceColumn() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,12 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
@@ -59,7 +52,15 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTextEntry() {
-        return this.allowTextEntry;
+        return this.BackingStore.get("allowTextEntry");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the choices property value. The list of values available for this column.
@@ -67,7 +68,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChoices() {
-        return this.choices;
+        return this.BackingStore.get("choices");
     }
     /**
      * Gets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
@@ -75,7 +76,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayAs() {
-        return this.displayAs;
+        return this.BackingStore.get("displayAs");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +97,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
      * @param value Value to set for the allowTextEntry property.
      */
     public void setAllowTextEntry(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowTextEntry = value;
+        this.BackingStore.set("allowTextEntry", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the choices property value. The list of values available for this column.
      * @param value Value to set for the choices property.
      */
     public void setChoices(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.choices = value;
+        this.BackingStore.set("choices", value);
     }
     /**
      * Sets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
      * @param value Value to set for the displayAs property.
      */
     public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
-        this.displayAs = value;
+        this.BackingStore.set("displayAs", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
 }

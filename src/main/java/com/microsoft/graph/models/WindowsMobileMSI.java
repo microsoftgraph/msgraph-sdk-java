@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
-     * The command line.
-     */
-    private String commandLine;
-    /**
-     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-     */
-    private Boolean ignoreVersionDetection;
-    /**
-     * The product code.
-     */
-    private String productCode;
-    /**
-     * The product version of Windows Mobile MSI Line of Business (LoB) app.
-     */
-    private String productVersion;
-    /**
      * Instantiates a new WindowsMobileMSI and sets the default values.
      */
     public WindowsMobileMSI() {
@@ -50,7 +34,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCommandLine() {
-        return this.commandLine;
+        return this.BackingStore.get("commandLine");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +55,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
-        return this.ignoreVersionDetection;
+        return this.BackingStore.get("ignoreVersionDetection");
     }
     /**
      * Gets the productCode property value. The product code.
@@ -79,7 +63,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
-        return this.productCode;
+        return this.BackingStore.get("productCode");
     }
     /**
      * Gets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
@@ -87,7 +71,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
-        return this.productVersion;
+        return this.BackingStore.get("productVersion");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the commandLine property.
      */
     public void setCommandLine(@jakarta.annotation.Nullable final String value) {
-        this.commandLine = value;
+        this.BackingStore.set("commandLine", value);
     }
     /**
      * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
-        this.ignoreVersionDetection = value;
+        this.BackingStore.set("ignoreVersionDetection", value);
     }
     /**
      * Sets the productCode property value. The product code.
      * @param value Value to set for the productCode property.
      */
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
-        this.productCode = value;
+        this.BackingStore.set("productCode", value);
     }
     /**
      * Sets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
-        this.productVersion = value;
+        this.BackingStore.set("productVersion", value);
     }
 }

@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttachmentBase extends Entity implements Parsable {
     /**
-     * The MIME type.
-     */
-    private String contentType;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The display name of the attachment. This doesn't need to be the actual file name.
-     */
-    private String name;
-    /**
-     * The length of the attachment in bytes.
-     */
-    private Integer size;
-    /**
      * Instantiates a new AttachmentBase and sets the default values.
      */
     public AttachmentBase() {
@@ -54,7 +38,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
-        return this.contentType;
+        return this.BackingStore.get("contentType");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +59,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
@@ -83,7 +67,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the size property value. The length of the attachment in bytes.
@@ -91,7 +75,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.BackingStore.get("size");
     }
     /**
      * Serializes information the current object
@@ -110,27 +94,27 @@ public class AttachmentBase extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
-        this.contentType = value;
+        this.BackingStore.set("contentType", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the size property value. The length of the attachment in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.BackingStore.set("size", value);
     }
 }

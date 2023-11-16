@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeSet extends Entity implements Parsable {
     /**
-     * Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
-     */
-    private String description;
-    /**
-     * Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
-     */
-    private Integer maxAttributesPerSet;
-    /**
      * Instantiates a new AttributeSet and sets the default values.
      */
     public AttributeSet() {
@@ -38,7 +30,7 @@ public class AttributeSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class AttributeSet extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getMaxAttributesPerSet() {
-        return this.maxAttributesPerSet;
+        return this.BackingStore.get("maxAttributesPerSet");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class AttributeSet extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the maxAttributesPerSet property value. Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
      * @param value Value to set for the maxAttributesPerSet property.
      */
     public void setMaxAttributesPerSet(@jakarta.annotation.Nullable final Integer value) {
-        this.maxAttributesPerSet = value;
+        this.BackingStore.set("maxAttributesPerSet", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProviderBase extends Entity implements Parsable {
     /**
-     * The display name of the identity provider.
-     */
-    private String displayName;
-    /**
      * Instantiates a new IdentityProviderBase and sets the default values.
      */
     public IdentityProviderBase() {
@@ -46,7 +42,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -72,6 +68,6 @@ public class IdentityProviderBase extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
 }

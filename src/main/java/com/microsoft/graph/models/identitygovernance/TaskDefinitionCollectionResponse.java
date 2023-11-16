@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<TaskDefinition> value;
-    /**
      * Instantiates a new TaskDefinitionCollectionResponse and sets the default values.
      */
     public TaskDefinitionCollectionResponse() {
@@ -45,7 +41,7 @@ public class TaskDefinitionCollectionResponse extends BaseCollectionPaginationCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskDefinition> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TaskDefinitionCollectionResponse extends BaseCollectionPaginationCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<TaskDefinition> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SingleValueLegacyExtendedProperty extends Entity implements Parsable {
     /**
-     * A property value.
-     */
-    private String value;
-    /**
      * Instantiates a new SingleValueLegacyExtendedProperty and sets the default values.
      */
     public SingleValueLegacyExtendedProperty() {
@@ -44,7 +40,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrgContactCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<OrgContact> value;
-    /**
      * Instantiates a new OrgContactCollectionResponse and sets the default values.
      */
     public OrgContactCollectionResponse() {
@@ -44,7 +40,7 @@ public class OrgContactCollectionResponse extends BaseCollectionPaginationCountR
      */
     @jakarta.annotation.Nullable
     public java.util.List<OrgContact> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class OrgContactCollectionResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<OrgContact> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

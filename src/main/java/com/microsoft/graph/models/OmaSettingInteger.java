@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingInteger extends OmaSetting implements Parsable {
     /**
-     * Value.
-     */
-    private Integer value;
-    /**
      * Instantiates a new OmaSettingInteger and sets the default values.
      */
     public OmaSettingInteger() {
@@ -48,7 +44,7 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final Integer value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

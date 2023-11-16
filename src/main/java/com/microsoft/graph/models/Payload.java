@@ -10,94 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Payload extends Entity implements Parsable {
     /**
-     * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
-     */
-    private PayloadBrand brand;
-    /**
-     * The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
-     */
-    private PayloadComplexity complexity;
-    /**
-     * Identity of the user who created the attack simulation and training campaign payload.
-     */
-    private EmailIdentity createdBy;
-    /**
-     * Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Description of the attack simulation and training campaign payload.
-     */
-    private String description;
-    /**
-     * Additional details about the payload.
-     */
-    private PayloadDetail detail;
-    /**
-     * Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
-     */
-    private String displayName;
-    /**
-     * Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
-     */
-    private PayloadIndustry industry;
-    /**
-     * Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
-     */
-    private Boolean isAutomated;
-    /**
-     * Indicates whether the payload is controversial.
-     */
-    private Boolean isControversial;
-    /**
-     * Indicates whether the payload is from any recent event.
-     */
-    private Boolean isCurrentEvent;
-    /**
-     * Payload language.
-     */
-    private String language;
-    /**
-     * Identity of the user who most recently modified the attack simulation and training campaign payload.
-     */
-    private EmailIdentity lastModifiedBy;
-    /**
-     * Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * Free text tags for a payload.
-     */
-    private java.util.List<String> payloadTags;
-    /**
-     * The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     */
-    private PayloadDeliveryPlatform platform;
-    /**
-     * Predicted probability for a payload to phish a targeted user.
-     */
-    private Double predictedCompromiseRate;
-    /**
-     * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     */
-    private SimulationAttackType simulationAttackType;
-    /**
-     * The source property
-     */
-    private SimulationContentSource source;
-    /**
-     * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
-     */
-    private SimulationContentStatus status;
-    /**
-     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
-     */
-    private SimulationAttackTechnique technique;
-    /**
-     * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
-     */
-    private PayloadTheme theme;
-    /**
      * Instantiates a new Payload and sets the default values.
      */
     public Payload() {
@@ -119,7 +31,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadBrand getBrand() {
-        return this.brand;
+        return this.BackingStore.get("brand");
     }
     /**
      * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
@@ -127,7 +39,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadComplexity getComplexity() {
-        return this.complexity;
+        return this.BackingStore.get("complexity");
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
@@ -135,7 +47,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
-        return this.createdBy;
+        return this.BackingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -143,7 +55,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. Description of the attack simulation and training campaign payload.
@@ -151,7 +63,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the detail property value. Additional details about the payload.
@@ -159,7 +71,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadDetail getDetail() {
-        return this.detail;
+        return this.BackingStore.get("detail");
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
@@ -167,7 +79,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -206,7 +118,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadIndustry getIndustry() {
-        return this.industry;
+        return this.BackingStore.get("industry");
     }
     /**
      * Gets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
@@ -214,7 +126,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
-        return this.isAutomated;
+        return this.BackingStore.get("isAutomated");
     }
     /**
      * Gets the isControversial property value. Indicates whether the payload is controversial.
@@ -222,7 +134,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsControversial() {
-        return this.isControversial;
+        return this.BackingStore.get("isControversial");
     }
     /**
      * Gets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
@@ -230,7 +142,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCurrentEvent() {
-        return this.isCurrentEvent;
+        return this.BackingStore.get("isCurrentEvent");
     }
     /**
      * Gets the language property value. Payload language.
@@ -238,7 +150,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.BackingStore.get("language");
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
@@ -246,7 +158,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.BackingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -254,7 +166,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the payloadTags property value. Free text tags for a payload.
@@ -262,7 +174,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPayloadTags() {
-        return this.payloadTags;
+        return this.BackingStore.get("payloadTags");
     }
     /**
      * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
@@ -270,7 +182,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPlatform() {
-        return this.platform;
+        return this.BackingStore.get("platform");
     }
     /**
      * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
@@ -278,7 +190,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Double getPredictedCompromiseRate() {
-        return this.predictedCompromiseRate;
+        return this.BackingStore.get("predictedCompromiseRate");
     }
     /**
      * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
@@ -286,7 +198,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationAttackType getSimulationAttackType() {
-        return this.simulationAttackType;
+        return this.BackingStore.get("simulationAttackType");
     }
     /**
      * Gets the source property value. The source property
@@ -294,7 +206,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
-        return this.source;
+        return this.BackingStore.get("source");
     }
     /**
      * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
@@ -302,7 +214,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
@@ -310,7 +222,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SimulationAttackTechnique getTechnique() {
-        return this.technique;
+        return this.BackingStore.get("technique");
     }
     /**
      * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
@@ -318,7 +230,7 @@ public class Payload extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PayloadTheme getTheme() {
-        return this.theme;
+        return this.BackingStore.get("theme");
     }
     /**
      * Serializes information the current object
@@ -355,153 +267,153 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the brand property.
      */
     public void setBrand(@jakarta.annotation.Nullable final PayloadBrand value) {
-        this.brand = value;
+        this.BackingStore.set("brand", value);
     }
     /**
      * Sets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
      * @param value Value to set for the complexity property.
      */
     public void setComplexity(@jakarta.annotation.Nullable final PayloadComplexity value) {
-        this.complexity = value;
+        this.BackingStore.set("complexity", value);
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.createdBy = value;
+        this.BackingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Date and time when the attack simulation and training campaign payload. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. Description of the attack simulation and training campaign payload.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the detail property value. Additional details about the payload.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PayloadDetail value) {
-        this.detail = value;
+        this.BackingStore.set("detail", value);
     }
     /**
      * Sets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @param value Value to set for the industry property.
      */
     public void setIndustry(@jakarta.annotation.Nullable final PayloadIndustry value) {
-        this.industry = value;
+        this.BackingStore.set("industry", value);
     }
     /**
      * Sets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
      * @param value Value to set for the isAutomated property.
      */
     public void setIsAutomated(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAutomated = value;
+        this.BackingStore.set("isAutomated", value);
     }
     /**
      * Sets the isControversial property value. Indicates whether the payload is controversial.
      * @param value Value to set for the isControversial property.
      */
     public void setIsControversial(@jakarta.annotation.Nullable final Boolean value) {
-        this.isControversial = value;
+        this.BackingStore.set("isControversial", value);
     }
     /**
      * Sets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
      * @param value Value to set for the isCurrentEvent property.
      */
     public void setIsCurrentEvent(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCurrentEvent = value;
+        this.BackingStore.set("isCurrentEvent", value);
     }
     /**
      * Sets the language property value. Payload language.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.BackingStore.set("language", value);
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
-        this.lastModifiedBy = value;
+        this.BackingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the payloadTags property value. Free text tags for a payload.
      * @param value Value to set for the payloadTags property.
      */
     public void setPayloadTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.payloadTags = value;
+        this.BackingStore.set("payloadTags", value);
     }
     /**
      * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
-        this.platform = value;
+        this.BackingStore.set("platform", value);
     }
     /**
      * Sets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
      * @param value Value to set for the predictedCompromiseRate property.
      */
     public void setPredictedCompromiseRate(@jakarta.annotation.Nullable final Double value) {
-        this.predictedCompromiseRate = value;
+        this.BackingStore.set("predictedCompromiseRate", value);
     }
     /**
      * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param value Value to set for the simulationAttackType property.
      */
     public void setSimulationAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
-        this.simulationAttackType = value;
+        this.BackingStore.set("simulationAttackType", value);
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
-        this.source = value;
+        this.BackingStore.set("source", value);
     }
     /**
      * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the technique property.
      */
     public void setTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
-        this.technique = value;
+        this.BackingStore.set("technique", value);
     }
     /**
      * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @param value Value to set for the theme property.
      */
     public void setTheme(@jakarta.annotation.Nullable final PayloadTheme value) {
-        this.theme = value;
+        this.BackingStore.set("theme", value);
     }
 }

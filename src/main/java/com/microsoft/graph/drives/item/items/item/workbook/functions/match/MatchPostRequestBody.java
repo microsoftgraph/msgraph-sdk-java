@@ -5,31 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
+public class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The lookupArray property
-     */
-    private Json lookupArray;
-    /**
-     * The lookupValue property
-     */
-    private Json lookupValue;
-    /**
-     * The matchType property
-     */
-    private Json matchType;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new MatchPostRequestBody and sets the default values.
      */
     public MatchPostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -48,7 +40,20 @@ public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +73,7 @@ public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLookupArray() {
-        return this.lookupArray;
+        return this.BackingStore.get("lookupArray");
     }
     /**
      * Gets the lookupValue property value. The lookupValue property
@@ -76,7 +81,7 @@ public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLookupValue() {
-        return this.lookupValue;
+        return this.BackingStore.get("lookupValue");
     }
     /**
      * Gets the matchType property value. The matchType property
@@ -84,7 +89,7 @@ public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getMatchType() {
-        return this.matchType;
+        return this.BackingStore.get("matchType");
     }
     /**
      * Serializes information the current object
@@ -102,27 +107,35 @@ public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the lookupArray property value. The lookupArray property
      * @param value Value to set for the lookupArray property.
      */
     public void setLookupArray(@jakarta.annotation.Nullable final Json value) {
-        this.lookupArray = value;
+        this.BackingStore.set("lookupArray", value);
     }
     /**
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
      */
     public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
-        this.lookupValue = value;
+        this.BackingStore.set("lookupValue", value);
     }
     /**
      * Sets the matchType property value. The matchType property
      * @param value Value to set for the matchType property.
      */
     public void setMatchType(@jakarta.annotation.Nullable final Json value) {
-        this.matchType = value;
+        this.BackingStore.set("matchType", value);
     }
 }

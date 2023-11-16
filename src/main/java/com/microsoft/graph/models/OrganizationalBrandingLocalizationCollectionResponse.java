@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrganizationalBrandingLocalizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<OrganizationalBrandingLocalization> value;
-    /**
      * Instantiates a new OrganizationalBrandingLocalizationCollectionResponse and sets the default values.
      */
     public OrganizationalBrandingLocalizationCollectionResponse() {
@@ -44,7 +40,7 @@ public class OrganizationalBrandingLocalizationCollectionResponse extends BaseCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<OrganizationalBrandingLocalization> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class OrganizationalBrandingLocalizationCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecordOperation extends CommsOperation implements Parsable {
     /**
-     * The access token required to retrieve the recording.
-     */
-    private String recordingAccessToken;
-    /**
-     * The location where the recording is located.
-     */
-    private String recordingLocation;
-    /**
      * Instantiates a new RecordOperation and sets the default values.
      */
     public RecordOperation() {
@@ -49,7 +41,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRecordingAccessToken() {
-        return this.recordingAccessToken;
+        return this.BackingStore.get("recordingAccessToken");
     }
     /**
      * Gets the recordingLocation property value. The location where the recording is located.
@@ -57,7 +49,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getRecordingLocation() {
-        return this.recordingLocation;
+        return this.BackingStore.get("recordingLocation");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the recordingAccessToken property.
      */
     public void setRecordingAccessToken(@jakarta.annotation.Nullable final String value) {
-        this.recordingAccessToken = value;
+        this.BackingStore.set("recordingAccessToken", value);
     }
     /**
      * Sets the recordingLocation property value. The location where the recording is located.
      * @param value Value to set for the recordingLocation property.
      */
     public void setRecordingLocation(@jakarta.annotation.Nullable final String value) {
-        this.recordingLocation = value;
+        this.BackingStore.set("recordingLocation", value);
     }
 }

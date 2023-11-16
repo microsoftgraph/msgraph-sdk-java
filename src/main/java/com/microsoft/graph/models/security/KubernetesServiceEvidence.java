@@ -9,38 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesServiceEvidence extends AlertEvidence implements Parsable {
     /**
-     * The service cluster IP.
-     */
-    private IpEvidence clusterIP;
-    /**
-     * The service external IPs.
-     */
-    private java.util.List<IpEvidence> externalIPs;
-    /**
-     * The service labels.
-     */
-    private Dictionary labels;
-    /**
-     * The service name.
-     */
-    private String name;
-    /**
-     * The service namespace.
-     */
-    private KubernetesNamespaceEvidence namespace;
-    /**
-     * The service selector.
-     */
-    private Dictionary selector;
-    /**
-     * The list of service ports.
-     */
-    private java.util.List<KubernetesServicePort> servicePorts;
-    /**
-     * The serviceType property
-     */
-    private KubernetesServiceType serviceType;
-    /**
      * Instantiates a new KubernetesServiceEvidence and sets the default values.
      */
     public KubernetesServiceEvidence() {
@@ -63,7 +31,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public IpEvidence getClusterIP() {
-        return this.clusterIP;
+        return this.BackingStore.get("clusterIP");
     }
     /**
      * Gets the externalIPs property value. The service external IPs.
@@ -71,7 +39,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpEvidence> getExternalIPs() {
-        return this.externalIPs;
+        return this.BackingStore.get("externalIPs");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +64,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public Dictionary getLabels() {
-        return this.labels;
+        return this.BackingStore.get("labels");
     }
     /**
      * Gets the name property value. The service name.
@@ -104,7 +72,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the namespace property value. The service namespace.
@@ -112,7 +80,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
-        return this.namespace;
+        return this.BackingStore.get("namespace");
     }
     /**
      * Gets the selector property value. The service selector.
@@ -120,7 +88,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public Dictionary getSelector() {
-        return this.selector;
+        return this.BackingStore.get("selector");
     }
     /**
      * Gets the servicePorts property value. The list of service ports.
@@ -128,7 +96,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public java.util.List<KubernetesServicePort> getServicePorts() {
-        return this.servicePorts;
+        return this.BackingStore.get("servicePorts");
     }
     /**
      * Gets the serviceType property value. The serviceType property
@@ -136,7 +104,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      */
     @jakarta.annotation.Nullable
     public KubernetesServiceType getServiceType() {
-        return this.serviceType;
+        return this.BackingStore.get("serviceType");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
      * @param value Value to set for the clusterIP property.
      */
     public void setClusterIP(@jakarta.annotation.Nullable final IpEvidence value) {
-        this.clusterIP = value;
+        this.BackingStore.set("clusterIP", value);
     }
     /**
      * Sets the externalIPs property value. The service external IPs.
      * @param value Value to set for the externalIPs property.
      */
     public void setExternalIPs(@jakarta.annotation.Nullable final java.util.List<IpEvidence> value) {
-        this.externalIPs = value;
+        this.BackingStore.set("externalIPs", value);
     }
     /**
      * Sets the labels property value. The service labels.
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
-        this.labels = value;
+        this.BackingStore.set("labels", value);
     }
     /**
      * Sets the name property value. The service name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the namespace property value. The service namespace.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
-        this.namespace = value;
+        this.BackingStore.set("namespace", value);
     }
     /**
      * Sets the selector property value. The service selector.
      * @param value Value to set for the selector property.
      */
     public void setSelector(@jakarta.annotation.Nullable final Dictionary value) {
-        this.selector = value;
+        this.BackingStore.set("selector", value);
     }
     /**
      * Sets the servicePorts property value. The list of service ports.
      * @param value Value to set for the servicePorts property.
      */
     public void setServicePorts(@jakarta.annotation.Nullable final java.util.List<KubernetesServicePort> value) {
-        this.servicePorts = value;
+        this.BackingStore.set("servicePorts", value);
     }
     /**
      * Sets the serviceType property value. The serviceType property
      * @param value Value to set for the serviceType property.
      */
     public void setServiceType(@jakarta.annotation.Nullable final KubernetesServiceType value) {
-        this.serviceType = value;
+        this.BackingStore.set("serviceType", value);
     }
 }

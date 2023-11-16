@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailIdentity extends Identity implements Parsable {
     /**
-     * Email address of the user.
-     */
-    private String email;
-    /**
      * Instantiates a new EmailIdentity and sets the default values.
      */
     public EmailIdentity() {
@@ -35,7 +31,7 @@ public class EmailIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.BackingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class EmailIdentity extends Identity implements Parsable {
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.BackingStore.set("email", value);
     }
 }

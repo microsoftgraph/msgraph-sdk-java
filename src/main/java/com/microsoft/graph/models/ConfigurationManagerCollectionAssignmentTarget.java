@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
-     * The collection Id that is the target of the assignment.
-     */
-    private String collectionId;
-    /**
      * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
      */
     public ConfigurationManagerCollectionAssignmentTarget() {
@@ -38,7 +34,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
      */
     @jakarta.annotation.Nullable
     public String getCollectionId() {
-        return this.collectionId;
+        return this.BackingStore.get("collectionId");
     }
     /**
      * The deserialization information for the current model
@@ -64,6 +60,6 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
      * @param value Value to set for the collectionId property.
      */
     public void setCollectionId(@jakarta.annotation.Nullable final String value) {
-        this.collectionId = value;
+        this.BackingStore.set("collectionId", value);
     }
 }

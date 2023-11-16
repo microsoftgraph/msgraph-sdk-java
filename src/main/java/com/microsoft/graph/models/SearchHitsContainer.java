@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
+public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The aggregations property
-     */
-    private java.util.List<SearchAggregation> aggregations;
-    /**
-     * A collection of the search results.
-     */
-    private java.util.List<SearchHit> hits;
-    /**
-     * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
-     */
-    private Boolean moreResultsAvailable;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
-     */
-    private Integer total;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SearchHitsContainer and sets the default values.
      */
     public SearchHitsContainer() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,12 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the aggregations property value. The aggregations property
@@ -63,7 +52,15 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchAggregation> getAggregations() {
-        return this.aggregations;
+        return this.BackingStore.get("aggregations");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchHit> getHits() {
-        return this.hits;
+        return this.BackingStore.get("hits");
     }
     /**
      * Gets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
@@ -93,7 +90,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getMoreResultsAvailable() {
-        return this.moreResultsAvailable;
+        return this.BackingStore.get("moreResultsAvailable");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,7 +98,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
@@ -109,7 +106,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTotal() {
-        return this.total;
+        return this.BackingStore.get("total");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the aggregations property value. The aggregations property
      * @param value Value to set for the aggregations property.
      */
     public void setAggregations(@jakarta.annotation.Nullable final java.util.List<SearchAggregation> value) {
-        this.aggregations = value;
+        this.BackingStore.set("aggregations", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the hits property value. A collection of the search results.
      * @param value Value to set for the hits property.
      */
     public void setHits(@jakarta.annotation.Nullable final java.util.List<SearchHit> value) {
-        this.hits = value;
+        this.BackingStore.set("hits", value);
     }
     /**
      * Sets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
      * @param value Value to set for the moreResultsAvailable property.
      */
     public void setMoreResultsAvailable(@jakarta.annotation.Nullable final Boolean value) {
-        this.moreResultsAvailable = value;
+        this.BackingStore.set("moreResultsAvailable", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {
-        this.total = value;
+        this.BackingStore.set("total", value);
     }
 }

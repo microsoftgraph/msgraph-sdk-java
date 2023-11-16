@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Group> value;
-    /**
      * Instantiates a new GroupCollectionResponse and sets the default values.
      */
     public GroupCollectionResponse() {
@@ -44,7 +40,7 @@ public class GroupCollectionResponse extends BaseCollectionPaginationCountRespon
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class GroupCollectionResponse extends BaseCollectionPaginationCountRespon
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Group> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

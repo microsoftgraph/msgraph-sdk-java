@@ -12,14 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
-     * File name associated with the Value property (.xml).
-     */
-    private String fileName;
-    /**
-     * Value. (UTF8 encoded byte array)
-     */
-    private byte[] value;
-    /**
      * Instantiates a new OmaSettingStringXml and sets the default values.
      */
     public OmaSettingStringXml() {
@@ -53,7 +45,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
-        return this.fileName;
+        return this.BackingStore.get("fileName");
     }
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
@@ -61,7 +53,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
-        this.fileName = value;
+        this.BackingStore.set("fileName", value);
     }
     /**
      * Sets the value property value. Value. (UTF8 encoded byte array)
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final byte[] value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

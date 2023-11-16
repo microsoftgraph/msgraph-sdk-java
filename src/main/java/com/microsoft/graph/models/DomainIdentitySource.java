@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainIdentitySource extends IdentitySource implements Parsable {
     /**
-     * The name of the identity source, typically also the domain name. Read only.
-     */
-    private String displayName;
-    /**
-     * The domain name. Read only.
-     */
-    private String domainName;
-    /**
      * Instantiates a new DomainIdentitySource and sets the default values.
      */
     public DomainIdentitySource() {
@@ -39,7 +31,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the domainName property value. The domain name. Read only.
@@ -47,7 +39,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
-        return this.domainName;
+        return this.BackingStore.get("domainName");
     }
     /**
      * The deserialization information for the current model
@@ -75,13 +67,13 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the domainName property value. The domain name. Read only.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
-        this.domainName = value;
+        this.BackingStore.set("domainName", value);
     }
 }

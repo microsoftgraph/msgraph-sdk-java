@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsOfUseContainer extends Entity implements Parsable {
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
-     */
-    private java.util.List<AgreementAcceptance> agreementAcceptances;
-    /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
-     */
-    private java.util.List<Agreement> agreements;
-    /**
      * Instantiates a new TermsOfUseContainer and sets the default values.
      */
     public TermsOfUseContainer() {
@@ -38,7 +30,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
-        return this.agreementAcceptances;
+        return this.BackingStore.get("agreementAcceptances");
     }
     /**
      * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
@@ -46,7 +38,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Agreement> getAgreements() {
-        return this.agreements;
+        return this.BackingStore.get("agreements");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      */
     public void setAgreementAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
-        this.agreementAcceptances = value;
+        this.BackingStore.set("agreementAcceptances", value);
     }
     /**
      * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param value Value to set for the agreements property.
      */
     public void setAgreements(@jakarta.annotation.Nullable final java.util.List<Agreement> value) {
-        this.agreements = value;
+        this.BackingStore.set("agreements", value);
     }
 }

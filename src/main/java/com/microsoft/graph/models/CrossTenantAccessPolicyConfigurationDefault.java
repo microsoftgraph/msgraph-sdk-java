@@ -9,34 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
     /**
-     * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
-     */
-    private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
-    /**
-     * Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
-    /**
-     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
-    /**
-     * Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B direct connect.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
-    /**
-     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
-     */
-    private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
-    /**
-     * Determines the default configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
-     */
-    private CrossTenantAccessPolicyInboundTrust inboundTrust;
-    /**
-     * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
-     */
-    private Boolean isServiceDefault;
-    /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationDefault and sets the default values.
      */
     public CrossTenantAccessPolicyConfigurationDefault() {
@@ -58,7 +30,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
-        return this.automaticUserConsentSettings;
+        return this.BackingStore.get("automaticUserConsentSettings");
     }
     /**
      * Gets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
@@ -66,7 +38,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
-        return this.b2bCollaborationInbound;
+        return this.BackingStore.get("b2bCollaborationInbound");
     }
     /**
      * Gets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
@@ -74,7 +46,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
-        return this.b2bCollaborationOutbound;
+        return this.BackingStore.get("b2bCollaborationOutbound");
     }
     /**
      * Gets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B direct connect.
@@ -82,7 +54,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
-        return this.b2bDirectConnectInbound;
+        return this.BackingStore.get("b2bDirectConnectInbound");
     }
     /**
      * Gets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
@@ -90,7 +62,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
-        return this.b2bDirectConnectOutbound;
+        return this.BackingStore.get("b2bDirectConnectOutbound");
     }
     /**
      * The deserialization information for the current model
@@ -114,7 +86,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
-        return this.inboundTrust;
+        return this.BackingStore.get("inboundTrust");
     }
     /**
      * Gets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
@@ -122,7 +94,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public Boolean getIsServiceDefault() {
-        return this.isServiceDefault;
+        return this.BackingStore.get("isServiceDefault");
     }
     /**
      * Serializes information the current object
@@ -144,48 +116,48 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the automaticUserConsentSettings property.
      */
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
-        this.automaticUserConsentSettings = value;
+        this.BackingStore.set("automaticUserConsentSettings", value);
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
      */
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bCollaborationInbound = value;
+        this.BackingStore.set("b2bCollaborationInbound", value);
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
      */
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bCollaborationOutbound = value;
+        this.BackingStore.set("b2bCollaborationOutbound", value);
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B direct connect.
      * @param value Value to set for the b2bDirectConnectInbound property.
      */
     public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bDirectConnectInbound = value;
+        this.BackingStore.set("b2bDirectConnectInbound", value);
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
-        this.b2bDirectConnectOutbound = value;
+        this.BackingStore.set("b2bDirectConnectOutbound", value);
     }
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      * @param value Value to set for the inboundTrust property.
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
-        this.inboundTrust = value;
+        this.BackingStore.set("inboundTrust", value);
     }
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
      * @param value Value to set for the isServiceDefault property.
      */
     public void setIsServiceDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isServiceDefault = value;
+        this.BackingStore.set("isServiceDefault", value);
     }
 }

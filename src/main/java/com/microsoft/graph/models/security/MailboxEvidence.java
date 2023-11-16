@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailboxEvidence extends AlertEvidence implements Parsable {
     /**
-     * The name associated with the mailbox.
-     */
-    private String displayName;
-    /**
-     * The primary email address of the mailbox.
-     */
-    private String primaryAddress;
-    /**
-     * The user account of the mailbox.
-     */
-    private UserAccount userAccount;
-    /**
      * Instantiates a new MailboxEvidence and sets the default values.
      */
     public MailboxEvidence() {
@@ -43,7 +31,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAddress() {
-        return this.primaryAddress;
+        return this.BackingStore.get("primaryAddress");
     }
     /**
      * Gets the userAccount property value. The user account of the mailbox.
@@ -71,7 +59,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UserAccount getUserAccount() {
-        return this.userAccount;
+        return this.BackingStore.get("userAccount");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the primaryAddress property value. The primary email address of the mailbox.
      * @param value Value to set for the primaryAddress property.
      */
     public void setPrimaryAddress(@jakarta.annotation.Nullable final String value) {
-        this.primaryAddress = value;
+        this.BackingStore.set("primaryAddress", value);
     }
     /**
      * Sets the userAccount property value. The user account of the mailbox.
      * @param value Value to set for the userAccount property.
      */
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
-        this.userAccount = value;
+        this.BackingStore.set("userAccount", value);
     }
 }

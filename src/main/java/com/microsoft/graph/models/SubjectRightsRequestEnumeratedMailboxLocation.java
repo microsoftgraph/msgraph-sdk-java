@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRightsRequestMailboxLocation implements Parsable {
     /**
-     * Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
-     */
-    private java.util.List<String> userPrincipalNames;
-    /**
      * Instantiates a new SubjectRightsRequestEnumeratedMailboxLocation and sets the default values.
      */
     public SubjectRightsRequestEnumeratedMailboxLocation() {
@@ -45,7 +41,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPrincipalNames() {
-        return this.userPrincipalNames;
+        return this.BackingStore.get("userPrincipalNames");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
      * @param value Value to set for the userPrincipalNames property.
      */
     public void setUserPrincipalNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userPrincipalNames = value;
+        this.BackingStore.set("userPrincipalNames", value);
     }
 }

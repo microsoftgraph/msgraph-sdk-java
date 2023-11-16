@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedItemContainer extends Entity implements Parsable {
     /**
-     * Deleted workflows that end up in the deletedItemsContainer.
-     */
-    private java.util.List<Workflow> workflows;
-    /**
      * Instantiates a new DeletedItemContainer and sets the default values.
      */
     public DeletedItemContainer() {
@@ -45,7 +41,7 @@ public class DeletedItemContainer extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Workflow> getWorkflows() {
-        return this.workflows;
+        return this.BackingStore.get("workflows");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * @param value Value to set for the workflows property.
      */
     public void setWorkflows(@jakarta.annotation.Nullable final java.util.List<Workflow> value) {
-        this.workflows = value;
+        this.BackingStore.set("workflows", value);
     }
 }

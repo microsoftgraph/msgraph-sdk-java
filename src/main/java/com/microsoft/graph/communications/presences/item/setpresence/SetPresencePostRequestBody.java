@@ -5,35 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable {
+public class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The activity property
+     * Stores model information.
      */
-    private String activity;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The availability property
-     */
-    private String availability;
-    /**
-     * The expirationDuration property
-     */
-    private PeriodAndDuration expirationDuration;
-    /**
-     * The sessionId property
-     */
-    private String sessionId;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new SetPresencePostRequestBody and sets the default values.
      */
     public SetPresencePostRequestBody() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -52,7 +40,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.BackingStore.get("activity");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -60,7 +48,12 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the availability property value. The availability property
@@ -68,7 +61,15 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
-        return this.availability;
+        return this.BackingStore.get("availability");
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the expirationDuration property value. The expirationDuration property
@@ -76,7 +77,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getExpirationDuration() {
-        return this.expirationDuration;
+        return this.BackingStore.get("expirationDuration");
     }
     /**
      * The deserialization information for the current model
@@ -97,7 +98,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
-        return this.sessionId;
+        return this.BackingStore.get("sessionId");
     }
     /**
      * Serializes information the current object
@@ -116,34 +117,42 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.BackingStore.set("activity", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
     }
     /**
      * Sets the availability property value. The availability property
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
-        this.availability = value;
+        this.BackingStore.set("availability", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the expirationDuration property value. The expirationDuration property
      * @param value Value to set for the expirationDuration property.
      */
     public void setExpirationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.expirationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.BackingStore.set("expirationDuration", value);
     }
     /**
      * Sets the sessionId property value. The sessionId property
      * @param value Value to set for the sessionId property.
      */
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
-        this.sessionId = value;
+        this.BackingStore.set("sessionId", value);
     }
 }

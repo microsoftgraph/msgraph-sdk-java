@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSslCertificate extends Artifact implements Parsable {
     /**
-     * The first date and time when this hostSslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The host for this hostSslCertificate.
-     */
-    private Host host;
-    /**
-     * The most recent date and time when this hostSslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The ports related with this hostSslCertificate.
-     */
-    private java.util.List<HostSslCertificatePort> ports;
-    /**
-     * The sslCertificate for this hostSslCertificate.
-     */
-    private SslCertificate sslCertificate;
-    /**
      * Instantiates a new HostSslCertificate and sets the default values.
      */
     public HostSslCertificate() {
@@ -66,7 +46,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
+        return this.BackingStore.get("firstSeenDateTime");
     }
     /**
      * Gets the host property value. The host for this hostSslCertificate.
@@ -74,7 +54,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
-        return this.host;
+        return this.BackingStore.get("host");
     }
     /**
      * Gets the lastSeenDateTime property value. The most recent date and time when this hostSslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -82,7 +62,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
+        return this.BackingStore.get("lastSeenDateTime");
     }
     /**
      * Gets the ports property value. The ports related with this hostSslCertificate.
@@ -90,7 +70,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificatePort> getPorts() {
-        return this.ports;
+        return this.BackingStore.get("ports");
     }
     /**
      * Gets the sslCertificate property value. The sslCertificate for this hostSslCertificate.
@@ -98,7 +78,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     @jakarta.annotation.Nullable
     public SslCertificate getSslCertificate() {
-        return this.sslCertificate;
+        return this.BackingStore.get("sslCertificate");
     }
     /**
      * Serializes information the current object
@@ -118,34 +98,34 @@ public class HostSslCertificate extends Artifact implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
+        this.BackingStore.set("firstSeenDateTime", value);
     }
     /**
      * Sets the host property value. The host for this hostSslCertificate.
      * @param value Value to set for the host property.
      */
     public void setHost(@jakarta.annotation.Nullable final Host value) {
-        this.host = value;
+        this.BackingStore.set("host", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when this hostSslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
+        this.BackingStore.set("lastSeenDateTime", value);
     }
     /**
      * Sets the ports property value. The ports related with this hostSslCertificate.
      * @param value Value to set for the ports property.
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<HostSslCertificatePort> value) {
-        this.ports = value;
+        this.BackingStore.set("ports", value);
     }
     /**
      * Sets the sslCertificate property value. The sslCertificate for this hostSslCertificate.
      * @param value Value to set for the sslCertificate property.
      */
     public void setSslCertificate(@jakarta.annotation.Nullable final SslCertificate value) {
-        this.sslCertificate = value;
+        this.BackingStore.set("sslCertificate", value);
     }
 }

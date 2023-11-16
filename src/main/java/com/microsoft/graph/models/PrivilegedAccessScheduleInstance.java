@@ -10,14 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessScheduleInstance extends Entity implements Parsable {
     /**
-     * When the schedule instance ends. Required.
-     */
-    private OffsetDateTime endDateTime;
-    /**
-     * When this instance starts. Required.
-     */
-    private OffsetDateTime startDateTime;
-    /**
      * Instantiates a new PrivilegedAccessScheduleInstance and sets the default values.
      */
     public PrivilegedAccessScheduleInstance() {
@@ -47,7 +39,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this.endDateTime;
+        return this.BackingStore.get("endDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -66,7 +58,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -83,13 +75,13 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.endDateTime = value;
+        this.BackingStore.set("endDateTime", value);
     }
     /**
      * Sets the startDateTime property value. When this instance starts. Required.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
 }

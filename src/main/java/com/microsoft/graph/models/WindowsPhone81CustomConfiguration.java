@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81CustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * OMA settings. This collection can contain a maximum of 1000 elements.
-     */
-    private java.util.List<OmaSetting> omaSettings;
-    /**
      * Instantiates a new WindowsPhone81CustomConfiguration and sets the default values.
      */
     public WindowsPhone81CustomConfiguration() {
@@ -48,7 +44,7 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
      */
     @jakarta.annotation.Nullable
     public java.util.List<OmaSetting> getOmaSettings() {
-        return this.omaSettings;
+        return this.BackingStore.get("omaSettings");
     }
     /**
      * Serializes information the current object
@@ -64,6 +60,6 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the omaSettings property.
      */
     public void setOmaSettings(@jakarta.annotation.Nullable final java.util.List<OmaSetting> value) {
-        this.omaSettings = value;
+        this.BackingStore.set("omaSettings", value);
     }
 }

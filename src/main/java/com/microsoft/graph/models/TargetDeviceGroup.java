@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetDeviceGroup extends Entity implements Parsable {
     /**
-     * Display name for the target device group.
-     */
-    private String displayName;
-    /**
      * Instantiates a new TargetDeviceGroup and sets the default values.
      */
     public TargetDeviceGroup() {
@@ -34,7 +30,7 @@ public class TargetDeviceGroup extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class TargetDeviceGroup extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
 }

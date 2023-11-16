@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableRow extends Entity implements Parsable {
     /**
-     * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
-     */
-    private Integer index;
-    /**
-     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     */
-    private Json values;
-    /**
      * Instantiates a new WorkbookTableRow and sets the default values.
      */
     public WorkbookTableRow() {
@@ -49,7 +41,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
-        return this.index;
+        return this.BackingStore.get("index");
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -57,7 +49,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.BackingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * @param value Value to set for the index property.
      */
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
-        this.index = value;
+        this.BackingStore.set("index", value);
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.BackingStore.set("values", value);
     }
 }

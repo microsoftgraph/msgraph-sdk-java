@@ -11,10 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetApplicablePolicyRequirementsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AccessPackageAssignmentRequestRequirements> value;
-    /**
      * Instantiates a new GetApplicablePolicyRequirementsPostResponse and sets the default values.
      */
     public GetApplicablePolicyRequirementsPostResponse() {
@@ -46,7 +42,7 @@ public class GetApplicablePolicyRequirementsPostResponse extends BaseCollectionP
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequestRequirements> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class GetApplicablePolicyRequirementsPostResponse extends BaseCollectionP
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequestRequirements> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

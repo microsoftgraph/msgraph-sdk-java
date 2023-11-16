@@ -13,50 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity implements Parsable {
     /**
-     * The number of application crashes for the device. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appCrashCount;
-    /**
-     * The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appHangCount;
-    /**
-     * The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer crashedAppCount;
-    /**
-     * The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double deviceAppHealthScore;
-    /**
-     * The name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceDisplayName;
-    /**
-     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceId;
-    /**
-     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceManufacturer;
-    /**
-     * The model name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceModel;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer meanTimeToFailureInMinutes;
-    /**
-     * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     */
-    private OffsetDateTime processedDateTime;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformance() {
@@ -78,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this.appCrashCount;
+        return this.BackingStore.get("appCrashCount");
     }
     /**
      * Gets the appHangCount property value. The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -86,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public Integer getAppHangCount() {
-        return this.appHangCount;
+        return this.BackingStore.get("appHangCount");
     }
     /**
      * Gets the crashedAppCount property value. The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -94,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public Integer getCrashedAppCount() {
-        return this.crashedAppCount;
+        return this.BackingStore.get("crashedAppCount");
     }
     /**
      * Gets the deviceAppHealthScore property value. The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -102,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public Double getDeviceAppHealthScore() {
-        return this.deviceAppHealthScore;
+        return this.BackingStore.get("deviceAppHealthScore");
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
@@ -110,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.BackingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
@@ -118,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
@@ -126,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this.deviceManufacturer;
+        return this.BackingStore.get("deviceManufacturer");
     }
     /**
      * Gets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
@@ -134,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.BackingStore.get("deviceModel");
     }
     /**
      * The deserialization information for the current model
@@ -162,7 +118,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.BackingStore.get("healthStatus");
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -170,7 +126,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
-        return this.meanTimeToFailureInMinutes;
+        return this.BackingStore.get("meanTimeToFailureInMinutes");
     }
     /**
      * Gets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -178,7 +134,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {
-        return this.processedDateTime;
+        return this.BackingStore.get("processedDateTime");
     }
     /**
      * Serializes information the current object
@@ -204,76 +160,76 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the appCrashCount property.
      */
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appCrashCount = value;
+        this.BackingStore.set("appCrashCount", value);
     }
     /**
      * Sets the appHangCount property value. The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appHangCount property.
      */
     public void setAppHangCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appHangCount = value;
+        this.BackingStore.set("appHangCount", value);
     }
     /**
      * Sets the crashedAppCount property value. The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the crashedAppCount property.
      */
     public void setCrashedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.crashedAppCount = value;
+        this.BackingStore.set("crashedAppCount", value);
     }
     /**
      * Sets the deviceAppHealthScore property value. The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the deviceAppHealthScore property.
      */
     public void setDeviceAppHealthScore(@jakarta.annotation.Nullable final Double value) {
-        this.deviceAppHealthScore = value;
+        this.BackingStore.set("deviceAppHealthScore", value);
     }
     /**
      * Sets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.BackingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceManufacturer property.
      */
     public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.deviceManufacturer = value;
+        this.BackingStore.set("deviceManufacturer", value);
     }
     /**
      * Sets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.BackingStore.set("deviceModel", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.BackingStore.set("healthStatus", value);
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      */
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.meanTimeToFailureInMinutes = value;
+        this.BackingStore.set("meanTimeToFailureInMinutes", value);
     }
     /**
      * Sets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @param value Value to set for the processedDateTime property.
      */
     public void setProcessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.processedDateTime = value;
+        this.BackingStore.set("processedDateTime", value);
     }
 }

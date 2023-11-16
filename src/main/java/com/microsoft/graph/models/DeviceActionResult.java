@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,35 +15,16 @@ import java.util.Objects;
  * Device action result
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceActionResult implements AdditionalDataHolder, Parsable {
+public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Action name
+     * Stores model information.
      */
-    private String actionName;
-    /**
-     * State of the action on the device
-     */
-    private ActionState actionState;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Time the action state was last updated
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Time the action was initiated
-     */
-    private OffsetDateTime startDateTime;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new DeviceActionResult and sets the default values.
      */
     public DeviceActionResult() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -71,7 +55,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
-        return this.actionName;
+        return this.BackingStore.get("actionName");
     }
     /**
      * Gets the actionState property value. State of the action on the device
@@ -79,7 +63,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
-        return this.actionState;
+        return this.BackingStore.get("actionState");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -87,7 +71,20 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -109,7 +106,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.BackingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -117,7 +114,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -125,7 +122,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -145,41 +142,49 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final String value) {
-        this.actionName = value;
+        this.BackingStore.set("actionName", value);
     }
     /**
      * Sets the actionState property value. State of the action on the device
      * @param value Value to set for the actionState property.
      */
     public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
-        this.actionState = value;
+        this.BackingStore.set("actionState", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Time the action state was last updated
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.BackingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
 }

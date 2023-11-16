@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingReminderNotification extends BaseEndUserNotification implements Parsable {
     /**
-     * Configurable frequency for the reminder email introduced during simulation creation. Possible values are: unknown, weekly, biWeekly, unknownFutureValue.
-     */
-    private NotificationDeliveryFrequency deliveryFrequency;
-    /**
      * Instantiates a new TrainingReminderNotification and sets the default values.
      */
     public TrainingReminderNotification() {
@@ -35,7 +31,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
      */
     @jakarta.annotation.Nullable
     public NotificationDeliveryFrequency getDeliveryFrequency() {
-        return this.deliveryFrequency;
+        return this.BackingStore.get("deliveryFrequency");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
      * @param value Value to set for the deliveryFrequency property.
      */
     public void setDeliveryFrequency(@jakarta.annotation.Nullable final NotificationDeliveryFrequency value) {
-        this.deliveryFrequency = value;
+        this.BackingStore.set("deliveryFrequency", value);
     }
 }

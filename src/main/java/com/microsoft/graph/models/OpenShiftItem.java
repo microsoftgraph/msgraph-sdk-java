@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenShiftItem extends ShiftItem implements Parsable {
     /**
-     * Count of the number of slots for the given open shift.
-     */
-    private Integer openSlotCount;
-    /**
      * Instantiates a new OpenShiftItem and sets the default values.
      */
     public OpenShiftItem() {
@@ -45,7 +41,7 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getOpenSlotCount() {
-        return this.openSlotCount;
+        return this.BackingStore.get("openSlotCount");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      * @param value Value to set for the openSlotCount property.
      */
     public void setOpenSlotCount(@jakarta.annotation.Nullable final Integer value) {
-        this.openSlotCount = value;
+        this.BackingStore.set("openSlotCount", value);
     }
 }

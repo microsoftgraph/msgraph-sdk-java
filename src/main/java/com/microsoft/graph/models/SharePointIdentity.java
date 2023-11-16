@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointIdentity extends Identity implements Parsable {
     /**
-     * The sign in name of the SharePoint identity.
-     */
-    private String loginName;
-    /**
      * Instantiates a new SharePointIdentity and sets the default values.
      */
     public SharePointIdentity() {
@@ -45,7 +41,7 @@ public class SharePointIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getLoginName() {
-        return this.loginName;
+        return this.BackingStore.get("loginName");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SharePointIdentity extends Identity implements Parsable {
      * @param value Value to set for the loginName property.
      */
     public void setLoginName(@jakarta.annotation.Nullable final String value) {
-        this.loginName = value;
+        this.BackingStore.set("loginName", value);
     }
 }

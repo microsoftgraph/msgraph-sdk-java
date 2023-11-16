@@ -11,30 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryDefinition extends Entity implements Parsable {
     /**
-     * The discoverabilities property
-     */
-    private EnumSet<DirectoryDefinitionDiscoverabilities> discoverabilities;
-    /**
-     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime discoveryDateTime;
-    /**
-     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
-     */
-    private String name;
-    /**
-     * Collection of objects supported by the directory.
-     */
-    private java.util.List<ObjectDefinition> objects;
-    /**
-     * Whether this object is read-only.
-     */
-    private Boolean readOnly;
-    /**
-     * Read only value that indicates version discovered. null if discovery hasn't yet occurred.
-     */
-    private String version;
-    /**
      * Instantiates a new DirectoryDefinition and sets the default values.
      */
     public DirectoryDefinition() {
@@ -56,7 +32,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public EnumSet<DirectoryDefinitionDiscoverabilities> getDiscoverabilities() {
-        return this.discoverabilities;
+        return this.BackingStore.get("discoverabilities");
     }
     /**
      * Gets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -64,7 +40,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDiscoveryDateTime() {
-        return this.discoveryDateTime;
+        return this.BackingStore.get("discoveryDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +63,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the objects property value. Collection of objects supported by the directory.
@@ -95,7 +71,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectDefinition> getObjects() {
-        return this.objects;
+        return this.BackingStore.get("objects");
     }
     /**
      * Gets the readOnly property value. Whether this object is read-only.
@@ -103,7 +79,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getReadOnly() {
-        return this.readOnly;
+        return this.BackingStore.get("readOnly");
     }
     /**
      * Gets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
@@ -111,7 +87,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the discoverabilities property.
      */
     public void setDiscoverabilities(@jakarta.annotation.Nullable final EnumSet<DirectoryDefinitionDiscoverabilities> value) {
-        this.discoverabilities = value;
+        this.BackingStore.set("discoverabilities", value);
     }
     /**
      * Sets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the discoveryDateTime property.
      */
     public void setDiscoveryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.discoveryDateTime = value;
+        this.BackingStore.set("discoveryDateTime", value);
     }
     /**
      * Sets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the objects property value. Collection of objects supported by the directory.
      * @param value Value to set for the objects property.
      */
     public void setObjects(@jakarta.annotation.Nullable final java.util.List<ObjectDefinition> value) {
-        this.objects = value;
+        this.BackingStore.set("objects", value);
     }
     /**
      * Sets the readOnly property value. Whether this object is read-only.
      * @param value Value to set for the readOnly property.
      */
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
-        this.readOnly = value;
+        this.BackingStore.set("readOnly", value);
     }
     /**
      * Sets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

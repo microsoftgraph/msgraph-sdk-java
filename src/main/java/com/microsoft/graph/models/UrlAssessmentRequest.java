@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
-     * The URL string.
-     */
-    private String url;
-    /**
      * Instantiates a new UrlAssessmentRequest and sets the default values.
      */
     public UrlAssessmentRequest() {
@@ -45,7 +41,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
-        return this.url;
+        return this.BackingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.url = value;
+        this.BackingStore.set("url", value);
     }
 }

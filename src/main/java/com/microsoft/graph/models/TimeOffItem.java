@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffItem extends ScheduleEntity implements Parsable {
     /**
-     * ID of the timeOffReason for this timeOffItem. Required.
-     */
-    private String timeOffReasonId;
-    /**
      * Instantiates a new TimeOffItem and sets the default values.
      */
     public TimeOffItem() {
@@ -44,7 +40,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTimeOffReasonId() {
-        return this.timeOffReasonId;
+        return this.BackingStore.get("timeOffReasonId");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the timeOffReasonId property.
      */
     public void setTimeOffReasonId(@jakarta.annotation.Nullable final String value) {
-        this.timeOffReasonId = value;
+        this.BackingStore.set("timeOffReasonId", value);
     }
 }

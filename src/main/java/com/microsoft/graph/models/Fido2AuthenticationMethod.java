@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
-     */
-    private String aaGuid;
-    /**
-     * The attestation certificate(s) attached to this security key.
-     */
-    private java.util.List<String> attestationCertificates;
-    /**
-     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
-     */
-    private AttestationLevel attestationLevel;
-    /**
-     * The timestamp when this key was registered to the user.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The display name of the key as given by the user.
-     */
-    private String displayName;
-    /**
-     * The manufacturer-assigned model of the FIDO2 security key.
-     */
-    private String model;
-    /**
      * Instantiates a new Fido2AuthenticationMethod and sets the default values.
      */
     public Fido2AuthenticationMethod() {
@@ -56,7 +32,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public String getAaGuid() {
-        return this.aaGuid;
+        return this.BackingStore.get("aaGuid");
     }
     /**
      * Gets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
@@ -64,7 +40,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAttestationCertificates() {
-        return this.attestationCertificates;
+        return this.BackingStore.get("attestationCertificates");
     }
     /**
      * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
@@ -72,7 +48,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public AttestationLevel getAttestationLevel() {
-        return this.attestationLevel;
+        return this.BackingStore.get("attestationLevel");
     }
     /**
      * Gets the createdDateTime property value. The timestamp when this key was registered to the user.
@@ -80,7 +56,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The display name of the key as given by the user.
@@ -88,7 +64,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -111,7 +87,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the aaGuid property.
      */
     public void setAaGuid(@jakarta.annotation.Nullable final String value) {
-        this.aaGuid = value;
+        this.BackingStore.set("aaGuid", value);
     }
     /**
      * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
      * @param value Value to set for the attestationCertificates property.
      */
     public void setAttestationCertificates(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.attestationCertificates = value;
+        this.BackingStore.set("attestationCertificates", value);
     }
     /**
      * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      * @param value Value to set for the attestationLevel property.
      */
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
-        this.attestationLevel = value;
+        this.BackingStore.set("attestationLevel", value);
     }
     /**
      * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The display name of the key as given by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the model property value. The manufacturer-assigned model of the FIDO2 security key.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
 }

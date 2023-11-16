@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /**
-     * Indicates whether this is the user's default section. Read-only.
-     */
-    private Boolean isDefault;
-    /**
-     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
-     */
-    private SectionLinks links;
-    /**
-     * The collection of pages in the section.  Read-only. Nullable.
-     */
-    private java.util.List<OnenotePage> pages;
-    /**
-     * The pages endpoint where you can get details for all the pages in the section. Read-only.
-     */
-    private String pagesUrl;
-    /**
-     * The notebook that contains the section.  Read-only.
-     */
-    private Notebook parentNotebook;
-    /**
-     * The section group that contains the section.  Read-only.
-     */
-    private SectionGroup parentSectionGroup;
-    /**
      * Instantiates a new OnenoteSection and sets the default values.
      */
     public OnenoteSection() {
@@ -70,7 +46,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.BackingStore.get("isDefault");
     }
     /**
      * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
@@ -78,7 +54,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public SectionLinks getLinks() {
-        return this.links;
+        return this.BackingStore.get("links");
     }
     /**
      * Gets the pages property value. The collection of pages in the section.  Read-only. Nullable.
@@ -86,7 +62,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
-        return this.pages;
+        return this.BackingStore.get("pages");
     }
     /**
      * Gets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
@@ -94,7 +70,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public String getPagesUrl() {
-        return this.pagesUrl;
+        return this.BackingStore.get("pagesUrl");
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the section.  Read-only.
@@ -102,7 +78,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
-        return this.parentNotebook;
+        return this.BackingStore.get("parentNotebook");
     }
     /**
      * Gets the parentSectionGroup property value. The section group that contains the section.  Read-only.
@@ -110,7 +86,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @jakarta.annotation.Nullable
     public SectionGroup getParentSectionGroup() {
-        return this.parentSectionGroup;
+        return this.BackingStore.get("parentSectionGroup");
     }
     /**
      * Serializes information the current object
@@ -131,41 +107,41 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.BackingStore.set("isDefault", value);
     }
     /**
      * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final SectionLinks value) {
-        this.links = value;
+        this.BackingStore.set("links", value);
     }
     /**
      * Sets the pages property value. The collection of pages in the section.  Read-only. Nullable.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<OnenotePage> value) {
-        this.pages = value;
+        this.BackingStore.set("pages", value);
     }
     /**
      * Sets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
      * @param value Value to set for the pagesUrl property.
      */
     public void setPagesUrl(@jakarta.annotation.Nullable final String value) {
-        this.pagesUrl = value;
+        this.BackingStore.set("pagesUrl", value);
     }
     /**
      * Sets the parentNotebook property value. The notebook that contains the section.  Read-only.
      * @param value Value to set for the parentNotebook property.
      */
     public void setParentNotebook(@jakarta.annotation.Nullable final Notebook value) {
-        this.parentNotebook = value;
+        this.BackingStore.set("parentNotebook", value);
     }
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section.  Read-only.
      * @param value Value to set for the parentSectionGroup property.
      */
     public void setParentSectionGroup(@jakarta.annotation.Nullable final SectionGroup value) {
-        this.parentSectionGroup = value;
+        this.BackingStore.set("parentSectionGroup", value);
     }
 }

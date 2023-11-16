@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetMemberObjectsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<String> value;
-    /**
      * Instantiates a new GetMemberObjectsPostResponse and sets the default values.
      */
     public GetMemberObjectsPostResponse() {
@@ -45,7 +41,7 @@ public class GetMemberObjectsPostResponse extends BaseCollectionPaginationCountR
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class GetMemberObjectsPostResponse extends BaseCollectionPaginationCountR
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

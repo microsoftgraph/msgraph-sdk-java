@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<Term> value;
-    /**
      * Instantiates a new TermCollectionResponse and sets the default values.
      */
     public TermCollectionResponse() {
@@ -45,7 +41,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<Term> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

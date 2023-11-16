@@ -10,50 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackage extends Entity implements Parsable {
     /**
-     * The access packages that are incompatible with this package. Read-only.
-     */
-    private java.util.List<AccessPackage> accessPackagesIncompatibleWith;
-    /**
-     * Read-only. Nullable. Supports $expand.
-     */
-    private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
-    /**
-     * Required when creating the access package. Read-only. Nullable.
-     */
-    private AccessPackageCatalog catalog;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the access package.
-     */
-    private String description;
-    /**
-     * Required. The display name of the access package. Supports $filter (eq, contains).
-     */
-    private String displayName;
-    /**
-     * The access packages whose assigned users are ineligible to be assigned this access package.
-     */
-    private java.util.List<AccessPackage> incompatibleAccessPackages;
-    /**
-     * The groups whose members are ineligible to be assigned this access package.
-     */
-    private java.util.List<Group> incompatibleGroups;
-    /**
-     * Whether the access package is hidden from the requestor.
-     */
-    private Boolean isHidden;
-    /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     */
-    private OffsetDateTime modifiedDateTime;
-    /**
-     * The resource roles and scopes in this access package.
-     */
-    private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
-    /**
      * Instantiates a new AccessPackage and sets the default values.
      */
     public AccessPackage() {
@@ -75,7 +31,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
-        return this.accessPackagesIncompatibleWith;
+        return this.BackingStore.get("accessPackagesIncompatibleWith");
     }
     /**
      * Gets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
@@ -83,7 +39,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
-        return this.assignmentPolicies;
+        return this.BackingStore.get("assignmentPolicies");
     }
     /**
      * Gets the catalog property value. Required when creating the access package. Read-only. Nullable.
@@ -91,7 +47,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
-        return this.catalog;
+        return this.BackingStore.get("catalog");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -99,7 +55,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the access package.
@@ -107,7 +63,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
@@ -115,7 +71,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -143,7 +99,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
-        return this.incompatibleAccessPackages;
+        return this.BackingStore.get("incompatibleAccessPackages");
     }
     /**
      * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
@@ -151,7 +107,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getIncompatibleGroups() {
-        return this.incompatibleGroups;
+        return this.BackingStore.get("incompatibleGroups");
     }
     /**
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
@@ -159,7 +115,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHidden() {
-        return this.isHidden;
+        return this.BackingStore.get("isHidden");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -167,7 +123,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this.modifiedDateTime;
+        return this.BackingStore.get("modifiedDateTime");
     }
     /**
      * Gets the resourceRoleScopes property value. The resource roles and scopes in this access package.
@@ -175,7 +131,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {
-        return this.resourceRoleScopes;
+        return this.BackingStore.get("resourceRoleScopes");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackagesIncompatibleWith property.
      */
     public void setAccessPackagesIncompatibleWith(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this.accessPackagesIncompatibleWith = value;
+        this.BackingStore.set("accessPackagesIncompatibleWith", value);
     }
     /**
      * Sets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the assignmentPolicies property.
      */
     public void setAssignmentPolicies(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
-        this.assignmentPolicies = value;
+        this.BackingStore.set("assignmentPolicies", value);
     }
     /**
      * Sets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @param value Value to set for the catalog property.
      */
     public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
-        this.catalog = value;
+        this.BackingStore.set("catalog", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the access package.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
      * @param value Value to set for the incompatibleAccessPackages property.
      */
     public void setIncompatibleAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
-        this.incompatibleAccessPackages = value;
+        this.BackingStore.set("incompatibleAccessPackages", value);
     }
     /**
      * Sets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
      * @param value Value to set for the incompatibleGroups property.
      */
     public void setIncompatibleGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
-        this.incompatibleGroups = value;
+        this.BackingStore.set("incompatibleGroups", value);
     }
     /**
      * Sets the isHidden property value. Whether the access package is hidden from the requestor.
      * @param value Value to set for the isHidden property.
      */
     public void setIsHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.isHidden = value;
+        this.BackingStore.set("isHidden", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.modifiedDateTime = value;
+        this.BackingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @param value Value to set for the resourceRoleScopes property.
      */
     public void setResourceRoleScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
-        this.resourceRoleScopes = value;
+        this.BackingStore.set("resourceRoleScopes", value);
     }
 }

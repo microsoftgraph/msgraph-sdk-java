@@ -10,22 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Relation extends Entity implements Parsable {
     /**
-     * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
-     */
-    private Term fromTerm;
-    /**
-     * The type of relation. Possible values are: pin, reuse.
-     */
-    private RelationType relationship;
-    /**
-     * The [set] in which the relation is relevant.
-     */
-    private Set set;
-    /**
-     * The to [term] of the relation. The term to which the relationship is defined.
-     */
-    private Term toTerm;
-    /**
      * Instantiates a new Relation and sets the default values.
      */
     public Relation() {
@@ -60,7 +44,7 @@ public class Relation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Term getFromTerm() {
-        return this.fromTerm;
+        return this.BackingStore.get("fromTerm");
     }
     /**
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
@@ -68,7 +52,7 @@ public class Relation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RelationType getRelationship() {
-        return this.relationship;
+        return this.BackingStore.get("relationship");
     }
     /**
      * Gets the set property value. The [set] in which the relation is relevant.
@@ -76,7 +60,7 @@ public class Relation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Set getSet() {
-        return this.set;
+        return this.BackingStore.get("set");
     }
     /**
      * Gets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
@@ -84,7 +68,7 @@ public class Relation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Term getToTerm() {
-        return this.toTerm;
+        return this.BackingStore.get("toTerm");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the fromTerm property.
      */
     public void setFromTerm(@jakarta.annotation.Nullable final Term value) {
-        this.fromTerm = value;
+        this.BackingStore.set("fromTerm", value);
     }
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
      * @param value Value to set for the relationship property.
      */
     public void setRelationship(@jakarta.annotation.Nullable final RelationType value) {
-        this.relationship = value;
+        this.BackingStore.set("relationship", value);
     }
     /**
      * Sets the set property value. The [set] in which the relation is relevant.
      * @param value Value to set for the set property.
      */
     public void setSet(@jakarta.annotation.Nullable final Set value) {
-        this.set = value;
+        this.BackingStore.set("set", value);
     }
     /**
      * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
      * @param value Value to set for the toTerm property.
      */
     public void setToTerm(@jakarta.annotation.Nullable final Term value) {
-        this.toTerm = value;
+        this.BackingStore.set("toTerm", value);
     }
 }

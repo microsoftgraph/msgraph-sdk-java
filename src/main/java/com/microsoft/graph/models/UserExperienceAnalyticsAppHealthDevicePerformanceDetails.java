@@ -13,34 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity implements Parsable {
     /**
-     * The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appDisplayName;
-    /**
-     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appPublisher;
-    /**
-     * The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appVersion;
-    /**
-     * The name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceDisplayName;
-    /**
-     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceId;
-    /**
-     * The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * The type of the event. Supports: $select, $OrderBy. Read-only.
-     */
-    private String eventType;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
@@ -62,7 +34,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.BackingStore.get("appDisplayName");
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
@@ -70,7 +42,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.BackingStore.get("appPublisher");
     }
     /**
      * Gets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
@@ -78,7 +50,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
-        return this.appVersion;
+        return this.BackingStore.get("appVersion");
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
@@ -86,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this.deviceDisplayName;
+        return this.BackingStore.get("deviceDisplayName");
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
@@ -94,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the eventDateTime property value. The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -102,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.BackingStore.get("eventDateTime");
     }
     /**
      * Gets the eventType property value. The type of the event. Supports: $select, $OrderBy. Read-only.
@@ -110,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      */
     @jakarta.annotation.Nullable
     public String getEventType() {
-        return this.eventType;
+        return this.BackingStore.get("eventType");
     }
     /**
      * The deserialization information for the current model
@@ -148,48 +120,48 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.BackingStore.set("appDisplayName", value);
     }
     /**
      * Sets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.BackingStore.set("appPublisher", value);
     }
     /**
      * Sets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
-        this.appVersion = value;
+        this.BackingStore.set("appVersion", value);
     }
     /**
      * Sets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceDisplayName property.
      */
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.deviceDisplayName = value;
+        this.BackingStore.set("deviceDisplayName", value);
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the eventDateTime property value. The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.BackingStore.set("eventDateTime", value);
     }
     /**
      * Sets the eventType property value. The type of the event. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the eventType property.
      */
     public void setEventType(@jakarta.annotation.Nullable final String value) {
-        this.eventType = value;
+        this.BackingStore.set("eventType", value);
     }
 }

@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientUserAgent extends UserAgent implements Parsable {
     /**
-     * The unique identifier of the Microsoft Entra application used by this endpoint.
-     */
-    private String azureADAppId;
-    /**
-     * Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
-     */
-    private String communicationServiceId;
-    /**
-     * The platform property
-     */
-    private ClientPlatform platform;
-    /**
-     * The productFamily property
-     */
-    private ProductFamily productFamily;
-    /**
      * Instantiates a new ClientUserAgent and sets the default values.
      */
     public ClientUserAgent() {
@@ -47,7 +31,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAzureADAppId() {
-        return this.azureADAppId;
+        return this.BackingStore.get("azureADAppId");
     }
     /**
      * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
@@ -55,7 +39,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCommunicationServiceId() {
-        return this.communicationServiceId;
+        return this.BackingStore.get("communicationServiceId");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +60,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ClientPlatform getPlatform() {
-        return this.platform;
+        return this.BackingStore.get("platform");
     }
     /**
      * Gets the productFamily property value. The productFamily property
@@ -84,7 +68,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ProductFamily getProductFamily() {
-        return this.productFamily;
+        return this.BackingStore.get("productFamily");
     }
     /**
      * Serializes information the current object
@@ -103,27 +87,27 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the azureADAppId property.
      */
     public void setAzureADAppId(@jakarta.annotation.Nullable final String value) {
-        this.azureADAppId = value;
+        this.BackingStore.set("azureADAppId", value);
     }
     /**
      * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      * @param value Value to set for the communicationServiceId property.
      */
     public void setCommunicationServiceId(@jakarta.annotation.Nullable final String value) {
-        this.communicationServiceId = value;
+        this.BackingStore.set("communicationServiceId", value);
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final ClientPlatform value) {
-        this.platform = value;
+        this.BackingStore.set("platform", value);
     }
     /**
      * Sets the productFamily property value. The productFamily property
      * @param value Value to set for the productFamily property.
      */
     public void setProductFamily(@jakarta.annotation.Nullable final ProductFamily value) {
-        this.productFamily = value;
+        this.BackingStore.set("productFamily", value);
     }
 }

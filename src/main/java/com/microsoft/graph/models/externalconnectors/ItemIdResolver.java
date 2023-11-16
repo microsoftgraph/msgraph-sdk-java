@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
-     * Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
-     */
-    private String itemId;
-    /**
-     * Configurations to match and resolve URL.
-     */
-    private UrlMatchInfo urlMatchInfo;
-    /**
      * Instantiates a new ItemIdResolver and sets the default values.
      */
     public ItemIdResolver() {
@@ -50,7 +42,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
-        return this.itemId;
+        return this.BackingStore.get("itemId");
     }
     /**
      * Gets the urlMatchInfo property value. Configurations to match and resolve URL.
@@ -58,7 +50,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UrlMatchInfo getUrlMatchInfo() {
-        return this.urlMatchInfo;
+        return this.BackingStore.get("urlMatchInfo");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
-        this.itemId = value;
+        this.BackingStore.set("itemId", value);
     }
     /**
      * Sets the urlMatchInfo property value. Configurations to match and resolve URL.
      * @param value Value to set for the urlMatchInfo property.
      */
     public void setUrlMatchInfo(@jakarta.annotation.Nullable final UrlMatchInfo value) {
-        this.urlMatchInfo = value;
+        this.BackingStore.set("urlMatchInfo", value);
     }
 }

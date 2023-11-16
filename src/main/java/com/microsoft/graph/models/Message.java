@@ -10,126 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Message extends OutlookItem implements Parsable {
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
-     */
-    private java.util.List<Attachment> attachments;
-    /**
-     * The Bcc: recipients for the message.
-     */
-    private java.util.List<Recipient> bccRecipients;
-    /**
-     * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
-     */
-    private ItemBody body;
-    /**
-     * The first 255 characters of the message body. It is in text format.
-     */
-    private String bodyPreview;
-    /**
-     * The Cc: recipients for the message.
-     */
-    private java.util.List<Recipient> ccRecipients;
-    /**
-     * The ID of the conversation the email belongs to.
-     */
-    private String conversationId;
-    /**
-     * Indicates the position of the message within the conversation.
-     */
-    private byte[] conversationIndex;
-    /**
-     * The collection of open extensions defined for the message. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * The flag value that indicates the status, start date, due date, or completion date for the message.
-     */
-    private FollowupFlag flag;
-    /**
-     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
-     */
-    private Recipient from;
-    /**
-     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
-     */
-    private Boolean hasAttachments;
-    /**
-     * The importance property
-     */
-    private Importance importance;
-    /**
-     * The inferenceClassification property
-     */
-    private InferenceClassificationType inferenceClassification;
-    /**
-     * The internetMessageHeaders property
-     */
-    private java.util.List<InternetMessageHeader> internetMessageHeaders;
-    /**
-     * The internetMessageId property
-     */
-    private String internetMessageId;
-    /**
-     * The isDeliveryReceiptRequested property
-     */
-    private Boolean isDeliveryReceiptRequested;
-    /**
-     * The isDraft property
-     */
-    private Boolean isDraft;
-    /**
-     * The isRead property
-     */
-    private Boolean isRead;
-    /**
-     * The isReadReceiptRequested property
-     */
-    private Boolean isReadReceiptRequested;
-    /**
-     * The collection of multi-value extended properties defined for the message. Nullable.
-     */
-    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /**
-     * The parentFolderId property
-     */
-    private String parentFolderId;
-    /**
-     * The receivedDateTime property
-     */
-    private OffsetDateTime receivedDateTime;
-    /**
-     * The replyTo property
-     */
-    private java.util.List<Recipient> replyTo;
-    /**
-     * The sender property
-     */
-    private Recipient sender;
-    /**
-     * The sentDateTime property
-     */
-    private OffsetDateTime sentDateTime;
-    /**
-     * The collection of single-value extended properties defined for the message. Nullable.
-     */
-    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
-     * The toRecipients property
-     */
-    private java.util.List<Recipient> toRecipients;
-    /**
-     * The uniqueBody property
-     */
-    private ItemBody uniqueBody;
-    /**
-     * The webLink property
-     */
-    private String webLink;
-    /**
      * Instantiates a new Message and sets the default values.
      */
     public Message() {
@@ -162,7 +42,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
-        return this.attachments;
+        return this.BackingStore.get("attachments");
     }
     /**
      * Gets the bccRecipients property value. The Bcc: recipients for the message.
@@ -170,7 +50,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getBccRecipients() {
-        return this.bccRecipients;
+        return this.BackingStore.get("bccRecipients");
     }
     /**
      * Gets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
@@ -178,7 +58,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
@@ -186,7 +66,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBodyPreview() {
-        return this.bodyPreview;
+        return this.BackingStore.get("bodyPreview");
     }
     /**
      * Gets the ccRecipients property value. The Cc: recipients for the message.
@@ -194,7 +74,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
-        return this.ccRecipients;
+        return this.BackingStore.get("ccRecipients");
     }
     /**
      * Gets the conversationId property value. The ID of the conversation the email belongs to.
@@ -202,7 +82,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getConversationId() {
-        return this.conversationId;
+        return this.BackingStore.get("conversationId");
     }
     /**
      * Gets the conversationIndex property value. Indicates the position of the message within the conversation.
@@ -210,7 +90,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getConversationIndex() {
-        return this.conversationIndex;
+        return this.BackingStore.get("conversationIndex");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the message. Nullable.
@@ -218,7 +98,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -265,7 +145,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public FollowupFlag getFlag() {
-        return this.flag;
+        return this.BackingStore.get("flag");
     }
     /**
      * Gets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
@@ -273,7 +153,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Recipient getFrom() {
-        return this.from;
+        return this.BackingStore.get("from");
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
@@ -281,7 +161,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.BackingStore.get("hasAttachments");
     }
     /**
      * Gets the importance property value. The importance property
@@ -289,7 +169,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
-        return this.importance;
+        return this.BackingStore.get("importance");
     }
     /**
      * Gets the inferenceClassification property value. The inferenceClassification property
@@ -297,7 +177,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public InferenceClassificationType getInferenceClassification() {
-        return this.inferenceClassification;
+        return this.BackingStore.get("inferenceClassification");
     }
     /**
      * Gets the internetMessageHeaders property value. The internetMessageHeaders property
@@ -305,7 +185,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<InternetMessageHeader> getInternetMessageHeaders() {
-        return this.internetMessageHeaders;
+        return this.BackingStore.get("internetMessageHeaders");
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
@@ -313,7 +193,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
-        return this.internetMessageId;
+        return this.BackingStore.get("internetMessageId");
     }
     /**
      * Gets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
@@ -321,7 +201,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeliveryReceiptRequested() {
-        return this.isDeliveryReceiptRequested;
+        return this.BackingStore.get("isDeliveryReceiptRequested");
     }
     /**
      * Gets the isDraft property value. The isDraft property
@@ -329,7 +209,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDraft() {
-        return this.isDraft;
+        return this.BackingStore.get("isDraft");
     }
     /**
      * Gets the isRead property value. The isRead property
@@ -337,7 +217,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRead() {
-        return this.isRead;
+        return this.BackingStore.get("isRead");
     }
     /**
      * Gets the isReadReceiptRequested property value. The isReadReceiptRequested property
@@ -345,7 +225,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReadReceiptRequested() {
-        return this.isReadReceiptRequested;
+        return this.BackingStore.get("isReadReceiptRequested");
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
@@ -353,7 +233,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this.multiValueExtendedProperties;
+        return this.BackingStore.get("multiValueExtendedProperties");
     }
     /**
      * Gets the parentFolderId property value. The parentFolderId property
@@ -361,7 +241,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
-        return this.parentFolderId;
+        return this.BackingStore.get("parentFolderId");
     }
     /**
      * Gets the receivedDateTime property value. The receivedDateTime property
@@ -369,7 +249,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this.receivedDateTime;
+        return this.BackingStore.get("receivedDateTime");
     }
     /**
      * Gets the replyTo property value. The replyTo property
@@ -377,7 +257,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getReplyTo() {
-        return this.replyTo;
+        return this.BackingStore.get("replyTo");
     }
     /**
      * Gets the sender property value. The sender property
@@ -385,7 +265,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Recipient getSender() {
-        return this.sender;
+        return this.BackingStore.get("sender");
     }
     /**
      * Gets the sentDateTime property value. The sentDateTime property
@@ -393,7 +273,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
-        return this.sentDateTime;
+        return this.BackingStore.get("sentDateTime");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
@@ -401,7 +281,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this.singleValueExtendedProperties;
+        return this.BackingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the subject property value. The subject property
@@ -409,7 +289,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.BackingStore.get("subject");
     }
     /**
      * Gets the toRecipients property value. The toRecipients property
@@ -417,7 +297,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
-        return this.toRecipients;
+        return this.BackingStore.get("toRecipients");
     }
     /**
      * Gets the uniqueBody property value. The uniqueBody property
@@ -425,7 +305,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getUniqueBody() {
-        return this.uniqueBody;
+        return this.BackingStore.get("uniqueBody");
     }
     /**
      * Gets the webLink property value. The webLink property
@@ -433,7 +313,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getWebLink() {
-        return this.webLink;
+        return this.BackingStore.get("webLink");
     }
     /**
      * Serializes information the current object
@@ -478,209 +358,209 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
-        this.attachments = value;
+        this.BackingStore.set("attachments", value);
     }
     /**
      * Sets the bccRecipients property value. The Bcc: recipients for the message.
      * @param value Value to set for the bccRecipients property.
      */
     public void setBccRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.bccRecipients = value;
+        this.BackingStore.set("bccRecipients", value);
     }
     /**
      * Sets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
      * @param value Value to set for the bodyPreview property.
      */
     public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
-        this.bodyPreview = value;
+        this.BackingStore.set("bodyPreview", value);
     }
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the message.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.ccRecipients = value;
+        this.BackingStore.set("ccRecipients", value);
     }
     /**
      * Sets the conversationId property value. The ID of the conversation the email belongs to.
      * @param value Value to set for the conversationId property.
      */
     public void setConversationId(@jakarta.annotation.Nullable final String value) {
-        this.conversationId = value;
+        this.BackingStore.set("conversationId", value);
     }
     /**
      * Sets the conversationIndex property value. Indicates the position of the message within the conversation.
      * @param value Value to set for the conversationIndex property.
      */
     public void setConversationIndex(@jakarta.annotation.Nullable final byte[] value) {
-        this.conversationIndex = value;
+        this.BackingStore.set("conversationIndex", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the message. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
      * @param value Value to set for the flag property.
      */
     public void setFlag(@jakarta.annotation.Nullable final FollowupFlag value) {
-        this.flag = value;
+        this.BackingStore.set("flag", value);
     }
     /**
      * Sets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @param value Value to set for the from property.
      */
     public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
-        this.from = value;
+        this.BackingStore.set("from", value);
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.BackingStore.set("hasAttachments", value);
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
-        this.importance = value;
+        this.BackingStore.set("importance", value);
     }
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
      * @param value Value to set for the inferenceClassification property.
      */
     public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassificationType value) {
-        this.inferenceClassification = value;
+        this.BackingStore.set("inferenceClassification", value);
     }
     /**
      * Sets the internetMessageHeaders property value. The internetMessageHeaders property
      * @param value Value to set for the internetMessageHeaders property.
      */
     public void setInternetMessageHeaders(@jakarta.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
-        this.internetMessageHeaders = value;
+        this.BackingStore.set("internetMessageHeaders", value);
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
      */
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
-        this.internetMessageId = value;
+        this.BackingStore.set("internetMessageId", value);
     }
     /**
      * Sets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
      * @param value Value to set for the isDeliveryReceiptRequested property.
      */
     public void setIsDeliveryReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeliveryReceiptRequested = value;
+        this.BackingStore.set("isDeliveryReceiptRequested", value);
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
      */
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDraft = value;
+        this.BackingStore.set("isDraft", value);
     }
     /**
      * Sets the isRead property value. The isRead property
      * @param value Value to set for the isRead property.
      */
     public void setIsRead(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRead = value;
+        this.BackingStore.set("isRead", value);
     }
     /**
      * Sets the isReadReceiptRequested property value. The isReadReceiptRequested property
      * @param value Value to set for the isReadReceiptRequested property.
      */
     public void setIsReadReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReadReceiptRequested = value;
+        this.BackingStore.set("isReadReceiptRequested", value);
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this.multiValueExtendedProperties = value;
+        this.BackingStore.set("multiValueExtendedProperties", value);
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
-        this.parentFolderId = value;
+        this.BackingStore.set("parentFolderId", value);
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
      */
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.receivedDateTime = value;
+        this.BackingStore.set("receivedDateTime", value);
     }
     /**
      * Sets the replyTo property value. The replyTo property
      * @param value Value to set for the replyTo property.
      */
     public void setReplyTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.replyTo = value;
+        this.BackingStore.set("replyTo", value);
     }
     /**
      * Sets the sender property value. The sender property
      * @param value Value to set for the sender property.
      */
     public void setSender(@jakarta.annotation.Nullable final Recipient value) {
-        this.sender = value;
+        this.BackingStore.set("sender", value);
     }
     /**
      * Sets the sentDateTime property value. The sentDateTime property
      * @param value Value to set for the sentDateTime property.
      */
     public void setSentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.sentDateTime = value;
+        this.BackingStore.set("sentDateTime", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this.singleValueExtendedProperties = value;
+        this.BackingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.BackingStore.set("subject", value);
     }
     /**
      * Sets the toRecipients property value. The toRecipients property
      * @param value Value to set for the toRecipients property.
      */
     public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
-        this.toRecipients = value;
+        this.BackingStore.set("toRecipients", value);
     }
     /**
      * Sets the uniqueBody property value. The uniqueBody property
      * @param value Value to set for the uniqueBody property.
      */
     public void setUniqueBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.uniqueBody = value;
+        this.BackingStore.set("uniqueBody", value);
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
      */
     public void setWebLink(@jakarta.annotation.Nullable final String value) {
-        this.webLink = value;
+        this.BackingStore.set("webLink", value);
     }
 }

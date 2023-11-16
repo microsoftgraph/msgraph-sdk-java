@@ -12,30 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity implements Parsable {
     /**
-     * The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer activeDeviceCount;
-    /**
-     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceManufacturer;
-    /**
-     * The model name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceModel;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer meanTimeToFailureInMinutes;
-    /**
-     * The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double modelAppHealthScore;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthDeviceModelPerformance and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthDeviceModelPerformance() {
@@ -57,7 +33,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
-        return this.activeDeviceCount;
+        return this.BackingStore.get("activeDeviceCount");
     }
     /**
      * Gets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
@@ -65,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this.deviceManufacturer;
+        return this.BackingStore.get("deviceManufacturer");
     }
     /**
      * Gets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
@@ -73,7 +49,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
-        return this.deviceModel;
+        return this.BackingStore.get("deviceModel");
     }
     /**
      * The deserialization information for the current model
@@ -96,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.BackingStore.get("healthStatus");
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -104,7 +80,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
-        return this.meanTimeToFailureInMinutes;
+        return this.BackingStore.get("meanTimeToFailureInMinutes");
     }
     /**
      * Gets the modelAppHealthScore property value. The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -112,7 +88,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      */
     @jakarta.annotation.Nullable
     public Double getModelAppHealthScore() {
-        return this.modelAppHealthScore;
+        return this.BackingStore.get("modelAppHealthScore");
     }
     /**
      * Serializes information the current object
@@ -133,41 +109,41 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
      * @param value Value to set for the activeDeviceCount property.
      */
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDeviceCount = value;
+        this.BackingStore.set("activeDeviceCount", value);
     }
     /**
      * Sets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceManufacturer property.
      */
     public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.deviceManufacturer = value;
+        this.BackingStore.set("deviceManufacturer", value);
     }
     /**
      * Sets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceModel property.
      */
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
-        this.deviceModel = value;
+        this.BackingStore.set("deviceModel", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.BackingStore.set("healthStatus", value);
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      */
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.meanTimeToFailureInMinutes = value;
+        this.BackingStore.set("meanTimeToFailureInMinutes", value);
     }
     /**
      * Sets the modelAppHealthScore property value. The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the modelAppHealthScore property.
      */
     public void setModelAppHealthScore(@jakarta.annotation.Nullable final Double value) {
-        this.modelAppHealthScore = value;
+        this.BackingStore.set("modelAppHealthScore", value);
     }
 }

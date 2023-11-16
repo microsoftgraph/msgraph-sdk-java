@@ -4,39 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PrintMargin implements AdditionalDataHolder, Parsable {
+public class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The margin in microns from the bottom edge.
-     */
-    private Integer bottom;
-    /**
-     * The margin in microns from the left edge.
-     */
-    private Integer left;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The margin in microns from the right edge.
-     */
-    private Integer right;
-    /**
-     * The margin in microns from the top edge.
-     */
-    private Integer top;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new PrintMargin and sets the default values.
      */
     public PrintMargin() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -55,7 +39,20 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the bottom property value. The margin in microns from the bottom edge.
@@ -63,7 +60,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getBottom() {
-        return this.bottom;
+        return this.BackingStore.get("bottom");
     }
     /**
      * The deserialization information for the current model
@@ -85,7 +82,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getLeft() {
-        return this.left;
+        return this.BackingStore.get("left");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +90,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the right property value. The margin in microns from the right edge.
@@ -101,7 +98,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getRight() {
-        return this.right;
+        return this.BackingStore.get("right");
     }
     /**
      * Gets the top property value. The margin in microns from the top edge.
@@ -109,7 +106,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
-        return this.top;
+        return this.BackingStore.get("top");
     }
     /**
      * Serializes information the current object
@@ -129,41 +126,49 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the bottom property value. The margin in microns from the bottom edge.
      * @param value Value to set for the bottom property.
      */
     public void setBottom(@jakarta.annotation.Nullable final Integer value) {
-        this.bottom = value;
+        this.BackingStore.set("bottom", value);
     }
     /**
      * Sets the left property value. The margin in microns from the left edge.
      * @param value Value to set for the left property.
      */
     public void setLeft(@jakarta.annotation.Nullable final Integer value) {
-        this.left = value;
+        this.BackingStore.set("left", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the right property value. The margin in microns from the right edge.
      * @param value Value to set for the right property.
      */
     public void setRight(@jakarta.annotation.Nullable final Integer value) {
-        this.right = value;
+        this.BackingStore.set("right", value);
     }
     /**
      * Sets the top property value. The margin in microns from the top edge.
      * @param value Value to set for the top property.
      */
     public void setTop(@jakarta.annotation.Nullable final Integer value) {
-        this.top = value;
+        this.BackingStore.set("top", value);
     }
 }

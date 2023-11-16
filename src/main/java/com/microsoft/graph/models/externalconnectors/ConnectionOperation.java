@@ -11,14 +11,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectionOperation extends Entity implements Parsable {
     /**
-     * If status is failed, provides more information about the error that caused the failure.
-     */
-    private PublicError error;
-    /**
-     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
-     */
-    private ConnectionOperationStatus status;
-    /**
      * Instantiates a new ConnectionOperation and sets the default values.
      */
     public ConnectionOperation() {
@@ -40,7 +32,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
-        return this.error;
+        return this.BackingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -59,7 +51,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ConnectionOperationStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -76,13 +68,13 @@ public class ConnectionOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
-        this.error = value;
+        this.BackingStore.set("error", value);
     }
     /**
      * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectionOperationStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

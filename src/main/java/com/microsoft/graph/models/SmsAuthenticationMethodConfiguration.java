@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * A collection of groups that are enabled to use the authentication method.
-     */
-    private java.util.List<SmsAuthenticationMethodTarget> includeTargets;
-    /**
      * Instantiates a new SmsAuthenticationMethodConfiguration and sets the default values.
      */
     public SmsAuthenticationMethodConfiguration() {
@@ -45,7 +41,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      */
     @jakarta.annotation.Nullable
     public java.util.List<SmsAuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.BackingStore.get("includeTargets");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<SmsAuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.BackingStore.set("includeTargets", value);
     }
 }

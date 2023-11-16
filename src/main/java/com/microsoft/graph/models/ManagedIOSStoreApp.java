@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
-     * Contains properties of the possible iOS device types the mobile app can run on.
-     */
-    private IosDeviceType applicableDeviceType;
-    /**
-     * The Apple AppStoreUrl.
-     */
-    private String appStoreUrl;
-    /**
-     * The app's Bundle ID.
-     */
-    private String bundleId;
-    /**
-     * Contains properties of the minimum operating system required for an iOS mobile app.
-     */
-    private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
      * Instantiates a new ManagedIOSStoreApp and sets the default values.
      */
     public ManagedIOSStoreApp() {
@@ -50,7 +34,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
-        return this.applicableDeviceType;
+        return this.BackingStore.get("applicableDeviceType");
     }
     /**
      * Gets the appStoreUrl property value. The Apple AppStoreUrl.
@@ -58,7 +42,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
-        return this.appStoreUrl;
+        return this.BackingStore.get("appStoreUrl");
     }
     /**
      * Gets the bundleId property value. The app's Bundle ID.
@@ -66,7 +50,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
-        return this.bundleId;
+        return this.BackingStore.get("bundleId");
     }
     /**
      * The deserialization information for the current model
@@ -87,7 +71,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.BackingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      */
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
-        this.applicableDeviceType = value;
+        this.BackingStore.set("applicableDeviceType", value);
     }
     /**
      * Sets the appStoreUrl property value. The Apple AppStoreUrl.
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.appStoreUrl = value;
+        this.BackingStore.set("appStoreUrl", value);
     }
     /**
      * Sets the bundleId property value. The app's Bundle ID.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
-        this.bundleId = value;
+        this.BackingStore.set("bundleId", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties of the minimum operating system required for an iOS mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.BackingStore.set("minimumSupportedOperatingSystem", value);
     }
 }

@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
     /**
-     * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
-     */
-    private CustomTaskExtensionOperationStatus operationStatus;
-    /**
      * Instantiates a new CustomTaskExtensionCallbackData and sets the default values.
      */
     public CustomTaskExtensionCallbackData() {
@@ -46,7 +42,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
      */
     @jakarta.annotation.Nullable
     public CustomTaskExtensionOperationStatus getOperationStatus() {
-        return this.operationStatus;
+        return this.BackingStore.get("operationStatus");
     }
     /**
      * Serializes information the current object
@@ -62,6 +58,6 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
      * @param value Value to set for the operationStatus property.
      */
     public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionOperationStatus value) {
-        this.operationStatus = value;
+        this.BackingStore.set("operationStatus", value);
     }
 }

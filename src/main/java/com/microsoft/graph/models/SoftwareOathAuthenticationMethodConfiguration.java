@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareOathAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * A collection of groups that are enabled to use the authentication method. Expanded by default.
-     */
-    private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /**
      * Instantiates a new SoftwareOathAuthenticationMethodConfiguration and sets the default values.
      */
     public SoftwareOathAuthenticationMethodConfiguration() {
@@ -45,7 +41,7 @@ public class SoftwareOathAuthenticationMethodConfiguration extends Authenticatio
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.BackingStore.get("includeTargets");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class SoftwareOathAuthenticationMethodConfiguration extends Authenticatio
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.BackingStore.set("includeTargets", value);
     }
 }

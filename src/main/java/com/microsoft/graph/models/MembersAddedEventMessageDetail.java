@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Initiator of the event.
-     */
-    private IdentitySet initiator;
-    /**
-     * List of members added.
-     */
-    private java.util.List<TeamworkUserIdentity> members;
-    /**
-     * The timestamp that denotes how far back a conversation's history is shared with the conversation members.
-     */
-    private OffsetDateTime visibleHistoryStartDateTime;
-    /**
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
      */
     public MembersAddedEventMessageDetail() {
@@ -56,7 +44,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.BackingStore.get("initiator");
     }
     /**
      * Gets the members property value. List of members added.
@@ -64,7 +52,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this.members;
+        return this.BackingStore.get("members");
     }
     /**
      * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
@@ -72,7 +60,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getVisibleHistoryStartDateTime() {
-        return this.visibleHistoryStartDateTime;
+        return this.BackingStore.get("visibleHistoryStartDateTime");
     }
     /**
      * Serializes information the current object
@@ -90,20 +78,20 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.BackingStore.set("initiator", value);
     }
     /**
      * Sets the members property value. List of members added.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this.members = value;
+        this.BackingStore.set("members", value);
     }
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      * @param value Value to set for the visibleHistoryStartDateTime property.
      */
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.visibleHistoryStartDateTime = value;
+        this.BackingStore.set("visibleHistoryStartDateTime", value);
     }
 }

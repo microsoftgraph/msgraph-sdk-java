@@ -10,18 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttachmentSession extends Entity implements Parsable {
     /**
-     * The content streams that are uploaded.
-     */
-    private byte[] content;
-    /**
-     * The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * Indicates a single value {start} that represents the location in the file where the next upload should begin.
-     */
-    private java.util.List<String> nextExpectedRanges;
-    /**
      * Instantiates a new AttachmentSession and sets the default values.
      */
     public AttachmentSession() {
@@ -43,7 +31,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * Gets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
@@ -51,7 +39,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.BackingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +59,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {
-        return this.nextExpectedRanges;
+        return this.BackingStore.get("nextExpectedRanges");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class AttachmentSession extends Entity implements Parsable {
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.BackingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
      * @param value Value to set for the nextExpectedRanges property.
      */
     public void setNextExpectedRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.nextExpectedRanges = value;
+        this.BackingStore.set("nextExpectedRanges", value);
     }
 }

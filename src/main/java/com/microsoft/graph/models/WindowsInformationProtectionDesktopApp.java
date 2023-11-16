@@ -12,18 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable {
     /**
-     * The binary name.
-     */
-    private String binaryName;
-    /**
-     * The high binary version.
-     */
-    private String binaryVersionHigh;
-    /**
-     * The lower binary version.
-     */
-    private String binaryVersionLow;
-    /**
      * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
      */
     public WindowsInformationProtectionDesktopApp() {
@@ -46,7 +34,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @jakarta.annotation.Nullable
     public String getBinaryName() {
-        return this.binaryName;
+        return this.BackingStore.get("binaryName");
     }
     /**
      * Gets the binaryVersionHigh property value. The high binary version.
@@ -54,7 +42,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @jakarta.annotation.Nullable
     public String getBinaryVersionHigh() {
-        return this.binaryVersionHigh;
+        return this.BackingStore.get("binaryVersionHigh");
     }
     /**
      * Gets the binaryVersionLow property value. The lower binary version.
@@ -62,7 +50,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @jakarta.annotation.Nullable
     public String getBinaryVersionLow() {
-        return this.binaryVersionLow;
+        return this.BackingStore.get("binaryVersionLow");
     }
     /**
      * The deserialization information for the current model
@@ -92,20 +80,20 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param value Value to set for the binaryName property.
      */
     public void setBinaryName(@jakarta.annotation.Nullable final String value) {
-        this.binaryName = value;
+        this.BackingStore.set("binaryName", value);
     }
     /**
      * Sets the binaryVersionHigh property value. The high binary version.
      * @param value Value to set for the binaryVersionHigh property.
      */
     public void setBinaryVersionHigh(@jakarta.annotation.Nullable final String value) {
-        this.binaryVersionHigh = value;
+        this.BackingStore.set("binaryVersionHigh", value);
     }
     /**
      * Sets the binaryVersionLow property value. The lower binary version.
      * @param value Value to set for the binaryVersionLow property.
      */
     public void setBinaryVersionLow(@jakarta.annotation.Nullable final String value) {
-        this.binaryVersionLow = value;
+        this.BackingStore.set("binaryVersionLow", value);
     }
 }

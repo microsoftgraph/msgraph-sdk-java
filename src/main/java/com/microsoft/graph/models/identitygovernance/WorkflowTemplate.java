@@ -10,26 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowTemplate extends Entity implements Parsable {
     /**
-     * The category property
-     */
-    private LifecycleWorkflowCategory category;
-    /**
-     * The description of the workflowTemplate.
-     */
-    private String description;
-    /**
-     * The display name of the workflowTemplate.Supports $filter(eq, ne) and $orderby.
-     */
-    private String displayName;
-    /**
-     * Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
-     */
-    private WorkflowExecutionConditions executionConditions;
-    /**
-     * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
-     */
-    private java.util.List<Task> tasks;
-    /**
      * Instantiates a new WorkflowTemplate and sets the default values.
      */
     public WorkflowTemplate() {
@@ -51,7 +31,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {
-        return this.category;
+        return this.BackingStore.get("category");
     }
     /**
      * Gets the description property value. The description of the workflowTemplate.
@@ -59,7 +39,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name of the workflowTemplate.Supports $filter(eq, ne) and $orderby.
@@ -67,7 +47,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the executionConditions property value. Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
@@ -75,7 +55,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionConditions getExecutionConditions() {
-        return this.executionConditions;
+        return this.BackingStore.get("executionConditions");
     }
     /**
      * The deserialization information for the current model
@@ -97,7 +77,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Task> getTasks() {
-        return this.tasks;
+        return this.BackingStore.get("tasks");
     }
     /**
      * Serializes information the current object
@@ -117,34 +97,34 @@ public class WorkflowTemplate extends Entity implements Parsable {
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final LifecycleWorkflowCategory value) {
-        this.category = value;
+        this.BackingStore.set("category", value);
     }
     /**
      * Sets the description property value. The description of the workflowTemplate.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name of the workflowTemplate.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the executionConditions property value. Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
      * @param value Value to set for the executionConditions property.
      */
     public void setExecutionConditions(@jakarta.annotation.Nullable final WorkflowExecutionConditions value) {
-        this.executionConditions = value;
+        this.BackingStore.set("executionConditions", value);
     }
     /**
      * Sets the tasks property value. Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<Task> value) {
-        this.tasks = value;
+        this.BackingStore.set("tasks", value);
     }
 }

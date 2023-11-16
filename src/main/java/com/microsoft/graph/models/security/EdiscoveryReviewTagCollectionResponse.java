@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryReviewTagCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<EdiscoveryReviewTag> value;
-    /**
      * Instantiates a new EdiscoveryReviewTagCollectionResponse and sets the default values.
      */
     public EdiscoveryReviewTagCollectionResponse() {
@@ -45,7 +41,7 @@ public class EdiscoveryReviewTagCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class EdiscoveryReviewTagCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

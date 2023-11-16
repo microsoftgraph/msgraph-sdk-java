@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable {
     /**
-     * The work from anywhere metric devices. Read-only.
-     */
-    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> metricDevices;
-    /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereMetric() {
@@ -47,7 +43,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> getMetricDevices() {
-        return this.metricDevices;
+        return this.BackingStore.get("metricDevices");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
      * @param value Value to set for the metricDevices property.
      */
     public void setMetricDevices(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value) {
-        this.metricDevices = value;
+        this.BackingStore.set("metricDevices", value);
     }
 }

@@ -13,22 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
-     * Display name of the partner.
-     */
-    private String displayName;
-    /**
-     * Timestamp of the last request sent to Intune by the TEM partner.
-     */
-    private OffsetDateTime lastConnectionDateTime;
-    /**
-     * The current TeamViewer connector status
-     */
-    private RemoteAssistanceOnboardingStatus onboardingStatus;
-    /**
-     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-     */
-    private String onboardingUrl;
-    /**
      * Instantiates a new RemoteAssistancePartner and sets the default values.
      */
     public RemoteAssistancePartner() {
@@ -50,7 +34,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +55,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this.lastConnectionDateTime;
+        return this.BackingStore.get("lastConnectionDateTime");
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
@@ -79,7 +63,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {
-        return this.onboardingStatus;
+        return this.BackingStore.get("onboardingStatus");
     }
     /**
      * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -87,7 +71,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOnboardingUrl() {
-        return this.onboardingUrl;
+        return this.BackingStore.get("onboardingUrl");
     }
     /**
      * Serializes information the current object
@@ -106,27 +90,27 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
      */
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastConnectionDateTime = value;
+        this.BackingStore.set("lastConnectionDateTime", value);
     }
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
-        this.onboardingStatus = value;
+        this.BackingStore.set("onboardingStatus", value);
     }
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
      * @param value Value to set for the onboardingUrl property.
      */
     public void setOnboardingUrl(@jakarta.annotation.Nullable final String value) {
-        this.onboardingUrl = value;
+        this.BackingStore.set("onboardingUrl", value);
     }
 }

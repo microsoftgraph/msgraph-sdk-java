@@ -12,42 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity implements Parsable {
     /**
-     * The number of devices where the application has been active. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer activeDeviceCount;
-    /**
-     * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appCrashCount;
-    /**
-     * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appDisplayName;
-    /**
-     * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appName;
-    /**
-     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     */
-    private String appPublisher;
-    /**
-     * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer appUsageDuration;
-    /**
-     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     */
-    private Integer meanTimeToFailureInMinutes;
-    /**
-     * The OS build number of the application. Supports: $select, $OrderBy. Read-only.
-     */
-    private String osBuildNumber;
-    /**
-     * The OS version of the application. Supports: $select, $OrderBy. Read-only.
-     */
-    private String osVersion;
-    /**
      * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion() {
@@ -69,7 +33,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
-        return this.activeDeviceCount;
+        return this.BackingStore.get("activeDeviceCount");
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -77,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this.appCrashCount;
+        return this.BackingStore.get("appCrashCount");
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
@@ -85,7 +49,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
-        return this.appDisplayName;
+        return this.BackingStore.get("appDisplayName");
     }
     /**
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
@@ -93,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
-        return this.appName;
+        return this.BackingStore.get("appName");
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
@@ -101,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
-        return this.appPublisher;
+        return this.BackingStore.get("appPublisher");
     }
     /**
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -109,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
-        return this.appUsageDuration;
+        return this.BackingStore.get("appUsageDuration");
     }
     /**
      * The deserialization information for the current model
@@ -135,7 +99,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
-        return this.meanTimeToFailureInMinutes;
+        return this.BackingStore.get("meanTimeToFailureInMinutes");
     }
     /**
      * Gets the osBuildNumber property value. The OS build number of the application. Supports: $select, $OrderBy. Read-only.
@@ -143,7 +107,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
-        return this.osBuildNumber;
+        return this.BackingStore.get("osBuildNumber");
     }
     /**
      * Gets the osVersion property value. The OS version of the application. Supports: $select, $OrderBy. Read-only.
@@ -151,7 +115,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Serializes information the current object
@@ -175,62 +139,62 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
      * @param value Value to set for the activeDeviceCount property.
      */
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.activeDeviceCount = value;
+        this.BackingStore.set("activeDeviceCount", value);
     }
     /**
      * Sets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
      */
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
-        this.appCrashCount = value;
+        this.BackingStore.set("appCrashCount", value);
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.appDisplayName = value;
+        this.BackingStore.set("appDisplayName", value);
     }
     /**
      * Sets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
-        this.appName = value;
+        this.BackingStore.set("appName", value);
     }
     /**
      * Sets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appPublisher property.
      */
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
-        this.appPublisher = value;
+        this.BackingStore.set("appPublisher", value);
     }
     /**
      * Sets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appUsageDuration property.
      */
     public void setAppUsageDuration(@jakarta.annotation.Nullable final Integer value) {
-        this.appUsageDuration = value;
+        this.BackingStore.set("appUsageDuration", value);
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      */
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
-        this.meanTimeToFailureInMinutes = value;
+        this.BackingStore.set("meanTimeToFailureInMinutes", value);
     }
     /**
      * Sets the osBuildNumber property value. The OS build number of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osBuildNumber property.
      */
     public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
-        this.osBuildNumber = value;
+        this.BackingStore.set("osBuildNumber", value);
     }
     /**
      * Sets the osVersion property value. The OS version of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
 }

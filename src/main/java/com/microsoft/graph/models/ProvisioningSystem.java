@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisioningSystem extends Identity implements Parsable {
     /**
-     * Details of the system.
-     */
-    private DetailsInfo details;
-    /**
      * Instantiates a new ProvisioningSystem and sets the default values.
      */
     public ProvisioningSystem() {
@@ -35,7 +31,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DetailsInfo getDetails() {
-        return this.details;
+        return this.BackingStore.get("details");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class ProvisioningSystem extends Identity implements Parsable {
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final DetailsInfo value) {
-        this.details = value;
+        this.BackingStore.set("details", value);
     }
 }

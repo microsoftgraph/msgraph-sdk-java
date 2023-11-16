@@ -13,10 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
-     * Value.
-     */
-    private OffsetDateTime value;
-    /**
      * Instantiates a new OmaSettingDateTime and sets the default values.
      */
     public OmaSettingDateTime() {
@@ -49,7 +45,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -65,6 +61,6 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

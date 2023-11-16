@@ -12,22 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable {
     /**
-     * The friendly name
-     */
-    private String displayName;
-    /**
-     * File as a byte array
-     */
-    private byte[] file;
-    /**
-     * SHA256 hash of the file
-     */
-    private String fileHash;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
      * Instantiates a new WindowsInformationProtectionAppLockerFile and sets the default values.
      */
     public WindowsInformationProtectionAppLockerFile() {
@@ -49,7 +33,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -70,7 +54,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @jakarta.annotation.Nullable
     public byte[] getFile() {
-        return this.file;
+        return this.BackingStore.get("file");
     }
     /**
      * Gets the fileHash property value. SHA256 hash of the file
@@ -78,7 +62,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @jakarta.annotation.Nullable
     public String getFileHash() {
-        return this.fileHash;
+        return this.BackingStore.get("fileHash");
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -86,7 +70,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -105,27 +89,27 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the file property value. File as a byte array
      * @param value Value to set for the file property.
      */
     public void setFile(@jakarta.annotation.Nullable final byte[] value) {
-        this.file = value;
+        this.BackingStore.set("file", value);
     }
     /**
      * Sets the fileHash property value. SHA256 hash of the file
      * @param value Value to set for the fileHash property.
      */
     public void setFileHash(@jakarta.annotation.Nullable final String value) {
-        this.fileHash = value;
+        this.BackingStore.set("fileHash", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

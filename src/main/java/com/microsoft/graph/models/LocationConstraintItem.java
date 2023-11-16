@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocationConstraintItem extends Location implements Parsable {
     /**
-     * If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
-     */
-    private Boolean resolveAvailability;
-    /**
      * Instantiates a new LocationConstraintItem and sets the default values.
      */
     public LocationConstraintItem() {
@@ -45,7 +41,7 @@ public class LocationConstraintItem extends Location implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getResolveAvailability() {
-        return this.resolveAvailability;
+        return this.BackingStore.get("resolveAvailability");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class LocationConstraintItem extends Location implements Parsable {
      * @param value Value to set for the resolveAvailability property.
      */
     public void setResolveAvailability(@jakarta.annotation.Nullable final Boolean value) {
-        this.resolveAvailability = value;
+        this.BackingStore.set("resolveAvailability", value);
     }
 }

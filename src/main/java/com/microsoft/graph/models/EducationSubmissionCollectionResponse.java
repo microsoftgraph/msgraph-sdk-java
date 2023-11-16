@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<EducationSubmission> value;
-    /**
      * Instantiates a new EducationSubmissionCollectionResponse and sets the default values.
      */
     public EducationSubmissionCollectionResponse() {
@@ -44,7 +40,7 @@ public class EducationSubmissionCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmission> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EducationSubmissionCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<EducationSubmission> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

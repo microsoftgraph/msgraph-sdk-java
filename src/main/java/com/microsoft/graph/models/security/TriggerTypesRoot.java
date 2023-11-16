@@ -10,10 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TriggerTypesRoot extends Entity implements Parsable {
     /**
-     * The retentionEventTypes property
-     */
-    private java.util.List<RetentionEventType> retentionEventTypes;
-    /**
      * Instantiates a new TriggerTypesRoot and sets the default values.
      */
     public TriggerTypesRoot() {
@@ -45,7 +41,7 @@ public class TriggerTypesRoot extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RetentionEventType> getRetentionEventTypes() {
-        return this.retentionEventTypes;
+        return this.BackingStore.get("retentionEventTypes");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class TriggerTypesRoot extends Entity implements Parsable {
      * @param value Value to set for the retentionEventTypes property.
      */
     public void setRetentionEventTypes(@jakarta.annotation.Nullable final java.util.List<RetentionEventType> value) {
-        this.retentionEventTypes = value;
+        this.BackingStore.set("retentionEventTypes", value);
     }
 }

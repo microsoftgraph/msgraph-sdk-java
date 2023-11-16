@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftItem extends ScheduleEntity implements Parsable {
     /**
-     * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
-     */
-    private java.util.List<ShiftActivity> activities;
-    /**
-     * The shift label of the shiftItem.
-     */
-    private String displayName;
-    /**
-     * The shift notes for the shiftItem.
-     */
-    private String notes;
-    /**
      * Instantiates a new ShiftItem and sets the default values.
      */
     public ShiftItem() {
@@ -49,7 +37,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShiftActivity> getActivities() {
-        return this.activities;
+        return this.BackingStore.get("activities");
     }
     /**
      * Gets the displayName property value. The shift label of the shiftItem.
@@ -57,7 +45,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -77,7 +65,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.BackingStore.get("notes");
     }
     /**
      * Serializes information the current object
@@ -95,20 +83,20 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ShiftActivity> value) {
-        this.activities = value;
+        this.BackingStore.set("activities", value);
     }
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.BackingStore.set("notes", value);
     }
 }

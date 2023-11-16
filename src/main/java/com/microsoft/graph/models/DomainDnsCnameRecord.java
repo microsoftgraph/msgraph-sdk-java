@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     /**
-     * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
-     */
-    private String canonicalName;
-    /**
      * Instantiates a new DomainDnsCnameRecord and sets the default values.
      */
     public DomainDnsCnameRecord() {
@@ -34,7 +30,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCanonicalName() {
-        return this.canonicalName;
+        return this.BackingStore.get("canonicalName");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the canonicalName property.
      */
     public void setCanonicalName(@jakarta.annotation.Nullable final String value) {
-        this.canonicalName = value;
+        this.BackingStore.set("canonicalName", value);
     }
 }

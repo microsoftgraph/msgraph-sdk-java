@@ -13,18 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Parsable {
     /**
-     * DateTime when the entity is created.
-     */
-    private OffsetDateTime createdDateTimeUtc;
-    /**
-     * Collection of all Autopilot devices as a part of this upload.
-     */
-    private java.util.List<ImportedWindowsAutopilotDeviceIdentity> deviceIdentities;
-    /**
-     * The status property
-     */
-    private ImportedWindowsAutopilotDeviceIdentityUploadStatus status;
-    /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentityUpload and sets the default values.
      */
     public ImportedWindowsAutopilotDeviceIdentityUpload() {
@@ -46,7 +34,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTimeUtc() {
-        return this.createdDateTimeUtc;
+        return this.BackingStore.get("createdDateTimeUtc");
     }
     /**
      * Gets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
@@ -54,7 +42,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getDeviceIdentities() {
-        return this.deviceIdentities;
+        return this.BackingStore.get("deviceIdentities");
     }
     /**
      * The deserialization information for the current model
@@ -74,7 +62,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUploadStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -92,20 +80,20 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the createdDateTimeUtc property.
      */
     public void setCreatedDateTimeUtc(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTimeUtc = value;
+        this.BackingStore.set("createdDateTimeUtc", value);
     }
     /**
      * Sets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
      * @param value Value to set for the deviceIdentities property.
      */
     public void setDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
-        this.deviceIdentities = value;
+        this.BackingStore.set("deviceIdentities", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityUploadStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
 }

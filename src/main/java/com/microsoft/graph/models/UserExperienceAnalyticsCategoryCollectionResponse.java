@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCategoryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UserExperienceAnalyticsCategory> value;
-    /**
      * Instantiates a new UserExperienceAnalyticsCategoryCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsCategoryCollectionResponse() {
@@ -44,7 +40,7 @@ public class UserExperienceAnalyticsCategoryCollectionResponse extends BaseColle
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsCategory> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class UserExperienceAnalyticsCategoryCollectionResponse extends BaseColle
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsCategory> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

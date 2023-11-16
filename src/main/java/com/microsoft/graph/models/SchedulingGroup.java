@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /**
-     * The display name for the schedulingGroup. Required.
-     */
-    private String displayName;
-    /**
-     * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-     */
-    private Boolean isActive;
-    /**
-     * The list of user IDs that are a member of the schedulingGroup. Required.
-     */
-    private java.util.List<String> userIds;
-    /**
      * Instantiates a new SchedulingGroup and sets the default values.
      */
     public SchedulingGroup() {
@@ -43,7 +31,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
-        return this.isActive;
+        return this.BackingStore.get("isActive");
     }
     /**
      * Gets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
@@ -71,7 +59,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserIds() {
-        return this.userIds;
+        return this.BackingStore.get("userIds");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
-        this.isActive = value;
+        this.BackingStore.set("isActive", value);
     }
     /**
      * Sets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
      * @param value Value to set for the userIds property.
      */
     public void setUserIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.userIds = value;
+        this.BackingStore.set("userIds", value);
     }
 }

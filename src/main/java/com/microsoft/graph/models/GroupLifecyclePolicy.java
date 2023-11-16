@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /**
-     * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
-     */
-    private String alternateNotificationEmails;
-    /**
-     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
-     */
-    private Integer groupLifetimeInDays;
-    /**
-     * The group type for which the expiration policy applies. Possible values are All, Selected or None.
-     */
-    private String managedGroupTypes;
-    /**
      * Instantiates a new GroupLifecyclePolicy and sets the default values.
      */
     public GroupLifecyclePolicy() {
@@ -42,7 +30,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getAlternateNotificationEmails() {
-        return this.alternateNotificationEmails;
+        return this.BackingStore.get("alternateNotificationEmails");
     }
     /**
      * The deserialization information for the current model
@@ -62,7 +50,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getGroupLifetimeInDays() {
-        return this.groupLifetimeInDays;
+        return this.BackingStore.get("groupLifetimeInDays");
     }
     /**
      * Gets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
@@ -70,7 +58,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getManagedGroupTypes() {
-        return this.managedGroupTypes;
+        return this.BackingStore.get("managedGroupTypes");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * @param value Value to set for the alternateNotificationEmails property.
      */
     public void setAlternateNotificationEmails(@jakarta.annotation.Nullable final String value) {
-        this.alternateNotificationEmails = value;
+        this.BackingStore.set("alternateNotificationEmails", value);
     }
     /**
      * Sets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
      * @param value Value to set for the groupLifetimeInDays property.
      */
     public void setGroupLifetimeInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.groupLifetimeInDays = value;
+        this.BackingStore.set("groupLifetimeInDays", value);
     }
     /**
      * Sets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
      * @param value Value to set for the managedGroupTypes property.
      */
     public void setManagedGroupTypes(@jakarta.annotation.Nullable final String value) {
-        this.managedGroupTypes = value;
+        this.BackingStore.set("managedGroupTypes", value);
     }
 }

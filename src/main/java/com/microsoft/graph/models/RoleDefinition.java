@@ -12,26 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinition extends Entity implements Parsable {
     /**
-     * Description of the Role definition.
-     */
-    private String description;
-    /**
-     * Display Name of the Role definition.
-     */
-    private String displayName;
-    /**
-     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     */
-    private Boolean isBuiltIn;
-    /**
-     * List of Role assignments for this role definition.
-     */
-    private java.util.List<RoleAssignment> roleAssignments;
-    /**
-     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     */
-    private java.util.List<RolePermission> rolePermissions;
-    /**
      * Instantiates a new RoleDefinition and sets the default values.
      */
     public RoleDefinition() {
@@ -60,7 +40,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. Display Name of the Role definition.
@@ -68,7 +48,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -90,7 +70,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.BackingStore.get("isBuiltIn");
     }
     /**
      * Gets the roleAssignments property value. List of Role assignments for this role definition.
@@ -98,7 +78,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleAssignment> getRoleAssignments() {
-        return this.roleAssignments;
+        return this.BackingStore.get("roleAssignments");
     }
     /**
      * Gets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
@@ -106,7 +86,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getRolePermissions() {
-        return this.rolePermissions;
+        return this.BackingStore.get("rolePermissions");
     }
     /**
      * Serializes information the current object
@@ -126,34 +106,34 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display Name of the Role definition.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.BackingStore.set("isBuiltIn", value);
     }
     /**
      * Sets the roleAssignments property value. List of Role assignments for this role definition.
      * @param value Value to set for the roleAssignments property.
      */
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<RoleAssignment> value) {
-        this.roleAssignments = value;
+        this.BackingStore.set("roleAssignments", value);
     }
     /**
      * Sets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      * @param value Value to set for the rolePermissions property.
      */
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<RolePermission> value) {
-        this.rolePermissions = value;
+        this.BackingStore.set("rolePermissions", value);
     }
 }

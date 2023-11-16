@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupMembers extends SubjectSet implements Parsable {
     /**
-     * The name of the group in Microsoft Entra ID. Read only.
-     */
-    private String description;
-    /**
-     * The ID of the group in Microsoft Entra ID.
-     */
-    private String groupId;
-    /**
      * Instantiates a new GroupMembers and sets the default values.
      */
     public GroupMembers() {
@@ -39,7 +31,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
-        return this.groupId;
+        return this.BackingStore.get("groupId");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class GroupMembers extends SubjectSet implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the groupId property value. The ID of the group in Microsoft Entra ID.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
-        this.groupId = value;
+        this.BackingStore.set("groupId", value);
     }
 }

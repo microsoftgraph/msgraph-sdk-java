@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
-     * The value of the authentication context claim.
-     */
-    private String claimValue;
-    /**
-     * Determines whether this rule is enabled.
-     */
-    private Boolean isEnabled;
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
@@ -39,7 +31,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      */
     @jakarta.annotation.Nullable
     public String getClaimValue() {
-        return this.claimValue;
+        return this.BackingStore.get("claimValue");
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +50,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Serializes information the current object
@@ -75,13 +67,13 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      * @param value Value to set for the claimValue property.
      */
     public void setClaimValue(@jakarta.annotation.Nullable final String value) {
-        this.claimValue = value;
+        this.BackingStore.set("claimValue", value);
     }
     /**
      * Sets the isEnabled property value. Determines whether this rule is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
 }

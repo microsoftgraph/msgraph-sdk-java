@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanDetails extends Entity implements Parsable {
     /**
-     * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
-     */
-    private PlannerCategoryDescriptions categoryDescriptions;
-    /**
-     * Set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required for them to access the plan owned by the group.
-     */
-    private PlannerUserIds sharedWith;
-    /**
      * Instantiates a new PlannerPlanDetails and sets the default values.
      */
     public PlannerPlanDetails() {
@@ -38,7 +30,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PlannerCategoryDescriptions getCategoryDescriptions() {
-        return this.categoryDescriptions;
+        return this.BackingStore.get("categoryDescriptions");
     }
     /**
      * The deserialization information for the current model
@@ -57,7 +49,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PlannerUserIds getSharedWith() {
-        return this.sharedWith;
+        return this.BackingStore.get("sharedWith");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      * @param value Value to set for the categoryDescriptions property.
      */
     public void setCategoryDescriptions(@jakarta.annotation.Nullable final PlannerCategoryDescriptions value) {
-        this.categoryDescriptions = value;
+        this.BackingStore.set("categoryDescriptions", value);
     }
     /**
      * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required for them to access the plan owned by the group.
      * @param value Value to set for the sharedWith property.
      */
     public void setSharedWith(@jakarta.annotation.Nullable final PlannerUserIds value) {
-        this.sharedWith = value;
+        this.BackingStore.set("sharedWith", value);
     }
 }

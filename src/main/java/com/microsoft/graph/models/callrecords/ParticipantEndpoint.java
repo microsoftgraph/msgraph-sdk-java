@@ -10,30 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantEndpoint extends Endpoint implements Parsable {
     /**
-     * CPU number of cores used by the media endpoint.
-     */
-    private Integer cpuCoresCount;
-    /**
-     * CPU name used by the media endpoint.
-     */
-    private String cpuName;
-    /**
-     * CPU processor speed used by the media endpoint.
-     */
-    private Integer cpuProcessorSpeedInMhz;
-    /**
-     * The feedback provided by the user of this endpoint about the quality of the session.
-     */
-    private UserFeedback feedback;
-    /**
-     * Identity associated with the endpoint.
-     */
-    private IdentitySet identity;
-    /**
-     * Name of the device used by the media endpoint.
-     */
-    private String name;
-    /**
      * Instantiates a new ParticipantEndpoint and sets the default values.
      */
     public ParticipantEndpoint() {
@@ -56,7 +32,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCpuCoresCount() {
-        return this.cpuCoresCount;
+        return this.BackingStore.get("cpuCoresCount");
     }
     /**
      * Gets the cpuName property value. CPU name used by the media endpoint.
@@ -64,7 +40,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getCpuName() {
-        return this.cpuName;
+        return this.BackingStore.get("cpuName");
     }
     /**
      * Gets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
@@ -72,7 +48,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Integer getCpuProcessorSpeedInMhz() {
-        return this.cpuProcessorSpeedInMhz;
+        return this.BackingStore.get("cpuProcessorSpeedInMhz");
     }
     /**
      * Gets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
@@ -80,7 +56,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UserFeedback getFeedback() {
-        return this.feedback;
+        return this.BackingStore.get("feedback");
     }
     /**
      * The deserialization information for the current model
@@ -103,7 +79,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this.identity;
+        return this.BackingStore.get("identity");
     }
     /**
      * Gets the name property value. Name of the device used by the media endpoint.
@@ -111,7 +87,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Serializes information the current object
@@ -132,41 +108,41 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * @param value Value to set for the cpuCoresCount property.
      */
     public void setCpuCoresCount(@jakarta.annotation.Nullable final Integer value) {
-        this.cpuCoresCount = value;
+        this.BackingStore.set("cpuCoresCount", value);
     }
     /**
      * Sets the cpuName property value. CPU name used by the media endpoint.
      * @param value Value to set for the cpuName property.
      */
     public void setCpuName(@jakarta.annotation.Nullable final String value) {
-        this.cpuName = value;
+        this.BackingStore.set("cpuName", value);
     }
     /**
      * Sets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
      * @param value Value to set for the cpuProcessorSpeedInMhz property.
      */
     public void setCpuProcessorSpeedInMhz(@jakarta.annotation.Nullable final Integer value) {
-        this.cpuProcessorSpeedInMhz = value;
+        this.BackingStore.set("cpuProcessorSpeedInMhz", value);
     }
     /**
      * Sets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final UserFeedback value) {
-        this.feedback = value;
+        this.BackingStore.set("feedback", value);
     }
     /**
      * Sets the identity property value. Identity associated with the endpoint.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.identity = value;
+        this.BackingStore.set("identity", value);
     }
     /**
      * Sets the name property value. Name of the device used by the media endpoint.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
 }

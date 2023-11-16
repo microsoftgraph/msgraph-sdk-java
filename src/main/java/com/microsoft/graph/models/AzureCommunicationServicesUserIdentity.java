@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserIdentity extends Identity implements Parsable {
     /**
-     * The Azure Communication Services resource ID associated with the user.
-     */
-    private String azureCommunicationServicesResourceId;
-    /**
      * Instantiates a new AzureCommunicationServicesUserIdentity and sets the default values.
      */
     public AzureCommunicationServicesUserIdentity() {
@@ -35,7 +31,7 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
      */
     @jakarta.annotation.Nullable
     public String getAzureCommunicationServicesResourceId() {
-        return this.azureCommunicationServicesResourceId;
+        return this.BackingStore.get("azureCommunicationServicesResourceId");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
      * @param value Value to set for the azureCommunicationServicesResourceId property.
      */
     public void setAzureCommunicationServicesResourceId(@jakarta.annotation.Nullable final String value) {
-        this.azureCommunicationServicesResourceId = value;
+        this.BackingStore.set("azureCommunicationServicesResourceId", value);
     }
 }

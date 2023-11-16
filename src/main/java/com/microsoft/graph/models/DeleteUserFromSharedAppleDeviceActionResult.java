@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
-     * User principal name of the user to be deleted
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.
      */
     public DeleteUserFromSharedAppleDeviceActionResult() {
@@ -47,7 +43,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

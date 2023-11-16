@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PayloadDetail implements AdditionalDataHolder, Parsable {
+public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * Payload coachmark details.
-     */
-    private java.util.List<PayloadCoachmark> coachmarks;
-    /**
-     * Payload content details.
-     */
-    private String content;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The phishing URL used to target a user.
-     */
-    private String phishingUrl;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new PayloadDetail and sets the default values.
      */
     public PayloadDetail() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -58,7 +46,20 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * Gets the coachmarks property value. Payload coachmark details.
@@ -66,7 +67,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<PayloadCoachmark> getCoachmarks() {
-        return this.coachmarks;
+        return this.BackingStore.get("coachmarks");
     }
     /**
      * Gets the content property value. Payload content details.
@@ -74,7 +75,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getContent() {
-        return this.content;
+        return this.BackingStore.get("content");
     }
     /**
      * The deserialization information for the current model
@@ -95,7 +96,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the phishingUrl property value. The phishing URL used to target a user.
@@ -103,7 +104,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getPhishingUrl() {
-        return this.phishingUrl;
+        return this.BackingStore.get("phishingUrl");
     }
     /**
      * Serializes information the current object
@@ -122,34 +123,42 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the coachmarks property value. Payload coachmark details.
      * @param value Value to set for the coachmarks property.
      */
     public void setCoachmarks(@jakarta.annotation.Nullable final java.util.List<PayloadCoachmark> value) {
-        this.coachmarks = value;
+        this.BackingStore.set("coachmarks", value);
     }
     /**
      * Sets the content property value. Payload content details.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
-        this.content = value;
+        this.BackingStore.set("content", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the phishingUrl property value. The phishing URL used to target a user.
      * @param value Value to set for the phishingUrl property.
      */
     public void setPhishingUrl(@jakarta.annotation.Nullable final String value) {
-        this.phishingUrl = value;
+        this.BackingStore.set("phishingUrl", value);
     }
 }

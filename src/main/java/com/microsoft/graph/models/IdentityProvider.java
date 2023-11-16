@@ -9,22 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProvider extends Entity implements Parsable {
     /**
-     * The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
-     */
-    private String clientId;
-    /**
-     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
-     */
-    private String clientSecret;
-    /**
-     * The display name of the identity provider. Not nullable.
-     */
-    private String name;
-    /**
-     * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
-     */
-    private String type;
-    /**
      * Instantiates a new IdentityProvider and sets the default values.
      */
     public IdentityProvider() {
@@ -46,7 +30,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
-        return this.clientId;
+        return this.BackingStore.get("clientId");
     }
     /**
      * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
@@ -54,7 +38,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
-        return this.clientSecret;
+        return this.BackingStore.get("clientSecret");
     }
     /**
      * The deserialization information for the current model
@@ -75,7 +59,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.BackingStore.get("name");
     }
     /**
      * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
@@ -83,7 +67,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
-        this.clientId = value;
+        this.BackingStore.set("clientId", value);
     }
     /**
      * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
-        this.clientSecret = value;
+        this.BackingStore.set("clientSecret", value);
     }
     /**
      * Sets the name property value. The display name of the identity provider. Not nullable.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.BackingStore.set("name", value);
     }
     /**
      * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

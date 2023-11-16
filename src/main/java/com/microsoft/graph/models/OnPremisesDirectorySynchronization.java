@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesDirectorySynchronization extends Entity implements Parsable {
     /**
-     * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
-     */
-    private OnPremisesDirectorySynchronizationConfiguration configuration;
-    /**
-     * The features property
-     */
-    private OnPremisesDirectorySynchronizationFeature features;
-    /**
      * Instantiates a new OnPremisesDirectorySynchronization and sets the default values.
      */
     public OnPremisesDirectorySynchronization() {
@@ -38,7 +30,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationConfiguration getConfiguration() {
-        return this.configuration;
+        return this.BackingStore.get("configuration");
     }
     /**
      * Gets the features property value. The features property
@@ -46,7 +38,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationFeature getFeatures() {
-        return this.features;
+        return this.BackingStore.get("features");
     }
     /**
      * The deserialization information for the current model
@@ -74,13 +66,13 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
-        this.configuration = value;
+        this.BackingStore.set("configuration", value);
     }
     /**
      * Sets the features property value. The features property
      * @param value Value to set for the features property.
      */
     public void setFeatures(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationFeature value) {
-        this.features = value;
+        this.BackingStore.set("features", value);
     }
 }

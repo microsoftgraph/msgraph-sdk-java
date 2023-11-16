@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendeeBase extends Recipient implements Parsable {
     /**
-     * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-     */
-    private AttendeeType type;
-    /**
      * Instantiates a new AttendeeBase and sets the default values.
      */
     public AttendeeBase() {
@@ -52,7 +48,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AttendeeType getType() {
-        return this.type;
+        return this.BackingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -68,6 +64,6 @@ public class AttendeeBase extends Recipient implements Parsable {
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttendeeType value) {
-        this.type = value;
+        this.BackingStore.set("type", value);
     }
 }

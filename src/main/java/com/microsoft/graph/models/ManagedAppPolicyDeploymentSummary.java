@@ -13,26 +13,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
     /**
-     * Not yet documented
-     */
-    private Integer configurationDeployedUserCount;
-    /**
-     * Not yet documented
-     */
-    private java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> configurationDeploymentSummaryPerApp;
-    /**
-     * Not yet documented
-     */
-    private String displayName;
-    /**
-     * Not yet documented
-     */
-    private OffsetDateTime lastRefreshTime;
-    /**
-     * Version of the entity.
-     */
-    private String version;
-    /**
      * Instantiates a new ManagedAppPolicyDeploymentSummary and sets the default values.
      */
     public ManagedAppPolicyDeploymentSummary() {
@@ -54,7 +34,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationDeployedUserCount() {
-        return this.configurationDeployedUserCount;
+        return this.BackingStore.get("configurationDeployedUserCount");
     }
     /**
      * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
@@ -62,7 +42,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> getConfigurationDeploymentSummaryPerApp() {
-        return this.configurationDeploymentSummaryPerApp;
+        return this.BackingStore.get("configurationDeploymentSummaryPerApp");
     }
     /**
      * Gets the displayName property value. Not yet documented
@@ -70,7 +50,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -92,7 +72,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshTime() {
-        return this.lastRefreshTime;
+        return this.BackingStore.get("lastRefreshTime");
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -100,7 +80,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.BackingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -120,34 +100,34 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the configurationDeployedUserCount property.
      */
     public void setConfigurationDeployedUserCount(@jakarta.annotation.Nullable final Integer value) {
-        this.configurationDeployedUserCount = value;
+        this.BackingStore.set("configurationDeployedUserCount", value);
     }
     /**
      * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
      * @param value Value to set for the configurationDeploymentSummaryPerApp property.
      */
     public void setConfigurationDeploymentSummaryPerApp(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> value) {
-        this.configurationDeploymentSummaryPerApp = value;
+        this.BackingStore.set("configurationDeploymentSummaryPerApp", value);
     }
     /**
      * Sets the displayName property value. Not yet documented
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the lastRefreshTime property value. Not yet documented
      * @param value Value to set for the lastRefreshTime property.
      */
     public void setLastRefreshTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastRefreshTime = value;
+        this.BackingStore.set("lastRefreshTime", value);
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.BackingStore.set("version", value);
     }
 }

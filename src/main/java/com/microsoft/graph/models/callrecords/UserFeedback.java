@@ -4,35 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserFeedback implements AdditionalDataHolder, Parsable {
+public class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The rating property
-     */
-    private UserFeedbackRating rating;
-    /**
-     * The feedback text provided by the user of this endpoint for the session.
-     */
-    private String text;
-    /**
-     * The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
-     */
-    private FeedbackTokenSet tokens;
+    private BackingStore BackingStore;
     /**
      * Instantiates a new UserFeedback and sets the default values.
      */
     public UserFeedback() {
+        this.BackingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -51,7 +39,20 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.BackingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return a BackingStore
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.BackingStore;
     }
     /**
      * The deserialization information for the current model
@@ -72,7 +73,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.BackingStore.get("odataType");
     }
     /**
      * Gets the rating property value. The rating property
@@ -80,7 +81,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UserFeedbackRating getRating() {
-        return this.rating;
+        return this.BackingStore.get("rating");
     }
     /**
      * Gets the text property value. The feedback text provided by the user of this endpoint for the session.
@@ -88,7 +89,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.BackingStore.get("text");
     }
     /**
      * Gets the tokens property value. The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
@@ -96,7 +97,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public FeedbackTokenSet getTokens() {
-        return this.tokens;
+        return this.BackingStore.get("tokens");
     }
     /**
      * Serializes information the current object
@@ -115,34 +116,42 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.BackingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param value Value to set for the BackingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.BackingStore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.BackingStore.set("odataType", value);
     }
     /**
      * Sets the rating property value. The rating property
      * @param value Value to set for the rating property.
      */
     public void setRating(@jakarta.annotation.Nullable final UserFeedbackRating value) {
-        this.rating = value;
+        this.BackingStore.set("rating", value);
     }
     /**
      * Sets the text property value. The feedback text provided by the user of this endpoint for the session.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.BackingStore.set("text", value);
     }
     /**
      * Sets the tokens property value. The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
      * @param value Value to set for the tokens property.
      */
     public void setTokens(@jakarta.annotation.Nullable final FeedbackTokenSet value) {
-        this.tokens = value;
+        this.BackingStore.set("tokens", value);
     }
 }

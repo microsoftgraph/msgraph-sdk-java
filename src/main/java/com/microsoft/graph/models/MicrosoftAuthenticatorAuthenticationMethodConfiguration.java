@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
-     * A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
-     */
-    private MicrosoftAuthenticatorFeatureSettings featureSettings;
-    /**
-     * A collection of groups that are enabled to use the authentication method. Expanded by default.
-     */
-    private java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> includeTargets;
-    /**
-     * The isSoftwareOathEnabled property
-     */
-    private Boolean isSoftwareOathEnabled;
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethodConfiguration() {
@@ -43,7 +31,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings getFeatureSettings() {
-        return this.featureSettings;
+        return this.BackingStore.get("featureSettings");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.BackingStore.get("includeTargets");
     }
     /**
      * Gets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
@@ -71,7 +59,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSoftwareOathEnabled() {
-        return this.isSoftwareOathEnabled;
+        return this.BackingStore.get("isSoftwareOathEnabled");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param value Value to set for the featureSettings property.
      */
     public void setFeatureSettings(@jakarta.annotation.Nullable final MicrosoftAuthenticatorFeatureSettings value) {
-        this.featureSettings = value;
+        this.BackingStore.set("featureSettings", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
-        this.includeTargets = value;
+        this.BackingStore.set("includeTargets", value);
     }
     /**
      * Sets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
      * @param value Value to set for the isSoftwareOathEnabled property.
      */
     public void setIsSoftwareOathEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSoftwareOathEnabled = value;
+        this.BackingStore.set("isSoftwareOathEnabled", value);
     }
 }

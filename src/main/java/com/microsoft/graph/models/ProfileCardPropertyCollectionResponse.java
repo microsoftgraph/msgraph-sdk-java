@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfileCardPropertyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<ProfileCardProperty> value;
-    /**
      * Instantiates a new ProfileCardPropertyCollectionResponse and sets the default values.
      */
     public ProfileCardPropertyCollectionResponse() {
@@ -44,7 +40,7 @@ public class ProfileCardPropertyCollectionResponse extends BaseCollectionPaginat
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfileCardProperty> getValue() {
-        return this.value;
+        return this.BackingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class ProfileCardPropertyCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
-        this.value = value;
+        this.BackingStore.set("value", value);
     }
 }

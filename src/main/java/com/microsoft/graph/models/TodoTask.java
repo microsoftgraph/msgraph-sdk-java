@@ -10,86 +10,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TodoTask extends Entity implements Parsable {
     /**
-     * A collection of file attachments for the task.
-     */
-    private java.util.List<AttachmentBase> attachments;
-    /**
-     * The attachmentSessions property
-     */
-    private java.util.List<AttachmentSession> attachmentSessions;
-    /**
-     * The task body that typically contains information about the task.
-     */
-    private ItemBody body;
-    /**
-     * The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime bodyLastModifiedDateTime;
-    /**
-     * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
-     */
-    private java.util.List<String> categories;
-    /**
-     * A collection of checklistItems linked to a task.
-     */
-    private java.util.List<ChecklistItem> checklistItems;
-    /**
-     * The date and time in the specified time zone that the task was finished.
-     */
-    private DateTimeTimeZone completedDateTime;
-    /**
-     * The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The date and time in the specified time zone that the task is to be finished.
-     */
-    private DateTimeTimeZone dueDateTime;
-    /**
-     * The collection of open extensions defined for the task. Nullable.
-     */
-    private java.util.List<Extension> extensions;
-    /**
-     * Indicates whether the task has attachments.
-     */
-    private Boolean hasAttachments;
-    /**
-     * The importance property
-     */
-    private Importance importance;
-    /**
-     * Set to true if an alert is set to remind the user of the task.
-     */
-    private Boolean isReminderOn;
-    /**
-     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * A collection of resources linked to the task.
-     */
-    private java.util.List<LinkedResource> linkedResources;
-    /**
-     * The recurrence pattern for the task.
-     */
-    private PatternedRecurrence recurrence;
-    /**
-     * The date and time in the specified time zone for a reminder alert of the task to occur.
-     */
-    private DateTimeTimeZone reminderDateTime;
-    /**
-     * The date and time in the specified time zone at which the task is scheduled to start.
-     */
-    private DateTimeTimeZone startDateTime;
-    /**
-     * The status property
-     */
-    private TaskStatus status;
-    /**
-     * A brief description of the task.
-     */
-    private String title;
-    /**
      * Instantiates a new TodoTask and sets the default values.
      */
     public TodoTask() {
@@ -111,7 +31,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttachmentBase> getAttachments() {
-        return this.attachments;
+        return this.BackingStore.get("attachments");
     }
     /**
      * Gets the attachmentSessions property value. The attachmentSessions property
@@ -119,7 +39,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttachmentSession> getAttachmentSessions() {
-        return this.attachmentSessions;
+        return this.BackingStore.get("attachmentSessions");
     }
     /**
      * Gets the body property value. The task body that typically contains information about the task.
@@ -127,7 +47,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
-        return this.body;
+        return this.BackingStore.get("body");
     }
     /**
      * Gets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -135,7 +55,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getBodyLastModifiedDateTime() {
-        return this.bodyLastModifiedDateTime;
+        return this.BackingStore.get("bodyLastModifiedDateTime");
     }
     /**
      * Gets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
@@ -143,7 +63,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this.categories;
+        return this.BackingStore.get("categories");
     }
     /**
      * Gets the checklistItems property value. A collection of checklistItems linked to a task.
@@ -151,7 +71,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChecklistItem> getChecklistItems() {
-        return this.checklistItems;
+        return this.BackingStore.get("checklistItems");
     }
     /**
      * Gets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
@@ -159,7 +79,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.BackingStore.get("completedDateTime");
     }
     /**
      * Gets the createdDateTime property value. The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -167,7 +87,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.BackingStore.get("createdDateTime");
     }
     /**
      * Gets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
@@ -175,7 +95,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
-        return this.dueDateTime;
+        return this.BackingStore.get("dueDateTime");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the task. Nullable.
@@ -183,7 +103,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this.extensions;
+        return this.BackingStore.get("extensions");
     }
     /**
      * The deserialization information for the current model
@@ -220,7 +140,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this.hasAttachments;
+        return this.BackingStore.get("hasAttachments");
     }
     /**
      * Gets the importance property value. The importance property
@@ -228,7 +148,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
-        return this.importance;
+        return this.BackingStore.get("importance");
     }
     /**
      * Gets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
@@ -236,7 +156,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReminderOn() {
-        return this.isReminderOn;
+        return this.BackingStore.get("isReminderOn");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -244,7 +164,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.BackingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the linkedResources property value. A collection of resources linked to the task.
@@ -252,7 +172,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<LinkedResource> getLinkedResources() {
-        return this.linkedResources;
+        return this.BackingStore.get("linkedResources");
     }
     /**
      * Gets the recurrence property value. The recurrence pattern for the task.
@@ -260,7 +180,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.BackingStore.get("recurrence");
     }
     /**
      * Gets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
@@ -268,7 +188,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getReminderDateTime() {
-        return this.reminderDateTime;
+        return this.BackingStore.get("reminderDateTime");
     }
     /**
      * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
@@ -276,7 +196,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this.startDateTime;
+        return this.BackingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. The status property
@@ -284,7 +204,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TaskStatus getStatus() {
-        return this.status;
+        return this.BackingStore.get("status");
     }
     /**
      * Gets the title property value. A brief description of the task.
@@ -292,7 +212,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.BackingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -327,139 +247,139 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<AttachmentBase> value) {
-        this.attachments = value;
+        this.BackingStore.set("attachments", value);
     }
     /**
      * Sets the attachmentSessions property value. The attachmentSessions property
      * @param value Value to set for the attachmentSessions property.
      */
     public void setAttachmentSessions(@jakarta.annotation.Nullable final java.util.List<AttachmentSession> value) {
-        this.attachmentSessions = value;
+        this.BackingStore.set("attachmentSessions", value);
     }
     /**
      * Sets the body property value. The task body that typically contains information about the task.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
-        this.body = value;
+        this.BackingStore.set("body", value);
     }
     /**
      * Sets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @param value Value to set for the bodyLastModifiedDateTime property.
      */
     public void setBodyLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.bodyLastModifiedDateTime = value;
+        this.BackingStore.set("bodyLastModifiedDateTime", value);
     }
     /**
      * Sets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.categories = value;
+        this.BackingStore.set("categories", value);
     }
     /**
      * Sets the checklistItems property value. A collection of checklistItems linked to a task.
      * @param value Value to set for the checklistItems property.
      */
     public void setChecklistItems(@jakarta.annotation.Nullable final java.util.List<ChecklistItem> value) {
-        this.checklistItems = value;
+        this.BackingStore.set("checklistItems", value);
     }
     /**
      * Sets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.completedDateTime = value;
+        this.BackingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.BackingStore.set("createdDateTime", value);
     }
     /**
      * Sets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.dueDateTime = value;
+        this.BackingStore.set("dueDateTime", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the task. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
-        this.extensions = value;
+        this.BackingStore.set("extensions", value);
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the task has attachments.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasAttachments = value;
+        this.BackingStore.set("hasAttachments", value);
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
-        this.importance = value;
+        this.BackingStore.set("importance", value);
     }
     /**
      * Sets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
      * @param value Value to set for the isReminderOn property.
      */
     public void setIsReminderOn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isReminderOn = value;
+        this.BackingStore.set("isReminderOn", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.BackingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the linkedResources property value. A collection of resources linked to the task.
      * @param value Value to set for the linkedResources property.
      */
     public void setLinkedResources(@jakarta.annotation.Nullable final java.util.List<LinkedResource> value) {
-        this.linkedResources = value;
+        this.BackingStore.set("linkedResources", value);
     }
     /**
      * Sets the recurrence property value. The recurrence pattern for the task.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
-        this.recurrence = value;
+        this.BackingStore.set("recurrence", value);
     }
     /**
      * Sets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
      * @param value Value to set for the reminderDateTime property.
      */
     public void setReminderDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.reminderDateTime = value;
+        this.BackingStore.set("reminderDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.startDateTime = value;
+        this.BackingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final TaskStatus value) {
-        this.status = value;
+        this.BackingStore.set("status", value);
     }
     /**
      * Sets the title property value. A brief description of the task.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.BackingStore.set("title", value);
     }
 }

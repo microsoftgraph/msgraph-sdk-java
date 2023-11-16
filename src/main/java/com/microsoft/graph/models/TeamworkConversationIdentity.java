@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkConversationIdentity extends Identity implements Parsable {
     /**
-     * Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-     */
-    private TeamworkConversationIdentityType conversationIdentityType;
-    /**
      * Instantiates a new TeamworkConversationIdentity and sets the default values.
      */
     public TeamworkConversationIdentity() {
@@ -35,7 +31,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public TeamworkConversationIdentityType getConversationIdentityType() {
-        return this.conversationIdentityType;
+        return this.BackingStore.get("conversationIdentityType");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * @param value Value to set for the conversationIdentityType property.
      */
     public void setConversationIdentityType(@jakarta.annotation.Nullable final TeamworkConversationIdentityType value) {
-        this.conversationIdentityType = value;
+        this.BackingStore.set("conversationIdentityType", value);
     }
 }

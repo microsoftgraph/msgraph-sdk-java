@@ -9,18 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
-     * Restrictions that apply as default to all application objects in the tenant.
-     */
-    private AppManagementConfiguration applicationRestrictions;
-    /**
-     * Denotes whether the policy is enabled. Default value is false.
-     */
-    private Boolean isEnabled;
-    /**
-     * Restrictions that apply as default to all service principal objects in the tenant.
-     */
-    private AppManagementConfiguration servicePrincipalRestrictions;
-    /**
      * Instantiates a new TenantAppManagementPolicy and sets the default values.
      */
     public TenantAppManagementPolicy() {
@@ -43,7 +31,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getApplicationRestrictions() {
-        return this.applicationRestrictions;
+        return this.BackingStore.get("applicationRestrictions");
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +51,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Gets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
@@ -71,7 +59,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     @jakarta.annotation.Nullable
     public AppManagementConfiguration getServicePrincipalRestrictions() {
-        return this.servicePrincipalRestrictions;
+        return this.BackingStore.get("servicePrincipalRestrictions");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the applicationRestrictions property.
      */
     public void setApplicationRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
-        this.applicationRestrictions = value;
+        this.BackingStore.set("applicationRestrictions", value);
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
     /**
      * Sets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
      * @param value Value to set for the servicePrincipalRestrictions property.
      */
     public void setServicePrincipalRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
-        this.servicePrincipalRestrictions = value;
+        this.BackingStore.set("servicePrincipalRestrictions", value);
     }
 }

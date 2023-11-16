@@ -12,142 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implements Parsable {
     /**
-     * When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean autoPilotProfileAssigned;
-    /**
-     * When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean autoPilotRegistered;
-    /**
-     * The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
-     */
-    private String azureAdDeviceId;
-    /**
-     * The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
-     */
-    private String azureAdJoinType;
-    /**
-     * When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean azureAdRegistered;
-    /**
-     * Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudIdentityScore;
-    /**
-     * Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudManagementScore;
-    /**
-     * Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double cloudProvisioningScore;
-    /**
-     * When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean compliancePolicySetToIntune;
-    /**
-     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceId;
-    /**
-     * The name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String deviceName;
-    /**
-     * The healthStatus property
-     */
-    private UserExperienceAnalyticsHealthState healthStatus;
-    /**
-     * When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean isCloudManagedGatewayEnabled;
-    /**
-     * The management agent of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String managedBy;
-    /**
-     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String manufacturer;
-    /**
-     * The model name of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String model;
-    /**
-     * When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean osCheckFailed;
-    /**
-     * The OS description of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String osDescription;
-    /**
-     * The OS version of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String osVersion;
-    /**
-     * When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean otherWorkloadsSetToIntune;
-    /**
-     * Ownership of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String ownership;
-    /**
-     * When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean processor64BitCheckFailed;
-    /**
-     * When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean processorCoreCountCheckFailed;
-    /**
-     * When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean processorFamilyCheckFailed;
-    /**
-     * When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean processorSpeedCheckFailed;
-    /**
-     * When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean ramCheckFailed;
-    /**
-     * When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean secureBootCheckFailed;
-    /**
-     * The serial number of the device. Supports: $select, $OrderBy. Read-only.
-     */
-    private String serialNumber;
-    /**
-     * When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean storageCheckFailed;
-    /**
-     * When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean tenantAttached;
-    /**
-     * When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
-     */
-    private Boolean tpmCheckFailed;
-    /**
-     * Work From Anywhere windows device upgrade eligibility status.
-     */
-    private OperatingSystemUpgradeEligibility upgradeEligibility;
-    /**
-     * Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double windowsScore;
-    /**
-     * Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double workFromAnywhereScore;
-    /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
      */
     public UserExperienceAnalyticsWorkFromAnywhereDevice() {
@@ -169,7 +33,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
-        return this.autoPilotProfileAssigned;
+        return this.BackingStore.get("autoPilotProfileAssigned");
     }
     /**
      * Gets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
@@ -177,7 +41,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
-        return this.autoPilotRegistered;
+        return this.BackingStore.get("autoPilotRegistered");
     }
     /**
      * Gets the azureAdDeviceId property value. The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
@@ -185,7 +49,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
-        return this.azureAdDeviceId;
+        return this.BackingStore.get("azureAdDeviceId");
     }
     /**
      * Gets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
@@ -193,7 +57,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getAzureAdJoinType() {
-        return this.azureAdJoinType;
+        return this.BackingStore.get("azureAdJoinType");
     }
     /**
      * Gets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
@@ -201,7 +65,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureAdRegistered() {
-        return this.azureAdRegistered;
+        return this.BackingStore.get("azureAdRegistered");
     }
     /**
      * Gets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -209,7 +73,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Double getCloudIdentityScore() {
-        return this.cloudIdentityScore;
+        return this.BackingStore.get("cloudIdentityScore");
     }
     /**
      * Gets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -217,7 +81,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Double getCloudManagementScore() {
-        return this.cloudManagementScore;
+        return this.BackingStore.get("cloudManagementScore");
     }
     /**
      * Gets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -225,7 +89,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Double getCloudProvisioningScore() {
-        return this.cloudProvisioningScore;
+        return this.BackingStore.get("cloudProvisioningScore");
     }
     /**
      * Gets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
@@ -233,7 +97,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getCompliancePolicySetToIntune() {
-        return this.compliancePolicySetToIntune;
+        return this.BackingStore.get("compliancePolicySetToIntune");
     }
     /**
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
@@ -241,7 +105,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.BackingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
@@ -249,7 +113,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.BackingStore.get("deviceName");
     }
     /**
      * The deserialization information for the current model
@@ -300,7 +164,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this.healthStatus;
+        return this.BackingStore.get("healthStatus");
     }
     /**
      * Gets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
@@ -308,7 +172,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCloudManagedGatewayEnabled() {
-        return this.isCloudManagedGatewayEnabled;
+        return this.BackingStore.get("isCloudManagedGatewayEnabled");
     }
     /**
      * Gets the managedBy property value. The management agent of the device. Supports: $select, $OrderBy. Read-only.
@@ -316,7 +180,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getManagedBy() {
-        return this.managedBy;
+        return this.BackingStore.get("managedBy");
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
@@ -324,7 +188,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.BackingStore.get("manufacturer");
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
@@ -332,7 +196,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getModel() {
-        return this.model;
+        return this.BackingStore.get("model");
     }
     /**
      * Gets the osCheckFailed property value. When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -340,7 +204,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getOsCheckFailed() {
-        return this.osCheckFailed;
+        return this.BackingStore.get("osCheckFailed");
     }
     /**
      * Gets the osDescription property value. The OS description of the device. Supports: $select, $OrderBy. Read-only.
@@ -348,7 +212,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
-        return this.osDescription;
+        return this.BackingStore.get("osDescription");
     }
     /**
      * Gets the osVersion property value. The OS version of the device. Supports: $select, $OrderBy. Read-only.
@@ -356,7 +220,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.BackingStore.get("osVersion");
     }
     /**
      * Gets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
@@ -364,7 +228,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getOtherWorkloadsSetToIntune() {
-        return this.otherWorkloadsSetToIntune;
+        return this.BackingStore.get("otherWorkloadsSetToIntune");
     }
     /**
      * Gets the ownership property value. Ownership of the device. Supports: $select, $OrderBy. Read-only.
@@ -372,7 +236,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getOwnership() {
-        return this.ownership;
+        return this.BackingStore.get("ownership");
     }
     /**
      * Gets the processor64BitCheckFailed property value. When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -380,7 +244,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessor64BitCheckFailed() {
-        return this.processor64BitCheckFailed;
+        return this.BackingStore.get("processor64BitCheckFailed");
     }
     /**
      * Gets the processorCoreCountCheckFailed property value. When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -388,7 +252,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorCoreCountCheckFailed() {
-        return this.processorCoreCountCheckFailed;
+        return this.BackingStore.get("processorCoreCountCheckFailed");
     }
     /**
      * Gets the processorFamilyCheckFailed property value. When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -396,7 +260,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorFamilyCheckFailed() {
-        return this.processorFamilyCheckFailed;
+        return this.BackingStore.get("processorFamilyCheckFailed");
     }
     /**
      * Gets the processorSpeedCheckFailed property value. When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -404,7 +268,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getProcessorSpeedCheckFailed() {
-        return this.processorSpeedCheckFailed;
+        return this.BackingStore.get("processorSpeedCheckFailed");
     }
     /**
      * Gets the ramCheckFailed property value. When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -412,7 +276,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getRamCheckFailed() {
-        return this.ramCheckFailed;
+        return this.BackingStore.get("ramCheckFailed");
     }
     /**
      * Gets the secureBootCheckFailed property value. When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -420,7 +284,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootCheckFailed() {
-        return this.secureBootCheckFailed;
+        return this.BackingStore.get("secureBootCheckFailed");
     }
     /**
      * Gets the serialNumber property value. The serial number of the device. Supports: $select, $OrderBy. Read-only.
@@ -428,7 +292,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
-        return this.serialNumber;
+        return this.BackingStore.get("serialNumber");
     }
     /**
      * Gets the storageCheckFailed property value. When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -436,7 +300,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageCheckFailed() {
-        return this.storageCheckFailed;
+        return this.BackingStore.get("storageCheckFailed");
     }
     /**
      * Gets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
@@ -444,7 +308,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getTenantAttached() {
-        return this.tenantAttached;
+        return this.BackingStore.get("tenantAttached");
     }
     /**
      * Gets the tpmCheckFailed property value. When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
@@ -452,7 +316,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Boolean getTpmCheckFailed() {
-        return this.tpmCheckFailed;
+        return this.BackingStore.get("tpmCheckFailed");
     }
     /**
      * Gets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status.
@@ -460,7 +324,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public OperatingSystemUpgradeEligibility getUpgradeEligibility() {
-        return this.upgradeEligibility;
+        return this.BackingStore.get("upgradeEligibility");
     }
     /**
      * Gets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -468,7 +332,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Double getWindowsScore() {
-        return this.windowsScore;
+        return this.BackingStore.get("windowsScore");
     }
     /**
      * Gets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -476,7 +340,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      */
     @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
-        return this.workFromAnywhereScore;
+        return this.BackingStore.get("workFromAnywhereScore");
     }
     /**
      * Serializes information the current object
@@ -525,237 +389,237 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the autoPilotProfileAssigned property.
      */
     public void setAutoPilotProfileAssigned(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoPilotProfileAssigned = value;
+        this.BackingStore.set("autoPilotProfileAssigned", value);
     }
     /**
      * Sets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the autoPilotRegistered property.
      */
     public void setAutoPilotRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoPilotRegistered = value;
+        this.BackingStore.set("autoPilotRegistered", value);
     }
     /**
      * Sets the azureAdDeviceId property value. The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdDeviceId property.
      */
     public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.azureAdDeviceId = value;
+        this.BackingStore.set("azureAdDeviceId", value);
     }
     /**
      * Sets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdJoinType property.
      */
     public void setAzureAdJoinType(@jakarta.annotation.Nullable final String value) {
-        this.azureAdJoinType = value;
+        this.BackingStore.set("azureAdJoinType", value);
     }
     /**
      * Sets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdRegistered property.
      */
     public void setAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
-        this.azureAdRegistered = value;
+        this.BackingStore.set("azureAdRegistered", value);
     }
     /**
      * Sets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudIdentityScore property.
      */
     public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudIdentityScore = value;
+        this.BackingStore.set("cloudIdentityScore", value);
     }
     /**
      * Sets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
      */
     public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudManagementScore = value;
+        this.BackingStore.set("cloudManagementScore", value);
     }
     /**
      * Sets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
      */
     public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
-        this.cloudProvisioningScore = value;
+        this.BackingStore.set("cloudProvisioningScore", value);
     }
     /**
      * Sets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the compliancePolicySetToIntune property.
      */
     public void setCompliancePolicySetToIntune(@jakarta.annotation.Nullable final Boolean value) {
-        this.compliancePolicySetToIntune = value;
+        this.BackingStore.set("compliancePolicySetToIntune", value);
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.BackingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.BackingStore.set("deviceName", value);
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this.healthStatus = value;
+        this.BackingStore.set("healthStatus", value);
     }
     /**
      * Sets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isCloudManagedGatewayEnabled property.
      */
     public void setIsCloudManagedGatewayEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCloudManagedGatewayEnabled = value;
+        this.BackingStore.set("isCloudManagedGatewayEnabled", value);
     }
     /**
      * Sets the managedBy property value. The management agent of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the managedBy property.
      */
     public void setManagedBy(@jakarta.annotation.Nullable final String value) {
-        this.managedBy = value;
+        this.BackingStore.set("managedBy", value);
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
-        this.manufacturer = value;
+        this.BackingStore.set("manufacturer", value);
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
-        this.model = value;
+        this.BackingStore.set("model", value);
     }
     /**
      * Sets the osCheckFailed property value. When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osCheckFailed property.
      */
     public void setOsCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.osCheckFailed = value;
+        this.BackingStore.set("osCheckFailed", value);
     }
     /**
      * Sets the osDescription property value. The OS description of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osDescription property.
      */
     public void setOsDescription(@jakarta.annotation.Nullable final String value) {
-        this.osDescription = value;
+        this.BackingStore.set("osDescription", value);
     }
     /**
      * Sets the osVersion property value. The OS version of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.BackingStore.set("osVersion", value);
     }
     /**
      * Sets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the otherWorkloadsSetToIntune property.
      */
     public void setOtherWorkloadsSetToIntune(@jakarta.annotation.Nullable final Boolean value) {
-        this.otherWorkloadsSetToIntune = value;
+        this.BackingStore.set("otherWorkloadsSetToIntune", value);
     }
     /**
      * Sets the ownership property value. Ownership of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the ownership property.
      */
     public void setOwnership(@jakarta.annotation.Nullable final String value) {
-        this.ownership = value;
+        this.BackingStore.set("ownership", value);
     }
     /**
      * Sets the processor64BitCheckFailed property value. When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processor64BitCheckFailed property.
      */
     public void setProcessor64BitCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.processor64BitCheckFailed = value;
+        this.BackingStore.set("processor64BitCheckFailed", value);
     }
     /**
      * Sets the processorCoreCountCheckFailed property value. When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorCoreCountCheckFailed property.
      */
     public void setProcessorCoreCountCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.processorCoreCountCheckFailed = value;
+        this.BackingStore.set("processorCoreCountCheckFailed", value);
     }
     /**
      * Sets the processorFamilyCheckFailed property value. When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorFamilyCheckFailed property.
      */
     public void setProcessorFamilyCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.processorFamilyCheckFailed = value;
+        this.BackingStore.set("processorFamilyCheckFailed", value);
     }
     /**
      * Sets the processorSpeedCheckFailed property value. When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorSpeedCheckFailed property.
      */
     public void setProcessorSpeedCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.processorSpeedCheckFailed = value;
+        this.BackingStore.set("processorSpeedCheckFailed", value);
     }
     /**
      * Sets the ramCheckFailed property value. When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the ramCheckFailed property.
      */
     public void setRamCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.ramCheckFailed = value;
+        this.BackingStore.set("ramCheckFailed", value);
     }
     /**
      * Sets the secureBootCheckFailed property value. When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the secureBootCheckFailed property.
      */
     public void setSecureBootCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.secureBootCheckFailed = value;
+        this.BackingStore.set("secureBootCheckFailed", value);
     }
     /**
      * Sets the serialNumber property value. The serial number of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
-        this.serialNumber = value;
+        this.BackingStore.set("serialNumber", value);
     }
     /**
      * Sets the storageCheckFailed property value. When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the storageCheckFailed property.
      */
     public void setStorageCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.storageCheckFailed = value;
+        this.BackingStore.set("storageCheckFailed", value);
     }
     /**
      * Sets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the tenantAttached property.
      */
     public void setTenantAttached(@jakarta.annotation.Nullable final Boolean value) {
-        this.tenantAttached = value;
+        this.BackingStore.set("tenantAttached", value);
     }
     /**
      * Sets the tpmCheckFailed property value. When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the tpmCheckFailed property.
      */
     public void setTpmCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
-        this.tpmCheckFailed = value;
+        this.BackingStore.set("tpmCheckFailed", value);
     }
     /**
      * Sets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status.
      * @param value Value to set for the upgradeEligibility property.
      */
     public void setUpgradeEligibility(@jakarta.annotation.Nullable final OperatingSystemUpgradeEligibility value) {
-        this.upgradeEligibility = value;
+        this.BackingStore.set("upgradeEligibility", value);
     }
     /**
      * Sets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
      */
     public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
-        this.windowsScore = value;
+        this.BackingStore.set("windowsScore", value);
     }
     /**
      * Sets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      */
     public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
-        this.workFromAnywhereScore = value;
+        this.BackingStore.set("workFromAnywhereScore", value);
     }
 }

@@ -9,30 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FeatureRolloutPolicy extends Entity implements Parsable {
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
-     */
-    private java.util.List<DirectoryObject> appliesTo;
-    /**
-     * A description for this feature rollout policy.
-     */
-    private String description;
-    /**
-     * The display name for this  feature rollout policy.
-     */
-    private String displayName;
-    /**
-     * The feature property
-     */
-    private StagedFeatureName feature;
-    /**
-     * Indicates whether this feature rollout policy should be applied to the entire organization.
-     */
-    private Boolean isAppliedToOrganization;
-    /**
-     * Indicates whether the feature rollout is enabled.
-     */
-    private Boolean isEnabled;
-    /**
      * Instantiates a new FeatureRolloutPolicy and sets the default values.
      */
     public FeatureRolloutPolicy() {
@@ -54,7 +30,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this.appliesTo;
+        return this.BackingStore.get("appliesTo");
     }
     /**
      * Gets the description property value. A description for this feature rollout policy.
@@ -62,7 +38,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.BackingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for this  feature rollout policy.
@@ -70,7 +46,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.BackingStore.get("displayName");
     }
     /**
      * Gets the feature property value. The feature property
@@ -78,7 +54,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public StagedFeatureName getFeature() {
-        return this.feature;
+        return this.BackingStore.get("feature");
     }
     /**
      * The deserialization information for the current model
@@ -101,7 +77,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAppliedToOrganization() {
-        return this.isAppliedToOrganization;
+        return this.BackingStore.get("isAppliedToOrganization");
     }
     /**
      * Gets the isEnabled property value. Indicates whether the feature rollout is enabled.
@@ -109,7 +85,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.BackingStore.get("isEnabled");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this.appliesTo = value;
+        this.BackingStore.set("appliesTo", value);
     }
     /**
      * Sets the description property value. A description for this feature rollout policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.BackingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for this  feature rollout policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.BackingStore.set("displayName", value);
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final StagedFeatureName value) {
-        this.feature = value;
+        this.BackingStore.set("feature", value);
     }
     /**
      * Sets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
      * @param value Value to set for the isAppliedToOrganization property.
      */
     public void setIsAppliedToOrganization(@jakarta.annotation.Nullable final Boolean value) {
-        this.isAppliedToOrganization = value;
+        this.BackingStore.set("isAppliedToOrganization", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the feature rollout is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.BackingStore.set("isEnabled", value);
     }
 }

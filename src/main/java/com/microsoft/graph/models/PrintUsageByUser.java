@@ -9,10 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
-     * The UPN of the user represented by these statistics.
-     */
-    private String userPrincipalName;
-    /**
      * Instantiates a new PrintUsageByUser and sets the default values.
      */
     public PrintUsageByUser() {
@@ -45,7 +41,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.BackingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.BackingStore.set("userPrincipalName", value);
     }
 }

@@ -12,10 +12,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResetPasscodeActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Newly generated passcode for the device
-     */
-    private String passcode;
-    /**
      * Instantiates a new ResetPasscodeActionResult and sets the default values.
      */
     public ResetPasscodeActionResult() {
@@ -47,7 +43,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      */
     @jakarta.annotation.Nullable
     public String getPasscode() {
-        return this.passcode;
+        return this.BackingStore.get("passcode");
     }
     /**
      * Serializes information the current object
@@ -63,6 +59,6 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param value Value to set for the passcode property.
      */
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
-        this.passcode = value;
+        this.BackingStore.set("passcode", value);
     }
 }

@@ -9,14 +9,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
-     * How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     */
-    private String memberType;
-    /**
-     * The period of the role eligibility.
-     */
-    private RequestSchedule scheduleInfo;
-    /**
      * Instantiates a new UnifiedRoleEligibilitySchedule and sets the default values.
      */
     public UnifiedRoleEligibilitySchedule() {
@@ -49,7 +41,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
-        return this.memberType;
+        return this.BackingStore.get("memberType");
     }
     /**
      * Gets the scheduleInfo property value. The period of the role eligibility.
@@ -57,7 +49,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
-        return this.scheduleInfo;
+        return this.BackingStore.get("scheduleInfo");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.memberType = value;
+        this.BackingStore.set("memberType", value);
     }
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility.
      * @param value Value to set for the scheduleInfo property.
      */
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.scheduleInfo = value;
+        this.BackingStore.set("scheduleInfo", value);
     }
 }
